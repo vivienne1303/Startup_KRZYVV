@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeenLaunch | Opportunities</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/opportunities.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="../index.html"><span class="brand-mark">TL</span><span>TeenLaunch<small>Opportunity radar</small></span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="active" href="opportunities.html">Opportunities</a>
+        <a href="competitions.html">Competitions</a>
+        <a href="debate.html">Debate Hub</a>
+        <a href="aiassistant.html">AI Assistant</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="reveal">
+        <p class="eyebrow">Explore what is next</p>
+        <h1>Find programmes, camps, workshops, and internships made for young builders.</h1>
+        <p>Search youth-friendly entrepreneurship, leadership, technology, debate, and volunteering opportunities with deadlines and eligibility shown upfront.</p>
+      </div>
+      <div class="hero-panel reveal">
+        <strong>Recommended match</strong>
+        <h2>Startup Sprint Camp</h2>
+        <p>For ages 13-18. Build an MVP, meet mentors, and pitch on demo day.</p>
+        <a class="btn primary" href="#browse">Browse Opportunities</a>
+      </div>
+    </section>
+
+    <section class="section" id="browse">
+      <div class="toolbar reveal">
+        <label class="search-box">
+          <span>Search</span>
+          <input id="searchInput" type="search" placeholder="Search internships, workshops, camps...">
+        </label>
+        <div class="filters" aria-label="Opportunity categories">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="business">Business</button>
+          <button class="filter" data-filter="technology">Technology</button>
+          <button class="filter" data-filter="debate">Debate/Public Speaking</button>
+          <button class="filter" data-filter="leadership">Leadership</button>
+          <button class="filter" data-filter="volunteering">Volunteering</button>
+        </div>
+      </div>
+
+      <div class="opportunity-grid" id="opportunityGrid">
+        <article class="opportunity-card reveal" data-category="business" data-title="young founder accelerator">
+          <span class="tag">Business</span>
+          <h3>Young Founder Accelerator</h3>
+          <p>Entrepreneurship programme for students building their first business idea.</p>
+          <ul>
+            <li>Deadline: 28 Jun 2026</li>
+            <li>Eligibility: Ages 14-19</li>
+          </ul>
+          <a class="btn secondary" href="#">Apply</a>
+        </article>
+        <article class="opportunity-card reveal" data-category="technology" data-title="ai innovation workshop">
+          <span class="tag">Technology</span>
+          <h3>AI Innovation Workshop</h3>
+          <p>Hands-on sessions for using AI tools to research, prototype, and present ideas.</p>
+          <ul>
+            <li>Deadline: 12 Jul 2026</li>
+            <li>Eligibility: Ages 12-19</li>
+          </ul>
+          <a class="btn secondary" href="#">Apply</a>
+        </article>
+        <article class="opportunity-card reveal" data-category="leadership" data-title="future leaders camp">
+          <span class="tag">Leadership</span>
+          <h3>Future Leaders Camp</h3>
+          <p>A confidence-building camp focused on teamwork, decision-making, and service.</p>
+          <ul>
+            <li>Deadline: 5 Aug 2026</li>
+            <li>Eligibility: Ages 10-16</li>
+          </ul>
+          <a class="btn secondary" href="#">Apply</a>
+        </article>
+        <article class="opportunity-card reveal" data-category="debate" data-title="public speaking lab">
+          <span class="tag">Debate/Public Speaking</span>
+          <h3>Public Speaking Lab</h3>
+          <p>Weekly practice sessions for speeches, debate arguments, and presentation skills.</p>
+          <ul>
+            <li>Deadline: 22 Jul 2026</li>
+            <li>Eligibility: Ages 11-19</li>
+          </ul>
+          <a class="btn secondary" href="#">Apply</a>
+        </article>
+        <article class="opportunity-card reveal" data-category="volunteering" data-title="community impact crew">
+          <span class="tag">Volunteering</span>
+          <h3>Community Impact Crew</h3>
+          <p>Join youth-led volunteering projects and learn how social impact programmes run.</p>
+          <ul>
+            <li>Deadline: Rolling</li>
+            <li>Eligibility: Ages 10-19</li>
+          </ul>
+          <a class="btn secondary" href="#">Apply</a>
+        </article>
+        <article class="opportunity-card reveal" data-category="technology" data-title="student tech internship">
+          <span class="tag">Technology</span>
+          <h3>Student Tech Internship</h3>
+          <p>Beginner-friendly internship shadowing product, design, and startup operations teams.</p>
+          <ul>
+            <li>Deadline: 18 Aug 2026</li>
+            <li>Eligibility: Ages 16-19</li>
+          </ul>
+          <a class="btn secondary" href="#">Apply</a>
+        </article>
+      </div>
+      <p class="empty-state" id="emptyState">No matching opportunities yet. Try another search or category.</p>
+    </section>
+
+    <section class="section highlight-grid">
+      <div class="highlight reveal">
+        <p class="eyebrow">Recommended</p>
+        <h2>Best first step</h2>
+        <p>Start with the AI Innovation Workshop if you want a practical, beginner-friendly way to connect tech and entrepreneurship.</p>
+      </div>
+      <div class="highlight reveal">
+        <p class="eyebrow">Trending</p>
+        <h2>Most saved</h2>
+        <p>Young Founder Accelerator is trending this month because it includes mentors, demo day, and portfolio-ready project outcomes.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 TeenLaunch</p>
+    <a href="../index.html#faq">FAQ</a>
+    <a href="aiassistant.html">Ask AI</a>
+    <a href="mailto:hello@teenlaunch.example">Contact</a>
+  </footer>
+
+  <script src="../js/opportunities.js"></script>
+</body>
+</html>

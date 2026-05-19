@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeenLaunch | AI Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/aiassistant.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="../index.html"><span class="brand-mark">TL</span><span>TeenLaunch<small>AI learning co-pilot</small></span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="opportunities.html">Opportunities</a>
+        <a href="competitions.html">Competitions</a>
+        <a href="debate.html">Debate Hub</a>
+        <a class="active" href="aiassistant.html">AI Assistant</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="reveal">
+        <p class="eyebrow">AI-powered learning</p>
+        <h1>Your startup, debate, and competition co-pilot.</h1>
+        <p>Use the TeenLaunch AI assistant mockup to explore ideas, find opportunities, practice pitches, and get study-friendly guidance.</p>
+      </div>
+      <div class="assistant-panel reveal">
+        <div class="assistant-header"><span class="pulse"></span><strong>TeenLaunch AI</strong><small>mock chat</small></div>
+        <div class="chat-log" id="chatLog">
+          <div class="bubble ai">Hi. Ask me for startup ideas, pitch tips, debate feedback, or opportunity matches.</div>
+        </div>
+        <form class="chat-form" id="chatForm">
+          <input id="chatInput" type="text" placeholder="Ask TeenLaunch AI..." autocomplete="off">
+          <button class="btn primary" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">What it helps with</p>
+        <h2>Guided support without making things complicated.</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature reveal"><h3>Opportunity Matching</h3><p>Find programmes based on age, topic, deadline, and confidence level.</p></article>
+        <article class="feature reveal"><h3>Pitch Feedback</h3><p>Improve problem statements, slides, hooks, demo scripts, and final asks.</p></article>
+        <article class="feature reveal"><h3>Debate Coaching</h3><p>Get structure ideas for arguments, rebuttals, motions, and speaking drills.</p></article>
+        <article class="feature reveal"><h3>Learning Plans</h3><p>Create weekly plans for entrepreneurship, leadership, competitions, and AI tools.</p></article>
+      </div>
+    </section>
+
+    <section class="section prompt-section">
+      <div class="prompt-card reveal">
+        <p class="eyebrow">Prompt library</p>
+        <h2>Tap a starter prompt.</h2>
+        <button class="prompt-btn">Find beginner startup opportunities for a 15-year-old.</button>
+        <button class="prompt-btn">Give me a 60-second pitch structure.</button>
+        <button class="prompt-btn">Generate a debate motion about AI in schools.</button>
+        <button class="prompt-btn">Create a 7-day confidence practice plan.</button>
+      </div>
+      <div class="learning-card reveal">
+        <p class="eyebrow">Future-ready learning</p>
+        <h2>Personalized tracks</h2>
+        <div class="track"><span>Entrepreneurship</span><strong>72%</strong></div>
+        <div class="track"><span>Debate Skills</span><strong>58%</strong></div>
+        <div class="track"><span>AI Tools</span><strong>81%</strong></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 TeenLaunch</p>
+    <a href="../index.html#faq">FAQ</a>
+    <a href="opportunities.html">Find opportunities</a>
+    <a href="mailto:hello@teenlaunch.example">Contact</a>
+  </footer>
+
+  <script src="../js/aiassistant.js"></script>
+</body>
+</html>

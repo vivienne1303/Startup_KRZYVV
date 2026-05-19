@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeenLaunch | Competitions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/competitions.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="../index.html"><span class="brand-mark">TL</span><span>TeenLaunch<small>Competition mode</small></span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="opportunities.html">Opportunities</a>
+        <a class="active" href="competitions.html">Competitions</a>
+        <a href="debate.html">Debate Hub</a>
+        <a href="aiassistant.html">AI Assistant</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="reveal">
+        <p class="eyebrow">Compete with confidence</p>
+        <h1>Pitch, code, speak, debate, and show what you can build.</h1>
+        <p>Track startup pitch competitions, hackathons, debate contests, public speaking events, and innovation challenges in one focused dashboard.</p>
+      </div>
+      <div class="countdown-card reveal">
+        <span>Next deadline</span>
+        <strong id="countdown">Loading...</strong>
+        <p>Youth Startup Pitch Challenge registration closes soon.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Competition cards</p>
+        <h2>Choose your arena.</h2>
+      </div>
+      <div class="competition-grid">
+        <article class="competition-card reveal">
+          <span class="tag">Startup Pitch</span>
+          <h3>Youth Startup Pitch Challenge</h3>
+          <p>Rules: 3-minute pitch, 2-minute Q&A, solo or teams up to 4.</p>
+          <ul>
+            <li>Timeline: Jul 1 briefing, Jul 20 finals</li>
+            <li>Prize pool: $5,000</li>
+            <li>Requirements: Ages 13-19, pitch deck</li>
+          </ul>
+          <button class="btn secondary reminder" data-event="Youth Startup Pitch Challenge">Set Reminder</button>
+        </article>
+        <article class="competition-card reveal">
+          <span class="tag">Hackathon</span>
+          <h3>48H AI Hack Sprint</h3>
+          <p>Rules: Build a working prototype using AI for learning, health, or sustainability.</p>
+          <ul>
+            <li>Timeline: Aug 9-11</li>
+            <li>Prize pool: $3,000</li>
+            <li>Requirements: Team of 2-5, demo video</li>
+          </ul>
+          <button class="btn secondary reminder" data-event="48H AI Hack Sprint">Set Reminder</button>
+        </article>
+        <article class="competition-card reveal">
+          <span class="tag">Debate</span>
+          <h3>Future Voices Debate Cup</h3>
+          <p>Rules: Prepared and impromptu rounds using school-friendly debate motions.</p>
+          <ul>
+            <li>Timeline: Sep 5 qualifiers, Sep 19 finals</li>
+            <li>Prize pool: Trophies and mentorship</li>
+            <li>Requirements: Ages 10-19, teams of 3</li>
+          </ul>
+          <button class="btn secondary reminder" data-event="Future Voices Debate Cup">Set Reminder</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section calendar-section">
+      <div class="calendar reveal">
+        <p class="eyebrow">Upcoming events calendar</p>
+        <h2>July to September</h2>
+        <div class="calendar-row"><span>Jul 01</span><p>Startup Pitch briefing</p></div>
+        <div class="calendar-row"><span>Jul 20</span><p>Pitch finals and demo day</p></div>
+        <div class="calendar-row"><span>Aug 09</span><p>AI Hack Sprint begins</p></div>
+        <div class="calendar-row"><span>Sep 05</span><p>Debate Cup qualifiers</p></div>
+      </div>
+      <div class="reminders reveal">
+        <p class="eyebrow">Reminders</p>
+        <h2>Your list</h2>
+        <ul id="reminderList">
+          <li>No reminders yet. Add one from a competition card.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section tips-grid">
+      <article class="tip reveal">
+        <h3>Past Winners Showcase</h3>
+        <p>2025 winners built a study app, a food waste tracker, and a youth mental wellness campaign.</p>
+      </article>
+      <article class="tip reveal">
+        <h3>Preparation Tips</h3>
+        <p>Read the judging rubric, rehearse under time pressure, and test your demo before submission day.</p>
+      </article>
+      <article class="tip reveal">
+        <h3>Pitching Tips</h3>
+        <p>Lead with the problem, show proof, keep the solution simple, and end with a clear ask.</p>
+      </article>
+      <article class="tip reveal">
+        <h3>Presentation Advice</h3>
+        <p>Use fewer words on slides, speak slower than you think, and make eye contact during the strongest lines.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 TeenLaunch</p>
+    <a href="../index.html#faq">FAQ</a>
+    <a href="debate.html">Practice speaking</a>
+    <a href="mailto:hello@teenlaunch.example">Contact</a>
+  </footer>
+
+  <script src="../js/competitions.js"></script>
+</body>
+</html>

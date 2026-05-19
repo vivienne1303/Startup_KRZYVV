@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeenLaunch | Debate Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/debate.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="../index.html"><span class="brand-mark">TL</span><span>TeenLaunch<small>Debate hub</small></span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="opportunities.html">Opportunities</a>
+        <a href="competitions.html">Competitions</a>
+        <a class="active" href="debate.html">Debate Hub</a>
+        <a href="aiassistant.html">AI Assistant</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="reveal">
+        <p class="eyebrow">Debate hub</p>
+        <h1>Speak. Think. Lead.</h1>
+        <p>Build arguments, practice rebuttals, sharpen critical thinking, and grow into the kind of speaker people remember.</p>
+      </div>
+      <div class="timer-card reveal">
+        <p class="eyebrow">Debate timer</p>
+        <div class="timer-display" id="timerDisplay">03:00</div>
+        <label>Speech minutes <input id="minutesInput" type="number" min="1" max="8" value="3"></label>
+        <label>Speaker round <select id="roundSelect"><option>Prime Minister</option><option>Opposition Leader</option><option>Rebuttal Speaker</option><option>Reply Speech</option></select></label>
+        <div class="timer-actions">
+          <button class="btn primary" id="startTimer">Start</button>
+          <button class="btn secondary" id="pauseTimer">Pause</button>
+          <button class="btn secondary" id="resetTimer">Reset</button>
+        </div>
+        <p class="mode-label" id="modeLabel">Practice mode ready.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Learn the craft</p>
+        <h2>Training blocks for stronger communication.</h2>
+      </div>
+      <div class="skill-grid">
+        <article class="skill reveal"><h3>Debate Basics</h3><p>Learn roles, structures, motions, points of information, and speaker duties.</p></article>
+        <article class="skill reveal"><h3>Argument Building</h3><p>Use claim, reason, evidence, impact, and link-back to make points land.</p></article>
+        <article class="skill reveal"><h3>Rebuttal Techniques</h3><p>Spot weak assumptions, compare impacts, and respond without sounding defensive.</p></article>
+        <article class="skill reveal"><h3>Public Speaking Tips</h3><p>Use pacing, pauses, posture, voice, and eye contact to sound confident.</p></article>
+        <article class="skill reveal"><h3>Critical Thinking Exercises</h3><p>Practice weighing trade-offs, challenging assumptions, and ranking arguments.</p></article>
+      </div>
+    </section>
+
+    <section class="section practice-section">
+      <div class="practice-card reveal">
+        <p class="eyebrow">Practice area</p>
+        <h2 id="motionText">This house believes schools should teach entrepreneurship.</h2>
+        <button class="btn primary" id="newMotion">Generate Random Motion</button>
+      </div>
+      <div class="feedback-card reveal">
+        <p class="eyebrow">AI feedback mockup</p>
+        <div class="message">Try giving one clear example after your strongest argument.</div>
+        <div class="message alt">Your rebuttal is stronger when you compare impacts directly.</div>
+      </div>
+    </section>
+
+    <section class="section resources-grid">
+      <article class="resource reveal"><h3>Formats</h3><p>British Parliamentary, World Schools, public forum, and classroom debate formats.</p></article>
+      <article class="resource reveal"><h3>Rules</h3><p>Speaker timing, protected time, POIs, judging criteria, and team roles.</p></article>
+      <article class="resource reveal"><h3>Sample Speeches</h3><p>Study strong openings, rebuttal bridges, summary speeches, and reply speeches.</p></article>
+      <article class="resource reveal"><h3>Winning Examples</h3><p>Break down why winning speeches are persuasive, organized, and memorable.</p></article>
+    </section>
+
+    <section class="section progress-grid">
+      <div class="quiz reveal">
+        <p class="eyebrow">Mini quiz</p>
+        <h2>What should a strong argument include?</h2>
+        <button class="quiz-option">Claim, reasoning, evidence, impact</button>
+        <button class="quiz-option">Only a loud voice</button>
+        <button class="quiz-option">A long quote with no explanation</button>
+        <p id="quizResult"></p>
+      </div>
+      <div class="progress reveal">
+        <p class="eyebrow">Progress tracking</p>
+        <h2>Practice streak: <span id="streak">4</span> days</h2>
+        <div class="badges">
+          <span>First Speech</span>
+          <span>Rebuttal Rookie</span>
+          <span>3 Exercises Done</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 TeenLaunch</p>
+    <a href="../index.html#faq">FAQ</a>
+    <a href="competitions.html">Find competitions</a>
+    <a href="mailto:hello@teenlaunch.example">Contact</a>
+  </footer>
+
+  <script src="../js/debate.js"></script>
+</body>
+</html>
