@@ -5,6 +5,7 @@ const revealElements = document.querySelectorAll(".reveal");
 const countdown = document.querySelector("#countdown");
 const reminderButtons = document.querySelectorAll(".reminder");
 const reminderList = document.querySelector("#reminderList");
+const t = (key) => window.TeenLaunchI18n?.translate(key) || key;
 
 const updateHeader = () => {
   header.classList.toggle("scrolled", window.scrollY > 24);
@@ -31,7 +32,7 @@ const updateCountdown = () => {
   const days = Math.floor(diff / 86400000);
   const hours = Math.floor((diff % 86400000) / 3600000);
 
-  countdown.textContent = diff > 0 ? `${days}d ${hours}h` : "Closed";
+  countdown.textContent = diff > 0 ? `${days}d ${hours}h` : t("Closed");
 };
 
 reminderButtons.forEach((button) => {
@@ -49,7 +50,8 @@ reminderButtons.forEach((button) => {
       reminderList.appendChild(item);
     }
 
-    button.textContent = "Reminder Added";
+    button.dataset.i18n = "Reminder Added";
+    button.textContent = t("Reminder Added");
   });
 });
 

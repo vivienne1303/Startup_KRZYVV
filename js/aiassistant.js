@@ -6,6 +6,7 @@ const chatForm = document.querySelector("#chatForm");
 const chatInput = document.querySelector("#chatInput");
 const chatLog = document.querySelector("#chatLog");
 const promptButtons = document.querySelectorAll(".prompt-btn");
+const t = (key) => window.TeenLaunchI18n?.translate(key) || key;
 
 const replies = [
   "Great. Start by choosing one problem, one audience, and one tiny test you can finish this week.",
@@ -39,7 +40,7 @@ const sendMessage = (text) => {
 
   addBubble(text.trim(), "user");
   setTimeout(() => {
-    addBubble(replies[replyIndex % replies.length], "ai");
+    addBubble(t(replies[replyIndex % replies.length]), "ai");
     replyIndex += 1;
   }, 350);
 };

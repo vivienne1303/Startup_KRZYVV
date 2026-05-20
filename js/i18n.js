@@ -264,103 +264,56 @@ const translations = {
   "For debate practice, make one claim, explain why it matters, then compare your impact against the other side.": "练习辩论时，先提出一个主张，解释它为什么重要，再和对方比较影响。"
 };
 
-const originalText = new WeakMap();
+const translate = (key, language) => {
+  if (language !== "zh") return key;
+  return translations[key] || key;
+};
+
+const i18nElements = Array.from(document.querySelectorAll("[data-i18n]"));
+const i18nAttributeElements = Array.from(document.querySelectorAll("[data-i18n-placeholder], [data-i18n-aria-label]"));
+const languageToggle = document.querySelector("[data-language-toggle]");
+const pageTitle = document.title;
+
 let currentLanguage = localStorage.getItem("teenlaunch-language") || "en";
-let isTranslating = false;
-const originalTitle = document.title;
 
-const normalize = (text) => text.replace(/\s+/g, " ").trim();
+const applyLanguage = (language) => {
+  document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+  document.title = translate(pageTitle, language);
 
-const translateString = (text, language) => {
-  const key = normalize(text);
-  return language === "zh" && translations[key] ? translations[key] : text;
-};
+  i18nElements.forEach((element) => {
+    element.textContent = translate(element.dataset.i18n, language);
+  });
 
-const translateTextNode = (node, language) => {
-  const raw = node.nodeValue;
-  if (!normalize(raw)) return;
-
-  if (!originalText.has(node)) {
-    originalText.set(node, raw);
-  }
-
-  const original = originalText.get(node);
-  const translated = translateString(original, language);
-  const leading = raw.match(/^\s*/)[0];
-  const trailing = raw.match(/\s*$/)[0];
-  node.nodeValue = `${leading}${translated}${trailing}`;
-};
-
-const translateElementAttributes = (element, language) => {
-  ["placeholder", "aria-label"].forEach((attribute) => {
-    if (!element.hasAttribute(attribute)) return;
-
-    const storeKey = `i18nOriginal${attribute.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())}`;
-    if (!element.dataset[storeKey]) {
-      element.dataset[storeKey] = element.getAttribute(attribute);
+  i18nAttributeElements.forEach((element) => {
+    if (element.dataset.i18nPlaceholder) {
+      element.placeholder = translate(element.dataset.i18nPlaceholder, language);
     }
 
-    element.setAttribute(attribute, translateString(element.dataset[storeKey], language));
-  });
-};
-
-const translatePage = (language) => {
-  isTranslating = true;
-  document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
-  document.title = translateString(originalTitle, language);
-
-  document.querySelectorAll("body *").forEach((element) => {
-    if (["SCRIPT", "STYLE"].includes(element.tagName)) return;
-    translateElementAttributes(element, language);
-    element.childNodes.forEach((node) => {
-      if (node.nodeType === Node.TEXT_NODE) {
-        translateTextNode(node, language);
-      }
-    });
+    if (element.dataset.i18nAriaLabel) {
+      element.setAttribute("aria-label", translate(element.dataset.i18nAriaLabel, language));
+    }
   });
 
-  document.querySelectorAll("[data-language-toggle]").forEach((button) => {
-    button.textContent = language === "zh" ? "EN" : "中文";
-    button.setAttribute("aria-label", language === "zh" ? "Switch to English" : "Switch to Chinese");
-  });
-
-  isTranslating = false;
+  if (languageToggle) {
+    languageToggle.textContent = language === "zh" ? "EN" : "中文";
+    languageToggle.setAttribute("aria-label", language === "zh" ? "Switch to English" : "Switch to Chinese");
+  }
 };
 
 const setLanguage = (language) => {
   currentLanguage = language;
   localStorage.setItem("teenlaunch-language", language);
-  translatePage(language);
+  applyLanguage(language);
 };
 
-document.querySelectorAll("[data-language-toggle]").forEach((button) => {
-  button.addEventListener("click", () => {
-    setLanguage(currentLanguage === "zh" ? "en" : "zh");
-  });
+languageToggle?.addEventListener("click", () => {
+  setLanguage(currentLanguage === "zh" ? "en" : "zh");
 });
 
-const observer = new MutationObserver((mutations) => {
-  if (isTranslating || currentLanguage !== "zh") return;
+window.TeenLaunchI18n = {
+  getLanguage: () => currentLanguage,
+  setLanguage,
+  translate: (key) => translate(key, currentLanguage)
+};
 
-  mutations.forEach((mutation) => {
-    if (mutation.type === "characterData") {
-      translateTextNode(mutation.target, currentLanguage);
-    }
-
-    mutation.addedNodes.forEach((node) => {
-      if (node.nodeType === Node.TEXT_NODE) {
-        translateTextNode(node, currentLanguage);
-      }
-
-      if (node.nodeType === Node.ELEMENT_NODE) {
-        node.querySelectorAll("*").forEach((element) => translateElementAttributes(element, currentLanguage));
-        node.childNodes.forEach((child) => {
-          if (child.nodeType === Node.TEXT_NODE) translateTextNode(child, currentLanguage);
-        });
-      }
-    });
-  });
-});
-
-translatePage(currentLanguage);
-observer.observe(document.body, { childList: true, characterData: true, subtree: true });
+applyLanguage(currentLanguage);

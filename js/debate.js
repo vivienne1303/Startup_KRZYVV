@@ -13,6 +13,7 @@ const motionText = document.querySelector("#motionText");
 const newMotion = document.querySelector("#newMotion");
 const quizOptions = document.querySelectorAll(".quiz-option");
 const quizResult = document.querySelector("#quizResult");
+const t = (key) => window.TeenLaunchI18n?.translate(key) || key;
 
 const motions = [
   "This house believes schools should teach entrepreneurship.",
@@ -66,7 +67,7 @@ startTimer.addEventListener("click", () => {
       clearInterval(timerId);
       timerId = null;
       remainingSeconds = 0;
-      modeLabel.textContent = "Time. Reset for another round.";
+      modeLabel.textContent = t("Time. Reset for another round.");
       renderTimer();
     }
   }, 1000);
@@ -75,14 +76,14 @@ startTimer.addEventListener("click", () => {
 pauseTimer.addEventListener("click", () => {
   clearInterval(timerId);
   timerId = null;
-  modeLabel.textContent = "Paused. Breathe, then continue.";
+  modeLabel.textContent = t("Paused. Breathe, then continue.");
 });
 
 resetTimer.addEventListener("click", () => {
   clearInterval(timerId);
   timerId = null;
   resetTimeFromInput();
-  modeLabel.textContent = "Practice mode ready.";
+  modeLabel.textContent = t("Practice mode ready.");
 });
 
 minutesInput.addEventListener("change", resetTimeFromInput);
@@ -93,14 +94,15 @@ roundSelect.addEventListener("change", () => {
 newMotion.addEventListener("click", () => {
   const currentMotion = motionText.textContent;
   const options = motions.filter((motion) => motion !== currentMotion);
-  motionText.textContent = options[Math.floor(Math.random() * options.length)];
+  motionText.dataset.i18n = options[Math.floor(Math.random() * options.length)];
+  motionText.textContent = t(motionText.dataset.i18n);
 });
 
 quizOptions.forEach((option, index) => {
   option.addEventListener("click", () => {
     quizOptions.forEach((item) => item.classList.remove("correct", "wrong"));
     option.classList.add(index === 0 ? "correct" : "wrong");
-    quizResult.textContent = index === 0 ? "Correct. Strong arguments need structure and impact." : "Try again. Judges need reasoning, proof, and impact.";
+    quizResult.textContent = index === 0 ? t("Correct. Strong arguments need structure and impact.") : t("Try again. Judges need reasoning, proof, and impact.");
   });
 });
 

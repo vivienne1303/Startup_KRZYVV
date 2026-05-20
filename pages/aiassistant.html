@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TeenLaunch | AI Assistant</title>
+  <title data-i18n="TeenLaunch | AI Assistant">TeenLaunch | AI Assistant</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -12,14 +12,14 @@
 <body>
   <header class="site-header">
     <nav class="navbar" aria-label="Main navigation">
-      <a class="brand" href="../index.html"><span class="brand-mark">TL</span><span>TeenLaunch<small>AI learning co-pilot</small></span></a>
+      <a class="brand" href="../index.html"><span class="brand-mark">TL</span><span>TeenLaunch<small data-i18n="AI learning co-pilot">AI learning co-pilot</small></span></a>
       <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
       <div class="nav-links">
-        <a href="../index.html">Home</a>
-        <a href="opportunities.html">Opportunities</a>
-        <a href="competitions.html">Competitions</a>
-        <a href="debate.html">Debate Hub</a>
-        <a class="active" href="aiassistant.html">AI Assistant</a>
+        <a href="../index.html" data-i18n="Home">Home</a>
+        <a href="opportunities.html" data-i18n="Opportunities">Opportunities</a>
+        <a href="competitions.html" data-i18n="Competitions">Competitions</a>
+        <a href="debate.html" data-i18n="Debate Hub">Debate Hub</a>
+        <a class="active" href="aiassistant.html" data-i18n="AI Assistant">AI Assistant</a>
         <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>
       </div>
     </nav>
@@ -28,58 +28,58 @@
   <main>
     <section class="hero section">
       <div class="reveal">
-        <p class="eyebrow">AI-powered learning</p>
-        <h1>Your startup, debate, and competition co-pilot.</h1>
-        <p>Use the TeenLaunch AI assistant mockup to explore ideas, find opportunities, practice pitches, and get study-friendly guidance.</p>
+        <p class="eyebrow" data-i18n="AI-powered learning">AI-powered learning</p>
+        <h1 data-i18n="Your startup, debate, and competition co-pilot.">Your startup, debate, and competition co-pilot.</h1>
+        <p data-i18n="Use the TeenLaunch AI assistant mockup to explore ideas, find opportunities, practice pitches, and get study-friendly guidance.">Use the TeenLaunch AI assistant mockup to explore ideas, find opportunities, practice pitches, and get study-friendly guidance.</p>
       </div>
       <div class="assistant-panel reveal">
-        <div class="assistant-header"><span class="pulse"></span><strong>TeenLaunch AI</strong><small>mock chat</small></div>
+        <div class="assistant-header"><span class="pulse"></span><strong data-i18n="TeenLaunch AI">TeenLaunch AI</strong><small data-i18n="mock chat">mock chat</small></div>
         <div class="chat-log" id="chatLog">
-          <div class="bubble ai">Hi. Ask me for startup ideas, pitch tips, debate feedback, or opportunity matches.</div>
+          <div class="bubble ai" data-i18n="Hi. Ask me for startup ideas, pitch tips, debate feedback, or opportunity matches.">Hi. Ask me for startup ideas, pitch tips, debate feedback, or opportunity matches.</div>
         </div>
         <form class="chat-form" id="chatForm">
-          <input id="chatInput" type="text" placeholder="Ask TeenLaunch AI..." autocomplete="off">
-          <button class="btn primary" type="submit">Send</button>
+          <input id="chatInput" type="text" placeholder="Ask TeenLaunch AI..." data-i18n-placeholder="Ask TeenLaunch AI..." autocomplete="off">
+          <button class="btn primary" type="submit" data-i18n="Send">Send</button>
         </form>
       </div>
     </section>
 
     <section class="section">
       <div class="section-heading reveal">
-        <p class="eyebrow">What it helps with</p>
-        <h2>Guided support without making things complicated.</h2>
+        <p class="eyebrow" data-i18n="What it helps with">What it helps with</p>
+        <h2 data-i18n="Guided support without making things complicated.">Guided support without making things complicated.</h2>
       </div>
       <div class="feature-grid">
-        <article class="feature reveal"><h3>Opportunity Matching</h3><p>Find programmes based on age, topic, deadline, and confidence level.</p></article>
-        <article class="feature reveal"><h3>Pitch Feedback</h3><p>Improve problem statements, slides, hooks, demo scripts, and final asks.</p></article>
-        <article class="feature reveal"><h3>Debate Coaching</h3><p>Get structure ideas for arguments, rebuttals, motions, and speaking drills.</p></article>
-        <article class="feature reveal"><h3>Learning Plans</h3><p>Create weekly plans for entrepreneurship, leadership, competitions, and AI tools.</p></article>
+        <article class="feature reveal"><h3 data-i18n="Opportunity Matching">Opportunity Matching</h3><p data-i18n="Find programmes based on age, topic, deadline, and confidence level.">Find programmes based on age, topic, deadline, and confidence level.</p></article>
+        <article class="feature reveal"><h3 data-i18n="Pitch Feedback">Pitch Feedback</h3><p data-i18n="Improve problem statements, slides, hooks, demo scripts, and final asks.">Improve problem statements, slides, hooks, demo scripts, and final asks.</p></article>
+        <article class="feature reveal"><h3 data-i18n="Debate Coaching">Debate Coaching</h3><p data-i18n="Get structure ideas for arguments, rebuttals, motions, and speaking drills.">Get structure ideas for arguments, rebuttals, motions, and speaking drills.</p></article>
+        <article class="feature reveal"><h3 data-i18n="Learning Plans">Learning Plans</h3><p data-i18n="Create weekly plans for entrepreneurship, leadership, competitions, and AI tools.">Create weekly plans for entrepreneurship, leadership, competitions, and AI tools.</p></article>
       </div>
     </section>
 
     <section class="section prompt-section">
       <div class="prompt-card reveal">
-        <p class="eyebrow">Prompt library</p>
-        <h2>Tap a starter prompt.</h2>
-        <button class="prompt-btn">Find beginner startup opportunities for a 15-year-old.</button>
-        <button class="prompt-btn">Give me a 60-second pitch structure.</button>
-        <button class="prompt-btn">Generate a debate motion about AI in schools.</button>
-        <button class="prompt-btn">Create a 7-day confidence practice plan.</button>
+        <p class="eyebrow" data-i18n="Prompt library">Prompt library</p>
+        <h2 data-i18n="Tap a starter prompt.">Tap a starter prompt.</h2>
+        <button class="prompt-btn" data-i18n="Find beginner startup opportunities for a 15-year-old.">Find beginner startup opportunities for a 15-year-old.</button>
+        <button class="prompt-btn" data-i18n="Give me a 60-second pitch structure.">Give me a 60-second pitch structure.</button>
+        <button class="prompt-btn" data-i18n="Generate a debate motion about AI in schools.">Generate a debate motion about AI in schools.</button>
+        <button class="prompt-btn" data-i18n="Create a 7-day confidence practice plan.">Create a 7-day confidence practice plan.</button>
       </div>
       <div class="learning-card reveal">
-        <p class="eyebrow">Future-ready learning</p>
-        <h2>Personalized tracks</h2>
-        <div class="track"><span>Entrepreneurship</span><strong>72%</strong></div>
-        <div class="track"><span>Debate Skills</span><strong>58%</strong></div>
-        <div class="track"><span>AI Tools</span><strong>81%</strong></div>
+        <p class="eyebrow" data-i18n="Future-ready learning">Future-ready learning</p>
+        <h2 data-i18n="Personalized tracks">Personalized tracks</h2>
+        <div class="track"><span data-i18n="Entrepreneurship">Entrepreneurship</span><strong>72%</strong></div>
+        <div class="track"><span data-i18n="Debate Skills">Debate Skills</span><strong>58%</strong></div>
+        <div class="track"><span data-i18n="AI Tools">AI Tools</span><strong>81%</strong></div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <p>&copy; 2026 TeenLaunch</p>
-    <a href="opportunities.html">Find opportunities</a>
-    <a href="mailto:hello@teenlaunch.example">Contact</a>
+    <a href="opportunities.html" data-i18n="Find opportunities">Find opportunities</a>
+    <a href="mailto:hello@teenlaunch.example" data-i18n="Contact">Contact</a>
   </footer>
 
   <script src="../js/i18n.js"></script>
