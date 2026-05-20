@@ -1,0 +1,366 @@
+const translations = {
+  "TeenLaunch | Discover Opportunities. Build Your Future.": "TeenLaunch | 发现机会，打造未来。",
+  "TeenLaunch | Opportunities": "TeenLaunch | 机会",
+  "TeenLaunch | Competitions": "TeenLaunch | 比赛",
+  "TeenLaunch | Debate Hub": "TeenLaunch | 辩论中心",
+  "TeenLaunch | AI Assistant": "TeenLaunch | AI 助手",
+  "Future founders start here": "未来创始人从这里开始",
+  "Opportunity radar": "机会雷达",
+  "Competition mode": "比赛模式",
+  "Debate hub": "辩论中心",
+  "AI learning co-pilot": "AI 学习伙伴",
+  "Home": "首页",
+  "Opportunities": "机会",
+  "Competitions": "比赛",
+  "Debate Hub": "辩论中心",
+  "AI Assistant": "AI 助手",
+  "For teenagers aged 10-19": "面向 10-19 岁青少年",
+  "Discover Opportunities. Build Your Future.": "发现机会，打造未来。",
+  "TeenLaunch is a youth-first startup platform for entrepreneurship, competitions, debate skills, leadership, and AI-powered learning.": "TeenLaunch 是一个以青少年为中心的创业平台，帮助你探索创业、比赛、辩论技能、领导力和 AI 学习。",
+  "Get Started": "开始探索",
+  "Explore Platform": "探索平台",
+  "TeenLaunch AI": "TeenLaunch AI",
+  "online": "在线",
+  "What do you want to build this month?": "这个月你想打造什么？",
+  "A pitch for a climate tech idea.": "一个气候科技创意的路演。",
+  "Cool. I found 3 competitions, 2 mentors, and a pitch checklist.": "太好了。我找到了 3 个比赛、2 位导师和一份路演清单。",
+  "Ask about ideas, debates, competitions...": "询问创意、辩论、比赛...",
+  "Featured sections": "精选板块",
+  "One launchpad for skills, courage, and real-world experience.": "一个提升技能、勇气和真实经验的起点。",
+  "Startup Opportunities": "创业机会",
+  "Programmes, internships, workshops, leadership camps, and youth entrepreneurship tracks.": "项目、实习、工作坊、领导力营和青少年创业路线。",
+  "Upcoming Competitions": "即将开始的比赛",
+  "Pitch battles, hackathons, debate tournaments, public speaking contests, and innovation challenges.": "路演对决、黑客松、辩论赛、演讲比赛和创新挑战。",
+  "Debate Skills": "辩论技能",
+  "Practice argument building, rebuttals, critical thinking, confidence, and stage presence.": "练习论点构建、反驳、批判性思维、自信和舞台表现。",
+  "Get guided learning, opportunity matching, pitch feedback, and study support.": "获得学习指导、机会匹配、路演反馈和学习支持。",
+  "Events & Workshops": "活动与工作坊",
+  "Join bite-sized sessions on entrepreneurship, communication, leadership, and AI tools.": "参加创业、沟通、领导力和 AI 工具的短课。",
+  "What users can do": "用户可以做什么",
+  "Move from curious to confident with small weekly wins.": "通过每周的小进步，从好奇走向自信。",
+  "Discover opportunities that match your age, interests, and goals.": "发现符合你年龄、兴趣和目标的机会。",
+  "Learn new startup, leadership, debate, and AI skills.": "学习创业、领导力、辩论和 AI 技能。",
+  "Join competitions and track registration deadlines.": "参加比赛并追踪报名截止日期。",
+  "Improve confidence with speaking prompts and practice tools.": "通过演讲提示和练习工具提升自信。",
+  "Connect with programmes that make your portfolio stronger.": "连接能增强作品集的项目。",
+  "Why this platform": "为什么选择这个平台",
+  "Built for teens who want useful, beginner-friendly access.": "为想要实用、适合新手资源的青少年而建。",
+  "Easy access": "轻松获取",
+  "No more digging through random links. Find youth-friendly programmes in one clean place.": "不用再翻找零散链接。在一个清晰的平台找到适合青少年的项目。",
+  "Youth-focused": "专注青少年",
+  "Designed around students, young founders, debaters, creators, and first-time builders.": "为学生、年轻创始人、辩手、创作者和初次实践者设计。",
+  "Beginner-friendly": "新手友好",
+  "Simple explanations, practical steps, and tools that help you start before you feel ready.": "简单解释、实用步骤和工具，帮助你在准备好之前就开始行动。",
+  "Future-ready": "面向未来",
+  "Learn entrepreneurship, communication, leadership, and AI skills that compound over time.": "学习创业、沟通、领导力和 AI 技能，让能力持续积累。",
+  "Student stories": "学生故事",
+  "Proof that young people can build early and build well.": "证明年轻人也能早早开始，并做得很好。",
+  "\"TeenLaunch helped me turn a school idea into a competition pitch in two weeks.\"": "“TeenLaunch 帮我在两周内把学校创意变成了比赛路演。”",
+  "Maya, 15": "Maya，15 岁",
+  "Startup pitch finalist": "创业路演决赛选手",
+  "\"The debate practice made me way calmer before my public speaking contest.\"": "“辩论练习让我在演讲比赛前冷静很多。”",
+  "Jayden, 13": "Jayden，13 岁",
+  "Public speaking winner": "演讲比赛获奖者",
+  "\"I found a youth innovation workshop and met teammates for my first app idea.\"": "“我找到了青少年创新工作坊，也遇到了第一个 app 创意的队友。”",
+  "Alyssa, 17": "Alyssa，17 岁",
+  "Student founder": "学生创始人",
+  "Future founders start here.": "未来创始人从这里开始。",
+  "About": "关于",
+  "Why TeenLaunch": "为什么选择 TeenLaunch",
+  "Stories": "故事",
+  "Contact": "联系",
+  "Ask the AI assistant": "询问 AI 助手",
+  "Social": "社交媒体",
+  "Instagram": "Instagram",
+  "TikTok": "TikTok",
+  "LinkedIn": "LinkedIn",
+  "Explore what is next": "探索下一步",
+  "Find programmes, camps, workshops, and internships made for young builders.": "寻找为年轻实践者打造的项目、营地、工作坊和实习。",
+  "Search youth-friendly entrepreneurship, leadership, technology, debate, and volunteering opportunities with deadlines and eligibility shown upfront.": "搜索适合青少年的创业、领导力、科技、辩论和志愿机会，并提前查看截止日期与资格。",
+  "Recommended match": "推荐匹配",
+  "Startup Sprint Camp": "创业冲刺营",
+  "For ages 13-18. Build an MVP, meet mentors, and pitch on demo day.": "适合 13-18 岁。打造 MVP、认识导师，并在展示日进行路演。",
+  "Browse Opportunities": "浏览机会",
+  "Search": "搜索",
+  "All": "全部",
+  "Business": "商业",
+  "Technology": "科技",
+  "Debate/Public Speaking": "辩论/公众演讲",
+  "Leadership": "领导力",
+  "Volunteering": "志愿服务",
+  "Young Founder Accelerator": "年轻创始人加速器",
+  "Entrepreneurship programme for students building their first business idea.": "面向正在打造第一个商业创意的学生创业项目。",
+  "Deadline: 28 Jun 2026": "截止日期：2026 年 6 月 28 日",
+  "Eligibility: Ages 14-19": "资格：14-19 岁",
+  "Apply": "申请",
+  "AI Innovation Workshop": "AI 创新工作坊",
+  "Hands-on sessions for using AI tools to research, prototype, and present ideas.": "动手学习如何用 AI 工具研究、原型制作和展示创意。",
+  "Deadline: 12 Jul 2026": "截止日期：2026 年 7 月 12 日",
+  "Eligibility: Ages 12-19": "资格：12-19 岁",
+  "Future Leaders Camp": "未来领袖营",
+  "A confidence-building camp focused on teamwork, decision-making, and service.": "专注团队合作、决策和服务的自信力训练营。",
+  "Deadline: 5 Aug 2026": "截止日期：2026 年 8 月 5 日",
+  "Eligibility: Ages 10-16": "资格：10-16 岁",
+  "Public Speaking Lab": "公众演讲实验室",
+  "Weekly practice sessions for speeches, debate arguments, and presentation skills.": "每周练习演讲、辩论论点和展示技能。",
+  "Deadline: 22 Jul 2026": "截止日期：2026 年 7 月 22 日",
+  "Eligibility: Ages 11-19": "资格：11-19 岁",
+  "Community Impact Crew": "社区影响力团队",
+  "Join youth-led volunteering projects and learn how social impact programmes run.": "加入青少年主导的志愿项目，学习社会影响力项目如何运作。",
+  "Deadline: Rolling": "截止日期：滚动报名",
+  "Eligibility: Ages 10-19": "资格：10-19 岁",
+  "Student Tech Internship": "学生科技实习",
+  "Beginner-friendly internship shadowing product, design, and startup operations teams.": "适合新手的实习，跟随产品、设计和创业运营团队学习。",
+  "Deadline: 18 Aug 2026": "截止日期：2026 年 8 月 18 日",
+  "Eligibility: Ages 16-19": "资格：16-19 岁",
+  "No matching opportunities yet. Try another search or category.": "暂时没有匹配的机会。试试其他搜索词或类别。",
+  "Recommended": "推荐",
+  "Best first step": "最佳第一步",
+  "Start with the AI Innovation Workshop if you want a practical, beginner-friendly way to connect tech and entrepreneurship.": "如果你想用实用又适合新手的方式连接科技与创业，可以从 AI 创新工作坊开始。",
+  "Trending": "热门",
+  "Most saved": "收藏最多",
+  "Young Founder Accelerator is trending this month because it includes mentors, demo day, and portfolio-ready project outcomes.": "年轻创始人加速器本月很热门，因为它包含导师、展示日和可放入作品集的项目成果。",
+  "Ask AI": "询问 AI",
+  "Compete with confidence": "自信参赛",
+  "Pitch, code, speak, debate, and show what you can build.": "路演、编程、演讲、辩论，展示你能打造什么。",
+  "Track startup pitch competitions, hackathons, debate contests, public speaking events, and innovation challenges in one focused dashboard.": "在一个聚焦的面板追踪创业路演、黑客松、辩论赛、演讲活动和创新挑战。",
+  "Next deadline": "下一个截止日期",
+  "Loading...": "加载中...",
+  "Youth Startup Pitch Challenge registration closes soon.": "青少年创业路演挑战报名即将截止。",
+  "Competition cards": "比赛卡片",
+  "Choose your arena.": "选择你的赛场。",
+  "Startup Pitch": "创业路演",
+  "Youth Startup Pitch Challenge": "青少年创业路演挑战",
+  "Rules: 3-minute pitch, 2-minute Q&A, solo or teams up to 4.": "规则：3 分钟路演，2 分钟问答，可个人或最多 4 人组队。",
+  "Timeline: Jul 1 briefing, Jul 20 finals": "时间线：7 月 1 日说明会，7 月 20 日决赛",
+  "Prize pool: $5,000": "奖金池：$5,000",
+  "Requirements: Ages 13-19, pitch deck": "要求：13-19 岁，提交路演稿",
+  "Set Reminder": "设置提醒",
+  "Hackathon": "黑客松",
+  "48H AI Hack Sprint": "48 小时 AI 黑客冲刺",
+  "Rules: Build a working prototype using AI for learning, health, or sustainability.": "规则：使用 AI 为学习、健康或可持续发展打造可运行原型。",
+  "Timeline: Aug 9-11": "时间线：8 月 9-11 日",
+  "Prize pool: $3,000": "奖金池：$3,000",
+  "Requirements: Team of 2-5, demo video": "要求：2-5 人团队，提交演示视频",
+  "Debate": "辩论",
+  "Future Voices Debate Cup": "未来之声辩论杯",
+  "Rules: Prepared and impromptu rounds using school-friendly debate motions.": "规则：使用适合学校的辩题进行准备赛和即兴赛。",
+  "Timeline: Sep 5 qualifiers, Sep 19 finals": "时间线：9 月 5 日资格赛，9 月 19 日决赛",
+  "Prize pool: Trophies and mentorship": "奖品：奖杯和导师指导",
+  "Requirements: Ages 10-19, teams of 3": "要求：10-19 岁，3 人组队",
+  "Upcoming events calendar": "即将到来的活动日历",
+  "July to September": "7 月至 9 月",
+  "Startup Pitch briefing": "创业路演说明会",
+  "Pitch finals and demo day": "路演决赛与展示日",
+  "AI Hack Sprint begins": "AI 黑客冲刺开始",
+  "Debate Cup qualifiers": "辩论杯资格赛",
+  "Reminders": "提醒",
+  "Your list": "你的列表",
+  "No reminders yet. Add one from a competition card.": "还没有提醒。可从比赛卡片添加一个。",
+  "Past Winners Showcase": "往届获奖者展示",
+  "2025 winners built a study app, a food waste tracker, and a youth mental wellness campaign.": "2025 年获奖者打造了学习 app、食物浪费追踪器和青少年心理健康活动。",
+  "Preparation Tips": "准备技巧",
+  "Read the judging rubric, rehearse under time pressure, and test your demo before submission day.": "阅读评分标准，在限时压力下排练，并在提交日前测试演示。",
+  "Pitching Tips": "路演技巧",
+  "Lead with the problem, show proof, keep the solution simple, and end with a clear ask.": "从问题切入，展示证据，保持方案简单，并以明确请求收尾。",
+  "Presentation Advice": "展示建议",
+  "Use fewer words on slides, speak slower than you think, and make eye contact during the strongest lines.": "幻灯片少放文字，说得比自己想象中更慢，并在关键句时进行眼神交流。",
+  "Practice speaking": "练习演讲",
+  "Speak. Think. Lead.": "表达。思考。领导。",
+  "Build arguments, practice rebuttals, sharpen critical thinking, and grow into the kind of speaker people remember.": "构建论点、练习反驳、提升批判性思维，成长为让人记住的演讲者。",
+  "Debate timer": "辩论计时器",
+  "Speech minutes": "演讲分钟数",
+  "Speaker round": "发言轮次",
+  "Prime Minister": "正方一辩",
+  "Opposition Leader": "反方一辩",
+  "Rebuttal Speaker": "反驳发言人",
+  "Reply Speech": "总结陈词",
+  "Start": "开始",
+  "Pause": "暂停",
+  "Reset": "重置",
+  "Practice mode ready.": "练习模式已准备。",
+  "Learn the craft": "学习技巧",
+  "Training blocks for stronger communication.": "提升沟通力的训练模块。",
+  "Debate Basics": "辩论基础",
+  "Learn roles, structures, motions, points of information, and speaker duties.": "学习角色、结构、辩题、质询点和发言职责。",
+  "Argument Building": "论点构建",
+  "Use claim, reason, evidence, impact, and link-back to make points land.": "使用主张、理由、证据、影响和回扣，让观点更有力。",
+  "Rebuttal Techniques": "反驳技巧",
+  "Spot weak assumptions, compare impacts, and respond without sounding defensive.": "识别薄弱假设，比较影响，并用不防御的方式回应。",
+  "Public Speaking Tips": "公众演讲技巧",
+  "Use pacing, pauses, posture, voice, and eye contact to sound confident.": "运用节奏、停顿、姿态、声音和眼神交流，听起来更自信。",
+  "Critical Thinking Exercises": "批判性思维练习",
+  "Practice weighing trade-offs, challenging assumptions, and ranking arguments.": "练习权衡取舍、挑战假设和排序论点。",
+  "Practice area": "练习区",
+  "This house believes schools should teach entrepreneurship.": "本院认为学校应该教授创业。",
+  "Generate Random Motion": "生成随机辩题",
+  "AI feedback mockup": "AI 反馈示例",
+  "Try giving one clear example after your strongest argument.": "试着在最强论点后给出一个清晰例子。",
+  "Your rebuttal is stronger when you compare impacts directly.": "当你直接比较影响时，反驳会更有力。",
+  "Formats": "赛制",
+  "British Parliamentary, World Schools, public forum, and classroom debate formats.": "英式议会制、世界学校制、公共论坛和课堂辩论赛制。",
+  "Rules": "规则",
+  "Speaker timing, protected time, POIs, judging criteria, and team roles.": "发言时间、保护时间、质询点、评判标准和团队角色。",
+  "Sample Speeches": "示例演讲",
+  "Study strong openings, rebuttal bridges, summary speeches, and reply speeches.": "学习有力开场、反驳衔接、总结发言和总结陈词。",
+  "Winning Examples": "获胜案例",
+  "Break down why winning speeches are persuasive, organized, and memorable.": "拆解获胜演讲为什么有说服力、有组织且令人难忘。",
+  "Mini quiz": "小测验",
+  "What should a strong argument include?": "一个有力论点应该包含什么？",
+  "Claim, reasoning, evidence, impact": "主张、推理、证据、影响",
+  "Only a loud voice": "只有响亮的声音",
+  "A long quote with no explanation": "一段没有解释的长引用",
+  "Progress tracking": "进度追踪",
+  "Practice streak:": "连续练习：",
+  "days": "天",
+  "First Speech": "第一次演讲",
+  "Rebuttal Rookie": "反驳新手",
+  "3 Exercises Done": "完成 3 个练习",
+  "Find competitions": "寻找比赛",
+  "AI-powered learning": "AI 驱动学习",
+  "Your startup, debate, and competition co-pilot.": "你的创业、辩论和比赛伙伴。",
+  "Use the TeenLaunch AI assistant mockup to explore ideas, find opportunities, practice pitches, and get study-friendly guidance.": "使用 TeenLaunch AI 助手示例来探索创意、寻找机会、练习路演并获得适合学习的指导。",
+  "mock chat": "聊天示例",
+  "Hi. Ask me for startup ideas, pitch tips, debate feedback, or opportunity matches.": "你好。可以问我创业创意、路演技巧、辩论反馈或机会匹配。",
+  "Send": "发送",
+  "What it helps with": "它能帮什么",
+  "Guided support without making things complicated.": "提供指导支持，但不把事情变复杂。",
+  "Opportunity Matching": "机会匹配",
+  "Find programmes based on age, topic, deadline, and confidence level.": "根据年龄、主题、截止日期和信心水平寻找项目。",
+  "Pitch Feedback": "路演反馈",
+  "Improve problem statements, slides, hooks, demo scripts, and final asks.": "改进问题陈述、幻灯片、开场钩子、演示脚本和最终请求。",
+  "Debate Coaching": "辩论辅导",
+  "Get structure ideas for arguments, rebuttals, motions, and speaking drills.": "获取论点、反驳、辩题和演讲练习的结构建议。",
+  "Learning Plans": "学习计划",
+  "Create weekly plans for entrepreneurship, leadership, competitions, and AI tools.": "制定创业、领导力、比赛和 AI 工具的每周计划。",
+  "Prompt library": "提示词库",
+  "Tap a starter prompt.": "点击一个起始提示。",
+  "Find beginner startup opportunities for a 15-year-old.": "为 15 岁学生寻找新手创业机会。",
+  "Give me a 60-second pitch structure.": "给我一个 60 秒路演结构。",
+  "Generate a debate motion about AI in schools.": "生成一个关于学校中 AI 的辩题。",
+  "Create a 7-day confidence practice plan.": "制定一个 7 天自信练习计划。",
+  "Future-ready learning": "面向未来的学习",
+  "Personalized tracks": "个性化路线",
+  "Entrepreneurship": "创业",
+  "Debate Skills": "辩论技能",
+  "AI Tools": "AI 工具",
+  "Find opportunities": "寻找机会",
+  "Search internships, workshops, camps...": "搜索实习、工作坊、营地...",
+  "Ask TeenLaunch AI...": "询问 TeenLaunch AI...",
+  "This house would ban homework for students under 14.": "本院将禁止 14 岁以下学生做家庭作业。",
+  "This house believes AI should be allowed in classrooms.": "本院认为课堂中应该允许使用 AI。",
+  "This house would make public speaking a core school subject.": "本院将把公众演讲列为学校核心科目。",
+  "This house believes teenagers should vote in local elections.": "本院认为青少年应该在地方选举中投票。",
+  "This house would prioritize climate innovation over fast fashion.": "本院将优先发展气候创新，而不是快时尚。",
+  "Correct. Strong arguments need structure and impact.": "正确。有力论点需要结构和影响。",
+  "Try again. Judges need reasoning, proof, and impact.": "再试一次。评委需要推理、证据和影响。",
+  "Time. Reset for another round.": "时间到。重置后开始下一轮。",
+  "Paused. Breathe, then continue.": "已暂停。深呼吸，然后继续。",
+  "Reminder Added": "已添加提醒",
+  "Closed": "已截止",
+  "Great. Start by choosing one problem, one audience, and one tiny test you can finish this week.": "很好。先选择一个问题、一个受众，以及一个本周能完成的小测试。",
+  "Try this structure: hook, problem, solution, proof, impact, ask. Keep it under 60 seconds.": "试试这个结构：钩子、问题、方案、证据、影响、请求。控制在 60 秒内。",
+  "For opportunities, filter by age, deadline, and topic. Beginner-friendly programmes are best for your first win.": "寻找机会时，可按年龄、截止日期和主题筛选。新手友好项目最适合拿下第一次成果。",
+  "For debate practice, make one claim, explain why it matters, then compare your impact against the other side.": "练习辩论时，先提出一个主张，解释它为什么重要，再和对方比较影响。"
+};
+
+const originalText = new WeakMap();
+let currentLanguage = localStorage.getItem("teenlaunch-language") || "en";
+let isTranslating = false;
+const originalTitle = document.title;
+
+const normalize = (text) => text.replace(/\s+/g, " ").trim();
+
+const translateString = (text, language) => {
+  const key = normalize(text);
+  return language === "zh" && translations[key] ? translations[key] : text;
+};
+
+const translateTextNode = (node, language) => {
+  const raw = node.nodeValue;
+  if (!normalize(raw)) return;
+
+  if (!originalText.has(node)) {
+    originalText.set(node, raw);
+  }
+
+  const original = originalText.get(node);
+  const translated = translateString(original, language);
+  const leading = raw.match(/^\s*/)[0];
+  const trailing = raw.match(/\s*$/)[0];
+  node.nodeValue = `${leading}${translated}${trailing}`;
+};
+
+const translateElementAttributes = (element, language) => {
+  ["placeholder", "aria-label"].forEach((attribute) => {
+    if (!element.hasAttribute(attribute)) return;
+
+    const storeKey = `i18nOriginal${attribute.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())}`;
+    if (!element.dataset[storeKey]) {
+      element.dataset[storeKey] = element.getAttribute(attribute);
+    }
+
+    element.setAttribute(attribute, translateString(element.dataset[storeKey], language));
+  });
+};
+
+const translatePage = (language) => {
+  isTranslating = true;
+  document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+  document.title = translateString(originalTitle, language);
+
+  document.querySelectorAll("body *").forEach((element) => {
+    if (["SCRIPT", "STYLE"].includes(element.tagName)) return;
+    translateElementAttributes(element, language);
+    element.childNodes.forEach((node) => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        translateTextNode(node, language);
+      }
+    });
+  });
+
+  document.querySelectorAll("[data-language-toggle]").forEach((button) => {
+    button.textContent = language === "zh" ? "EN" : "中文";
+    button.setAttribute("aria-label", language === "zh" ? "Switch to English" : "Switch to Chinese");
+  });
+
+  isTranslating = false;
+};
+
+const setLanguage = (language) => {
+  currentLanguage = language;
+  localStorage.setItem("teenlaunch-language", language);
+  translatePage(language);
+};
+
+document.querySelectorAll("[data-language-toggle]").forEach((button) => {
+  button.addEventListener("click", () => {
+    setLanguage(currentLanguage === "zh" ? "en" : "zh");
+  });
+});
+
+const observer = new MutationObserver((mutations) => {
+  if (isTranslating || currentLanguage !== "zh") return;
+
+  mutations.forEach((mutation) => {
+    if (mutation.type === "characterData") {
+      translateTextNode(mutation.target, currentLanguage);
+    }
+
+    mutation.addedNodes.forEach((node) => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        translateTextNode(node, currentLanguage);
+      }
+
+      if (node.nodeType === Node.ELEMENT_NODE) {
+        node.querySelectorAll("*").forEach((element) => translateElementAttributes(element, currentLanguage));
+        node.childNodes.forEach((child) => {
+          if (child.nodeType === Node.TEXT_NODE) translateTextNode(child, currentLanguage);
+        });
+      }
+    });
+  });
+});
+
+translatePage(currentLanguage);
+observer.observe(document.body, { childList: true, characterData: true, subtree: true });

@@ -110,6 +110,23 @@ a {
   transform: translateY(-1px);
 }
 
+.language-toggle {
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid rgba(53, 230, 255, 0.34);
+  border-radius: 999px;
+  background: rgba(53, 230, 255, 0.1);
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 900;
+}
+
+.language-toggle:hover {
+  border-color: rgba(255, 255, 255, 0.36);
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .nav-toggle {
   display: none;
   width: 42px;
@@ -464,6 +481,11 @@ h3 {
 
   .nav-links a {
     padding: 12px;
+  }
+
+  .language-toggle {
+    width: 100%;
+    min-height: 44px;
   }
 
   .section {
