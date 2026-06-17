@@ -1,0 +1,358 @@
+:root {
+  --bg: #eaf7ff;
+  --panel: rgba(255, 255, 255, 0.78);
+  --panel-strong: rgba(234, 247, 255, 0.92);
+  --text: #07133f;
+  --muted: #40547a;
+  --line: rgba(39, 99, 178, 0.18);
+  --pink: #2e83f7;
+  --violet: #202667;
+  --cyan: #38aef6;
+  --lime: #8ef1c2;
+  --shadow: 0 22px 58px rgba(30, 91, 155, 0.16);
+}
+
+body {
+  background:
+    radial-gradient(circle at 92% 34%, rgba(86, 181, 255, 0.34), transparent 24rem),
+    radial-gradient(circle at 96% 88%, rgba(42, 153, 238, 0.34), transparent 30rem),
+    radial-gradient(circle at 0% 84%, rgba(255, 255, 255, 0.65), transparent 32rem),
+    linear-gradient(145deg, #f4fbff 0%, #dff3ff 34%, #9ed4ff 66%, #202667 100%),
+    #eaf7ff;
+  color: var(--text);
+}
+
+.site-header.scrolled {
+  background: rgba(236, 248, 255, 0.9);
+}
+
+.brand-mark,
+.btn.primary {
+  color: #ffffff;
+  background: linear-gradient(135deg, #2e83f7, #202667);
+  box-shadow: 0 14px 34px rgba(46, 131, 247, 0.22);
+}
+
+.brand-logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.navbar {
+  min-height: 88px;
+}
+
+.navbar {
+  width: min(1320px, calc(100% - 32px));
+}
+
+.hero {
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
+  gap: clamp(48px, 6vw, 96px);
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+#home.hero h1 {
+  max-width: 100%;
+  font-size: clamp(2.75rem, 5.2vw, 4.85rem);
+}
+
+.hero h1 {
+  max-width: 760px;
+  font-size: clamp(2.4rem, 4.4vw, 4.25rem);
+}
+
+.chat-preview {
+  z-index: 1;
+  backdrop-filter: blur(18px);
+}
+
+.chat-preview::before {
+  background: radial-gradient(circle, rgba(56, 174, 246, 0.22), transparent 68%);
+}
+
+.message,
+.chat-input,
+.bubble,
+.prompt-btn,
+.quiz-option,
+.action-list div,
+.calendar-row,
+.reminders li,
+.track {
+  border-color: rgba(39, 99, 178, 0.2);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.footer {
+  width: 100%;
+  margin-bottom: 0;
+  padding: 42px max(32px, calc((100vw - 1320px) / 2 + 16px));
+  border: 0;
+  border-radius: 0;
+  background: rgba(244, 250, 255, 0.9);
+  color: #40547a;
+  box-shadow: none;
+}
+
+.footer h3,
+.footer h4 {
+  color: #07133f;
+}
+
+.footer a,
+.footer p {
+  color: #40547a;
+}
+
+.footer a:hover {
+  color: #1f66d1;
+}
+
+.nav-links {
+  gap: 12px;
+  font-size: 0.78rem;
+}
+
+.nav-links a {
+  white-space: nowrap;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-trigger::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  display: grid;
+  min-width: 190px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(245, 251, 255, 0.98);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -6px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.dropdown-menu a {
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(46, 131, 247, 0.1);
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.nav-dropdown.active .nav-trigger {
+  color: var(--text);
+}
+
+.action-list strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.action-list p {
+  color: var(--muted);
+}
+
+.card,
+.mini-card,
+.testimonial,
+.faq-list,
+.action-list,
+.chat-preview,
+.hero-panel,
+.toolbar,
+.opportunity-card,
+.highlight,
+.countdown-card,
+.competition-card,
+.calendar,
+.reminders,
+.tip,
+.timer-card,
+.skill,
+.practice-card,
+.feedback-card,
+.resource,
+.quiz,
+.progress,
+.assistant-panel,
+.feature,
+.prompt-card,
+.learning-card,
+.resource-card,
+.deck-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(224, 243, 255, 0.72));
+  border-color: var(--line);
+  box-shadow: var(--shadow);
+}
+
+.five-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  min-height: 280px;
+}
+
+.card span {
+  margin-bottom: 28px;
+}
+
+.card h3 {
+  max-width: 13rem;
+  font-size: 1.25rem;
+}
+
+.card p {
+  max-width: 18rem;
+  line-height: 1.45;
+}
+
+.chat-input,
+.search-box input,
+.timer-card input,
+.timer-card select,
+.chat-log,
+.chat-form input {
+  background: rgba(255, 255, 255, 0.66);
+  color: var(--text);
+}
+
+.message.user,
+.bubble.user,
+.message.alt {
+  background: rgba(46, 131, 247, 0.12);
+}
+
+.tag,
+.card span,
+.badges span,
+.filter.active {
+  background: rgba(46, 131, 247, 0.12);
+}
+
+.language-toggle {
+  display: none;
+}
+
+.competition-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.skill-grid,
+.resources-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  #home.hero h1,
+  .hero h1 {
+    max-width: 760px;
+  }
+
+  .nav-links {
+    gap: 8px;
+    font-size: 0.74rem;
+  }
+
+  .competition-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skill-grid,
+  .resources-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .five-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-links {
+    background: rgba(245, 251, 255, 0.98);
+  }
+
+  .nav-dropdown {
+    display: grid;
+  }
+
+  .nav-trigger {
+    padding: 12px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    min-width: 0;
+    margin: 0 0 6px 12px;
+    padding: 4px;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .dropdown-menu a {
+    padding: 10px 12px;
+  }
+
+  .competition-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-grid,
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .five-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 0;
+  }
+}

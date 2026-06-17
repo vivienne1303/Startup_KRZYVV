@@ -3,23 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="TeenLaunch | Debate Hub">TeenLaunch | Debate Hub</title>
+  <title data-i18n="TeenLaunch | Soft Skills & Debate">TeenLaunch | Soft Skills & Debate</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/debate.css">
+  <link rel="stylesheet" href="../css/theme.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="navbar" aria-label="Main navigation">
-      <a class="brand" href="../index.html"><span class="brand-mark">TL</span><span>TeenLaunch<small data-i18n="Debate hub">Debate hub</small></span></a>
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../images/logo.png" alt="" aria-hidden="true"><span>TeenLaunch<small data-i18n="Soft skills lab">Soft skills lab</small></span></a>
       <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
       <div class="nav-links">
         <a href="../index.html" data-i18n="Home">Home</a>
         <a href="opportunities.html" data-i18n="Opportunities">Opportunities</a>
-        <a href="competitions.html" data-i18n="Competitions">Competitions</a>
-        <a class="active" href="debate.html" data-i18n="Debate Hub">Debate Hub</a>
-        <a href="aiassistant.html" data-i18n="AI Assistant">AI Assistant</a>
+        <div class="nav-dropdown">
+          <a class="nav-trigger" href="competitions.html" data-i18n="Competitions">Competitions</a>
+          <div class="dropdown-menu" aria-label="Competition categories">
+            <a href="competitions.html#academic" data-i18n="Academic">Academic</a>
+            <a href="competitions.html#non-academic" data-i18n="Non-Academic">Non-Academic</a>
+          </div>
+        </div>
+        <a href="resources.html" data-i18n="Resources">Resources</a>
+        <a class="active" href="debate.html" data-i18n="Soft Skills & Debate">Soft Skills & Debate</a>
+        <a href="aiassistant.html" data-i18n="AI Chatbot">AI Chatbot</a>
         <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>
       </div>
     </nav>
@@ -28,7 +36,7 @@
   <main>
     <section class="hero section">
       <div class="reveal">
-        <p class="eyebrow" data-i18n="Debate hub">Debate hub</p>
+        <p class="eyebrow" data-i18n="Soft Skills & Debate">Soft Skills & Debate</p>
         <h1 data-i18n="Speak. Think. Lead.">Speak. Think. Lead.</h1>
         <p data-i18n="Build arguments, practice rebuttals, sharpen critical thinking, and grow into the kind of speaker people remember.">Build arguments, practice rebuttals, sharpen critical thinking, and grow into the kind of speaker people remember.</p>
       </div>
@@ -49,7 +57,7 @@
     <section class="section">
       <div class="section-heading reveal">
         <p class="eyebrow" data-i18n="Learn the craft">Learn the craft</p>
-        <h2 data-i18n="Training blocks for stronger communication.">Training blocks for stronger communication.</h2>
+        <h2 data-i18n="Training blocks for stronger thinking, speaking, and leadership.">Training blocks for stronger thinking, speaking, and leadership.</h2>
       </div>
       <div class="skill-grid">
         <article class="skill reveal"><h3 data-i18n="Debate Basics">Debate Basics</h3><p data-i18n="Learn roles, structures, motions, points of information, and speaker duties.">Learn roles, structures, motions, points of information, and speaker duties.</p></article>
@@ -57,6 +65,8 @@
         <article class="skill reveal"><h3 data-i18n="Rebuttal Techniques">Rebuttal Techniques</h3><p data-i18n="Spot weak assumptions, compare impacts, and respond without sounding defensive.">Spot weak assumptions, compare impacts, and respond without sounding defensive.</p></article>
         <article class="skill reveal"><h3 data-i18n="Public Speaking Tips">Public Speaking Tips</h3><p data-i18n="Use pacing, pauses, posture, voice, and eye contact to sound confident.">Use pacing, pauses, posture, voice, and eye contact to sound confident.</p></article>
         <article class="skill reveal"><h3 data-i18n="Critical Thinking Exercises">Critical Thinking Exercises</h3><p data-i18n="Practice weighing trade-offs, challenging assumptions, and ranking arguments.">Practice weighing trade-offs, challenging assumptions, and ranking arguments.</p></article>
+        <article class="skill reveal"><h3 data-i18n="Speaking Challenges">Speaking Challenges</h3><p data-i18n="Complete short daily drills for clarity, confidence, pace, and persuasive delivery.">Complete short daily drills for clarity, confidence, pace, and persuasive delivery.</p></article>
+        <article class="skill reveal"><h3 data-i18n="Mock Debate Activities">Mock Debate Activities</h3><p data-i18n="Run mini rounds with roles, motions, prep time, speeches, and reflection prompts.">Run mini rounds with roles, motions, prep time, speeches, and reflection prompts.</p></article>
       </div>
     </section>
 
@@ -67,17 +77,17 @@
         <button class="btn primary" id="newMotion" data-i18n="Generate Random Motion">Generate Random Motion</button>
       </div>
       <div class="feedback-card reveal">
-        <p class="eyebrow" data-i18n="AI feedback mockup">AI feedback mockup</p>
+        <p class="eyebrow" data-i18n="AI Feedback Assistant">AI Feedback Assistant</p>
         <div class="message" data-i18n="Try giving one clear example after your strongest argument.">Try giving one clear example after your strongest argument.</div>
         <div class="message alt" data-i18n="Your rebuttal is stronger when you compare impacts directly.">Your rebuttal is stronger when you compare impacts directly.</div>
       </div>
     </section>
 
     <section class="section resources-grid">
-      <article class="resource reveal"><h3 data-i18n="Formats">Formats</h3><p data-i18n="British Parliamentary, World Schools, public forum, and classroom debate formats.">British Parliamentary, World Schools, public forum, and classroom debate formats.</p></article>
-      <article class="resource reveal"><h3 data-i18n="Rules">Rules</h3><p data-i18n="Speaker timing, protected time, POIs, judging criteria, and team roles.">Speaker timing, protected time, POIs, judging criteria, and team roles.</p></article>
-      <article class="resource reveal"><h3 data-i18n="Sample Speeches">Sample Speeches</h3><p data-i18n="Study strong openings, rebuttal bridges, summary speeches, and reply speeches.">Study strong openings, rebuttal bridges, summary speeches, and reply speeches.</p></article>
-      <article class="resource reveal"><h3 data-i18n="Winning Examples">Winning Examples</h3><p data-i18n="Break down why winning speeches are persuasive, organized, and memorable.">Break down why winning speeches are persuasive, organized, and memorable.</p></article>
+      <article class="resource reveal"><h3 data-i18n="Debate Resources">Debate Resources</h3><p data-i18n="Formats, rules, judging criteria, team roles, and sample speeches in one place.">Formats, rules, judging criteria, team roles, and sample speeches in one place.</p></article>
+      <article class="resource reveal"><h3 data-i18n="Debate Topics">Debate Topics</h3><p data-i18n="School-friendly motions about technology, education, climate, media, and leadership.">School-friendly motions about technology, education, climate, media, and leadership.</p></article>
+      <article class="resource reveal"><h3 data-i18n="Mini Quizzes">Mini Quizzes</h3><p data-i18n="Check your understanding of argument structure, rebuttals, weighing, and delivery.">Check your understanding of argument structure, rebuttals, weighing, and delivery.</p></article>
+      <article class="resource reveal"><h3 data-i18n="Skill Badges">Skill Badges</h3><p data-i18n="Earn badges for first speech, rebuttal practice, motion mastery, and mock debate rounds.">Earn badges for first speech, rebuttal practice, motion mastery, and mock debate rounds.</p></article>
     </section>
 
     <section class="section progress-grid">

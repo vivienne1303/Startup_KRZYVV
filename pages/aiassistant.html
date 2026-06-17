@@ -3,23 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="TeenLaunch | AI Assistant">TeenLaunch | AI Assistant</title>
+  <title data-i18n="TeenLaunch | AI Chatbot">TeenLaunch | AI Chatbot</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/aiassistant.css">
+  <link rel="stylesheet" href="../css/theme.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="navbar" aria-label="Main navigation">
-      <a class="brand" href="../index.html"><span class="brand-mark">TL</span><span>TeenLaunch<small data-i18n="AI learning co-pilot">AI learning co-pilot</small></span></a>
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../images/logo.png" alt="" aria-hidden="true"><span>TeenLaunch<small data-i18n="AI learning co-pilot">AI learning co-pilot</small></span></a>
       <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
       <div class="nav-links">
         <a href="../index.html" data-i18n="Home">Home</a>
         <a href="opportunities.html" data-i18n="Opportunities">Opportunities</a>
-        <a href="competitions.html" data-i18n="Competitions">Competitions</a>
-        <a href="debate.html" data-i18n="Debate Hub">Debate Hub</a>
-        <a class="active" href="aiassistant.html" data-i18n="AI Assistant">AI Assistant</a>
+        <div class="nav-dropdown">
+          <a class="nav-trigger" href="competitions.html" data-i18n="Competitions">Competitions</a>
+          <div class="dropdown-menu" aria-label="Competition categories">
+            <a href="competitions.html#academic" data-i18n="Academic">Academic</a>
+            <a href="competitions.html#non-academic" data-i18n="Non-Academic">Non-Academic</a>
+          </div>
+        </div>
+        <a href="resources.html" data-i18n="Resources">Resources</a>
+        <a href="debate.html" data-i18n="Soft Skills & Debate">Soft Skills & Debate</a>
+        <a class="active" href="aiassistant.html" data-i18n="AI Chatbot">AI Chatbot</a>
         <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>
       </div>
     </nav>
@@ -28,12 +36,12 @@
   <main>
     <section class="hero section">
       <div class="reveal">
-        <p class="eyebrow" data-i18n="AI-powered learning">AI-powered learning</p>
-        <h1 data-i18n="Your startup, debate, and competition co-pilot.">Your startup, debate, and competition co-pilot.</h1>
-        <p data-i18n="Use the TeenLaunch AI assistant mockup to explore ideas, find opportunities, practice pitches, and get study-friendly guidance.">Use the TeenLaunch AI assistant mockup to explore ideas, find opportunities, practice pitches, and get study-friendly guidance.</p>
+        <p class="eyebrow" data-i18n="AI Chatbot">AI Chatbot</p>
+        <h1 data-i18n="Ask for opportunities, competitions, resources, and learning materials.">Ask for opportunities, competitions, resources, and learning materials.</h1>
+        <p data-i18n="Use the TeenLaunch chatbot mockup to explore ideas, compare deadlines, practise pitches, and get student-friendly guidance.">Use the TeenLaunch chatbot mockup to explore ideas, compare deadlines, practise pitches, and get student-friendly guidance.</p>
       </div>
       <div class="assistant-panel reveal">
-        <div class="assistant-header"><span class="pulse"></span><strong data-i18n="TeenLaunch AI">TeenLaunch AI</strong><small data-i18n="mock chat">mock chat</small></div>
+        <div class="assistant-header"><span class="pulse"></span><strong data-i18n="TeenLaunch Chatbot">TeenLaunch Chatbot</strong><small data-i18n="mock chat">mock chat</small></div>
         <div class="chat-log" id="chatLog">
           <div class="bubble ai" data-i18n="Hi. Ask me for startup ideas, pitch tips, debate feedback, or opportunity matches.">Hi. Ask me for startup ideas, pitch tips, debate feedback, or opportunity matches.</div>
         </div>
@@ -53,7 +61,7 @@
         <article class="feature reveal"><h3 data-i18n="Opportunity Matching">Opportunity Matching</h3><p data-i18n="Find programmes based on age, topic, deadline, and confidence level.">Find programmes based on age, topic, deadline, and confidence level.</p></article>
         <article class="feature reveal"><h3 data-i18n="Pitch Feedback">Pitch Feedback</h3><p data-i18n="Improve problem statements, slides, hooks, demo scripts, and final asks.">Improve problem statements, slides, hooks, demo scripts, and final asks.</p></article>
         <article class="feature reveal"><h3 data-i18n="Debate Coaching">Debate Coaching</h3><p data-i18n="Get structure ideas for arguments, rebuttals, motions, and speaking drills.">Get structure ideas for arguments, rebuttals, motions, and speaking drills.</p></article>
-        <article class="feature reveal"><h3 data-i18n="Learning Plans">Learning Plans</h3><p data-i18n="Create weekly plans for entrepreneurship, leadership, competitions, and AI tools.">Create weekly plans for entrepreneurship, leadership, competitions, and AI tools.</p></article>
+        <article class="feature reveal"><h3 data-i18n="Learning Materials">Learning Materials</h3><p data-i18n="Find guides, checklists, workshop notes, debate resources, and pitch practice material.">Find guides, checklists, workshop notes, debate resources, and pitch practice material.</p></article>
       </div>
     </section>
 

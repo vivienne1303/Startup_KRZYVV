@@ -8,18 +8,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/opportunities.css">
+  <link rel="stylesheet" href="../css/theme.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="navbar" aria-label="Main navigation">
-      <a class="brand" href="../index.html"><span class="brand-mark">TL</span><span>TeenLaunch<small data-i18n="Opportunity radar">Opportunity radar</small></span></a>
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../images/logo.png" alt="" aria-hidden="true"><span>TeenLaunch<small data-i18n="Opportunity radar">Opportunity radar</small></span></a>
       <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
       <div class="nav-links">
         <a href="../index.html" data-i18n="Home">Home</a>
         <a class="active" href="opportunities.html" data-i18n="Opportunities">Opportunities</a>
-        <a href="competitions.html" data-i18n="Competitions">Competitions</a>
-        <a href="debate.html" data-i18n="Debate Hub">Debate Hub</a>
-        <a href="aiassistant.html" data-i18n="AI Assistant">AI Assistant</a>
+        <div class="nav-dropdown">
+          <a class="nav-trigger" href="competitions.html" data-i18n="Competitions">Competitions</a>
+          <div class="dropdown-menu" aria-label="Competition categories">
+            <a href="competitions.html#academic" data-i18n="Academic">Academic</a>
+            <a href="competitions.html#non-academic" data-i18n="Non-Academic">Non-Academic</a>
+          </div>
+        </div>
+        <a href="resources.html" data-i18n="Resources">Resources</a>
+        <a href="debate.html" data-i18n="Soft Skills & Debate">Soft Skills & Debate</a>
+        <a href="aiassistant.html" data-i18n="AI Chatbot">AI Chatbot</a>
         <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>
       </div>
     </nav>
@@ -28,9 +36,9 @@
   <main>
     <section class="hero section">
       <div class="reveal">
-        <p class="eyebrow" data-i18n="Explore what is next">Explore what is next</p>
-        <h1 data-i18n="Find programmes, camps, workshops, and internships made for young builders.">Find programmes, camps, workshops, and internships made for young builders.</h1>
-        <p data-i18n="Search youth-friendly entrepreneurship, leadership, technology, debate, and volunteering opportunities with deadlines and eligibility shown upfront.">Search youth-friendly entrepreneurship, leadership, technology, debate, and volunteering opportunities with deadlines and eligibility shown upfront.</p>
+        <p class="eyebrow" data-i18n="Opportunities">Opportunities</p>
+        <h1 data-i18n="Find youth opportunities that match your next step.">Find youth opportunities that match your next step.</h1>
+        <p data-i18n="Search youth-friendly opportunities with categories, age groups, deadlines, delivery mode, and beginner or advanced levels shown upfront.">Search youth-friendly opportunities with categories, age groups, deadlines, delivery mode, and beginner or advanced levels shown upfront.</p>
       </div>
       <div class="hero-panel reveal">
         <strong data-i18n="Recommended match">Recommended match</strong>
@@ -48,72 +56,89 @@
         </label>
         <div class="filters" aria-label="Opportunity categories">
           <button class="filter active" data-filter="all" data-i18n="All">All</button>
-          <button class="filter" data-filter="business" data-i18n="Business">Business</button>
-          <button class="filter" data-filter="technology" data-i18n="Technology">Technology</button>
-          <button class="filter" data-filter="debate" data-i18n="Debate/Public Speaking">Debate/Public Speaking</button>
-          <button class="filter" data-filter="leadership" data-i18n="Leadership">Leadership</button>
-          <button class="filter" data-filter="volunteering" data-i18n="Volunteering">Volunteering</button>
+          <button class="filter" data-filter="startup" data-i18n="Startup Programmes">Startup Programmes</button>
+          <button class="filter" data-filter="camp" data-i18n="Leadership Camps">Leadership Camps</button>
+          <button class="filter" data-filter="workshop" data-i18n="Innovation Workshops">Innovation Workshops</button>
+          <button class="filter" data-filter="internship" data-i18n="Internships">Internships</button>
+          <button class="filter" data-filter="entrepreneurship" data-i18n="Youth Entrepreneurship">Youth Entrepreneurship</button>
+        </div>
+        <div class="filters compact-filters" aria-label="Opportunity filters">
+          <button class="filter detail-filter active" data-detail="all">All ages</button>
+          <button class="filter detail-filter" data-detail="10-13">Ages 10-13</button>
+          <button class="filter detail-filter" data-detail="14-16">Ages 14-16</button>
+          <button class="filter detail-filter" data-detail="17-19">Ages 17-19</button>
+          <button class="filter detail-filter" data-detail="online">Online</button>
+          <button class="filter detail-filter" data-detail="physical">Physical</button>
+          <button class="filter detail-filter" data-detail="beginner">Beginner</button>
+          <button class="filter detail-filter" data-detail="advanced">Advanced</button>
+          <button class="filter detail-filter" data-detail="soon">Deadline soon</button>
         </div>
       </div>
 
       <div class="opportunity-grid" id="opportunityGrid">
-        <article class="opportunity-card reveal" data-category="business" data-title="young founder accelerator">
-          <span class="tag" data-i18n="Business">Business</span>
+        <article class="opportunity-card reveal" data-category="startup" data-details="14-16 17-19 physical advanced soon" data-title="young founder accelerator startup programme deadline soon">
+          <span class="tag" data-i18n="Startup Programmes">Startup Programmes</span>
           <h3 data-i18n="Young Founder Accelerator">Young Founder Accelerator</h3>
           <p data-i18n="Entrepreneurship programme for students building their first business idea.">Entrepreneurship programme for students building their first business idea.</p>
           <ul>
             <li data-i18n="Deadline: 28 Jun 2026">Deadline: 28 Jun 2026</li>
             <li data-i18n="Eligibility: Ages 14-19">Eligibility: Ages 14-19</li>
+            <li>Physical, advanced</li>
           </ul>
           <a class="btn secondary" href="#" data-i18n="Apply">Apply</a>
         </article>
-        <article class="opportunity-card reveal" data-category="technology" data-title="ai innovation workshop">
-          <span class="tag" data-i18n="Technology">Technology</span>
+        <article class="opportunity-card reveal" data-category="workshop" data-details="10-13 14-16 17-19 online beginner soon" data-title="innovation workshop ai prototype deadline soon">
+          <span class="tag" data-i18n="Innovation Workshops">Innovation Workshops</span>
           <h3 data-i18n="AI Innovation Workshop">AI Innovation Workshop</h3>
           <p data-i18n="Hands-on sessions for using AI tools to research, prototype, and present ideas.">Hands-on sessions for using AI tools to research, prototype, and present ideas.</p>
           <ul>
             <li data-i18n="Deadline: 12 Jul 2026">Deadline: 12 Jul 2026</li>
             <li data-i18n="Eligibility: Ages 12-19">Eligibility: Ages 12-19</li>
+            <li>Online, beginner</li>
           </ul>
           <a class="btn secondary" href="#" data-i18n="Apply">Apply</a>
         </article>
-        <article class="opportunity-card reveal" data-category="leadership" data-title="future leaders camp">
-          <span class="tag" data-i18n="Leadership">Leadership</span>
+        <article class="opportunity-card reveal" data-category="camp" data-details="10-13 14-16 physical beginner" data-title="future leaders camp leadership">
+          <span class="tag" data-i18n="Leadership Camps">Leadership Camps</span>
           <h3 data-i18n="Future Leaders Camp">Future Leaders Camp</h3>
           <p data-i18n="A confidence-building camp focused on teamwork, decision-making, and service.">A confidence-building camp focused on teamwork, decision-making, and service.</p>
           <ul>
             <li data-i18n="Deadline: 5 Aug 2026">Deadline: 5 Aug 2026</li>
             <li data-i18n="Eligibility: Ages 10-16">Eligibility: Ages 10-16</li>
+            <li>Physical, beginner</li>
           </ul>
           <a class="btn secondary" href="#" data-i18n="Apply">Apply</a>
         </article>
-        <article class="opportunity-card reveal" data-category="debate" data-title="public speaking lab">
-          <span class="tag" data-i18n="Debate/Public Speaking">Debate/Public Speaking</span>
-          <h3 data-i18n="Public Speaking Lab">Public Speaking Lab</h3>
-          <p data-i18n="Weekly practice sessions for speeches, debate arguments, and presentation skills.">Weekly practice sessions for speeches, debate arguments, and presentation skills.</p>
+        <article class="opportunity-card reveal" data-category="entrepreneurship" data-details="14-16 17-19 online beginner" data-title="youth entrepreneurship programme startup basics">
+          <span class="tag" data-i18n="Youth Entrepreneurship">Youth Entrepreneurship</span>
+          <h3 data-i18n="Startup Basics Cohort">Startup Basics Cohort</h3>
+          <p data-i18n="A guided online programme covering ideation, customer research, simple finance, and pitching.">A guided online programme covering ideation, customer research, simple finance, and pitching.</p>
           <ul>
             <li data-i18n="Deadline: 22 Jul 2026">Deadline: 22 Jul 2026</li>
-            <li data-i18n="Eligibility: Ages 11-19">Eligibility: Ages 11-19</li>
+            <li data-i18n="Eligibility: Ages 14-19">Eligibility: Ages 14-19</li>
+            <li>Online, beginner</li>
           </ul>
           <a class="btn secondary" href="#" data-i18n="Apply">Apply</a>
         </article>
-        <article class="opportunity-card reveal" data-category="volunteering" data-title="community impact crew">
-          <span class="tag" data-i18n="Volunteering">Volunteering</span>
-          <h3 data-i18n="Community Impact Crew">Community Impact Crew</h3>
-          <p data-i18n="Join youth-led volunteering projects and learn how social impact programmes run.">Join youth-led volunteering projects and learn how social impact programmes run.</p>
+        <article class="opportunity-card reveal" data-category="workshop" data-details="10-13 14-16 physical beginner" data-title="design thinking innovation workshop">
+          <span class="tag" data-i18n="Innovation Workshops">Innovation Workshops</span>
+          <h3 data-i18n="Design Thinking Lab">Design Thinking Lab</h3>
+          <p data-i18n="A practical workshop for turning everyday problems into testable youth project ideas.">A practical workshop for turning everyday problems into testable youth project ideas.</p>
           <ul>
             <li data-i18n="Deadline: Rolling">Deadline: Rolling</li>
             <li data-i18n="Eligibility: Ages 10-19">Eligibility: Ages 10-19</li>
+            <li>Physical, beginner</li>
           </ul>
           <a class="btn secondary" href="#" data-i18n="Apply">Apply</a>
         </article>
-        <article class="opportunity-card reveal" data-category="technology" data-title="student tech internship">
-          <span class="tag" data-i18n="Technology">Technology</span>
+        <article class="opportunity-card reveal" data-category="internship" data-details="17-19 physical advanced" data-title="student tech internship startup operations">
+          <span class="tag" data-i18n="Internships">Internships</span>
           <h3 data-i18n="Student Tech Internship">Student Tech Internship</h3>
           <p data-i18n="Beginner-friendly internship shadowing product, design, and startup operations teams.">Beginner-friendly internship shadowing product, design, and startup operations teams.</p>
           <ul>
             <li data-i18n="Deadline: 18 Aug 2026">Deadline: 18 Aug 2026</li>
             <li data-i18n="Eligibility: Ages 16-19">Eligibility: Ages 16-19</li>
+            <li>Physical, advanced</li>
           </ul>
           <a class="btn secondary" href="#" data-i18n="Apply">Apply</a>
         </article>
@@ -124,12 +149,12 @@
     <section class="section highlight-grid">
       <div class="highlight reveal">
         <p class="eyebrow" data-i18n="Recommended">Recommended</p>
-        <h2 data-i18n="Best first step">Best first step</h2>
+        <h2 data-i18n="Recommended Opportunities">Recommended Opportunities</h2>
         <p data-i18n="Start with the AI Innovation Workshop if you want a practical, beginner-friendly way to connect tech and entrepreneurship.">Start with the AI Innovation Workshop if you want a practical, beginner-friendly way to connect tech and entrepreneurship.</p>
       </div>
       <div class="highlight reveal">
         <p class="eyebrow" data-i18n="Trending">Trending</p>
-        <h2 data-i18n="Most saved">Most saved</h2>
+        <h2 data-i18n="Trending Opportunities">Trending Opportunities</h2>
         <p data-i18n="Young Founder Accelerator is trending this month because it includes mentors, demo day, and portfolio-ready project outcomes.">Young Founder Accelerator is trending this month because it includes mentors, demo day, and portfolio-ready project outcomes.</p>
       </div>
     </section>

@@ -8,18 +8,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/competitions.css">
+  <link rel="stylesheet" href="../css/theme.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="navbar" aria-label="Main navigation">
-      <a class="brand" href="../index.html"><span class="brand-mark">TL</span><span>TeenLaunch<small data-i18n="Competition mode">Competition mode</small></span></a>
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../images/logo.png" alt="" aria-hidden="true"><span>TeenLaunch<small data-i18n="Competition mode">Competition mode</small></span></a>
       <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
       <div class="nav-links">
         <a href="../index.html" data-i18n="Home">Home</a>
         <a href="opportunities.html" data-i18n="Opportunities">Opportunities</a>
-        <a class="active" href="competitions.html" data-i18n="Competitions">Competitions</a>
-        <a href="debate.html" data-i18n="Debate Hub">Debate Hub</a>
-        <a href="aiassistant.html" data-i18n="AI Assistant">AI Assistant</a>
+        <div class="nav-dropdown active">
+          <a class="nav-trigger" href="competitions.html" data-i18n="Competitions">Competitions</a>
+          <div class="dropdown-menu" aria-label="Competition categories">
+            <a href="#academic" data-i18n="Academic">Academic</a>
+            <a href="#non-academic" data-i18n="Non-Academic">Non-Academic</a>
+          </div>
+        </div>
+        <a href="resources.html" data-i18n="Resources">Resources</a>
+        <a href="debate.html" data-i18n="Soft Skills & Debate">Soft Skills & Debate</a>
+        <a href="aiassistant.html" data-i18n="AI Chatbot">AI Chatbot</a>
         <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>
       </div>
     </nav>
@@ -28,9 +36,9 @@
   <main>
     <section class="hero section">
       <div class="reveal">
-        <p class="eyebrow" data-i18n="Compete with confidence">Compete with confidence</p>
-        <h1 data-i18n="Pitch, code, speak, debate, and show what you can build.">Pitch, code, speak, debate, and show what you can build.</h1>
-        <p data-i18n="Track startup pitch competitions, hackathons, debate contests, public speaking events, and innovation challenges in one focused dashboard.">Track startup pitch competitions, hackathons, debate contests, public speaking events, and innovation challenges in one focused dashboard.</p>
+        <p class="eyebrow" data-i18n="Competition calendar">Competition calendar</p>
+        <h1 data-i18n="Track academic and non-academic competitions without missing deadlines.">Track academic and non-academic competitions without missing deadlines.</h1>
+        <p data-i18n="Find language, mathematics, science, humanities, startup pitch, debate, public speaking, and innovation challenges with rules and registration links.">Find language, mathematics, science, humanities, startup pitch, debate, public speaking, and innovation challenges with rules and registration links.</p>
       </div>
       <div class="countdown-card reveal">
         <span data-i18n="Next deadline">Next deadline</span>
@@ -39,44 +47,112 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="academic">
       <div class="section-heading reveal">
-        <p class="eyebrow" data-i18n="Competition cards">Competition cards</p>
-        <h2 data-i18n="Choose your arena.">Choose your arena.</h2>
+        <p class="eyebrow" data-i18n="Competitions (Academic)">Competitions (Academic)</p>
+        <h2 data-i18n="Language, mathematics, science, and humanities competitions.">Language, mathematics, science, and humanities competitions.</h2>
       </div>
       <div class="competition-grid">
         <article class="competition-card reveal">
-          <span class="tag" data-i18n="Startup Pitch">Startup Pitch</span>
+          <span class="tag" data-i18n="Language">Language</span>
+          <h3 data-i18n="Youth Essay &amp; Speech Challenge">Youth Essay & Speech Challenge</h3>
+          <p data-i18n="Competition details: write a short essay, then present a 2-minute speech if shortlisted.">Competition details: write a short essay, then present a 2-minute speech if shortlisted.</p>
+          <ul>
+            <li>Rules: original writing, 800-word limit</li>
+            <li>Deadline: 15 Jul 2026</li>
+            <li>Prize information: certificates, books, mentorship</li>
+            <li><a href="#">Registration link</a></li>
+          </ul>
+          <button class="btn secondary reminder" data-event="Youth Essay & Speech Challenge" data-i18n="Set Reminder">Set Reminder</button>
+        </article>
+        <article class="competition-card reveal">
+          <span class="tag" data-i18n="Mathematics">Mathematics</span>
+          <h3 data-i18n="Junior Math Sprint">Junior Math Sprint</h3>
+          <p data-i18n="Competition details: individual and team problem-solving rounds for different age bands.">Competition details: individual and team problem-solving rounds for different age bands.</p>
+          <ul>
+            <li>Rules: no calculators in speed round</li>
+            <li>Deadline: 22 Jul 2026</li>
+            <li>Prize information: medals and finalist showcase</li>
+            <li><a href="#">Registration link</a></li>
+          </ul>
+          <button class="btn secondary reminder" data-event="Junior Math Sprint" data-i18n="Set Reminder">Set Reminder</button>
+        </article>
+        <article class="competition-card reveal">
+          <span class="tag" data-i18n="Science">Science</span>
+          <h3 data-i18n="Young Science Investigator">Young Science Investigator</h3>
+          <p data-i18n="Competition details: submit a simple experiment, poster, and 3-minute explanation.">Competition details: submit a simple experiment, poster, and 3-minute explanation.</p>
+          <ul>
+            <li>Rules: cite sources and show method</li>
+            <li>Deadline: 5 Aug 2026</li>
+            <li>Prize information: lab visit and project grant</li>
+            <li><a href="#">Registration link</a></li>
+          </ul>
+          <button class="btn secondary reminder" data-event="Young Science Investigator" data-i18n="Set Reminder">Set Reminder</button>
+        </article>
+        <article class="competition-card reveal">
+          <span class="tag" data-i18n="Humanities">Humanities</span>
+          <h3 data-i18n="History &amp; Society Challenge">History & Society Challenge</h3>
+          <p data-i18n="Competition details: research a social issue and explain why it matters today.">Competition details: research a social issue and explain why it matters today.</p>
+          <ul>
+            <li>Rules: solo or pair submission</li>
+            <li>Deadline: 18 Aug 2026</li>
+            <li>Prize information: certificates and publishing feature</li>
+            <li><a href="#">Registration link</a></li>
+          </ul>
+          <button class="btn secondary reminder" data-event="History & Society Challenge" data-i18n="Set Reminder">Set Reminder</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="non-academic">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="Competitions (Non-Academic)">Competitions (Non-Academic)</p>
+        <h2 data-i18n="Startup pitch, debate, public speaking, and innovation challenges.">Startup pitch, debate, public speaking, and innovation challenges.</h2>
+      </div>
+      <div class="competition-grid">
+        <article class="competition-card reveal">
+          <span class="tag" data-i18n="Startup Pitch Competitions">Startup Pitch Competitions</span>
           <h3 data-i18n="Youth Startup Pitch Challenge">Youth Startup Pitch Challenge</h3>
           <p data-i18n="Rules: 3-minute pitch, 2-minute Q&amp;A, solo or teams up to 4.">Rules: 3-minute pitch, 2-minute Q&A, solo or teams up to 4.</p>
           <ul>
-            <li data-i18n="Timeline: Jul 1 briefing, Jul 20 finals">Timeline: Jul 1 briefing, Jul 20 finals</li>
-            <li data-i18n="Prize pool: $5,000">Prize pool: $5,000</li>
-            <li data-i18n="Requirements: Ages 13-19, pitch deck">Requirements: Ages 13-19, pitch deck</li>
+            <li>Timeline: Jul 1 briefing, Jul 20 finals</li>
+            <li>Prize pool: $5,000</li>
+            <li><a href="#">Registration link</a></li>
           </ul>
           <button class="btn secondary reminder" data-event="Youth Startup Pitch Challenge" data-i18n="Set Reminder">Set Reminder</button>
         </article>
         <article class="competition-card reveal">
-          <span class="tag" data-i18n="Hackathon">Hackathon</span>
-          <h3 data-i18n="48H AI Hack Sprint">48H AI Hack Sprint</h3>
-          <p data-i18n="Rules: Build a working prototype using AI for learning, health, or sustainability.">Rules: Build a working prototype using AI for learning, health, or sustainability.</p>
-          <ul>
-            <li data-i18n="Timeline: Aug 9-11">Timeline: Aug 9-11</li>
-            <li data-i18n="Prize pool: $3,000">Prize pool: $3,000</li>
-            <li data-i18n="Requirements: Team of 2-5, demo video">Requirements: Team of 2-5, demo video</li>
-          </ul>
-          <button class="btn secondary reminder" data-event="48H AI Hack Sprint" data-i18n="Set Reminder">Set Reminder</button>
-        </article>
-        <article class="competition-card reveal">
-          <span class="tag" data-i18n="Debate">Debate</span>
+          <span class="tag" data-i18n="Debate Competitions">Debate Competitions</span>
           <h3 data-i18n="Future Voices Debate Cup">Future Voices Debate Cup</h3>
-          <p data-i18n="Rules: Prepared and impromptu rounds using school-friendly debate motions.">Rules: Prepared and impromptu rounds using school-friendly debate motions.</p>
+          <p data-i18n="Rules: prepared and impromptu rounds using school-friendly motions.">Rules: prepared and impromptu rounds using school-friendly motions.</p>
           <ul>
-            <li data-i18n="Timeline: Sep 5 qualifiers, Sep 19 finals">Timeline: Sep 5 qualifiers, Sep 19 finals</li>
-            <li data-i18n="Prize pool: Trophies and mentorship">Prize pool: Trophies and mentorship</li>
-            <li data-i18n="Requirements: Ages 10-19, teams of 3">Requirements: Ages 10-19, teams of 3</li>
+            <li>Timeline: Sep 5 qualifiers, Sep 19 finals</li>
+            <li>Prize pool: trophies and mentorship</li>
+            <li><a href="#">Registration link</a></li>
           </ul>
           <button class="btn secondary reminder" data-event="Future Voices Debate Cup" data-i18n="Set Reminder">Set Reminder</button>
+        </article>
+        <article class="competition-card reveal">
+          <span class="tag" data-i18n="Public Speaking Competitions">Public Speaking Competitions</span>
+          <h3 data-i18n="Speak Up Finals">Speak Up Finals</h3>
+          <p data-i18n="Rules: 4-minute prepared speech and 1-minute impromptu response.">Rules: 4-minute prepared speech and 1-minute impromptu response.</p>
+          <ul>
+            <li>Timeline: Aug 12 submissions, Aug 28 finals</li>
+            <li>Prize pool: coaching and certificates</li>
+            <li><a href="#">Registration link</a></li>
+          </ul>
+          <button class="btn secondary reminder" data-event="Speak Up Finals" data-i18n="Set Reminder">Set Reminder</button>
+        </article>
+        <article class="competition-card reveal">
+          <span class="tag" data-i18n="Innovation Challenges">Innovation Challenges</span>
+          <h3 data-i18n="Community Innovation Challenge">Community Innovation Challenge</h3>
+          <p data-i18n="Rules: submit a prototype, impact plan, and short demo video.">Rules: submit a prototype, impact plan, and short demo video.</p>
+          <ul>
+            <li>Timeline: Sep 1 proposal, Oct 10 showcase</li>
+            <li>Prize pool: seed grants and mentor access</li>
+            <li><a href="#">Registration link</a></li>
+          </ul>
+          <button class="btn secondary reminder" data-event="Community Innovation Challenge" data-i18n="Set Reminder">Set Reminder</button>
         </article>
       </div>
     </section>

@@ -8,12 +8,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/theme.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="navbar" aria-label="Main navigation">
       <a class="brand" href="index.html" aria-label="TeenLaunch home">
-        <span class="brand-mark">TL</span>
+        <img class="brand-logo" src="images/logo.png" alt="" aria-hidden="true">
         <span>
           TeenLaunch
           <small data-i18n="Future founders start here">Future founders start here</small>
@@ -27,10 +28,18 @@
       </button>
 
       <div class="nav-links">
+        <a href="index.html" data-i18n="Home">Home</a>
         <a href="pages/opportunities.html" data-i18n="Opportunities">Opportunities</a>
-        <a href="pages/competitions.html" data-i18n="Competitions">Competitions</a>
-        <a href="pages/debate.html" data-i18n="Debate Hub">Debate Hub</a>
-        <a href="pages/aiassistant.html" data-i18n="AI Assistant">AI Assistant</a>
+        <div class="nav-dropdown">
+          <a class="nav-trigger" href="pages/competitions.html" data-i18n="Competitions">Competitions</a>
+          <div class="dropdown-menu" aria-label="Competition categories">
+            <a href="pages/competitions.html#academic" data-i18n="Academic">Academic</a>
+            <a href="pages/competitions.html#non-academic" data-i18n="Non-Academic">Non-Academic</a>
+          </div>
+        </div>
+        <a href="pages/resources.html" data-i18n="Resources">Resources</a>
+        <a href="pages/debate.html" data-i18n="Soft Skills & Debate">Soft Skills & Debate</a>
+        <a href="pages/aiassistant.html" data-i18n="AI Chatbot">AI Chatbot</a>
         <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>
       </div>
     </nav>
@@ -41,8 +50,8 @@
       <div class="hero-copy reveal">
         <p class="eyebrow" data-i18n="For teenagers aged 10-19">For teenagers aged 10-19</p>
         <h1 data-i18n="Discover Opportunities. Build Your Future.">Discover Opportunities. Build Your Future.</h1>
-        <p data-i18n="TeenLaunch is a youth-first startup platform for entrepreneurship, competitions, debate skills, leadership, and AI-powered learning.">
-          TeenLaunch is a youth-first startup platform for entrepreneurship, competitions, debate skills, leadership, and AI-powered learning.
+        <p data-i18n="TeenLaunch is a bilingual platform and community helping teenagers aged 10-19 discover opportunities in innovation, entrepreneurship, communication, and personal development.">
+          TeenLaunch is a bilingual platform and community helping teenagers aged 10-19 discover opportunities in innovation, entrepreneurship, communication, and personal development.
         </p>
         <div class="hero-actions">
           <a class="btn primary" href="pages/opportunities.html" data-i18n="Get Started">Get Started</a>
@@ -56,55 +65,115 @@
           <strong data-i18n="TeenLaunch AI">TeenLaunch AI</strong>
           <small data-i18n="online">online</small>
         </div>
-        <div class="message ai" data-i18n="What do you want to build this month?">What do you want to build this month?</div>
-        <div class="message user" data-i18n="A pitch for a climate tech idea.">A pitch for a climate tech idea.</div>
-        <div class="message ai" data-i18n="Cool. I found 3 competitions, 2 mentors, and a pitch checklist.">Cool. I found 3 competitions, 2 mentors, and a pitch checklist.</div>
-        <div class="chat-input" data-i18n="Ask about ideas, debates, competitions...">Ask about ideas, debates, competitions...</div>
+        <div class="message ai" data-i18n="What kind of opportunity are you looking for?">What kind of opportunity are you looking for?</div>
+        <div class="message user" data-i18n="Beginner startup programmes for a 15-year-old.">Beginner startup programmes for a 15-year-old.</div>
+        <div class="message ai" data-i18n="I found startup camps, pitch competitions, and a workshop with July deadlines.">I found startup camps, pitch competitions, and a workshop with July deadlines.</div>
+        <div class="chat-input" data-i18n="Ask about opportunities, skills, competitions...">Ask about opportunities, skills, competitions...</div>
       </aside>
     </section>
 
+    <section class="section split-section" id="problem">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="The problem">The problem</p>
+        <h2 data-i18n="Many teenagers do not know where to find growth opportunities beyond academics.">Many teenagers do not know where to find growth opportunities beyond academics.</h2>
+      </div>
+      <div class="action-list reveal">
+        <div data-i18n="Opportunities such as startup programmes, competitions, leadership workshops, debate platforms, MUN, internships, job shadowing, and skill-development resources are scattered across different places.">Opportunities such as startup programmes, competitions, leadership workshops, debate platforms, MUN, internships, job shadowing, and skill-development resources are scattered across different places.</div>
+        <div data-i18n="Because information is hard to find, teenagers may miss valuable chances to build future-ready skills and explore career pathways early.">Because information is hard to find, teenagers may miss valuable chances to build future-ready skills and explore career pathways early.</div>
+        <div data-i18n="Many students lack confidence in soft skills such as communication, critical thinking, articulation, negotiation, and problem solving.">Many students lack confidence in soft skills such as communication, critical thinking, articulation, negotiation, and problem solving.</div>
+        <div data-i18n="Youths interested in internships, debate, MUN, entrepreneurship, and innovation-driven industries often need clearer guidance and support.">Youths interested in internships, debate, MUN, entrepreneurship, and innovation-driven industries often need clearer guidance and support.</div>
+      </div>
+    </section>
+
+    <section class="section split-section" id="mission">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="Purpose, goals, and vision">Purpose, goals, and vision</p>
+        <h2 data-i18n="Bridge the gap between education and real-world opportunities.">Bridge the gap between education and real-world opportunities.</h2>
+      </div>
+      <div class="action-list reveal">
+        <div>
+          <strong data-i18n="Our Purpose">Our Purpose</strong>
+          <p data-i18n="Help teenagers discover and access competitions, programmes, internships, and entrepreneurial experiences while encouraging active learning, innovation, and personal growth.">Help teenagers discover and access competitions, programmes, internships, and entrepreneurial experiences while encouraging active learning, innovation, and personal growth.</p>
+        </div>
+        <div>
+          <strong data-i18n="Our Goals">Our Goals</strong>
+          <p data-i18n="Increase awareness of youth opportunities, develop critical thinking, communication, leadership, and problem-solving skills, and provide resources, guidance, and community support.">Increase awareness of youth opportunities, develop critical thinking, communication, leadership, and problem-solving skills, and provide resources, guidance, and community support.</p>
+        </div>
+        <div>
+          <strong data-i18n="Our Vision">Our Vision</strong>
+          <p data-i18n="Empower teenagers to become confident, future-ready individuals who take initiative, pursue their passions, and create meaningful impact.">Empower teenagers to become confident, future-ready individuals who take initiative, pursue their passions, and create meaningful impact.</p>
+        </div>
+      </div>
+    </section>
+
+    <!--
+    <section class="section" id="opportunity-highlights">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="Featured opportunities">Featured opportunities</p>
+        <h2 data-i18n="Realistic next steps for students who want to start building.">Realistic next steps for students who want to start building.</h2>
+      </div>
+      <div class="card-grid why-grid">
+        <a class="card reveal" href="pages/opportunities.html">
+          <span>01</span>
+          <h3 data-i18n="Startup Sprint Camp">Startup Sprint Camp</h3>
+          <p data-i18n="For ages 13-18. Build an MVP, meet mentors, and pitch on demo day.">For ages 13-18. Build an MVP, meet mentors, and pitch on demo day.</p>
+        </a>
+        <a class="card reveal" href="pages/opportunities.html">
+          <span>02</span>
+          <h3 data-i18n="AI Innovation Workshop">AI Innovation Workshop</h3>
+          <p data-i18n="A beginner-friendly workshop for researching, prototyping, and presenting ideas with AI tools.">A beginner-friendly workshop for researching, prototyping, and presenting ideas with AI tools.</p>
+        </a>
+        <a class="card reveal" href="pages/opportunities.html">
+          <span>03</span>
+          <h3 data-i18n="Young Founder Accelerator">Young Founder Accelerator</h3>
+          <p data-i18n="A structured entrepreneurship track for students ready to test and pitch a first venture.">A structured entrepreneurship track for students ready to test and pitch a first venture.</p>
+        </a>
+      </div>
+    </section>
+    -->
+
     <section class="section" id="featured">
       <div class="section-heading reveal">
-        <p class="eyebrow" data-i18n="Featured sections">Featured sections</p>
-        <h2 data-i18n="One launchpad for skills, courage, and real-world experience.">One launchpad for skills, courage, and real-world experience.</h2>
+        <p class="eyebrow" data-i18n="Platform highlights">Platform highlights</p>
+        <h2 data-i18n="A clear launchpad for opportunity discovery and teenage growth.">A clear launchpad for opportunity discovery and teenage growth.</h2>
       </div>
       <div class="card-grid five-grid">
         <a class="card reveal" href="pages/opportunities.html">
           <span>01</span>
-          <h3 data-i18n="Startup Opportunities">Startup Opportunities</h3>
-          <p data-i18n="Programmes, internships, workshops, leadership camps, and youth entrepreneurship tracks.">Programmes, internships, workshops, leadership camps, and youth entrepreneurship tracks.</p>
+          <h3 data-i18n="Opportunities">Opportunities</h3>
+          <p data-i18n="Startup programmes, leadership camps, innovation workshops, internships, and youth entrepreneurship tracks.">Startup programmes, leadership camps, innovation workshops, internships, and youth entrepreneurship tracks.</p>
         </a>
-        <a class="card reveal" href="pages/competitions.html">
+        <a class="card reveal" href="pages/competitions.html#academic">
           <span>02</span>
-          <h3 data-i18n="Upcoming Competitions">Upcoming Competitions</h3>
-          <p data-i18n="Pitch battles, hackathons, debate tournaments, public speaking contests, and innovation challenges.">Pitch battles, hackathons, debate tournaments, public speaking contests, and innovation challenges.</p>
+          <h3 data-i18n="Academic Competitions">Academic Competitions</h3>
+          <p data-i18n="Language, mathematics, science, and humanities competitions with rules, prizes, and registration links.">Language, mathematics, science, and humanities competitions with rules, prizes, and registration links.</p>
+        </a>
+        <a class="card reveal" href="pages/competitions.html#non-academic">
+          <span>03</span>
+          <h3 data-i18n="Non-Academic Competitions">Non-Academic Competitions</h3>
+          <p data-i18n="Startup pitches, debate, public speaking, and innovation challenges for confident builders.">Startup pitches, debate, public speaking, and innovation challenges for confident builders.</p>
+        </a>
+        <a class="card reveal" href="pages/resources.html">
+          <span>04</span>
+          <h3 data-i18n="Resources">Resources</h3>
+          <p data-i18n="Workshops, events, showcases, pitching tips, presentation advice, and inspiration.">Workshops, events, showcases, pitching tips, presentation advice, and inspiration.</p>
         </a>
         <a class="card reveal" href="pages/debate.html">
-          <span>03</span>
-          <h3 data-i18n="Debate Skills">Debate Skills</h3>
-          <p data-i18n="Practice argument building, rebuttals, critical thinking, confidence, and stage presence.">Practice argument building, rebuttals, critical thinking, confidence, and stage presence.</p>
-        </a>
-        <a class="card reveal" href="pages/aiassistant.html">
-          <span>04</span>
-          <h3 data-i18n="AI Assistant">AI Assistant</h3>
-          <p data-i18n="Get guided learning, opportunity matching, pitch feedback, and study support.">Get guided learning, opportunity matching, pitch feedback, and study support.</p>
-        </a>
-        <article class="card reveal">
           <span>05</span>
-          <h3 data-i18n="Events &amp; Workshops">Events & Workshops</h3>
-          <p data-i18n="Join bite-sized sessions on entrepreneurship, communication, leadership, and AI tools.">Join bite-sized sessions on entrepreneurship, communication, leadership, and AI tools.</p>
-        </article>
+          <h3 data-i18n="Soft Skills & Debate">Soft Skills & Debate</h3>
+          <p data-i18n="Debate basics, public speaking, critical thinking, practice tools, feedback, and badges.">Debate basics, public speaking, critical thinking, practice tools, feedback, and badges.</p>
+        </a>
       </div>
     </section>
 
     <section class="section split-section" id="actions">
       <div class="section-heading reveal">
         <p class="eyebrow" data-i18n="What users can do">What users can do</p>
-        <h2 data-i18n="Move from curious to confident with small weekly wins.">Move from curious to confident with small weekly wins.</h2>
+        <h2 data-i18n="Move from curious to capable with practical next steps.">Move from curious to capable with practical next steps.</h2>
       </div>
       <div class="action-list reveal">
         <div data-i18n="Discover opportunities that match your age, interests, and goals.">Discover opportunities that match your age, interests, and goals.</div>
-        <div data-i18n="Learn new startup, leadership, debate, and AI skills.">Learn new startup, leadership, debate, and AI skills.</div>
+        <div data-i18n="Develop critical thinking, articulation, negotiation, problem solving, and leadership skills.">Develop critical thinking, articulation, negotiation, problem solving, and leadership skills.</div>
         <div data-i18n="Join competitions and track registration deadlines.">Join competitions and track registration deadlines.</div>
         <div data-i18n="Improve confidence with speaking prompts and practice tools.">Improve confidence with speaking prompts and practice tools.</div>
         <div data-i18n="Connect with programmes that make your portfolio stronger.">Connect with programmes that make your portfolio stronger.</div>
@@ -119,11 +188,11 @@
       <div class="why-grid">
         <article class="mini-card reveal">
           <h3 data-i18n="Easy access">Easy access</h3>
-          <p data-i18n="No more digging through random links. Find youth-friendly programmes in one clean place.">No more digging through random links. Find youth-friendly programmes in one clean place.</p>
+          <p data-i18n="No more digging through random links. Find internships, job shadowing, competitions, programmes, and learning resources in one clean place.">No more digging through random links. Find internships, job shadowing, competitions, programmes, and learning resources in one clean place.</p>
         </article>
         <article class="mini-card reveal">
           <h3 data-i18n="Youth-focused">Youth-focused</h3>
-          <p data-i18n="Designed around students, young founders, debaters, creators, and first-time builders.">Designed around students, young founders, debaters, creators, and first-time builders.</p>
+          <p data-i18n="Designed around students aged 10-19 who want clear, age-appropriate, bilingual guidance and community support.">Designed around students aged 10-19 who want clear, age-appropriate, bilingual guidance and community support.</p>
         </article>
         <article class="mini-card reveal">
           <h3 data-i18n="Beginner-friendly">Beginner-friendly</h3>
@@ -157,6 +226,19 @@
           <strong data-i18n="Alyssa, 17">Alyssa, 17</strong>
           <span data-i18n="Student founder">Student founder</span>
         </article>
+      </div>
+    </section>
+
+    <section class="section split-section" id="cta">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="Start here">Start here</p>
+        <h2 data-i18n="Find one opportunity, practise one skill, and take one confident step this week.">Find one opportunity, practise one skill, and take one confident step this week.</h2>
+      </div>
+      <div class="action-list reveal">
+        <div data-i18n="Search opportunities by age, deadline, mode, and experience level.">Search opportunities by age, deadline, mode, and experience level.</div>
+        <div data-i18n="Explore competitions with rules, timelines, prizes, and registration links.">Explore competitions with rules, timelines, prizes, and registration links.</div>
+        <div data-i18n="Use the AI chatbot to find resources and plan what to do next.">Use the AI chatbot to find resources and plan what to do next.</div>
+        <a class="btn primary" href="pages/opportunities.html" data-i18n="Browse Opportunities">Browse Opportunities</a>
       </div>
     </section>
 

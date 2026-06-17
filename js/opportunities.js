@@ -4,10 +4,13 @@ const navLinks = document.querySelector(".nav-links");
 const revealElements = document.querySelectorAll(".reveal");
 const searchInput = document.querySelector("#searchInput");
 const filters = document.querySelectorAll(".filter");
+const categoryFilters = document.querySelectorAll(".filter:not(.detail-filter)");
+const detailFilters = document.querySelectorAll(".detail-filter");
 const cards = document.querySelectorAll(".opportunity-card");
 const emptyState = document.querySelector("#emptyState");
 
 let activeFilter = "all";
+let activeDetail = "all";
 
 const updateHeader = () => {
   header.classList.toggle("scrolled", window.scrollY > 24);
@@ -33,8 +36,9 @@ const filterCards = () => {
 
   cards.forEach((card) => {
     const matchesCategory = activeFilter === "all" || card.dataset.category === activeFilter;
+    const matchesDetail = activeDetail === "all" || card.dataset.details.includes(activeDetail);
     const matchesSearch = card.dataset.title.includes(query) || card.textContent.toLowerCase().includes(query);
-    const isVisible = matchesCategory && matchesSearch;
+    const isVisible = matchesCategory && matchesDetail && matchesSearch;
 
     card.style.display = isVisible ? "grid" : "none";
     if (isVisible) visibleCount += 1;
@@ -43,11 +47,20 @@ const filterCards = () => {
   emptyState.style.display = visibleCount ? "none" : "block";
 };
 
-filters.forEach((button) => {
+categoryFilters.forEach((button) => {
   button.addEventListener("click", () => {
-    filters.forEach((item) => item.classList.remove("active"));
+    categoryFilters.forEach((item) => item.classList.remove("active"));
     button.classList.add("active");
     activeFilter = button.dataset.filter;
+    filterCards();
+  });
+});
+
+detailFilters.forEach((button) => {
+  button.addEventListener("click", () => {
+    detailFilters.forEach((item) => item.classList.remove("active"));
+    button.classList.add("active");
+    activeDetail = button.dataset.detail;
     filterCards();
   });
 });
