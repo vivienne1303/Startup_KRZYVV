@@ -268,7 +268,25 @@ body {
 }
 
 .language-toggle {
-  display: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  min-width: 58px;
+  padding: 0 12px;
+  border: 1px solid rgba(39, 99, 178, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.language-toggle:hover {
+  border-color: rgba(46, 131, 247, 0.42);
+  background: rgba(255, 255, 255, 0.82);
 }
 
 .competition-grid {
@@ -337,6 +355,11 @@ body {
 
   .dropdown-menu a {
     padding: 10px 12px;
+  }
+
+  .language-toggle {
+    width: 100%;
+    min-height: 44px;
   }
 
   .competition-grid {

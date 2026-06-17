@@ -264,6 +264,93 @@ const translations = {
   "For debate practice, make one claim, explain why it matters, then compare your impact against the other side.": "练习辩论时，先提出一个主张，解释它为什么重要，再和对方比较影响。"
 };
 
+Object.assign(translations, {
+  "Resources": "资源",
+  "Soft Skills & Debate": "软技能与辩论",
+  "AI Chatbot": "AI 聊天助手",
+  "Academic": "学术类",
+  "Non-Academic": "非学术类",
+  "TeenLaunch | Soft Skills & Debate": "TeenLaunch | 软技能与辩论",
+  "TeenLaunch | AI Chatbot": "TeenLaunch | AI 聊天助手",
+  "Soft skills lab": "软技能训练室",
+  "TeenLaunch Chatbot": "TeenLaunch 聊天助手",
+
+  "TeenLaunch is a bilingual platform and community helping teenagers aged 10-19 discover opportunities in innovation, entrepreneurship, communication, and personal development.": "TeenLaunch 是一个双语平台与社区，帮助 10 至 19 岁青少年探索创新、创业、沟通和个人发展机会。",
+  "What kind of opportunity are you looking for?": "你正在寻找什么类型的机会？",
+  "Beginner startup programmes for a 15-year-old.": "适合 15 岁学生的入门创业项目。",
+  "I found startup camps, pitch competitions, and a workshop with July deadlines.": "我找到了创业营、路演比赛，以及 7 月截止报名的工作坊。",
+  "Ask about opportunities, skills, competitions...": "询问机会、技能、比赛...",
+
+  "The problem": "问题",
+  "Many teenagers do not know where to find growth opportunities beyond academics.": "许多青少年不知道在哪里寻找学业之外的成长机会。",
+  "Opportunities such as startup programmes, competitions, leadership workshops, debate platforms, MUN, internships, job shadowing, and skill-development resources are scattered across different places.": "创业项目、比赛、领导力工作坊、辩论平台、模拟联合国、实习、职场体验和技能发展资源分散在不同地方。",
+  "Because information is hard to find, teenagers may miss valuable chances to build future-ready skills and explore career pathways early.": "由于信息难以寻找，青少年可能会错过培养未来技能和提早探索职业路径的宝贵机会。",
+  "Many students lack confidence in soft skills such as communication, critical thinking, articulation, negotiation, and problem solving.": "许多学生在沟通、批判性思维、表达、谈判和解决问题等软技能方面缺乏信心。",
+  "Youths interested in internships, debate, MUN, entrepreneurship, and innovation-driven industries often need clearer guidance and support.": "对实习、辩论、模拟联合国、创业和创新型行业感兴趣的青少年，往往需要更清晰的指导与支持。",
+
+  "Purpose, goals, and vision": "宗旨、目标与愿景",
+  "Bridge the gap between education and real-world opportunities.": "连接教育与真实世界机会之间的距离。",
+  "Our Purpose": "我们的宗旨",
+  "Help teenagers discover and access competitions, programmes, internships, and entrepreneurial experiences while encouraging active learning, innovation, and personal growth.": "帮助青少年发现并参与比赛、项目、实习和创业体验，同时鼓励主动学习、创新和个人成长。",
+  "Our Goals": "我们的目标",
+  "Increase awareness of youth opportunities, develop critical thinking, communication, leadership, and problem-solving skills, and provide resources, guidance, and community support.": "提高青少年对机会的认识，培养批判性思维、沟通、领导力和解决问题能力，并提供资源、指导和社区支持。",
+  "Our Vision": "我们的愿景",
+  "Empower teenagers to become confident, future-ready individuals who take initiative, pursue their passions, and create meaningful impact.": "赋能青少年成为自信、面向未来的人，主动行动、追求热情，并创造有意义的影响。",
+
+  "Platform highlights": "平台亮点",
+  "A clear launchpad for opportunity discovery and teenage growth.": "一个帮助青少年发现机会并成长的清晰起点。",
+  "Academic Competitions": "学术类比赛",
+  "Non-Academic Competitions": "非学术类比赛",
+  "Startup programmes, leadership camps, innovation workshops, internships, and youth entrepreneurship tracks.": "创业项目、领导力营、创新工作坊、实习和青少年创业路线。",
+  "Language, mathematics, science, and humanities competitions with rules, prizes, and registration links.": "语言、数学、科学和人文类比赛，并提供规则、奖项和报名链接。",
+  "Startup pitches, debate, public speaking, and innovation challenges for confident builders.": "面向自信实践者的创业路演、辩论、公众演讲和创新挑战。",
+  "Workshops, events, showcases, pitching tips, presentation advice, and inspiration.": "工作坊、活动、展示、路演技巧、演示建议和灵感内容。",
+  "Debate basics, public speaking, critical thinking, practice tools, feedback, and badges.": "辩论基础、公众演讲、批判性思维、练习工具、反馈和技能徽章。",
+
+  "Move from curious to capable with practical next steps.": "通过实际行动，从好奇走向有能力。",
+  "Develop critical thinking, articulation, negotiation, problem solving, and leadership skills.": "培养批判性思维、表达、谈判、解决问题和领导力技能。",
+  "No more digging through random links. Find internships, job shadowing, competitions, programmes, and learning resources in one clean place.": "不再需要翻找零散链接。在一个清晰的平台找到实习、职场体验、比赛、项目和学习资源。",
+  "Designed around students aged 10-19 who want clear, age-appropriate, bilingual guidance and community support.": "专为 10 至 19 岁学生设计，提供清晰、适龄、双语的指导和社区支持。",
+  "Find one opportunity, practise one skill, and take one confident step this week.": "本周找到一个机会，练习一项技能，并迈出自信的一步。",
+  "Search opportunities by age, deadline, mode, and experience level.": "按年龄、截止日期、形式和经验水平筛选机会。",
+  "Explore competitions with rules, timelines, prizes, and registration links.": "探索包含规则、时间线、奖项和报名链接的比赛。",
+  "Use the AI chatbot to find resources and plan what to do next.": "使用 AI 聊天助手寻找资源并规划下一步。",
+
+  "Find youth opportunities that match your next step.": "寻找适合你下一步的青少年机会。",
+  "Search youth-friendly opportunities with categories, age groups, deadlines, delivery mode, and beginner or advanced levels shown upfront.": "搜索适合青少年的机会，并清楚查看类别、年龄组、截止日期、参与形式和难度等级。",
+  "All ages": "所有年龄",
+  "Ages 10-13": "10-13 岁",
+  "Ages 14-16": "14-16 岁",
+  "Ages 17-19": "17-19 岁",
+  "Online": "线上",
+  "Physical": "线下",
+  "Beginner": "入门",
+  "Advanced": "进阶",
+  "Deadline soon": "即将截止",
+  "Startup Programmes": "创业项目",
+  "Leadership Camps": "领导力营",
+  "Innovation Workshops": "创新工作坊",
+  "Internships": "实习",
+  "Youth Entrepreneurship": "青少年创业",
+  "Recommended Opportunities": "推荐机会",
+  "Trending Opportunities": "热门机会",
+
+  "Competition calendar": "比赛日历",
+  "Track academic and non-academic competitions without missing deadlines.": "追踪学术类与非学术类比赛，不错过截止日期。",
+  "Find language, mathematics, science, humanities, startup pitch, debate, public speaking, and innovation challenges with rules and registration links.": "寻找语言、数学、科学、人文、创业路演、辩论、公众演讲和创新挑战，并查看规则与报名链接。",
+  "Competitions (Academic)": "学术类比赛",
+  "Competitions (Non-Academic)": "非学术类比赛",
+  "Language": "语言",
+  "Mathematics": "数学",
+  "Science": "科学",
+  "Humanities": "人文",
+
+  "Ask for opportunities, competitions, resources, and learning materials.": "询问机会、比赛、资源和学习材料。",
+  "Use the TeenLaunch chatbot mockup to explore ideas, compare deadlines, practise pitches, and get student-friendly guidance.": "使用 TeenLaunch 聊天助手探索想法、比较截止日期、练习路演，并获得适合学生的指导。",
+  "Learning Materials": "学习材料",
+  "Find guides, checklists, workshop notes, debate resources, and pitch practice material.": "寻找指南、清单、工作坊笔记、辩论资源和路演练习材料。"
+});
+
 const translate = (key, language) => {
   if (language !== "zh") return key;
   return translations[key] || key;
