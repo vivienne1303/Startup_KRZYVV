@@ -26,7 +26,7 @@ navToggle.addEventListener("click", () => {
 navLinks.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
 
 const updateCountdown = () => {
-  const deadline = new Date("2026-06-28T23:59:00");
+  const deadline = new Date(countdown.dataset.deadline || "2026-06-28T23:59:00");
   const now = new Date();
   const diff = Math.max(0, deadline - now);
   const days = Math.floor(diff / 86400000);

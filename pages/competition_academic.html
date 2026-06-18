@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="TeenLaunch | Academic Competitions">TeenLaunch | Academic Competitions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/competitions.css">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../images/logo.png" alt="" aria-hidden="true"><span>TeenLaunch<small data-i18n="Competition mode">Competition mode</small></span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="../index.html" data-i18n="Home">Home</a>
+        <a href="opportunities.html" data-i18n="Opportunities">Opportunities</a>
+        <div class="nav-dropdown active">
+          <a class="nav-trigger" href="competitions.html" data-i18n="Competitions">Competitions</a>
+          <div class="dropdown-menu" aria-label="Competition categories">
+            <a href="competition_academic.html" data-i18n="Academic">Academic</a>
+            <a href="competition_non-academic.html" data-i18n="Non-Academic">Non-Academic</a>
+          </div>
+        </div>
+        <a href="resources.html" data-i18n="Resources">Resources</a>
+        <a href="debate.html" data-i18n="Soft Skills & Debate">Soft Skills & Debate</a>
+        <a href="aiassistant.html" data-i18n="AI Chatbot">AI Chatbot</a>
+        <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">ä¸­æ–‡</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="reveal">
+        <p class="eyebrow" data-i18n="Competitions (Academic)">Competitions (Academic)</p>
+        <h1 data-i18n="Language, mathematics, science, and humanities competitions.">Language, mathematics, science, and humanities competitions.</h1>
+        <p data-i18n="Find academic contests with rules, deadlines, prize information, and registration links in one place.">Find academic contests with rules, deadlines, prize information, and registration links in one place.</p>
+      </div>
+      <div class="countdown-card reveal">
+        <span data-i18n="Next deadline">Next deadline</span>
+        <strong id="countdown" data-deadline="2026-07-15T23:59:00">Loading...</strong>
+        <p data-i18n="Youth Essay &amp; Speech Challenge registration closes soon.">Youth Essay & Speech Challenge registration closes soon.</p>
+      </div>
+    </section>
+
+    <section class="section" id="academic">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="Academic">Academic</p>
+        <h2 data-i18n="Pick a subject track and start preparing early.">Pick a subject track and start preparing early.</h2>
+      </div>
+      <div class="competition-grid">
+        <article class="competition-card reveal">
+          <span class="tag" data-i18n="Language">Language</span>
+          <h3 data-i18n="Youth Essay &amp; Speech Challenge">Youth Essay & Speech Challenge</h3>
+          <p data-i18n="Competition details: write a short essay, then present a 2-minute speech if shortlisted.">Competition details: write a short essay, then present a 2-minute speech if shortlisted.</p>
+          <ul>
+            <li>Rules: original writing, 800-word limit</li>
+            <li>Deadline: 15 Jul 2026</li>
+            <li>Prize information: certificates, books, mentorship</li>
+            <li><a href="#">Registration link</a></li>
+          </ul>
+          <button class="btn secondary reminder" data-event="Youth Essay & Speech Challenge" data-i18n="Set Reminder">Set Reminder</button>
+        </article>
+        <article class="competition-card reveal">
+          <span class="tag" data-i18n="Mathematics">Mathematics</span>
+          <h3 data-i18n="Junior Math Sprint">Junior Math Sprint</h3>
+          <p data-i18n="Competition details: individual and team problem-solving rounds for different age bands.">Competition details: individual and team problem-solving rounds for different age bands.</p>
+          <ul>
+            <li>Rules: no calculators in speed round</li>
+            <li>Deadline: 22 Jul 2026</li>
+            <li>Prize information: medals and finalist showcase</li>
+            <li><a href="#">Registration link</a></li>
+          </ul>
+          <button class="btn secondary reminder" data-event="Junior Math Sprint" data-i18n="Set Reminder">Set Reminder</button>
+        </article>
+        <article class="competition-card reveal">
+          <span class="tag" data-i18n="Science">Science</span>
+          <h3 data-i18n="Young Science Investigator">Young Science Investigator</h3>
+          <p data-i18n="Competition details: submit a simple experiment, poster, and 3-minute explanation.">Competition details: submit a simple experiment, poster, and 3-minute explanation.</p>
+          <ul>
+            <li>Rules: cite sources and show method</li>
+            <li>Deadline: 5 Aug 2026</li>
+            <li>Prize information: lab visit and project grant</li>
+            <li><a href="#">Registration link</a></li>
+          </ul>
+          <button class="btn secondary reminder" data-event="Young Science Investigator" data-i18n="Set Reminder">Set Reminder</button>
+        </article>
+        <article class="competition-card reveal">
+          <span class="tag" data-i18n="Humanities">Humanities</span>
+          <h3 data-i18n="History &amp; Society Challenge">History & Society Challenge</h3>
+          <p data-i18n="Competition details: research a social issue and explain why it matters today.">Competition details: research a social issue and explain why it matters today.</p>
+          <ul>
+            <li>Rules: solo or pair submission</li>
+            <li>Deadline: 18 Aug 2026</li>
+            <li>Prize information: certificates and publishing feature</li>
+            <li><a href="#">Registration link</a></li>
+          </ul>
+          <button class="btn secondary reminder" data-event="History & Society Challenge" data-i18n="Set Reminder">Set Reminder</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section calendar-section">
+      <div class="calendar reveal">
+        <p class="eyebrow" data-i18n="Upcoming events calendar">Upcoming events calendar</p>
+        <h2 data-i18n="July to September">July to September</h2>
+        <div class="calendar-row"><span>Jul 15</span><p>Youth Essay & Speech deadline</p></div>
+        <div class="calendar-row"><span>Jul 22</span><p>Junior Math Sprint deadline</p></div>
+        <div class="calendar-row"><span>Aug 05</span><p>Young Science Investigator deadline</p></div>
+        <div class="calendar-row"><span>Aug 18</span><p>History & Society Challenge deadline</p></div>
+      </div>
+      <div class="reminders reveal">
+        <p class="eyebrow" data-i18n="Reminders">Reminders</p>
+        <h2 data-i18n="Your list">Your list</h2>
+        <ul id="reminderList">
+          <li data-i18n="No reminders yet. Add one from a competition card.">No reminders yet. Add one from a competition card.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 TeenLaunch</p>
+    <a href="competitions.html" data-i18n="All competitions">All competitions</a>
+    <a href="competition_non-academic.html" data-i18n="Non-Academic">Non-Academic</a>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/competitions.js"></script>
+</body>
+</html>

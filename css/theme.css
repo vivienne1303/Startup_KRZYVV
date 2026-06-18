@@ -125,6 +125,16 @@ body {
 
 .nav-dropdown {
   position: relative;
+  z-index: 30;
+}
+
+.nav-dropdown::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  height: 12px;
 }
 
 .nav-trigger {
@@ -146,6 +156,7 @@ body {
   position: absolute;
   top: calc(100% + 12px);
   left: 50%;
+  z-index: 31;
   display: grid;
   min-width: 190px;
   padding: 8px;
