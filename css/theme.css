@@ -504,44 +504,44 @@ body {
 
   .navbar {
     width: min(1320px, calc(100% - 32px));
-    min-height: 88px;
-    height: 88px;
+    min-height: clamp(104px, 13vw, 128px);
+    height: clamp(104px, 13vw, 128px);
   }
 
   .brand {
-    gap: 10px;
+    gap: clamp(12px, 2.2vw, 18px);
   }
 
   .brand-logo {
-    width: 46px;
-    height: 46px;
+    width: clamp(62px, 8vw, 78px);
+    height: clamp(62px, 8vw, 78px);
   }
 
   .brand span {
-    font-size: 1rem;
+    font-size: clamp(1.35rem, 2.7vw, 1.7rem);
     line-height: 1.1;
   }
 
   .brand small {
-    margin-top: 2px;
-    font-size: 0.68rem;
+    margin-top: 4px;
+    font-size: clamp(0.92rem, 1.9vw, 1.12rem);
   }
 
   .nav-toggle {
-    width: 42px;
-    height: 42px;
-    border-radius: 12px;
+    width: clamp(56px, 7.5vw, 68px);
+    height: clamp(56px, 7.5vw, 68px);
+    border-radius: clamp(14px, 2vw, 18px);
     background: rgba(255, 255, 255, 0.72);
   }
 
   .nav-toggle span {
-    width: 18px;
-    height: 2px;
-    margin: 4px auto;
+    width: clamp(24px, 3.4vw, 32px);
+    height: 3px;
+    margin: 5px auto;
   }
 
   .nav-links {
-    inset: 88px 16px auto;
+    inset: clamp(104px, 13vw, 128px) 16px auto;
   }
 
   .section {
@@ -680,6 +680,23 @@ body {
 
   .app-coming-card {
     grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .app-coming-copy {
+    display: grid;
+    justify-items: center;
+  }
+
+  .app-coming-copy h2 {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .app-coming-copy p:not(.eyebrow) {
+    max-width: 42rem;
+    margin: 14px auto 0;
     text-align: center;
   }
 
