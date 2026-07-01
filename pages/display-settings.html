@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="TeenLaunch | Display Settings">TeenLaunch | Display Settings</title>
+  <script src="../js/theme-mode.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/settings.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../images/light_logo.png" alt="" aria-hidden="true"><span>TeenLaunch<small data-i18n="Future founders start here">Future founders start here</small></span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="../index.html" data-i18n="Home">Home</a>
+        <a href="opportunities.html" data-i18n="Opportunities">Opportunities</a>
+        <div class="nav-dropdown">
+          <a class="nav-trigger" href="competitions.html" data-i18n="Competitions">Competitions</a>
+          <div class="dropdown-menu" aria-label="Competition categories">
+            <a href="competition_academic.html" data-i18n="Academic">Academic</a>
+            <a href="competition_non-academic.html" data-i18n="Non-Academic">Non-Academic</a>
+          </div>
+        </div>
+        <a href="resources.html" data-i18n="Resources">Resources</a>
+        <a href="debate.html" data-i18n="Soft Skills & Debate">Soft Skills & Debate</a>
+        <a href="aiassistant.html" data-i18n="AI Chatbot">AI Chatbot</a>
+        <a class="settings-button active" href="settings.html" aria-label="Settings">
+          <img src="../images/settings.jpg" alt="" aria-hidden="true">
+        </a>
+        <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section settings-hero">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="Display Settings">Display Settings</p>
+        <h1 data-i18n="Choose how TeenLaunch looks.">Choose how TeenLaunch looks.</h1>
+      </div>
+      <div class="settings-grid" role="group" aria-label="Theme choices">
+        <button class="theme-option reveal" type="button" data-theme-choice="light" aria-pressed="true">
+          <img class="settings-icon" src="../images/lightmode_icon.png" alt="" aria-hidden="true">
+          <div>
+            <h2 data-i18n="Light Mode">Light Mode</h2>
+            <span data-i18n="Use the current bright blue colour scheme.">Use the current bright blue colour scheme.</span>
+          </div>
+        </button>
+        <button class="theme-option reveal" type="button" data-theme-choice="dark" aria-pressed="false">
+          <img class="settings-icon" src="../images/darkmode_icon.png" alt="" aria-hidden="true">
+          <div>
+            <h2 data-i18n="Dark Mode">Dark Mode</h2>
+            <span data-i18n="Use the original dark purple colour scheme.">Use the original dark purple colour scheme.</span>
+          </div>
+        </button>
+      </div>
+      <div class="settings-actions reveal">
+        <a class="btn secondary" href="settings.html" data-i18n="Back to Settings">Back to Settings</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 TeenLaunch</p>
+    <a href="settings.html" data-i18n="Settings">Settings</a>
+    <a href="../index.html" data-i18n="Home">Home</a>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>

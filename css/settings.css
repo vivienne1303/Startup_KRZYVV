@@ -1,0 +1,116 @@
+.settings-hero {
+  min-height: auto;
+  padding-top: 148px;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.settings-option,
+.theme-option {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+  min-height: 240px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(180deg, var(--panel), rgba(16, 7, 30, 0.82));
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.settings-option:hover,
+.theme-option:hover,
+.theme-option.active {
+  border-color: rgba(56, 174, 246, 0.44);
+  transform: translateY(-4px);
+}
+
+.settings-icon {
+  width: 72px;
+  height: 72px;
+  padding: 10px;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.theme-option {
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.theme-option.active {
+  box-shadow: 0 22px 58px rgba(46, 131, 247, 0.24);
+}
+
+.theme-option span,
+.settings-option span {
+  color: var(--muted);
+}
+
+.settings-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.settings-button {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(39, 99, 178, 0.24);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.62);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.settings-button:hover,
+.settings-button.active {
+  border-color: rgba(46, 131, 247, 0.42);
+  background: rgba(255, 255, 255, 0.82);
+  transform: translateY(-1px);
+}
+
+.settings-button img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+html[data-theme="dark"] .settings-icon,
+html[data-theme="dark"] .settings-button {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .settings-button:hover,
+html[data-theme="dark"] .settings-button.active {
+  border-color: rgba(53, 230, 255, 0.38);
+  background: rgba(53, 230, 255, 0.1);
+}
+
+@media (max-width: 760px) {
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-option,
+  .theme-option {
+    min-height: 0;
+  }
+
+  .settings-button {
+    width: 100%;
+    min-height: 44px;
+  }
+}
