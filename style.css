@@ -163,12 +163,7 @@ a {
 
 .eyebrow {
   margin-bottom: 14px;
-  color: #2083e8;
-  background: linear-gradient(180deg, #33c6ff 0%, #2278df 52%, #07133f 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.28);
-  -webkit-text-fill-color: transparent;
+  color: var(--cyan);
   font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.12em;

@@ -23,12 +23,15 @@ body {
 }
 
 .eyebrow {
-  color: #2083e8;
-  background: linear-gradient(180deg, #33c6ff 0%, #2278df 52%, #07133f 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.28);
-  -webkit-text-fill-color: transparent;
+  color: var(--cyan);
+}
+
+#actions .eyebrow,
+#why .eyebrow,
+#testimonials .eyebrow,
+#cta .eyebrow {
+  color: #ffffff;
+  text-shadow: 0 2px 14px rgba(7, 19, 63, 0.28);
 }
 
 .site-header.scrolled {
@@ -488,56 +491,57 @@ body {
 
 @media (max-width: 1180px) {
   .site-header {
-    top: clamp(12px, 3vw, 28px);
-    right: clamp(14px, 3.5vw, 32px);
-    left: clamp(14px, 3.5vw, 32px);
-    width: auto;
-    border: 1px solid rgba(39, 99, 178, 0.18);
-    border-radius: clamp(18px, 3vw, 30px) clamp(18px, 3vw, 30px) 0 0;
-    background: #ffffff;
+    top: 0;
+    right: auto;
+    left: 0;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgba(39, 99, 178, 0.12);
+    border-radius: 0;
+    background: rgba(245, 251, 255, 0.86);
     backdrop-filter: blur(18px);
   }
 
   .navbar {
-    width: calc(100% - clamp(28px, 7vw, 64px));
-    min-height: clamp(78px, 14vw, 132px);
-    height: clamp(78px, 14vw, 132px);
+    width: min(1320px, calc(100% - 32px));
+    min-height: 88px;
+    height: 88px;
   }
 
   .brand {
-    gap: clamp(10px, 2.5vw, 24px);
+    gap: 10px;
   }
 
   .brand-logo {
-    width: clamp(44px, 9vw, 88px);
-    height: clamp(44px, 9vw, 88px);
+    width: 46px;
+    height: 46px;
   }
 
   .brand span {
-    font-size: clamp(1rem, 3vw, 2.15rem);
+    font-size: 1rem;
     line-height: 1.1;
   }
 
   .brand small {
-    margin-top: clamp(2px, 0.8vw, 8px);
-    font-size: clamp(0.72rem, 2.2vw, 1.42rem);
+    margin-top: 2px;
+    font-size: 0.68rem;
   }
 
   .nav-toggle {
-    width: clamp(48px, 9vw, 84px);
-    height: clamp(48px, 9vw, 84px);
-    border-radius: clamp(16px, 3vw, 26px);
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
     background: rgba(255, 255, 255, 0.72);
   }
 
   .nav-toggle span {
-    width: clamp(20px, 4vw, 36px);
-    height: clamp(2px, 0.45vw, 4px);
-    margin: clamp(4px, 0.8vw, 8px) auto;
+    width: 18px;
+    height: 2px;
+    margin: 4px auto;
   }
 
   .nav-links {
-    inset: calc(clamp(12px, 3vw, 28px) + clamp(82px, 15vw, 144px)) clamp(14px, 3.5vw, 32px) auto;
+    inset: 88px 16px auto;
   }
 
   .section {
@@ -737,15 +741,6 @@ html[data-theme="dark"] body {
     radial-gradient(circle at 86% 14%, rgba(53, 230, 255, 0.16), transparent 24rem),
     linear-gradient(135deg, #08030f 0%, #160825 52%, #090312 100%);
   color: var(--text);
-}
-
-html[data-theme="dark"] .eyebrow {
-  color: var(--cyan);
-  background: linear-gradient(180deg, #e9fbff 0%, #35e6ff 45%, #b7ff5a 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  text-shadow: 0 0 18px rgba(53, 230, 255, 0.24);
-  -webkit-text-fill-color: transparent;
 }
 
 html[data-theme="dark"] .site-header.scrolled {
