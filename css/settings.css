@@ -18,7 +18,7 @@
   padding: 28px;
   border: 1px solid var(--line);
   border-radius: 18px;
-  background: linear-gradient(180deg, var(--panel), rgba(16, 7, 30, 0.82));
+  background: #ffffff;
   box-shadow: var(--shadow);
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
@@ -37,7 +37,7 @@
   object-fit: contain;
   border: 1px solid var(--line);
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.72);
+  background: #ffffff;
 }
 
 .theme-option {
@@ -91,6 +91,11 @@
 html[data-theme="dark"] .settings-icon,
 html[data-theme="dark"] .settings-button {
   background: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .settings-option,
+html[data-theme="dark"] .theme-option {
+  background: #12091f;
 }
 
 html[data-theme="dark"] .settings-button:hover,
