@@ -373,7 +373,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1180px) {
   .nav-toggle {
     display: block;
   }
@@ -477,7 +477,7 @@ body {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1180px) {
   .site-header {
     background: rgba(245, 251, 255, 0.86);
     border-bottom: 1px solid rgba(39, 99, 178, 0.12);
@@ -485,102 +485,108 @@ body {
   }
 
   .navbar {
-    width: min(100% - 28px, 1320px);
-    min-height: 70px;
-    height: 70px;
+    width: min(100% - clamp(28px, 7vw, 120px), 1320px);
+    min-height: clamp(78px, 14vw, 132px);
+    height: clamp(78px, 14vw, 132px);
   }
 
   .brand {
-    gap: 8px;
+    gap: clamp(10px, 2.5vw, 24px);
   }
 
   .brand-logo {
-    width: 38px;
-    height: 38px;
+    width: clamp(44px, 9vw, 88px);
+    height: clamp(44px, 9vw, 88px);
   }
 
   .brand span {
-    font-size: 0.92rem;
+    font-size: clamp(1rem, 3vw, 2.15rem);
     line-height: 1.1;
   }
 
   .brand small {
-    margin-top: 2px;
-    font-size: 0.58rem;
+    margin-top: clamp(2px, 0.8vw, 8px);
+    font-size: clamp(0.72rem, 2.2vw, 1.42rem);
   }
 
   .nav-toggle {
-    width: 40px;
-    height: 40px;
-    border-radius: 14px;
+    width: clamp(48px, 9vw, 84px);
+    height: clamp(48px, 9vw, 84px);
+    border-radius: clamp(16px, 3vw, 26px);
     background: rgba(255, 255, 255, 0.72);
   }
 
+  .nav-toggle span {
+    width: clamp(20px, 4vw, 36px);
+    height: clamp(2px, 0.45vw, 4px);
+    margin: clamp(4px, 0.8vw, 8px) auto;
+  }
+
   .nav-links {
-    inset: 78px 14px auto;
+    inset: clamp(82px, 15vw, 144px) clamp(14px, 6vw, 60px) auto;
   }
 
   .section {
-    width: min(100% - 28px, 1160px);
-    padding: 58px 0;
+    width: min(100% - clamp(28px, 7vw, 120px), 1160px);
+    padding: clamp(48px, 8vw, 76px) 0;
   }
 
   .hero {
-    gap: 24px;
+    gap: clamp(44px, 7vw, 72px);
     min-height: auto;
-    padding-top: 112px;
-    padding-bottom: 44px;
+    padding-top: clamp(170px, 27vw, 300px);
+    padding-bottom: clamp(48px, 8vw, 78px);
   }
 
   #home.hero h1,
   .hero h1 {
     max-width: 11ch;
-    font-size: clamp(2.48rem, 13vw, 3.35rem);
+    font-size: clamp(3.2rem, 9.3vw, 5.7rem);
     line-height: 0.98;
   }
 
   .eyebrow {
-    margin-bottom: 12px;
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
+    margin-bottom: clamp(20px, 4vw, 38px);
+    font-size: clamp(1rem, 3vw, 2rem);
+    letter-spacing: 0.14em;
   }
 
   .hero-copy p {
-    max-width: 34rem;
-    margin-top: 18px;
-    font-size: 1rem;
+    max-width: 18.5em;
+    margin-top: clamp(28px, 5vw, 52px);
+    font-size: clamp(1.2rem, 3.6vw, 2.35rem);
     line-height: 1.55;
   }
 
   .hero-actions {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-    margin-top: 24px;
+    grid-template-columns: 1fr;
+    gap: clamp(16px, 3vw, 30px);
+    margin-top: clamp(44px, 8vw, 78px);
   }
 
   .btn {
-    min-height: 46px;
-    padding: 0 14px;
-    border-radius: 13px;
-    font-size: 0.88rem;
+    min-height: clamp(54px, 10vw, 96px);
+    padding: 0 clamp(18px, 4vw, 36px);
+    border-radius: clamp(14px, 2.4vw, 24px);
+    font-size: clamp(1rem, 3vw, 2rem);
   }
 
   .chat-preview {
-    padding: 16px;
-    border-radius: 20px;
+    padding: clamp(22px, 5vw, 48px);
+    border-radius: clamp(24px, 4vw, 42px);
   }
 
   .chat-top {
-    margin-bottom: 16px;
-    font-size: 0.9rem;
+    margin-bottom: clamp(18px, 4vw, 38px);
+    font-size: clamp(1rem, 3vw, 2rem);
   }
 
   .message {
     max-width: 96%;
-    margin-bottom: 10px;
-    padding: 12px 14px;
-    border-radius: 15px;
-    font-size: 0.92rem;
+    margin-bottom: clamp(12px, 2.4vw, 24px);
+    padding: clamp(14px, 3vw, 28px) clamp(16px, 3.3vw, 32px);
+    border-radius: clamp(16px, 3vw, 28px);
+    font-size: clamp(0.95rem, 2.6vw, 1.65rem);
     line-height: 1.45;
   }
 
@@ -589,10 +595,10 @@ body {
   }
 
   .chat-input {
-    margin-top: 14px;
-    padding: 12px 14px;
-    border-radius: 13px;
-    font-size: 0.92rem;
+    margin-top: clamp(18px, 4vw, 36px);
+    padding: clamp(14px, 3vw, 28px) clamp(16px, 3.3vw, 32px);
+    border-radius: clamp(16px, 3vw, 28px);
+    font-size: clamp(0.95rem, 2.6vw, 1.65rem);
   }
 
   .competition-grid {
@@ -646,7 +652,7 @@ body {
 
   #home.hero h1,
   .hero h1 {
-    font-size: clamp(2.28rem, 12.2vw, 2.9rem);
+    font-size: clamp(3rem, 12.2vw, 3.35rem);
   }
 
   .hero-actions {
@@ -805,7 +811,7 @@ html[data-theme="dark"] .language-toggle:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1180px) {
   html[data-theme="dark"] .nav-links {
     background: rgba(13, 5, 25, 0.97);
   }
