@@ -163,7 +163,12 @@ a {
 
 .eyebrow {
   margin-bottom: 14px;
-  color: var(--cyan);
+  color: #2083e8;
+  background: linear-gradient(180deg, #33c6ff 0%, #2278df 52%, #07133f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.28);
+  -webkit-text-fill-color: transparent;
   font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.12em;
@@ -441,14 +446,27 @@ h3 {
   transform: translateY(0);
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1180px) {
   .five-grid,
   .why-grid,
   .testimonial-grid,
   .hero,
   .split-section,
   .footer {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 128px;
+  }
+
+  .hero-actions {
+    display: grid;
+  }
+
+  .btn {
+    width: 100%;
   }
 }
 
