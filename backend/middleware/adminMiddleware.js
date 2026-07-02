@@ -3,10 +3,16 @@ const HttpError = require("../utils/httpError");
 
 const adminMiddleware = async (req, res, next) => {
   try {
-    const { data: profile, error } = await getProfileById(req.supabase, req.user.id);
+    let profile = req.profile;
 
-    if (error || !profile) {
-      throw new HttpError(403, "Admin profile could not be verified");
+    if (!profile) {
+      const { data, error } = await getProfileById(req.supabase, req.user.id);
+
+      if (error || !data) {
+        throw new HttpError(403, "Admin profile could not be verified");
+      }
+
+      profile = data;
     }
 
     if (profile.role !== "admin") {

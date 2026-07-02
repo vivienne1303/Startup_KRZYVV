@@ -9,26 +9,51 @@ const register = asyncHandler(async (req, res) => {
   const name = String(body.name || body.full_name || "").trim();
   const email = String(body.email || "").trim().toLowerCase();
   const password = String(body.password || "");
-  const { role, profile } = body;
+  const schoolName = String(body.school_name || "").trim();
+  const educationLevel = String(body.education_level || "").trim();
+  const age = body.age === undefined || body.age === null || body.age === "" ? null : Number(body.age);
   const missingFields = [];
 
   if (!name) missingFields.push("name");
   if (!email) missingFields.push("email");
   if (!password) missingFields.push("password");
+  if (age === null) missingFields.push("age");
+  if (!educationLevel) missingFields.push("education_level");
 
   if (missingFields.length > 0) {
     throw new HttpError(400, `${missingFields.join(", ")} required`);
   }
 
-  if (role && role !== "user") {
-    throw new HttpError(403, "Admin accounts cannot be created through public registration");
+  if (Object.prototype.hasOwnProperty.call(body, "role")) {
+    throw new HttpError(403, "Role cannot be set through public registration");
+  }
+
+  if (!Number.isInteger(age) || age < 10 || age > 19) {
+    throw new HttpError(400, "age must be a whole number between 10 and 19");
+  }
+
+  const allowedEducationLevels = [
+    "Secondary School",
+    "Junior College",
+    "Polytechnic",
+    "ITE",
+    "University",
+    "Other",
+  ];
+
+  if (!allowedEducationLevels.includes(educationLevel)) {
+    throw new HttpError(400, "education_level is invalid");
   }
 
   const result = await registerUser({
     name,
     email,
     password,
-    profile,
+    profile: {
+      age,
+      school_name: schoolName,
+      education_level: educationLevel,
+    },
   });
 
   res.status(201).json({

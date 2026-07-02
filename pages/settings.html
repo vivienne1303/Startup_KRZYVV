@@ -30,6 +30,7 @@
         <a href="resources.html" data-i18n="Resources">Resources</a>
         <a href="debate.html" data-i18n="Soft Skills & Debate">Soft Skills & Debate</a>
         <a href="aiassistant.html" data-i18n="AI Chatbot">AI Chatbot</a>
+        <a class="auth-link" href="auth.html">Login</a>
         <a class="settings-button active" href="settings.html" aria-label="Settings">
           <img src="../assets/icons/settings.jpg" alt="" aria-hidden="true">
         </a>
@@ -45,6 +46,13 @@
         <h1 data-i18n="Personalise your TeenLaunch experience.">Personalise your TeenLaunch experience.</h1>
       </div>
       <div class="settings-grid">
+        <a class="settings-option reveal" href="account.html">
+          <img class="settings-icon" src="../assets/icons/app_icon.png" alt="" aria-hidden="true">
+          <div>
+            <h2>Account</h2>
+            <span>View and update your TeenLaunch profile details.</span>
+          </div>
+        </a>
         <a class="settings-option reveal" href="display-settings.html">
           <img class="settings-icon" src="../assets/icons/display_icon.png" alt="" aria-hidden="true">
           <div>
@@ -59,8 +67,11 @@
   <footer class="footer">
     <p>&copy; 2026 TeenLaunch</p>
     <a href="../index.html" data-i18n="Home">Home</a>
+    <a href="account.html">Account</a>
     <a href="display-settings.html" data-i18n="Display Settings">Display Settings</a>
   </footer>
+  <script src="../js/auth-guard.js"></script>
+  <script src="../js/auth-nav.js"></script>
 
   <script src="../js/i18n.js"></script>
   <script src="../script.js"></script>

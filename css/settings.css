@@ -63,6 +63,255 @@
   margin-top: 28px;
 }
 
+.account-panel {
+  display: grid;
+  gap: 22px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.account-summary {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.account-avatar {
+  display: grid;
+  width: 76px;
+  height: 76px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #3284f4, #25328b);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 900;
+  box-shadow: 0 16px 38px rgba(46, 131, 247, 0.24);
+}
+
+.account-summary h2 {
+  margin: 0 0 4px;
+  color: var(--text);
+}
+
+.account-summary p,
+.account-role,
+.account-message {
+  color: var(--muted);
+}
+
+.account-role {
+  display: inline-flex;
+  margin-top: 8px;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+.account-message {
+  min-height: 24px;
+  font-weight: 800;
+}
+
+.account-message.error {
+  color: #b42318;
+}
+
+.account-message.success {
+  color: #067647;
+}
+
+.account-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.account-grid label {
+  display: grid;
+  gap: 8px;
+  color: var(--text);
+  font-weight: 900;
+}
+
+.account-grid input,
+.account-grid select,
+.account-grid textarea {
+  width: 100%;
+  min-height: 52px;
+  padding: 0 16px;
+  border: 1px solid rgba(154, 190, 226, 0.78);
+  border-radius: 14px;
+  background: #fff;
+  color: #071349;
+  font: inherit;
+}
+
+.account-grid textarea {
+  min-height: 116px;
+  padding: 14px 16px;
+  resize: vertical;
+}
+
+.account-grid input:focus,
+.account-grid select:focus,
+.account-grid textarea:focus {
+  border-color: #3284f4;
+  box-shadow: 0 0 0 4px rgba(50, 132, 244, 0.14);
+  outline: none;
+}
+
+.account-wide {
+  grid-column: 1 / -1;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.admin-stats article,
+.admin-panel {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.admin-stats article {
+  display: grid;
+  gap: 8px;
+  padding: 22px;
+}
+
+.admin-stats span,
+.admin-panel-heading span,
+.admin-list-item span,
+.admin-empty {
+  color: var(--muted);
+}
+
+.admin-stats strong {
+  color: var(--text);
+  font-size: 2.6rem;
+  line-height: 1;
+}
+
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.admin-opportunity-panel {
+  margin: 24px 0;
+}
+
+.admin-opportunity-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding: 22px;
+}
+
+.admin-opportunity-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--text);
+  font-weight: 900;
+}
+
+.admin-opportunity-form input,
+.admin-opportunity-form select,
+.admin-opportunity-form textarea {
+  width: 100%;
+  min-height: 52px;
+  padding: 0 16px;
+  border: 1px solid rgba(154, 190, 226, 0.78);
+  border-radius: 14px;
+  background: #fff;
+  color: #071349;
+  font: inherit;
+}
+
+.admin-opportunity-form textarea {
+  min-height: 118px;
+  padding: 14px 16px;
+  resize: vertical;
+}
+
+.admin-opportunity-form input:focus,
+.admin-opportunity-form select:focus,
+.admin-opportunity-form textarea:focus {
+  border-color: #3284f4;
+  box-shadow: 0 0 0 4px rgba(50, 132, 244, 0.14);
+  outline: none;
+}
+
+.admin-check {
+  display: flex !important;
+  min-height: 52px;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-check input {
+  width: 20px;
+  min-height: 20px;
+}
+
+.admin-panel {
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.admin-wide {
+  grid-column: 1 / -1;
+}
+
+.admin-panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.admin-panel-heading h2 {
+  margin: 0;
+}
+
+.admin-list {
+  display: grid;
+}
+
+.admin-list-item,
+.admin-empty {
+  padding: 16px 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.admin-list-item {
+  display: grid;
+  gap: 6px;
+}
+
+.admin-list-item:last-child {
+  border-bottom: 0;
+}
+
 .settings-button {
   display: inline-grid;
   width: 42px;
@@ -88,14 +337,51 @@
   border-radius: 6px;
 }
 
+.auth-link {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  border: 1px solid rgba(46, 131, 247, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.68);
+  color: var(--text);
+  font-weight: 900;
+}
+
+.auth-link:hover,
+.auth-link.active {
+  border-color: rgba(46, 131, 247, 0.48);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.auth-link.is-logout {
+  border-color: rgba(180, 35, 24, 0.22);
+}
+
 html[data-theme="dark"] .settings-icon,
 html[data-theme="dark"] .settings-button {
   background: rgba(255, 255, 255, 0.08);
 }
 
 html[data-theme="dark"] .settings-option,
-html[data-theme="dark"] .theme-option {
+html[data-theme="dark"] .theme-option,
+html[data-theme="dark"] .account-panel,
+html[data-theme="dark"] .admin-stats article,
+html[data-theme="dark"] .admin-panel {
   background: #12091f;
+}
+
+html[data-theme="dark"] .account-grid input,
+html[data-theme="dark"] .account-grid select,
+html[data-theme="dark"] .account-grid textarea,
+html[data-theme="dark"] .admin-opportunity-form input,
+html[data-theme="dark"] .admin-opportunity-form select,
+html[data-theme="dark"] .admin-opportunity-form textarea {
+  border-color: var(--line);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
 }
 
 html[data-theme="dark"] .settings-button:hover,
@@ -104,9 +390,36 @@ html[data-theme="dark"] .settings-button.active {
   background: rgba(53, 230, 255, 0.1);
 }
 
+html[data-theme="dark"] .auth-link {
+  border-color: rgba(53, 230, 255, 0.34);
+  background: rgba(53, 230, 255, 0.1);
+}
+
 @media (max-width: 760px) {
   .settings-grid {
     grid-template-columns: 1fr;
+  }
+
+  .account-panel {
+    padding: 20px;
+  }
+
+  .account-summary {
+    align-items: flex-start;
+  }
+
+  .account-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-stats,
+  .admin-grid,
+  .admin-opportunity-form {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-wide {
+    grid-column: auto;
   }
 
   .settings-option,
@@ -115,6 +428,11 @@ html[data-theme="dark"] .settings-button.active {
   }
 
   .settings-button {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .auth-link {
     width: 100%;
     min-height: 44px;
   }

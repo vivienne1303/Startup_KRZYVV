@@ -1,5 +1,6 @@
 const express = require("express");
 const authRoutes = require("./authRoutes");
+const adminRoutes = require("./adminRoutes");
 const careerDnaRoutes = require("./careerDnaRoutes");
 const opportunityRoutes = require("./opportunityRoutes");
 const profileRoutes = require("./profileRoutes");
@@ -12,6 +13,7 @@ router.get("/health", (req, res) => {
 });
 
 router.use("/auth", authRoutes);
+router.use("/admin", adminRoutes);
 router.use("/profile", profileRoutes);
 router.use("/opportunities", opportunityRoutes);
 router.use("/registrations", registrationRoutes);

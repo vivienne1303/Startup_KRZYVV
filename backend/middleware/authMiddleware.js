@@ -1,4 +1,5 @@
 const { supabase, createUserClient } = require("../config/supabase");
+const { getProfileById } = require("../services/profileService");
 const HttpError = require("../utils/httpError");
 
 const authMiddleware = async (req, res, next) => {
@@ -19,6 +20,14 @@ const authMiddleware = async (req, res, next) => {
     req.accessToken = token;
     req.user = data.user;
     req.supabase = createUserClient(token);
+
+    const { data: profile, error: profileError } = await getProfileById(req.supabase, data.user.id);
+
+    if (profileError || !profile) {
+      throw new HttpError(403, "Authenticated profile could not be verified");
+    }
+
+    req.profile = profile;
 
     next();
   } catch (error) {

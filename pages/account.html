@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="TeenLaunch | Display Settings">TeenLaunch | Display Settings</title>
+  <title data-i18n="TeenLaunch | Account">TeenLaunch | Account</title>
   <script src="../js/theme-mode.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,28 +42,62 @@
   <main>
     <section class="section settings-hero">
       <div class="section-heading reveal">
-        <p class="eyebrow" data-i18n="Display Settings">Display Settings</p>
-        <h1 data-i18n="Choose how TeenLaunch looks.">Choose how TeenLaunch looks.</h1>
+        <p class="eyebrow">Account</p>
+        <h1>Your TeenLaunch profile.</h1>
       </div>
-      <div class="settings-grid" role="group" aria-label="Theme choices">
-        <button class="theme-option reveal" type="button" data-theme-choice="light" aria-pressed="true">
-          <img class="settings-icon" src="../assets/icons/lightmode_icon.png" alt="" aria-hidden="true">
+
+      <form class="account-panel reveal" data-account-form>
+        <div class="account-summary">
+          <div class="account-avatar" data-account-initials>TL</div>
           <div>
-            <h2 data-i18n="Light Mode">Light Mode</h2>
-            <span data-i18n="Use the current bright blue colour scheme.">Use the current bright blue colour scheme.</span>
+            <h2 data-account-name>Loading profile...</h2>
+            <p data-account-email></p>
+            <span class="account-role" data-account-role></span>
           </div>
-        </button>
-        <button class="theme-option reveal" type="button" data-theme-choice="dark" aria-pressed="false">
-          <img class="settings-icon" src="../assets/icons/darkmode_icon.png" alt="" aria-hidden="true">
-          <div>
-            <h2 data-i18n="Dark Mode">Dark Mode</h2>
-            <span data-i18n="Use the original dark purple colour scheme.">Use the original dark purple colour scheme.</span>
-          </div>
-        </button>
-      </div>
-      <div class="settings-actions reveal">
-        <a class="btn secondary" href="settings.html" data-i18n="Back to Settings">Back to Settings</a>
-      </div>
+        </div>
+
+        <p class="account-message" data-account-message aria-live="polite"></p>
+
+        <div class="account-grid">
+          <label>
+            Full name
+            <input type="text" name="full_name" autocomplete="name" required>
+          </label>
+          <label>
+            Age
+            <input type="number" name="age" min="10" max="19" inputmode="numeric" required>
+          </label>
+          <label>
+            Education level
+            <select name="education_level" required>
+              <option value="">Select education level</option>
+              <option value="Secondary School">Secondary School</option>
+              <option value="Junior College">Junior College</option>
+              <option value="Polytechnic">Polytechnic</option>
+              <option value="ITE">ITE</option>
+              <option value="University">University</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+          <label>
+            School name <span class="optional-label">Optional</span>
+            <input type="text" name="school_name" autocomplete="organization">
+          </label>
+          <label>
+            Country <span class="optional-label">Optional</span>
+            <input type="text" name="country" autocomplete="country-name">
+          </label>
+          <label class="account-wide">
+            Bio <span class="optional-label">Optional</span>
+            <textarea name="bio" rows="4" placeholder="A short note about your goals, interests, or skills."></textarea>
+          </label>
+        </div>
+
+        <div class="settings-actions">
+          <button class="btn primary" type="submit">Save Profile</button>
+          <a class="btn secondary" href="settings.html">Back to Settings</a>
+        </div>
+      </form>
     </section>
   </main>
 
@@ -74,8 +108,8 @@
   </footer>
   <script src="../js/auth-guard.js"></script>
   <script src="../js/auth-nav.js"></script>
-
   <script src="../js/i18n.js"></script>
   <script src="../script.js"></script>
+  <script src="../js/account.js"></script>
 </body>
 </html>

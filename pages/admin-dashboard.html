@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeenLaunch | Admin Dashboard</title>
+  <script src="../js/theme-mode.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/settings.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/images/light_logo.png" alt="" aria-hidden="true"><span>TeenLaunch<small>Admin control centre</small></span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="opportunities.html">Opportunities</a>
+        <a href="resources.html">Resources</a>
+        <a href="debate.html">Soft Skills & Debate</a>
+        <a href="aiassistant.html">AI Chatbot</a>
+        <a class="admin-dashboard-link active" href="admin-dashboard.html">Admin Dashboard</a>
+        <a class="auth-link" href="auth.html">Login</a>
+        <a class="settings-button" href="settings.html" aria-label="Settings">
+          <img src="../assets/icons/settings.jpg" alt="" aria-hidden="true">
+        </a>
+        <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section settings-hero admin-dashboard">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Admin Dashboard</p>
+        <h1>TeenLaunch platform overview.</h1>
+      </div>
+
+      <p class="account-message" data-admin-message aria-live="polite">Checking admin access...</p>
+
+      <div class="admin-stats" data-admin-content hidden>
+        <article>
+          <span>Total users</span>
+          <strong data-stat="totalUsers">0</strong>
+        </article>
+        <article>
+          <span>Total opportunities</span>
+          <strong data-stat="totalOpportunities">0</strong>
+        </article>
+        <article>
+          <span>Total registrations</span>
+          <strong data-stat="totalRegistrations">0</strong>
+        </article>
+        <article>
+          <span>Career DNA submissions</span>
+          <strong data-stat="totalCareerDnaResults">0</strong>
+        </article>
+      </div>
+
+      <div class="admin-actions reveal" data-admin-content hidden>
+        <button class="btn primary" type="button" data-admin-refresh>Refresh Data</button>
+        <a class="btn secondary" href="opportunities.html">Manage Opportunities</a>
+        <a class="btn secondary" href="#registrations">Manage Registrations</a>
+        <a class="btn secondary" href="#career-dna">View Career DNA Results</a>
+      </div>
+
+      <section class="admin-panel admin-opportunity-panel reveal" data-admin-content hidden>
+        <div class="admin-panel-heading">
+          <h2>Add opportunity</h2>
+          <span>Create a published opportunity for users</span>
+        </div>
+        <form class="admin-opportunity-form" data-opportunity-form>
+          <label>
+            Category
+            <select name="category" required>
+              <option value="">Select category</option>
+              <option value="Youth Entrepreneurship">Youth Entrepreneurship</option>
+              <option value="Innovation Workshops">Innovation Workshops</option>
+              <option value="Internships">Internships</option>
+              <option value="Startup Programmes">Startup Programmes</option>
+              <option value="Leadership Camps">Leadership Camps</option>
+              <option value="Competitions">Competitions</option>
+            </select>
+          </label>
+          <label>
+            Title
+            <input type="text" name="title" placeholder="Startup Basics Cohort" required>
+          </label>
+          <label class="admin-wide">
+            Description
+            <textarea name="description" rows="4" placeholder="A guided online programme covering ideation, customer research, simple finance, and pitching." required></textarea>
+          </label>
+          <label>
+            Deadline
+            <input type="date" name="deadline">
+          </label>
+          <label>
+            Start date
+            <input type="date" name="start_date">
+          </label>
+          <label>
+            End date
+            <input type="date" name="end_date">
+          </label>
+          <label>
+            Mode
+            <select name="mode">
+              <option value="">Select mode</option>
+              <option value="Online">Online</option>
+              <option value="Physical">Physical</option>
+              <option value="Hybrid">Hybrid</option>
+            </select>
+          </label>
+          <label>
+            Minimum age
+            <input type="number" name="age_min" min="0" max="99" inputmode="numeric" placeholder="14">
+          </label>
+          <label>
+            Maximum age
+            <input type="number" name="age_max" min="0" max="99" inputmode="numeric" placeholder="19">
+          </label>
+          <label>
+            Level
+            <select name="level">
+              <option value="">Select level</option>
+              <option value="Beginner">Beginner</option>
+              <option value="Advanced">Advanced</option>
+              <option value="All levels">All levels</option>
+            </select>
+          </label>
+          <label>
+            Organizer
+            <input type="text" name="organizer" placeholder="TeenLaunch">
+          </label>
+          <label>
+            Location
+            <input type="text" name="location" placeholder="Singapore or Online">
+          </label>
+          <label class="admin-wide">
+            Application URL
+            <input type="url" name="application_url" placeholder="https://example.com/apply">
+          </label>
+          <label class="admin-check">
+            <input type="checkbox" name="is_published" checked>
+            Publish immediately
+          </label>
+          <div class="settings-actions admin-wide">
+            <button class="btn primary" type="submit">Add Opportunity</button>
+            <button class="btn secondary" type="reset">Clear</button>
+          </div>
+        </form>
+      </section>
+
+      <div class="admin-grid" data-admin-content hidden>
+        <section class="admin-panel" id="registrations">
+          <div class="admin-panel-heading">
+            <h2>Recent registrations</h2>
+            <span data-count="registrations">0</span>
+          </div>
+          <div class="admin-list" data-admin-registrations></div>
+        </section>
+
+        <section class="admin-panel">
+          <div class="admin-panel-heading">
+            <h2>User list</h2>
+            <span data-count="users">0</span>
+          </div>
+          <div class="admin-list" data-admin-users></div>
+        </section>
+
+        <section class="admin-panel admin-wide" id="career-dna">
+          <div class="admin-panel-heading">
+            <h2>Career DNA results</h2>
+            <span data-count="careerDna">0</span>
+          </div>
+          <div class="admin-list" data-admin-career-dna></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 TeenLaunch</p>
+    <a href="../index.html">Home</a>
+    <a href="settings.html">Settings</a>
+  </footer>
+  <script src="../js/auth-nav.js"></script>
+  <script src="../script.js"></script>
+  <script src="../js/admin-dashboard.js"></script>
+</body>
+</html>

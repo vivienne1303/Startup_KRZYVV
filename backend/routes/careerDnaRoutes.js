@@ -8,5 +8,7 @@ router.use(authMiddleware);
 
 router.get("/", careerDnaController.list);
 router.post("/", careerDnaController.create);
+router.get("/:id", careerDnaController.getById);
+router.put("/:id", careerDnaController.update);
 
 module.exports = router;

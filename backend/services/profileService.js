@@ -1,7 +1,7 @@
 const { supabaseAdmin } = require("../config/supabase");
 
 const profileColumns =
-  "id, full_name, role, avatar_url, bio, school_name, age, country, created_at, updated_at";
+  "id, full_name, role, avatar_url, bio, school_name, age, education_level, country, created_at, updated_at";
 
 const getProfileById = async (client, userId) => {
   const { data, error } = await client
@@ -9,6 +9,15 @@ const getProfileById = async (client, userId) => {
     .select(profileColumns)
     .eq("id", userId)
     .single();
+
+  return { data, error };
+};
+
+const listProfiles = async (client) => {
+  const { data, error } = await client
+    .from("user_profiles")
+    .select(profileColumns)
+    .order("created_at", { ascending: false });
 
   return { data, error };
 };
@@ -22,6 +31,7 @@ const createProfileForUser = async ({ userId, fullName, profile }) => {
     bio: profile?.bio || null,
     school_name: profile?.school_name || null,
     age: profile?.age || null,
+    education_level: profile?.education_level || null,
     country: profile?.country || null,
   };
 
@@ -34,8 +44,9 @@ const createProfileForUser = async ({ userId, fullName, profile }) => {
   return { data, error };
 };
 
-const updateOwnProfile = async (client, userId, updates) => {
-  const allowedFields = ["full_name", "avatar_url", "bio", "school_name", "age", "country"];
+const updateProfileById = async (client, userId, updates, options = {}) => {
+  const baseFields = ["full_name", "avatar_url", "bio", "school_name", "age", "education_level", "country"];
+  const allowedFields = options.allowRole ? [...baseFields, "role"] : baseFields;
   const payload = {};
 
   allowedFields.forEach((field) => {
@@ -54,9 +65,15 @@ const updateOwnProfile = async (client, userId, updates) => {
   return { data, error };
 };
 
+const updateOwnProfile = async (client, userId, updates) => {
+  return updateProfileById(client, userId, updates);
+};
+
 module.exports = {
   createProfileForUser,
   getProfileById,
+  listProfiles,
+  updateProfileById,
   updateOwnProfile,
   profileColumns,
 };

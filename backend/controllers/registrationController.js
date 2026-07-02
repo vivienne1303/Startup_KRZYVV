@@ -1,6 +1,7 @@
 const asyncHandler = require("../utils/asyncHandler");
 const HttpError = require("../utils/httpError");
 const {
+  cancelOwnRegistration,
   createRegistration,
   deleteRegistration,
   getRegistrationById,
@@ -37,7 +38,18 @@ const create = asyncHandler(async (req, res) => {
 });
 
 const update = asyncHandler(async (req, res) => {
-  const { data, error } = await updateRegistration(req.supabase, req.params.id, req.body);
+  const isAdmin = req.profile?.role === "admin";
+  const requestedStatus = req.body?.status;
+
+  if (!isAdmin && requestedStatus && !["cancelled", "canceled"].includes(requestedStatus)) {
+    throw new HttpError(403, "Users can only cancel their own registrations");
+  }
+
+  const result = isAdmin
+    ? await updateRegistration(req.supabase, req.params.id, req.body)
+    : await cancelOwnRegistration(req.supabase, req.params.id);
+
+  const { data, error } = result;
 
   if (error) throw new HttpError(403, error.message, error.details);
 
@@ -45,6 +57,10 @@ const update = asyncHandler(async (req, res) => {
 });
 
 const remove = asyncHandler(async (req, res) => {
+  if (req.profile?.role !== "admin") {
+    throw new HttpError(403, "Admin access required");
+  }
+
   const { error } = await deleteRegistration(req.supabase, req.params.id);
 
   if (error) throw new HttpError(403, error.message, error.details);
