@@ -170,6 +170,11 @@ html[data-theme="dark"] .auth-form select {
   .auth-panel {
     grid-template-columns: 1fr;
     gap: 22px;
+    align-items: stretch;
+  }
+
+  .auth-copy {
+    width: 100%;
   }
 
   .auth-copy h1 {
@@ -177,7 +182,9 @@ html[data-theme="dark"] .auth-form select {
   }
 
   .auth-card {
-    padding: 18px;
+    width: 100%;
+    min-width: 0;
+    padding: 18px 16px;
     border-radius: 20px;
   }
 }

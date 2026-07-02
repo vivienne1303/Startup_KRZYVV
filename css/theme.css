@@ -725,7 +725,7 @@ body {
 
   #home.hero h1,
   .hero h1 {
-    font-size: clamp(3rem, 12.2vw, 3.35rem);
+    font-size: clamp(3.5rem, 12.5vw, 4.2rem);
   }
 
   .hero-actions {
