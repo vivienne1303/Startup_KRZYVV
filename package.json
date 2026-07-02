@@ -1,0 +1,31 @@
+{
+  "name": "startup-krzyvv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "backend/server.js",
+  "scripts": {
+    "dev": "nodemon backend/server.js",
+    "start": "node backend/server.js",
+    "test": "node --check backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivienne1303/Startup_KRZYVV.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vivienne1303/Startup_KRZYVV/issues"
+  },
+  "homepage": "https://github.com/vivienne1303/Startup_KRZYVV#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.110.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

@@ -13,7 +13,7 @@
     document.querySelectorAll(".brand-logo").forEach((logo) => {
       const isNestedPage = logo.getAttribute("src")?.startsWith("../");
       const prefix = isNestedPage ? "../" : "";
-      logo.src = `${prefix}images/${nextTheme === "dark" ? "dark_logo.png" : "light_logo.png"}`;
+      logo.src = `${prefix}assets/images/${nextTheme === "dark" ? "dark_logo.png" : "light_logo.png"}`;
     });
 
     document.querySelectorAll("[data-theme-choice]").forEach((button) => {
