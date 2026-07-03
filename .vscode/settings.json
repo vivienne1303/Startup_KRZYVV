@@ -1,0 +1,8 @@
+{
+  "mobile-preview.url": "http://localhost:3000/index.html",
+  "mobile-preview.device": "iPhone 13 Pro",
+  "liveServer.settings.host": "127.0.0.1",
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.root": "/",
+  "liveServer.settings.NoBrowser": true
+}
