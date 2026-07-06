@@ -1,5 +1,10 @@
 (function () {
-  const API_BASE = window.TEENLAUNCH_API_BASE || localStorage.getItem("teenlaunch_api_base") || "http://localhost:3000/api";
+  const resolveApiBase = () => {
+    const base = window.TEENLAUNCH_API_BASE || localStorage.getItem("teenlaunch_api_base") || "http://localhost:3000/api";
+    return String(base).replace(/^http:\/\/teenlaunch\.app\b/i, "https://teenlaunch.app");
+  };
+
+  const API_BASE = resolveApiBase();
   const authLink = document.querySelector(".auth-link");
   if (!authLink) return;
   const inPagesFolder = window.location.pathname.replace(/\\/g, "/").includes("/pages/");
