@@ -4,7 +4,7 @@ Design direction: Design 13, clean blue theme, modern gradients, concise copy, y
 
 ## Slide 11 - Landing Page
 
-TeenLaunch helps students aged 10-19 discover opportunities, build entrepreneurial confidence, and grow through innovation, competitions, and personal development.
+TeenLaunch helps students aged 10-24 discover opportunities, build entrepreneurial confidence, and grow through innovation, competitions, and personal development.
 
 Key message:
 - One platform for opportunities, competitions, resources, debate practice, and AI-guided support.
