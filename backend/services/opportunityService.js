@@ -5,6 +5,7 @@ const listOpportunities = async (client, filters = {}) => {
   let query = client
     .from("opportunities")
     .select(opportunityColumns)
+    .eq("is_published", true)
     .order("deadline", { ascending: true, nullsFirst: false });
 
   if (filters.category) query = query.eq("category", filters.category);
@@ -20,6 +21,7 @@ const getOpportunityById = async (client, id) => {
     .from("opportunities")
     .select(opportunityColumns)
     .eq("id", id)
+    .eq("is_published", true)
     .single();
 
   return { data, error };
