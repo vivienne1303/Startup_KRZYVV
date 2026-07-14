@@ -437,3 +437,149 @@ html[data-theme="dark"] .auth-link {
     min-height: 44px;
   }
 }
+
+/* Real-device mobile safeguards shared by every page. */
+html {
+  max-width: 100%;
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+@media (max-width: 760px) {
+  body {
+    min-width: 0;
+    font-size: 16px;
+  }
+
+  main,
+  section,
+  article,
+  aside,
+  header,
+  footer,
+  form,
+  main > *,
+  section > *,
+  [class*="grid"] > *,
+  [class*="panel"] > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  h1,
+  #home.hero h1,
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(2.6rem, 12vw, 3.6rem);
+    overflow-wrap: anywhere;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 8vw, 2.4rem);
+    overflow-wrap: anywhere;
+  }
+
+  h3,
+  h4,
+  p,
+  li,
+  label,
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    overflow-wrap: anywhere;
+  }
+
+  p,
+  li,
+  label,
+  .message,
+  .chat-input {
+    font-size: max(1rem, 16px);
+    line-height: 1.6;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  button,
+  .btn,
+  .nav-links a,
+  .auth-link,
+  .settings-button,
+  .language-toggle {
+    min-height: 48px;
+    font-size: 1rem;
+  }
+
+  .eyebrow,
+  .tag,
+  .brand small,
+  small {
+    font-size: max(0.875rem, 14px);
+    line-height: 1.35;
+  }
+
+  .nav-toggle {
+    flex: 0 0 64px;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+  }
+
+  .nav-toggle span {
+    width: 32px;
+    height: 4px;
+    margin: 6px auto;
+  }
+
+  .nav-links {
+    right: 12px;
+    left: 12px;
+    width: auto;
+    max-width: calc(100% - 24px);
+  }
+
+  .card,
+  [class$="-card"],
+  [class$="-panel"] {
+    max-width: 100%;
+  }
+
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  pre,
+  code,
+  .url,
+  [data-url] {
+    max-width: 100%;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
