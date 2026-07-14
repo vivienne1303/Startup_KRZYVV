@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeenLaunch | Career DNA Result</title>
+  <script src="../js/theme-mode.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/settings.css">
+  <link rel="stylesheet" href="../css/career-dna.css">
+</head>
+<body>
+  <header class="site-header"><nav class="navbar" aria-label="Main navigation"><a class="brand" href="../index.html"><img class="brand-logo" src="../assets/images/light_logo.png" alt="" aria-hidden="true"><span>TeenLaunch<small>Future founders start here</small></span></a><a class="dna-header-link" href="account.html">My account</a></nav></header>
+  <main class="dna-main">
+    <section class="dna-shell dna-result-shell" aria-labelledby="resultTitle">
+      <p class="dna-loading" data-result-loading role="status">Loading your Career DNA...</p>
+      <div data-result-content hidden>
+        <div class="dna-heading"><p class="eyebrow">Your Career DNA</p><h1 id="resultTitle" data-profile-name></h1><p data-profile-summary></p></div>
+        <div class="dna-result-card">
+          <div class="dna-top-types"><div><span>Top strength</span><strong data-top-type></strong></div><div><span>Second strength</span><strong data-secondary-type></strong></div></div>
+          <div class="dna-score-list" data-score-list></div>
+        </div>
+        <div class="dna-result-grid"><article><h2>Recommended job families</h2><ul data-job-families></ul></article><article><h2>Opportunity types</h2><ul data-opportunity-types></ul></article></div>
+        <div class="dna-result-actions"><a class="btn primary" href="opportunities.html">Explore opportunities</a><a class="btn secondary" href="career_dna_test.html?retake=true">Retake Career DNA Test</a></div>
+      </div>
+      <div class="dna-error" data-result-error hidden><h2>We could not load your result.</h2><p data-result-error-message></p><button class="btn primary" type="button" data-result-retry>Try again</button></div>
+    </section>
+  </main>
+  <script src="../js/career-dna-result.js"></script>
+</body>
+</html>

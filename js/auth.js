@@ -87,6 +87,28 @@
     return response.json();
   };
 
+  const getLatestCareerDnaResult = async () => {
+    const token = localStorage.getItem(tokenKey);
+    const response = await fetch(`${API_BASE}/career-dna/latest`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+
+    if (!response.ok) {
+      throw new Error(await parseError(response));
+    }
+
+    return response.json();
+  };
+
+  const safeReturnTo = () => {
+    const isCareerTest = /career_dna_test\.html/i.test(returnTo);
+    const isExplicitRetake = /career_dna_test\.html\?[^#]*\bretake=true\b/i.test(returnTo);
+    if (!returnTo || /(?:^|\/)auth\.html(?:[?#]|$)/i.test(returnTo) || (isCareerTest && !isExplicitRetake)) {
+      return "../index.html";
+    }
+    return returnTo;
+  };
+
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => showMode(tab.dataset.authTab));
   });
@@ -111,7 +133,14 @@
       localStorage.setItem(userKey, JSON.stringify(verified.user || data.user || {}));
       localStorage.setItem(profileKey, JSON.stringify(verified.profile || data.profile || {}));
 
-      window.location.href = verified.role === "admin" ? "admin-dashboard.html" : returnTo;
+      if (verified.role === "admin") {
+        window.location.href = "admin-dashboard.html";
+        return;
+      }
+
+      setMessage("Checking your Career DNA profile...", "");
+      const { result } = await getLatestCareerDnaResult();
+      window.location.href = result ? safeReturnTo() : "career_dna_test.html";
     } catch (error) {
       setMessage(error.message, "error");
       button.disabled = false;

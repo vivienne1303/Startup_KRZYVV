@@ -20,6 +20,17 @@ const getCareerDnaResultById = async (client, id) => {
   return { data, error };
 };
 
+const getLatestCareerDnaResult = async (client) => {
+  const { data, error } = await client
+    .from("career_dna_results")
+    .select(careerDnaColumns)
+    .order("created_at", { ascending: false })
+    .limit(1)
+    .maybeSingle();
+
+  return { data, error };
+};
+
 const createCareerDnaResult = async (client, payload, userId) => {
   const { data, error } = await client
     .from("career_dna_results")
@@ -76,6 +87,7 @@ module.exports = {
   createCareerDnaResult,
   deleteCareerDnaResult,
   getCareerDnaResultById,
+  getLatestCareerDnaResult,
   listCareerDnaResults,
   updateCareerDnaResult,
 };

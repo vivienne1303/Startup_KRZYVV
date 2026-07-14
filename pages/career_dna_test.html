@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeenLaunch | Career DNA Test</title>
+  <script src="../js/theme-mode.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/settings.css">
+  <link rel="stylesheet" href="../css/career-dna.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="../index.html" aria-label="TeenLaunch home"><img class="brand-logo" src="../assets/images/light_logo.png" alt="" aria-hidden="true"><span>TeenLaunch<small>Future founders start here</small></span></a>
+      <a class="dna-header-link" href="account.html">My account</a>
+    </nav>
+  </header>
+
+  <main class="dna-main">
+    <section class="dna-shell" aria-labelledby="dnaTitle">
+      <div class="dna-heading">
+        <p class="eyebrow">Discover your strengths</p>
+        <h1 id="dnaTitle">Career DNA Test</h1>
+        <p>Choose the answer that feels most like you. There are no wrong answers.</p>
+      </div>
+
+      <div class="dna-card" data-test-card hidden>
+        <div class="dna-progress-row">
+          <strong data-question-count>Question 1 of 10</strong>
+          <span data-progress-percent>10%</span>
+        </div>
+        <div class="dna-progress" role="progressbar" aria-label="Test progress" aria-valuemin="0" aria-valuemax="10" aria-valuenow="1"><span data-progress-bar></span></div>
+        <p class="dna-type" data-question-type></p>
+        <h2 class="dna-question" data-question-text tabindex="-1"></h2>
+        <fieldset class="dna-options" data-options>
+          <legend class="sr-only">Select one answer</legend>
+        </fieldset>
+        <p class="dna-message" data-dna-message aria-live="polite"></p>
+        <div class="dna-actions">
+          <button class="btn secondary" type="button" data-previous>Previous</button>
+          <button class="dna-restart" type="button" data-restart>Restart Test</button>
+          <button class="btn primary" type="button" data-next>Next</button>
+        </div>
+      </div>
+      <p class="dna-loading" data-dna-loading role="status">Confirming your session...</p>
+    </section>
+  </main>
+  <script src="../js/career-dna-test.js"></script>
+</body>
+</html>

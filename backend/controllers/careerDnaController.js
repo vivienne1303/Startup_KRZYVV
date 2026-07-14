@@ -4,6 +4,7 @@ const {
   createCareerDnaResult,
   deleteCareerDnaResult,
   getCareerDnaResultById,
+  getLatestCareerDnaResult,
   listCareerDnaResults,
   updateCareerDnaResult,
 } = require("../services/careerDnaService");
@@ -22,6 +23,14 @@ const getById = asyncHandler(async (req, res) => {
   if (error) throw new HttpError(404, "Career DNA result not found", error.message);
 
   res.json({ result: data });
+});
+
+const getLatest = asyncHandler(async (req, res) => {
+  const { data, error } = await getLatestCareerDnaResult(req.supabase);
+
+  if (error) throw new HttpError(400, error.message, error.details);
+
+  res.json({ result: data || null });
 });
 
 const create = asyncHandler(async (req, res) => {
@@ -55,6 +64,7 @@ const remove = asyncHandler(async (req, res) => {
 module.exports = {
   create,
   getById,
+  getLatest,
   list,
   remove,
   update,
