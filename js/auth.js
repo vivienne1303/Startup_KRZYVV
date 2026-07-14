@@ -1,6 +1,7 @@
 (function () {
   const resolveApiBase = () => {
-    const base = window.TEENLAUNCH_API_BASE || localStorage.getItem("teenlaunch_api_base") || "http://localhost:3000/api";
+    const localApiBase = window.location.port === "3000" ? `${window.location.origin}/api` : "http://localhost:3000/api";
+    const base = window.TEENLAUNCH_API_BASE || localStorage.getItem("teenlaunch_api_base") || localApiBase;
     return String(base).replace(/^http:\/\/teenlaunch\.app\b/i, "https://teenlaunch.app");
   };
 

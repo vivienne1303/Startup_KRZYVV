@@ -583,3 +583,106 @@ canvas {
     word-break: break-word;
   }
 }
+
+/* Comfortable phone scale: compact without triggering iOS form zoom. */
+@media (max-width: 760px) {
+  .navbar {
+    min-height: 72px;
+    height: 72px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-logo {
+    width: 42px;
+    height: 42px;
+  }
+
+  .brand span {
+    font-size: 1.15rem;
+  }
+
+  .brand small {
+    max-width: none;
+    margin-top: 2px;
+    font-size: 0.78rem;
+    line-height: 1.2;
+  }
+
+  .nav-toggle {
+    flex-basis: 52px;
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+  }
+
+  .nav-toggle span {
+    width: 26px;
+    height: 3px;
+    margin: 5px auto;
+  }
+
+  .nav-links {
+    inset: 72px 12px auto;
+  }
+
+  .settings-hero {
+    padding-top: 104px;
+  }
+
+  .settings-hero h1 {
+    font-size: clamp(2.25rem, 10vw, 2.75rem);
+    line-height: 1.08;
+  }
+
+  .account-panel {
+    gap: 16px;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .account-summary {
+    align-items: center;
+    gap: 12px;
+  }
+
+  .account-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    font-size: 1.15rem;
+  }
+
+  .account-summary h2 {
+    font-size: 1.35rem;
+  }
+
+  .account-summary p,
+  .account-role {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .account-role {
+    margin-top: 4px;
+  }
+
+  .account-grid {
+    gap: 14px;
+  }
+
+  .account-grid label {
+    gap: 6px;
+    font-size: 1rem;
+  }
+
+  .account-grid input,
+  .account-grid select {
+    min-height: 48px;
+    padding: 0 14px;
+    border-radius: 12px;
+    font-size: 16px;
+  }
+}
