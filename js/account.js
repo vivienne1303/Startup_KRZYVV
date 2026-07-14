@@ -1,11 +1,5 @@
 (function () {
-  const resolveApiBase = () => {
-    const localApiBase = window.location.port === "3000" ? `${window.location.origin}/api` : "http://localhost:3000/api";
-    const base = window.TEENLAUNCH_API_BASE || localStorage.getItem("teenlaunch_api_base") || localApiBase;
-    return String(base).replace(/^http:\/\/teenlaunch\.app\b/i, "https://teenlaunch.app");
-  };
-
-  const API_BASE = resolveApiBase();
+  const API_BASE = window.TEENLAUNCH_API_BASE;
   const token = localStorage.getItem("teenlaunch_token");
   const form = document.querySelector("[data-account-form]");
   const message = document.querySelector("[data-account-message]");
@@ -13,6 +7,9 @@
   const emailTarget = document.querySelector("[data-account-email]");
   const roleTarget = document.querySelector("[data-account-role]");
   const initialsTarget = document.querySelector("[data-account-initials]");
+  const previewTarget = document.querySelector("[data-profile-preview]");
+  const pictureInput = form.elements.profile_picture;
+  let selectedPicture = null;
 
   const setMessage = (text, type) => {
     message.textContent = text || "";
@@ -62,11 +59,17 @@
     initialsTarget.textContent = getInitials(profile?.full_name, user?.email);
 
     form.elements.full_name.value = profile?.full_name || "";
+    form.elements.username.value = profile?.username || "";
     form.elements.age.value = profile?.age || "";
     form.elements.education_level.value = profile?.education_level || "";
     form.elements.school_name.value = profile?.school_name || "";
     form.elements.country.value = profile?.country || "";
     form.elements.bio.value = profile?.bio || "";
+    form.elements.phone_number.value = profile?.phone_number || "";
+    const picture = profile?.profile_picture_url || profile?.avatar_url;
+    selectedPicture = picture || null;
+    previewTarget.hidden = !picture;
+    if (picture) previewTarget.src = picture;
 
     localStorage.setItem("teenlaunch_user", JSON.stringify(user || {}));
     localStorage.setItem("teenlaunch_profile", JSON.stringify(profile || {}));
@@ -104,11 +107,14 @@
         method: "PUT",
         body: JSON.stringify({
           full_name: String(formData.get("full_name") || "").trim(),
+          username: String(formData.get("username") || "").trim(),
           age,
           education_level: formData.get("education_level"),
           school_name: String(formData.get("school_name") || "").trim() || null,
           country: String(formData.get("country") || "").trim() || null,
           bio: String(formData.get("bio") || "").trim() || null,
+          phone_number: String(formData.get("phone_number") || "").trim() || null,
+          profile_picture_url: selectedPicture,
         }),
       });
 
@@ -120,6 +126,24 @@
     } finally {
       button.disabled = false;
     }
+  });
+
+  pictureInput.addEventListener("change", () => {
+    const file = pictureInput.files?.[0];
+    if (!file) return;
+    if (!file.type.match(/^image\/(jpeg|png|webp)$/) || file.size > 1024 * 1024) {
+      pictureInput.value = "";
+      setMessage("Choose a JPG, PNG or WebP image no larger than 1 MB.", "error");
+      return;
+    }
+    const reader = new FileReader();
+    reader.addEventListener("load", () => {
+      selectedPicture = String(reader.result || "");
+      previewTarget.src = selectedPicture;
+      previewTarget.hidden = false;
+      setMessage("Picture ready. Save changes to update your profile.", "success");
+    });
+    reader.readAsDataURL(file);
   });
 
   loadProfile();

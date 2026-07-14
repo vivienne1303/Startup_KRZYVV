@@ -1,115 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="TeenLaunch | Account">TeenLaunch | Account</title>
-  <script src="../js/theme-mode.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>TeenLaunch | Edit Profile</title><script src="../js/theme-mode.js"></script><script src="../js/api-config.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../css/theme.css">
-  <link rel="stylesheet" href="../css/settings.css">
+  <link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../css/theme.css"><link rel="stylesheet" href="../css/settings.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar" aria-label="Main navigation">
-      <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/images/light_logo.png" alt="" aria-hidden="true"><span>TeenLaunch<small data-i18n="Future founders start here">Future founders start here</small></span></a>
-      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
-      <div class="nav-links">
-        <a href="../index.html" data-i18n="Home">Home</a>
-        <a href="opportunities.html" data-i18n="Opportunities">Opportunities</a>
-        <div class="nav-dropdown">
-          <a class="nav-trigger" href="competitions.html" data-i18n="Competitions">Competitions</a>
-          <div class="dropdown-menu" aria-label="Competition categories">
-            <a href="competition_academic.html" data-i18n="Academic">Academic</a>
-            <a href="competition_non-academic.html" data-i18n="Non-Academic">Non-Academic</a>
-          </div>
-        </div>
-        <a href="resources.html" data-i18n="Resources">Resources</a>
-        <a href="debate.html" data-i18n="Soft Skills & Debate">Soft Skills & Debate</a>
-        <a href="aiassistant.html" data-i18n="AI Chatbot">AI Chatbot</a>
-        <a class="auth-link" href="auth.html">Login</a>
-        <a class="settings-button active" href="settings.html" aria-label="Settings">
-          <img src="../assets/icons/settings.jpg" alt="" aria-hidden="true">
-        </a>
-        <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>
+  <header class="site-header"><nav class="navbar" aria-label="Main navigation"><a class="brand" href="../index.html"><img class="brand-logo" src="../assets/images/light_logo.png" alt=""><span>TeenLaunch<small>Future founders start here</small></span></a><a class="dna-header-link" href="profile.html">Back to Profile</a></nav></header>
+  <main><section class="section settings-hero edit-profile-page">
+    <div class="edit-profile-title"><h1>Edit Profile</h1></div>
+    <form class="account-panel edit-profile-form" data-account-form>
+      <div class="edit-picture-section">
+        <div class="account-avatar edit-avatar"><img data-profile-preview alt="Profile picture preview" hidden><span data-account-initials>TL</span></div>
+        <label class="edit-picture-button">Edit picture<input class="sr-only" type="file" name="profile_picture" accept="image/png,image/jpeg,image/webp"></label>
+        <p class="picture-help">JPG, PNG or WebP, up to 1 MB.</p>
       </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="section settings-hero">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Account</p>
-        <h1>Your TeenLaunch profile.</h1>
+      <div class="edit-profile-identity"><h2 data-account-name>Loading profile...</h2><p data-account-email></p><span class="account-role" data-account-role></span></div>
+      <p class="account-message" data-account-message aria-live="polite"></p>
+      <div class="account-grid edit-profile-grid">
+        <label><span class="field-title">Full name</span><input type="text" name="full_name" autocomplete="name" required></label>
+        <label><span class="field-title">Username</span><input type="text" name="username" pattern="[A-Za-z0-9_.]{3,30}" placeholder="your.username" required></label>
+        <label><span class="field-title">Bio <small>(optional)</small></span><textarea name="bio" rows="4" placeholder="Tell people about yourself"></textarea></label>
+        <label><span class="field-title">School name <small>(optional)</small></span><input type="text" name="school_name" autocomplete="organization"></label>
+        <label><span class="field-title">Phone number <small>(optional)</small></span><input type="tel" name="phone_number" autocomplete="tel"></label>
+        <label><span class="field-title">Age</span><input type="number" name="age" min="10" max="19" inputmode="numeric" required></label>
+        <label><span class="field-title">Education level</span><select name="education_level" required><option value="">Select education level</option><option>Secondary School</option><option>Junior College</option><option>Polytechnic</option><option>ITE</option><option>University</option><option>Other</option></select></label>
+        <label><span class="field-title">Country <small>(optional)</small></span><input type="text" name="country" autocomplete="country-name"></label>
       </div>
-
-      <form class="account-panel reveal" data-account-form>
-        <div class="account-summary">
-          <div class="account-avatar" data-account-initials>TL</div>
-          <div>
-            <h2 data-account-name>Loading profile...</h2>
-            <p data-account-email></p>
-            <span class="account-role" data-account-role></span>
-          </div>
-        </div>
-
-        <p class="account-message" data-account-message aria-live="polite"></p>
-
-        <div class="account-grid">
-          <label>
-            Full name
-            <input type="text" name="full_name" autocomplete="name" required>
-          </label>
-          <label>
-            Age
-            <input type="number" name="age" min="10" max="19" inputmode="numeric" required>
-          </label>
-          <label>
-            Education level
-            <select name="education_level" required>
-              <option value="">Select education level</option>
-              <option value="Secondary School">Secondary School</option>
-              <option value="Junior College">Junior College</option>
-              <option value="Polytechnic">Polytechnic</option>
-              <option value="ITE">ITE</option>
-              <option value="University">University</option>
-              <option value="Other">Other</option>
-            </select>
-          </label>
-          <label>
-            School name <span class="optional-label">Optional</span>
-            <input type="text" name="school_name" autocomplete="organization">
-          </label>
-          <label>
-            Country <span class="optional-label">Optional</span>
-            <input type="text" name="country" autocomplete="country-name">
-          </label>
-          <label class="account-wide">
-            Bio <span class="optional-label">Optional</span>
-            <textarea name="bio" rows="4" placeholder="A short note about your goals, interests, or skills."></textarea>
-          </label>
-        </div>
-
-        <div class="settings-actions">
-          <button class="btn primary" type="submit">Save Profile</button>
-          <a class="btn secondary" href="settings.html">Back to Settings</a>
-        </div>
-      </form>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>&copy; 2026 TeenLaunch</p>
-    <a href="settings.html" data-i18n="Settings">Settings</a>
-    <a href="../index.html" data-i18n="Home">Home</a>
-  </footer>
-  <script src="../js/auth-guard.js"></script>
-  <script src="../js/auth-nav.js"></script>
-  <script src="../js/i18n.js"></script>
-  <script src="../script.js"></script>
-  <script src="../js/account.js"></script>
-</body>
-</html>
+      <div class="settings-actions edit-profile-actions"><button class="btn primary" type="submit">Save changes</button><a class="btn secondary" href="profile.html">Cancel</a></div>
+    </form>
+  </section></main>
+  <script src="../js/auth-guard.js"></script><script src="../js/account.js"></script>
+</body></html>

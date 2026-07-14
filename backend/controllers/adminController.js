@@ -15,10 +15,9 @@ const validateRole = (role) => {
 const normalizeRegistrationPayload = (payload) => {
   const nextPayload = { ...(payload || {}) };
   const statusMap = {
-    approved: "registered",
-    approve: "registered",
-    rejected: "cancelled",
-    reject: "cancelled",
+    approved: "accepted",
+    approve: "accepted",
+    reject: "rejected",
     canceled: "cancelled",
     verified: "completed",
     attended: "completed",

@@ -1,6 +1,5 @@
 (function () {
-  const localApiBase = window.location.port === "3000" ? `${window.location.origin}/api` : "http://localhost:3000/api";
-  const API_BASE = String(window.TEENLAUNCH_API_BASE || localStorage.getItem("teenlaunch_api_base") || localApiBase).replace(/^http:\/\/teenlaunch\.app\b/i, "https://teenlaunch.app");
+  const API_BASE = window.TEENLAUNCH_API_BASE;
   const tokenKey = "teenlaunch_token";
   const questions = [
     { type: "Creator", text: "I enjoy turning my ideas into videos, designs, stories or presentations." },

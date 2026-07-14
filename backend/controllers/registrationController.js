@@ -2,6 +2,7 @@ const asyncHandler = require("../utils/asyncHandler");
 const HttpError = require("../utils/httpError");
 const {
   cancelOwnRegistration,
+  checkRegistration,
   createRegistration,
   deleteRegistration,
   getRegistrationById,
@@ -30,11 +31,27 @@ const create = asyncHandler(async (req, res) => {
     throw new HttpError(400, "opportunity_id is required");
   }
 
+  const required = ["full_name","email","phone_number","date_of_birth","school_name","education_level","motivation","relevant_experience"];
+  const missing = required.filter((field) => !String(req.body[field] || "").trim());
+  if (missing.length) throw new HttpError(400, `Missing required fields: ${missing.join(", ")}`);
+
+  const { data: opportunity, error: opportunityError } = await req.supabase.from("opportunities").select("id,title,deadline").eq("id", req.body.opportunity_id).single();
+  if (opportunityError || !opportunity) throw new HttpError(404, "Opportunity not found");
+  if (opportunity.deadline && new Date(`${opportunity.deadline}T23:59:59`).getTime() < Date.now()) throw new HttpError(400, "This opportunity's deadline has passed");
+  const existing = await checkRegistration(req.supabase, req.body.opportunity_id);
+  if (existing.data) throw new HttpError(409, "You have already applied for this opportunity");
+
   const { data, error } = await createRegistration(req.supabase, req.body, req.user.id);
 
   if (error) throw new HttpError(403, error.message, error.details);
 
   res.status(201).json({ registration: data });
+});
+
+const check = asyncHandler(async (req, res) => {
+  const { data, error } = await checkRegistration(req.supabase, req.params.opportunityId);
+  if (error) throw new HttpError(400, error.message, error.details);
+  res.json({ applied: Boolean(data), registration: data || null });
 });
 
 const update = asyncHandler(async (req, res) => {
@@ -69,6 +86,7 @@ const remove = asyncHandler(async (req, res) => {
 });
 
 module.exports = {
+  check,
   create,
   getById,
   list,

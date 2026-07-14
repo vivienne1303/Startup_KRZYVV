@@ -1,7 +1,7 @@
 const { supabaseAdmin } = require("../config/supabase");
 
 const profileColumns =
-  "id, full_name, role, avatar_url, bio, school_name, age, education_level, country, created_at, updated_at";
+  "id, username, full_name, role, avatar_url, profile_picture_url, bio, school_name, phone_number, portfolio_url, age, education_level, country, created_at, updated_at";
 
 const getProfileById = async (client, userId) => {
   const { data, error } = await client
@@ -45,7 +45,7 @@ const createProfileForUser = async ({ userId, fullName, profile }) => {
 };
 
 const updateProfileById = async (client, userId, updates, options = {}) => {
-  const baseFields = ["full_name", "avatar_url", "bio", "school_name", "age", "education_level", "country"];
+  const baseFields = ["username", "full_name", "avatar_url", "profile_picture_url", "bio", "school_name", "phone_number", "portfolio_url", "age", "education_level", "country"];
   const allowedFields = options.allowRole ? [...baseFields, "role"] : baseFields;
   const payload = {};
 

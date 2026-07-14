@@ -1,11 +1,5 @@
 (function () {
-  const resolveApiBase = () => {
-    const localApiBase = window.location.port === "3000" ? `${window.location.origin}/api` : "http://localhost:3000/api";
-    const base = window.TEENLAUNCH_API_BASE || localStorage.getItem("teenlaunch_api_base") || localApiBase;
-    return String(base).replace(/^http:\/\/teenlaunch\.app\b/i, "https://teenlaunch.app");
-  };
-
-  const API_BASE = resolveApiBase();
+  const API_BASE = window.TEENLAUNCH_API_BASE;
   const authLink = document.querySelector(".auth-link");
   if (!authLink) return;
   const inPagesFolder = window.location.pathname.replace(/\\/g, "/").includes("/pages/");
@@ -33,6 +27,15 @@
     navLinks.insertBefore(link, authLink);
   };
 
+  const addProfileLink = () => {
+    if (!navLinks || navLinks.querySelector(".profile-nav-link")) return;
+    const link = document.createElement("a");
+    link.className = "profile-nav-link";
+    link.href = inPagesFolder ? "profile.html" : "pages/profile.html";
+    link.textContent = "My Profile";
+    navLinks.insertBefore(link, authLink);
+  };
+
   const verifyRole = async () => {
     try {
       const response = await fetch(`${API_BASE}/auth/me`, {
@@ -44,6 +47,7 @@
       const data = await response.json();
       localStorage.setItem("teenlaunch_user", JSON.stringify(data.user || {}));
       localStorage.setItem("teenlaunch_profile", JSON.stringify(data.profile || {}));
+      addProfileLink();
 
       if (data.role === "admin") addAdminLink();
     } catch (error) {

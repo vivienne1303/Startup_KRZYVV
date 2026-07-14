@@ -1,11 +1,5 @@
 (function () {
-  const resolveApiBase = () => {
-    const localApiBase = window.location.port === "3000" ? `${window.location.origin}/api` : "http://localhost:3000/api";
-    const base = window.TEENLAUNCH_API_BASE || localStorage.getItem("teenlaunch_api_base") || localApiBase;
-    return String(base).replace(/^http:\/\/teenlaunch\.app\b/i, "https://teenlaunch.app");
-  };
-
-  const API_BASE = resolveApiBase();
+  const API_BASE = window.TEENLAUNCH_API_BASE;
   const tokenKey = "teenlaunch_token";
   const userKey = "teenlaunch_user";
   const profileKey = "teenlaunch_profile";

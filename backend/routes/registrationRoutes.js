@@ -7,7 +7,10 @@ const router = express.Router();
 router.use(authMiddleware);
 
 router.get("/", registrationController.list);
+router.get("/me", registrationController.list);
+router.get("/check/:opportunityId", registrationController.check);
 router.post("/", registrationController.create);
+router.get("/:id", registrationController.getById);
 router.put("/:id", registrationController.update);
 router.delete("/:id", registrationController.remove);
 

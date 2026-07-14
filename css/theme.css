@@ -904,7 +904,13 @@ html[data-theme="dark"] .language-toggle:hover {
     border-color: var(--line);
   }
 
-  html[data-theme="dark"] .nav-toggle {
+html[data-theme="dark"] .nav-toggle {
     background: rgba(255, 255, 255, 0.06);
+  }
+}
+
+@media (max-width: 1180px) {
+  .section:not(.split-section) > .section-heading {
+    margin-bottom: clamp(28px, 6vw, 44px);
   }
 }

@@ -1,11 +1,5 @@
 (function () {
-  const resolveApiBase = () => {
-    const localApiBase = window.location.port === "3000" ? `${window.location.origin}/api` : "http://localhost:3000/api";
-    const base = window.TEENLAUNCH_API_BASE || localStorage.getItem("teenlaunch_api_base") || localApiBase;
-    return String(base).replace(/^http:\/\/teenlaunch\.app\b/i, "https://teenlaunch.app");
-  };
-
-  const API_BASE = resolveApiBase();
+  const API_BASE = window.TEENLAUNCH_API_BASE;
   const token = localStorage.getItem("teenlaunch_token");
   const message = document.querySelector("[data-admin-message]");
   const contentBlocks = document.querySelectorAll("[data-admin-content]");
@@ -54,6 +48,7 @@
   };
 
   const emptyState = (text) => `<p class="admin-empty">${text}</p>`;
+  const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[character]));
 
   const renderUsers = (users) => {
     document.querySelector("[data-admin-users]").innerHTML = users.length
@@ -74,11 +69,13 @@
   const renderRegistrations = (registrations) => {
     document.querySelector("[data-admin-registrations]").innerHTML = registrations.length
       ? registrations
-          .slice(0, 8)
           .map(
             (registration) => `
               <article class="admin-list-item">
-                <strong>${registration.opportunities?.title || "Opportunity"}</strong>
+                <strong>${escapeHtml(registration.full_name || "Applicant")} — ${escapeHtml(registration.opportunities?.title || "Opportunity")}</strong>
+                <span>${escapeHtml(registration.email || "No email")} · ${escapeHtml(registration.school_name || "No school")}</span>
+                <details><summary>View full application</summary><p><b>Phone:</b> ${escapeHtml(registration.phone_number || "—")}</p><p><b>Education:</b> ${escapeHtml(registration.education_level || "—")}</p><p><b>Motivation:</b> ${escapeHtml(registration.motivation || "—")}</p><p><b>Experience:</b> ${escapeHtml(registration.relevant_experience || "—")}</p><p><b>Comments:</b> ${escapeHtml(registration.additional_comments || "—")}</p></details>
+                <label>Status <select data-registration-status="${registration.id}">${["pending", "shortlisted", "accepted", "rejected"].map((status) => `<option value="${status}" ${registration.status === status ? "selected" : ""}>${status[0].toUpperCase() + status.slice(1)}</option>`).join("")}</select></label>
                 <span>${registration.status || "registered"} · ${formatDate(registration.created_at)}</span>
               </article>
             `
@@ -86,6 +83,18 @@
           .join("")
       : emptyState("No registrations yet.");
     setText('[data-count="registrations"]', registrations.length);
+    document.querySelectorAll("[data-registration-status]").forEach((select) => select.addEventListener("change", async () => {
+      select.disabled = true;
+      try {
+        await authFetch(`/admin/registrations/${select.dataset.registrationStatus}`, { method: "PUT", body: JSON.stringify({ status: select.value }) });
+        setMessage("Application status updated.", "success");
+      } catch (error) {
+        setMessage(error.message, "error");
+        await loadAdminData();
+      } finally {
+        select.disabled = false;
+      }
+    }));
   };
 
   const renderCareerDna = (results) => {

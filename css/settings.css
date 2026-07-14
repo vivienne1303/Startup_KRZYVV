@@ -40,6 +40,10 @@
   background: #ffffff;
 }
 
+.personality-option {
+  grid-column: 1;
+}
+
 .theme-option {
   color: var(--text);
   cursor: pointer;
@@ -91,6 +95,13 @@
   font-size: 1.4rem;
   font-weight: 900;
   box-shadow: 0 16px 38px rgba(46, 131, 247, 0.24);
+}
+
+.account-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
 }
 
 .account-summary h2 {
@@ -400,6 +411,10 @@ html[data-theme="dark"] .auth-link {
     grid-template-columns: 1fr;
   }
 
+  .personality-option {
+    grid-column: auto;
+  }
+
   .account-panel {
     padding: 20px;
   }
@@ -435,6 +450,125 @@ html[data-theme="dark"] .auth-link {
   .auth-link {
     width: 100%;
     min-height: 44px;
+  }
+}
+
+/* Instagram-inspired Edit Profile layout. */
+.edit-profile-page {
+  width: min(760px, calc(100% - 24px));
+}
+
+.edit-profile-title {
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.edit-profile-title h1 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+}
+
+.edit-profile-form {
+  gap: 0;
+  padding: 0 0 28px;
+  overflow: hidden;
+}
+
+.edit-picture-section {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 30px 20px 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.edit-avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+}
+
+.edit-picture-button {
+  color: #2e83f7;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.picture-help {
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.edit-profile-identity {
+  display: none;
+}
+
+.edit-profile-form .account-message {
+  padding: 12px 24px 0;
+}
+
+.edit-profile-grid {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.edit-profile-grid label {
+  gap: 8px;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.edit-profile-grid .field-title {
+  font-weight: 800;
+}
+
+.edit-profile-grid .field-title small {
+  color: var(--muted);
+  font-size: 0.92em;
+  font-weight: 400;
+}
+
+.edit-profile-grid input,
+.edit-profile-grid select,
+.edit-profile-grid textarea {
+  border-width: 0 0 1px;
+  border-radius: 0;
+  background: transparent;
+}
+
+.edit-profile-actions {
+  padding: 22px 24px 0;
+}
+
+@media (max-width: 760px) {
+  .edit-profile-page {
+    padding-top: 92px;
+  }
+
+  .edit-profile-title h1 {
+    font-size: 1.7rem;
+  }
+
+  .edit-avatar {
+    width: 96px;
+    height: 96px;
+  }
+
+  .edit-profile-grid label {
+    padding: 15px 16px;
+  }
+
+  .edit-profile-form .account-message,
+  .edit-profile-actions {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .edit-profile-actions {
+    display: grid;
+  }
+
+  .edit-profile-actions .btn {
+    width: 100%;
   }
 }
 
@@ -684,5 +818,24 @@ canvas {
     padding: 0 14px;
     border-radius: 12px;
     font-size: 16px;
+  }
+}
+
+@media (max-width: 760px) {
+  .account-panel.edit-profile-form {
+    gap: 0;
+    padding: 0 0 24px;
+  }
+
+  .edit-profile-grid label {
+    gap: 7px;
+    padding: 15px 16px;
+  }
+
+  .edit-profile-grid input,
+  .edit-profile-grid select {
+    padding: 0 4px;
+    border-width: 0 0 1px;
+    border-radius: 0;
   }
 }

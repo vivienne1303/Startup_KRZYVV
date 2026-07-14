@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="TeenLaunch | Settings">TeenLaunch | Settings</title>
   <script src="../js/theme-mode.js"></script>
+  <script src="../js/api-config.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -49,8 +50,15 @@
         <a class="settings-option reveal" href="account.html">
           <img class="settings-icon" src="../assets/icons/app_icon.png" alt="" aria-hidden="true">
           <div>
-            <h2>Account</h2>
+            <h2>Edit Profile</h2>
             <span>View and update your TeenLaunch profile details.</span>
+          </div>
+        </a>
+        <a class="settings-option personality-option reveal" href="career_dna_result.html">
+          <img class="settings-icon" src="../assets/icons/DNA%20_icon.png" alt="" aria-hidden="true">
+          <div>
+            <h2>Personality Test</h2>
+            <span>View your Career DNA result or choose to retake the test.</span>
           </div>
         </a>
         <a class="settings-option reveal" href="display-settings.html">
@@ -67,7 +75,8 @@
   <footer class="footer">
     <p>&copy; 2026 TeenLaunch</p>
     <a href="../index.html" data-i18n="Home">Home</a>
-    <a href="account.html">Account</a>
+    <a href="account.html">Edit Profile</a>
+    <a href="career_dna_result.html">Personality Test</a>
     <a href="display-settings.html" data-i18n="Display Settings">Display Settings</a>
   </footer>
   <script src="../js/auth-guard.js"></script>
