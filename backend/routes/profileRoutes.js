@@ -10,5 +10,8 @@ router.get("/", profileController.getProfile);
 router.put("/", profileController.updateProfile);
 router.get("/applications", profileController.getApplications);
 router.get("/counts", profileController.getCounts);
+router.get("/saved", profileController.getSaved);
+router.post("/saved", profileController.addSaved);
+router.delete("/saved/:opportunityId", profileController.deleteSaved);
 
 module.exports = router;

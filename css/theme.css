@@ -914,3 +914,17 @@ html[data-theme="dark"] .nav-toggle {
     margin-bottom: clamp(28px, 6vw, 44px);
   }
 }
+
+html[data-theme="dark"] img[src*="assets/icons/"]:not(.app-icon),
+html[data-theme="dark"] img[src*="../assets/icons/"]:not(.app-icon) {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.18);
+}
+
+html[data-theme="dark"] .save-button img {
+  background: transparent;
+  box-shadow: none;
+}
+
+.floating-language-toggle { position:fixed; right:18px; bottom:18px; z-index:1200; min-width:54px; min-height:42px; border:1px solid var(--line); border-radius:999px; background:var(--surface); color:var(--text); box-shadow:var(--shadow); cursor:pointer; font:inherit; font-weight:900; }

@@ -380,6 +380,21 @@ Object.assign(translations, {
   "Find guides, checklists, workshop notes, debate resources, and pitch practice material.": "寻找指南、清单、工作坊笔记、辩论资源和路演练习材料。"
 });
 
+Object.assign(translations, {
+  "My Profile": "我的个人资料", "Logout": "退出登录", "Applications": "申请", "Followers": "关注者", "Following": "关注中",
+  "Edit Profile": "编辑个人资料", "Applied": "已申请", "Saved": "已收藏", "Applied Opportunities": "已申请的机会",
+  "Saved Opportunities": "已收藏的机会", "You have not applied for any opportunities yet.": "你还没有申请任何机会。",
+  "You have not saved any opportunities yet.": "你还没有收藏任何机会。", "Full name": "姓名", "Bio": "个人简介",
+  "School": "学校", "Education level": "教育程度", "View Details": "查看详情", "Remove": "移除", "Pending": "待处理",
+  "Loading your profile...": "正在加载你的个人资料……", "Your profile could not be loaded.": "无法加载你的个人资料。",
+  "Try Again": "重试", "TeenLaunch user": "TeenLaunch 用户", "No bio yet.": "还没有个人简介。",
+  "Resources": "资源", "Soft Skills & Debate": "软技能与辩论", "AI Chatbot": "AI 聊天助手", "Settings": "设置",
+  "Academic": "学术类", "Non-Academic": "非学术类", "Login": "登录", "Submit application": "提交申请",
+  "Application form": "申请表", "Email": "电子邮箱", "Phone number": "电话号码", "Date of birth": "出生日期",
+  "School name": "学校名称", "Current education level": "目前教育程度", "Optional": "选填", "Why are you interested?": "你为什么感兴趣？",
+  "Relevant skills or experience": "相关技能或经验", "Additional comments": "其他说明", "Back to opportunities": "返回机会页面"
+});
+
 const translate = (key, language) => {
   if (language !== "zh") return key;
   return translations[key] || key;
@@ -387,8 +402,29 @@ const translate = (key, language) => {
 
 const i18nElements = Array.from(document.querySelectorAll("[data-i18n]"));
 const i18nAttributeElements = Array.from(document.querySelectorAll("[data-i18n-placeholder], [data-i18n-aria-label]"));
-const languageToggle = document.querySelector("[data-language-toggle]");
+let languageToggle = document.querySelector("[data-language-toggle]");
+if (!languageToggle) {
+  languageToggle = document.createElement("button");
+  languageToggle.type = "button";
+  languageToggle.className = "language-toggle floating-language-toggle";
+  languageToggle.dataset.languageToggle = "";
+  languageToggle.setAttribute("aria-label", "Switch language");
+  document.body.appendChild(languageToggle);
+}
 const pageTitle = document.title;
+const originalText = new WeakMap();
+
+const translateTextNodes = (root, language) => {
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach((node) => {
+    if (node.parentElement?.closest("script,style,[data-i18n]") || !node.nodeValue.trim()) return;
+    if (!originalText.has(node)) originalText.set(node, node.nodeValue);
+    const original = originalText.get(node), key = original.trim(), result = translate(key, language);
+    if (result !== key || language === "en") node.nodeValue = original.replace(key, result);
+  });
+};
 
 let currentLanguage = localStorage.getItem("teenlaunch-language") || "en";
 
@@ -414,6 +450,7 @@ const applyLanguage = (language) => {
     languageToggle.textContent = language === "zh" ? "EN" : "中文";
     languageToggle.setAttribute("aria-label", language === "zh" ? "Switch to English" : "Switch to Chinese");
   }
+  translateTextNodes(document.body, language);
 };
 
 const setLanguage = (language) => {
@@ -433,3 +470,10 @@ window.TeenLaunchI18n = {
 };
 
 applyLanguage(currentLanguage);
+
+new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => mutation.addedNodes.forEach((node) => {
+    if (node.nodeType === Node.ELEMENT_NODE) translateTextNodes(node, currentLanguage);
+    if (node.nodeType === Node.TEXT_NODE && node.parentElement) translateTextNodes(node.parentElement, currentLanguage);
+  }));
+}).observe(document.body, { childList: true, subtree: true });

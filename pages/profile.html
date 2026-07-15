@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../css/theme.css"><link rel="stylesheet" href="../css/settings.css"><link rel="stylesheet" href="../css/profile.css">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header profile-site-header">
     <nav class="navbar" aria-label="Main navigation">
       <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/images/light_logo.png" alt="" aria-hidden="true"><span>TeenLaunch<small>Future founders start here</small></span></a>
       <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -48,7 +48,7 @@
       </header>
       <nav class="profile-tabs" aria-label="Profile sections"><button class="active" data-tab="applied">Applied</button><button data-tab="saved">Saved</button><button data-tab="about">About</button></nav>
       <section data-panel="applied"><h2>Applied Opportunities</h2><div class="applied-grid" data-applications></div><div class="profile-empty" data-empty hidden><p>You have not applied for any opportunities yet.</p><a class="btn primary" href="opportunities.html">Browse Opportunities</a></div></section>
-      <section data-panel="saved" hidden><div class="profile-empty"><p>Saved opportunities support is coming soon.</p><a class="btn primary" href="opportunities.html">Browse Opportunities</a></div></section>
+      <section data-panel="saved" hidden><h2>Saved Opportunities</h2><div class="applied-grid" data-saved></div><div class="profile-empty" data-saved-empty hidden><p>You have not saved any opportunities yet.</p><a class="btn primary" href="opportunities.html">Browse Opportunities</a></div></section>
       <section data-panel="about" hidden><article class="about-card"><h2>About</h2><dl><div><dt>Full name</dt><dd data-about-name></dd></div><div><dt>Bio</dt><dd data-about-bio></dd></div><div><dt>School</dt><dd data-about-school></dd></div><div><dt>Education</dt><dd data-about-education></dd></div></dl></article></section>
     </div>
     <div class="profile-error" data-profile-error hidden><p data-profile-error-message></p><button class="btn primary" data-retry>Retry</button></div>
