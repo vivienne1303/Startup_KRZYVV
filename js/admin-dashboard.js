@@ -157,6 +157,7 @@
       }
 
       await loadAdminData();
+      await loadOpportunityForEditing();
     } catch (error) {
       setMessage(error.message, "error");
     }
@@ -167,6 +168,42 @@
   });
 
   const opportunityForm = document.querySelector("[data-opportunity-form]");
+  const publishConfirmation = document.querySelector("[data-publish-confirmation]");
+  const opportunityFormTitle = document.querySelector("[data-opportunity-form-title]");
+  const opportunitySubmit = document.querySelector("[data-opportunity-submit]");
+  const editOpportunityId = new URLSearchParams(window.location.search).get("edit");
+  const categorySummary = document.querySelector("[data-category-summary]");
+  const educationSummary = document.querySelector("[data-education-summary]");
+  const updateCategorySummary = () => {
+    const selected = [...opportunityForm.querySelectorAll('input[name="categories"]:checked')].map((input) => input.value);
+    categorySummary.textContent = selected.length ? selected.join(", ") : "Select categories";
+  };
+  opportunityForm.querySelectorAll('input[name="categories"]').forEach((input) => input.addEventListener("change", updateCategorySummary));
+  const updateEducationSummary = () => {
+    const selected = [...opportunityForm.querySelectorAll('input[name="education_levels"]:checked')].map((input) => input.value);
+    educationSummary.textContent = selected.length ? selected.join(", ") : "Select education levels";
+  };
+  opportunityForm.querySelectorAll('input[name="education_levels"]').forEach((input) => input.addEventListener("change", updateEducationSummary));
+
+  const loadOpportunityForEditing = async () => {
+    if (!editOpportunityId) return;
+    const { opportunity } = await authFetch(`/admin/opportunities/${encodeURIComponent(editOpportunityId)}`);
+    ["title", "description", "deadline", "start_date", "end_date", "age_min", "age_max", "organizer", "application_url", "image_url", "status"].forEach((name) => {
+      opportunityForm.elements[name].value = opportunity?.[name] ?? "";
+    });
+    const categories = opportunity?.categories?.length ? opportunity.categories : [opportunity?.category].filter(Boolean);
+    opportunityForm.querySelectorAll('input[name="categories"]').forEach((input) => { input.checked = categories.includes(input.value); });
+    updateCategorySummary();
+    opportunityForm.querySelectorAll('input[name="education_levels"]').forEach((input) => { input.checked = (opportunity?.education_levels || []).includes(input.value); });
+    updateEducationSummary();
+    opportunityForm.elements.skills.value = (opportunity?.skills || []).join(", ");
+    opportunityForm.elements.mode.value = opportunity?.mode || "";
+    opportunityForm.elements.location.value = opportunity?.location || "";
+    opportunityForm.elements.is_published.checked = Boolean(opportunity?.is_published);
+    opportunityFormTitle.textContent = "Edit opportunity";
+    opportunitySubmit.textContent = "Save Changes";
+    opportunityForm.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
   opportunityForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
@@ -179,24 +216,36 @@
       return;
     }
 
-    const mode = String(formData.get("mode") || "").trim();
-    const level = String(formData.get("level") || "").trim();
+    const submittedMode = String(formData.get("mode") || "").trim().toLowerCase();
+    const mode = ({ online: "online", physical: "in_person", in_person: "in_person", hybrid: "hybrid" })[submittedMode] || "";
     const location = String(formData.get("location") || "").trim();
-    const detailParts = [location, mode, level].filter(Boolean);
+    const categories = formData.getAll("categories").map((value) => String(value).trim()).filter(Boolean);
+    const skills = String(formData.get("skills") || "").split(",").map((value) => value.trim()).filter(Boolean);
+    const educationLevels = formData.getAll("education_levels").map((value) => String(value).trim()).filter(Boolean);
+    if (!categories.length) {
+      setMessage("Select at least one category.", "error");
+      return;
+    }
+    const publishImmediately = formData.get("is_published") === "on";
     const button = opportunityForm.querySelector("button[type='submit']");
 
     button.disabled = true;
+    publishConfirmation.hidden = true;
+    publishConfirmation.classList.remove("error");
     setMessage("Adding opportunity...", "");
 
     try {
-      await authFetch("/opportunities", {
-        method: "POST",
+      await authFetch(editOpportunityId ? `/opportunities/${encodeURIComponent(editOpportunityId)}` : "/opportunities", {
+        method: editOpportunityId ? "PUT" : "POST",
         body: JSON.stringify({
           title: String(formData.get("title") || "").trim(),
           description: String(formData.get("description") || "").trim(),
-          category: formData.get("category"),
+          category: categories[0],
+          categories,
+          skills,
+          education_levels: educationLevels,
           organizer: String(formData.get("organizer") || "").trim() || null,
-          location: detailParts.join(", ") || null,
+          location: location || null,
           mode: mode || null,
           age_min: ageMin,
           age_max: ageMax,
@@ -204,16 +253,30 @@
           start_date: formData.get("start_date") || null,
           end_date: formData.get("end_date") || null,
           application_url: String(formData.get("application_url") || "").trim() || null,
-          is_published: formData.get("is_published") === "on",
+          image_url: String(formData.get("image_url") || "").trim() || null,
+          status: formData.get("status") || "active",
+          is_published: publishImmediately,
         }),
       });
 
-      opportunityForm.reset();
-      opportunityForm.elements.is_published.checked = true;
-      setMessage("Opportunity added successfully.", "success");
+      if (!editOpportunityId) {
+        opportunityForm.reset();
+        opportunityForm.elements.is_published.checked = true;
+        updateCategorySummary();
+        updateEducationSummary();
+      }
       await loadAdminData();
+      await loadOpportunityForEditing();
+      const confirmationText = editOpportunityId ? "Changes saved!" : (publishImmediately ? "Published!" : "Saved as draft!");
+      setMessage(confirmationText, "success");
+      publishConfirmation.textContent = confirmationText;
+      publishConfirmation.classList.remove("error");
+      publishConfirmation.hidden = false;
     } catch (error) {
       setMessage(error.message, "error");
+      publishConfirmation.textContent = `${editOpportunityId ? "Could not save" : "Could not publish"}: ${error.message}`;
+      publishConfirmation.classList.add("error");
+      publishConfirmation.hidden = false;
     } finally {
       button.disabled = false;
     }

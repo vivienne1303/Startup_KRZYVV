@@ -1,11 +1,12 @@
 const opportunityColumns =
-  "id, title, description, category, organizer, location, mode, age_min, age_max, deadline, start_date, end_date, application_url, image_url, is_published, created_by, created_at, updated_at";
+  "id, title, description, category, categories, skills, education_levels, organizer, location, mode, age_min, age_max, deadline, start_date, end_date, application_url, image_url, status, is_published, created_by, created_at, updated_at";
 
 const listOpportunities = async (client, filters = {}) => {
   let query = client
     .from("opportunities")
     .select(opportunityColumns)
     .eq("is_published", true)
+    .eq("status", "active")
     .order("deadline", { ascending: true, nullsFirst: false });
 
   if (filters.category) query = query.eq("category", filters.category);
@@ -22,8 +23,18 @@ const getOpportunityById = async (client, id) => {
     .select(opportunityColumns)
     .eq("id", id)
     .eq("is_published", true)
+    .eq("status", "active")
     .single();
 
+  return { data, error };
+};
+
+const getOpportunityByIdForAdmin = async (client, id) => {
+  const { data, error } = await client
+    .from("opportunities")
+    .select(opportunityColumns)
+    .eq("id", id)
+    .single();
   return { data, error };
 };
 
@@ -57,6 +68,8 @@ module.exports = {
   createOpportunity,
   deleteOpportunity,
   getOpportunityById,
+  getOpportunityByIdForAdmin,
   listOpportunities,
   updateOpportunity,
+  opportunityColumns,
 };

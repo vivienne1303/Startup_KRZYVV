@@ -8,9 +8,11 @@ const categoryFilters = document.querySelectorAll(".filter:not(.detail-filter)")
 const detailFilters = document.querySelectorAll(".detail-filter");
 let cards = document.querySelectorAll(".opportunity-card");
 const emptyState = document.querySelector("#emptyState");
+let isAdmin = false;
 
 let activeFilter = "all";
 let activeDetail = "all";
+const preview = document.querySelector("[data-personalised-preview]");
 
 const updateHeader = () => {
   header.classList.toggle("scrolled", window.scrollY > 24);
@@ -81,6 +83,7 @@ window.addEventListener("scroll", updateHeader);
 updateHeader();
 
 const resolveApiBase = () => window.TEENLAUNCH_API_BASE;
+const translateUi = (text) => window.TeenLaunchI18n?.translate(text) || text;
 
 const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[character]));
 
@@ -89,11 +92,57 @@ const opportunityMarkup = (opportunity) => {
   const category = categoryLabel.includes("startup") ? "startup" : categoryLabel.includes("camp") ? "camp" : categoryLabel.includes("workshop") ? "workshop" : categoryLabel.includes("intern") ? "internship" : categoryLabel.includes("entrepreneur") ? "entrepreneurship" : categoryLabel;
   const mode = opportunity.mode === "in_person" ? "physical" : (opportunity.mode || "");
   const ages = `${opportunity.age_min || "Any"}-${opportunity.age_max || "Any"}`;
-  return `<article class="opportunity-card visible" data-category="${escapeHtml(category)}" data-details="${escapeHtml(mode)}" data-title="${escapeHtml(String(opportunity.title || "").toLowerCase())}"><span class="tag">${escapeHtml(opportunity.category)}</span><h3>${escapeHtml(opportunity.title)}</h3><p>${escapeHtml(opportunity.description)}</p><ul><li>Deadline: ${opportunity.deadline ? new Date(`${opportunity.deadline}T00:00:00`).toLocaleDateString() : "Rolling"}</li><li>Eligibility: Ages ${escapeHtml(ages)}</li><li>${escapeHtml([opportunity.mode, opportunity.location].filter(Boolean).join(", "))}</li></ul><div class="opportunity-actions"><a class="btn secondary apply-button" href="apply.html?id=${encodeURIComponent(opportunity.id)}" data-opportunity-id="${escapeHtml(opportunity.id)}">Apply</a><button class="save-button" type="button" data-save-id="${escapeHtml(opportunity.id)}" aria-label="Save ${escapeHtml(opportunity.title)}" aria-pressed="false"><img src="../assets/icons/save_icon.png" alt=""></button></div></article>`;
+  const actions = isAdmin
+    ? `<div class="opportunity-actions admin-opportunity-actions"><a class="btn secondary admin-edit-button" href="admin-dashboard.html?edit=${encodeURIComponent(opportunity.id)}"><img src="../assets/icons/edit-button.svg" alt="">Edit</a><button class="save-button admin-delete-button" type="button" data-delete-id="${escapeHtml(opportunity.id)}" data-delete-title="${escapeHtml(opportunity.title)}" aria-label="Delete ${escapeHtml(opportunity.title)}"><img src="../assets/icons/delete-icon.jpg" alt=""></button></div>`
+    : `<div class="opportunity-actions user-opportunity-actions"><a class="btn secondary" href="opportunity-details.html?id=${encodeURIComponent(opportunity.id)}">Details</a><a class="btn secondary apply-button" href="apply.html?id=${encodeURIComponent(opportunity.id)}" data-opportunity-id="${escapeHtml(opportunity.id)}">Apply</a><button class="save-button" type="button" data-save-id="${escapeHtml(opportunity.id)}" aria-label="Save ${escapeHtml(opportunity.title)}" aria-pressed="false"><img src="../assets/icons/save_icon.png" alt=""></button></div>`;
+  return `<article class="opportunity-card visible" data-opportunity-card-id="${escapeHtml(opportunity.id)}" data-category="${escapeHtml(category)}" data-details="${escapeHtml(mode)}" data-title="${escapeHtml(String(opportunity.title || "").toLowerCase())}"><span class="tag">${escapeHtml(opportunity.category)}</span><h3>${escapeHtml(opportunity.title)}</h3><p>${escapeHtml(opportunity.description)}</p><ul><li>Deadline: ${opportunity.deadline ? new Date(`${opportunity.deadline}T00:00:00`).toLocaleDateString() : "Rolling"}</li><li>Eligibility: Ages ${escapeHtml(ages)}</li><li>${escapeHtml([opportunity.mode, opportunity.location].filter(Boolean).join(", "))}</li></ul>${actions}</article>`;
+};
+
+const recommendationMarkup = ({ opportunity, match_percentage: percentage, explanation }) => {
+  const base = opportunityMarkup(opportunity);
+  return base.replace('<span class="tag">', `<div class="match-badge">${percentage}% match</div><span class="tag">`).replace(`<p>${escapeHtml(opportunity.description)}</p>`, `<p class="match-explanation">${escapeHtml(explanation)}</p><p>${escapeHtml(opportunity.description)}</p>`);
+};
+
+const loadRecommendationPreview = async () => {
+  const token = localStorage.getItem("teenlaunch_token");
+  if (!preview || !token || isAdmin) return;
+  preview.hidden = false;
+  const message = document.querySelector("[data-preview-message]");
+  const grid = document.querySelector("[data-preview-grid]");
+  try {
+    const response = await fetch(`${resolveApiBase()}/opportunities/recommended`, { headers: { Authorization: `Bearer ${token}` } });
+    if (response.status === 401 || response.status === 403) {
+      message.innerHTML = `Your session has expired. <a href="auth.html?mode=login&returnTo=${encodeURIComponent("recommended-opportunities.html")}">Log in again to view recommendations.</a>`;
+      return;
+    }
+    if (!response.ok) throw new Error("Recommendations unavailable");
+    const data = await response.json();
+    if (!data.completed) {
+      message.innerHTML = `Complete your Career DNA Test to unlock personalised recommendations. <a href="career_dna_test.html">Take the Career DNA Test</a>`;
+      return;
+    }
+    if (!data.recommendations?.length) { message.textContent = "No personalised matches are available yet."; return; }
+    grid.innerHTML = data.recommendations.slice(0, 3).map(recommendationMarkup).join("");
+    message.hidden = true;
+  } catch (_) { message.textContent = "Personalised recommendations could not be loaded right now."; }
 };
 
 const bindOpportunityActions = async () => {
   const token = localStorage.getItem("teenlaunch_token");
+  if (isAdmin) {
+    document.querySelectorAll("[data-delete-id]").forEach((button) => button.addEventListener("click", async () => {
+      if (!window.confirm(`${translateUi("Delete")} “${button.dataset.deleteTitle}”? ${translateUi("This cannot be undone.")}`)) return;
+      button.disabled = true;
+      try {
+        const response = await fetch(`${resolveApiBase()}/opportunities/${encodeURIComponent(button.dataset.deleteId)}`, { method: "DELETE", headers: { Authorization: `Bearer ${token}` } });
+        if (!response.ok) throw new Error("Delete failed");
+        document.querySelector(`[data-opportunity-card-id="${CSS.escape(button.dataset.deleteId)}"]`)?.remove();
+        cards = document.querySelectorAll(".opportunity-card");
+        filterCards();
+      } catch (_) { window.alert(translateUi("The opportunity could not be deleted. Please try again.")); button.disabled = false; }
+    }));
+    return;
+  }
   document.querySelectorAll(".apply-button").forEach((link) => link.addEventListener("click", (event) => {
     if (token) return;
     event.preventDefault();
@@ -119,12 +168,18 @@ const bindOpportunityActions = async () => {
 
 const loadOpportunities = async () => {
   try {
+    const token = localStorage.getItem("teenlaunch_token");
+    if (token) {
+      const sessionResponse = await fetch(`${resolveApiBase()}/auth/me`, { headers: { Authorization: `Bearer ${token}` } });
+      if (sessionResponse.ok) isAdmin = (await sessionResponse.json()).role === "admin";
+    }
     const response = await fetch(`${resolveApiBase()}/opportunities`);
     if (!response.ok) return;
     const { opportunities } = await response.json();
     if (!Array.isArray(opportunities) || !opportunities.length) throw new Error("No opportunities returned");
     document.querySelector("#opportunityGrid").innerHTML = opportunities.map(opportunityMarkup).join("");
-    cards = document.querySelectorAll(".opportunity-card");
+    await loadRecommendationPreview();
+    cards = document.querySelectorAll("#opportunityGrid .opportunity-card");
     await bindOpportunityActions();
     filterCards();
   } catch (_) {
@@ -144,7 +199,7 @@ const loadOpportunities = async () => {
         actions.insertAdjacentHTML("beforeend", `<button class="save-button" type="button" data-save-id="${id}" aria-label="Save opportunity" aria-pressed="false"><img src="../assets/icons/save_icon.png" alt=""></button>`);
       }
     });
-    cards = document.querySelectorAll(".opportunity-card");
+    cards = document.querySelectorAll("#opportunityGrid .opportunity-card");
     await bindOpportunityActions();
     filterCards();
   }

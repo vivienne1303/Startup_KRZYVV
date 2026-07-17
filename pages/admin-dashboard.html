@@ -71,29 +71,35 @@
 
       <section class="admin-panel admin-opportunity-panel reveal" data-admin-content hidden>
         <div class="admin-panel-heading">
-          <h2>Add opportunity</h2>
+          <h2 data-opportunity-form-title>Add opportunity</h2>
           <span>Create a published opportunity for users</span>
         </div>
         <form class="admin-opportunity-form" data-opportunity-form>
-          <label>
-            Category
-            <select name="category" required>
-              <option value="">Select category</option>
-              <option value="Youth Entrepreneurship">Youth Entrepreneurship</option>
-              <option value="Innovation Workshops">Innovation Workshops</option>
-              <option value="Internships">Internships</option>
-              <option value="Startup Programmes">Startup Programmes</option>
-              <option value="Leadership Camps">Leadership Camps</option>
-              <option value="Competitions">Competitions</option>
-            </select>
-          </label>
-          <label>
-            Title
-            <input type="text" name="title" placeholder="Startup Basics Cohort" required>
+          <fieldset class="admin-category-field">
+            <legend>Categories <small>Select one or more</small></legend>
+            <details class="admin-category-dropdown">
+              <summary data-category-summary>Select categories</summary>
+              <div class="admin-category-options">
+                <label><input type="checkbox" name="categories" value="Youth Entrepreneurship"> Youth Entrepreneurship</label>
+                <label><input type="checkbox" name="categories" value="Innovation Workshops"> Innovation Workshops</label>
+                <label><input type="checkbox" name="categories" value="Internships"> Internships</label>
+                <label><input type="checkbox" name="categories" value="Startup Programmes"> Startup Programmes</label>
+                <label><input type="checkbox" name="categories" value="Leadership Camps"> Leadership Camps</label>
+                <label><input type="checkbox" name="categories" value="Competitions"> Competitions</label>
+              </div>
+            </details>
+          </fieldset>
+          <label class="admin-title-field">
+            <span class="admin-field-heading"><strong>Title</strong><small aria-hidden="true">&nbsp;</small></span>
+            <input type="text" name="title" placeholder="Startup Basics Cohort" data-i18n-placeholder="Startup Basics Cohort" required>
           </label>
           <label class="admin-wide">
             Description
-            <textarea name="description" rows="4" placeholder="A guided online programme covering ideation, customer research, simple finance, and pitching." required></textarea>
+            <textarea name="description" rows="4" placeholder="A guided online programme covering ideation, customer research, simple finance, and pitching." data-i18n-placeholder="A guided online programme covering ideation, customer research, simple finance, and pitching." required></textarea>
+          </label>
+          <label class="admin-wide">
+            Skills <small>Separate skills with commas</small>
+            <input type="text" name="skills" placeholder="Communication, pitching, teamwork" data-i18n-placeholder="Communication, pitching, teamwork">
           </label>
           <label>
             Deadline
@@ -111,74 +117,99 @@
             Mode
             <select name="mode">
               <option value="">Select mode</option>
-              <option value="Online">Online</option>
-              <option value="Physical">Physical</option>
-              <option value="Hybrid">Hybrid</option>
+              <option value="online">Online</option>
+              <option value="in_person">Physical</option>
+              <option value="hybrid">Hybrid</option>
             </select>
           </label>
           <label>
             Minimum age
-            <input type="number" name="age_min" min="0" max="99" inputmode="numeric" placeholder="14">
+            <input type="number" name="age_min" min="0" max="99" inputmode="numeric" placeholder="14" data-i18n-placeholder="14">
           </label>
           <label>
             Maximum age
-            <input type="number" name="age_max" min="0" max="99" inputmode="numeric" placeholder="19">
+            <input type="number" name="age_max" min="0" max="99" inputmode="numeric" placeholder="19" data-i18n-placeholder="19">
           </label>
-          <label>
-            Level
-            <select name="level">
-              <option value="">Select level</option>
-              <option value="Beginner">Beginner</option>
-              <option value="Advanced">Advanced</option>
-              <option value="All levels">All levels</option>
+          <fieldset class="admin-category-field admin-education-field">
+            <legend>Education eligibility <small>Select all that apply</small></legend>
+            <details class="admin-category-dropdown admin-education-dropdown">
+              <summary data-education-summary>Select education levels</summary>
+              <div class="admin-category-options">
+                <label><input type="checkbox" name="education_levels" value="Secondary School"> Secondary School</label>
+                <label><input type="checkbox" name="education_levels" value="Junior College"> Junior College</label>
+                <label><input type="checkbox" name="education_levels" value="Polytechnic"> Polytechnic</label>
+                <label><input type="checkbox" name="education_levels" value="ITE"> ITE</label>
+                <label><input type="checkbox" name="education_levels" value="University"> University</label>
+                <label><input type="checkbox" name="education_levels" value="Other"> Other</label>
+              </div>
+            </details>
+          </fieldset>
+          <label class="admin-aligned-field">
+            <span class="admin-field-heading"><strong>Status</strong><small aria-hidden="true">&nbsp;</small></span>
+            <select name="status">
+              <option value="active">Active</option>
+              <option value="inactive">Inactive</option>
+              <option value="draft">Draft</option>
+              <option value="archived">Archived</option>
             </select>
           </label>
-          <label>
-            Organizer
-            <input type="text" name="organizer" placeholder="TeenLaunch">
+          <label class="admin-aligned-field">
+            <span class="admin-field-heading"><strong>Organizer</strong><small aria-hidden="true">&nbsp;</small></span>
+            <input type="text" name="organizer" placeholder="TeenLaunch" data-i18n-placeholder="TeenLaunch">
           </label>
           <label>
             Location
-            <input type="text" name="location" placeholder="Singapore or Online">
+            <input type="text" name="location" placeholder="Singapore or Online" data-i18n-placeholder="Singapore or Online">
           </label>
           <label class="admin-wide">
             Application URL
-            <input type="url" name="application_url" placeholder="https://example.com/apply">
+            <input type="url" name="application_url" placeholder="https://example.com/apply" data-i18n-placeholder="https://example.com/apply">
+          </label>
+          <label class="admin-wide">
+            Image URL
+            <input type="url" name="image_url" placeholder="https://example.com/image.jpg">
           </label>
           <label class="admin-check">
             <input type="checkbox" name="is_published" checked>
             Publish immediately
           </label>
           <div class="settings-actions admin-wide">
-            <button class="btn primary" type="submit">Add Opportunity</button>
+            <button class="btn primary" type="submit" data-opportunity-submit>Add Opportunity</button>
             <button class="btn secondary" type="reset">Clear</button>
+            <strong class="publish-confirmation" data-publish-confirmation role="status" aria-live="polite" hidden></strong>
           </div>
         </form>
       </section>
 
       <div class="admin-grid" data-admin-content hidden>
-        <section class="admin-panel admin-wide" id="registrations">
-          <div class="admin-panel-heading">
-            <h2>Applications</h2>
-            <span data-count="registrations">0</span>
-          </div>
-          <div class="admin-list" data-admin-registrations></div>
+        <section class="admin-panel admin-wide admin-collapsible-panel" id="registrations">
+          <details class="admin-users-dropdown">
+            <summary class="admin-panel-heading">
+              <h2>Applications</h2>
+              <span class="admin-dropdown-meta"><span data-count="registrations">0</span><span class="admin-dropdown-chevron" aria-hidden="true"></span></span>
+            </summary>
+            <div class="admin-list" data-admin-registrations></div>
+          </details>
         </section>
 
-        <section class="admin-panel">
-          <div class="admin-panel-heading">
-            <h2>User list</h2>
-            <span data-count="users">0</span>
-          </div>
-          <div class="admin-list" data-admin-users></div>
+        <section class="admin-panel admin-users-panel admin-wide">
+          <details class="admin-users-dropdown">
+            <summary class="admin-panel-heading">
+              <h2>User list</h2>
+              <span class="admin-dropdown-meta"><span data-count="users">0</span><span class="admin-dropdown-chevron" aria-hidden="true"></span></span>
+            </summary>
+            <div class="admin-list" data-admin-users></div>
+          </details>
         </section>
 
-        <section class="admin-panel admin-wide" id="career-dna">
-          <div class="admin-panel-heading">
-            <h2>Career DNA results</h2>
-            <span data-count="careerDna">0</span>
-          </div>
-          <div class="admin-list" data-admin-career-dna></div>
+        <section class="admin-panel admin-wide admin-collapsible-panel" id="career-dna">
+          <details class="admin-users-dropdown">
+            <summary class="admin-panel-heading">
+              <h2>Career DNA results</h2>
+              <span class="admin-dropdown-meta"><span data-count="careerDna">0</span><span class="admin-dropdown-chevron" aria-hidden="true"></span></span>
+            </summary>
+            <div class="admin-list" data-admin-career-dna></div>
+          </details>
         </section>
       </div>
     </section>

@@ -2,6 +2,7 @@ const asyncHandler = require("../utils/asyncHandler");
 const HttpError = require("../utils/httpError");
 const { supabase } = require("../config/supabase");
 const { ensureDemoOpportunities } = require("../services/demoOpportunityService");
+const { getMatchedOpportunities } = require("../services/opportunityMatchingService");
 const {
   createOpportunity,
   deleteOpportunity,
@@ -31,6 +32,12 @@ const getById = asyncHandler(async (req, res) => {
   if (error) throw new HttpError(404, "Opportunity not found", error.message);
 
   res.json({ opportunity: data });
+});
+
+const recommended = asyncHandler(async (req, res) => {
+  const { data, error } = await getMatchedOpportunities(req.supabase, req.user.id);
+  if (error) throw new HttpError(400, error.message, error.details);
+  res.json(data);
 });
 
 const create = asyncHandler(async (req, res) => {
@@ -67,6 +74,7 @@ module.exports = {
   create,
   getById,
   list,
+  recommended,
   remove,
   update,
 };

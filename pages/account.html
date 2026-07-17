@@ -20,13 +20,14 @@
       <p class="account-message" data-account-message aria-live="polite"></p>
       <div class="account-grid edit-profile-grid">
         <label><span class="field-title">Full name</span><input type="text" name="full_name" autocomplete="name" required></label>
-        <label><span class="field-title">Username</span><input type="text" name="username" pattern="[A-Za-z0-9_.]{3,30}" placeholder="your.username" required></label>
+        <label><span class="field-title">Username</span><input type="text" name="username" pattern="[A-Za-z0-9_.]{3,30}" placeholder="your.username" data-i18n-placeholder="your.username" required></label>
         <label><span class="field-title">Bio <small>(optional)</small></span><textarea name="bio" rows="4" placeholder="Tell people about yourself"></textarea></label>
         <label><span class="field-title">School name <small>(optional)</small></span><input type="text" name="school_name" autocomplete="organization"></label>
         <label><span class="field-title">Phone number <small>(optional)</small></span><input type="tel" name="phone_number" autocomplete="tel"></label>
         <label><span class="field-title">Age</span><input type="number" name="age" min="10" max="19" inputmode="numeric" required></label>
         <label><span class="field-title">Education level</span><select name="education_level" required><option value="">Select education level</option><option>Secondary School</option><option>Junior College</option><option>Polytechnic</option><option>ITE</option><option>University</option><option>Other</option></select></label>
         <label><span class="field-title">Country <small>(optional)</small></span><input type="text" name="country" autocomplete="country-name"></label>
+        <label><span class="field-title">Portfolio URL <small>(optional)</small></span><input type="url" name="portfolio_url" placeholder="https://your-portfolio.com" data-i18n-placeholder="https://your-portfolio.com" inputmode="url"></label>
       </div>
       <div class="settings-actions edit-profile-actions"><button class="btn primary" type="submit">Save changes</button><a class="btn secondary" href="profile.html">Cancel</a></div>
     </form>

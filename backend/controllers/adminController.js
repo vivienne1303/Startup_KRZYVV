@@ -5,6 +5,7 @@ const { supabaseAdmin } = require("../config/supabase");
 const { getProfileById, listProfiles, profileColumns, updateProfileById } = require("../services/profileService");
 const { listRegistrations, updateRegistration, deleteRegistration } = require("../services/registrationService");
 const { listCareerDnaResults } = require("../services/careerDnaService");
+const { getOpportunityByIdForAdmin } = require("../services/opportunityService");
 
 const validateRole = (role) => {
   if (role && !["user", "admin"].includes(role)) {
@@ -187,10 +188,17 @@ const getDashboardStats = asyncHandler(async (req, res) => {
   });
 });
 
+const getOpportunity = asyncHandler(async (req, res) => {
+  const { data, error } = await getOpportunityByIdForAdmin(supabaseAdmin, req.params.id);
+  if (error || !data) throw new HttpError(404, "Opportunity not found", error?.message);
+  res.json({ opportunity: data });
+});
+
 module.exports = {
   createDevelopmentAdmin,
   deleteAnyRegistration,
   getDashboardStats,
+  getOpportunity,
   getUserProfile,
   listAllCareerDnaResults,
   listAllRegistrations,

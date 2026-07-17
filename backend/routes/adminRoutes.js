@@ -20,6 +20,7 @@ router.put("/registrations/:id", adminController.updateAnyRegistration);
 router.delete("/registrations/:id", adminController.deleteAnyRegistration);
 
 router.get("/career-dna", adminController.listAllCareerDnaResults);
+router.get("/opportunities/:id", adminController.getOpportunity);
 router.get("/dashboard", adminController.getDashboardStats);
 
 module.exports = router;

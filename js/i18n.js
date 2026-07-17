@@ -395,6 +395,173 @@ Object.assign(translations, {
   "Relevant skills or experience": "相关技能或经验", "Additional comments": "其他说明", "Back to opportunities": "返回机会页面"
 });
 
+Object.assign(translations, {
+  "TeenLaunch | Admin Dashboard": "TeenLaunch | 管理员控制台",
+  "TeenLaunch | Edit Profile": "TeenLaunch | 编辑个人资料",
+  "Admin control centre": "管理员控制中心",
+  "Admin Dashboard": "管理员控制台",
+  "Platform overview": "平台概览",
+  "Manage users, applications, opportunities, and Career DNA activity.": "管理用户、申请、机会和职业 DNA 活动。",
+  "Registered users": "注册用户",
+  "Published opportunities": "已发布的机会",
+  "Applications submitted": "已提交的申请",
+  "Career DNA submissions": "职业 DNA 提交记录",
+  "Refresh dashboard": "刷新控制台",
+  "View Applications": "查看申请",
+  "View Career DNA Results": "查看职业 DNA 结果",
+  "Add opportunity": "添加机会",
+  "Edit opportunity": "编辑机会",
+  "Create a published opportunity for users": "为用户创建并发布机会",
+  "Category": "类别",
+  "Select category": "选择类别",
+  "Title": "标题",
+  "Description": "描述",
+  "Deadline": "截止日期",
+  "Start date": "开始日期",
+  "End date": "结束日期",
+  "Mode": "形式",
+  "Select mode": "选择形式",
+  "Minimum age": "最低年龄",
+  "Maximum age": "最高年龄",
+  "Level": "级别",
+  "Select level": "选择级别",
+  "All levels": "所有级别",
+  "Organizer": "主办方",
+  "Location": "地点",
+  "Application URL": "申请网址",
+  "Publish immediately": "立即发布",
+  "Add Opportunity": "添加机会",
+  "Save Changes": "保存更改",
+  "Clear": "清除",
+  "Published!": "已发布！",
+  "Saved as draft!": "已保存为草稿！",
+  "Changes saved!": "更改已保存！",
+  "User list": "用户列表",
+  "Career DNA results": "职业 DNA 结果",
+  "Career DNA result": "职业 DNA 结果",
+  "No users found.": "未找到用户。",
+  "No registrations yet.": "暂无申请。",
+  "No Career DNA submissions yet.": "暂无职业 DNA 提交记录。",
+  "Edit": "编辑",
+  "Delete": "删除",
+  "Delete opportunity": "删除机会",
+  "Delete failed": "删除失败",
+  "This cannot be undone.": "此操作无法撤销。",
+  "The opportunity could not be deleted. Please try again.": "无法删除该机会，请重试。",
+  "Edit picture": "编辑头像",
+  "JPG, PNG or WebP, up to 1 MB.": "支持 JPG、PNG 或 WebP，最大 1 MB。",
+  "Username": "用户名",
+  "Age": "年龄",
+  "Country": "国家/地区",
+  "Portfolio URL": "作品集网址",
+  "Save changes": "保存更改",
+  "Cancel": "取消",
+  "Career DNA complete! Please fill in the highlighted profile details so we can personalise your opportunities.": "职业 DNA 测试已完成！请填写高亮显示的个人资料，以便我们为你推荐合适的机会。",
+  "Career DNA complete! Your profile is already up to date. Save to view your results.": "职业 DNA 测试已完成！你的个人资料已经是最新的。保存后即可查看结果。",
+  "Creator": "创作者",
+  "Builder": "实践者",
+  "Explorer": "探索者",
+  "Connector": "连接者",
+  "Leader": "领导者",
+  "Top strength": "首要优势",
+  "Second strength": "第二优势"
+  ,"TeenLaunch | Career DNA Test": "TeenLaunch | 职业 DNA 测试"
+  ,"TeenLaunch | Career DNA Result": "TeenLaunch | 职业 DNA 结果"
+  ,"Discover your strengths": "发现你的优势"
+  ,"Career DNA Test": "职业 DNA 测试"
+  ,"Choose the answer that feels most like you. There are no wrong answers.": "选择最符合你的答案，没有正确或错误之分。"
+  ,"Select one answer": "选择一个答案"
+  ,"Previous": "上一题"
+  ,"Restart Test": "重新开始测试"
+  ,"Next": "下一题"
+  ,"Submit Test": "提交测试"
+  ,"Confirming your session...": "正在确认你的登录状态……"
+  ,"Strongly disagree": "非常不同意"
+  ,"Disagree": "不同意"
+  ,"Neutral": "一般"
+  ,"Agree": "同意"
+  ,"Strongly agree": "非常同意"
+  ,"Your Career DNA": "你的职业 DNA"
+  ,"Loading your Career DNA...": "正在加载你的职业 DNA……"
+  ,"Recommended job families": "推荐职业领域"
+  ,"Opportunity types": "机会类型"
+  ,"Explore opportunities": "探索机会"
+  ,"Retake Career DNA Test": "重新进行职业 DNA 测试"
+  ,"We could not load your result.": "无法加载你的结果。"
+  ,"Try again": "重试"
+  ,"I enjoy turning my ideas into videos, designs, stories or presentations.": "我喜欢把想法转化为视频、设计、故事或演示文稿。"
+  ,"I often notice how the appearance or message of something could be improved.": "我经常能发现事物的外观或表达方式可以如何改进。"
+  ,"I enjoy figuring out how apps, machines or technology work.": "我喜欢研究应用程序、机器或技术的运作方式。"
+  ,"I prefer learning by building, testing or trying something myself.": "我更喜欢通过亲自制作、测试或尝试来学习。"
+  ,"I like researching a topic and comparing information before making a decision.": "我喜欢先研究主题并比较资料，再作出决定。"
+  ,"I enjoy finding patterns and understanding why something happened.": "我喜欢寻找规律并理解事情发生的原因。"
+  ,"I feel satisfied when I help someone learn or solve a problem.": "帮助别人学习或解决问题会让我感到满足。"
+  ,"I enjoy working with different people and listening to their ideas.": "我喜欢与不同的人合作并聆听他们的想法。"
+  ,"I naturally take charge when a group is unsure what to do next.": "当团队不确定下一步该做什么时，我会自然地主动带领大家。"
+  ,"I enjoy presenting my ideas and encouraging others to support them.": "我喜欢表达自己的想法，并鼓励他人支持这些想法。"
+  ,"Please answer all 10 questions before submitting.": "请回答全部 10 道题后再提交。"
+  ,"Choose an answer before continuing.": "请选择一个答案后再继续。"
+  ,"Saving your Career DNA result...": "正在保存你的职业 DNA 结果……"
+  ,"Your Career DNA highlights the ways you naturally create, solve and lead.": "你的职业 DNA 展现了你自然进行创造、解决问题和领导他人的方式。"
+  ,"(optional)": "（选填）"
+  ,"your.username": "你的用户名"
+  ,"https://your-portfolio.com": "https://你的作品集网址"
+  ,"Loading admin dashboard...": "正在加载管理员控制台……"
+  ,"Checking admin access...": "正在检查管理员权限……"
+  ,"Adding opportunity...": "正在添加机会……"
+  ,"Application status updated.": "申请状态已更新。"
+  ,"Access denied. Admin account required.": "拒绝访问，需要管理员账号。"
+  ,"Minimum age cannot be higher than maximum age.": "最低年龄不能高于最高年龄。"
+  ,"Loading your profile...": "正在加载你的个人资料……"
+  ,"Saving your profile...": "正在保存你的个人资料……"
+  ,"Profile saved successfully.": "个人资料保存成功。"
+  ,"Picture ready. Save changes to update your profile.": "头像已准备好，请保存更改以更新个人资料。"
+  ,"Age must be a whole number between 10 and 19.": "年龄必须是 10 至 19 之间的整数。"
+  ,"Choose a JPG, PNG or WebP image no larger than 1 MB.": "请选择不超过 1 MB 的 JPG、PNG 或 WebP 图片。"
+  ,"Startup Basics Cohort": "创业基础班"
+  ,"A guided online programme covering ideation, customer research, simple finance, and pitching.": "涵盖创意构思、客户调研、基础财务和路演的线上指导课程。"
+  ,"Singapore or Online": "新加坡或线上"
+  ,"Personality Test": "性格测试"
+  ,"View your Career DNA result or choose to retake the test.": "查看你的职业 DNA 结果，或选择重新进行测试。"
+  ,"View and update your TeenLaunch profile details.": "查看并更新你的 TeenLaunch 个人资料。"
+  ,"TeenLaunch | Recommended Opportunities": "TeenLaunch | 推荐机会"
+  ,"TeenLaunch | Opportunity Details": "TeenLaunch | 机会详情"
+  ,"Recommended for You": "为你推荐"
+  ,"Career DNA matches": "职业 DNA 匹配"
+  ,"Rule-based recommendations using your Career DNA strengths and eligibility details.": "根据你的职业 DNA 优势和资格资料生成的规则匹配推荐。"
+  ,"Finding your best matches...": "正在寻找最适合你的机会……"
+  ,"Comparing your latest Career DNA result with active opportunities.": "正在将你最新的职业 DNA 结果与有效机会进行比较。"
+  ,"Complete your Career DNA Test to unlock personalised recommendations.": "完成职业 DNA 测试以解锁个性化推荐。"
+  ,"Take the Career DNA Test": "进行职业 DNA 测试"
+  ,"No personalised matches are available yet.": "目前暂无个性化匹配。"
+  ,"Check back when new opportunities are published.": "发布新机会后请再回来查看。"
+  ,"Browse all opportunities": "浏览所有机会"
+  ,"We could not load your recommendations.": "无法加载你的推荐。"
+  ,"View all recommendations": "查看所有推荐"
+  ,"Loading personalised recommendations...": "正在加载个性化推荐……"
+  ,"Details": "详情"
+  ,"View details": "查看详情"
+  ,"Opportunity unavailable": "机会不可用"
+  ,"Age eligibility": "年龄资格"
+  ,"Education eligibility": "教育资格"
+  ,"Format and location": "形式和地点"
+  ,"Skills": "技能"
+  ,"Save opportunity": "收藏机会"
+  ,"Official application page": "官方申请页面"
+  ,"Select one or more": "选择一个或多个"
+  ,"Separate skills with commas": "使用逗号分隔技能"
+  ,"Select all that apply": "选择所有适用项"
+  ,"Status": "状态"
+  ,"Active": "有效"
+  ,"Inactive": "无效"
+  ,"Draft": "草稿"
+  ,"Archived": "已归档"
+  ,"Image URL": "图片网址"
+  ,"Communication, pitching, teamwork": "沟通、路演、团队合作"
+  ,"Your session has expired.": "你的登录状态已过期。"
+  ,"Log in again to view recommendations.": "重新登录以查看推荐。"
+});
+
 const translate = (key, language) => {
   if (language !== "zh") return key;
   return translations[key] || key;

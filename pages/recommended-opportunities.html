@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>TeenLaunch | Recommended Opportunities</title>
+  <script src="../js/theme-mode.js"></script><script src="../js/api-config.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/opportunities.css"><link rel="stylesheet" href="../css/theme.css"><link rel="stylesheet" href="../css/settings.css"><link rel="stylesheet" href="../css/recommended-opportunities.css">
+</head>
+<body>
+  <header class="site-header"><nav class="navbar" aria-label="Main navigation"><a class="brand" href="../index.html"><img class="brand-logo" src="../assets/images/light_logo.png" alt=""><span>TeenLaunch<small>Opportunity radar</small></span></a><button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button><div class="nav-links"><a href="../index.html">Home</a><a class="active" href="opportunities.html">Opportunities</a><a href="recommended-opportunities.html">Recommended for You</a><a href="resources.html">Resources</a><a href="debate.html">Soft Skills &amp; Debate</a><a href="aiassistant.html">AI Chatbot</a><a class="auth-link" href="auth.html">Login</a><a class="settings-button" href="settings.html" aria-label="Settings"><img src="../assets/icons/settings.jpg" alt=""></a><button class="language-toggle" type="button" data-language-toggle>中文</button></div></nav></header>
+  <main class="recommendations-main">
+    <section class="section recommendations-heading"><p class="eyebrow">Career DNA matches</p><h1>Recommended for You</h1><p>Rule-based recommendations using your Career DNA strengths and eligibility details.</p></section>
+    <section class="section recommendations-content" aria-live="polite">
+      <div class="recommendation-state" data-recommendation-loading><h2>Finding your best matches...</h2><p>Comparing your latest Career DNA result with active opportunities.</p></div>
+      <div class="recommendation-state" data-recommendation-onboarding hidden><h2>Complete your Career DNA Test to unlock personalised recommendations.</h2><a class="btn primary" href="career_dna_test.html">Take the Career DNA Test</a></div>
+      <div class="recommendation-state" data-recommendation-empty hidden><h2>No personalised matches are available yet.</h2><p>Check back when new opportunities are published.</p><a class="btn secondary" href="opportunities.html">Browse all opportunities</a></div>
+      <div class="recommendation-state error" data-recommendation-error hidden><h2>We could not load your recommendations.</h2><p data-recommendation-error-message></p><button class="btn primary" type="button" data-recommendation-retry>Try again</button></div>
+      <div class="opportunity-grid recommendation-grid" data-recommendation-grid hidden></div>
+    </section>
+  </main>
+  <footer class="footer"><p>&copy; 2026 TeenLaunch</p><a href="opportunities.html">All opportunities</a><a href="career_dna_result.html">Career DNA result</a></footer>
+  <script src="../js/auth-guard.js"></script><script src="../js/auth-nav.js"></script><script src="../script.js"></script><script src="../js/i18n.js"></script><script src="../js/recommended-opportunities.js"></script>
+</body>
+</html>

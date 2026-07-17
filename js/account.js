@@ -9,6 +9,8 @@
   const initialsTarget = document.querySelector("[data-account-initials]");
   const previewTarget = document.querySelector("[data-profile-preview]");
   const pictureInput = form.elements.profile_picture;
+  const params = new URLSearchParams(window.location.search);
+  const isCareerDnaOnboarding = params.get("from") === "career-dna";
   let selectedPicture = null;
 
   const setMessage = (text, type) => {
@@ -66,6 +68,7 @@
     form.elements.country.value = profile?.country || "";
     form.elements.bio.value = profile?.bio || "";
     form.elements.phone_number.value = profile?.phone_number || "";
+    form.elements.portfolio_url.value = profile?.portfolio_url || "";
     const picture = profile?.profile_picture_url || profile?.avatar_url;
     selectedPicture = picture || null;
     previewTarget.hidden = !picture;
@@ -81,7 +84,17 @@
     try {
       const data = await authFetch("/auth/me");
       fillProfile(data);
-      setMessage("", "");
+      if (isCareerDnaOnboarding) {
+        const fields = ["full_name", "username", "age", "education_level", "school_name", "country", "bio", "phone_number", "portfolio_url"];
+        const missing = fields.filter((name) => !String(form.elements[name]?.value || "").trim());
+        missing.forEach((name) => form.elements[name]?.closest("label")?.classList.add("profile-field-missing"));
+        setMessage(missing.length
+          ? "Career DNA complete! Please fill in the highlighted profile details so we can personalise your opportunities."
+          : "Career DNA complete! Your profile is already up to date. Save to view your results.", "success");
+        form.elements[missing[0]]?.focus({ preventScroll: true });
+      } else {
+        setMessage("", "");
+      }
     } catch (error) {
       setMessage(error.message, "error");
     }
@@ -114,6 +127,7 @@
           country: String(formData.get("country") || "").trim() || null,
           bio: String(formData.get("bio") || "").trim() || null,
           phone_number: String(formData.get("phone_number") || "").trim() || null,
+          portfolio_url: String(formData.get("portfolio_url") || "").trim() || null,
           profile_picture_url: selectedPicture,
         }),
       });
@@ -121,6 +135,10 @@
       const currentUser = JSON.parse(localStorage.getItem("teenlaunch_user") || "{}");
       fillProfile({ user: currentUser, profile: data.profile });
       setMessage("Profile saved successfully.", "success");
+      form.querySelectorAll(".profile-field-missing").forEach((field) => field.classList.remove("profile-field-missing"));
+      if (isCareerDnaOnboarding) {
+        window.setTimeout(() => window.location.replace("career_dna_result.html"), 700);
+      }
     } catch (error) {
       setMessage(error.message, "error");
     } finally {

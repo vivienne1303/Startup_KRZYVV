@@ -107,7 +107,7 @@
       if (response.status === 401 || response.status === 403) { clearSession(); goToLogin(); return; }
       if (!response.ok) throw new Error(await errorMessage(response));
       localStorage.removeItem(progressKey);
-      window.location.replace("career_dna_result.html");
+      window.location.replace("account.html?from=career-dna");
     } catch (error) {
       saving = false;
       render();

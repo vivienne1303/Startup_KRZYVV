@@ -2,3 +2,10 @@
 @media(max-width:600px){.dna-main{padding:112px 12px 36px}.dna-card,.dna-result-card,.dna-result-grid article,.dna-error{padding:20px 16px;border-radius:18px}.dna-question{min-height:0}.dna-actions{grid-template-columns:1fr 1fr}.dna-restart{grid-column:1/-1;grid-row:2}.dna-actions .btn{width:100%}.dna-top-types,.dna-result-grid{grid-template-columns:1fr}.dna-option{font-size:1rem}.dna-header-link{min-height:48px}}
 
 .dna-question:focus{outline:none}
+
+/* Give every Career DNA dimension its own visual identity. */
+.dna-score-list>div:nth-child(1) .dna-score-track span{background:linear-gradient(90deg,#38bdf8,#2563eb)}
+.dna-score-list>div:nth-child(2) .dna-score-track span{background:linear-gradient(90deg,#34d399,#10b981)}
+.dna-score-list>div:nth-child(3) .dna-score-track span{background:linear-gradient(90deg,#fbbf24,#f59e0b)}
+.dna-score-list>div:nth-child(4) .dna-score-track span{background:linear-gradient(90deg,#a78bfa,#7c3aed)}
+.dna-score-list>div:nth-child(5) .dna-score-track span{background:linear-gradient(90deg,#fb7185,#e11d48)}
