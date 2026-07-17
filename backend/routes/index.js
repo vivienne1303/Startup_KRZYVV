@@ -5,6 +5,7 @@ const careerDnaRoutes = require("./careerDnaRoutes");
 const opportunityRoutes = require("./opportunityRoutes");
 const profileRoutes = require("./profileRoutes");
 const registrationRoutes = require("./registrationRoutes");
+const socialRoutes = require("./socialRoutes");
 
 const router = express.Router();
 
@@ -18,5 +19,6 @@ router.use("/profile", profileRoutes);
 router.use("/opportunities", opportunityRoutes);
 router.use("/registrations", registrationRoutes);
 router.use("/career-dna", careerDnaRoutes);
+router.use("/social", socialRoutes);
 
 module.exports = router;

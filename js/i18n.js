@@ -1,3 +1,7 @@
+if (!document.querySelector('script[src*="auth-nav.js"]')) {
+  import("./auth-nav.js");
+}
+
 const translations = {
   "TeenLaunch | Discover Opportunities. Build Your Future.": "TeenLaunch | 发现机会，打造未来。",
   "TeenLaunch | Opportunities": "TeenLaunch | 机会",
@@ -560,6 +564,7 @@ Object.assign(translations, {
   ,"Communication, pitching, teamwork": "沟通、路演、团队合作"
   ,"Your session has expired.": "你的登录状态已过期。"
   ,"Log in again to view recommendations.": "重新登录以查看推荐。"
+  ,"All Opportunities": "所有机会"
 });
 
 const translate = (key, language) => {

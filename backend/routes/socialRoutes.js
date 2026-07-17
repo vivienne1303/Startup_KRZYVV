@@ -1,0 +1,15 @@
+const express = require("express");
+const authMiddleware = require("../middleware/authMiddleware");
+const social = require("../controllers/socialController");
+const router = express.Router();
+router.use(authMiddleware);
+router.get("/search", social.searchUsers);
+router.get("/followers", social.listFollowers);
+router.post("/follows/:userId", social.follow);
+router.delete("/follows/:userId", social.unfollow);
+router.get("/inbox", social.listInbox);
+router.get("/messages/:userId", social.getConversation);
+router.post("/messages/:userId", social.sendMessage);
+router.get("/users/:userId/profile", social.getUserProfile);
+router.get("/users/:userId/connections", social.listConnections);
+module.exports = router;

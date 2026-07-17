@@ -33,10 +33,20 @@
       button.addEventListener("click", async () => {
         const saving = !button.classList.contains("saved");
         button.disabled = true;
-        const response = await fetch(`${API}/profile/saved${saving ? "" : `/${encodeURIComponent(button.dataset.saveId)}`}`, { method: saving ? "POST" : "DELETE", headers: { ...headers, ...(saving ? { "Content-Type": "application/json" } : {}) }, body: saving ? JSON.stringify({ opportunity_id: button.dataset.saveId }) : undefined });
-        if (response.ok || response.status === 409) button.classList.toggle("saved", saving);
-        else window.alert("We could not update this saved opportunity. Please try again.");
-        button.disabled = false;
+        try {
+          const response = await fetch(`${API}/profile/saved${saving ? "" : `/${encodeURIComponent(button.dataset.saveId)}`}`, { method: saving ? "POST" : "DELETE", headers: { ...headers, ...(saving ? { "Content-Type": "application/json" } : {}) }, body: saving ? JSON.stringify({ opportunity_id: button.dataset.saveId }) : undefined });
+          if (response.status === 401 || response.status === 403) {
+            window.location.href = `auth.html?mode=login&returnTo=${encodeURIComponent(location.pathname + location.search)}`;
+            return;
+          }
+          if (!response.ok && response.status !== 409) throw new Error(await parseError(response));
+          button.classList.toggle("saved", saving);
+          button.setAttribute("aria-pressed", String(saving));
+        } catch (error) {
+          window.alert(`We could not update this saved opportunity. ${error.message}`);
+        } finally {
+          button.disabled = false;
+        }
       });
     });
   };
