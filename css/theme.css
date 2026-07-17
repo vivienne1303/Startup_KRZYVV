@@ -23,8 +23,34 @@
 
 .profile-stats a:hover { text-decoration: underline; }
 
+/* Standard page headers stay at the document top and scroll out of view. */
+.site-header.standard-site-header {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Inbox rows fill the complete Messages column. */
+.inbox-sidebar .thread-card {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
 @media (max-width: 700px) {
   .profile-stats a { display: grid; gap: 2px; text-align: center; }
+}
+
+@media (max-width: 760px) {
+  .site-header.standard-site-header .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 16px;
+    left: 16px;
+    inset: 100% 16px auto;
+  }
 }
 
 body {

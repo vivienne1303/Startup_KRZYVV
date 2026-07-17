@@ -13,6 +13,8 @@
     if (settingsPages.has(currentPage)) return;
     const navbar = document.querySelector(".navbar");
     if (!navbar) return;
+    const siteHeader = navbar.closest(".site-header");
+    if (siteHeader) siteHeader.classList.add("standard-site-header");
 
     const brand = navbar.querySelector(".brand");
     if (brand) {
