@@ -3,6 +3,7 @@ const HttpError = require("../utils/httpError");
 const { supabase } = require("../config/supabase");
 const { ensureDemoOpportunities } = require("../services/demoOpportunityService");
 const { getMatchedOpportunities } = require("../services/opportunityMatchingService");
+const manualSource = require("../services/opportunitySources/manualSource");
 const {
   createOpportunity,
   deleteOpportunity,
@@ -47,7 +48,11 @@ const create = asyncHandler(async (req, res) => {
     throw new HttpError(400, "title, description, and category are required");
   }
 
-  const { data, error } = await createOpportunity(req.supabase, req.body, req.user.id);
+  const payload = manualSource.normaliseOpportunity(req.body, req.user.id);
+  const duplicates = await manualSource.detectDuplicates(req.supabase, payload);
+  if (duplicates.error) throw new HttpError(400, duplicates.error.message, duplicates.error.details);
+  if (duplicates.data.length) throw new HttpError(409, "A similar opportunity already exists", duplicates.data);
+  const { data, error } = await createOpportunity(req.supabase, payload, req.user.id);
 
   if (error) throw new HttpError(403, error.message, error.details);
 

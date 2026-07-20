@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TeenLaunch | Life Planner</title>
+  <script src="../js/theme-mode.js"></script>
+  <script src="../js/api-config.js"></script>
+  <script src="../js/auth-guard.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/life-planner.css">
+</head>
+<body>
+  <header class="site-header"><nav class="navbar" aria-label="Main navigation"><a class="brand" href="../index.html"><img class="brand-logo" src="../assets/images/light_logo.png" alt=""><span>TeenLaunch<small>Future founders start here</small></span></a><div class="nav-links"><a class="auth-link" href="auth.html">Login</a></div></nav></header>
+  <main class="planner-main">
+    <section class="planner-hero">
+      <div><p class="eyebrow">Personalised smart planner</p><h1>Make space for what matters.</h1><p>Balance school, commitments, opportunities and rest with transparent scheduling rules you control.</p></div>
+      <button class="btn primary" type="button" data-generate-plan>Suggest my week</button>
+    </section>
+
+    <p class="planner-notice" data-planner-notice aria-live="polite">Loading your planner…</p>
+    <section data-planner-content hidden>
+      <div class="planner-toolbar">
+        <div class="week-controls"><button type="button" class="icon-button" data-week-previous aria-label="Previous week">←</button><button type="button" class="btn secondary" data-week-today>This week</button><button type="button" class="icon-button" data-week-next aria-label="Next week">→</button></div>
+        <h2 data-week-label></h2>
+        <button class="btn secondary" type="button" data-toggle-settings>Planning preferences</button>
+      </div>
+
+      <section class="planner-settings" data-settings-panel hidden>
+        <form data-preferences-form>
+          <div class="section-heading"><div><p class="eyebrow">Your boundaries</p><h2>Planning preferences</h2></div><button type="button" class="text-button" data-close-settings>Close</button></div>
+          <div class="settings-grid">
+            <label>Education level<input name="education_level" maxlength="80" placeholder="e.g. Polytechnic"></label>
+            <label>Preferred session<select name="preferred_session_minutes"><option value="30">30 minutes</option><option value="45">45 minutes</option><option value="60">60 minutes</option><option value="90">90 minutes</option><option value="120">120 minutes</option></select></label>
+            <label>Wake time<input name="wake_time" type="time" required></label><label>Sleep time<input name="sleep_time" type="time" required></label>
+            <label>Preferred study start<input name="preferred_study_start" type="time" required></label><label>Preferred study end<input name="preferred_study_end" type="time" required></label>
+          </div>
+          <fieldset><legend>School days and hours</legend><div class="school-days" data-school-days></div></fieldset>
+          <fieldset><legend>Preferred rest days</legend><div class="day-checks" data-rest-days></div></fieldset>
+          <label>Personal goals<textarea name="personal_goals" rows="3" maxlength="2000" placeholder="What would you like to make time for?"></textarea></label>
+          <button class="btn primary" type="submit">Save preferences</button>
+        </form>
+      </section>
+
+      <div class="planner-layout">
+        <aside class="planner-sidebar">
+          <form class="task-form" data-task-form>
+            <div class="section-heading"><div><p class="eyebrow">Add to planner</p><h2 data-task-form-title>New task</h2></div><button type="button" class="text-button" data-cancel-edit hidden>Cancel</button></div>
+            <input name="task_id" type="hidden">
+            <label>Title<input name="title" maxlength="120" required placeholder="Revision, CCA, assignment…"></label>
+            <div class="two-fields"><label>Category<select name="category"><option value="school">School</option><option value="study">Study</option><option value="cca">CCA</option><option value="tuition">Tuition</option><option value="opportunity">Opportunity</option><option value="personal">Personal</option></select></label><label>Priority<select name="priority"><option value="low">Low</option><option value="medium" selected>Medium</option><option value="high">High</option></select></label></div>
+            <label>Notes<textarea name="description" rows="2" maxlength="1000"></textarea></label>
+            <div class="two-fields"><label>Start<input name="start_time" type="datetime-local"></label><label>End<input name="end_time" type="datetime-local"></label></div>
+            <div class="two-fields"><label>Deadline<input name="deadline" type="date"></label><label>Time needed<input name="estimated_minutes" type="number" min="20" max="1440" step="5" value="45"></label></div>
+            <label>Repeat<select name="recurrence"><option value="none">Does not repeat</option><option value="daily">Daily</option><option value="weekly">Weekly</option></select></label>
+            <button class="btn primary" type="submit" data-task-submit>Add task</button>
+          </form>
+
+          <section class="deadline-panel"><div class="section-heading"><div><p class="eyebrow">Automatically connected</p><h2>Opportunity deadlines</h2></div></div><p class="helper-text">From opportunities you saved or applied for.</p><div data-deadline-list></div><p class="empty-inline" data-deadline-empty hidden>No linked deadlines yet.</p></section>
+        </aside>
+
+        <section class="calendar-panel">
+          <div class="calendar-legend"><span><i class="legend-dot planned"></i>Planned</span><span><i class="legend-dot suggested"></i>Suggestion</span><span><i class="legend-dot completed"></i>Completed</span></div>
+          <div class="weekly-calendar" data-weekly-calendar></div>
+          <div class="agenda-sections">
+            <section><h2>Overdue</h2><div class="task-list" data-overdue-list></div><p class="empty-inline" data-overdue-empty>Nothing overdue.</p></section>
+            <section><h2>Upcoming</h2><div class="task-list" data-upcoming-list></div><p class="empty-inline" data-upcoming-empty>No upcoming tasks.</p></section>
+            <section><h2>Completed</h2><div class="task-list" data-completed-list></div><p class="empty-inline" data-completed-empty>No completed tasks yet.</p></section>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script src="../js/auth-nav.js"></script><script src="../js/i18n.js"></script><script src="../js/life-planner.js"></script>
+</body>
+</html>

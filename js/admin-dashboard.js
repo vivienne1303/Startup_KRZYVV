@@ -214,7 +214,7 @@
   const loadOpportunityForEditing = async () => {
     if (!editOpportunityId) return;
     const { opportunity } = await authFetch(`/admin/opportunities/${encodeURIComponent(editOpportunityId)}`);
-    ["title", "description", "deadline", "start_date", "end_date", "age_min", "age_max", "organizer", "application_url", "image_url", "status"].forEach((name) => {
+    ["title", "description", "deadline", "start_date", "end_date", "age_min", "age_max", "organizer", "application_url", "image_url", "status", "source_type", "source_url", "application_method", "expiry_date"].forEach((name) => {
       opportunityForm.elements[name].value = opportunity?.[name] ?? "";
     });
     const categories = opportunity?.categories?.length ? opportunity.categories : [opportunity?.category].filter(Boolean);
@@ -226,6 +226,7 @@
     opportunityForm.elements.mode.value = opportunity?.mode || "";
     opportunityForm.elements.location.value = opportunity?.location || "";
     opportunityForm.elements.is_published.checked = Boolean(opportunity?.is_published);
+    opportunityForm.elements.internal_application_enabled.checked = opportunity?.internal_application_enabled !== false;
     opportunityFormTitle.textContent = "Edit opportunity";
     opportunitySubmit.textContent = "Save Changes";
     opportunityForm.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -279,6 +280,11 @@
           start_date: formData.get("start_date") || null,
           end_date: formData.get("end_date") || null,
           application_url: String(formData.get("application_url") || "").trim() || null,
+          source_type: formData.get("source_type") || "teenlaunch",
+          source_url: String(formData.get("source_url") || "").trim() || null,
+          application_method: formData.get("application_method") || "internal",
+          expiry_date: formData.get("expiry_date") || formData.get("deadline") || null,
+          internal_application_enabled: formData.get("internal_application_enabled") === "on",
           image_url: String(formData.get("image_url") || "").trim() || null,
           status: formData.get("status") || "active",
           is_published: publishImmediately,

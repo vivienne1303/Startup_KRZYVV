@@ -2,6 +2,7 @@ const express = require("express");
 const adminController = require("../controllers/adminController");
 const authMiddleware = require("../middleware/authMiddleware");
 const adminMiddleware = require("../middleware/adminMiddleware");
+const scoutController = require("../controllers/opportunityScoutAdminController");
 
 const router = express.Router();
 
@@ -22,5 +23,9 @@ router.delete("/registrations/:id", adminController.deleteAnyRegistration);
 router.get("/career-dna", adminController.listAllCareerDnaResults);
 router.get("/opportunities/:id", adminController.getOpportunity);
 router.get("/dashboard", adminController.getDashboardStats);
+router.get("/partners", scoutController.listPartners);
+router.put("/partners/:id", scoutController.reviewPartner);
+router.get("/opportunity-reviews", scoutController.reviewQueue);
+router.put("/opportunity-reviews/:id", scoutController.reviewOpportunity);
 
 module.exports = router;

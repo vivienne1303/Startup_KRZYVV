@@ -1,0 +1,11 @@
+const express = require("express");
+const authMiddleware = require("../middleware/authMiddleware");
+const controller = require("../controllers/partnerController");
+const router = express.Router();
+router.use(authMiddleware);
+router.get("/mine", controller.getMine);
+router.post("/organisations", controller.createOrganisation);
+router.put("/organisations/:id", controller.updateOrganisation);
+router.post("/submissions", controller.createSubmission);
+router.put("/submissions/:id", controller.updateSubmission);
+module.exports = router;

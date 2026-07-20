@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../css/theme.css">
   <link rel="stylesheet" href="../css/settings.css">
+  <link rel="stylesheet" href="../css/opportunity-scout.css">
 </head>
 <body>
   <header class="site-header">
@@ -165,6 +166,26 @@
             Application URL
             <input type="url" name="application_url" placeholder="https://example.com/apply" data-i18n-placeholder="https://example.com/apply">
           </label>
+          <label>
+            Source type
+            <select name="source_type"><option value="teenlaunch">TeenLaunch-created</option><option value="public_manual">Public source, manually reviewed</option></select>
+          </label>
+          <label>
+            Official source URL
+            <input type="url" name="source_url" placeholder="https://official-source.example">
+          </label>
+          <label>
+            Application method
+            <select name="application_method"><option value="internal">TeenLaunch application</option><option value="external">External application</option><option value="both">Both</option></select>
+          </label>
+          <label>
+            Expiry date
+            <input type="date" name="expiry_date">
+          </label>
+          <label class="admin-check">
+            <input type="checkbox" name="internal_application_enabled" checked>
+            Enable internal applications
+          </label>
           <label class="admin-wide">
             Image URL
             <input type="url" name="image_url" placeholder="https://example.com/image.jpg">
@@ -182,6 +203,18 @@
       </section>
 
       <div class="admin-grid" data-admin-content hidden>
+        <section class="admin-panel admin-wide" id="opportunity-review">
+          <details class="admin-users-dropdown" open>
+            <summary class="admin-panel-heading"><h2>Opportunity review queue</h2><span class="admin-dropdown-meta"><span data-scout-review-count>0</span><span class="admin-dropdown-chevron" aria-hidden="true"></span></span></summary>
+            <div class="scout-admin-grid" data-scout-review-list><p class="admin-empty">Loading review queue…</p></div>
+          </details>
+        </section>
+        <section class="admin-panel admin-wide" id="partner-management">
+          <details class="admin-users-dropdown">
+            <summary class="admin-panel-heading"><h2>Partner management</h2><span class="admin-dropdown-meta"><span data-scout-partner-count>0</span><span class="admin-dropdown-chevron" aria-hidden="true"></span></span></summary>
+            <div class="scout-admin-grid" data-scout-partner-list><p class="admin-empty">Loading partners…</p></div>
+          </details>
+        </section>
         <section class="admin-panel admin-wide admin-collapsible-panel" id="registrations">
           <details class="admin-users-dropdown">
             <summary class="admin-panel-heading">
@@ -223,6 +256,7 @@
   <script src="../js/auth-nav.js"></script>
   <script src="../script.js"></script>
   <script src="../js/admin-dashboard.js"></script>
+  <script src="../js/admin-opportunity-scout.js"></script>
   <script src="../js/i18n.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 const opportunityColumns =
-  "id, title, description, category, categories, skills, education_levels, organizer, location, mode, age_min, age_max, deadline, start_date, end_date, application_url, image_url, status, is_published, created_by, created_at, updated_at";
+  "id, title, description, category, categories, skills, education_levels, organizer, location, mode, age_min, age_max, deadline, start_date, end_date, application_url, image_url, status, is_published, created_by, created_at, updated_at, source_type, source_name, source_url, partner_id, external_id, last_synced_at, verification_status, verified_by, verified_at, expiry_date, application_method, internal_application_enabled";
 
 const listOpportunities = async (client, filters = {}) => {
   let query = client
@@ -7,6 +7,8 @@ const listOpportunities = async (client, filters = {}) => {
     .select(opportunityColumns)
     .eq("is_published", true)
     .eq("status", "active")
+    .eq("verification_status", "verified")
+    .or(`expiry_date.is.null,expiry_date.gte.${new Date().toISOString().slice(0, 10)}`)
     .order("deadline", { ascending: true, nullsFirst: false });
 
   if (filters.category) query = query.eq("category", filters.category);
@@ -24,6 +26,8 @@ const getOpportunityById = async (client, id) => {
     .eq("id", id)
     .eq("is_published", true)
     .eq("status", "active")
+    .eq("verification_status", "verified")
+    .or(`expiry_date.is.null,expiry_date.gte.${new Date().toISOString().slice(0, 10)}`)
     .single();
 
   return { data, error };

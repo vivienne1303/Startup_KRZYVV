@@ -9,6 +9,10 @@ const demoOpportunities = [
   { id:"10000000-0000-4000-8000-000000000006", title:"Student Tech Internship", description:"A student internship shadowing product, design and startup operations teams.", category:"Internships", organizer:"TeenLaunch Ventures", location:"Singapore", mode:"in_person", age_min:16, age_max:19, deadline:"2026-11-30", start_date:"2026-12-14", end_date:"2027-01-08", is_published:true }
 ];
 
-const ensureDemoOpportunities = async () => supabaseAdmin.from("opportunities").upsert(demoOpportunities, { onConflict: "id" });
+const ensureDemoOpportunities = async () => {
+  if (process.env.NODE_ENV === "production") return { data: [], error: null };
+  const labelled = demoOpportunities.map((item) => ({ ...item, title: `[MOCK] ${item.title}`, source_type: "teenlaunch", source_name: "TeenLaunch demo seed [MOCK]", verification_status: "draft", status: "draft", is_published: false }));
+  return supabaseAdmin.from("opportunities").upsert(labelled, { onConflict: "id" });
+};
 
 module.exports = { demoOpportunities, ensureDemoOpportunities };

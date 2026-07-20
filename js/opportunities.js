@@ -95,7 +95,8 @@ const opportunityMarkup = (opportunity) => {
   const actions = isAdmin
     ? `<div class="opportunity-actions admin-opportunity-actions"><a class="btn secondary admin-edit-button" href="admin-dashboard.html?edit=${encodeURIComponent(opportunity.id)}"><img src="../assets/icons/edit-button.svg" alt="">Edit</a><button class="save-button admin-delete-button" type="button" data-delete-id="${escapeHtml(opportunity.id)}" data-delete-title="${escapeHtml(opportunity.title)}" aria-label="Delete ${escapeHtml(opportunity.title)}"><img src="../assets/icons/delete-icon.jpg" alt=""></button></div>`
     : `<div class="opportunity-actions user-opportunity-actions"><a class="btn secondary" href="opportunity-details.html?id=${encodeURIComponent(opportunity.id)}">Details</a><a class="btn secondary apply-button" href="apply.html?id=${encodeURIComponent(opportunity.id)}" data-opportunity-id="${escapeHtml(opportunity.id)}">Apply</a><button class="save-button" type="button" data-save-id="${escapeHtml(opportunity.id)}" aria-label="Save ${escapeHtml(opportunity.title)}" aria-pressed="false"><img src="../assets/icons/save_icon.png" alt=""></button></div>`;
-  return `<article class="opportunity-card visible" data-opportunity-card-id="${escapeHtml(opportunity.id)}" data-category="${escapeHtml(category)}" data-details="${escapeHtml(mode)}" data-title="${escapeHtml(String(opportunity.title || "").toLowerCase())}"><span class="tag">${escapeHtml(opportunity.category)}</span><h3>${escapeHtml(opportunity.title)}</h3><p>${escapeHtml(opportunity.description)}</p><ul><li>Deadline: ${opportunity.deadline ? new Date(`${opportunity.deadline}T00:00:00`).toLocaleDateString() : "Rolling"}</li><li>Eligibility: Ages ${escapeHtml(ages)}</li><li>${escapeHtml([opportunity.mode, opportunity.location].filter(Boolean).join(", "))}</li></ul>${actions}</article>`;
+  const sourceLabel = opportunity.source_type === "partner" ? `Verified partner · ${opportunity.source_name || opportunity.organizer || "Partner"}` : opportunity.source_type === "public_manual" ? "Public source · Admin reviewed" : "TeenLaunch verified";
+  return `<article class="opportunity-card visible" data-opportunity-card-id="${escapeHtml(opportunity.id)}" data-category="${escapeHtml(category)}" data-details="${escapeHtml(mode)}" data-title="${escapeHtml(String(opportunity.title || "").toLowerCase())}"><div class="opportunity-badges"><span class="tag">${escapeHtml(opportunity.category)}</span><span class="verification-badge verified">${escapeHtml(sourceLabel)}</span></div><h3>${escapeHtml(opportunity.title)}</h3><p>${escapeHtml(opportunity.description)}</p><ul><li>Deadline: ${opportunity.deadline ? new Date(`${opportunity.deadline}T00:00:00`).toLocaleDateString() : "Rolling"}</li><li>Eligibility: Ages ${escapeHtml(ages)}</li><li>${escapeHtml([opportunity.mode, opportunity.location].filter(Boolean).join(", "))}</li></ul>${actions}</article>`;
 };
 
 const recommendationMarkup = ({ opportunity, match_percentage: percentage, explanation }) => {
@@ -183,25 +184,10 @@ const loadOpportunities = async () => {
     await bindOpportunityActions();
     filterCards();
   } catch (_) {
-    const ids = ["10000000-0000-4000-8000-000000000001", "10000000-0000-4000-8000-000000000002", "10000000-0000-4000-8000-000000000004", "10000000-0000-4000-8000-000000000003", "10000000-0000-4000-8000-000000000005", "10000000-0000-4000-8000-000000000006"];
-    document.querySelectorAll("#opportunityGrid .opportunity-card").forEach((card, index) => {
-      const id = ids[index];
-      const old = card.querySelector("a.btn");
-      if (!old || !id) return;
-      old.href = `apply.html?id=${encodeURIComponent(id)}`;
-      old.classList.add("apply-button");
-      old.dataset.opportunityId = id;
-      if (!old.closest(".opportunity-actions")) {
-        const actions = document.createElement("div");
-        actions.className = "opportunity-actions";
-        old.before(actions);
-        actions.appendChild(old);
-        actions.insertAdjacentHTML("beforeend", `<button class="save-button" type="button" data-save-id="${id}" aria-label="Save opportunity" aria-pressed="false"><img src="../assets/icons/save_icon.png" alt=""></button>`);
-      }
-    });
+    document.querySelector("#opportunityGrid").innerHTML = "";
     cards = document.querySelectorAll("#opportunityGrid .opportunity-card");
-    await bindOpportunityActions();
-    filterCards();
+    emptyState.style.display = "block";
+    emptyState.textContent = "Verified opportunities could not be loaded right now. Please try again later.";
   }
 };
 

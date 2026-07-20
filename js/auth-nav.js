@@ -49,7 +49,7 @@
       <a class="${isCurrent("index.html", "") ? "active" : ""}" href="${homeHref}" data-i18n="Home">Home</a>
       <div class="nav-dropdown opportunities-dropdown ${isCurrent("opportunities.html", "recommended-opportunities.html", "opportunity-details.html", "apply.html") ? "active" : ""}">
         <a class="nav-trigger" href="${pageHref("opportunities.html")}" data-i18n="Opportunities">Opportunities</a>
-        <div class="dropdown-menu" aria-label="Opportunity navigation"><a href="${pageHref("opportunities.html")}" data-i18n="All Opportunities">All Opportunities</a><a href="${pageHref("recommended-opportunities.html")}" data-i18n="Recommended for You">Recommended for You</a></div>
+        <div class="dropdown-menu" aria-label="Opportunity navigation"><a href="${pageHref("opportunities.html")}" data-i18n="All Opportunities">All Opportunities</a><a href="${pageHref("recommended-opportunities.html")}" data-i18n="Recommended for You">Recommended for You</a><a href="${pageHref("partner-submission.html")}" data-i18n="Submit an Opportunity">Submit an Opportunity</a></div>
       </div>
       <div class="nav-dropdown competitions-dropdown ${isCurrent("competitions.html", "competition_academic.html", "competition_non-academic.html") ? "active" : ""}">
         <a class="nav-trigger" href="${pageHref("competitions.html")}" data-i18n="Competitions">Competitions</a>
@@ -58,6 +58,7 @@
       <a class="${isCurrent("resources.html") ? "active" : ""}" href="${pageHref("resources.html")}" data-i18n="Resources">Resources</a>
       <a class="${isCurrent("debate.html") ? "active" : ""}" href="${pageHref("debate.html")}" data-i18n="Soft Skills & Debate">Soft Skills &amp; Debate</a>
       <a class="${isCurrent("career-copilot.html", "aiassistant.html") ? "active" : ""}" href="${pageHref("career-copilot.html")}" data-i18n="Career Copilot">Career Copilot</a>
+      <a class="${isCurrent("life-planner.html") ? "active" : ""}" href="${pageHref("life-planner.html")}" data-i18n="Life Planner">Life Planner</a>
       <a class="auth-link" href="${pageHref("auth.html")}">Login</a>
       <a class="settings-button" href="${pageHref("settings.html")}" aria-label="Settings"><img src="${assetHref("assets/icons/settings.jpg")}" alt="" aria-hidden="true"></a>
       <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>`;
@@ -95,15 +96,7 @@
     navLinks.insertBefore(link, authLink);
   };
   const addProfileLink = () => addLink("profile-nav-link", "profile.html", "My Profile", ["profile.html", "account.html", "career_dna_test.html", "career_dna_result.html"]);
-  const addPortfolioLink = () => addLink("portfolio-nav-link", "my-portfolio.html", "Portfolio", ["my-portfolio.html", "portfolio-builder.html"]);
   const addAdminLink = () => addLink("admin-dashboard-link", "admin-dashboard.html", "Admin Dashboard", ["admin-dashboard.html"]);
-  const addSocialLinks = () => {
-    if (!navLinks || navLinks.querySelector(".community-dropdown")) return;
-    const wrapper = document.createElement("div");
-    wrapper.className = `nav-dropdown community-dropdown${isCurrent("community.html", "inbox.html") ? " active" : ""}`;
-    wrapper.innerHTML = `<a class="nav-trigger" href="${pageHref("community.html")}" data-i18n="Community">Community</a><div class="dropdown-menu" aria-label="Community navigation"><a href="${pageHref("community.html")}" data-i18n="Find People">Find People</a><a href="${pageHref("inbox.html")}" data-i18n="Inbox">Inbox</a></div>`;
-    navLinks.insertBefore(wrapper, authLink);
-  };
 
   const token = localStorage.getItem("teenlaunch_token");
   if (!token) {
@@ -118,8 +111,6 @@
       const data = await response.json();
       localStorage.setItem("teenlaunch_user", JSON.stringify(data.user || {}));
       localStorage.setItem("teenlaunch_profile", JSON.stringify(data.profile || {}));
-      addSocialLinks();
-      addPortfolioLink();
       addProfileLink();
       if (data.role === "admin") addAdminLink();
     } catch (error) {

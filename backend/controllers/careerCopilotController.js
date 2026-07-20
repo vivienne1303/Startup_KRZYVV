@@ -17,7 +17,7 @@ const buildContext = async (req) => {
     req.supabase.from("registrations").select("completion_date, verified_skills, opportunities(id, title, category, organizer)").eq("status", "completed").eq("completion_verified", true).limit(12),
     req.supabase.from("portfolio_items").select("skills_learned, registrations(opportunities(id, title))").limit(20),
     req.supabase.from("portfolio_projects").select("title, skills").limit(12),
-    req.supabase.from("opportunities").select("id, title, description, category, categories, skills, organizer, mode, location, age_min, age_max, education_levels, deadline").eq("is_published", true).eq("status", "active").or(`deadline.is.null,deadline.gte.${new Date().toISOString().slice(0, 10)}`).order("deadline", { ascending: true, nullsFirst: false }).limit(24),
+    req.supabase.from("opportunities").select("id, title, description, category, categories, skills, organizer, mode, location, age_min, age_max, education_levels, deadline").eq("is_published", true).eq("status", "active").eq("verification_status", "verified").or(`expiry_date.is.null,expiry_date.gte.${new Date().toISOString().slice(0, 10)}`).order("deadline", { ascending: true, nullsFirst: false }).limit(24),
   ]);
 
   const dna = safeResult(dnaResult, null);
@@ -103,10 +103,7 @@ const chat = asyncHandler(async (req, res) => {
   let source = "database_fallback";
   try { answer = await callOpenAI({ question, history, context }); if (answer) source = "ai"; } catch (error) { console.warn("Career Copilot AI unavailable; using database fallback.", error.message); }
   if (!answer) answer = fallbackResponse(question, context);
-  const referenced = rankOpportunities(question, context).map((opportunity) => ({ id: opportunity.id, title: opportunity.title, link: opportunity.link }));
-  if (source === "ai" && referenced.length) {
-    answer += `\n\nVerified TeenLaunch opportunities from the live database:\n${referenced.map((opportunity, index) => `${index + 1}. ${opportunity.title}\n   ID: ${opportunity.id}\n   Link: ${opportunity.link}\n   Why: It matches your stated goal, Career DNA context or current eligibility.`).join("\n")}`;
-  }
+  const referenced = rankOpportunities(question, context).map((opportunity) => ({ id: opportunity.id, title: opportunity.title, link: opportunity.link, why: "Matches your goal, Career DNA strengths or current eligibility." }));
   res.json({ answer, source, opportunities: referenced, disclaimer: "TeenLaunch Career Copilot provides general guidance. Important education and career decisions should also be discussed with a parent, teacher or career counsellor." });
 });
 
