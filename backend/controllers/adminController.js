@@ -21,12 +21,15 @@ const normalizeRegistrationPayload = (payload) => {
     reject: "rejected",
     canceled: "cancelled",
     verified: "completed",
-    attended: "completed",
     attendance_verified: "completed",
   };
 
   if (nextPayload.status) {
     nextPayload.status = statusMap[nextPayload.status] || nextPayload.status;
+  }
+
+  if (nextPayload.completion_verified === true) {
+    nextPayload.status = "completed";
   }
 
   return nextPayload;

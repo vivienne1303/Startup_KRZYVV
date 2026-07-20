@@ -57,7 +57,7 @@
       </div>
       <a class="${isCurrent("resources.html") ? "active" : ""}" href="${pageHref("resources.html")}" data-i18n="Resources">Resources</a>
       <a class="${isCurrent("debate.html") ? "active" : ""}" href="${pageHref("debate.html")}" data-i18n="Soft Skills & Debate">Soft Skills &amp; Debate</a>
-      <a class="${isCurrent("aiassistant.html") ? "active" : ""}" href="${pageHref("aiassistant.html")}" data-i18n="AI Chatbot">AI Chatbot</a>
+      <a class="${isCurrent("career-copilot.html", "aiassistant.html") ? "active" : ""}" href="${pageHref("career-copilot.html")}" data-i18n="Career Copilot">Career Copilot</a>
       <a class="auth-link" href="${pageHref("auth.html")}">Login</a>
       <a class="settings-button" href="${pageHref("settings.html")}" aria-label="Settings"><img src="${assetHref("assets/icons/settings.jpg")}" alt="" aria-hidden="true"></a>
       <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>`;
@@ -95,6 +95,7 @@
     navLinks.insertBefore(link, authLink);
   };
   const addProfileLink = () => addLink("profile-nav-link", "profile.html", "My Profile", ["profile.html", "account.html", "career_dna_test.html", "career_dna_result.html"]);
+  const addPortfolioLink = () => addLink("portfolio-nav-link", "my-portfolio.html", "Portfolio", ["my-portfolio.html", "portfolio-builder.html"]);
   const addAdminLink = () => addLink("admin-dashboard-link", "admin-dashboard.html", "Admin Dashboard", ["admin-dashboard.html"]);
   const addSocialLinks = () => {
     if (!navLinks || navLinks.querySelector(".community-dropdown")) return;
@@ -118,6 +119,7 @@
       localStorage.setItem("teenlaunch_user", JSON.stringify(data.user || {}));
       localStorage.setItem("teenlaunch_profile", JSON.stringify(data.profile || {}));
       addSocialLinks();
+      addPortfolioLink();
       addProfileLink();
       if (data.role === "admin") addAdminLink();
     } catch (error) {

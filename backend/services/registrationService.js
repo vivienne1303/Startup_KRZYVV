@@ -1,5 +1,5 @@
 const registrationColumns =
-  "id, user_id, opportunity_id, status, notes, full_name, email, phone_number, date_of_birth, school_name, education_level, portfolio_url, resume_url, motivation, relevant_experience, additional_comments, registered_at, created_at, updated_at, opportunities(id, title, description, category, organizer, location, deadline, start_date, end_date, mode, image_url)";
+  "id, user_id, opportunity_id, status, notes, full_name, email, phone_number, date_of_birth, school_name, education_level, portfolio_url, resume_url, motivation, relevant_experience, additional_comments, registered_at, completion_date, completion_verified, certificate_url, completion_badge, verified_skills, admin_remarks, created_at, updated_at, opportunities(id, title, description, category, organizer, location, deadline, start_date, end_date, mode, image_url)";
 
 const listRegistrations = async (client) => {
   const { data, error } = await client
@@ -46,7 +46,7 @@ const checkRegistration = async (client, opportunityId) => {
 };
 
 const updateRegistration = async (client, id, payload) => {
-  const allowedFields = ["status", "notes", "registered_at"];
+  const allowedFields = ["status", "notes", "registered_at", "completion_date", "completion_verified", "certificate_url", "completion_badge", "verified_skills", "admin_remarks"];
   const updates = {};
 
   allowedFields.forEach((field) => {

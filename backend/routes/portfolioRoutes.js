@@ -1,0 +1,16 @@
+const express = require("express");
+const authMiddleware = require("../middleware/authMiddleware");
+const portfolio = require("../controllers/portfolioController");
+const router = express.Router();
+router.get("/public/:slug", portfolio.getPublic);
+router.use(authMiddleware);
+router.get("/me", portfolio.getMine);
+router.put("/profile", portfolio.updateProfile);
+router.post("/items", portfolio.addAchievement);
+router.put("/items/:id", portfolio.updateAchievement);
+router.delete("/items/:id", portfolio.removeAchievement);
+router.post("/projects", portfolio.createProject);
+router.put("/projects/:id", portfolio.updateProject);
+router.delete("/projects/:id", portfolio.deleteProject);
+router.post("/writing-helper", portfolio.improveText);
+module.exports = router;

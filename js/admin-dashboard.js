@@ -75,7 +75,17 @@
                 <strong>${escapeHtml(registration.full_name || "Applicant")} — ${escapeHtml(registration.opportunities?.title || "Opportunity")}</strong>
                 <span>${escapeHtml(registration.email || "No email")} · ${escapeHtml(registration.school_name || "No school")}</span>
                 <details><summary>View full application</summary><p><b>Phone:</b> ${escapeHtml(registration.phone_number || "—")}</p><p><b>Education:</b> ${escapeHtml(registration.education_level || "—")}</p><p><b>Motivation:</b> ${escapeHtml(registration.motivation || "—")}</p><p><b>Experience:</b> ${escapeHtml(registration.relevant_experience || "—")}</p><p><b>Comments:</b> ${escapeHtml(registration.additional_comments || "—")}</p></details>
-                <label>Status <select data-registration-status="${registration.id}">${["pending", "shortlisted", "accepted", "rejected"].map((status) => `<option value="${status}" ${registration.status === status ? "selected" : ""}>${status[0].toUpperCase() + status.slice(1)}</option>`).join("")}</select></label>
+                <label>Status <select data-registration-status="${registration.id}">${["pending", "accepted", "rejected", "attended", "completed"].map((status) => `<option value="${status}" ${registration.status === status ? "selected" : ""}>${status[0].toUpperCase() + status.slice(1)}</option>`).join("")}</select></label>
+                <details class="verification-editor"><summary>Completion and verification</summary>
+                  <div class="admin-form-grid">
+                    <label>Completion date<input type="date" data-completion-date value="${escapeHtml(registration.completion_date || "")}"></label>
+                    <label>Badge<input type="text" data-completion-badge value="${escapeHtml(registration.completion_badge || "")}" placeholder="Verified participant"></label>
+                    <label>Verified skills<input type="text" data-verified-skills value="${escapeHtml((registration.verified_skills || []).join(", "))}" placeholder="Leadership, Communication"></label>
+                    <label>Certificate URL<input type="url" data-certificate-url value="${escapeHtml(registration.certificate_url || "")}" placeholder="https://"></label>
+                    <label class="admin-checkbox"><input type="checkbox" data-completion-verified ${registration.completion_verified ? "checked" : ""}> Mark completion verified</label>
+                    <label>Admin remarks<textarea data-admin-remarks rows="3">${escapeHtml(registration.admin_remarks || "")}</textarea></label>
+                  </div><button class="btn secondary" type="button" data-save-verification="${registration.id}">Save verification</button>
+                </details>
                 <span>${registration.status || "registered"} · ${formatDate(registration.created_at)}</span>
               </article>
             `
@@ -94,6 +104,22 @@
       } finally {
         select.disabled = false;
       }
+    }));
+    document.querySelectorAll("[data-save-verification]").forEach((button) => button.addEventListener("click", async () => {
+      const item = button.closest(".admin-list-item");
+      button.disabled = true;
+      try {
+        await authFetch(`/admin/registrations/${button.dataset.saveVerification}`, { method: "PUT", body: JSON.stringify({
+          completion_date: item.querySelector("[data-completion-date]").value || null,
+          completion_badge: item.querySelector("[data-completion-badge]").value.trim() || null,
+          verified_skills: item.querySelector("[data-verified-skills]").value.split(",").map((value) => value.trim()).filter(Boolean),
+          certificate_url: item.querySelector("[data-certificate-url]").value.trim() || null,
+          completion_verified: item.querySelector("[data-completion-verified]").checked,
+          admin_remarks: item.querySelector("[data-admin-remarks]").value.trim() || null,
+        }) });
+        setMessage("Completion verification saved.", "success");
+      } catch (error) { setMessage(error.message, "error"); }
+      finally { button.disabled = false; }
     }));
   };
 

@@ -32,4 +32,6 @@ module.exports = {
   supabaseUrl: process.env.SUPABASE_URL,
   supabasePublishableKey: process.env.SUPABASE_PUBLISHABLE_KEY,
   supabaseSecretKey: process.env.SUPABASE_SECRET_KEY,
+  openaiApiKey: process.env.OPENAI_API_KEY || "",
+  openaiModel: process.env.OPENAI_MODEL || "gpt-5.4-mini",
 };
