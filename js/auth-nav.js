@@ -59,6 +59,7 @@
       <a class="${isCurrent("debate.html") ? "active" : ""}" href="${pageHref("debate.html")}" data-i18n="Soft Skills & Debate">Soft Skills &amp; Debate</a>
       <a class="${isCurrent("career-copilot.html", "aiassistant.html") ? "active" : ""}" href="${pageHref("career-copilot.html")}" data-i18n="Career Copilot">Career Copilot</a>
       <a class="${isCurrent("life-planner.html") ? "active" : ""}" href="${pageHref("life-planner.html")}" data-i18n="Life Planner">Life Planner</a>
+      <a class="${isCurrent("help.html") ? "active" : ""}" href="${pageHref("help.html")}">Help</a>
       <a class="auth-link" href="${pageHref("auth.html")}">Login</a>
       <a class="settings-button" href="${pageHref("settings.html")}" aria-label="Settings"><img src="${assetHref("assets/icons/settings.jpg")}" alt="" aria-hidden="true"></a>
       <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>`;
