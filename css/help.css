@@ -18,7 +18,18 @@
 .faq-list summary { cursor: pointer; padding: 20px 32px 20px 0; font-weight: 800; line-height: 1.4; }
 .faq-list p { margin: 0; padding: 0 0 22px; color: var(--muted); line-height: 1.7; }
 .faq-list a { color: var(--accent); }
-.support-card { display: flex; justify-content: space-between; gap: 24px; align-items: center; padding: 32px; }
-.support-card h2 { margin: 8px 0; }
-.support-card p { margin: 0; color: var(--muted); }
+.support-card { display: flex; justify-content: space-between; gap: 32px; align-items: center; padding: clamp(28px, 5vw, 48px); border-color: rgba(20, 77, 156, .28); background: linear-gradient(135deg, rgba(255, 255, 255, .96), rgba(226, 243, 255, .94)); box-shadow: 0 24px 64px rgba(15, 63, 126, .22); }
+.support-card > div { max-width: 760px; }
+.support-card .eyebrow { color: #174f94; text-shadow: none; }
+.support-card h2 { margin: 8px 0 14px; color: #071b50; }
+.support-card p { margin: 0; color: #365477; }
+.support-card strong { color: #102f68; overflow-wrap: anywhere; }
+.support-copy-button { flex: 0 0 auto; min-width: 210px; border: 1px solid #173f84; background: linear-gradient(135deg, #286fda, #173f84); color: #fff; box-shadow: 0 14px 30px rgba(27, 77, 153, .28); }
+.support-copy-button:hover, .support-copy-button:focus-visible { background: linear-gradient(135deg, #1f63c9, #102f68); transform: translateY(-2px); }
+.support-copy-status { min-height: 1.4em; padding-top: 10px; font-weight: 800; color: #12613c !important; }
+html[data-theme="dark"] .support-card { border-color: rgba(53, 230, 255, .24); background: linear-gradient(135deg, rgba(29, 17, 52, .98), rgba(18, 37, 74, .96)); }
+html[data-theme="dark"] .support-card h2, html[data-theme="dark"] .support-card strong { color: #fff; }
+html[data-theme="dark"] .support-card p { color: #d7e6ff; }
+html[data-theme="dark"] .support-card .eyebrow { color: #77ecff; }
+html[data-theme="dark"] .support-copy-status { color: #9ff3c7 !important; }
 @media (max-width: 760px) { .help-main { padding-top: 100px; } .help-hero { grid-template-columns: 1fr; padding-top: 32px; } .support-card { display: grid; } }
