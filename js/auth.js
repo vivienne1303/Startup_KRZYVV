@@ -19,17 +19,22 @@
   };
 
   const showMode = (mode) => {
+    const nextMode = mode === "register" ? "register" : "login";
     tabs.forEach((tab) => {
-      const active = tab.dataset.authTab === mode;
+      const active = tab.dataset.authTab === nextMode;
       tab.classList.toggle("active", active);
       tab.setAttribute("aria-selected", String(active));
+      tab.tabIndex = active ? 0 : -1;
     });
 
     forms.forEach((form) => {
-      form.classList.toggle("active", form.dataset.authForm === mode);
+      const active = form.dataset.authForm === nextMode;
+      form.classList.toggle("active", active);
+      form.hidden = !active;
+      form.setAttribute("aria-hidden", String(!active));
     });
 
-    document.getElementById("authTitle").textContent = mode === "register" ? "Create your account" : "Login to continue";
+    document.getElementById("authTitle").textContent = nextMode === "register" ? "Create your account" : "Login to continue";
     setMessage("", "");
   };
 
@@ -104,8 +109,21 @@
     return returnTo;
   };
 
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => showMode(tab.dataset.authTab));
+  document.querySelector(".auth-tabs").addEventListener("click", (event) => {
+    const tab = event.target.closest("[data-auth-tab]");
+    if (!tab) return;
+    event.preventDefault();
+    showMode(tab.dataset.authTab);
+  });
+
+  document.querySelector(".auth-tabs").addEventListener("keydown", (event) => {
+    if (!["ArrowLeft", "ArrowRight"].includes(event.key)) return;
+    event.preventDefault();
+    const currentIndex = [...tabs].findIndex((tab) => tab.getAttribute("aria-selected") === "true");
+    const direction = event.key === "ArrowRight" ? 1 : -1;
+    const nextTab = tabs[(currentIndex + direction + tabs.length) % tabs.length];
+    showMode(nextTab.dataset.authTab);
+    nextTab.focus();
   });
 
   document.querySelector('[data-auth-form="login"]').addEventListener("submit", async (event) => {

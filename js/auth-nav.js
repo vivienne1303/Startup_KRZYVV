@@ -64,6 +64,16 @@
       <a class="settings-button" href="${pageHref("settings.html")}" aria-label="Settings"><img src="${assetHref("assets/icons/settings.jpg")}" alt="" aria-hidden="true"></a>
       <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>`;
 
+    const dropdowns = navLinks.querySelectorAll(".nav-dropdown");
+    dropdowns.forEach((dropdown) => {
+      dropdown.addEventListener("pointerenter", () => {
+        dropdowns.forEach((other) => {
+          if (other === dropdown || !other.contains(document.activeElement)) return;
+          document.activeElement.blur();
+        });
+      });
+    });
+
     if (!navToggle.parentElement) navbar.appendChild(navToggle);
     if (!navLinks.parentElement) navbar.appendChild(navLinks);
     navbar.querySelectorAll(":scope > .dna-header-link").forEach((link) => link.remove());
@@ -97,6 +107,7 @@
     navLinks.insertBefore(link, authLink);
   };
   const addProfileLink = () => addLink("profile-nav-link", "profile.html", "My Profile", ["profile.html", "account.html", "career_dna_test.html", "career_dna_result.html"]);
+  const addPortfolioLink = () => addLink("portfolio-nav-link", "my-portfolio.html", "My Portfolio", ["my-portfolio.html", "portfolio-builder.html"]);
   const addAdminLink = () => addLink("admin-dashboard-link", "admin-dashboard.html", "Admin Dashboard", ["admin-dashboard.html"]);
 
   const token = localStorage.getItem("teenlaunch_token");
@@ -113,6 +124,7 @@
       localStorage.setItem("teenlaunch_user", JSON.stringify(data.user || {}));
       localStorage.setItem("teenlaunch_profile", JSON.stringify(data.profile || {}));
       addProfileLink();
+      addPortfolioLink();
       if (data.role === "admin") addAdminLink();
     } catch (error) {
       console.warn("Session verification failed; clearing local session.", error);

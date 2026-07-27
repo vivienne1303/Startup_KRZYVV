@@ -168,6 +168,15 @@ const bindOpportunityActions = async () => {
 };
 
 const loadOpportunities = async () => {
+  const grid = document.querySelector("#opportunityGrid");
+  grid.setAttribute("aria-busy", "true");
+  grid.innerHTML = `
+    <div class="opportunity-load-state" role="status">
+      <span class="opportunity-spinner" aria-hidden="true"></span>
+      <strong>Loading verified opportunities...</strong>
+      <p>Checking current deadlines and application details.</p>
+    </div>`;
+  emptyState.style.display = "none";
   try {
     const token = localStorage.getItem("teenlaunch_token");
     if (token) {
@@ -175,19 +184,28 @@ const loadOpportunities = async () => {
       if (sessionResponse.ok) isAdmin = (await sessionResponse.json()).role === "admin";
     }
     const response = await fetch(`${resolveApiBase()}/opportunities`);
-    if (!response.ok) return;
+    if (!response.ok) throw new Error("Verified opportunities could not be loaded.");
     const { opportunities } = await response.json();
-    if (!Array.isArray(opportunities) || !opportunities.length) throw new Error("No opportunities returned");
-    document.querySelector("#opportunityGrid").innerHTML = opportunities.map(opportunityMarkup).join("");
+    if (!Array.isArray(opportunities)) throw new Error("The opportunity response was invalid.");
+    if (!opportunities.length) {
+      grid.innerHTML = "";
+      emptyState.style.display = "block";
+      emptyState.textContent = "No verified opportunities are open right now. Please check again soon.";
+      return;
+    }
+    grid.innerHTML = opportunities.map(opportunityMarkup).join("");
     await loadRecommendationPreview();
     cards = document.querySelectorAll("#opportunityGrid .opportunity-card");
     await bindOpportunityActions();
     filterCards();
   } catch (_) {
-    document.querySelector("#opportunityGrid").innerHTML = "";
+    grid.innerHTML = "";
     cards = document.querySelectorAll("#opportunityGrid .opportunity-card");
     emptyState.style.display = "block";
-    emptyState.textContent = "Verified opportunities could not be loaded right now. Please try again later.";
+    emptyState.innerHTML = `Verified opportunities could not be loaded right now. <button class="btn secondary opportunity-retry" type="button">Try again</button>`;
+    emptyState.querySelector(".opportunity-retry").addEventListener("click", loadOpportunities, { once: true });
+  } finally {
+    grid.removeAttribute("aria-busy");
   }
 };
 
