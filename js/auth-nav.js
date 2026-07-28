@@ -137,17 +137,36 @@
 
   authLink.textContent = "Logout";
   authLink.classList.add("is-logout");
-  authLink.href = "#logout";
-  verifyRole();
-  authLink.addEventListener("click", async (event) => {
+  authLink.href = `${pageHref("auth.html")}?logout=1`;
+  authLink.onclick = (event) => {
     event.preventDefault();
+    event.stopImmediatePropagation();
+    clearSession();
+    window.location.replace(`${pageHref("auth.html")}?logout=1`);
+    return false;
+  };
+  verifyRole();
+  const logout = async (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    authLink.setAttribute("aria-disabled", "true");
+    authLink.textContent = "Logging out...";
+    clearSession();
     try {
-      await fetch(`${API_BASE}/auth/logout`, { method: "POST", headers: { Authorization: `Bearer ${token}` } });
+      await Promise.race([
+        fetch(`${API_BASE}/auth/logout`, { method: "POST", headers: { Authorization: `Bearer ${token}` } }),
+        new Promise((resolve) => window.setTimeout(resolve, 1500)),
+      ]);
     } catch (error) {
-      console.warn("Logout request failed; clearing local session.", error);
+      console.warn("Logout request failed; local session was still cleared.", error);
     } finally {
-      clearSession();
-      window.location.href = authLink.dataset.logoutRedirect || homeHref;
+      window.location.replace(authLink.dataset.logoutRedirect || homeHref);
     }
-  });
+  };
+  authLink.addEventListener("click", logout);
+  document.addEventListener("click", (event) => {
+    const logoutLink = event.target.closest(".auth-link.is-logout");
+    if (!logoutLink || logoutLink === authLink) return;
+    logout(event);
+  }, true);
 })();

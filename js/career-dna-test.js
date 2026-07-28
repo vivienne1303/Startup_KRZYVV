@@ -68,6 +68,7 @@
 
   const selectAnswer = (value, autoAdvance) => {
     answers[current] = value;
+    message.textContent = "";
     saveProgress();
     render();
     if (autoAdvance && current < 9) window.setTimeout(() => { current += 1; saveProgress(); render(); }, 220);

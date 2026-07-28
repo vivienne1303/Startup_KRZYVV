@@ -5,6 +5,12 @@
   const profileKey = "teenlaunch_profile";
 
   const params = new URLSearchParams(window.location.search);
+  if (params.get("logout") === "1") {
+    localStorage.removeItem(tokenKey);
+    localStorage.removeItem(userKey);
+    localStorage.removeItem(profileKey);
+    window.history.replaceState({}, "", window.location.pathname);
+  }
   const initialMode = params.get("mode") === "register" ? "register" : "login";
   const returnTo = params.get("returnTo") || "../index.html";
 

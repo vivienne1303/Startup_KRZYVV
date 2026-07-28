@@ -19,10 +19,14 @@ const updateProfile = asyncHandler(async (req, res) => {
     throw new HttpError(403, "Role cannot be updated through this endpoint");
   }
 
-  const { data, error } = await updateOwnProfile(req.supabase, req.user.id, req.body);
+  const { data, error } = await updateOwnProfile(req.app.locals.supabaseAdmin, req.user.id, req.body);
 
   if (error) {
     throw new HttpError(400, error.message, error.details);
+  }
+
+  if (!data) {
+    throw new HttpError(500, "Profile update did not return the saved profile");
   }
 
   res.json({ profile: data });

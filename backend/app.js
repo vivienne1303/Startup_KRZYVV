@@ -54,7 +54,13 @@ app.use(express.json({ limit: "2mb" }));
 app.use(express.urlencoded({ extended: true, limit: "2mb" }));
 
 app.use("/api", apiRoutes);
-app.use(express.static(path.join(__dirname, "..")));
+app.use(express.static(path.join(__dirname, ".."), {
+  etag: false,
+  lastModified: false,
+  setHeaders(res) {
+    res.setHeader("Cache-Control", "no-store");
+  },
+}));
 
 app.use(notFoundHandler);
 app.use(errorHandler);

@@ -91,6 +91,57 @@
   }
 }
 
+/* Keep application controls compact and prevent intrinsic content from
+   overflowing cards at tablet, split-screen and browser-zoom widths. */
+@media (max-width: 1180px) {
+  .btn {
+    min-height: 48px;
+    padding: 0 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+}
+
+main,
+section,
+article,
+form,
+fieldset,
+label,
+.card {
+  min-width: 0;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+}
+
+img,
+video,
+iframe,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+button,
+label,
+legend,
+dt,
+dd,
+li {
+  overflow-wrap: anywhere;
+}
+
 body {
   background:
     radial-gradient(circle at 92% 34%, rgba(86, 181, 255, 0.34), transparent 24rem),
@@ -1214,4 +1265,22 @@ html[data-theme="dark"] .copilot-bubble .opportunity-references a {
 
 html[data-theme="dark"] .copilot-bubble .opportunity-references a small {
   color: var(--muted);
+}
+
+/* Final responsive guard: the earlier tablet presentation treatment is
+   intentionally dramatic for the homepage, but application pages also share
+   `.btn`. Keep ordinary controls usable when the viewport is split or zoomed. */
+@media (max-width: 1180px) {
+  body:not(:has(#home.hero)) .btn {
+    min-height: 48px;
+    padding: 0 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+}
+
+.nav-toggle {
+  min-width: 44px;
+  min-height: 44px;
 }
