@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="http://127.0.0.1:4173/pages/">
+  <script>localStorage.setItem("teenlaunch_token","wireframe-preview");localStorage.setItem("teenlaunch_user",JSON.stringify({id:"wireframe-user",email:"student@teenlaunch.app",name:"Jennie Tan",role:"student"}));</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="TeenLaunch | AI Chatbot">TeenLaunch | AI Chatbot</title>
+  <script src="../js/theme-mode.js"></script>
+  <script src="../js/api-config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/aiassistant.css">
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/settings.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/images/light_logo.png" alt="" aria-hidden="true"><span>TeenLaunch<small data-i18n="AI learning co-pilot">AI learning co-pilot</small></span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="../index.html" data-i18n="Home">Home</a>
+        <a href="opportunities.html" data-i18n="Opportunities">Opportunities</a>
+        <div class="nav-dropdown">
+          <a class="nav-trigger" href="competitions.html" data-i18n="Competitions">Competitions</a>
+          <div class="dropdown-menu" aria-label="Competition categories">
+            <a href="competition_academic.html" data-i18n="Academic">Academic</a>
+            <a href="competition_non-academic.html" data-i18n="Non-Academic">Non-Academic</a>
+          </div>
+        </div>
+        <a href="resources.html" data-i18n="Resources">Resources</a>
+        <a href="debate.html" data-i18n="Soft Skills & Debate">Soft Skills & Debate</a>
+        <a class="active" href="aiassistant.html" data-i18n="AI Chatbot">AI Chatbot</a>
+        <a class="auth-link" href="auth.html">Login</a>
+        <a class="settings-button" href="settings.html" aria-label="Settings">
+          <img src="../assets/icons/settings.jpg" alt="" aria-hidden="true">
+        </a>
+        <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">ä¸­æ–‡</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="reveal">
+        <p class="eyebrow" data-i18n="AI Chatbot">AI Chatbot</p>
+        <h1 data-i18n="Ask for opportunities, competitions, resources, and learning materials.">Ask for opportunities, competitions, resources, and learning materials.</h1>
+        <p data-i18n="Use the TeenLaunch chatbot mockup to explore ideas, compare deadlines, practise pitches, and get student-friendly guidance.">Use the TeenLaunch chatbot mockup to explore ideas, compare deadlines, practise pitches, and get student-friendly guidance.</p>
+      </div>
+      <div class="assistant-panel reveal">
+        <div class="assistant-header"><span class="pulse"></span><strong data-i18n="TeenLaunch Chatbot">TeenLaunch Chatbot</strong><small data-i18n="mock chat">mock chat</small></div>
+        <div class="chat-log" id="chatLog">
+          <div class="bubble ai" data-i18n="Hi. Ask me for startup ideas, pitch tips, debate feedback, or opportunity matches.">Hi. Ask me for startup ideas, pitch tips, debate feedback, or opportunity matches.</div>
+        </div>
+        <form class="chat-form" id="chatForm">
+          <input id="chatInput" type="text" placeholder="Ask TeenLaunch AI..." data-i18n-placeholder="Ask TeenLaunch AI..." autocomplete="off">
+          <button class="btn primary" type="submit" data-i18n="Send">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="What it helps with">What it helps with</p>
+        <h2 data-i18n="Guided support without making things complicated.">Guided support without making things complicated.</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature reveal"><h3 data-i18n="Opportunity Matching">Opportunity Matching</h3><p data-i18n="Find programmes based on age, topic, deadline, and confidence level.">Find programmes based on age, topic, deadline, and confidence level.</p></article>
+        <article class="feature reveal"><h3 data-i18n="Pitch Feedback">Pitch Feedback</h3><p data-i18n="Improve problem statements, slides, hooks, demo scripts, and final asks.">Improve problem statements, slides, hooks, demo scripts, and final asks.</p></article>
+        <article class="feature reveal"><h3 data-i18n="Debate Coaching">Debate Coaching</h3><p data-i18n="Get structure ideas for arguments, rebuttals, motions, and speaking drills.">Get structure ideas for arguments, rebuttals, motions, and speaking drills.</p></article>
+        <article class="feature reveal"><h3 data-i18n="Learning Materials">Learning Materials</h3><p data-i18n="Find guides, checklists, workshop notes, debate resources, and pitch practice material.">Find guides, checklists, workshop notes, debate resources, and pitch practice material.</p></article>
+      </div>
+    </section>
+
+    <section class="section prompt-section">
+      <div class="prompt-card reveal">
+        <p class="eyebrow" data-i18n="Prompt library">Prompt library</p>
+        <h2 data-i18n="Tap a starter prompt.">Tap a starter prompt.</h2>
+        <button class="prompt-btn" data-i18n="Find beginner startup opportunities for a 15-year-old.">Find beginner startup opportunities for a 15-year-old.</button>
+        <button class="prompt-btn" data-i18n="Give me a 60-second pitch structure.">Give me a 60-second pitch structure.</button>
+        <button class="prompt-btn" data-i18n="Generate a debate motion about AI in schools.">Generate a debate motion about AI in schools.</button>
+        <button class="prompt-btn" data-i18n="Create a 7-day confidence practice plan.">Create a 7-day confidence practice plan.</button>
+      </div>
+      <div class="learning-card reveal">
+        <p class="eyebrow" data-i18n="Future-ready learning">Future-ready learning</p>
+        <h2 data-i18n="Personalized tracks">Personalized tracks</h2>
+        <div class="track"><span data-i18n="Entrepreneurship">Entrepreneurship</span><strong>72%</strong></div>
+        <div class="track"><span data-i18n="Debate Skills">Debate Skills</span><strong>58%</strong></div>
+        <div class="track"><span data-i18n="AI Tools">AI Tools</span><strong>81%</strong></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 TeenLaunch</p>
+    <a href="opportunities.html" data-i18n="Find opportunities">Find opportunities</a>
+    <a href="mailto:vivienne@teenlaunch.app" data-i18n="Contact">Contact</a>
+  </footer>
+  
+  <script src="../js/auth-nav.js"></script>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/aiassistant.js"></script>
+</body>
+</html>
+

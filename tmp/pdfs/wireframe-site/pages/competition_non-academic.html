@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="http://127.0.0.1:4173/pages/">
+  <script>localStorage.setItem("teenlaunch_token","wireframe-preview");localStorage.setItem("teenlaunch_user",JSON.stringify({id:"wireframe-user",email:"student@teenlaunch.app",name:"Jennie Tan",role:"student"}));</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="TeenLaunch | Non-Academic Competitions">TeenLaunch | Non-Academic Competitions</title>
+  <script src="../js/theme-mode.js"></script>
+  <script src="../js/api-config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/competitions.css">
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/settings.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/images/light_logo.png" alt="" aria-hidden="true"><span>TeenLaunch<small data-i18n="Competition mode">Competition mode</small></span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="../index.html" data-i18n="Home">Home</a>
+        <a href="opportunities.html" data-i18n="Opportunities">Opportunities</a>
+        <div class="nav-dropdown active">
+          <a class="nav-trigger" href="competitions.html" data-i18n="Competitions">Competitions</a>
+          <div class="dropdown-menu" aria-label="Competition categories">
+            <a href="competition_academic.html" data-i18n="Academic">Academic</a>
+            <a href="competition_non-academic.html" data-i18n="Non-Academic">Non-Academic</a>
+          </div>
+        </div>
+        <a href="resources.html" data-i18n="Resources">Resources</a>
+        <a href="debate.html" data-i18n="Soft Skills & Debate">Soft Skills & Debate</a>
+        <a href="aiassistant.html" data-i18n="AI Chatbot">AI Chatbot</a>
+        <a class="auth-link" href="auth.html">Login</a>
+        <a class="settings-button" href="settings.html" aria-label="Settings">
+          <img src="../assets/icons/settings.jpg" alt="" aria-hidden="true">
+        </a>
+        <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">ä¸­æ–‡</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="reveal">
+        <p class="eyebrow" data-i18n="Competitions (Non-Academic)">Competitions (Non-Academic)</p>
+        <h1 data-i18n="Startup pitch, debate, public speaking, and innovation challenges.">Startup pitch, debate, public speaking, and innovation challenges.</h1>
+        <p data-i18n="Find practical competitions where teens can pitch ideas, speak with confidence, build prototypes, and learn by doing.">Find practical competitions where teens can pitch ideas, speak with confidence, build prototypes, and learn by doing.</p>
+      </div>
+      <div class="countdown-card reveal">
+        <span data-i18n="Next deadline">Next deadline</span>
+        <strong id="countdown" data-deadline="2026-06-28T23:59:00">Loading...</strong>
+        <p data-i18n="Youth Startup Pitch Challenge registration closes soon.">Youth Startup Pitch Challenge registration closes soon.</p>
+      </div>
+    </section>
+
+    <section class="section" id="non-academic">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="Non-Academic">Non-Academic</p>
+        <h2 data-i18n="Build confidence through real-world challenges.">Build confidence through real-world challenges.</h2>
+      </div>
+      <div class="competition-grid">
+        <article class="competition-card reveal">
+          <span class="tag" data-i18n="Startup Pitch Competitions">Startup Pitch Competitions</span>
+          <h3 data-i18n="Youth Startup Pitch Challenge">Youth Startup Pitch Challenge</h3>
+          <p data-i18n="Rules: 3-minute pitch, 2-minute Q&amp;A, solo or teams up to 4.">Rules: 3-minute pitch, 2-minute Q&A, solo or teams up to 4.</p>
+          <ul>
+            <li>Timeline: Jul 1 briefing, Jul 20 finals</li>
+            <li>Prize pool: $5,000</li>
+            <li><a href="#">Registration link</a></li>
+          </ul>
+          <button class="btn secondary reminder" data-event="Youth Startup Pitch Challenge" data-i18n="Set Reminder">Set Reminder</button>
+        </article>
+        <article class="competition-card reveal">
+          <span class="tag" data-i18n="Debate Competitions">Debate Competitions</span>
+          <h3 data-i18n="Future Voices Debate Cup">Future Voices Debate Cup</h3>
+          <p data-i18n="Rules: prepared and impromptu rounds using school-friendly motions.">Rules: prepared and impromptu rounds using school-friendly motions.</p>
+          <ul>
+            <li>Timeline: Sep 5 qualifiers, Sep 19 finals</li>
+            <li>Prize pool: trophies and mentorship</li>
+            <li><a href="#">Registration link</a></li>
+          </ul>
+          <button class="btn secondary reminder" data-event="Future Voices Debate Cup" data-i18n="Set Reminder">Set Reminder</button>
+        </article>
+        <article class="competition-card reveal">
+          <span class="tag" data-i18n="Public Speaking Competitions">Public Speaking Competitions</span>
+          <h3 data-i18n="Speak Up Finals">Speak Up Finals</h3>
+          <p data-i18n="Rules: 4-minute prepared speech and 1-minute impromptu response.">Rules: 4-minute prepared speech and 1-minute impromptu response.</p>
+          <ul>
+            <li>Timeline: Aug 12 submissions, Aug 28 finals</li>
+            <li>Prize pool: coaching and certificates</li>
+            <li><a href="#">Registration link</a></li>
+          </ul>
+          <button class="btn secondary reminder" data-event="Speak Up Finals" data-i18n="Set Reminder">Set Reminder</button>
+        </article>
+        <article class="competition-card reveal">
+          <span class="tag" data-i18n="Innovation Challenges">Innovation Challenges</span>
+          <h3 data-i18n="Community Innovation Challenge">Community Innovation Challenge</h3>
+          <p data-i18n="Rules: submit a prototype, impact plan, and short demo video.">Rules: submit a prototype, impact plan, and short demo video.</p>
+          <ul>
+            <li>Timeline: Sep 1 proposal, Oct 10 showcase</li>
+            <li>Prize pool: seed grants and mentor access</li>
+            <li><a href="#">Registration link</a></li>
+          </ul>
+          <button class="btn secondary reminder" data-event="Community Innovation Challenge" data-i18n="Set Reminder">Set Reminder</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section calendar-section">
+      <div class="calendar reveal">
+        <p class="eyebrow" data-i18n="Upcoming events calendar">Upcoming events calendar</p>
+        <h2 data-i18n="July to September">July to September</h2>
+        <div class="calendar-row"><span>Jul 01</span><p data-i18n="Startup Pitch briefing">Startup Pitch briefing</p></div>
+        <div class="calendar-row"><span>Jul 20</span><p data-i18n="Pitch finals and demo day">Pitch finals and demo day</p></div>
+        <div class="calendar-row"><span>Aug 28</span><p>Speak Up Finals</p></div>
+        <div class="calendar-row"><span>Sep 05</span><p data-i18n="Debate Cup qualifiers">Debate Cup qualifiers</p></div>
+      </div>
+      <div class="reminders reveal">
+        <p class="eyebrow" data-i18n="Reminders">Reminders</p>
+        <h2 data-i18n="Your list">Your list</h2>
+        <ul id="reminderList">
+          <li data-i18n="No reminders yet. Add one from a competition card.">No reminders yet. Add one from a competition card.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 TeenLaunch</p>
+    <a href="competitions.html" data-i18n="All competitions">All competitions</a>
+    <a href="competition_academic.html" data-i18n="Academic">Academic</a>
+    <a href="mailto:vivienne@teenlaunch.app" data-i18n="Contact">Contact</a>
+  </footer>
+  
+  <script src="../js/auth-nav.js"></script>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/competitions.js"></script>
+</body>
+</html>
+

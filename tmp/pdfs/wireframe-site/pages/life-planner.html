@@ -1,17 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+  <base href="http://127.0.0.1:4173/pages/">
+  <script>localStorage.setItem("teenlaunch_token","wireframe-preview");localStorage.setItem("teenlaunch_user",JSON.stringify({id:"wireframe-user",email:"student@teenlaunch.app",name:"Jennie Tan",role:"student"}));</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TeenLaunch | Life Planner</title>
   <script src="../js/theme-mode.js"></script>
   <script src="../js/api-config.js"></script>
-  <script src="../js/auth-guard.js"></script>
+  
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../css/theme.css">
-  <link rel="stylesheet" href="../css/settings.css">
-  <link rel="stylesheet" href="../css/life-planner.css?v=20260730">
+  <link rel="stylesheet" href="../css/life-planner.css?v=20260728">
 </head>
 <body>
   <header class="site-header"><nav class="navbar" aria-label="Main navigation"><a class="brand" href="../index.html"><img class="brand-logo" src="../assets/images/light_logo.png" alt=""><span>TeenLaunch<small>Future founders start here</small></span></a><div class="nav-links"><a class="auth-link" href="auth.html">Login</a></div></nav></header>
@@ -21,10 +22,10 @@
       <button class="btn primary" type="button" data-generate-plan>Suggest my week</button>
     </section>
 
-    <p class="planner-notice" data-planner-notice aria-live="polite">Loading your planner…</p>
+    <p class="planner-notice" data-planner-notice aria-live="polite">Loading your plannerâ€¦</p>
     <section data-planner-content hidden>
       <div class="planner-toolbar">
-        <div class="week-controls"><button type="button" class="icon-button" data-week-previous aria-label="Previous week">←</button><button type="button" class="btn secondary" data-week-today>This week</button><button type="button" class="icon-button" data-week-next aria-label="Next week">→</button></div>
+        <div class="week-controls"><button type="button" class="icon-button" data-week-previous aria-label="Previous week">â†</button><button type="button" class="btn secondary" data-week-today>This week</button><button type="button" class="icon-button" data-week-next aria-label="Next week">â†’</button></div>
         <h2 data-week-label></h2>
         <button class="btn secondary" type="button" data-toggle-settings>Planning preferences</button>
       </div>
@@ -50,7 +51,7 @@
           <form class="task-form" data-task-form>
             <div class="section-heading"><div><p class="eyebrow">Add to planner</p><h2 data-task-form-title>New task</h2></div><button type="button" class="text-button" data-cancel-edit hidden>Cancel</button></div>
             <input name="task_id" type="hidden">
-            <label>Title<input name="title" maxlength="120" required placeholder="Revision, CCA, assignment…"></label>
+            <label>Title<input name="title" maxlength="120" required placeholder="Revision, CCA, assignmentâ€¦"></label>
             <div class="two-fields"><label>Category<select name="category"><option value="school">School</option><option value="study">Study</option><option value="cca">CCA</option><option value="tuition">Tuition</option><option value="opportunity">Opportunity</option><option value="personal">Personal</option></select></label><label>Priority<select name="priority"><option value="low">Low</option><option value="medium" selected>Medium</option><option value="high">High</option></select></label></div>
             <label>Notes<textarea name="description" rows="2" maxlength="1000"></textarea></label>
             <div class="two-fields"><label>Start<input name="start_time" type="datetime-local"></label><label>End<input name="end_time" type="datetime-local"></label></div>
@@ -77,3 +78,4 @@
   <script src="../js/auth-nav.js?v=20260728"></script><script src="../js/i18n.js"></script><script src="../js/life-planner.js"></script>
 </body>
 </html>
+

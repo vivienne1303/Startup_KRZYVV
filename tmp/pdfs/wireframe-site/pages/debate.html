@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="http://127.0.0.1:4173/pages/">
+  <script>localStorage.setItem("teenlaunch_token","wireframe-preview");localStorage.setItem("teenlaunch_user",JSON.stringify({id:"wireframe-user",email:"student@teenlaunch.app",name:"Jennie Tan",role:"student"}));</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="TeenLaunch | Soft Skills & Debate">TeenLaunch | Soft Skills & Debate</title>
+  <script src="../js/theme-mode.js"></script>
+  <script src="../js/api-config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/debate.css">
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/settings.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/images/light_logo.png" alt="" aria-hidden="true"><span>TeenLaunch<small data-i18n="Soft skills lab">Soft skills lab</small></span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="../index.html" data-i18n="Home">Home</a>
+        <a href="opportunities.html" data-i18n="Opportunities">Opportunities</a>
+        <div class="nav-dropdown">
+          <a class="nav-trigger" href="competitions.html" data-i18n="Competitions">Competitions</a>
+          <div class="dropdown-menu" aria-label="Competition categories">
+            <a href="competition_academic.html" data-i18n="Academic">Academic</a>
+            <a href="competition_non-academic.html" data-i18n="Non-Academic">Non-Academic</a>
+          </div>
+        </div>
+        <a href="resources.html" data-i18n="Resources">Resources</a>
+        <a class="active" href="debate.html" data-i18n="Soft Skills & Debate">Soft Skills & Debate</a>
+        <a href="aiassistant.html" data-i18n="AI Chatbot">AI Chatbot</a>
+        <a class="auth-link" href="auth.html">Login</a>
+        <a class="settings-button" href="settings.html" aria-label="Settings">
+          <img src="../assets/icons/settings.jpg" alt="" aria-hidden="true">
+        </a>
+        <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">ä¸­æ–‡</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="reveal">
+        <p class="eyebrow" data-i18n="Soft Skills & Debate">Soft Skills & Debate</p>
+        <h1 data-i18n="Speak. Think. Lead.">Speak. Think. Lead.</h1>
+        <p data-i18n="Build arguments, practice rebuttals, sharpen critical thinking, and grow into the kind of speaker people remember.">Build arguments, practice rebuttals, sharpen critical thinking, and grow into the kind of speaker people remember.</p>
+      </div>
+      <div class="timer-card reveal">
+        <p class="eyebrow" data-i18n="Debate timer">Debate timer</p>
+        <div class="timer-display" id="timerDisplay">03:00</div>
+        <label><span data-i18n="Speech minutes">Speech minutes</span> <input id="minutesInput" type="number" min="1" max="8" value="3"></label>
+        <label><span data-i18n="Speaker round">Speaker round</span> <select id="roundSelect"><option data-i18n="Prime Minister">Prime Minister</option><option data-i18n="Opposition Leader">Opposition Leader</option><option data-i18n="Rebuttal Speaker">Rebuttal Speaker</option><option data-i18n="Reply Speech">Reply Speech</option></select></label>
+        <div class="timer-actions">
+          <button class="btn primary" id="startTimer" data-i18n="Start">Start</button>
+          <button class="btn secondary" id="pauseTimer" data-i18n="Pause">Pause</button>
+          <button class="btn secondary" id="resetTimer" data-i18n="Reset">Reset</button>
+        </div>
+        <p class="mode-label" id="modeLabel" data-i18n="Practice mode ready.">Practice mode ready.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="Learn the craft">Learn the craft</p>
+        <h2 data-i18n="Training blocks for stronger thinking, speaking, and leadership.">Training blocks for stronger thinking, speaking, and leadership.</h2>
+      </div>
+      <div class="skill-grid">
+        <article class="skill reveal"><h3 data-i18n="Debate Basics">Debate Basics</h3><p data-i18n="Learn roles, structures, motions, points of information, and speaker duties.">Learn roles, structures, motions, points of information, and speaker duties.</p></article>
+        <article class="skill reveal"><h3 data-i18n="Argument Building">Argument Building</h3><p data-i18n="Use claim, reason, evidence, impact, and link-back to make points land.">Use claim, reason, evidence, impact, and link-back to make points land.</p></article>
+        <article class="skill reveal"><h3 data-i18n="Rebuttal Techniques">Rebuttal Techniques</h3><p data-i18n="Spot weak assumptions, compare impacts, and respond without sounding defensive.">Spot weak assumptions, compare impacts, and respond without sounding defensive.</p></article>
+        <article class="skill reveal"><h3 data-i18n="Public Speaking Tips">Public Speaking Tips</h3><p data-i18n="Use pacing, pauses, posture, voice, and eye contact to sound confident.">Use pacing, pauses, posture, voice, and eye contact to sound confident.</p></article>
+        <article class="skill reveal"><h3 data-i18n="Critical Thinking Exercises">Critical Thinking Exercises</h3><p data-i18n="Practice weighing trade-offs, challenging assumptions, and ranking arguments.">Practice weighing trade-offs, challenging assumptions, and ranking arguments.</p></article>
+        <article class="skill reveal"><h3 data-i18n="Speaking Challenges">Speaking Challenges</h3><p data-i18n="Complete short daily drills for clarity, confidence, pace, and persuasive delivery.">Complete short daily drills for clarity, confidence, pace, and persuasive delivery.</p></article>
+        <article class="skill reveal"><h3 data-i18n="Mock Debate Activities">Mock Debate Activities</h3><p data-i18n="Run mini rounds with roles, motions, prep time, speeches, and reflection prompts.">Run mini rounds with roles, motions, prep time, speeches, and reflection prompts.</p></article>
+      </div>
+    </section>
+
+    <section class="section practice-section">
+      <div class="practice-card reveal">
+        <p class="eyebrow" data-i18n="Practice area">Practice area</p>
+        <h2 id="motionText" data-i18n="This house believes schools should teach entrepreneurship.">This house believes schools should teach entrepreneurship.</h2>
+        <button class="btn primary" id="newMotion" data-i18n="Generate Random Motion">Generate Random Motion</button>
+      </div>
+      <div class="feedback-card reveal">
+        <p class="eyebrow" data-i18n="AI Feedback Assistant">AI Feedback Assistant</p>
+        <div class="message" data-i18n="Try giving one clear example after your strongest argument.">Try giving one clear example after your strongest argument.</div>
+        <div class="message alt" data-i18n="Your rebuttal is stronger when you compare impacts directly.">Your rebuttal is stronger when you compare impacts directly.</div>
+      </div>
+    </section>
+
+    <section class="section resources-grid">
+      <article class="resource reveal"><h3 data-i18n="Debate Resources">Debate Resources</h3><p data-i18n="Formats, rules, judging criteria, team roles, and sample speeches in one place.">Formats, rules, judging criteria, team roles, and sample speeches in one place.</p></article>
+      <article class="resource reveal"><h3 data-i18n="Debate Topics">Debate Topics</h3><p data-i18n="School-friendly motions about technology, education, climate, media, and leadership.">School-friendly motions about technology, education, climate, media, and leadership.</p></article>
+      <article class="resource reveal"><h3 data-i18n="Mini Quizzes">Mini Quizzes</h3><p data-i18n="Check your understanding of argument structure, rebuttals, weighing, and delivery.">Check your understanding of argument structure, rebuttals, weighing, and delivery.</p></article>
+      <article class="resource reveal"><h3 data-i18n="Skill Badges">Skill Badges</h3><p data-i18n="Earn badges for first speech, rebuttal practice, motion mastery, and mock debate rounds.">Earn badges for first speech, rebuttal practice, motion mastery, and mock debate rounds.</p></article>
+    </section>
+
+    <section class="section progress-grid">
+      <div class="quiz reveal">
+        <p class="eyebrow" data-i18n="Mini quiz">Mini quiz</p>
+        <h2 data-i18n="What should a strong argument include?">What should a strong argument include?</h2>
+        <button class="quiz-option" data-i18n="Claim, reasoning, evidence, impact">Claim, reasoning, evidence, impact</button>
+        <button class="quiz-option" data-i18n="Only a loud voice">Only a loud voice</button>
+        <button class="quiz-option" data-i18n="A long quote with no explanation">A long quote with no explanation</button>
+        <p id="quizResult"></p>
+      </div>
+      <div class="progress reveal">
+        <p class="eyebrow" data-i18n="Progress tracking">Progress tracking</p>
+        <h2><span data-i18n="Practice streak:">Practice streak:</span> <span id="streak">4</span> <span data-i18n="days">days</span></h2>
+        <div class="badges">
+          <span data-i18n="First Speech">First Speech</span>
+          <span data-i18n="Rebuttal Rookie">Rebuttal Rookie</span>
+          <span data-i18n="3 Exercises Done">3 Exercises Done</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 TeenLaunch</p>
+    <a href="competitions.html" data-i18n="Find competitions">Find competitions</a>
+    <a href="mailto:vivienne@teenlaunch.app" data-i18n="Contact">Contact</a>
+  </footer>
+  
+  <script src="../js/auth-nav.js"></script>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/debate.js"></script>
+</body>
+</html>
+

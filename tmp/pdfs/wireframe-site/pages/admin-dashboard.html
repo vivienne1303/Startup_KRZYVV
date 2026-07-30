@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="http://127.0.0.1:4173/pages/">
+  <script>localStorage.setItem("teenlaunch_token","wireframe-preview");localStorage.setItem("teenlaunch_user",JSON.stringify({id:"wireframe-user",email:"student@teenlaunch.app",name:"Jennie Tan",role:"student"}));</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeenLaunch | Admin Dashboard</title>
+  <script src="../js/theme-mode.js"></script>
+  <script src="../js/api-config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/settings.css">
+  <link rel="stylesheet" href="../css/opportunity-scout.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/images/light_logo.png" alt="" aria-hidden="true"><span>TeenLaunch<small>Admin control centre</small></span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="opportunities.html">Opportunities</a>
+        <a href="resources.html">Resources</a>
+        <a href="debate.html">Soft Skills & Debate</a>
+        <a href="aiassistant.html">AI Chatbot</a>
+        <a class="admin-dashboard-link active" href="admin-dashboard.html">Admin Dashboard</a>
+        <a class="auth-link" href="auth.html">Login</a>
+        <a class="settings-button" href="settings.html" aria-label="Settings">
+          <img src="../assets/icons/settings.jpg" alt="" aria-hidden="true">
+        </a>
+        <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">ä¸­æ–‡</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section settings-hero admin-dashboard">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Admin Dashboard</p>
+        <h1>TeenLaunch platform overview.</h1>
+      </div>
+
+      <p class="account-message" data-admin-message aria-live="polite">Checking admin access...</p>
+
+      <div class="admin-stats" data-admin-content hidden>
+        <article>
+          <span>Total users</span>
+          <strong data-stat="totalUsers">0</strong>
+        </article>
+        <article>
+          <span>Total opportunities</span>
+          <strong data-stat="totalOpportunities">0</strong>
+        </article>
+        <article>
+          <span>Total registrations</span>
+          <strong data-stat="totalRegistrations">0</strong>
+        </article>
+        <article>
+          <span>Career DNA submissions</span>
+          <strong data-stat="totalCareerDnaResults">0</strong>
+        </article>
+      </div>
+
+      <div class="admin-actions reveal" data-admin-content hidden>
+        <button class="btn primary" type="button" data-admin-refresh>Refresh Data</button>
+        <a class="btn secondary" href="opportunities.html">Manage Opportunities</a>
+        <a class="btn secondary" href="#registrations">Manage Registrations</a>
+        <a class="btn secondary" href="#career-dna">View Career DNA Results</a>
+      </div>
+
+      <section class="admin-panel admin-opportunity-panel reveal" data-admin-content hidden>
+        <div class="admin-panel-heading">
+          <h2 data-opportunity-form-title>Add opportunity</h2>
+          <span>Create a published opportunity for users</span>
+        </div>
+        <form class="admin-opportunity-form" data-opportunity-form>
+          <fieldset class="admin-category-field">
+            <legend>Categories <small>Select one or more</small></legend>
+            <details class="admin-category-dropdown">
+              <summary data-category-summary>Select categories</summary>
+              <div class="admin-category-options">
+                <label><input type="checkbox" name="categories" value="Youth Entrepreneurship"> Youth Entrepreneurship</label>
+                <label><input type="checkbox" name="categories" value="Innovation Workshops"> Innovation Workshops</label>
+                <label><input type="checkbox" name="categories" value="Internships"> Internships</label>
+                <label><input type="checkbox" name="categories" value="Startup Programmes"> Startup Programmes</label>
+                <label><input type="checkbox" name="categories" value="Leadership Camps"> Leadership Camps</label>
+                <label><input type="checkbox" name="categories" value="Competitions"> Competitions</label>
+              </div>
+            </details>
+          </fieldset>
+          <label class="admin-title-field">
+            <span class="admin-field-heading"><strong>Title</strong><small aria-hidden="true">&nbsp;</small></span>
+            <input type="text" name="title" placeholder="Startup Basics Cohort" data-i18n-placeholder="Startup Basics Cohort" required>
+          </label>
+          <label class="admin-wide">
+            Description
+            <textarea name="description" rows="4" placeholder="A guided online programme covering ideation, customer research, simple finance, and pitching." data-i18n-placeholder="A guided online programme covering ideation, customer research, simple finance, and pitching." required></textarea>
+          </label>
+          <label class="admin-wide">
+            Skills <small>Separate skills with commas</small>
+            <input type="text" name="skills" placeholder="Communication, pitching, teamwork" data-i18n-placeholder="Communication, pitching, teamwork">
+          </label>
+          <label>
+            Deadline
+            <input type="date" name="deadline">
+          </label>
+          <label>
+            Start date
+            <input type="date" name="start_date">
+          </label>
+          <label>
+            End date
+            <input type="date" name="end_date">
+          </label>
+          <label>
+            Mode
+            <select name="mode">
+              <option value="">Select mode</option>
+              <option value="online">Online</option>
+              <option value="in_person">Physical</option>
+              <option value="hybrid">Hybrid</option>
+            </select>
+          </label>
+          <label>
+            Minimum age
+            <input type="number" name="age_min" min="0" max="99" inputmode="numeric" placeholder="14" data-i18n-placeholder="14">
+          </label>
+          <label>
+            Maximum age
+            <input type="number" name="age_max" min="0" max="99" inputmode="numeric" placeholder="19" data-i18n-placeholder="19">
+          </label>
+          <fieldset class="admin-category-field admin-education-field">
+            <legend>Education eligibility <small>Select all that apply</small></legend>
+            <details class="admin-category-dropdown admin-education-dropdown">
+              <summary data-education-summary>Select education levels</summary>
+              <div class="admin-category-options">
+                <label><input type="checkbox" name="education_levels" value="Secondary School"> Secondary School</label>
+                <label><input type="checkbox" name="education_levels" value="Junior College"> Junior College</label>
+                <label><input type="checkbox" name="education_levels" value="Polytechnic"> Polytechnic</label>
+                <label><input type="checkbox" name="education_levels" value="ITE"> ITE</label>
+                <label><input type="checkbox" name="education_levels" value="University"> University</label>
+                <label><input type="checkbox" name="education_levels" value="Other"> Other</label>
+              </div>
+            </details>
+          </fieldset>
+          <label class="admin-aligned-field">
+            <span class="admin-field-heading"><strong>Status</strong><small aria-hidden="true">&nbsp;</small></span>
+            <select name="status">
+              <option value="active">Active</option>
+              <option value="inactive">Inactive</option>
+              <option value="draft">Draft</option>
+              <option value="archived">Archived</option>
+            </select>
+          </label>
+          <label class="admin-aligned-field">
+            <span class="admin-field-heading"><strong>Organizer</strong><small aria-hidden="true">&nbsp;</small></span>
+            <input type="text" name="organizer" placeholder="TeenLaunch" data-i18n-placeholder="TeenLaunch">
+          </label>
+          <label>
+            Location
+            <input type="text" name="location" placeholder="Singapore or Online" data-i18n-placeholder="Singapore or Online">
+          </label>
+          <label class="admin-wide">
+            Application URL
+            <input type="url" name="application_url" placeholder="https://example.com/apply" data-i18n-placeholder="https://example.com/apply">
+          </label>
+          <label>
+            Source type
+            <select name="source_type"><option value="teenlaunch">TeenLaunch-created</option><option value="public_manual">Public source, manually reviewed</option></select>
+          </label>
+          <label>
+            Official source URL
+            <input type="url" name="source_url" placeholder="https://official-source.example">
+          </label>
+          <label>
+            Application method
+            <select name="application_method"><option value="internal">TeenLaunch application</option><option value="external">External application</option><option value="both">Both</option></select>
+          </label>
+          <label>
+            Expiry date
+            <input type="date" name="expiry_date">
+          </label>
+          <label class="admin-check">
+            <input type="checkbox" name="internal_application_enabled" checked>
+            Enable internal applications
+          </label>
+          <label class="admin-wide">
+            Image URL
+            <input type="url" name="image_url" placeholder="https://example.com/image.jpg">
+          </label>
+          <label class="admin-check">
+            <input type="checkbox" name="is_published" checked>
+            Publish immediately
+          </label>
+          <div class="settings-actions admin-wide">
+            <button class="btn primary" type="submit" data-opportunity-submit>Add Opportunity</button>
+            <button class="btn secondary" type="reset">Clear</button>
+            <strong class="publish-confirmation" data-publish-confirmation role="status" aria-live="polite" hidden></strong>
+          </div>
+        </form>
+      </section>
+
+      <div class="admin-grid" data-admin-content hidden>
+        <section class="admin-panel admin-wide" id="opportunity-review">
+          <details class="admin-users-dropdown" open>
+            <summary class="admin-panel-heading"><h2>Opportunity review queue</h2><span class="admin-dropdown-meta"><span data-scout-review-count>0</span><span class="admin-dropdown-chevron" aria-hidden="true"></span></span></summary>
+            <div class="scout-admin-grid" data-scout-review-list><p class="admin-empty">Loading review queueâ€¦</p></div>
+          </details>
+        </section>
+        <section class="admin-panel admin-wide" id="partner-management">
+          <details class="admin-users-dropdown">
+            <summary class="admin-panel-heading"><h2>Partner management</h2><span class="admin-dropdown-meta"><span data-scout-partner-count>0</span><span class="admin-dropdown-chevron" aria-hidden="true"></span></span></summary>
+            <div class="scout-admin-grid" data-scout-partner-list><p class="admin-empty">Loading partnersâ€¦</p></div>
+          </details>
+        </section>
+        <section class="admin-panel admin-wide admin-collapsible-panel" id="registrations">
+          <details class="admin-users-dropdown">
+            <summary class="admin-panel-heading">
+              <h2>Applications</h2>
+              <span class="admin-dropdown-meta"><span data-count="registrations">0</span><span class="admin-dropdown-chevron" aria-hidden="true"></span></span>
+            </summary>
+            <div class="admin-list" data-admin-registrations></div>
+          </details>
+        </section>
+
+        <section class="admin-panel admin-users-panel admin-wide">
+          <details class="admin-users-dropdown">
+            <summary class="admin-panel-heading">
+              <h2>User list</h2>
+              <span class="admin-dropdown-meta"><span data-count="users">0</span><span class="admin-dropdown-chevron" aria-hidden="true"></span></span>
+            </summary>
+            <div class="admin-list" data-admin-users></div>
+          </details>
+        </section>
+
+        <section class="admin-panel admin-wide admin-collapsible-panel" id="career-dna">
+          <details class="admin-users-dropdown">
+            <summary class="admin-panel-heading">
+              <h2>Career DNA results</h2>
+              <span class="admin-dropdown-meta"><span data-count="careerDna">0</span><span class="admin-dropdown-chevron" aria-hidden="true"></span></span>
+            </summary>
+            <div class="admin-list" data-admin-career-dna></div>
+          </details>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 TeenLaunch</p>
+    <a href="../index.html">Home</a>
+    <a href="settings.html">Settings</a>
+  </footer>
+  <script src="../js/auth-nav.js"></script>
+  <script src="../script.js"></script>
+  <script src="../js/admin-dashboard.js"></script>
+  <script src="../js/admin-opportunity-scout.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>
+
