@@ -22,3 +22,13 @@
 @media(min-width:701px) and (max-width:1050px){.weekly-calendar{grid-template-columns:repeat(7,150px)}}
 @media(max-width:480px){.planner-main{padding-inline:10px}.planner-hero h1{font-size:clamp(2.75rem,15vw,4.25rem)}.planner-notice,.planner-settings,.planner-sidebar>*,.calendar-panel{padding:16px}.two-fields,.settings-grid,.school-days{grid-template-columns:minmax(0,1fr)}.planner-toolbar{gap:10px}.task-form input[type=date],.task-form input[type=datetime-local]{padding-inline:10px;font-size:16px}}
 html[data-theme=dark] .planner-main{--planner-navy:var(--text);--planner-line:var(--line);--planner-card:rgba(15,9,31,.86);background:var(--bg)}html[data-theme=dark] .planner-settings input,html[data-theme=dark] .planner-settings select,html[data-theme=dark] .planner-settings textarea,html[data-theme=dark] .task-form input,html[data-theme=dark] .task-form select,html[data-theme=dark] .task-form textarea,html[data-theme=dark] .mini-button{background:#120b23;color:var(--text);border-color:var(--line)}html[data-theme=dark] .calendar-day,html[data-theme=dark] .agenda-sections>section,html[data-theme=dark] .school-day,html[data-theme=dark] .deadline-item{background:rgba(255,255,255,.06)}html[data-theme=dark] .calendar-event{background:rgba(40,124,240,.18)}
+
+/* Keep weekday controls aligned; generic form input sizing must not stretch checkboxes. */
+.planner-settings input[type="checkbox"]{width:18px;min-width:18px;height:18px;min-height:18px;padding:0;flex:0 0 18px;border-radius:4px}
+.school-days{grid-template-columns:repeat(7,minmax(130px,1fr));overflow-x:auto;padding-bottom:6px}
+.school-day{min-width:0}
+.school-day label,.day-checks label{display:flex;align-items:center;justify-content:flex-start;gap:7px;white-space:nowrap}
+.day-checks{display:grid;grid-template-columns:repeat(7,minmax(72px,1fr));gap:12px;overflow-x:auto;padding-bottom:6px}
+@media(max-width:1050px){.school-days{grid-template-columns:repeat(7,minmax(130px,1fr))}}
+@media(max-width:700px){.school-days{grid-template-columns:repeat(7,minmax(130px,1fr))}.day-checks{grid-template-columns:repeat(7,minmax(72px,1fr))}}
+@media(max-width:360px){.school-days{grid-template-columns:repeat(7,minmax(130px,1fr))}}
