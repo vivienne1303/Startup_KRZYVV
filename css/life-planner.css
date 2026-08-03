@@ -16,7 +16,9 @@
 .week-controls{min-width:0;flex-wrap:wrap}
 .planner-main .eyebrow{margin-bottom:0;font-size:.82rem;line-height:1.4}
 .planner-settings input,.planner-settings select,.planner-settings textarea,.task-form input,.task-form select,.task-form textarea{max-width:100%}
+.settings-grid>*,.two-fields>*,.task-form label,.planner-settings label{min-width:0}
+.task-form input[type=date],.task-form input[type=datetime-local],.planner-settings input[type=time]{display:block;min-width:0;max-width:100%;box-sizing:border-box}
 @media(max-width:900px){.planner-hero h1{font-size:clamp(3rem,10vw,5rem)}}
 @media(min-width:701px) and (max-width:1050px){.weekly-calendar{grid-template-columns:repeat(7,150px)}}
-@media(max-width:480px){.planner-main{padding-inline:10px}.planner-hero h1{font-size:clamp(2.75rem,15vw,4.25rem)}.planner-notice,.planner-settings,.planner-sidebar>*,.calendar-panel{padding:16px}.two-fields,.settings-grid,.school-days{grid-template-columns:1fr}.planner-toolbar{gap:10px}}
+@media(max-width:480px){.planner-main{padding-inline:10px}.planner-hero h1{font-size:clamp(2.75rem,15vw,4.25rem)}.planner-notice,.planner-settings,.planner-sidebar>*,.calendar-panel{padding:16px}.two-fields,.settings-grid,.school-days{grid-template-columns:minmax(0,1fr)}.planner-toolbar{gap:10px}.task-form input[type=date],.task-form input[type=datetime-local]{padding-inline:10px;font-size:16px}}
 html[data-theme=dark] .planner-main{--planner-navy:var(--text);--planner-line:var(--line);--planner-card:rgba(15,9,31,.86);background:var(--bg)}html[data-theme=dark] .planner-settings input,html[data-theme=dark] .planner-settings select,html[data-theme=dark] .planner-settings textarea,html[data-theme=dark] .task-form input,html[data-theme=dark] .task-form select,html[data-theme=dark] .task-form textarea,html[data-theme=dark] .mini-button{background:#120b23;color:var(--text);border-color:var(--line)}html[data-theme=dark] .calendar-day,html[data-theme=dark] .agenda-sections>section,html[data-theme=dark] .school-day,html[data-theme=dark] .deadline-item{background:rgba(255,255,255,.06)}html[data-theme=dark] .calendar-event{background:rgba(40,124,240,.18)}
