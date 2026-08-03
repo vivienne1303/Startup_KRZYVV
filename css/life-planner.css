@@ -32,3 +32,23 @@ html[data-theme=dark] .planner-main{--planner-navy:var(--text);--planner-line:va
 @media(max-width:1050px){.school-days{grid-template-columns:repeat(7,minmax(130px,1fr))}}
 @media(max-width:700px){.school-days{grid-template-columns:repeat(7,minmax(130px,1fr))}.day-checks{grid-template-columns:repeat(7,minmax(72px,1fr))}}
 @media(max-width:360px){.school-days{grid-template-columns:repeat(7,minmax(130px,1fr))}}
+
+/* Mobile Safari keeps large intrinsic widths for its native date/time widgets. */
+.planner-settings,.planner-sidebar>*,.calendar-panel,.task-form,.settings-grid,.two-fields{inline-size:100%;min-inline-size:0;max-inline-size:100%}
+.planner-settings input:not([type="checkbox"]),.planner-settings select,.planner-settings textarea,.task-form input:not([type="checkbox"]),.task-form select,.task-form textarea{inline-size:100%;min-inline-size:0;max-inline-size:100%;box-sizing:border-box}
+.school-days,.day-checks{inline-size:100%;max-inline-size:100%;overscroll-behavior-inline:contain;scrollbar-gutter:stable}
+@media(max-width:480px){
+  .planner-main{padding-inline:12px}
+  .planner-settings,.planner-sidebar>*,.calendar-panel{padding:14px;border-radius:18px}
+  .planner-settings fieldset{min-inline-size:0;margin-block:18px;padding:12px;border-radius:16px;overflow:hidden}
+  .planner-settings legend{max-inline-size:calc(100% - 16px);padding-inline:6px;white-space:normal;line-height:1.25}
+  .planner-settings input:not([type="checkbox"]),.planner-settings select,.planner-settings textarea,.task-form input:not([type="checkbox"]),.task-form select,.task-form textarea{min-height:48px;padding:11px 12px;border-radius:12px;font-size:16px}
+  .task-form{gap:13px}
+  .task-form label,.planner-settings label{gap:6px}
+  .school-days{grid-template-columns:repeat(7,118px);gap:8px;scroll-snap-type:x proximity}
+  .school-day{padding:9px;scroll-snap-align:start}
+  .school-day input[type="time"]{padding:7px 5px;text-align:center}
+  .day-checks{grid-template-columns:repeat(7,64px);gap:8px;scroll-snap-type:x proximity}
+  .day-checks label{scroll-snap-align:start;font-size:.9rem}
+  .section-heading{align-items:flex-start;flex-direction:column}
+}
