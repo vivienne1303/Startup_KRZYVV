@@ -35,9 +35,25 @@ const create = asyncHandler(async (req, res) => {
   const missing = required.filter((field) => !String(req.body[field] || "").trim());
   if (missing.length) throw new HttpError(400, `Missing required fields: ${missing.join(", ")}`);
 
-  const { data: opportunity, error: opportunityError } = await req.supabase.from("opportunities").select("id,title,deadline").eq("id", req.body.opportunity_id).single();
+  const { data: opportunity, error: opportunityError } = await req.supabase.from("opportunities").select("id,title,deadline,age_min,age_max").eq("id", req.body.opportunity_id).single();
   if (opportunityError || !opportunity) throw new HttpError(404, "Opportunity not found");
   if (opportunity.deadline && new Date(`${opportunity.deadline}T23:59:59`).getTime() < Date.now()) throw new HttpError(400, "This opportunity's deadline has passed");
+
+  const dateOfBirth = new Date(`${req.body.date_of_birth}T00:00:00Z`);
+  if (Number.isNaN(dateOfBirth.getTime()) || dateOfBirth.getTime() > Date.now()) {
+    throw new HttpError(400, "Enter a valid date of birth");
+  }
+  const today = new Date();
+  let applicantAge = today.getUTCFullYear() - dateOfBirth.getUTCFullYear();
+  const birthdayHasPassed = today.getUTCMonth() > dateOfBirth.getUTCMonth()
+    || (today.getUTCMonth() === dateOfBirth.getUTCMonth() && today.getUTCDate() >= dateOfBirth.getUTCDate());
+  if (!birthdayHasPassed) applicantAge -= 1;
+  if (opportunity.age_min !== null && applicantAge < opportunity.age_min) {
+    throw new HttpError(403, `This opportunity is only available to applicants aged ${opportunity.age_min} or older`);
+  }
+  if (opportunity.age_max !== null && applicantAge > opportunity.age_max) {
+    throw new HttpError(403, `This opportunity is only available to applicants aged ${opportunity.age_max} or younger`);
+  }
   const existing = await checkRegistration(req.supabase, req.body.opportunity_id);
   if (existing.data) throw new HttpError(409, "You have already applied for this opportunity");
 

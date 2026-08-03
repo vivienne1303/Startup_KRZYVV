@@ -28,8 +28,8 @@ const register = asyncHandler(async (req, res) => {
     throw new HttpError(403, "Role cannot be set through public registration");
   }
 
-  if (!Number.isInteger(age) || age < 10 || age > 19) {
-    throw new HttpError(400, "age must be a whole number between 10 and 19");
+  if (!Number.isInteger(age) || age < 1 || age > 120) {
+    throw new HttpError(400, "age must be a valid whole number");
   }
 
   const allowedEducationLevels = [

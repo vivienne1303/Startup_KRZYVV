@@ -106,8 +106,8 @@
     const formData = new FormData(form);
     const age = Number(formData.get("age"));
 
-    if (!Number.isInteger(age) || age < 10 || age > 19) {
-      setMessage("Age must be a whole number between 10 and 19.", "error");
+    if (!Number.isInteger(age) || age < 1 || age > 120) {
+      setMessage("Please enter a valid age as a whole number.", "error");
       return;
     }
 

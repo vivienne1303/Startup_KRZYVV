@@ -46,7 +46,7 @@
         <form class="auth-form active" data-auth-form="login">
           <label>
             Email
-            <input type="email" name="email" autocomplete="email" required>
+            <input type="email" name="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" required>
           </label>
           <label>
             Password
@@ -62,7 +62,7 @@
           </label>
           <label>
             Email
-            <input type="email" name="email" autocomplete="email" required>
+            <input type="email" name="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" required>
           </label>
           <label>
             Password
@@ -73,8 +73,8 @@
             <input type="password" name="confirm_password" autocomplete="new-password" required minlength="6">
           </label>
           <label>
-            Age
-            <input type="number" name="age" min="10" max="19" inputmode="numeric" required>
+            Age <span class="optional-label">TeenLaunch is designed for ages 10–24, but anyone may create an account.</span>
+            <input type="number" name="age" min="1" max="120" inputmode="numeric" required>
           </label>
           <label>
             School name <span class="optional-label">Optional</span>
