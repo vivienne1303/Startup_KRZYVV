@@ -51,4 +51,5 @@ html[data-theme=dark] .planner-main{--planner-navy:var(--text);--planner-line:va
   .day-checks{grid-template-columns:repeat(7,64px);gap:8px;scroll-snap-type:x proximity}
   .day-checks label{scroll-snap-align:start;font-size:.9rem}
   .section-heading{align-items:flex-start;flex-direction:column}
+  .task-form input[type="date"],.task-form input[type="time"],.task-form input[type="datetime-local"],.planner-settings input[type="date"],.planner-settings input[type="time"],.planner-settings input[type="datetime-local"]{-webkit-appearance:none;appearance:none;display:block;width:-webkit-fill-available!important;inline-size:-webkit-fill-available!important;min-width:0!important;max-width:100%!important;margin-inline:0;align-self:stretch;overflow:hidden}
 }
