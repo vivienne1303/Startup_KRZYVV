@@ -10,6 +10,8 @@
 .planner-main *::after{min-width:0}
 .planner-main{max-width:100%;overflow-x:clip}
 .planner-main>[data-planner-content],.planner-layout,.calendar-panel,.weekly-calendar,.agenda-sections{width:100%;max-width:100%;min-width:0}
+.deadline-panel h2{font-size:1.65rem;line-height:1.08;white-space:nowrap}
+.agenda-sections h2{font-size:clamp(1.65rem,2.2vw,2.35rem);line-height:1.08;white-space:nowrap}
 .calendar-panel{overflow:hidden}
 .weekly-calendar{contain:inline-size;overscroll-behavior-inline:contain}
 .icon-button{min-width:44px;min-height:44px;flex:0 0 44px;padding:0}
