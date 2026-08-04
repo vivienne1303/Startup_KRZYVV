@@ -108,7 +108,6 @@
     navLinks.insertBefore(link, authLink);
   };
   const addProfileLink = () => addLink("profile-nav-link", "profile.html", "My Profile", ["profile.html", "account.html", "career_dna_test.html", "career_dna_result.html"]);
-  const addPortfolioLink = () => addLink("portfolio-nav-link", "my-portfolio.html", "My Portfolio", ["my-portfolio.html", "portfolio-builder.html"]);
   const addAdminLink = () => addLink("admin-dashboard-link", "admin-dashboard.html", "Admin Dashboard", ["admin-dashboard.html"]);
 
   const token = localStorage.getItem("teenlaunch_token");
@@ -125,7 +124,6 @@
       localStorage.setItem("teenlaunch_user", JSON.stringify(data.user || {}));
       localStorage.setItem("teenlaunch_profile", JSON.stringify(data.profile || {}));
       addProfileLink();
-      addPortfolioLink();
       if (data.role === "admin") addAdminLink();
     } catch (error) {
       console.warn("Session verification failed; clearing local session.", error);
