@@ -19,11 +19,12 @@
     document.querySelector("[data-tier-name]").textContent = engagement.tier.name;
     document.querySelector("[data-xp]").textContent = engagement.xp;
     document.querySelector("[data-streak]").textContent = engagement.streak;
+    document.querySelector("[data-streak-unit]").textContent = engagement.streak === 1 ? "day" : "days";
     document.querySelector("[data-xp-progress]").style.width = `${engagement.progress}%`;
     document.querySelector("[data-next-tier]").textContent = engagement.next ? `${engagement.next.xp - engagement.xp} XP to ${engagement.next.name}` : "Highest tier reached";
     document.querySelector("[data-rewards]").innerHTML = engagement.tiers.map((tier) => `<article class="reward-step ${engagement.xp >= tier.xp ? "unlocked" : ""}"><span>${engagement.xp >= tier.xp ? "✓" : "🔒"}</span><div><strong>${esc(tier.name)}</strong><small>${esc(tier.reward)} · ${tier.xp} XP</small></div></article>`).join("");
     const root = document.querySelector("[data-experiences]");
-    root.innerHTML = experiences.map((post) => `<article class="experience-post"><div class="experience-photo"><img src="${esc(post.image_url)}" alt="${esc(post.title)}" loading="lazy"><button type="button" data-delete-experience="${esc(post.id)}" aria-label="Delete ${esc(post.title)}">×</button></div><div class="experience-copy"><div><h3>${esc(post.title)}</h3><time datetime="${esc(post.event_date)}">${new Date(`${post.event_date}T00:00:00`).toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" })}</time></div>${post.caption ? `<p>${esc(post.caption)}</p>` : ""}<span>+100 XP earned</span></div></article>`).join("");
+    root.innerHTML = experiences.map((post) => `<article class="experience-post"><div class="experience-photo"><img src="${esc(post.image_url)}" alt="${esc(post.title)}" loading="lazy"><button type="button" data-delete-experience="${esc(post.id)}" aria-label="Delete ${esc(post.title)}">×</button></div><div class="experience-copy"><div><h3>${esc(post.title)}</h3><time datetime="${esc(post.event_date)}">${new Date(`${post.event_date}T00:00:00`).toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" })}</time></div>${post.caption ? `<p>${esc(post.caption)}</p>` : ""}<span>+5 XP earned</span></div></article>`).join("");
     document.querySelector("[data-experiences-empty]").hidden = experiences.length > 0;
     root.querySelectorAll("[data-delete-experience]").forEach((button) => button.addEventListener("click", async () => {
       if (!confirm("Remove this experience from your profile?")) return;

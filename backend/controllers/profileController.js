@@ -6,29 +6,27 @@ const { listSaved, remove: removeSaved, save: saveOpportunity } = require("../se
 
 const TIERS = [
   { name: "Explorer", xp: 0, reward: "Starter profile badge" },
-  { name: "Challenger", xp: 150, reward: "One streak freeze" },
-  { name: "Builder", xp: 400, reward: "Workshop priority access" },
-  { name: "Achiever", xp: 800, reward: "Portfolio review" },
-  { name: "Trailblazer", xp: 1400, reward: "Mentor office hour" },
+  { name: "Challenger", xp: 25, reward: "One streak freeze" },
+  { name: "Builder", xp: 75, reward: "Workshop priority access" },
+  { name: "Achiever", xp: 150, reward: "Portfolio review" },
+  { name: "Trailblazer", xp: 250, reward: "Mentor office hour" },
 ];
 
 const engagementSummary = (registrations, experiences) => {
-  const xp = registrations.length * 50 + experiences.length * 100;
+  const xp = (registrations.length + experiences.length) * 5;
   const tierIndex = TIERS.reduce((best, tier, index) => xp >= tier.xp ? index : best, 0);
   const tier = TIERS[tierIndex];
   const next = TIERS[tierIndex + 1] || null;
-  const activeWeeks = new Set([...registrations, ...experiences].map((item) => {
-    const date = new Date(item.event_date || item.created_at);
+  const activeDays = new Set([...registrations, ...experiences].map((item) => {
+    const date = new Date(item.created_at);
     date.setHours(0, 0, 0, 0);
-    date.setDate(date.getDate() - ((date.getDay() + 6) % 7));
     return date.toISOString().slice(0, 10);
   }));
   let streak = 0;
   const cursor = new Date();
   cursor.setHours(0, 0, 0, 0);
-  cursor.setDate(cursor.getDate() - ((cursor.getDay() + 6) % 7));
-  if (!activeWeeks.has(cursor.toISOString().slice(0, 10))) cursor.setDate(cursor.getDate() - 7);
-  while (activeWeeks.has(cursor.toISOString().slice(0, 10))) { streak += 1; cursor.setDate(cursor.getDate() - 7); }
+  if (!activeDays.has(cursor.toISOString().slice(0, 10))) cursor.setDate(cursor.getDate() - 1);
+  while (activeDays.has(cursor.toISOString().slice(0, 10))) { streak += 1; cursor.setDate(cursor.getDate() - 1); }
   return { xp, tier, next, progress: next ? Math.round(((xp - tier.xp) / (next.xp - tier.xp)) * 100) : 100, streak, tiers: TIERS };
 };
 
