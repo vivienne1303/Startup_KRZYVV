@@ -7,7 +7,7 @@
   <script src="../js/theme-mode.js"></script>
   <script src="../js/api-config.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../css/theme.css"><link rel="stylesheet" href="../css/settings.css"><link rel="stylesheet" href="../css/profile.css">
+  <link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../css/theme.css"><link rel="stylesheet" href="../css/settings.css"><link rel="stylesheet" href="../css/profile.css?v=20260804a">
 </head>
 <body>
   <header class="site-header profile-site-header">
@@ -46,8 +46,19 @@
           <div class="profile-actions"><a class="btn secondary" href="account.html">Edit Profile</a><a class="btn secondary" href="portfolio-builder.html">Portfolio Builder</a><a class="btn secondary" href="community.html">Find People</a><a class="btn secondary" href="inbox.html">Inbox</a></div>
         </div>
       </header>
-      <nav class="profile-tabs" aria-label="Profile sections"><button class="active" data-tab="applied">Applied</button><button data-tab="saved">Saved</button><button data-tab="about">About</button></nav>
-      <section data-panel="applied"><h2>Applied Opportunities</h2><div class="applied-grid" data-applications></div><div class="profile-empty" data-empty hidden><p>You have not applied for any opportunities yet.</p><a class="btn primary" href="opportunities.html">Browse Opportunities</a></div></section>
+      <section class="engagement-card" data-engagement-card>
+        <div class="tier-badge"><span>MY TIER</span><strong data-tier-name>Explorer</strong></div>
+        <div class="tier-progress"><div><strong><span data-xp>0</span> XP</strong><span data-next-tier>Start your journey</span></div><div class="xp-track"><i data-xp-progress></i></div></div>
+        <div class="streak-stat"><span>🔥</span><strong data-streak>0</strong><small>week streak</small></div>
+      </section>
+      <section class="rewards-card"><div><p class="eyebrow">Rewards journey</p><h2>Level up. Unlock more.</h2></div><div class="reward-track" data-rewards></div></section>
+      <nav class="profile-tabs" aria-label="Profile sections"><button class="active" data-tab="experiences">Experiences</button><button data-tab="applied">Applied</button><button data-tab="saved">Saved</button><button data-tab="about">About</button></nav>
+      <section data-panel="experiences">
+        <div class="experience-heading"><div><h2>My experiences</h2><p>Your visual diary of events, projects and growth.</p></div><button class="btn primary" type="button" data-open-experience>＋ Add experience</button></div>
+        <form class="experience-form" data-experience-form hidden><label>Event or experience<input name="title" maxlength="100" required placeholder="e.g. Youth Founders Bootcamp"></label><label>Date<input name="event_date" type="date" required></label><label class="wide">Caption<textarea name="caption" maxlength="1000" rows="3" placeholder="What happened? What did you learn?"></textarea></label><label class="wide photo-drop">Photo<input name="photo" type="file" accept="image/jpeg,image/png,image/webp" required><small>JPG, PNG or WebP · maximum 4 MB</small></label><div class="wide form-actions"><button class="btn primary" type="submit">Share experience</button><button class="btn secondary" type="button" data-cancel-experience>Cancel</button></div><p class="wide experience-message" data-experience-message aria-live="polite"></p></form>
+        <div class="experience-grid" data-experiences></div><div class="profile-empty" data-experiences-empty hidden><p>Your experience story starts here.</p><button class="btn primary" type="button" data-empty-add>Add your first experience</button></div>
+      </section>
+      <section data-panel="applied" hidden><h2>Applied Opportunities</h2><div class="applied-grid" data-applications></div><div class="profile-empty" data-empty hidden><p>You have not applied for any opportunities yet.</p><a class="btn primary" href="opportunities.html">Browse Opportunities</a></div></section>
       <section data-panel="saved" hidden><h2>Saved Opportunities</h2><div class="applied-grid" data-saved></div><div class="profile-empty" data-saved-empty hidden><p>You have not saved any opportunities yet.</p><a class="btn primary" href="opportunities.html">Browse Opportunities</a></div></section>
       <section data-panel="about" hidden><article class="about-card"><h2>About</h2><dl><div><dt>Full name</dt><dd data-about-name></dd></div><div><dt>Bio</dt><dd data-about-bio></dd></div><div><dt>School</dt><dd data-about-school></dd></div><div><dt>Education</dt><dd data-about-education></dd></div></dl></article></section>
     </div>
@@ -56,7 +67,7 @@
   <script src="../js/auth-nav.js"></script>
   <script src="../js/i18n.js"></script>
   <script src="../script.js"></script>
-  <script src="../js/profile.js"></script>
+  <script src="../js/profile.js?v=20260804a"></script>
   <script src="../js/profile-opportunity-links.js"></script>
   <script src="../js/profile-social-links.js"></script>
 </body></html>

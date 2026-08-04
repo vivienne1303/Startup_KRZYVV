@@ -1,1 +1,86 @@
-﻿(function(){const API=window.TEENLAUNCH_API_BASE,token=localStorage.getItem("teenlaunch_token"),H={Authorization:`Bearer ${token}`},esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));if(!token){location.replace("auth.html?mode=login&returnTo=profile.html");return}const card=(item,saved=false)=>{const o=item.opportunities||{};return `<article class="application-card">${o.image_url?`<img src="${esc(o.image_url)}" alt="">`:""}<h3>${esc(o.title||"Opportunity")}</h3><p>${esc(o.category||"")}</p>${saved?"":`<span class="status">${esc(item.status)}</span><p>Applied ${new Date(item.created_at).toLocaleDateString()}</p>`}<p>Deadline: ${o.deadline?new Date(o.deadline+"T00:00:00").toLocaleDateString():"Rolling"}</p><div class="profile-card-actions"><a class="btn secondary" href="apply.html?id=${encodeURIComponent(item.opportunity_id)}">View Details</a>${saved?`<button class="btn secondary" type="button" data-unsave="${esc(item.opportunity_id)}">Remove</button>`:""}</div></article>`};const load=async()=>{document.querySelector("[data-profile-loading]").hidden=false;document.querySelector("[data-profile-error]").hidden=true;try{const [me,apps,counts,savedRes]=await Promise.all(["/auth/me","/profile/applications","/profile/counts","/profile/saved"].map(path=>fetch(API+path,{headers:H})));if(me.status===401){localStorage.removeItem("teenlaunch_token");location.replace("auth.html?mode=login&returnTo=profile.html");return}if(![me,apps,counts].every(r=>r.ok))throw new Error("Your profile could not be loaded.");const current=await me.json(),p=current.profile||{},applications=(await apps.json()).applications||[],c=(await counts.json()).counts||{},saved=savedRes.ok?((await savedRes.json()).saved||[]):[];document.querySelector("[data-username]").textContent=p.username?`@${p.username}`:`@${(current.user?.email||"teenlaunch").split("@")[0]}`;document.querySelector("[data-full-name]").textContent=p.full_name||"TeenLaunch user";document.querySelector("[data-bio]").textContent=p.bio||"No bio yet.";document.querySelector("[data-school]").textContent=p.school_name||"";document.querySelector("[data-app-count]").textContent=c.applications||0;document.querySelector("[data-followers]").textContent=c.followers||0;document.querySelector("[data-following]").textContent=c.following||0;const pic=p.profile_picture_url||p.avatar_url;if(pic)document.querySelector("[data-profile-picture]").src=pic;document.querySelector("[data-profile-initials]").textContent=(p.full_name||"TL").split(/\s+/).map(x=>x[0]).join("").slice(0,2).toUpperCase();document.querySelector("[data-about-name]").textContent=p.full_name||"-";document.querySelector("[data-about-bio]").textContent=p.bio||"-";document.querySelector("[data-about-school]").textContent=p.school_name||"-";document.querySelector("[data-about-education]").textContent=p.education_level||"-";document.querySelector("[data-applications]").innerHTML=applications.map(x=>card(x)).join("");document.querySelector("[data-empty]").hidden=applications.length>0;document.querySelector("[data-saved]").innerHTML=saved.map(x=>card(x,true)).join("");document.querySelector("[data-saved-empty]").hidden=saved.length>0;document.querySelectorAll("[data-unsave]").forEach(b=>b.addEventListener("click",async()=>{b.disabled=true;const r=await fetch(`${API}/profile/saved/${encodeURIComponent(b.dataset.unsave)}`,{method:"DELETE",headers:H});if(r.ok)load();else b.disabled=false}));document.querySelector("[data-profile-loading]").hidden=true;document.querySelector("[data-profile-content]").hidden=false}catch(e){document.querySelector("[data-profile-loading]").hidden=true;document.querySelector("[data-profile-error]").hidden=false;document.querySelector("[data-profile-error-message]").textContent=e.message}};document.querySelectorAll("[data-tab]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("[data-tab]").forEach(x=>x.classList.toggle("active",x===b));document.querySelectorAll("[data-panel]").forEach(x=>x.hidden=x.dataset.panel!==b.dataset.tab)}));document.querySelector("[data-retry]").addEventListener("click",load);load()})();
+(function () {
+  const API = window.TEENLAUNCH_API_BASE;
+  const token = localStorage.getItem("teenlaunch_token");
+  const headers = { Authorization: `Bearer ${token}` };
+  const esc = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
+  if (!token) { location.replace("auth.html?mode=login&returnTo=profile.html"); return; }
+
+  const request = async (path, options = {}) => {
+    const response = await fetch(API + path, { ...options, headers: { ...headers, ...(options.body ? { "Content-Type": "application/json" } : {}), ...options.headers } });
+    if (response.status === 401) { localStorage.removeItem("teenlaunch_token"); location.replace("auth.html?mode=login&returnTo=profile.html"); throw new Error("Please log in again."); }
+    if (!response.ok) { const body = await response.json().catch(() => ({})); throw new Error(body.error?.message || "Something went wrong."); }
+    return response.status === 204 ? null : response.json();
+  };
+  const opportunityCard = (item, saved = false) => {
+    const opportunity = item.opportunities || {};
+    return `<article class="application-card">${opportunity.image_url ? `<img src="${esc(opportunity.image_url)}" alt="">` : ""}<h3>${esc(opportunity.title || "Opportunity")}</h3><p>${esc(opportunity.category || "")}</p>${saved ? "" : `<span class="status">${esc(item.status)}</span><p>Applied ${new Date(item.created_at).toLocaleDateString()}</p>`}<p>Deadline: ${opportunity.deadline ? new Date(`${opportunity.deadline}T00:00:00`).toLocaleDateString() : "Rolling"}</p><div class="profile-card-actions"><a class="btn secondary" href="apply.html?id=${encodeURIComponent(item.opportunity_id)}">View Details</a>${saved ? `<button class="btn secondary" type="button" data-unsave="${esc(item.opportunity_id)}">Remove</button>` : ""}</div></article>`;
+  };
+  const renderEngagement = ({ engagement, experiences }) => {
+    document.querySelector("[data-tier-name]").textContent = engagement.tier.name;
+    document.querySelector("[data-xp]").textContent = engagement.xp;
+    document.querySelector("[data-streak]").textContent = engagement.streak;
+    document.querySelector("[data-xp-progress]").style.width = `${engagement.progress}%`;
+    document.querySelector("[data-next-tier]").textContent = engagement.next ? `${engagement.next.xp - engagement.xp} XP to ${engagement.next.name}` : "Highest tier reached";
+    document.querySelector("[data-rewards]").innerHTML = engagement.tiers.map((tier) => `<article class="reward-step ${engagement.xp >= tier.xp ? "unlocked" : ""}"><span>${engagement.xp >= tier.xp ? "✓" : "🔒"}</span><div><strong>${esc(tier.name)}</strong><small>${esc(tier.reward)} · ${tier.xp} XP</small></div></article>`).join("");
+    const root = document.querySelector("[data-experiences]");
+    root.innerHTML = experiences.map((post) => `<article class="experience-post"><div class="experience-photo"><img src="${esc(post.image_url)}" alt="${esc(post.title)}" loading="lazy"><button type="button" data-delete-experience="${esc(post.id)}" aria-label="Delete ${esc(post.title)}">×</button></div><div class="experience-copy"><div><h3>${esc(post.title)}</h3><time datetime="${esc(post.event_date)}">${new Date(`${post.event_date}T00:00:00`).toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" })}</time></div>${post.caption ? `<p>${esc(post.caption)}</p>` : ""}<span>+100 XP earned</span></div></article>`).join("");
+    document.querySelector("[data-experiences-empty]").hidden = experiences.length > 0;
+    root.querySelectorAll("[data-delete-experience]").forEach((button) => button.addEventListener("click", async () => {
+      if (!confirm("Remove this experience from your profile?")) return;
+      button.disabled = true;
+      try { await request(`/profile/experiences/${encodeURIComponent(button.dataset.deleteExperience)}`, { method: "DELETE" }); await load(); } catch (error) { alert(error.message); button.disabled = false; }
+    }));
+  };
+  const fillProfile = (current, applications, counts, saved) => {
+    const profile = current.profile || {};
+    document.querySelector("[data-username]").textContent = profile.username ? `@${profile.username}` : `@${(current.user?.email || "teenlaunch").split("@")[0]}`;
+    document.querySelector("[data-full-name]").textContent = profile.full_name || "TeenLaunch user";
+    document.querySelector("[data-bio]").textContent = profile.bio || "No bio yet.";
+    document.querySelector("[data-school]").textContent = profile.school_name || "";
+    document.querySelector("[data-app-count]").textContent = counts.applications || 0;
+    document.querySelector("[data-followers]").textContent = counts.followers || 0;
+    document.querySelector("[data-following]").textContent = counts.following || 0;
+    const picture = profile.profile_picture_url || profile.avatar_url;
+    if (picture) document.querySelector("[data-profile-picture]").src = picture;
+    document.querySelector("[data-profile-initials]").textContent = (profile.full_name || "TL").split(/\s+/).map((part) => part[0]).join("").slice(0, 2).toUpperCase();
+    [["name", profile.full_name], ["bio", profile.bio], ["school", profile.school_name], ["education", profile.education_level]].forEach(([key, value]) => { document.querySelector(`[data-about-${key}]`).textContent = value || "-"; });
+    document.querySelector("[data-applications]").innerHTML = applications.map((item) => opportunityCard(item)).join("");
+    document.querySelector("[data-empty]").hidden = applications.length > 0;
+    document.querySelector("[data-saved]").innerHTML = saved.map((item) => opportunityCard(item, true)).join("");
+    document.querySelector("[data-saved-empty]").hidden = saved.length > 0;
+    document.querySelectorAll("[data-unsave]").forEach((button) => button.addEventListener("click", async () => { button.disabled = true; try { await request(`/profile/saved/${encodeURIComponent(button.dataset.unsave)}`, { method: "DELETE" }); await load(); } catch (_) { button.disabled = false; } }));
+  };
+  const load = async () => {
+    document.querySelector("[data-profile-loading]").hidden = false;
+    document.querySelector("[data-profile-error]").hidden = true;
+    try {
+      const [current, applicationData, countData, savedData, engagementData] = await Promise.all([request("/auth/me"), request("/profile/applications"), request("/profile/counts"), request("/profile/saved"), request("/profile/engagement")]);
+      fillProfile(current, applicationData.applications || [], countData.counts || {}, savedData.saved || []);
+      renderEngagement(engagementData);
+      document.querySelector("[data-profile-loading]").hidden = true;
+      document.querySelector("[data-profile-content]").hidden = false;
+    } catch (error) { document.querySelector("[data-profile-loading]").hidden = true; document.querySelector("[data-profile-error]").hidden = false; document.querySelector("[data-profile-error-message]").textContent = error.message; }
+  };
+
+  document.querySelectorAll("[data-tab]").forEach((button) => button.addEventListener("click", () => { document.querySelectorAll("[data-tab]").forEach((item) => item.classList.toggle("active", item === button)); document.querySelectorAll("[data-panel]").forEach((panel) => { panel.hidden = panel.dataset.panel !== button.dataset.tab; }); }));
+  const form = document.querySelector("[data-experience-form]");
+  const openForm = () => { form.hidden = false; form.scrollIntoView({ behavior: "smooth", block: "center" }); form.elements.title.focus(); };
+  document.querySelector("[data-open-experience]").addEventListener("click", openForm);
+  document.querySelector("[data-empty-add]").addEventListener("click", openForm);
+  document.querySelector("[data-cancel-experience]").addEventListener("click", () => { form.hidden = true; form.reset(); });
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const message = document.querySelector("[data-experience-message]");
+    const submit = form.querySelector('[type="submit"]');
+    const photo = form.elements.photo.files[0];
+    if (!photo || photo.size > 4 * 1024 * 1024) { message.textContent = "Choose a photo no larger than 4 MB."; return; }
+    submit.disabled = true; message.textContent = "Sharing your experience…";
+    try {
+      const imageData = await new Promise((resolve, reject) => { const reader = new FileReader(); reader.onload = () => resolve(reader.result); reader.onerror = reject; reader.readAsDataURL(photo); });
+      await request("/profile/experiences", { method: "POST", body: JSON.stringify({ title: form.elements.title.value, event_date: form.elements.event_date.value, caption: form.elements.caption.value, image_data: imageData }) });
+      form.reset(); form.hidden = true; await load();
+    } catch (error) { message.textContent = error.message; } finally { submit.disabled = false; }
+  });
+  document.querySelector("[data-retry]").addEventListener("click", load);
+  load();
+})();
