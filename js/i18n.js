@@ -567,13 +567,57 @@ Object.assign(translations, {
   ,"All Opportunities": "所有机会"
 });
 
+Object.assign(translations, {
+  "Career Copilot": "职业助手",
+  "Life Planner": "生活规划器",
+  "Mobile App": "手机应用",
+  "My Profile": "我的个人主页",
+  "My Portfolio": "我的作品集",
+  "Logout": "退出登录",
+  "Settings": "设置",
+  "MY TIER": "我的等级",
+  "Rewards journey": "奖励历程",
+  "Level up. Unlock more.": "升级并解锁更多奖励。",
+  "Challenger": "挑战者",
+  "Achiever": "成就者",
+  "Trailblazer": "开拓者",
+  "Starter profile badge": "新手个人主页徽章",
+  "One streak freeze": "一次连续记录保护",
+  "Workshop priority access": "工作坊优先参与权",
+  "Portfolio review": "作品集评审",
+  "Mentor office hour": "导师交流时段",
+  "Experiences": "经历",
+  "My experiences": "我的经历",
+  "Your visual diary of events, projects and growth.": "记录活动、项目与成长的视觉日记。",
+  "＋ Add experience": "＋ 添加经历",
+  "+ Add experience": "+ 添加经历",
+  "Event or experience": "活动或经历",
+  "Date": "日期",
+  "Caption": "说明文字",
+  "Photo": "照片",
+  "Share experience": "分享经历",
+  "Cancel": "取消",
+  "Your experience story starts here.": "你的成长故事从这里开始。",
+  "Add your first experience": "添加你的第一段经历",
+  "day streak": "天连续记录",
+  "days streak": "天连续记录",
+  "Edit portfolio": "编辑作品集",
+  "Print / Save as PDF": "打印／保存为 PDF",
+  "Copy public link": "复制公开链接",
+  "Help & User Manual": "帮助与用户手册",
+  "Your future, in your pocket": "把未来装进口袋",
+  "Find your next": "寻找你的下一个",
+  "big opportunity.": "重大机会。",
+  "Explore the app": "探索应用",
+  "Join the waitlist": "加入候补名单",
+  "Get early access": "抢先体验"
+});
+
 const translate = (key, language) => {
   if (language !== "zh") return key;
   return translations[key] || key;
 };
 
-const i18nElements = Array.from(document.querySelectorAll("[data-i18n]"));
-const i18nAttributeElements = Array.from(document.querySelectorAll("[data-i18n-placeholder], [data-i18n-aria-label]"));
 let languageToggle = document.querySelector("[data-language-toggle]");
 if (!languageToggle) {
   languageToggle = document.createElement("button");
@@ -585,6 +629,25 @@ if (!languageToggle) {
 }
 const pageTitle = document.title;
 const originalText = new WeakMap();
+
+const translateMarkedElements = (root, language) => {
+  const scope = root?.nodeType === Node.ELEMENT_NODE ? root : document;
+  const marked = [
+    ...(scope.matches?.("[data-i18n]") ? [scope] : []),
+    ...(scope.querySelectorAll?.("[data-i18n]") || []),
+  ];
+  marked.forEach((element) => {
+    element.textContent = translate(element.dataset.i18n, language);
+  });
+  const attributed = [
+    ...(scope.matches?.("[data-i18n-placeholder], [data-i18n-aria-label]") ? [scope] : []),
+    ...(scope.querySelectorAll?.("[data-i18n-placeholder], [data-i18n-aria-label]") || []),
+  ];
+  attributed.forEach((element) => {
+    if (element.dataset.i18nPlaceholder) element.placeholder = translate(element.dataset.i18nPlaceholder, language);
+    if (element.dataset.i18nAriaLabel) element.setAttribute("aria-label", translate(element.dataset.i18nAriaLabel, language));
+  });
+};
 
 const translateTextNodes = (root, language) => {
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
@@ -604,19 +667,7 @@ const applyLanguage = (language) => {
   document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
   document.title = translate(pageTitle, language);
 
-  i18nElements.forEach((element) => {
-    element.textContent = translate(element.dataset.i18n, language);
-  });
-
-  i18nAttributeElements.forEach((element) => {
-    if (element.dataset.i18nPlaceholder) {
-      element.placeholder = translate(element.dataset.i18nPlaceholder, language);
-    }
-
-    if (element.dataset.i18nAriaLabel) {
-      element.setAttribute("aria-label", translate(element.dataset.i18nAriaLabel, language));
-    }
-  });
+  translateMarkedElements(document, language);
 
   if (languageToggle) {
     languageToggle.textContent = language === "zh" ? "EN" : "中文";
@@ -631,7 +682,8 @@ const setLanguage = (language) => {
   applyLanguage(language);
 };
 
-languageToggle?.addEventListener("click", () => {
+document.addEventListener("click", (event) => {
+  if (!event.target.closest("[data-language-toggle]")) return;
   setLanguage(currentLanguage === "zh" ? "en" : "zh");
 });
 
@@ -645,7 +697,18 @@ applyLanguage(currentLanguage);
 
 new MutationObserver((mutations) => {
   mutations.forEach((mutation) => mutation.addedNodes.forEach((node) => {
-    if (node.nodeType === Node.ELEMENT_NODE) translateTextNodes(node, currentLanguage);
+    if (node.nodeType === Node.ELEMENT_NODE) {
+      translateMarkedElements(node, currentLanguage);
+      translateTextNodes(node, currentLanguage);
+      const toggles = [
+        ...(node.matches?.("[data-language-toggle]") ? [node] : []),
+        ...(node.querySelectorAll?.("[data-language-toggle]") || []),
+      ];
+      toggles.forEach((toggle) => {
+        toggle.textContent = currentLanguage === "zh" ? "EN" : "中文";
+        toggle.setAttribute("aria-label", currentLanguage === "zh" ? "Switch to English" : "Switch to Chinese");
+      });
+    }
     if (node.nodeType === Node.TEXT_NODE && node.parentElement) translateTextNodes(node.parentElement, currentLanguage);
   }));
 }).observe(document.body, { childList: true, subtree: true });

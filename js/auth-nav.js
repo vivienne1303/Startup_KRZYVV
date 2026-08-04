@@ -3,14 +3,12 @@
   const path = window.location.pathname.replace(/\\/g, "/");
   const inPagesFolder = path.includes("/pages/");
   const currentPage = path.split("/").pop() || "index.html";
-  const settingsPages = new Set(["settings.html", "display-settings.html"]);
   const pageHref = (page) => (inPagesFolder ? page : `pages/${page}`);
   const homeHref = inPagesFolder ? "../index.html" : "index.html";
   const assetHref = (asset) => (inPagesFolder ? `../${asset}` : asset);
   const isCurrent = (...pages) => pages.includes(currentPage);
 
   const normaliseNavbar = () => {
-    if (settingsPages.has(currentPage)) return;
     const navbar = document.querySelector(".navbar");
     if (!navbar) return;
     const siteHeader = navbar.closest(".site-header");
@@ -61,7 +59,7 @@
       <a class="${isCurrent("life-planner.html") ? "active" : ""}" href="${pageHref("life-planner.html")}" data-i18n="Life Planner">Life Planner</a>
       <a href="${inPagesFolder ? "../mobile-showcase.html" : "mobile-showcase.html"}">Mobile App</a>
       <a class="auth-link" href="${pageHref("auth.html")}">Login</a>
-      <a class="settings-button" href="${pageHref("settings.html")}" aria-label="Settings"><img src="${assetHref("assets/icons/settings.jpg")}" alt="" aria-hidden="true"></a>
+      <a class="settings-button${isCurrent("settings.html", "display-settings.html") ? " active" : ""}" href="${pageHref("settings.html")}" aria-label="Settings"><img src="${assetHref("assets/icons/settings.jpg")}" alt="" aria-hidden="true"></a>
       <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>`;
 
     const dropdowns = navLinks.querySelectorAll(".nav-dropdown");

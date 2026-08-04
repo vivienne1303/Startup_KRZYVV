@@ -53,6 +53,7 @@ em { color: var(--blue); font-style: normal; }
   box-shadow: 0 8px 18px rgba(46, 131, 247, .16);
 }
 .brand-mark img { width: 29px; height: 29px; object-fit: contain; }
+.language-toggle{min-width:54px;min-height:38px;padding:0 13px;border:1px solid rgba(23,45,92,.14);border-radius:999px;background:rgba(255,255,255,.72);color:var(--ink);font:inherit;font-weight:800;cursor:pointer}
 .nav-cta { padding-bottom: 4px; border-bottom: 1px solid var(--ink); font-size: 14px; font-weight: 700; }
 .nav-cta span { margin-left: 5px; color: var(--blue); }
 
