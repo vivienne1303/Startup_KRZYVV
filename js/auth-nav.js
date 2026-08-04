@@ -59,7 +59,7 @@
       <a class="${isCurrent("life-planner.html") ? "active" : ""}" href="${pageHref("life-planner.html")}" data-i18n="Life Planner">Life Planner</a>
       <a href="${inPagesFolder ? "../mobile-showcase.html" : "mobile-showcase.html"}">Mobile App</a>
       <a class="auth-link" href="${pageHref("auth.html")}">Login</a>
-      <a class="settings-button${isCurrent("settings.html", "display-settings.html") ? " active" : ""}" href="${pageHref("settings.html")}" aria-label="Settings"><img src="${assetHref("assets/icons/settings.jpg")}" alt="" aria-hidden="true"></a>
+      <a class="settings-button${isCurrent("settings.html", "display-settings.html") ? " active" : ""}" href="${pageHref("settings.html")}" aria-label="Settings"><span aria-hidden="true">⚙</span></a>
       <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>`;
 
     const dropdowns = navLinks.querySelectorAll(".nav-dropdown");

@@ -91,6 +91,13 @@
   }
 }
 
+/* Keep long page and card titles readable on phone-sized screens. */
+@media (max-width: 700px) {
+  body main h1 { font-size: clamp(2.35rem, 10vw, 3rem) !important; line-height: 1.02 !important; }
+  body main h2 { font-size: clamp(1.55rem, 7vw, 2.1rem) !important; line-height: 1.08 !important; }
+  body main h3 { font-size: clamp(1.15rem, 5.5vw, 1.45rem) !important; line-height: 1.15 !important; }
+}
+
 /* Keep application controls compact and prevent intrinsic content from
    overflowing cards at tablet, split-screen and browser-zoom widths. */
 @media (max-width: 1180px) {
@@ -1065,6 +1072,7 @@ html[data-theme="dark"] .save-button img {
 }
 
 .floating-language-toggle { position:fixed; right:18px; bottom:18px; z-index:1200; min-width:54px; min-height:42px; border:1px solid var(--line); border-radius:999px; background:var(--surface); color:var(--text); box-shadow:var(--shadow); cursor:pointer; font:inherit; font-weight:900; }
+.standard-site-header .settings-button>span{display:grid;width:26px;height:26px;place-items:center;font-size:24px;line-height:1}
 
 /* Collapse the full navigation before it clips on common laptop viewports. */
 @media (max-width: 1460px) and (min-width: 1181px) {
