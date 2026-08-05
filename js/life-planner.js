@@ -6,7 +6,10 @@
   const content = document.querySelector("[data-planner-content]");
   const notice = document.querySelector("[data-planner-notice]");
   const taskForm = document.querySelector("[data-task-form]");
+  const taskConfirmation = document.querySelector("[data-task-confirmation]");
   const preferencesForm = document.querySelector("[data-preferences-form]");
+  const t = (key) => window.TeenLaunchI18n?.translate(key) || key;
+  const isChinese = () => window.TeenLaunchI18n?.getLanguage() === "zh";
 
   function monday(value) {
     const date = new Date(value); date.setHours(0, 0, 0, 0);
@@ -16,23 +19,23 @@
   const esc = (value) => String(value ?? "").replace(/[&<>'"]/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[char]));
   const headers = (json = false) => ({ Authorization: `Bearer ${token}`, ...(json ? { "Content-Type": "application/json" } : {}) });
   const localInput = (value) => { if (!value) return ""; const date = new Date(value); const offset = date.getTimezoneOffset() * 60000; return new Date(date - offset).toISOString().slice(0, 16); };
-  const formatDate = (value, options = {}) => new Intl.DateTimeFormat(undefined, { month: "short", day: "numeric", ...options }).format(new Date(value));
-  const formatTime = (value) => new Intl.DateTimeFormat(undefined, { hour: "numeric", minute: "2-digit" }).format(new Date(value));
-  const setNotice = (message, type = "") => { notice.textContent = message; notice.className = `planner-notice ${type}`.trim(); notice.hidden = !message; };
+  const formatDate = (value, options = {}) => new Intl.DateTimeFormat(isChinese() ? "zh-CN" : undefined, { month: "short", day: "numeric", ...options }).format(new Date(value));
+  const formatTime = (value) => new Intl.DateTimeFormat(isChinese() ? "zh-CN" : undefined, { hour: "numeric", minute: "2-digit" }).format(new Date(value));
+  const setNotice = (message, type = "") => { notice.textContent = t(message); notice.className = `planner-notice ${type}`.trim(); notice.hidden = !message; };
 
   async function request(path, options = {}) {
     const response = await fetch(`${API}${path}`, { ...options, headers: { ...headers(Boolean(options.body)), ...(options.headers || {}) } });
     if (response.status === 204) return null;
     const data = await response.json().catch(() => ({}));
-    if (!response.ok) throw new Error(data.message || "The planner could not be updated.");
+    if (!response.ok) throw new Error(data?.error?.message || data?.message || "The planner could not be updated.");
     return data;
   }
 
   function buildPreferenceFields() {
     const school = document.querySelector("[data-school-days]");
     const rests = document.querySelector("[data-rest-days]");
-    school.innerHTML = days.map((day, index) => `<div class="school-day"><label><input type="checkbox" data-school-enabled="${index + 1}"> ${day.slice(0, 3)}</label><input type="time" data-school-start="${index + 1}" value="08:00" aria-label="${day} school start"><input type="time" data-school-end="${index + 1}" value="15:00" aria-label="${day} school end"></div>`).join("");
-    rests.innerHTML = days.map((day, index) => `<label><input type="checkbox" name="rest_day" value="${index + 1}"> ${day.slice(0, 3)}</label>`).join("");
+    school.innerHTML = days.map((day, index) => `<div class="school-day"><label><input type="checkbox" data-school-enabled="${index + 1}"> ${t(day.slice(0, 3))}</label><input type="time" data-school-start="${index + 1}" value="08:00" aria-label="${t(day)} ${t("school start")}"><input type="time" data-school-end="${index + 1}" value="15:00" aria-label="${t(day)} ${t("school end")}"></div>`).join("");
+    rests.innerHTML = days.map((day, index) => `<label><input type="checkbox" name="rest_day" value="${index + 1}"> ${t(day.slice(0, 3))}</label>`).join("");
   }
 
   function fillPreferences() {
@@ -64,8 +67,8 @@
   }
 
   function actionButtons(task) {
-    if (task.status === "suggested") return `<button class="mini-button" data-action="accept" data-id="${task.id}">Accept</button><button class="mini-button" data-action="reject" data-id="${task.id}">Reject</button><button class="mini-button" data-action="edit" data-id="${task.id}">Edit</button>`;
-    return `<button class="mini-button" data-action="complete" data-id="${task.id}">${task.status === "completed" ? "Reopen" : "Done"}</button><button class="mini-button" data-action="edit" data-id="${task.id}">Edit</button><button class="mini-button" data-action="delete" data-id="${task.id}">Delete</button>`;
+    if (task.status === "suggested") return `<button class="mini-button" data-action="accept" data-id="${task.id}">${t("Accept")}</button><button class="mini-button" data-action="reject" data-id="${task.id}">${t("Reject")}</button><button class="mini-button" data-action="edit" data-id="${task.id}">${t("Edit")}</button>`;
+    return `<button class="mini-button" data-action="complete" data-id="${task.id}">${t(task.status === "completed" ? "Reopen" : "Done")}</button><button class="mini-button" data-action="edit" data-id="${task.id}">${t("Edit")}</button><button class="mini-button" data-action="delete" data-id="${task.id}">${t("Delete")}</button>`;
   }
 
   function renderCalendar() {
@@ -75,13 +78,13 @@
     document.querySelector("[data-weekly-calendar]").innerHTML = days.map((day, index) => {
       const date = addDays(state.weekStart, index);
       const events = state.tasks.flatMap(taskInstances).filter((item) => item.displayStart.toDateString() === date.toDateString()).sort((a, b) => a.displayStart - b.displayStart);
-      return `<article class="calendar-day ${date.toDateString() === today ? "today" : ""}"><h3>${day}<span>${formatDate(date)}</span></h3><div class="calendar-events">${events.map((task) => `<div class="calendar-event ${esc(task.status)}"><strong>${esc(task.title)}</strong><time>${formatTime(task.displayStart)}–${formatTime(task.displayEnd)}</time><div class="event-actions">${actionButtons(task)}</div></div>`).join("")}</div></article>`;
+      return `<article class="calendar-day ${date.toDateString() === today ? "today" : ""}"><h3>${t(day)}<span>${formatDate(date)}</span></h3><div class="calendar-events">${events.map((task) => `<div class="calendar-event ${esc(task.status)}"><strong>${esc(task.title)}</strong><time>${formatTime(task.displayStart)}–${formatTime(task.displayEnd)}</time><div class="event-actions">${actionButtons(task)}</div></div>`).join("")}</div></article>`;
     }).join("");
   }
 
   function taskCard(task) {
-    const date = task.deadline ? `Due ${formatDate(`${task.deadline}T12:00:00`)}` : task.start_time ? formatDate(task.start_time) : "Not scheduled";
-    return `<article class="task-card"><strong>${esc(task.title)}</strong> <span class="priority ${esc(task.priority)}">${esc(task.priority)}</span><p>${esc(task.category)} · ${date}</p><div class="task-actions">${actionButtons(task)}</div></article>`;
+    const date = task.deadline ? `${t("Due")} ${formatDate(`${task.deadline}T12:00:00`)}` : task.start_time ? formatDate(task.start_time) : t("Not scheduled");
+    return `<article class="task-card"><strong>${esc(task.title)}</strong> <span class="priority ${esc(task.priority)}">${t(task.priority)}</span><p>${t(task.category)} · ${date}</p><div class="task-actions">${actionButtons(task)}</div></article>`;
   }
 
   function renderLists() {
@@ -109,10 +112,10 @@
     taskForm.elements.task_id.value = task.id; taskForm.elements.title.value = task.title;
     ["description", "category", "priority", "deadline", "recurrence", "estimated_minutes"].forEach((name) => { taskForm.elements[name].value = task[name] || (name === "estimated_minutes" ? 45 : ""); });
     taskForm.elements.start_time.value = localInput(task.start_time); taskForm.elements.end_time.value = localInput(task.end_time);
-    document.querySelector("[data-task-form-title]").textContent = "Edit task"; document.querySelector("[data-task-submit]").textContent = "Save changes"; document.querySelector("[data-cancel-edit]").hidden = false;
+    document.querySelector("[data-task-form-title]").textContent = t("Edit task"); document.querySelector("[data-task-submit]").textContent = t("Save changes"); document.querySelector("[data-cancel-edit]").hidden = false;
     taskForm.scrollIntoView({ behavior: "smooth", block: "start" });
   }
-  function resetTaskForm() { taskForm.reset(); taskForm.elements.task_id.value = ""; taskForm.elements.estimated_minutes.value = "45"; taskForm.elements.priority.value = "medium"; document.querySelector("[data-task-form-title]").textContent = "New task"; document.querySelector("[data-task-submit]").textContent = "Add task"; document.querySelector("[data-cancel-edit]").hidden = true; }
+  function resetTaskForm() { taskForm.reset(); taskForm.elements.task_id.value = ""; taskForm.elements.estimated_minutes.value = "45"; taskForm.elements.priority.value = "medium"; document.querySelector("[data-task-form-title]").textContent = t("New task"); document.querySelector("[data-task-submit]").textContent = t("Add task"); document.querySelector("[data-cancel-edit]").hidden = true; }
 
   function validateTime(payload, editingId) {
     if (!payload.start_time && !payload.end_time) return;
@@ -131,7 +134,21 @@
     event.preventDefault(); const data = new FormData(taskForm); const id = data.get("task_id");
     const payload = Object.fromEntries(data.entries()); delete payload.task_id;
     payload.start_time = payload.start_time ? new Date(payload.start_time).toISOString() : null; payload.end_time = payload.end_time ? new Date(payload.end_time).toISOString() : null;
-    try { validateTime(payload, id); const result = await request(id ? `/tasks/${id}` : "/tasks", { method: id ? "PUT" : "POST", body: JSON.stringify(payload) }); if (id) state.tasks = state.tasks.map((task) => task.id === id ? result.task : task); else state.tasks.push(result.task); resetTaskForm(); render(); setNotice(id ? "Task updated." : "Task added.", "success"); } catch (error) { setNotice(error.message, "error"); }
+    try {
+      validateTime(payload, id);
+      const result = await request(id ? `/tasks/${id}` : "/tasks", { method: id ? "PUT" : "POST", body: JSON.stringify(payload) });
+      if (id) state.tasks = state.tasks.map((task) => task.id === id ? result.task : task); else state.tasks.push(result.task);
+      const destination = result.task.start_time ? "your weekly calendar and Upcoming list" : "your Upcoming list";
+      taskConfirmation.textContent = isChinese() ? (id ? `“${result.task.title}”已更新。` : `“${result.task.title}”已添加到${result.task.start_time ? "每周日历和即将到来列表" : "即将到来列表"}。`) : (id ? `“${result.task.title}” was updated.` : `“${result.task.title}” was added to ${destination}.`);
+      taskConfirmation.hidden = false;
+      taskConfirmation.classList.add("success");
+      resetTaskForm(); render(); setNotice(id ? "Task updated." : "Task added.", "success");
+    } catch (error) {
+      taskConfirmation.textContent = error.message;
+      taskConfirmation.hidden = false;
+      taskConfirmation.classList.remove("success");
+      setNotice(error.message, "error");
+    }
   });
 
   document.addEventListener("click", async (event) => {

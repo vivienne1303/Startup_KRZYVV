@@ -27,6 +27,27 @@
   const renderPublicLink=()=>{const row=document.querySelector("[data-public-link-row]"),link=document.querySelector("[data-public-link]");const visible=Boolean(state.portfolio?.is_public&&state.portfolio?.slug);row.hidden=!visible;if(!visible)return;link.href=publicUrl();link.textContent=publicUrl()};
   const load=async()=>{try{state=await request("/portfolio/me");const f=document.querySelector("[data-profile-form]"),p=state.portfolio;f.elements.introduction.value=p.introduction||"";f.elements.personal_description.value=p.personal_description||"";f.elements.slug.value=p.slug||"";f.elements.contact.value=p.contact_links?.contact||"";f.elements.social.value=p.contact_links?.social||"";f.elements.is_public.checked=p.is_public;document.querySelector("[data-builder-content]").hidden=false;renderPublicLink();notify("");render()}catch(e){notify(e.message,"error")}};
   document.querySelector("[data-profile-form]").onsubmit=async e=>{e.preventDefault();const f=e.currentTarget;try{await request("/portfolio/profile",{method:"PUT",body:JSON.stringify({introduction:f.elements.introduction.value,personal_description:f.elements.personal_description.value,slug:f.elements.slug.value,is_public:f.elements.is_public.checked,contact_links:{contact:f.elements.contact.value,social:f.elements.social.value}})});notify("Portfolio settings saved.","success");await load()}catch(err){notify(err.message,"error")}};
-  document.querySelector("[data-new-project]").onclick=async()=>{try{await request("/portfolio/projects",{method:"POST",body:JSON.stringify({title:"New project",position:state.projects.length})});await load()}catch(e){notify(e.message,"error")}};
+  const newProjectButton=document.querySelector("[data-new-project]");
+  let creatingProject=false;
+  newProjectButton.onclick=async()=>{
+    if(creatingProject)return;
+    creatingProject=true;
+    newProjectButton.disabled=true;
+    newProjectButton.setAttribute("aria-busy","true");
+    const originalText=newProjectButton.textContent;
+    newProjectButton.textContent="Adding...";
+    try{
+      await request("/portfolio/projects",{method:"POST",body:JSON.stringify({title:"New project",position:state.projects.length})});
+      await load();
+      notify("New project added.","success");
+    }catch(e){
+      notify(e.message,"error");
+    }finally{
+      creatingProject=false;
+      newProjectButton.disabled=false;
+      newProjectButton.removeAttribute("aria-busy");
+      newProjectButton.textContent=originalText;
+    }
+  };
   document.querySelector("[data-copy-link]").addEventListener("click",window.copyTeenLaunchPortfolioLink,{capture:true});load();
 })();

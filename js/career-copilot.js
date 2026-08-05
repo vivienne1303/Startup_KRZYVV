@@ -11,6 +11,7 @@
   const form = document.querySelector("[data-chat-form]");
   const loading = document.querySelector("[data-chat-loading]");
   const errorBox = document.querySelector("[data-chat-error]");
+  const t = (key) => window.TeenLaunchI18n?.translate(key) || key;
   const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[character]));
 
   const formatResponse = (value) => {
@@ -37,9 +38,10 @@
   const save = () => sessionStorage.setItem(storageKey, JSON.stringify(messages.slice(-20)));
   const render = () => {
     messagesRoot.innerHTML = messages.map((message) => {
-      const source = message.source === "ai" ? "Personalised Career Copilot guidance" : message.source === "database_fallback" ? "TeenLaunch database guidance" : "TeenLaunch guidance";
-      const references = message.opportunities?.length ? `<div class="opportunity-references"><strong>Recommended TeenLaunch opportunities</strong>${message.opportunities.map((opportunity) => `<a href="${escapeHtml(opportunity.link.replace(/^pages\//, ""))}"><span>${escapeHtml(opportunity.title)}</span><small>${escapeHtml(opportunity.why || "View verified opportunity details")}</small></a>`).join("")}</div>` : "";
-      return `<article class="copilot-bubble ${message.role}"><div class="copilot-response">${message.role === "assistant" ? formatResponse(message.content) : `<p>${escapeHtml(message.content)}</p>`}</div>${message.role === "assistant" ? `${references}<small class="response-source">${source}</small>` : ""}</article>`;
+      const sourceKey = message.source === "ai" ? "Personalised Career Copilot guidance" : message.source === "database_fallback" ? "TeenLaunch database guidance" : "TeenLaunch guidance";
+      const references = message.opportunities?.length ? `<div class="opportunity-references"><strong>${t("Recommended TeenLaunch opportunities")}</strong>${message.opportunities.map((opportunity) => `<a href="${escapeHtml(opportunity.link.replace(/^pages\//, ""))}"><span>${escapeHtml(opportunity.title)}</span><small>${escapeHtml(opportunity.why || t("View verified opportunity details"))}</small></a>`).join("")}</div>` : "";
+      const content = t(message.content);
+      return `<article class="copilot-bubble ${message.role}"><div class="copilot-response">${message.role === "assistant" ? formatResponse(content) : `<p>${escapeHtml(content)}</p>`}</div>${message.role === "assistant" ? `${references}<small class="response-source">${t(sourceKey)}</small>` : ""}</article>`;
     }).join("");
     messagesRoot.scrollTop = messagesRoot.scrollHeight;
   };

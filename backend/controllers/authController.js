@@ -2,7 +2,7 @@ const asyncHandler = require("../utils/asyncHandler");
 const HttpError = require("../utils/httpError");
 const { sanitizeAuthUser } = require("../utils/sanitize");
 const { registerUser, loginUser } = require("../services/authService");
-const { getProfileById, updateOwnProfile } = require("../services/profileService");
+const { createProfileForUser, getProfileById, updateOwnProfile } = require("../services/profileService");
 
 const register = asyncHandler(async (req, res) => {
   const body = req.body || {};
@@ -76,9 +76,20 @@ const login = asyncHandler(async (req, res) => {
     password,
   });
 
-  const { data: profile, error } = await getProfileById(req.app.locals.supabaseAdmin, data.user.id);
+  let { data: profile, error } = await getProfileById(req.app.locals.supabaseAdmin, data.user.id);
 
-  if (error) {
+  // Repair legacy Supabase users whose auth account exists without a profile row.
+  if (!profile && error?.code === "PGRST116") {
+    const created = await createProfileForUser({
+      userId: data.user.id,
+      fullName: data.user.user_metadata?.full_name || data.user.email?.split("@")[0] || "TeenLaunch user",
+      profile: {},
+    });
+    profile = created.data;
+    error = created.error;
+  }
+
+  if (error || !profile) {
     throw new HttpError(404, "User profile not found", error.message);
   }
 

@@ -2,6 +2,8 @@
   const API = window.TEENLAUNCH_API_BASE;
   const token = localStorage.getItem("teenlaunch_token");
   const headers = { Authorization: `Bearer ${token}` };
+  const t = (key) => window.TeenLaunchI18n?.translate(key) || key;
+  const locale = () => window.TeenLaunchI18n?.getLanguage() === "zh" ? "zh-CN" : undefined;
   const esc = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
   if (!token) { location.replace("auth.html?mode=login&returnTo=profile.html"); return; }
 
@@ -13,25 +15,43 @@
   };
   const opportunityCard = (item, saved = false) => {
     const opportunity = item.opportunities || {};
-    return `<article class="application-card">${opportunity.image_url ? `<img src="${esc(opportunity.image_url)}" alt="">` : ""}<h3>${esc(opportunity.title || "Opportunity")}</h3><p>${esc(opportunity.category || "")}</p>${saved ? "" : `<span class="status">${esc(item.status)}</span><p>Applied ${new Date(item.created_at).toLocaleDateString()}</p>`}<p>Deadline: ${opportunity.deadline ? new Date(`${opportunity.deadline}T00:00:00`).toLocaleDateString() : "Rolling"}</p><div class="profile-card-actions"><a class="btn secondary" href="apply.html?id=${encodeURIComponent(item.opportunity_id)}">View Details</a>${saved ? `<button class="btn secondary" type="button" data-unsave="${esc(item.opportunity_id)}">Remove</button>` : ""}</div></article>`;
+    return `<article class="application-card">${opportunity.image_url ? `<img src="${esc(opportunity.image_url)}" alt="">` : ""}<h3>${esc(opportunity.title || t("Opportunity"))}</h3><p>${esc(opportunity.category || "")}</p>${saved ? "" : `<span class="status">${esc(t(item.status))}</span><p>${t("Applied")} ${new Date(item.created_at).toLocaleDateString(locale())}</p>`}<p>${t("Deadline:")} ${opportunity.deadline ? new Date(`${opportunity.deadline}T00:00:00`).toLocaleDateString(locale()) : t("Rolling")}</p><div class="profile-card-actions"><a class="btn secondary" href="apply.html?id=${encodeURIComponent(item.opportunity_id)}">${t("View Details")}</a>${saved ? `<button class="btn secondary" type="button" data-unsave="${esc(item.opportunity_id)}">${t("Remove")}</button>` : ""}</div></article>`;
   };
   const renderEngagement = ({ engagement, experiences }) => {
-    document.querySelector("[data-tier-name]").textContent = engagement.tier.name;
+    document.querySelector("[data-tier-name]").textContent = t(engagement.tier.name);
     document.querySelector("[data-xp]").textContent = engagement.xp;
     document.querySelector("[data-streak]").textContent = engagement.streak;
-    document.querySelector("[data-streak-unit]").textContent = engagement.streak === 1 ? "day" : "days";
+    document.querySelector("[data-streak-unit]").textContent = t(engagement.streak === 1 ? "day" : "days");
     document.querySelector("[data-xp-progress]").style.width = `${engagement.progress}%`;
-    document.querySelector("[data-next-tier]").textContent = engagement.next ? `${engagement.next.xp - engagement.xp} XP to ${engagement.next.name}` : "Highest tier reached";
-    document.querySelector("[data-rewards]").innerHTML = engagement.tiers.map((tier) => `<article class="reward-step ${engagement.xp >= tier.xp ? "unlocked" : ""}"><span>${engagement.xp >= tier.xp ? "✓" : "🔒"}</span><div><strong>${esc(tier.name)}</strong><small>${esc(tier.reward)} · ${tier.xp} XP</small></div></article>`).join("");
+    document.querySelector("[data-next-tier]").textContent = engagement.next ? (window.TeenLaunchI18n?.getLanguage() === "zh" ? `距离${t(engagement.next.name)}还需 ${engagement.next.xp - engagement.xp} XP` : `${engagement.next.xp - engagement.xp} XP to ${engagement.next.name}`) : t("Highest tier reached");
+    document.querySelector("[data-rewards]").innerHTML = engagement.tiers.map((tier) => `<article class="reward-step ${engagement.xp >= tier.xp ? "unlocked" : ""}"><span>${engagement.xp >= tier.xp ? "✓" : "🔒"}</span><div><strong>${esc(t(tier.name))}</strong><small>${esc(t(tier.reward))} · ${tier.xp} XP</small></div></article>`).join("");
     const root = document.querySelector("[data-experiences]");
-    root.innerHTML = experiences.map((post) => `<article class="experience-post"><div class="experience-photo"><img src="${esc(post.image_url)}" alt="${esc(post.title)}" loading="lazy"><button type="button" data-delete-experience="${esc(post.id)}" aria-label="Delete ${esc(post.title)}">×</button></div><div class="experience-copy"><div><h3>${esc(post.title)}</h3><time datetime="${esc(post.event_date)}">${new Date(`${post.event_date}T00:00:00`).toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" })}</time></div>${post.caption ? `<p>${esc(post.caption)}</p>` : ""}<span>+5 XP earned</span></div></article>`).join("");
+    root.innerHTML = experiences.map((post) => `<article class="experience-post" data-open-experience-post="${esc(post.id)}" role="button" tabindex="0" aria-label="Open ${esc(post.title)}"><div class="experience-photo"><img src="${esc(post.image_url)}" alt="${esc(post.title)}" loading="lazy"><button type="button" data-delete-experience="${esc(post.id)}" aria-label="Delete ${esc(post.title)}">×</button></div><div class="experience-copy"><div><h3>${esc(post.title)}</h3><time datetime="${esc(post.event_date)}">${new Date(`${post.event_date}T00:00:00`).toLocaleDateString(locale(), { day: "numeric", month: "short", year: "numeric" })}</time></div>${post.caption ? `<p>${esc(post.caption)}</p>` : ""}<span>${t("+5 XP earned")}</span></div></article>`).join("");
     document.querySelector("[data-experiences-empty]").hidden = experiences.length > 0;
-    root.querySelectorAll("[data-delete-experience]").forEach((button) => button.addEventListener("click", async () => {
+    const dialog = document.querySelector("[data-experience-dialog]");
+    const openPost = (post) => {
+      dialog.querySelector("[data-dialog-image]").src = post.image_url;
+      dialog.querySelector("[data-dialog-image]").alt = post.title;
+      dialog.querySelector("[data-dialog-title]").textContent = post.title;
+      dialog.querySelector("[data-dialog-date]").textContent = new Date(`${post.event_date}T00:00:00`).toLocaleDateString(locale(), { day: "numeric", month: "long", year: "numeric" });
+      dialog.querySelector("[data-dialog-caption]").textContent = post.caption || t("No caption added.");
+      dialog.showModal();
+    };
+    root.querySelectorAll("[data-open-experience-post]").forEach((card) => {
+      const post = experiences.find((item) => String(item.id) === card.dataset.openExperiencePost);
+      card.addEventListener("click", () => openPost(post));
+      card.addEventListener("keydown", (event) => { if (["Enter", " "].includes(event.key)) { event.preventDefault(); openPost(post); } });
+    });
+    root.querySelectorAll("[data-delete-experience]").forEach((button) => button.addEventListener("click", async (event) => {
+      event.stopPropagation();
       if (!confirm("Remove this experience from your profile?")) return;
       button.disabled = true;
       try { await request(`/profile/experiences/${encodeURIComponent(button.dataset.deleteExperience)}`, { method: "DELETE" }); await load(); } catch (error) { alert(error.message); button.disabled = false; }
     }));
   };
+  const experienceDialog = document.querySelector("[data-experience-dialog]");
+  document.querySelector("[data-close-experience-dialog]").addEventListener("click", () => experienceDialog.close());
+  experienceDialog.addEventListener("click", (event) => { if (event.target === experienceDialog) experienceDialog.close(); });
   const fillProfile = (current, applications, counts, saved) => {
     const profile = current.profile || {};
     document.querySelector("[data-username]").textContent = profile.username ? `@${profile.username}` : `@${(current.user?.email || "teenlaunch").split("@")[0]}`;

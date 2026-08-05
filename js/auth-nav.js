@@ -64,6 +64,22 @@
 
     const dropdowns = navLinks.querySelectorAll(".nav-dropdown");
     dropdowns.forEach((dropdown) => {
+      const trigger = dropdown.querySelector(".nav-trigger");
+      if (trigger) {
+        trigger.setAttribute("aria-expanded", "false");
+        trigger.addEventListener("click", (event) => {
+          if (!window.matchMedia("(max-width: 1460px)").matches) return;
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          const willOpen = !dropdown.classList.contains("open");
+          dropdowns.forEach((other) => {
+            other.classList.remove("open");
+            other.querySelector(".nav-trigger")?.setAttribute("aria-expanded", "false");
+          });
+          dropdown.classList.toggle("open", willOpen);
+          trigger.setAttribute("aria-expanded", String(willOpen));
+        });
+      }
       dropdown.addEventListener("pointerenter", () => {
         dropdowns.forEach((other) => {
           if (other === dropdown || !other.contains(document.activeElement)) return;
@@ -76,9 +92,30 @@
     if (!navLinks.parentElement) navbar.appendChild(navLinks);
     navbar.querySelectorAll(":scope > .dna-header-link").forEach((link) => link.remove());
 
+    // Opening a large menu inside a sticky header can trigger browser scroll
+    // anchoring, especially on mobile. Keep the user's current reading position
+    // while either this script or a page-specific script toggles the menu.
+    let menuScrollPosition = window.scrollY;
+    navToggle.addEventListener("pointerdown", () => {
+      menuScrollPosition = window.scrollY;
+    }, true);
+    navToggle.addEventListener("click", (event) => {
+      const scrollPosition = event.detail > 0 ? menuScrollPosition : window.scrollY;
+      window.requestAnimationFrame(() => {
+        window.scrollTo(0, scrollPosition);
+        window.requestAnimationFrame(() => window.scrollTo(0, scrollPosition));
+      });
+    }, true);
+
     if (createdToggle) {
       navToggle.addEventListener("click", () => {
         const open = navLinks.classList.toggle("open");
+        if (!open) {
+          dropdowns.forEach((dropdown) => {
+            dropdown.classList.remove("open");
+            dropdown.querySelector(".nav-trigger")?.setAttribute("aria-expanded", "false");
+          });
+        }
         navToggle.setAttribute("aria-expanded", String(open));
         navToggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
       });
@@ -116,33 +153,32 @@
   const verifyRole = async () => {
     try {
       const response = await fetch(`${API_BASE}/auth/me`, { headers: { Authorization: `Bearer ${token}` } });
-      if (!response.ok) throw new Error("Session could not be verified");
+      if (response.status === 401 || response.status === 403) {
+        clearSession();
+        authLink.textContent = "Login";
+        authLink.classList.remove("is-logout");
+        authLink.href = pageHref("auth.html");
+        return;
+      }
+      if (!response.ok) throw new Error(`Session verification failed (${response.status})`);
       const data = await response.json();
       localStorage.setItem("teenlaunch_user", JSON.stringify(data.user || {}));
       localStorage.setItem("teenlaunch_profile", JSON.stringify(data.profile || {}));
       addProfileLink();
       if (data.role === "admin") addAdminLink();
     } catch (error) {
-      console.warn("Session verification failed; clearing local session.", error);
-      clearSession();
-      authLink.textContent = "Login";
-      authLink.classList.remove("is-logout");
-      authLink.href = pageHref("auth.html");
+      // Mobile connections can briefly fail while changing network or resuming a
+      // browser tab. Keep the local session unless the API explicitly rejects it.
+      console.warn("Session verification was unavailable; keeping the local session.", error);
     }
   };
 
   authLink.textContent = "Logout";
   authLink.classList.add("is-logout");
-  authLink.href = `${pageHref("auth.html")}?logout=1`;
-  authLink.onclick = (event) => {
-    event.preventDefault();
-    event.stopImmediatePropagation();
-    clearSession();
-    window.location.replace(`${pageHref("auth.html")}?logout=1`);
-    return false;
-  };
+  authLink.href = pageHref("auth.html");
   verifyRole();
   const logout = async (event) => {
+    if (!authLink.classList.contains("is-logout")) return;
     event.preventDefault();
     event.stopPropagation();
     authLink.setAttribute("aria-disabled", "true");

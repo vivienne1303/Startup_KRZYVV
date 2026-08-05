@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../css/theme.css">
-  <link rel="stylesheet" href="../css/settings.css?v=20260804b">
+  <link rel="stylesheet" href="../css/settings.css?v=20260805-footer">
 </head>
 <body>
   <header class="site-header">
@@ -48,7 +48,9 @@
       </div>
       <div class="settings-grid">
         <a class="settings-option reveal" href="account.html">
-          <img class="settings-icon" src="../assets/icons/app_icon.png" alt="" aria-hidden="true">
+          <span class="settings-icon settings-symbol" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 8c0-3.3 3.1-6 7-6s7 2.7 7 6"/></svg>
+          </span>
           <div>
             <h2>Account</h2>
             <span>Edit your profile and open your portfolio.</span>
@@ -69,7 +71,9 @@
           </div>
         </a>
         <a class="settings-option reveal" href="help.html">
-          <img class="settings-icon" src="../assets/icons/app_icon.png" alt="" aria-hidden="true">
+          <span class="settings-icon settings-symbol" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img"><circle cx="12" cy="12" r="9"/><path d="M9.8 9a2.4 2.4 0 1 1 3.5 2.1c-.9.5-1.3 1.1-1.3 2.1"/><path d="M12 17h.01"/></svg>
+          </span>
           <div>
             <h2>Help &amp; User Manual</h2>
             <span>Read common answers or download the TeenLaunch PDF guide.</span>
@@ -79,7 +83,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer settings-footer">
     <p>&copy; 2026 TeenLaunch</p>
     <a href="../index.html" data-i18n="Home">Home</a>
     <a href="account.html">Edit Profile</a>
@@ -90,7 +94,7 @@
   <script src="../js/auth-guard.js"></script>
   <script src="../js/auth-nav.js"></script>
 
-  <script src="../js/i18n.js"></script>
+  <script src="../js/i18n.js?v=20260805-settings-footer"></script>
   <script src="../script.js"></script>
 </body>
 </html>

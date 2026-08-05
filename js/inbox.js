@@ -3,6 +3,8 @@
   const token = localStorage.getItem("teenlaunch_token");
   if (!token) { location.replace(`auth.html?mode=login&returnTo=${encodeURIComponent(location.pathname + location.search)}`); return; }
   const headers = { Authorization: `Bearer ${token}` };
+  const t = (key) => window.TeenLaunchI18n?.translate(key) || key;
+  const locale = () => window.TeenLaunchI18n?.getLanguage() === "zh" ? "zh-CN" : undefined;
   let currentUserId = new URLSearchParams(location.search).get("user");
   let myId = "";
   const esc = (value) => String(value ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -17,10 +19,10 @@
     if (!response.ok) { status.textContent = await parseError(response); return; }
     const data = await response.json();
     document.querySelector("[data-conversation-empty]").hidden = true; document.querySelector("[data-conversation-content]").hidden = false;
-    document.querySelector("[data-chat-name]").textContent = data.user?.full_name || "TeenLaunch user";
+    document.querySelector("[data-chat-name]").textContent = data.user?.full_name || t("TeenLaunch user");
     document.querySelector("[data-chat-username]").textContent = `@${data.user?.username || "user"}`;
     const list = document.querySelector("[data-message-list]");
-    list.innerHTML = (data.messages || []).map((message) => `<div class="message-bubble ${message.sender_id === myId ? "mine" : ""}">${esc(message.body)}<small>${new Date(message.created_at).toLocaleString()}</small></div>`).join("");
+    list.innerHTML = (data.messages || []).map((message) => `<div class="message-bubble ${message.sender_id === myId ? "mine" : ""}">${esc(message.body)}<small>${new Date(message.created_at).toLocaleString(locale())}</small></div>`).join("");
     list.scrollTop = list.scrollHeight;
   };
 
@@ -30,8 +32,8 @@
     if (!inboxResponse.ok) { status.textContent = await parseError(inboxResponse); return; }
     myId = (await meResponse.json()).user?.id || "";
     const data = await inboxResponse.json();
-    threadList.innerHTML = data.threads.length ? data.threads.map((thread) => `<button class="thread-card" type="button" data-thread="${esc(thread.user?.id)}"><div class="thread-meta"><h3>@${esc(thread.user?.username || "user")}</h3>${thread.unread ? `<span class="unread-badge">${thread.unread}</span>` : ""}</div><p>${esc(thread.last_message.body)}</p><small>${new Date(thread.last_message.created_at).toLocaleString()}</small></button>`).join("") : `<div class="notification-card"><p>No messages yet.</p></div>`;
-    notificationList.innerHTML = data.notifications.length ? data.notifications.map((notice) => `<article class="notification-card"><strong>${esc(notice.title)}</strong><p>${esc(notice.body)}</p><small>${new Date(notice.created_at).toLocaleString()}</small></article>`).join("") : `<div class="notification-card"><p>No updates yet.</p></div>`;
+    threadList.innerHTML = data.threads.length ? data.threads.map((thread) => `<button class="thread-card" type="button" data-thread="${esc(thread.user?.id)}"><div class="thread-meta"><h3>@${esc(thread.user?.username || "user")}</h3>${thread.unread ? `<span class="unread-badge">${thread.unread}</span>` : ""}</div><p>${esc(thread.last_message.body)}</p><small>${new Date(thread.last_message.created_at).toLocaleString(locale())}</small></button>`).join("") : `<div class="notification-card"><p>${t("No messages yet.")}</p></div>`;
+    notificationList.innerHTML = data.notifications.length ? data.notifications.map((notice) => `<article class="notification-card"><strong>${esc(notice.title)}</strong><p>${esc(notice.body)}</p><small>${new Date(notice.created_at).toLocaleString(locale())}</small></article>`).join("") : `<div class="notification-card"><p>${t("No updates yet.")}</p></div>`;
     threadList.querySelectorAll("[data-thread]").forEach((button) => button.addEventListener("click", () => openConversation(button.dataset.thread)));
     status.textContent = "";
     if (currentUserId) openConversation(currentUserId);

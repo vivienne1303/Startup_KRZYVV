@@ -189,8 +189,11 @@ const loadOpportunities = async () => {
     if (!Array.isArray(opportunities)) throw new Error("The opportunity response was invalid.");
     if (!opportunities.length) {
       grid.innerHTML = "";
-      emptyState.style.display = "block";
-      emptyState.textContent = "No verified opportunities are open right now. Please check again soon.";
+      const message = "No verified opportunities are open right now. Please check again soon.";
+      emptyState.hidden = false;
+      emptyState.removeAttribute("data-i18n");
+      emptyState.style.setProperty("display", "block", "important");
+      emptyState.textContent = translateUi(message);
       return;
     }
     grid.innerHTML = opportunities.map(opportunityMarkup).join("");
@@ -201,8 +204,10 @@ const loadOpportunities = async () => {
   } catch (_) {
     grid.innerHTML = "";
     cards = document.querySelectorAll("#opportunityGrid .opportunity-card");
-    emptyState.style.display = "block";
-    emptyState.innerHTML = `Verified opportunities could not be loaded right now. <button class="btn secondary opportunity-retry" type="button">Try again</button>`;
+    emptyState.hidden = false;
+    emptyState.removeAttribute("data-i18n");
+    emptyState.style.setProperty("display", "block", "important");
+    emptyState.innerHTML = `${translateUi("Verified opportunities could not be loaded right now.")} <button class="btn secondary opportunity-retry" type="button">${translateUi("Try again")}</button>`;
     emptyState.querySelector(".opportunity-retry").addEventListener("click", loadOpportunities, { once: true });
   } finally {
     grid.removeAttribute("aria-busy");

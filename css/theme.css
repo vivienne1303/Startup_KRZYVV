@@ -23,13 +23,30 @@
 
 .profile-stats a:hover { text-decoration: underline; }
 
-/* Standard page headers stay at the document top and scroll out of view. */
+/* Keep the shared navigation available while the user scrolls. A fixed header
+   avoids Chrome scrolling sticky controls back to their document position. */
 .site-header.standard-site-header {
-  position: absolute !important;
+  position: fixed !important;
   top: 0;
   right: 0;
   left: 0;
   width: 100%;
+  z-index: 100;
+  background: rgba(245, 251, 255, 0.9);
+  border-bottom: 1px solid rgba(39, 99, 178, 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.site-header.standard-site-header + main {
+  padding-top: 88px;
+}
+
+/* Hero pages previously reserved space for a fixed, overlaying header. The
+   sticky header now occupies that space itself, so only keep normal section
+   breathing room below it. */
+.site-header.standard-site-header + main > .hero {
+  padding-top: clamp(40px, 6vw, 72px);
 }
 
 /* Inbox rows fill the complete Messages column. */
@@ -88,6 +105,14 @@
     right: 16px;
     left: 16px;
     inset: 100% 16px auto;
+  }
+
+  .site-header.standard-site-header + main > .hero {
+    padding-top: 36px;
+  }
+
+  .site-header.standard-site-header + main {
+    padding-top: 72px;
   }
 }
 
@@ -157,6 +182,14 @@ body {
     linear-gradient(145deg, #f4fbff 0%, #dff3ff 34%, #9ed4ff 66%, #202667 100%),
     #eaf7ff;
   color: var(--text);
+}
+
+/* Page scripts use this class while the responsive menu is open. Locking the
+   body with overflow:hidden breaks position:sticky in Chrome and makes the
+   header jump back toward its document position. The menu has its own bounded
+   scrolling area, so the body lock is unnecessary. */
+body.nav-open {
+  overflow: visible !important;
 }
 
 .eyebrow {
@@ -547,6 +580,7 @@ body {
     background: rgba(245, 251, 255, 0.98);
     box-shadow: var(--shadow);
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
     transform: translateY(-10px);
     transition: opacity 0.2s ease, transform 0.2s ease;
@@ -554,6 +588,7 @@ body {
 
   .nav-links.open {
     opacity: 1;
+    visibility: visible;
     pointer-events: auto;
     transform: translateY(0);
   }
@@ -585,25 +620,59 @@ body {
   }
 
   .dropdown-menu {
+    display: none;
+  }
+
+  .nav-dropdown.open > .dropdown-menu {
+    display: grid;
     position: static;
     width: 100%;
     min-width: 0;
-    margin: 0 0 6px;
-    padding: 4px;
+    gap: 2px;
+    margin: 0 0 4px;
+    padding: 2px 0 2px 12px;
     border: 0;
     background: transparent;
     box-shadow: none;
     opacity: 1;
+    visibility: visible;
     pointer-events: auto;
     transform: none;
   }
 
-  .dropdown-menu a {
-    padding: 10px 12px;
+  .nav-dropdown.open > .dropdown-menu a {
+    min-height: 38px;
+    padding: 7px 10px;
+    font-size: 0.9rem;
+  }
+
+  .nav-links {
+    gap: 2px;
+    padding: 12px;
+  }
+
+  .nav-links > a,
+  .nav-links .nav-trigger {
+    min-height: 42px;
+    padding: 8px 10px;
+    font-size: 0.95rem;
+  }
+
+  /* Dropdown children use pointer-events:auto, so explicitly disable every
+     descendant while the collapsed menu is closed. This prevents invisible
+     navigation links from intercepting taps on page buttons. */
+  .nav-links:not(.open),
+  .nav-links:not(.open) * {
+    visibility: hidden !important;
+    pointer-events: none !important;
   }
 
   .nav-dropdown::after {
     display: none;
+  }
+
+  .nav-trigger::after {
+    display: block;
   }
 
   .hero {
@@ -1094,6 +1163,7 @@ html[data-theme="dark"] .save-button img {
     background: rgba(245, 251, 255, 0.98);
     box-shadow: var(--shadow);
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
     transform: translateY(-10px);
     transition: opacity 0.2s ease, transform 0.2s ease;
@@ -1101,6 +1171,7 @@ html[data-theme="dark"] .save-button img {
 
   .standard-site-header .nav-links.open {
     opacity: 1;
+    visibility: visible;
     pointer-events: auto;
     transform: translateY(0);
   }
@@ -1125,17 +1196,30 @@ html[data-theme="dark"] .save-button img {
   }
 
   .standard-site-header .dropdown-menu {
+    display: none;
+  }
+
+  .standard-site-header .nav-dropdown.open > .dropdown-menu {
+    display: grid;
     position: static;
     width: 100%;
     min-width: 0;
-    margin-bottom: 6px;
-    padding: 4px;
+    gap: 2px;
+    margin: 0 0 4px;
+    padding: 2px 0 2px 12px;
     border: 0;
     background: transparent;
     box-shadow: none;
     opacity: 1;
+    visibility: visible;
     pointer-events: auto;
     transform: none;
+  }
+
+  .standard-site-header .nav-links:not(.open),
+  .standard-site-header .nav-links:not(.open) * {
+    visibility: hidden !important;
+    pointer-events: none !important;
   }
 
   html[data-theme="dark"] .standard-site-header .nav-links {
@@ -1198,6 +1282,91 @@ html[data-theme="dark"] .save-button img {
   .footer a {
     display: flex;
     align-items: center;
+  }
+
+  /* The tablet presentation above intentionally uses large, narrow headings.
+     On phones that treatment causes excessive wrapping and oversized cards. */
+  main > .split-section {
+    gap: 28px;
+  }
+
+  main > .section:not(.hero) > .section-heading h2 {
+    width: 100%;
+    max-width: none;
+    font-size: clamp(1.9rem, 8vw, 2.4rem);
+    line-height: 1.12;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  main > .section .action-list {
+    gap: 14px;
+    padding: 16px;
+    border-radius: 24px;
+  }
+
+  main > .section .action-list div {
+    padding: 18px;
+    border-radius: 16px;
+    font-size: 1rem;
+    line-height: 1.55;
+    overflow-wrap: break-word;
+  }
+
+  main > .section .card-grid,
+  main > .section .why-grid,
+  main > .section .testimonial-grid {
+    gap: 16px;
+  }
+
+  main > .section .card,
+  main > .section .mini-card,
+  main > .section .testimonial {
+    padding: 20px;
+  }
+
+  #featured .card span {
+    margin-bottom: 20px;
+  }
+}
+
+/* Keep the homepage highlight section balanced in tablet and narrow desktop
+   windows instead of stretching one oversized card across the whole screen. */
+@media (min-width: 761px) and (max-width: 1180px) {
+  main > .section:not(.hero) > .section-heading h2 {
+    width: 100%;
+    max-width: 22ch;
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    line-height: 1.08;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  main > .section .five-grid,
+  main > .section .why-grid,
+  main > .section .testimonial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  main > .split-section {
+    gap: 36px;
+  }
+
+  main > .section .action-list {
+    gap: 18px;
+    padding: 24px;
+    border-radius: 28px;
+  }
+
+  main > .section .action-list div {
+    padding: 22px;
+    border-radius: 18px;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    line-height: 1.55;
+  }
+
+  #featured .card {
+    min-height: 240px;
   }
 }
 

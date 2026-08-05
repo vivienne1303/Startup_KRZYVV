@@ -52,6 +52,22 @@
   background: #ffffff;
 }
 
+.settings-option .settings-symbol {
+  display: grid;
+  place-items: center;
+  color: #1477ef;
+}
+
+.settings-symbol svg {
+  width: 46px;
+  height: 46px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .theme-option {
   color: var(--text);
   cursor: pointer;
@@ -559,6 +575,10 @@ html[data-theme="dark"] .auth-link {
 }
 
 @media (max-width: 760px) {
+  .settings-hero {
+    padding-top: 38px;
+  }
+
   .settings-grid {
     grid-template-columns: 1fr;
   }
@@ -988,3 +1008,38 @@ canvas {
   }
 }
 .profile-field-missing input,.profile-field-missing select,.profile-field-missing textarea{border-color:#f59e0b;box-shadow:0 0 0 3px rgba(245,158,11,.16)}
+
+/* The shared footer becomes a one-column grid below 1180px. Keep settings links compact. */
+.footer.settings-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 28px;
+  width: 100%;
+  margin: 0;
+  padding: 32px max(32px, calc((100vw - 1160px) / 2));
+}
+
+.footer.settings-footer p,
+.footer.settings-footer a {
+  min-height: 0;
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .footer.settings-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 24px 28px 32px;
+  }
+
+  .footer.settings-footer p,
+  .footer.settings-footer a {
+    width: 100%;
+    min-height: 0;
+    padding: 8px 0;
+    line-height: 1.4;
+  }
+}

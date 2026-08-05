@@ -58,7 +58,10 @@ navLinks.querySelectorAll("a").forEach((link) => link.addEventListener("click", 
 
 startTimer.addEventListener("click", () => {
   if (timerId) return;
-  modeLabel.textContent = `${roundSelect.value} practice is running.`;
+  const round = roundSelect.selectedOptions[0]?.dataset.i18n || roundSelect.value;
+  modeLabel.textContent = window.TeenLaunchI18n?.getLanguage() === "zh"
+    ? `${t(round)}练习进行中。`
+    : `${round} practice is running.`;
   timerId = setInterval(() => {
     remainingSeconds -= 1;
     renderTimer();
@@ -88,7 +91,10 @@ resetTimer.addEventListener("click", () => {
 
 minutesInput.addEventListener("change", resetTimeFromInput);
 roundSelect.addEventListener("change", () => {
-  modeLabel.textContent = `${roundSelect.value} selected.`;
+  const round = roundSelect.selectedOptions[0]?.dataset.i18n || roundSelect.value;
+  modeLabel.textContent = window.TeenLaunchI18n?.getLanguage() === "zh"
+    ? `已选择${t(round)}。`
+    : `${round} selected.`;
 });
 
 newMotion.addEventListener("click", () => {

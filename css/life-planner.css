@@ -15,7 +15,13 @@
 .calendar-panel{overflow:hidden}
 .weekly-calendar{contain:inline-size;overscroll-behavior-inline:contain}
 .icon-button{min-width:44px;min-height:44px;flex:0 0 44px;padding:0}
-.week-controls{min-width:0;flex-wrap:wrap}
+.week-controls{min-width:0;flex-wrap:nowrap;align-items:center}.planner-toolbar-actions{display:flex;justify-self:end;gap:8px}.planner-toolbar-actions .btn{width:auto;min-width:max-content}
+
+@media(max-width:700px){.planner-toolbar{grid-template-columns:1fr}.planner-toolbar h2{grid-column:1;grid-row:1}.planner-toolbar .week-controls{grid-column:1;grid-row:2}.planner-toolbar-actions{grid-column:1;grid-row:3;width:100%;justify-self:stretch}.planner-toolbar-actions .btn{width:100%;min-width:0}}
+
+/* Balanced spacing between the week controls and planner content. */
+.planner-layout{margin:24px auto 0}
+@media(max-width:700px){.planner-toolbar{gap:14px;margin-top:24px}.planner-toolbar h2{margin-bottom:2px}.planner-toolbar .week-controls{gap:10px}.planner-toolbar-actions{gap:10px;margin-top:4px}.planner-layout{margin-top:28px}}
 .planner-main .eyebrow{margin-bottom:0;font-size:.82rem;line-height:1.4}
 .planner-settings input,.planner-settings select,.planner-settings textarea,.task-form input,.task-form select,.task-form textarea{max-width:100%}
 .settings-grid>*,.two-fields>*,.task-form label,.planner-settings label{min-width:0}
@@ -24,6 +30,11 @@
 @media(min-width:701px) and (max-width:1050px){.weekly-calendar{grid-template-columns:repeat(7,150px)}}
 @media(max-width:480px){.planner-main{padding-inline:10px}.planner-hero h1{font-size:clamp(2.75rem,15vw,4.25rem)}.planner-notice,.planner-settings,.planner-sidebar>*,.calendar-panel{padding:16px}.two-fields,.settings-grid,.school-days{grid-template-columns:minmax(0,1fr)}.planner-toolbar{gap:10px}.task-form input[type=date],.task-form input[type=datetime-local]{padding-inline:10px;font-size:16px}}
 html[data-theme=dark] .planner-main{--planner-navy:var(--text);--planner-line:var(--line);--planner-card:rgba(15,9,31,.86);background:var(--bg)}html[data-theme=dark] .planner-settings input,html[data-theme=dark] .planner-settings select,html[data-theme=dark] .planner-settings textarea,html[data-theme=dark] .task-form input,html[data-theme=dark] .task-form select,html[data-theme=dark] .task-form textarea,html[data-theme=dark] .mini-button{background:#120b23;color:var(--text);border-color:var(--line)}html[data-theme=dark] .calendar-day,html[data-theme=dark] .agenda-sections>section,html[data-theme=dark] .school-day,html[data-theme=dark] .deadline-item{background:rgba(255,255,255,.06)}html[data-theme=dark] .calendar-event{background:rgba(40,124,240,.18)}
+
+.footer.planner-footer{display:flex;align-items:center;justify-content:space-between;gap:18px;width:100%;margin:0;padding:32px max(32px,calc((100vw - 1500px)/2));}
+@media(max-width:700px){.planner-main{padding-top:178px}.footer.planner-footer{display:grid;grid-template-columns:1fr;gap:8px;padding:26px 24px 34px;text-align:left}.footer.planner-footer p,.footer.planner-footer a{width:100%;min-height:0;margin:0;padding:8px 0;justify-content:flex-start;white-space:normal}}
+
+.task-confirmation{margin:0;padding:13px 15px;border:1px solid #efb7b7;border-radius:13px;color:#8f2424;background:#fff2f2;font-weight:800;line-height:1.45}.task-confirmation.success{border-color:#9bd8be;color:#08754c;background:#eaf9f2}
 
 /* Keep weekday controls aligned; generic form input sizing must not stretch checkboxes. */
 .planner-settings input[type="checkbox"]{width:18px;min-width:18px;height:18px;min-height:18px;padding:0;flex:0 0 18px;border-radius:4px}

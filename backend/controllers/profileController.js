@@ -6,10 +6,10 @@ const { listSaved, remove: removeSaved, save: saveOpportunity } = require("../se
 
 const TIERS = [
   { name: "Explorer", xp: 0, reward: "Starter profile badge" },
-  { name: "Challenger", xp: 25, reward: "One streak freeze" },
-  { name: "Builder", xp: 75, reward: "Workshop priority access" },
-  { name: "Achiever", xp: 150, reward: "Portfolio review" },
-  { name: "Trailblazer", xp: 250, reward: "Mentor office hour" },
+  { name: "Challenger", xp: 100, reward: "One streak freeze" },
+  { name: "Builder", xp: 200, reward: "Workshop priority access" },
+  { name: "Achiever", xp: 300, reward: "Portfolio review" },
+  { name: "Trailblazer", xp: 400, reward: "Mentor office hour" },
 ];
 
 const engagementSummary = (registrations, experiences) => {
