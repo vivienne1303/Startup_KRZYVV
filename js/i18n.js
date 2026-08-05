@@ -1265,6 +1265,44 @@ Object.assign(translations, {
   "Account created successfully. Please log in to continue.": "账户创建成功，请登录以继续。"
 });
 
+Object.assign(translations, {
+  "TeenLaunch | My Portfolio": "TeenLaunch | 我的作品集",
+  "Edit portfolio": "编辑作品集",
+  "Print / Save as PDF": "打印／另存为 PDF",
+  "Copy public link": "复制公开链接",
+  "Loading portfolio…": "正在加载作品集……",
+  "Verified TeenLaunch Portfolio": "已认证的 TeenLaunch 作品集",
+  "TeenLaunch member": "TeenLaunch 成员",
+  "Career DNA": "职业 DNA",
+  "Digital Maker": "数字创作者",
+  "Your strongest Career DNA types are Builder and Creator.": "你最突出的职业 DNA 类型是实践者和创造者。",
+  "Verified Achievements": "认证成就",
+  "No published achievements.": "暂无已发布的成就。",
+  "Projects": "项目",
+  "New project": "新项目",
+  "No published projects.": "暂无已发布的项目。",
+  "Skills": "技能",
+  "No published skills.": "暂无已发布的技能。",
+  "Certificates": "证书",
+  "No published certificates.": "暂无已发布的证书。",
+  "Personal Reflections": "个人反思",
+  "No published reflections.": "暂无已发布的个人反思。",
+  "Contact": "联系",
+  "Social profile": "社交主页",
+  "Verified": "已认证",
+  "Achievement": "成就",
+  "Completed": "已完成",
+  "Admin remarks:": "管理员备注：",
+  "Evidence": "证明材料",
+  "Verified certificate": "认证证书",
+  "Certificate": "证书",
+  "View certificate": "查看证书",
+  "Reflection": "个人反思",
+  "Portfolio could not be loaded": "无法加载作品集",
+  "Make your portfolio public in the builder first.": "请先在作品集编辑器中将作品集设为公开。",
+  "Public link copied.": "公开链接已复制。"
+});
+
 const translate = (key, language) => {
   if (language !== "zh") return key;
   return translations[key] || key;
