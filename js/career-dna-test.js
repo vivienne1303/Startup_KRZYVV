@@ -1,6 +1,7 @@
 (function () {
   const API_BASE = window.TEENLAUNCH_API_BASE;
   const tokenKey = "teenlaunch_token";
+  const t = (key) => window.TeenLaunchI18n?.translate(key) || key;
   const questions = [
     { type: "Creator", text: "I enjoy turning my ideas into videos, designs, stories or presentations." },
     { type: "Creator", text: "I often notice how the appearance or message of something could be improved." },
@@ -45,21 +46,21 @@
   const saveProgress = () => localStorage.setItem(progressKey, JSON.stringify({ answers, current, savedAt: new Date().toISOString() }));
   const render = () => {
     const question = questions[current];
-    document.querySelector("[data-question-count]").textContent = `Question ${current + 1} of 10`;
+    document.querySelector("[data-question-count]").textContent = window.TeenLaunchI18n?.getLanguage() === "zh" ? `第 ${current + 1} 题，共 10 题` : `Question ${current + 1} of 10`;
     document.querySelector("[data-progress-percent]").textContent = `${(current + 1) * 10}%`;
     const bar = document.querySelector("[data-progress-bar]");
     bar.style.width = `${(current + 1) * 10}%`;
     bar.parentElement.setAttribute("aria-valuenow", String(current + 1));
-    document.querySelector("[data-question-type]").textContent = question.type;
+    document.querySelector("[data-question-type]").textContent = t(question.type);
     const questionText = document.querySelector("[data-question-text]");
-    questionText.textContent = question.text;
+    questionText.textContent = t(question.text);
     document.querySelector("[data-options]").innerHTML = options.map((label, index) => {
       const value = index + 1;
-      return `<label class="dna-option${answers[current] === value ? " selected" : ""}"><input type="radio" name="answer" value="${value}" ${answers[current] === value ? "checked" : ""}><span class="dna-option-number">${value}</span><span>${label}</span></label>`;
+      return `<label class="dna-option${answers[current] === value ? " selected" : ""}"><input type="radio" name="answer" value="${value}" ${answers[current] === value ? "checked" : ""}><span class="dna-option-number">${value}</span><span>${t(label)}</span></label>`;
     }).join("");
     document.querySelector("[data-previous]").disabled = current === 0 || saving;
     const next = document.querySelector("[data-next]");
-    next.textContent = current === 9 ? "Submit Test" : "Next";
+    next.textContent = t(current === 9 ? "Submit Test" : "Next");
     next.disabled = saving;
     message.textContent = "";
     document.querySelectorAll('input[name="answer"]').forEach((input) => input.addEventListener("change", () => selectAnswer(Number(input.value), true)));
@@ -73,6 +74,8 @@
     render();
     if (autoAdvance && current < 9) window.setTimeout(() => { current += 1; saveProgress(); render(); }, 220);
   };
+
+  document.addEventListener("teenlaunch:languagechange", render);
 
   const scoreTest = () => {
     const raw = { Creator: 0, Builder: 0, Explorer: 0, Connector: 0, Leader: 0 };

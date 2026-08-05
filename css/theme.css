@@ -116,6 +116,98 @@
   }
 }
 
+/* Final display-theme layer.
+   Page styles load after this shared file on some routes, so these selectors
+   deliberately target the page shells and controls instead of only body. */
+html[data-theme="dark"] body > main,
+html[data-theme="dark"] :is(
+  .copilot-main,
+  .social-main,
+  .planner-main,
+  .portfolio-main,
+  .profile-main,
+  .recommendations-main,
+  .help-main,
+  .apply-main,
+  .dna-main,
+  .scout-main
+) {
+  color: var(--text);
+  background:
+    radial-gradient(circle at 15% 8%, rgba(255, 79, 216, 0.18), transparent 26rem),
+    radial-gradient(circle at 86% 14%, rgba(53, 230, 255, 0.14), transparent 24rem),
+    linear-gradient(135deg, #08030f 0%, #160825 52%, #090312 100%);
+}
+
+html[data-theme="dark"] body > main :is(h1, h2, h3, h4, label, strong) {
+  color: var(--text);
+}
+
+html[data-theme="dark"] body > main :is(p, small, li, dd) {
+  color: var(--muted);
+}
+
+html[data-theme="dark"] :is(
+  .copilot-layout,
+  .starter-panel,
+  .copilot-bubble.assistant,
+  .copilot-disclaimer,
+  .person-card,
+  .notification-card,
+  .thread-card,
+  .inbox-layout,
+  .inbox-tabs,
+  .application-card,
+  .about-card,
+  .profile-empty,
+  .profile-error,
+  .rewards-card,
+  .experience-form,
+  .experience-post,
+  .experience-dialog,
+  .portfolio-card,
+  .portfolio-section,
+  .recommendation-card
+) {
+  color: var(--text);
+  border-color: var(--line);
+  background: linear-gradient(180deg, var(--panel), rgba(16, 7, 30, 0.88));
+}
+
+html[data-theme="dark"] :is(
+  input,
+  textarea,
+  select,
+  .starter-list button,
+  .people-search input,
+  .message-form textarea
+) {
+  color: var(--text);
+  border-color: var(--line);
+  background: rgba(8, 3, 15, 0.72);
+}
+
+html[data-theme="dark"] :is(input, textarea)::placeholder {
+  color: #aa98bc;
+}
+
+html[data-theme="dark"] :is(
+  .copilot-heading p,
+  .context-note,
+  .copilot-loading,
+  .copilot-disclaimer,
+  .copilot-bubble .response-source,
+  .social-status
+) {
+  color: var(--muted);
+}
+
+html[data-theme="dark"] .starter-list button:hover {
+  color: var(--text);
+  border-color: var(--cyan);
+  background: rgba(53, 230, 255, 0.1);
+}
+
 /* Keep long page and card titles readable on phone-sized screens. */
 @media (max-width: 700px) {
   body main h1 { font-size: clamp(2.35rem, 10vw, 3rem) !important; line-height: 1.02 !important; }
@@ -1094,6 +1186,35 @@ html[data-theme="dark"] .footer p {
 
 html[data-theme="dark"] .footer a:hover {
   color: var(--cyan);
+}
+
+/* The shared fixed header has a light translucent surface by default. Give it
+   a matching dark surface so dark-theme navigation never becomes white text
+   on a pale background. */
+html[data-theme="dark"] .site-header.standard-site-header,
+html[data-theme="dark"] .site-header {
+  background: rgba(8, 3, 15, 0.94);
+  border-bottom-color: rgba(255, 255, 255, 0.14);
+  color: #f8f3ff;
+}
+
+html[data-theme="dark"] .site-header .brand,
+html[data-theme="dark"] .site-header .nav-links,
+html[data-theme="dark"] .site-header .nav-links a,
+html[data-theme="dark"] .site-header .nav-trigger {
+  color: #f8f3ff;
+}
+
+html[data-theme="dark"] .site-header .brand small {
+  color: #cbb9dd;
+}
+
+html[data-theme="dark"] .site-header .auth-link,
+html[data-theme="dark"] .site-header .settings-button,
+html[data-theme="dark"] .site-header .language-toggle {
+  border-color: rgba(53, 230, 255, 0.34);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f8f3ff;
 }
 
 html[data-theme="dark"] .language-toggle {

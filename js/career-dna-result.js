@@ -8,26 +8,34 @@
   const login = () => window.location.replace(`auth.html?mode=login&returnTo=${encodeURIComponent("career_dna_result.html")}`);
   const clearSession = () => ["teenlaunch_token", "teenlaunch_user", "teenlaunch_profile"].forEach((key) => localStorage.removeItem(key));
   const toList = (value) => Array.isArray(value) ? value : [];
+  const t = (key) => window.TeenLaunchI18n?.translate(key) || key;
+  const translatedSummary = (value) => {
+    const text = String(value || "");
+    const match = text.match(/^Your strongest Career DNA types are (.+) and (.+)\.$/);
+    return match && window.TeenLaunchI18n?.getLanguage() === "zh" ? `你最突出的职业 DNA 类型是${t(match[1])}和${t(match[2])}。` : t(text);
+  };
   const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[character]));
+  let latestResult = null;
 
   const render = (result) => {
+    latestResult = result;
     const score = result.score || {};
     const percentages = score.percentages || {};
     const paths = result.recommended_paths || {};
-    document.querySelector("[data-profile-name]").textContent = score.profile_name || result.result_title;
-    document.querySelector("[data-profile-summary]").textContent = result.summary || "Your Career DNA highlights the ways you naturally create, solve and lead.";
-    document.querySelector("[data-top-type]").textContent = score.top_category || result.interests?.[0] || "—";
-    document.querySelector("[data-secondary-type]").textContent = score.secondary_category || result.interests?.[1] || "—";
-    document.querySelector("[data-score-list]").innerHTML = ["Creator", "Builder", "Explorer", "Connector", "Leader"].map((type) => { const value = Number(percentages[type]) || 0; return `<div><div class="dna-score-head"><span>${type}</span><span>${value}%</span></div><div class="dna-score-track"><span style="width:${Math.max(0, Math.min(100, value))}%"></span></div></div>`; }).join("");
+    document.querySelector("[data-profile-name]").textContent = t(score.profile_name || result.result_title);
+    document.querySelector("[data-profile-summary]").textContent = translatedSummary(result.summary || "Your Career DNA highlights the ways you naturally create, solve and lead.");
+    document.querySelector("[data-top-type]").textContent = t(score.top_category || result.interests?.[0] || "—");
+    document.querySelector("[data-secondary-type]").textContent = t(score.secondary_category || result.interests?.[1] || "—");
+    document.querySelector("[data-score-list]").innerHTML = ["Creator", "Builder", "Explorer", "Connector", "Leader"].map((type) => { const value = Number(percentages[type]) || 0; return `<div><div class="dna-score-head"><span>${t(type)}</span><span>${value}%</span></div><div class="dna-score-track"><span style="width:${Math.max(0, Math.min(100, value))}%"></span></div></div>`; }).join("");
     const jobs = toList(paths.job_families || score.recommended_job_families);
     const opportunities = toList(paths.opportunity_types || score.recommended_opportunity_types);
-    document.querySelector("[data-job-families]").innerHTML = jobs.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
-    document.querySelector("[data-opportunity-types]").innerHTML = opportunities.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+    document.querySelector("[data-job-families]").innerHTML = jobs.map((item) => `<li>${escapeHtml(t(item))}</li>`).join("");
+    document.querySelector("[data-opportunity-types]").innerHTML = opportunities.map((item) => `<li>${escapeHtml(t(item))}</li>`).join("");
     loading.hidden = true; errorBox.hidden = true; content.hidden = false;
   };
 
   const load = async () => {
-    loading.hidden = false; loading.textContent = "Loading your Career DNA..."; content.hidden = true; errorBox.hidden = true;
+    loading.hidden = false; loading.textContent = t("Loading your Career DNA..."); content.hidden = true; errorBox.hidden = true;
     if (!localStorage.getItem(tokenKey)) { login(); return; }
     try {
       const me = await authFetch("/auth/me");
@@ -42,5 +50,6 @@
     } catch (error) { loading.hidden = true; errorBox.hidden = false; document.querySelector("[data-result-error-message]").textContent = error.message; }
   };
   document.querySelector("[data-result-retry]").addEventListener("click", load);
+  document.addEventListener("teenlaunch:languagechange", () => { if (latestResult) render(latestResult); });
   load();
 })();

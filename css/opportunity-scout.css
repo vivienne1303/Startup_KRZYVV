@@ -3,3 +3,7 @@
 @media(max-width:500px){.scout-main{padding-top:104px;padding-inline:12px}.scout-hero h1{font-size:clamp(3rem,17vw,4.8rem)}.two-fields,.three-fields{grid-template-columns:1fr}.scout-heading{display:block}.verification-badge{margin-top:8px}.scout-card{border-radius:20px}.submission-actions{flex-wrap:wrap}}
 @media(max-width:500px){.scout-form label{min-width:0;overflow:hidden}.scout-form input[type=date]{-webkit-appearance:none;appearance:none;display:block;width:100%!important;inline-size:100%!important;min-width:0!important;max-width:100%!important;margin:0;align-self:stretch}}
 html[data-theme=dark] .scout-main{background:var(--bg);color:var(--text)}html[data-theme=dark] .scout-card,html[data-theme=dark] .scout-message,html[data-theme=dark] .review-card{border-color:var(--line);background:rgba(15,9,31,.88)}html[data-theme=dark] .scout-form input,html[data-theme=dark] .scout-form textarea,html[data-theme=dark] .scout-form select{border-color:var(--line);background:#120b23;color:var(--text)}
+
+/* Keep the partner-page headline readable in both English and Chinese. */
+.scout-hero h1{margin:.18em 0;font-size:clamp(2.75rem,5vw,5.25rem);line-height:1.02;letter-spacing:-.045em}
+@media(max-width:500px){.scout-hero h1{font-size:clamp(2.45rem,11vw,3.4rem);line-height:1.06}}
