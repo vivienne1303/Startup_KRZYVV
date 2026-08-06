@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "nodemon backend/server.js",
     "start": "node backend/server.js",
+    "seed:opportunities": "node scripts/seed-demo-opportunities.js",
     "test": "node --check backend/server.js && node --check backend/app.js"
   },
   "repository": {
