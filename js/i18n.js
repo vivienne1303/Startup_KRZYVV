@@ -1779,6 +1779,11 @@ new MutationObserver((mutations) => {
         ...(node.matches?.("[data-language-toggle]") ? [node] : []),
         ...(node.querySelectorAll?.("[data-language-toggle]") || []),
       ];
+      const headerToggle = toggles.find((toggle) => !toggle.classList.contains("floating-language-toggle"));
+      if (headerToggle) {
+        document.querySelectorAll(".floating-language-toggle").forEach((toggle) => toggle.remove());
+        languageToggle = headerToggle;
+      }
       toggles.forEach((toggle) => {
         toggle.textContent = currentLanguage === "zh" ? "EN" : "中文";
         toggle.setAttribute("aria-label", currentLanguage === "zh" ? "Switch to English" : "Switch to Chinese");
