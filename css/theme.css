@@ -116,6 +116,16 @@
   }
 }
 
+/* Keep the homepage headline from splitting “Opportunities” mid-word. */
+@media (max-width: 1180px) {
+  #home.hero .hero-copy h1 {
+    width: 100%;
+    max-width: none;
+    overflow-wrap: normal !important;
+    word-break: keep-all !important;
+  }
+}
+
 /* Final display-theme layer.
    Page styles load after this shared file on some routes, so these selectors
    deliberately target the page shells and controls instead of only body. */
