@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../css/theme.css?v=20260803b">
   <link rel="stylesheet" href="../css/settings.css">
-  <link rel="stylesheet" href="../css/life-planner.css?v=20260807-priority-contrast">
+  <link rel="stylesheet" href="../css/life-planner.css?v=20260813-day-dropdown-fix">
 </head>
 <body>
   <header class="site-header"><nav class="navbar" aria-label="Main navigation"><a class="brand" href="../index.html"><img class="brand-logo" src="../assets/images/light_logo.png" alt=""><span>TeenLaunch<small>Future founders start here</small></span></a><div class="nav-links"><a class="auth-link" href="auth.html">Login</a></div></nav></header>
@@ -38,8 +38,8 @@
             <label>Wake time<input name="wake_time" type="time" required></label><label>Sleep time<input name="sleep_time" type="time" required></label>
             <label>Preferred study start<input name="preferred_study_start" type="time" required></label><label>Preferred study end<input name="preferred_study_end" type="time" required></label>
           </div>
-          <fieldset><legend>School days and hours</legend><div class="school-days" data-school-days></div></fieldset>
-          <fieldset><legend>Preferred rest days</legend><div class="day-checks" data-rest-days></div></fieldset>
+          <fieldset><legend>School days and hours</legend><details class="day-dropdown"><summary>Choose school days and hours</summary><div class="school-days" data-school-days></div></details></fieldset>
+          <fieldset><legend>Preferred rest days</legend><details class="day-dropdown"><summary>Choose preferred rest days</summary><div class="day-checks" data-rest-days></div></details></fieldset>
           <label>Personal goals<textarea name="personal_goals" rows="3" maxlength="2000" placeholder="What would you like to make time for?" data-i18n-placeholder="What would you like to make time for?"></textarea></label>
           <button class="btn primary" type="submit">Save preferences</button>
         </form>

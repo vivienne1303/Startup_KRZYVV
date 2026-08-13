@@ -336,7 +336,9 @@ html[data-theme="dark"] .portfolio-features i { background: rgba(46, 131, 247, .
   .showcase-nav { gap: 12px; }
   .showcase-nav .nav-cta { display: none; }
   .hero-copy { margin-top: 36px; }
-  .hero h1 { font-size: clamp(2.65rem, 13.5vw, 3.55rem); overflow-wrap: normal; }
+  .hero h1 { max-width:100%; font-size:clamp(2.1rem,11.5vw,2.75rem); line-height:1.04; letter-spacing:-.055em; overflow-wrap:anywhere; }
+  .hero h1 em { display:block; max-width:100%; padding-right:0; }
+  .kicker { justify-content:center; flex-wrap:wrap; line-height:1.5; }
   .hero-intro { line-height: 1.6; }
   .hero-visual { height: 535px; margin-top: 36px; transform: translateX(-50%) scale(.74); }
   .float-card { display: none; }
@@ -344,6 +346,10 @@ html[data-theme="dark"] .portfolio-features i { background: rgba(46, 131, 247, .
   .portfolio-copy h2,
   .showcase-footer h2 { overflow-wrap: normal; word-break: normal; }
   .section-heading h2 { font-size: clamp(2.2rem, 11vw, 3rem); }
+  .experience .section-heading{display:flex;width:100%;max-width:none;align-items:center;flex-direction:column;text-align:center}
+  .experience .section-heading .kicker{width:100%;justify-content:center;margin-inline:auto;text-align:center}
+  .experience .section-heading h2{width:100%;max-width:11ch;margin-inline:auto;text-align:center}
+  .experience .section-heading>p:last-child{max-width:30ch;margin:22px auto 0;text-align:center;line-height:1.6}
   .phone-secondary { width: min(300px, calc(100vw - 40px)); }
   .portfolio-phone-wrap { min-height: 680px; transform: none; }
   .phone-tertiary { top: 40px; width: min(310px, calc(100vw - 42px)); }
@@ -354,7 +360,7 @@ html[data-theme="dark"] .portfolio-features i { background: rgba(46, 131, 247, .
 }
 
 @media (max-width: 360px) {
-  .hero h1 { font-size: 2.55rem; }
+  .hero h1 { font-size:clamp(2rem,11vw,2.45rem); }
   .hero-visual { height: 500px; transform: translateX(-50%) scale(.68); }
   .experience { padding-inline: 14px; }
   .portfolio-copy { padding-inline: 16px; }

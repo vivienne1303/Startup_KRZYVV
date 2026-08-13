@@ -152,19 +152,38 @@ const bindOpportunityActions = async () => {
   document.querySelectorAll(".save-button").forEach((button) => button.addEventListener("click", async () => {
     if (!token) { window.location.href = `auth.html?mode=login&returnTo=${encodeURIComponent("opportunities.html")}`; return; }
     const saving = !button.classList.contains("saved");
+    button.classList.toggle("saved", saving);
+    button.setAttribute("aria-pressed", String(saving));
+    button.setAttribute("aria-label", saving ? "Remove from saved" : "Save opportunity");
     button.disabled = true;
     try {
       const response = await fetch(`${resolveApiBase()}/profile/saved${saving ? "" : `/${encodeURIComponent(button.dataset.saveId)}`}`, { method: saving ? "POST" : "DELETE", headers: { Authorization: `Bearer ${token}`, ...(saving ? { "Content-Type": "application/json" } : {}) }, body: saving ? JSON.stringify({ opportunity_id: button.dataset.saveId }) : undefined });
       if (!response.ok && response.status !== 409) throw new Error("Save failed");
-      button.classList.toggle("saved", saving); button.setAttribute("aria-pressed", String(saving)); button.setAttribute("aria-label", saving ? "Remove from saved" : "Save opportunity");
-    } catch (_) { window.alert("We could not update this saved opportunity. Please try again."); }
+    } catch (_) {
+      button.classList.toggle("saved", !saving);
+      button.setAttribute("aria-pressed", String(!saving));
+      button.setAttribute("aria-label", saving ? "Save opportunity" : "Remove from saved");
+      window.alert("We could not update this saved opportunity. Please try again.");
+    }
     finally { button.disabled = false; }
   }));
   if (!token) return;
-  const [savedResponse, ...checks] = await Promise.all([fetch(`${resolveApiBase()}/profile/saved`, { headers: { Authorization: `Bearer ${token}` } }), ...[...document.querySelectorAll(".apply-button")].map(link => fetch(`${resolveApiBase()}/registrations/check/${encodeURIComponent(link.dataset.opportunityId)}`, { headers: { Authorization: `Bearer ${token}` } }))]);
+  const headers = { Authorization: `Bearer ${token}` };
+  const [savedResponse, registrationsResponse] = await Promise.all([
+    fetch(`${resolveApiBase()}/profile/saved`, { headers }),
+    fetch(`${resolveApiBase()}/registrations/me`, { headers }),
+  ]);
   if (savedResponse.ok) { const ids = new Set(((await savedResponse.json()).saved || []).map(item => item.opportunity_id)); document.querySelectorAll(".save-button").forEach(button => { const saved = ids.has(button.dataset.saveId); button.classList.toggle("saved", saved); button.setAttribute("aria-pressed", String(saved)); }); }
-  const links = [...document.querySelectorAll(".apply-button")];
-  await Promise.all(checks.map(async (response, index) => { if (response.ok && (await response.json()).applied) { links[index].textContent = "Applied"; links[index].classList.add("disabled"); links[index].removeAttribute("href"); links[index].setAttribute("aria-disabled", "true"); } }));
+  if (registrationsResponse.ok) {
+    const appliedIds = new Set(((await registrationsResponse.json()).registrations || []).map(item => item.opportunity_id));
+    document.querySelectorAll(".apply-button").forEach((link) => {
+      if (!appliedIds.has(link.dataset.opportunityId)) return;
+      link.textContent = "Applied";
+      link.classList.add("disabled");
+      link.removeAttribute("href");
+      link.setAttribute("aria-disabled", "true");
+    });
+  }
 };
 
 const loadOpportunities = async () => {
@@ -179,11 +198,14 @@ const loadOpportunities = async () => {
   emptyState.style.display = "none";
   try {
     const token = localStorage.getItem("teenlaunch_token");
-    if (token) {
-      const sessionResponse = await fetch(`${resolveApiBase()}/auth/me`, { headers: { Authorization: `Bearer ${token}` } });
-      if (sessionResponse.ok) isAdmin = (await sessionResponse.json()).role === "admin";
-    }
-    const response = await fetch(`${resolveApiBase()}/opportunities`);
+    const sessionRequest = token
+      ? fetch(`${resolveApiBase()}/auth/me`, { headers: { Authorization: `Bearer ${token}` } })
+      : Promise.resolve(null);
+    const [response, sessionResponse] = await Promise.all([
+      fetch(`${resolveApiBase()}/opportunities`),
+      sessionRequest,
+    ]);
+    if (sessionResponse?.ok) isAdmin = (await sessionResponse.json()).role === "admin";
     if (!response.ok) throw new Error("Verified opportunities could not be loaded.");
     const { opportunities } = await response.json();
     if (!Array.isArray(opportunities)) throw new Error("The opportunity response was invalid.");
@@ -197,10 +219,10 @@ const loadOpportunities = async () => {
       return;
     }
     grid.innerHTML = opportunities.map(opportunityMarkup).join("");
-    await loadRecommendationPreview();
     cards = document.querySelectorAll("#opportunityGrid .opportunity-card");
-    await bindOpportunityActions();
     filterCards();
+    bindOpportunityActions().catch(() => {});
+    loadRecommendationPreview();
   } catch (_) {
     grid.innerHTML = "";
     cards = document.querySelectorAll("#opportunityGrid .opportunity-card");

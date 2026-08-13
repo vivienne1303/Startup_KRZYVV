@@ -35,8 +35,14 @@ const create = asyncHandler(async (req, res) => {
   const missing = required.filter((field) => !String(req.body[field] || "").trim());
   if (missing.length) throw new HttpError(400, `Missing required fields: ${missing.join(", ")}`);
 
-  const { data: opportunity, error: opportunityError } = await req.supabase.from("opportunities").select("id,title,deadline,age_min,age_max").eq("id", req.body.opportunity_id).single();
+  const [opportunityResult, existing] = await Promise.all([
+    req.supabase.from("opportunities").select("id,title,deadline,age_min,age_max").eq("id", req.body.opportunity_id).single(),
+    checkRegistration(req.supabase, req.body.opportunity_id),
+  ]);
+  const { data: opportunity, error: opportunityError } = opportunityResult;
   if (opportunityError || !opportunity) throw new HttpError(404, "Opportunity not found");
+  if (existing.error) throw new HttpError(400, existing.error.message, existing.error.details);
+  if (existing.data) throw new HttpError(409, "You have already applied for this opportunity");
   if (opportunity.deadline && new Date(`${opportunity.deadline}T23:59:59`).getTime() < Date.now()) throw new HttpError(400, "This opportunity's deadline has passed");
 
   const dateOfBirth = new Date(`${req.body.date_of_birth}T00:00:00Z`);
@@ -54,9 +60,6 @@ const create = asyncHandler(async (req, res) => {
   if (opportunity.age_max !== null && applicantAge > opportunity.age_max) {
     throw new HttpError(403, `This opportunity is only available to applicants aged ${opportunity.age_max} or younger`);
   }
-  const existing = await checkRegistration(req.supabase, req.body.opportunity_id);
-  if (existing.data) throw new HttpError(409, "You have already applied for this opportunity");
-
   const { data, error } = await createRegistration(req.supabase, req.body, req.user.id);
 
   if (error) throw new HttpError(403, error.message, error.details);

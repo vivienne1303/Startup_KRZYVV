@@ -69,3 +69,22 @@ html[data-theme=dark] .planner-main{--planner-navy:var(--text);--planner-line:va
 
 /* Keep the medium-priority label readable when dark mode changes inherited text. */
 .priority:not(.high):not(.low){color:#173461}
+
+/* Separate the preferences action from the personal-goals textarea. */
+.planner-settings [data-preferences-form] > .btn[type="submit"]{margin-top:24px}
+
+.day-dropdown>summary{display:flex;align-items:center;justify-content:space-between;min-height:48px;padding:11px 14px;border:1px solid var(--planner-line);border-radius:12px;background:#fff;color:#10295c;cursor:pointer;font-weight:800;list-style:none}
+.day-dropdown>summary::-webkit-details-marker{display:none}
+.day-dropdown>summary::after{content:"⌄";font-size:1.25rem;transition:transform .2s ease}
+.day-dropdown[open]>summary::after{transform:rotate(180deg)}
+.day-dropdown>.school-days,.day-dropdown>.day-checks{margin-top:12px}
+html[data-theme=dark] .day-dropdown>summary{background:#120b23;color:var(--text);border-color:var(--line)}
+
+@media(max-width:700px){
+  .day-dropdown>.school-days,.day-dropdown>.day-checks{display:none}
+  .day-dropdown[open]>.school-days,.day-dropdown[open]>.day-checks{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px;overflow:visible;padding:0}
+  .day-dropdown .school-day{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px}
+  .day-dropdown .school-day label{grid-column:1/-1}
+  .day-dropdown .day-checks label{min-height:44px;padding:10px 12px;border-radius:10px;background:#eff8ff}
+  html[data-theme=dark] .day-dropdown .day-checks label{background:rgba(255,255,255,.06)}
+}

@@ -6,12 +6,12 @@
     || hostname === "::1"
     || /^192\.168\.\d{1,3}\.\d{1,3}$/.test(hostname);
 
-  // Local pages are commonly opened with a frontend-only server on port 3000.
-  // Use Railway by default so /api requests do not hit that static server.
-  // Backend developers can opt into a local API from the console with:
-  // localStorage.setItem("teenlaunch-api-origin", "http://localhost:3001")
+  // The local Express server serves both the website and /api on the same
+  // origin. An explicit override remains available for split frontend/API
+  // development setups.
   const localOverride = isLocal ? localStorage.getItem("teenlaunch-api-origin") : "";
-  const apiOrigin = String(localOverride || PRODUCTION_API_ORIGIN).replace(/\/$/, "");
+  const defaultOrigin = isLocal ? window.location.origin : PRODUCTION_API_ORIGIN;
+  const apiOrigin = String(localOverride || defaultOrigin).replace(/\/$/, "");
   window.TEENLAUNCH_API_ORIGIN = apiOrigin;
   window.TEENLAUNCH_API_BASE = `${apiOrigin}/api`;
 

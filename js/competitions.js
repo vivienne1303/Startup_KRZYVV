@@ -41,8 +41,8 @@ const renderReminders = () => {
 
   reminderButtons.forEach((button) => {
     const added = reminders.includes(button.dataset.event);
-    button.dataset.i18n = added ? "Reminder Added" : "Set Reminder";
-    button.textContent = t(added ? "Reminder Added" : "Set Reminder");
+    button.dataset.i18n = added ? "Remove Reminder" : "Set Reminder";
+    button.textContent = t(added ? "Remove Reminder" : "Set Reminder");
     button.setAttribute("aria-pressed", String(added));
   });
 };
@@ -82,11 +82,13 @@ reminderButtons.forEach((button) => {
     event.preventDefault();
     event.stopPropagation();
     const eventName = button.dataset.event;
-    if (!reminders.includes(eventName)) {
+    if (reminders.includes(eventName)) {
+      reminders = reminders.filter((name) => name !== eventName);
+    } else {
       reminders.push(eventName);
-      saveReminders();
-      renderReminders();
     }
+    saveReminders();
+    renderReminders();
   });
 });
 

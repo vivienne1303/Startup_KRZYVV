@@ -28,8 +28,11 @@
       document.querySelector("[data-detail-skills]").innerHTML = skills.length ? skills.map((skill) => `<span class="tag">${escapeHtml(skill)}</span>`).join("") : "<p>No specific skills listed.</p>";
       const sourceLabel = opportunity.source_type === "partner" ? `Verified partner · ${opportunity.source_name || opportunity.organizer}` : opportunity.source_type === "public_manual" ? "Public source · Admin reviewed" : "TeenLaunch verified";
       const category = document.querySelector("[data-detail-category]");
-      category.insertAdjacentHTML("afterend", `<span class="verification-badge verified">${escapeHtml(sourceLabel)}</span>`);
-      category.parentElement.classList.add("opportunity-badges");
+      const badgeRow = document.createElement("div");
+      badgeRow.className = "opportunity-badges detail-badges";
+      category.before(badgeRow);
+      badgeRow.appendChild(category);
+      badgeRow.insertAdjacentHTML("beforeend", `<span class="verification-badge verified">${escapeHtml(sourceLabel)}</span>`);
       const image = document.querySelector("[data-detail-image]"); if (opportunity.image_url) { image.src = opportunity.image_url; image.hidden = false; }
       const apply = document.querySelector("[data-detail-apply]");
       apply.href = `apply.html?id=${encodeURIComponent(id)}`;

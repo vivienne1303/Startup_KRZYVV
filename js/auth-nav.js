@@ -176,6 +176,7 @@
   authLink.textContent = "Logout";
   authLink.classList.add("is-logout");
   authLink.href = pageHref("auth.html");
+  addProfileLink();
   verifyRole();
   const logout = async (event) => {
     if (!authLink.classList.contains("is-logout")) return;
