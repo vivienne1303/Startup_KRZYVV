@@ -7,6 +7,14 @@
   const homeHref = inPagesFolder ? "../index.html" : "index.html";
   const assetHref = (asset) => (inPagesFolder ? `../${asset}` : asset);
   const isCurrent = (...pages) => pages.includes(currentPage);
+  const storedToken = localStorage.getItem("teenlaunch_token");
+  const publicPages = new Set(["index.html", "auth.html", "public-portfolio.html"]);
+
+  if (!storedToken && !publicPages.has(currentPage)) {
+    const returnTo = `${currentPage}${window.location.search}${window.location.hash}`;
+    window.location.replace(`${pageHref("auth.html")}?mode=login&returnTo=${encodeURIComponent(returnTo)}`);
+    return;
+  }
 
   const normaliseNavbar = () => {
     const navbar = document.querySelector(".navbar");
@@ -177,7 +185,7 @@
   const addProfileLink = () => {};
   const addAdminLink = () => {};
 
-  const token = localStorage.getItem("teenlaunch_token");
+  const token = storedToken;
   if (!token) {
     authLink.textContent = "Login";
     return;
