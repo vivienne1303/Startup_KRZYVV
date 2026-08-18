@@ -89,19 +89,59 @@ const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (character
 
 const opportunityMarkup = (opportunity) => {
   const categoryLabel = String(opportunity.category || "other").toLowerCase();
-  const category = categoryLabel.includes("startup") ? "startup" : categoryLabel.includes("camp") ? "camp" : categoryLabel.includes("workshop") ? "workshop" : categoryLabel.includes("intern") ? "internship" : categoryLabel.includes("entrepreneur") ? "entrepreneurship" : categoryLabel;
+  const category = categoryLabel.includes("intern") ? "internship"
+    : categoryLabel.includes("compet") ? "competition"
+      : categoryLabel.includes("workshop") ? "workshop"
+        : categoryLabel.includes("volunteer") || categoryLabel.includes("community service") ? "volunteer"
+          : categoryLabel.includes("hackathon") ? "hackathon"
+            : categoryLabel.includes("grant") || categoryLabel.includes("funding") || categoryLabel.includes("scholarship") ? "grant"
+              : categoryLabel;
   const mode = opportunity.mode === "in_person" ? "physical" : (opportunity.mode || "");
-  const ages = `${opportunity.age_min || "Any"}-${opportunity.age_max || "Any"}`;
+  const detailTokens = new Set();
+  const format = String(opportunity.mode || opportunity.format || "").toLowerCase();
+  if (["online", "hybrid"].includes(format)) detailTokens.add("online");
+  if (["in_person", "physical", "hybrid"].includes(format)) detailTokens.add("physical");
+  const rawMinimumAge = opportunity.minimum_age ?? opportunity.age_min;
+  const rawMaximumAge = opportunity.maximum_age ?? opportunity.age_max;
+  const minimumAge = rawMinimumAge === null || rawMinimumAge === undefined || rawMinimumAge === "" ? NaN : Number(rawMinimumAge);
+  const maximumAge = rawMaximumAge === null || rawMaximumAge === undefined || rawMaximumAge === "" ? NaN : Number(rawMaximumAge);
+  if (Number.isFinite(minimumAge) || Number.isFinite(maximumAge)) {
+    const low = Number.isFinite(minimumAge) ? minimumAge : 0;
+    const high = Number.isFinite(maximumAge) ? maximumAge : 99;
+    if (low <= 13 && high >= 10) detailTokens.add("10-13");
+    if (low <= 16 && high >= 14) detailTokens.add("14-16");
+    if (low <= 19 && high >= 17) detailTokens.add("17-19");
+  }
+  const levelText = String(opportunity.level || opportunity.difficulty || opportunity.eligibility || "").toLowerCase();
+  if (/beginner|introductory|no experience/.test(levelText)) detailTokens.add("beginner");
+  if (/advanced|experienced|intermediate/.test(levelText)) detailTokens.add("advanced");
+  const deadlineValue = opportunity.application_deadline || opportunity.deadline;
+  if (deadlineValue) {
+    const daysLeft = (new Date(`${deadlineValue}T23:59:59`) - new Date()) / 86400000;
+    if (daysLeft >= 0 && daysLeft <= 30) detailTokens.add("soon");
+  }
+  const ageParts = [];
+  if (Number.isFinite(minimumAge)) ageParts.push(`from ${minimumAge}`);
+  if (Number.isFinite(maximumAge)) ageParts.push(`up to ${maximumAge}`);
+  const displayDeadline = opportunity.application_deadline || opportunity.deadline;
+  const metaItems = [
+    `<li><strong>Deadline:</strong> ${displayDeadline ? new Date(`${displayDeadline}T00:00:00`).toLocaleDateString() : "Rolling"}</li>`,
+    ageParts.length ? `<li><strong>Eligibility:</strong> Ages ${escapeHtml(ageParts.join(" "))}</li>` : "",
+    [opportunity.mode, opportunity.location].filter(Boolean).length ? `<li>${escapeHtml([opportunity.mode, opportunity.location].filter(Boolean).join(" · "))}</li>` : "",
+  ].filter(Boolean).join("");
+  const officialUrl = opportunity.application_url || opportunity.source_url;
+  const detailsHref = officialUrl || `opportunity-details.html?id=${encodeURIComponent(opportunity.id)}`;
+  const detailsAttrs = officialUrl ? ' rel="noopener"' : '';
   const actions = isAdmin
     ? `<div class="opportunity-actions admin-opportunity-actions"><a class="btn secondary admin-edit-button" href="admin-dashboard.html?edit=${encodeURIComponent(opportunity.id)}"><img src="../assets/icons/edit-button.svg" alt="">Edit</a><button class="save-button admin-delete-button" type="button" data-delete-id="${escapeHtml(opportunity.id)}" data-delete-title="${escapeHtml(opportunity.title)}" aria-label="Delete ${escapeHtml(opportunity.title)}"><img src="../assets/icons/delete-icon.jpg" alt=""></button></div>`
-    : `<div class="opportunity-actions user-opportunity-actions"><a class="btn secondary" href="opportunity-details.html?id=${encodeURIComponent(opportunity.id)}">Details</a><a class="btn secondary apply-button" href="apply.html?id=${encodeURIComponent(opportunity.id)}" data-opportunity-id="${escapeHtml(opportunity.id)}">Apply</a><button class="save-button" type="button" data-save-id="${escapeHtml(opportunity.id)}" aria-label="Save ${escapeHtml(opportunity.title)}" aria-pressed="false"><img src="../assets/icons/save_icon.png" alt=""></button></div>`;
-  const sourceLabel = opportunity.source_type === "partner" ? `Verified partner · ${opportunity.source_name || opportunity.organizer || "Partner"}` : opportunity.source_type === "public_manual" ? "Public source · Admin reviewed" : "TeenLaunch verified";
-  return `<article class="opportunity-card visible" data-opportunity-card-id="${escapeHtml(opportunity.id)}" data-category="${escapeHtml(category)}" data-details="${escapeHtml(mode)}" data-title="${escapeHtml(String(opportunity.title || "").toLowerCase())}"><div class="opportunity-badges"><span class="tag">${escapeHtml(opportunity.category)}</span><span class="verification-badge verified">${escapeHtml(sourceLabel)}</span></div><h3>${escapeHtml(opportunity.title)}</h3><p>${escapeHtml(opportunity.description)}</p><ul><li>Deadline: ${opportunity.deadline ? new Date(`${opportunity.deadline}T00:00:00`).toLocaleDateString() : "Rolling"}</li><li>Eligibility: Ages ${escapeHtml(ages)}</li><li>${escapeHtml([opportunity.mode, opportunity.location].filter(Boolean).join(", "))}</li></ul>${actions}</article>`;
+    : `<div class="opportunity-actions user-opportunity-actions"><a class="btn secondary" href="${escapeHtml(detailsHref)}"${detailsAttrs}${officialUrl ? ` data-external-details="${escapeHtml(opportunity.id)}" data-opportunity-title="${escapeHtml(opportunity.title)}"` : ""}>Details</a><button class="save-button" type="button" data-save-id="${escapeHtml(opportunity.id)}" aria-label="Save ${escapeHtml(opportunity.title)}" aria-pressed="false"><img src="../assets/icons/save_icon.png" alt=""></button></div>`;
+  const sourceLabel = opportunity.source_type === "partner" ? `Verified partner · ${opportunity.source_name || opportunity.organisation || "Partner"}` : opportunity.source_type === "ai_fetched" ? "External source · Admin reviewed" : "TeenLaunch verified";
+  return `<article class="opportunity-card visible" data-opportunity-card-id="${escapeHtml(opportunity.id)}" data-category="${escapeHtml(category)}" data-details="${escapeHtml([...detailTokens].join(" ") || mode)}" data-title="${escapeHtml(String(opportunity.title || "").toLowerCase())}"><div class="opportunity-badges"><span class="tag">${escapeHtml(opportunity.category)}</span><span class="verification-badge verified">${escapeHtml(sourceLabel)}</span></div><h3>${escapeHtml(opportunity.title)}</h3><p class="opportunity-description">${escapeHtml(opportunity.description)}</p><ul class="opportunity-meta">${metaItems}</ul>${actions}</article>`;
 };
 
 const recommendationMarkup = ({ opportunity, match_percentage: percentage, explanation }) => {
   const base = opportunityMarkup(opportunity);
-  return base.replace('<span class="tag">', `<div class="match-badge">${percentage}% match</div><span class="tag">`).replace(`<p>${escapeHtml(opportunity.description)}</p>`, `<p class="match-explanation">${escapeHtml(explanation)}</p><p>${escapeHtml(opportunity.description)}</p>`);
+  return base.replace('<span class="tag">', `<div class="match-badge">${percentage}% match</div><span class="tag">`).replace(`<p class="opportunity-description">${escapeHtml(opportunity.description)}</p>`, `<p class="match-explanation">${escapeHtml(explanation)}</p><p class="opportunity-description">${escapeHtml(opportunity.description)}</p>`);
 };
 
 const loadRecommendationPreview = async () => {
@@ -144,11 +184,6 @@ const bindOpportunityActions = async () => {
     }));
     return;
   }
-  document.querySelectorAll(".apply-button").forEach((link) => link.addEventListener("click", (event) => {
-    if (token) return;
-    event.preventDefault();
-    window.location.href = `auth.html?mode=login&returnTo=${encodeURIComponent(`apply.html?id=${link.dataset.opportunityId}`)}`;
-  }));
   document.querySelectorAll(".save-button").forEach((button) => button.addEventListener("click", async () => {
     if (!token) { window.location.href = `auth.html?mode=login&returnTo=${encodeURIComponent("opportunities.html")}`; return; }
     const saving = !button.classList.contains("saved");
@@ -184,6 +219,63 @@ const bindOpportunityActions = async () => {
       link.setAttribute("aria-disabled", "true");
     });
   }
+};
+
+const setupExternalRegistrationPrompt = () => {
+  const token = localStorage.getItem("teenlaunch_token");
+  document.querySelectorAll("[data-external-details]").forEach((link) => link.addEventListener("click", () => {
+    localStorage.setItem("teenlaunch_pending_external", JSON.stringify({
+      id: link.dataset.externalDetails,
+      title: link.dataset.opportunityTitle,
+      url: link.href,
+      openedAt: Date.now(),
+    }));
+  }));
+  if (window.externalRegistrationPromptBound) return;
+  window.externalRegistrationPromptBound = true;
+  const showPrompt = () => {
+    let pending;
+    try { pending = JSON.parse(localStorage.getItem("teenlaunch_pending_external") || "null"); } catch { pending = null; }
+    if (!pending || Date.now() - pending.openedAt < 800 || document.querySelector(".external-registration-dialog")) return;
+    const dialog = document.createElement("dialog");
+    dialog.className = "external-registration-dialog";
+    dialog.innerHTML = `<form method="dialog"><p class="eyebrow">Application check-in</p><h2>Did you register?</h2><article><strong>${escapeHtml(pending.title)}</strong><small>You opened the official application page.</small></article><p>Did you actually register for this opportunity?</p><div><button class="btn primary" value="yes" type="button" data-confirm-external>Yes, I registered</button><button class="btn secondary" value="no">No, I was just checking</button></div><p class="external-registration-message" aria-live="polite"></p></form>`;
+    document.body.appendChild(dialog);
+    dialog.addEventListener("close", () => { localStorage.removeItem("teenlaunch_pending_external"); dialog.remove(); });
+    dialog.querySelector("[data-confirm-external]").addEventListener("click", async (event) => {
+      const button = event.currentTarget, message = dialog.querySelector(".external-registration-message");
+      if (!token) {
+        location.href = `auth.html?mode=login&returnTo=${encodeURIComponent("opportunities.html")}`;
+        return;
+      }
+      button.disabled = true; message.textContent = "Saving to your profile…";
+      try {
+        const response = await fetch(`${resolveApiBase()}/registrations/external-confirm`, { method: "POST", headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" }, body: JSON.stringify({ opportunity_id: pending.id }) });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(data.error?.message || "Could not record your registration");
+        localStorage.removeItem("teenlaunch_pending_external");
+        const registrationId = data.registration.id;
+        const form = dialog.querySelector("form");
+        form.innerHTML = `<p class="eyebrow">Next step</p><h2>Add to your portfolio?</h2><p>We can remind you to upload proof of participation and a reflection later. It will not be marked verified until proof is reviewed.</p><div><button class="btn primary" type="button" data-add-portfolio>Yes, add reminder</button><button class="btn secondary" type="button" data-skip-portfolio>No thanks</button></div><p class="external-registration-message" aria-live="polite"></p>`;
+        form.querySelector("[data-skip-portfolio]").addEventListener("click", () => { dialog.close(); location.href = "profile.html?tab=applied"; });
+        form.querySelector("[data-add-portfolio]").addEventListener("click", async (portfolioEvent) => {
+          const portfolioButton = portfolioEvent.currentTarget, portfolioMessage = form.querySelector(".external-registration-message");
+          portfolioButton.disabled = true; portfolioMessage.textContent = "Adding portfolio reminder…";
+          try {
+            const reminderResponse = await fetch(`${resolveApiBase()}/registrations/${encodeURIComponent(registrationId)}/portfolio-reminder`, { method: "POST", headers: { Authorization: `Bearer ${token}` } });
+            const reminderData = await reminderResponse.json().catch(() => ({}));
+            if (!reminderResponse.ok) throw new Error(reminderData.error?.message || "Could not add the portfolio reminder");
+            form.innerHTML = `<p class="eyebrow">Registration recorded</p><h2>You’re all set!</h2><p>We’ll keep this opportunity in your profile and remind you to add proof of participation and a reflection.</p><div><a class="btn primary" href="portfolio-builder.html">Go to Portfolio →</a><a class="btn secondary" href="profile.html?tab=applied">View in Profile</a></div>`;
+          } catch (error) { portfolioMessage.textContent = error.message; portfolioButton.disabled = false; }
+        });
+      } catch (error) { message.textContent = error.message; button.disabled = false; }
+    });
+    dialog.showModal();
+  };
+  window.addEventListener("focus", showPrompt);
+  window.addEventListener("pageshow", showPrompt);
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) showPrompt(); });
+  window.setTimeout(showPrompt, 1200);
 };
 
 const loadOpportunities = async () => {
@@ -222,6 +314,7 @@ const loadOpportunities = async () => {
     cards = document.querySelectorAll("#opportunityGrid .opportunity-card");
     filterCards();
     bindOpportunityActions().catch(() => {});
+    setupExternalRegistrationPrompt();
     loadRecommendationPreview();
   } catch (_) {
     grid.innerHTML = "";

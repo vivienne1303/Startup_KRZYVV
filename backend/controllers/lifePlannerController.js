@@ -47,7 +47,7 @@ const list = asyncHandler(async (req, res) => {
   const deadlineMap = new Map();
   (saved.data || []).forEach((entry) => {
     const opportunity = entry.opportunities;
-    if (opportunity?.deadline && opportunity.status === "active" && opportunity.is_published) deadlineMap.set(opportunity.id, { opportunity_id: opportunity.id, registration_id: null, title: opportunity.title, deadline: opportunity.deadline, relationship: "saved" });
+    if (opportunity?.deadline && opportunity.status === "published" && opportunity.is_published) deadlineMap.set(opportunity.id, { opportunity_id: opportunity.id, registration_id: null, title: opportunity.title, deadline: opportunity.deadline, relationship: "saved" });
   });
   (registrations.data || []).forEach((entry) => {
     const opportunity = entry.opportunities;

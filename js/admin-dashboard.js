@@ -197,7 +197,12 @@
   const publishConfirmation = document.querySelector("[data-publish-confirmation]");
   const opportunityFormTitle = document.querySelector("[data-opportunity-form-title]");
   const opportunitySubmit = document.querySelector("[data-opportunity-submit]");
+  const internalFormToggle = document.querySelector("[data-toggle-internal-form]");
   const editOpportunityId = new URLSearchParams(window.location.search).get("edit");
+  internalFormToggle?.addEventListener("click", () => {
+    opportunityForm.hidden = !opportunityForm.hidden;
+    internalFormToggle.textContent = opportunityForm.hidden ? "Add internal activity" : "Hide form";
+  });
   const categorySummary = document.querySelector("[data-category-summary]");
   const educationSummary = document.querySelector("[data-education-summary]");
   const updateCategorySummary = () => {
@@ -213,6 +218,8 @@
 
   const loadOpportunityForEditing = async () => {
     if (!editOpportunityId) return;
+    opportunityForm.hidden = false;
+    if (internalFormToggle) internalFormToggle.textContent = "Hide form";
     const { opportunity } = await authFetch(`/admin/opportunities/${encodeURIComponent(editOpportunityId)}`);
     ["title", "description", "deadline", "start_date", "end_date", "age_min", "age_max", "organizer", "application_url", "image_url", "status", "source_type", "source_url", "application_method", "expiry_date"].forEach((name) => {
       opportunityForm.elements[name].value = opportunity?.[name] ?? "";
@@ -280,20 +287,26 @@
           start_date: formData.get("start_date") || null,
           end_date: formData.get("end_date") || null,
           application_url: String(formData.get("application_url") || "").trim() || null,
-          source_type: formData.get("source_type") || "teenlaunch",
+          organisation: String(formData.get("organizer") || "").trim() || null,
+          eligibility: null,
+          minimum_age: ageMin, maximum_age: ageMax,
+          education_level: educationLevels.join(", ") || null,
+          format: mode || null,
+          application_deadline: formData.get("deadline") || null,
+          source_type: formData.get("source_type") || "manual",
           source_url: String(formData.get("source_url") || "").trim() || null,
           application_method: formData.get("application_method") || "internal",
           expiry_date: formData.get("expiry_date") || formData.get("deadline") || null,
           internal_application_enabled: formData.get("internal_application_enabled") === "on",
           image_url: String(formData.get("image_url") || "").trim() || null,
-          status: formData.get("status") || "active",
+          status: publishImmediately ? "published" : (formData.get("status") || "pending_review"),
           is_published: publishImmediately,
         }),
       });
 
       if (!editOpportunityId) {
         opportunityForm.reset();
-        opportunityForm.elements.is_published.checked = true;
+        opportunityForm.elements.is_published.checked = false;
         updateCategorySummary();
         updateEducationSummary();
       }

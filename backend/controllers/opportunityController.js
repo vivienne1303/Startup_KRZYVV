@@ -1,9 +1,10 @@
 const asyncHandler = require("../utils/asyncHandler");
 const HttpError = require("../utils/httpError");
-const { supabase } = require("../config/supabase");
-const { ensureDemoOpportunities } = require("../services/demoOpportunityService");
+const { supabase, supabaseAdmin } = require("../config/supabase");
 const { getMatchedOpportunities } = require("../services/opportunityMatchingService");
 const manualSource = require("../services/opportunitySources/manualSource");
+const OpportunitySource = require("../services/opportunitySources/apiSourceBase");
+const expiryManager = new OpportunitySource();
 const {
   createOpportunity,
   deleteOpportunity,
@@ -13,16 +14,10 @@ const {
 } = require("../services/opportunityService");
 
 const list = asyncHandler(async (req, res) => {
+  await expiryManager.markExpiredOpportunities(supabaseAdmin);
   let { data, error } = await listOpportunities(supabase, req.query);
 
   if (error) throw new HttpError(400, error.message, error.details);
-
-  if (!data?.length && !Object.keys(req.query).length) {
-    const seeded = await ensureDemoOpportunities();
-    if (seeded.error) throw new HttpError(400, seeded.error.message, seeded.error.details);
-    ({ data, error } = await listOpportunities(supabase, req.query));
-    if (error) throw new HttpError(400, error.message, error.details);
-  }
 
   res.json({ opportunities: data });
 });
@@ -36,6 +31,7 @@ const getById = asyncHandler(async (req, res) => {
 });
 
 const recommended = asyncHandler(async (req, res) => {
+  await expiryManager.markExpiredOpportunities(supabaseAdmin);
   const { data, error } = await getMatchedOpportunities(req.supabase, req.user.id);
   if (error) throw new HttpError(400, error.message, error.details);
   res.json(data);

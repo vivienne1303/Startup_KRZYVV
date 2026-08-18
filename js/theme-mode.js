@@ -33,6 +33,22 @@
         applyTheme(button.dataset.themeChoice);
       });
     });
+
+    document.body.classList.add("tl-motion-ready");
+    document.querySelectorAll(".opportunity-card,.application-card,.review-card,.portfolio-card,.person-card").forEach((card, index) => {
+      card.style.setProperty("--tl-order", String(index % 10));
+      card.style.setProperty("--tl-card-tilt", `${index % 2 ? ".45" : "-.45"}deg`);
+    });
+
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.addEventListener("pointermove", (event) => {
+        const card = event.target.closest?.(".opportunity-card,.application-card,.review-card,.portfolio-card,.person-card");
+        if (!card) return;
+        const bounds = card.getBoundingClientRect();
+        const rotate = ((event.clientX - bounds.left) / bounds.width - .5) * 1.6;
+        card.style.setProperty("--tl-card-tilt", `${rotate.toFixed(2)}deg`);
+      });
+    }
   });
 
   window.TeenLaunchTheme = {

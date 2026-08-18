@@ -71,11 +71,20 @@
       </div>
 
       <section class="admin-panel admin-opportunity-panel reveal" data-admin-content hidden>
+        <div class="admin-panel-heading"><h2>Add external opportunity</h2><span>Only the official link is needed</span></div>
+        <form class="opportunity-import-bar" data-import-url-form>
+          <label class="admin-wide">External opportunity URL<input type="url" name="url" placeholder="https://organisation.example/opportunity" required></label>
+          <button class="btn primary" type="submit">Add opportunity link</button>
+        </form>
+        <p class="import-message" data-import-message aria-live="polite"></p>
+      </section>
+
+      <section class="admin-panel admin-opportunity-panel reveal" data-admin-content hidden>
         <div class="admin-panel-heading">
-          <h2 data-opportunity-form-title>Add opportunity</h2>
-          <span>Create a published opportunity for users</span>
+          <h2 data-opportunity-form-title>TeenLaunch internal activity</h2>
+          <button class="btn secondary" type="button" data-toggle-internal-form>Add internal activity</button>
         </div>
-        <form class="admin-opportunity-form" data-opportunity-form>
+        <form class="admin-opportunity-form" data-opportunity-form hidden>
           <fieldset class="admin-category-field">
             <legend>Categories <small>Select one or more</small></legend>
             <details class="admin-category-dropdown">
@@ -87,6 +96,9 @@
                 <label><input type="checkbox" name="categories" value="Startup Programmes"> Startup Programmes</label>
                 <label><input type="checkbox" name="categories" value="Leadership Camps"> Leadership Camps</label>
                 <label><input type="checkbox" name="categories" value="Competitions"> Competitions</label>
+                <label><input type="checkbox" name="categories" value="Volunteering"> Volunteering</label>
+                <label><input type="checkbox" name="categories" value="Hackathons"> Hackathons</label>
+                <label><input type="checkbox" name="categories" value="Grants"> Grants</label>
               </div>
             </details>
           </fieldset>
@@ -148,10 +160,10 @@
           <label class="admin-aligned-field">
             <span class="admin-field-heading"><strong>Status</strong><small aria-hidden="true">&nbsp;</small></span>
             <select name="status">
-              <option value="active">Active</option>
-              <option value="inactive">Inactive</option>
+              <option value="pending_review">Pending review</option>
+              <option value="published">Published</option>
               <option value="draft">Draft</option>
-              <option value="archived">Archived</option>
+              <option value="expired">Expired</option>
             </select>
           </label>
           <label class="admin-aligned-field">
@@ -168,7 +180,7 @@
           </label>
           <label>
             Source type
-            <select name="source_type"><option value="teenlaunch">TeenLaunch-created</option><option value="public_manual">Public source, manually reviewed</option></select>
+            <select name="source_type"><option value="manual">Manual</option><option value="partner">Partner</option><option value="ai_fetched">URL/AI fetched</option></select>
           </label>
           <label>
             Official source URL
@@ -191,7 +203,7 @@
             <input type="url" name="image_url" placeholder="https://example.com/image.jpg">
           </label>
           <label class="admin-check">
-            <input type="checkbox" name="is_published" checked>
+            <input type="checkbox" name="is_published">
             Publish immediately
           </label>
           <div class="settings-actions admin-wide">

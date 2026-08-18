@@ -26,6 +26,9 @@ router.get("/dashboard", adminController.getDashboardStats);
 router.get("/partners", scoutController.listPartners);
 router.put("/partners/:id", scoutController.reviewPartner);
 router.get("/opportunity-reviews", scoutController.reviewQueue);
+router.post("/opportunity-import/preview", scoutController.previewImport);
+router.post("/opportunity-import", scoutController.saveImport);
+router.post("/opportunity-import/bulk", scoutController.bulkImport);
 router.put("/opportunity-reviews/:id", scoutController.reviewOpportunity);
 
 module.exports = router;

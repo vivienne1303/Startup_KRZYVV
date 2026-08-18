@@ -17,7 +17,7 @@ const buildContext = async (req) => {
     req.supabase.from("registrations").select("completion_date, verified_skills, opportunities(id, title, category, organizer)").eq("status", "completed").eq("completion_verified", true).limit(12),
     req.supabase.from("portfolio_items").select("skills_learned, registrations(opportunities(id, title))").limit(20),
     req.supabase.from("portfolio_projects").select("title, skills").limit(12),
-    req.supabase.from("opportunities").select("id, title, description, category, categories, skills, organizer, mode, location, age_min, age_max, education_levels, deadline").eq("is_published", true).eq("status", "active").eq("verification_status", "verified").or(`expiry_date.is.null,expiry_date.gte.${new Date().toISOString().slice(0, 10)}`).order("deadline", { ascending: true, nullsFirst: false }).limit(24),
+    req.supabase.from("opportunities").select("id, title, description, category, categories, skills, organizer, mode, location, age_min, age_max, education_levels, deadline").eq("is_published", true).eq("status", "published").or(`application_deadline.is.null,application_deadline.gte.${new Date().toISOString().slice(0, 10)}`).order("deadline", { ascending: true, nullsFirst: false }).limit(24),
   ]);
 
   const dna = safeResult(dnaResult, null);

@@ -6,4 +6,6 @@ html[data-theme=dark] .scout-main{background:var(--bg);color:var(--text)}html[da
 
 /* Keep the partner-page headline readable in both English and Chinese. */
 .scout-hero h1{margin:.18em 0;font-size:clamp(2.75rem,5vw,5.25rem);line-height:1.02;letter-spacing:-.045em}
+.opportunity-import-bar{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:end}.opportunity-import-bar label,.bulk-import form{display:grid;gap:8px}.opportunity-import-bar input,.bulk-import textarea{width:100%;padding:13px 14px;border:1px solid #bbd7ee;border-radius:12px;font:inherit}.import-message,.bulk-import [data-bulk-message]{min-height:1.5em;margin-top:10px}.import-message.error{color:#a21e24}.bulk-import{margin-top:24px;padding-top:18px;border-top:1px solid #c2daee}.bulk-import summary{cursor:pointer;font-weight:900}.bulk-import form{margin-top:14px}
+@media(max-width:650px){.opportunity-import-bar{grid-template-columns:1fr}}
 @media(max-width:500px){.scout-hero h1{font-size:clamp(2.45rem,11vw,3.4rem);line-height:1.06}}

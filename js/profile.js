@@ -15,7 +15,10 @@
   };
   const opportunityCard = (item, saved = false) => {
     const opportunity = item.opportunities || {};
-    return `<article class="application-card">${opportunity.image_url ? `<img src="${esc(opportunity.image_url)}" alt="">` : ""}<h3>${esc(opportunity.title || t("Opportunity"))}</h3><p>${esc(opportunity.category || "")}</p>${saved ? "" : `<span class="status">${esc(t(item.status))}</span><p>${t("Applied")} ${new Date(item.created_at).toLocaleDateString(locale())}</p>`}<p>${t("Deadline:")} ${opportunity.deadline ? new Date(`${opportunity.deadline}T00:00:00`).toLocaleDateString(locale()) : t("Rolling")}</p><div class="profile-card-actions"><a class="btn secondary" href="apply.html?id=${encodeURIComponent(item.opportunity_id)}">${t("View Details")}</a>${saved ? `<button class="btn secondary" type="button" data-unsave="${esc(item.opportunity_id)}">${t("Remove")}</button>` : ""}</div></article>`;
+    const officialUrl = opportunity.application_url || opportunity.source_url;
+    const detailUrl = officialUrl || `opportunity-details.html?id=${encodeURIComponent(item.opportunity_id)}`;
+    const selfReported = item.notes === "Self-reported external registration";
+    return `<article class="application-card">${opportunity.image_url ? `<img src="${esc(opportunity.image_url)}" alt="">` : ""}<h3>${esc(opportunity.title || t("Opportunity"))}</h3><p>${esc(opportunity.category || "")}</p>${saved ? "" : `<span class="status">${selfReported ? "Self-reported registration" : esc(t(item.status))}</span><p>${t("Applied")} ${new Date(item.created_at).toLocaleDateString(locale())}</p>`}<p>${t("Deadline:")} ${opportunity.deadline ? new Date(`${opportunity.deadline}T00:00:00`).toLocaleDateString(locale()) : t("Rolling")}</p><div class="profile-card-actions"><a class="btn secondary" href="${esc(detailUrl)}"${officialUrl ? ' target="_blank" rel="noopener"' : ""}>${t("View Details")}</a>${saved ? `<button class="btn secondary" type="button" data-unsave="${esc(item.opportunity_id)}">${t("Remove")}</button>` : ""}</div></article>`;
   };
   const renderEngagement = ({ engagement, experiences }) => {
     document.querySelector("[data-tier-name]").textContent = t(engagement.tier.name);
@@ -83,7 +86,13 @@
     } catch (error) { document.querySelector("[data-profile-loading]").hidden = true; document.querySelector("[data-profile-error]").hidden = false; document.querySelector("[data-profile-error-message]").textContent = error.message; }
   };
 
-  document.querySelectorAll("[data-tab]").forEach((button) => button.addEventListener("click", () => { document.querySelectorAll("[data-tab]").forEach((item) => item.classList.toggle("active", item === button)); document.querySelectorAll("[data-panel]").forEach((panel) => { panel.hidden = panel.dataset.panel !== button.dataset.tab; }); }));
+  const selectTab = (name) => {
+    const selected = document.querySelector(`[data-tab="${CSS.escape(name)}"]`) || document.querySelector('[data-tab="experiences"]');
+    document.querySelectorAll("[data-tab]").forEach((item) => item.classList.toggle("active", item === selected));
+    document.querySelectorAll("[data-panel]").forEach((panel) => { panel.hidden = panel.dataset.panel !== selected.dataset.tab; });
+  };
+  document.querySelectorAll("[data-tab]").forEach((button) => button.addEventListener("click", () => selectTab(button.dataset.tab)));
+  selectTab(new URLSearchParams(location.search).get("tab") || "experiences");
   const form = document.querySelector("[data-experience-form]");
   const openForm = () => { form.hidden = false; form.scrollIntoView({ behavior: "smooth", block: "center" }); form.elements.title.focus(); };
   document.querySelector("[data-open-experience]").addEventListener("click", openForm);

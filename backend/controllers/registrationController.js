@@ -2,8 +2,10 @@ const asyncHandler = require("../utils/asyncHandler");
 const HttpError = require("../utils/httpError");
 const {
   cancelOwnRegistration,
+  addPortfolioReminder,
   checkRegistration,
   createRegistration,
+  createExternalRegistration,
   deleteRegistration,
   getRegistrationById,
   listRegistrations,
@@ -11,7 +13,7 @@ const {
 } = require("../services/registrationService");
 
 const list = asyncHandler(async (req, res) => {
-  const { data, error } = await listRegistrations(req.supabase);
+  const { data, error } = await listRegistrations(req.supabase, req.user.id);
 
   if (error) throw new HttpError(400, error.message, error.details);
 
@@ -67,6 +69,30 @@ const create = asyncHandler(async (req, res) => {
   res.status(201).json({ registration: data });
 });
 
+const confirmExternal = asyncHandler(async (req, res) => {
+  if (!req.body.opportunity_id) throw new HttpError(400, "opportunity_id is required");
+  const [opportunity, existing] = await Promise.all([
+    req.supabase.from("opportunities").select("id,application_url,source_url,status").eq("id", req.body.opportunity_id).single(),
+    checkRegistration(req.supabase, req.body.opportunity_id),
+  ]);
+  if (opportunity.error || !opportunity.data) throw new HttpError(404, "Opportunity not found");
+  if (!opportunity.data.application_url && !opportunity.data.source_url) throw new HttpError(400, "This is not an external opportunity");
+  if (existing.error) throw new HttpError(400, existing.error.message, existing.error.details);
+  if (existing.data) return res.json({ registration: existing.data, already_recorded: true });
+  const { data, error } = await createExternalRegistration(req.supabase, req.body.opportunity_id, req.user.id);
+  if (error) throw new HttpError(403, error.message, error.details);
+  res.status(201).json({ registration: data, self_reported: true });
+});
+
+const portfolioReminder = asyncHandler(async (req, res) => {
+  const existing = await getRegistrationById(req.supabase, req.params.id);
+  if (existing.error || !existing.data) throw new HttpError(404, "Registration not found");
+  if (existing.data.notes !== "Self-reported external registration") throw new HttpError(400, "Portfolio reminders are only available for external registrations");
+  const { data, error } = await addPortfolioReminder(req.supabase, req.params.id);
+  if (error) throw new HttpError(403, error.message, error.details);
+  res.json({ registration: data });
+});
+
 const check = asyncHandler(async (req, res) => {
   const { data, error } = await checkRegistration(req.supabase, req.params.opportunityId);
   if (error) throw new HttpError(400, error.message, error.details);
@@ -107,6 +133,8 @@ const remove = asyncHandler(async (req, res) => {
 module.exports = {
   check,
   create,
+  confirmExternal,
+  portfolioReminder,
   getById,
   list,
   remove,

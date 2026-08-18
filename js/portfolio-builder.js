@@ -4,7 +4,7 @@
   let state={};const message=document.querySelector("[data-builder-message]"),t=key=>window.TeenLaunchI18n?.translate(key)||key,isChinese=()=>window.TeenLaunchI18n?.getLanguage()==="zh";
   const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const request=async(path,options={})=>{const r=await fetch(API+path,{...options,headers:{...H,...(options.body?{"Content-Type":"application/json"}:{}),...(options.headers||{})}});if(!r.ok){let text="Request failed";try{text=(await r.json()).error?.message||text}catch{}throw new Error(text)}return r.status===204?null:r.json()};
-  const notify=(text,type="")=>{message.textContent=t(text);message.className=`portfolio-message ${type}`};
+  const notify=(text,type="")=>{const content=text?t(text):"";message.textContent=content;message.className=`portfolio-message ${type}`;message.hidden=!content};
   const official=a=>`<span class="verified-badge">✓ ${esc(t(a.completion_badge||"Verified"))}</span><h3>${esc(a.opportunities?.title||t("Completed programme"))}</h3><p><strong>${esc(a.opportunities?.organizer||t("Organisation"))}</strong></p><p>${t("Completed")} ${a.completion_date?new Date(a.completion_date+"T00:00:00").toLocaleDateString(isChinese()?"zh-CN":undefined):t("date not provided")}</p><div class="skill-list">${(a.verified_skills||[]).map(s=>`<span class="skill-chip">${esc(t(s))}</span>`).join("")}</div>${a.admin_remarks?`<p>${esc(a.admin_remarks)}</p>`:""}${a.certificate_url?`<a class="certificate-link" href="${esc(a.certificate_url)}" target="_blank" rel="noopener">${t("View certificate")}</a>`:""}`;
   const render=()=>{
     const added=new Set(state.items.map(i=>i.registration_id));

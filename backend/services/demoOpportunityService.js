@@ -11,7 +11,7 @@ const demoOpportunities = [
 
 const ensureDemoOpportunities = async () => {
   if (process.env.NODE_ENV === "production") return { data: [], error: null };
-  const labelled = demoOpportunities.map((item) => ({ ...item, title: `[MOCK] ${item.title}`, source_type: "teenlaunch", source_name: "TeenLaunch demo seed [MOCK]", verification_status: "draft", status: "draft", is_published: false }));
+  const labelled = demoOpportunities.map((item) => ({ ...item, title: `[MOCK] ${item.title}`, source_type: "manual", source_name: "TeenLaunch demo seed [MOCK]", verification_status: "draft", status: "draft", is_published: false }));
   return supabaseAdmin.from("opportunities").upsert(labelled, { onConflict: "id" });
 };
 

@@ -26,7 +26,7 @@
       setText("[data-detail-education]", education.join(", ") || "All education levels");
       setText("[data-detail-location]", [opportunity.mode, opportunity.location].filter(Boolean).join(" · "));
       document.querySelector("[data-detail-skills]").innerHTML = skills.length ? skills.map((skill) => `<span class="tag">${escapeHtml(skill)}</span>`).join("") : "<p>No specific skills listed.</p>";
-      const sourceLabel = opportunity.source_type === "partner" ? `Verified partner · ${opportunity.source_name || opportunity.organizer}` : opportunity.source_type === "public_manual" ? "Public source · Admin reviewed" : "TeenLaunch verified";
+      const sourceLabel = opportunity.source_type === "partner" ? `Verified partner · ${opportunity.source_name || opportunity.organisation}` : opportunity.source_type === "ai_fetched" ? "External source · Admin reviewed" : "TeenLaunch verified";
       const category = document.querySelector("[data-detail-category]");
       const badgeRow = document.createElement("div");
       badgeRow.className = "opportunity-badges detail-badges";
@@ -35,10 +35,10 @@
       badgeRow.insertAdjacentHTML("beforeend", `<span class="verification-badge verified">${escapeHtml(sourceLabel)}</span>`);
       const image = document.querySelector("[data-detail-image]"); if (opportunity.image_url) { image.src = opportunity.image_url; image.hidden = false; }
       const apply = document.querySelector("[data-detail-apply]");
-      apply.href = `apply.html?id=${encodeURIComponent(id)}`;
-      apply.hidden = !opportunity.internal_application_enabled || !["internal", "both"].includes(opportunity.application_method);
+      apply.hidden = true;
       const external = document.querySelector("[data-detail-external]");
-      if (opportunity.application_url && ["external", "both"].includes(opportunity.application_method)) { external.href = opportunity.application_url; external.hidden = false; }
+      const officialUrl = opportunity.application_url || opportunity.source_url;
+      if (officialUrl) { external.href = officialUrl; external.textContent = "View official details"; external.hidden = false; }
       const save = document.querySelector("[data-detail-save]");
       if (token) {
         const saved = await fetch(`${API}/profile/saved`, { headers: { Authorization: `Bearer ${token}` } });

@@ -62,6 +62,14 @@
       <a class="settings-button${isCurrent("settings.html", "display-settings.html") ? " active" : ""}" href="${pageHref("settings.html")}" aria-label="Settings"><span aria-hidden="true">⚙</span></a>
       <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>`;
 
+    navLinks.innerHTML = `
+      <a class="${isCurrent("index.html", "") ? "active" : ""}" href="${homeHref}">Home</a>
+      <a class="${isCurrent("opportunities.html", "competitions.html", "competition_academic.html", "competition_non-academic.html") ? "active" : ""}" href="${pageHref("opportunities.html")}">Explore</a>
+      <a class="${isCurrent("my-journey.html", "career_dna_test.html", "career_dna_result.html", "recommended-opportunities.html", "life-planner.html") ? "active" : ""}" href="${pageHref("my-journey.html")}">My Journey</a>
+      <a class="${isCurrent("profile.html", "portfolio-builder.html", "my-portfolio.html", "public-portfolio.html") ? "active" : ""}" href="${pageHref("profile.html?tab=applied")}">Profile</a>
+      <a class="${isCurrent("about.html", "help.html", "partner-submission.html") ? "active" : ""}" href="${pageHref("about.html")}">About</a>
+      <a class="auth-link" href="${pageHref("auth.html")}">Login</a>`;
+
     const dropdowns = navLinks.querySelectorAll(".nav-dropdown");
     dropdowns.forEach((dropdown) => {
       const trigger = dropdown.querySelector(".nav-trigger");
@@ -123,6 +131,31 @@
   };
 
   normaliseNavbar();
+  const explorePages = ["opportunities.html", "recommended-opportunities.html", "competitions.html", "competition_academic.html", "competition_non-academic.html"];
+  if (explorePages.includes(currentPage) && !document.querySelector(".explore-section-nav")) {
+    const exploreNav = document.createElement("nav");
+    exploreNav.className = "explore-section-nav";
+    exploreNav.setAttribute("aria-label", "Explore sections");
+    exploreNav.innerHTML = `
+      <a class="${currentPage === "opportunities.html" ? "active" : ""}" href="${pageHref("opportunities.html")}">All Opportunities</a>
+      <a class="${currentPage === "recommended-opportunities.html" ? "active" : ""}" href="${pageHref("recommended-opportunities.html")}">Recommended for You</a>
+      <div class="explore-competition-group">
+        <a class="${["competitions.html", "competition_academic.html", "competition_non-academic.html"].includes(currentPage) ? "active" : ""}" href="${pageHref("competitions.html")}">Competitions</a>
+        <div class="explore-subfilters" aria-label="Competition filters">
+          <a class="${currentPage === "competition_academic.html" ? "active" : ""}" href="${pageHref("competition_academic.html")}">Academic</a>
+          <a class="${currentPage === "competition_non-academic.html" ? "active" : ""}" href="${pageHref("competition_non-academic.html")}">Non-Academic</a>
+        </div>
+      </div>`;
+    document.querySelector("main")?.prepend(exploreNav);
+  }
+  if (!document.querySelector(".ask-teenlaunch-fab")) {
+    const ask = document.createElement("a");
+    ask.className = "ask-teenlaunch-fab";
+    ask.href = pageHref("aiassistant.html");
+    ask.setAttribute("aria-label", "Ask TeenLaunch AI");
+    ask.innerHTML = "<span aria-hidden=\"true\">✨</span> Ask TeenLaunch";
+    document.body.appendChild(ask);
+  }
   const authLink = document.querySelector(".auth-link");
   if (!authLink) return;
   const navLinks = authLink.closest(".nav-links");
@@ -141,8 +174,8 @@
     link.dataset.i18n = text;
     navLinks.insertBefore(link, authLink);
   };
-  const addProfileLink = () => addLink("profile-nav-link", "profile.html", "My Profile", ["profile.html", "account.html", "career_dna_test.html", "career_dna_result.html"]);
-  const addAdminLink = () => addLink("admin-dashboard-link", "admin-dashboard.html", "Admin Dashboard", ["admin-dashboard.html"]);
+  const addProfileLink = () => {};
+  const addAdminLink = () => {};
 
   const token = localStorage.getItem("teenlaunch_token");
   if (!token) {

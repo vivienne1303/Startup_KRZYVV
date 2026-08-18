@@ -127,10 +127,8 @@ const getMatchedOpportunities = async (client, userId) => {
     client.from("opportunities")
       .select("id, title, description, category, categories, skills, education_levels, organizer, location, mode, age_min, age_max, deadline, start_date, end_date, application_url, image_url, status, is_published, created_at")
       .eq("is_published", true)
-      .eq("status", "active")
-      .eq("verification_status", "verified")
-      .or(`expiry_date.is.null,expiry_date.gte.${today}`)
-      .or(`deadline.is.null,deadline.gte.${today}`)
+      .eq("status", "published")
+      .or(`application_deadline.is.null,application_deadline.gte.${today}`)
       .order("deadline", { ascending: true, nullsFirst: false }),
   ]);
 

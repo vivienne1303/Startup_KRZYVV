@@ -1,15 +1,14 @@
 const opportunityColumns =
-  "id, title, description, category, categories, skills, education_levels, organizer, location, mode, age_min, age_max, deadline, start_date, end_date, application_url, image_url, status, is_published, created_by, created_at, updated_at, source_type, source_name, source_url, partner_id, external_id, last_synced_at, verification_status, verified_by, verified_at, expiry_date, application_method, internal_application_enabled";
+  "id, title, organisation, organizer, description, category, categories, eligibility, minimum_age, maximum_age, age_min, age_max, education_level, education_levels, location, format, mode, application_deadline, deadline, start_date, end_date, source_url, application_url, source_type, status, created_at, last_verified_at, updated_at, skills, image_url, is_published, created_by, source_name, partner_id, external_id, last_synced_at, verification_status, verified_by, verified_at, expiry_date, application_method, internal_application_enabled";
 
 const listOpportunities = async (client, filters = {}) => {
   let query = client
     .from("opportunities")
     .select(opportunityColumns)
     .eq("is_published", true)
-    .eq("status", "active")
-    .eq("verification_status", "verified")
-    .or(`expiry_date.is.null,expiry_date.gte.${new Date().toISOString().slice(0, 10)}`)
-    .order("deadline", { ascending: true, nullsFirst: false });
+    .eq("status", "published")
+    .or(`application_deadline.is.null,application_deadline.gte.${new Date().toISOString().slice(0, 10)}`)
+    .order("application_deadline", { ascending: true, nullsFirst: false });
 
   if (filters.category) query = query.eq("category", filters.category);
   if (filters.mode) query = query.eq("mode", filters.mode);
@@ -25,9 +24,8 @@ const getOpportunityById = async (client, id) => {
     .select(opportunityColumns)
     .eq("id", id)
     .eq("is_published", true)
-    .eq("status", "active")
-    .eq("verification_status", "verified")
-    .or(`expiry_date.is.null,expiry_date.gte.${new Date().toISOString().slice(0, 10)}`)
+    .eq("status", "published")
+    .or(`application_deadline.is.null,application_deadline.gte.${new Date().toISOString().slice(0, 10)}`)
     .single();
 
   return { data, error };

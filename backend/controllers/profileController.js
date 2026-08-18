@@ -59,7 +59,7 @@ const updateProfile = asyncHandler(async (req, res) => {
 });
 
 const getApplications = asyncHandler(async (req, res) => {
-  const { data, error } = await listRegistrations(req.supabase);
+  const { data, error } = await listRegistrations(req.supabase, req.user.id);
   if (error) throw new HttpError(400, error.message, error.details);
   res.json({ applications: data || [] });
 });
