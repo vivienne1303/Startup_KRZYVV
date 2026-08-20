@@ -57,10 +57,6 @@
         <a class="nav-trigger" href="${pageHref("opportunities.html")}" data-i18n="Opportunities">Opportunities</a>
         <div class="dropdown-menu" aria-label="Opportunity navigation"><a href="${pageHref("opportunities.html")}" data-i18n="All Opportunities">All Opportunities</a><a href="${pageHref("recommended-opportunities.html")}" data-i18n="Recommended for You">Recommended for You</a><a href="${pageHref("partner-submission.html")}" data-i18n="Submit an Opportunity">Submit an Opportunity</a></div>
       </div>
-      <div class="nav-dropdown competitions-dropdown ${isCurrent("competitions.html", "competition_academic.html", "competition_non-academic.html") ? "active" : ""}">
-        <a class="nav-trigger" href="${pageHref("competitions.html")}" data-i18n="Competitions">Competitions</a>
-        <div class="dropdown-menu" aria-label="Competition categories"><a href="${pageHref("competition_academic.html")}" data-i18n="Academic">Academic</a><a href="${pageHref("competition_non-academic.html")}" data-i18n="Non-Academic">Non-Academic</a></div>
-      </div>
       <a class="${isCurrent("resources.html") ? "active" : ""}" href="${pageHref("resources.html")}" data-i18n="Resources">Resources</a>
       <a class="${isCurrent("debate.html") ? "active" : ""}" href="${pageHref("debate.html")}" data-i18n="Soft Skills & Debate">Soft Skills &amp; Debate</a>
       <a class="${isCurrent("career-copilot.html", "aiassistant.html") ? "active" : ""}" href="${pageHref("career-copilot.html")}" data-i18n="Career Copilot">Career Copilot</a>
@@ -72,7 +68,7 @@
 
     navLinks.innerHTML = `
       <a class="${isCurrent("index.html", "") ? "active" : ""}" href="${homeHref}">Home</a>
-      <a class="${isCurrent("opportunities.html", "competitions.html", "competition_academic.html", "competition_non-academic.html") ? "active" : ""}" href="${pageHref("opportunities.html")}">Explore</a>
+      <a class="${isCurrent("opportunities.html") ? "active" : ""}" href="${pageHref("opportunities.html")}">Explore</a>
       <a class="${isCurrent("my-journey.html", "career_dna_test.html", "career_dna_result.html", "recommended-opportunities.html", "life-planner.html") ? "active" : ""}" href="${pageHref("my-journey.html")}">My Journey</a>
       <a class="${isCurrent("profile.html", "portfolio-builder.html", "my-portfolio.html", "public-portfolio.html") ? "active" : ""}" href="${pageHref("profile.html?tab=applied")}">Profile</a>
       <a class="${isCurrent("about.html", "help.html", "partner-submission.html") ? "active" : ""}" href="${pageHref("about.html")}">About</a>
@@ -139,21 +135,14 @@
   };
 
   normaliseNavbar();
-  const explorePages = ["opportunities.html", "recommended-opportunities.html", "competitions.html", "competition_academic.html", "competition_non-academic.html"];
+  const explorePages = ["opportunities.html", "recommended-opportunities.html"];
   if (explorePages.includes(currentPage) && !document.querySelector(".explore-section-nav")) {
     const exploreNav = document.createElement("nav");
     exploreNav.className = "explore-section-nav";
     exploreNav.setAttribute("aria-label", "Explore sections");
     exploreNav.innerHTML = `
       <a class="${currentPage === "opportunities.html" ? "active" : ""}" href="${pageHref("opportunities.html")}">All Opportunities</a>
-      <a class="${currentPage === "recommended-opportunities.html" ? "active" : ""}" href="${pageHref("recommended-opportunities.html")}">Recommended for You</a>
-      <div class="explore-competition-group">
-        <a class="${["competitions.html", "competition_academic.html", "competition_non-academic.html"].includes(currentPage) ? "active" : ""}" href="${pageHref("competitions.html")}">Competitions</a>
-        <div class="explore-subfilters" aria-label="Competition filters">
-          <a class="${currentPage === "competition_academic.html" ? "active" : ""}" href="${pageHref("competition_academic.html")}">Academic</a>
-          <a class="${currentPage === "competition_non-academic.html" ? "active" : ""}" href="${pageHref("competition_non-academic.html")}">Non-Academic</a>
-        </div>
-      </div>`;
+      <a class="${currentPage === "recommended-opportunities.html" ? "active" : ""}" href="${pageHref("recommended-opportunities.html")}">Recommended for You</a>`;
     document.querySelector("main")?.prepend(exploreNav);
   }
   if (!document.querySelector(".ask-teenlaunch-fab")) {
