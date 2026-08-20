@@ -183,7 +183,9 @@
     navLinks.insertBefore(link, authLink);
   };
   const addProfileLink = () => {};
-  const addAdminLink = () => {};
+  const addAdminLink = () => {
+    addLink("admin-dashboard-link", "admin-dashboard.html", "Admin Dashboard", ["admin-dashboard.html"]);
+  };
 
   const token = storedToken;
   if (!token) {
