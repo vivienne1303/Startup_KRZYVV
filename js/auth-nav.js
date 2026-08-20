@@ -8,7 +8,7 @@
   const assetHref = (asset) => (inPagesFolder ? `../${asset}` : asset);
   const isCurrent = (...pages) => pages.includes(currentPage);
   const storedToken = localStorage.getItem("teenlaunch_token");
-  const publicPages = new Set(["index.html", "auth.html", "public-portfolio.html"]);
+  const publicPages = new Set(["index.html", "auth.html", "public-portfolio.html", "opportunities.html", "opportunity-details.html"]);
 
   if (!storedToken && !publicPages.has(currentPage)) {
     const returnTo = `${currentPage}${window.location.search}${window.location.hash}`;

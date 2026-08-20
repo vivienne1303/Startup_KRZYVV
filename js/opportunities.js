@@ -13,6 +13,22 @@ let isAdmin = false;
 let activeFilter = "all";
 let activeDetail = "all";
 const preview = document.querySelector("[data-personalised-preview]");
+const initialParams = new URLSearchParams(window.location.search);
+const initialCategory = String(initialParams.get("category") || "").toLowerCase();
+const categoryAliases = {
+  competitions: "competition",
+  volunteering: "volunteer",
+  "innovation workshops": "workshop",
+  workshops: "workshop",
+  internships: "internship",
+  hackathons: "hackathon",
+  grants: "grant",
+};
+if (categoryAliases[initialCategory]) {
+  activeFilter = categoryAliases[initialCategory];
+  categoryFilters.forEach((button) => button.classList.toggle("active", button.dataset.filter === activeFilter));
+}
+if (initialParams.get("search")) searchInput.value = initialParams.get("search");
 
 const updateHeader = () => {
   header.classList.toggle("scrolled", window.scrollY > 24);
