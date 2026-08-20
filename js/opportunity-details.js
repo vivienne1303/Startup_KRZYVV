@@ -15,6 +15,14 @@
       const response = await fetch(`${API}/opportunities/${encodeURIComponent(id)}`);
       if (!response.ok) throw new Error("Opportunity not found.");
       const opportunity = (await response.json()).opportunity;
+      const officialUrl = opportunity.application_url || opportunity.source_url;
+      if (officialUrl) {
+        const destination = new URL(officialUrl, location.href);
+        if (["http:", "https:"].includes(destination.protocol)) {
+          location.replace(destination.href);
+          return;
+        }
+      }
       const skills = Array.isArray(opportunity.skills) ? opportunity.skills : [];
       const education = Array.isArray(opportunity.education_levels) ? opportunity.education_levels : [];
       setText("[data-detail-category]", opportunity.category);
@@ -37,7 +45,6 @@
       const apply = document.querySelector("[data-detail-apply]");
       apply.hidden = true;
       const external = document.querySelector("[data-detail-external]");
-      const officialUrl = opportunity.application_url || opportunity.source_url;
       if (officialUrl) { external.href = officialUrl; external.textContent = "View official details"; external.hidden = false; }
       const save = document.querySelector("[data-detail-save]");
       if (token) {
