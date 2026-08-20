@@ -1860,7 +1860,7 @@ a {
   position: relative;
   z-index: 5;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: .85rem;
   width: min(1160px, calc(100% - 32px));
   margin: 108px auto -72px;
@@ -1885,12 +1885,16 @@ a {
   text-align: center;
 }
 .explore-section-nav > a:hover,
-.explore-competition-group > a:hover,
-.explore-section-nav > a.active,
-.explore-competition-group > a.active {
+.explore-competition-group > a:hover {
   border-color: #2478e8;
   color: #0b3470;
   background: #dceeff;
+}
+.explore-section-nav > a.active,
+.explore-competition-group > a.active {
+  border-color: #2478e8;
+  color: #fff;
+  background: #2478e8;
 }
 .explore-competition-group { display: grid; gap: .45rem; }
 .explore-subfilters { display: grid; grid-template-columns: 1fr 1fr; gap: .4rem; }
