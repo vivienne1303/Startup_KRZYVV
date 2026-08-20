@@ -10,6 +10,9 @@ html:not([data-theme="dark"]) .badges span{color:#06154c}
 html[data-theme="dark"] .badges span{color:#fff}
 .quiz-option,.badges span{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:1rem;font-weight:400;line-height:1.5}
 
+.practice-stopwatch{display:grid;min-height:150px;margin-top:20px;place-items:center;border:2px solid #2478e8;border-radius:20px;background:linear-gradient(145deg,#eef7ff,#dcecff);color:#0b3470;font-variant-numeric:tabular-nums;font-size:clamp(3rem,7vw,5.5rem);font-weight:900;letter-spacing:.04em}.recorder-status{min-height:1.5em;margin:14px 0;color:#355988}.recorder-actions{margin-bottom:20px}.practice-totals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.practice-totals div{display:grid;gap:5px;padding:14px;border-radius:14px;background:#dcecff;color:#234878}.practice-totals span{font-size:.9rem}.practice-totals strong{color:#0b3470;font-size:1.35rem}@media(max-width:520px){.practice-totals{grid-template-columns:1fr}.recorder-actions .btn{width:100%}}
+.progress-grid{grid-template-columns:1fr}.progress-grid .progress{width:100%}
+
 /* Keep this page's footer compact after the shared theme footer rules load. */
 .footer.debate-footer {
   display: flex;

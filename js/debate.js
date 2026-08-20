@@ -11,8 +11,13 @@ const resetTimer = document.querySelector("#resetTimer");
 const modeLabel = document.querySelector("#modeLabel");
 const motionText = document.querySelector("#motionText");
 const newMotion = document.querySelector("#newMotion");
-const quizOptions = document.querySelectorAll(".quiz-option");
-const quizResult = document.querySelector("#quizResult");
+const practiceStopwatch = document.querySelector("#practiceStopwatch");
+const recorderStatus = document.querySelector("#recorderStatus");
+const startRecording = document.querySelector("#startRecording");
+const saveRecording = document.querySelector("#saveRecording");
+const resetRecording = document.querySelector("#resetRecording");
+const todayPractice = document.querySelector("#todayPractice");
+const recordedSessions = document.querySelector("#recordedSessions");
 const t = (key) => window.TeenLaunchI18n?.translate(key) || key;
 
 const motions = [
@@ -26,6 +31,28 @@ const motions = [
 
 let remainingSeconds = Number(minutesInput.value) * 60;
 let timerId = null;
+let recordedSeconds = 0;
+let recorderId = null;
+const practiceStorageKey = "teenlaunch_debate_practice_sessions";
+const todayKey = () => new Date().toLocaleDateString("en-CA");
+const readPracticeSessions = () => {
+  try { return JSON.parse(localStorage.getItem(practiceStorageKey) || "[]").filter((item) => item && Number(item.seconds) > 0); }
+  catch (_) { return []; }
+};
+const formatRecordedTime = (seconds) => {
+  const hours = Math.floor(seconds / 3600).toString().padStart(2, "0");
+  const minutes = Math.floor((seconds % 3600) / 60).toString().padStart(2, "0");
+  const remainder = Math.floor(seconds % 60).toString().padStart(2, "0");
+  return `${hours}:${minutes}:${remainder}`;
+};
+const renderPracticeRecorder = () => {
+  practiceStopwatch.textContent = formatRecordedTime(recordedSeconds);
+  const sessions = readPracticeSessions();
+  const todaySessions = sessions.filter((item) => item.date === todayKey());
+  const todaySeconds = todaySessions.reduce((total, item) => total + Number(item.seconds), 0);
+  todayPractice.textContent = todaySeconds < 60 ? `${todaySeconds} sec` : `${Math.round(todaySeconds / 60)} min`;
+  recordedSessions.textContent = String(sessions.length);
+};
 
 const updateHeader = () => {
   header.classList.toggle("scrolled", window.scrollY > 24);
@@ -89,6 +116,35 @@ resetTimer.addEventListener("click", () => {
   modeLabel.textContent = t("Practice mode ready.");
 });
 
+startRecording.addEventListener("click", () => {
+  if (recorderId) return;
+  recorderStatus.textContent = t(recordedSeconds ? "Recording resumed." : "Recording practice time.");
+  startRecording.disabled = true;
+  recorderId = window.setInterval(() => { recordedSeconds += 1; renderPracticeRecorder(); }, 1000);
+});
+
+saveRecording.addEventListener("click", () => {
+  if (recorderId) window.clearInterval(recorderId);
+  recorderId = null;
+  startRecording.disabled = false;
+  if (!recordedSeconds) { recorderStatus.textContent = t("Start the recorder before saving."); return; }
+  const sessions = readPracticeSessions();
+  sessions.push({ date: todayKey(), seconds: recordedSeconds, savedAt: new Date().toISOString() });
+  localStorage.setItem(practiceStorageKey, JSON.stringify(sessions));
+  recorderStatus.textContent = t("Practice session saved.");
+  recordedSeconds = 0;
+  renderPracticeRecorder();
+});
+
+resetRecording.addEventListener("click", () => {
+  if (recorderId) window.clearInterval(recorderId);
+  recorderId = null;
+  recordedSeconds = 0;
+  startRecording.disabled = false;
+  recorderStatus.textContent = t("Ready to record.");
+  renderPracticeRecorder();
+});
+
 minutesInput.addEventListener("change", resetTimeFromInput);
 roundSelect.addEventListener("change", () => {
   const round = roundSelect.selectedOptions[0]?.dataset.i18n || roundSelect.value;
@@ -104,14 +160,6 @@ newMotion.addEventListener("click", () => {
   motionText.textContent = t(motionText.dataset.i18n);
 });
 
-quizOptions.forEach((option, index) => {
-  option.addEventListener("click", () => {
-    quizOptions.forEach((item) => item.classList.remove("correct", "wrong"));
-    option.classList.add(index === 0 ? "correct" : "wrong");
-    quizResult.textContent = index === 0 ? t("Correct. Strong arguments need structure and impact.") : t("Try again. Judges need reasoning, proof, and impact.");
-  });
-});
-
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -125,3 +173,4 @@ revealElements.forEach((element) => revealObserver.observe(element));
 window.addEventListener("scroll", updateHeader);
 updateHeader();
 renderTimer();
+renderPracticeRecorder();

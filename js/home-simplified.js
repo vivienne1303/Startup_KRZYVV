@@ -36,7 +36,7 @@
     </section>
     <section class="home-focus-section home-focus-hero joyful-hero">
       <div class="hero-intro">
-        <p class="eyebrow">${firstName ? `Welcome back, ${escapeHtml(firstName)}` : "Your next step starts here"}</p>
+        <p class="eyebrow">${firstName ? `<span data-i18n="Welcome back">Welcome back</span>, ${escapeHtml(firstName)}` : '<span data-i18n="Your next step starts here">Your next step starts here</span>'}</p>
         <h1>What could your future look like?</h1>
         <p class="hero-lead">You do not need to have it all figured out. Discover what excites you, find a real opportunity, and grow one step at a time.</p>
         <div class="focus-actions"><a class="btn primary" href="${startHref}">${startLabel} <span aria-hidden="true">→</span></a><a class="btn secondary" href="pages/opportunities.html">Browse all opportunities</a></div>
@@ -84,7 +84,7 @@
     root.innerHTML = items.length ? items.slice(0, 3).map((item) => {
       const opportunity = item.opportunity || item;
       const percentage = Number(item.match_percentage);
-      const match = showMatch && Number.isFinite(percentage) ? `<span class="match">${Math.round(percentage)}% match</span>` : "";
+      const match = showMatch && Number.isFinite(percentage) ? `<span class="match">${Math.round(percentage)}% <span data-i18n="match">match</span></span>` : "";
       const date = opportunity.application_deadline || opportunity.deadline || "Rolling deadline";
       const organiser = opportunity.organisation || opportunity.organizer || "TeenLaunch partner";
       const reason = item.explanation || `A ${opportunity.category || "growth"} opportunity worth exploring.`;

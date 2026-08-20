@@ -10,6 +10,15 @@
   const storedToken = localStorage.getItem("teenlaunch_token");
   const publicPages = new Set(["index.html", "auth.html", "public-portfolio.html", "opportunities.html", "opportunity-details.html"]);
 
+  // Keep the language control available even if a page forgets to include the
+  // shared translation script explicitly.
+  window.setTimeout(() => {
+    if (window.TeenLaunchI18n || document.querySelector('script[src*="js/i18n.js"]')) return;
+    const script = document.createElement("script");
+    script.src = assetHref("js/i18n.js?v=20260820-global");
+    document.body.appendChild(script);
+  }, 0);
+
   if (!storedToken && !publicPages.has(currentPage)) {
     const returnTo = `${currentPage}${window.location.search}${window.location.hash}`;
     window.location.replace(`${pageHref("auth.html")}?mode=login&returnTo=${encodeURIComponent(returnTo)}`);
@@ -67,12 +76,12 @@
       <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>`;
 
     navLinks.innerHTML = `
-      <a class="${isCurrent("index.html", "") ? "active" : ""}" href="${homeHref}">Home</a>
-      <a class="${isCurrent("opportunities.html") ? "active" : ""}" href="${pageHref("opportunities.html")}">Explore</a>
-      <a class="${isCurrent("my-journey.html", "career_dna_test.html", "career_dna_result.html", "recommended-opportunities.html", "life-planner.html") ? "active" : ""}" href="${pageHref("my-journey.html")}">My Journey</a>
-      <a class="${isCurrent("profile.html", "portfolio-builder.html", "my-portfolio.html", "public-portfolio.html") ? "active" : ""}" href="${pageHref("profile.html?tab=applied")}">Profile</a>
-      <a class="${isCurrent("about.html", "help.html", "partner-submission.html") ? "active" : ""}" href="${pageHref("about.html")}">About</a>
-      <a class="auth-link" href="${pageHref("auth.html")}">Login</a>`;
+      <a class="${isCurrent("index.html", "") ? "active" : ""}" href="${homeHref}" data-i18n="Home">Home</a>
+      <a class="${isCurrent("opportunities.html") ? "active" : ""}" href="${pageHref("opportunities.html")}" data-i18n="Explore">Explore</a>
+      <a class="${isCurrent("my-journey.html", "career_dna_test.html", "career_dna_result.html", "recommended-opportunities.html", "life-planner.html") ? "active" : ""}" href="${pageHref("my-journey.html")}" data-i18n="My Journey">My Journey</a>
+      <a class="${isCurrent("profile.html", "portfolio-builder.html", "my-portfolio.html", "public-portfolio.html") ? "active" : ""}" href="${pageHref("profile.html?tab=applied")}" data-i18n="Profile">Profile</a>
+      <a class="${isCurrent("about.html", "help.html", "partner-submission.html") ? "active" : ""}" href="${pageHref("about.html")}" data-i18n="About">About</a>
+      <a class="auth-link" href="${pageHref("auth.html")}" data-i18n="Login">Login</a>`;
 
     const dropdowns = navLinks.querySelectorAll(".nav-dropdown");
     dropdowns.forEach((dropdown) => {
@@ -141,8 +150,8 @@
     exploreNav.className = "explore-section-nav";
     exploreNav.setAttribute("aria-label", "Explore sections");
     exploreNav.innerHTML = `
-      <a class="${currentPage === "opportunities.html" ? "active" : ""}" href="${pageHref("opportunities.html")}">All Opportunities</a>
-      <a class="${currentPage === "recommended-opportunities.html" ? "active" : ""}" href="${pageHref("recommended-opportunities.html")}">Recommended for You</a>`;
+      <a class="${currentPage === "opportunities.html" ? "active" : ""}" href="${pageHref("opportunities.html")}" data-i18n="All Opportunities">All Opportunities</a>
+      <a class="${currentPage === "recommended-opportunities.html" ? "active" : ""}" href="${pageHref("recommended-opportunities.html")}" data-i18n="Recommended for You">Recommended for You</a>`;
     document.querySelector("main")?.prepend(exploreNav);
   }
   if (!document.querySelector(".ask-teenlaunch-fab")) {
@@ -150,7 +159,7 @@
     ask.className = "ask-teenlaunch-fab";
     ask.href = pageHref("aiassistant.html");
     ask.setAttribute("aria-label", "Ask TeenLaunch AI");
-    ask.innerHTML = "<span aria-hidden=\"true\">✨</span> Ask TeenLaunch";
+    ask.innerHTML = '<span aria-hidden="true">✨</span><span data-i18n="Ask TeenLaunch">Ask TeenLaunch</span>';
     document.body.appendChild(ask);
   }
   const authLink = document.querySelector(".auth-link");
@@ -179,6 +188,7 @@
   const token = storedToken;
   if (!token) {
     authLink.textContent = "Login";
+    authLink.dataset.i18n = "Login";
     return;
   }
 
@@ -188,6 +198,7 @@
       if (response.status === 401 || response.status === 403) {
         clearSession();
         authLink.textContent = "Login";
+        authLink.dataset.i18n = "Login";
         authLink.classList.remove("is-logout");
         authLink.href = pageHref("auth.html");
         return;
@@ -206,6 +217,7 @@
   };
 
   authLink.textContent = "Logout";
+  authLink.dataset.i18n = "Logout";
   authLink.classList.add("is-logout");
   authLink.href = pageHref("auth.html");
   addProfileLink();
@@ -216,6 +228,7 @@
     event.stopPropagation();
     authLink.setAttribute("aria-disabled", "true");
     authLink.textContent = "Logging out...";
+    authLink.dataset.i18n = "Logging out...";
     clearSession();
     try {
       await Promise.race([

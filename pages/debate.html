@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/debate.css?v=20260813-regular-labels">
+  <link rel="stylesheet" href="../css/debate.css?v=20260820-time-recorder">
   <link rel="stylesheet" href="../css/theme.css">
   <link rel="stylesheet" href="../css/settings.css">
 </head>
@@ -86,26 +86,22 @@
     <section class="section resources-grid">
       <article class="resource reveal"><h3 data-i18n="Debate Resources">Debate Resources</h3><p data-i18n="Formats, rules, judging criteria, team roles, and sample speeches in one place.">Formats, rules, judging criteria, team roles, and sample speeches in one place.</p></article>
       <article class="resource reveal"><h3 data-i18n="Debate Topics">Debate Topics</h3><p data-i18n="School-friendly motions about technology, education, climate, media, and leadership.">School-friendly motions about technology, education, climate, media, and leadership.</p></article>
-      <article class="resource reveal"><h3 data-i18n="Mini Quizzes">Mini Quizzes</h3><p data-i18n="Check your understanding of argument structure, rebuttals, weighing, and delivery.">Check your understanding of argument structure, rebuttals, weighing, and delivery.</p></article>
-      <article class="resource reveal"><h3 data-i18n="Skill Badges">Skill Badges</h3><p data-i18n="Earn badges for first speech, rebuttal practice, motion mastery, and mock debate rounds.">Earn badges for first speech, rebuttal practice, motion mastery, and mock debate rounds.</p></article>
     </section>
 
     <section class="section progress-grid">
-      <div class="quiz reveal">
-        <p class="eyebrow" data-i18n="Mini quiz">Mini quiz</p>
-        <h2 data-i18n="What should a strong argument include?">What should a strong argument include?</h2>
-        <button class="quiz-option" data-i18n="Claim, reasoning, evidence, impact">Claim, reasoning, evidence, impact</button>
-        <button class="quiz-option" data-i18n="Only a loud voice">Only a loud voice</button>
-        <button class="quiz-option" data-i18n="A long quote with no explanation">A long quote with no explanation</button>
-        <p id="quizResult"></p>
-      </div>
       <div class="progress reveal">
-        <p class="eyebrow" data-i18n="Progress tracking">Progress tracking</p>
-        <h2><span data-i18n="Practice streak:">Practice streak:</span> <span id="streak">4</span> <span data-i18n="days">days</span></h2>
-        <div class="badges">
-          <span data-i18n="First Speech">First Speech</span>
-          <span data-i18n="Rebuttal Rookie">Rebuttal Rookie</span>
-          <span data-i18n="3 Exercises Done">3 Exercises Done</span>
+        <p class="eyebrow" data-i18n="Practice time recorder">Practice time recorder</p>
+        <h2 data-i18n="Record your speaking practice">Record your speaking practice</h2>
+        <div class="practice-stopwatch" id="practiceStopwatch" role="timer" aria-live="off">00:00:00</div>
+        <p class="recorder-status" id="recorderStatus" data-i18n="Ready to record.">Ready to record.</p>
+        <div class="timer-actions recorder-actions">
+          <button class="btn primary" id="startRecording" type="button" data-i18n="Start recording">Start recording</button>
+          <button class="btn secondary" id="saveRecording" type="button" data-i18n="Stop and save">Stop and save</button>
+          <button class="btn secondary" id="resetRecording" type="button" data-i18n="Reset">Reset</button>
+        </div>
+        <div class="practice-totals">
+          <div><span data-i18n="Today's practice">Today's practice</span><strong id="todayPractice">0 min</strong></div>
+          <div><span data-i18n="Sessions recorded">Sessions recorded</span><strong id="recordedSessions">0</strong></div>
         </div>
       </div>
     </section>
@@ -120,6 +116,6 @@
   <script src="../js/auth-nav.js"></script>
 
   <script src="../js/i18n.js?v=20260805-debate"></script>
-  <script src="../js/debate.js?v=20260805-debate"></script>
+  <script src="../js/debate.js?v=20260820-time-recorder"></script>
 </body>
 </html>
