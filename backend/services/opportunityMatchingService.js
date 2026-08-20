@@ -125,7 +125,7 @@ const getMatchedOpportunities = async (client, userId) => {
     client.from("career_dna_results").select("id, score, interests, recommended_paths").eq("user_id", userId).order("created_at", { ascending: false }).limit(1).maybeSingle(),
     client.from("user_profiles").select("age, education_level, country").eq("id", userId).single(),
     client.from("opportunities")
-      .select("id, title, description, category, categories, skills, education_levels, organizer, location, mode, age_min, age_max, deadline, start_date, end_date, application_url, image_url, status, is_published, created_at")
+      .select("id, title, description, category, categories, skills, education_levels, organisation, organizer, source_name, location, format, mode, minimum_age, maximum_age, age_min, age_max, application_deadline, deadline, start_date, end_date, source_url, application_url, image_url, status, is_published, created_at")
       .eq("is_published", true)
       .eq("status", "published")
       .or(`application_deadline.is.null,application_deadline.gte.${today}`)

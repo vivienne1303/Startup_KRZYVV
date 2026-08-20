@@ -12,15 +12,27 @@
   const parseError = async (response) => { try { const data = await response.json(); return data?.error?.message || data?.message || "Please try again."; } catch { return "Please try again."; } };
 
   const card = ({ opportunity, match_percentage: percentage, explanation }) => {
-    const ages = opportunity.age_min || opportunity.age_max ? `Ages ${opportunity.age_min ?? "any"}–${opportunity.age_max ?? "any"}` : "Open age eligibility";
+    const minimumAge = opportunity.minimum_age ?? opportunity.age_min;
+    const maximumAge = opportunity.maximum_age ?? opportunity.age_max;
+    const deadline = opportunity.application_deadline || opportunity.deadline;
+    const hasAge = minimumAge != null || maximumAge != null;
+    const ages = hasAge ? `Ages ${minimumAge ?? "any"} to ${maximumAge ?? "any"}` : "Open age eligibility";
+    const organisation = opportunity.organisation || opportunity.organizer || opportunity.source_name;
+    const formatAndLocation = [opportunity.format || opportunity.mode, opportunity.location].filter(Boolean).join(" · ");
+    const metadata = [organisation, ages, formatAndLocation, `Deadline: ${deadline ? new Date(`${deadline}T00:00:00`).toLocaleDateString() : "Rolling"}`]
+      .filter(Boolean).map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+    const officialUrl = opportunity.application_url || opportunity.source_url;
+    const primaryAction = officialUrl
+      ? `<a class="btn primary" href="${escapeHtml(officialUrl)}" target="_blank" rel="noopener noreferrer">Visit official site</a>`
+      : `<a class="btn secondary" href="opportunity-details.html?id=${encodeURIComponent(opportunity.id)}">View details</a><a class="btn primary" href="apply.html?id=${encodeURIComponent(opportunity.id)}">Apply</a>`;
     return `<article class="opportunity-card recommendation-card">
       <div class="match-badge">${percentage}% match</div>
       <span class="tag">${escapeHtml(opportunity.category)}</span>
       <h2>${escapeHtml(opportunity.title)}</h2>
       <p class="match-explanation">${escapeHtml(explanation)}</p>
-      <p>${escapeHtml(opportunity.description)}</p>
-      <ul><li>${escapeHtml(opportunity.organizer || "Organisation not specified")}</li><li>${escapeHtml(ages)}</li><li>${escapeHtml([opportunity.mode, opportunity.location].filter(Boolean).join(" · "))}</li><li>Deadline: ${opportunity.deadline ? new Date(`${opportunity.deadline}T00:00:00`).toLocaleDateString() : "Rolling"}</li></ul>
-      <div class="recommendation-actions">${opportunity.application_url || opportunity.source_url ? `<a class="btn primary" href="${escapeHtml(opportunity.application_url || opportunity.source_url)}" target="_blank" rel="noopener noreferrer">Visit official site</a>` : `<a class="btn secondary" href="opportunity-details.html?id=${encodeURIComponent(opportunity.id)}">View details</a><a class="btn primary" href="apply.html?id=${encodeURIComponent(opportunity.id)}">Apply</a>`}<button class="save-button" type="button" data-save-id="${escapeHtml(opportunity.id)}" aria-label="Save ${escapeHtml(opportunity.title)}"><img src="../assets/icons/save_icon.png" alt=""></button></div>
+      <p class="recommendation-description">${escapeHtml(opportunity.description)}</p>
+      <ul class="recommendation-meta">${metadata}</ul>
+      <div class="recommendation-actions">${primaryAction}<button class="save-button" type="button" data-save-id="${escapeHtml(opportunity.id)}" aria-label="Save ${escapeHtml(opportunity.title)}"><img src="../assets/icons/save_icon.png" alt=""></button></div>
     </article>`;
   };
 
@@ -28,24 +40,18 @@
     const savedResponse = await fetch(`${API}/profile/saved`, { headers });
     const savedIds = savedResponse.ok ? new Set(((await savedResponse.json()).saved || []).map((item) => item.opportunity_id)) : new Set();
     document.querySelectorAll("[data-save-id]").forEach((button) => {
-      button.classList.toggle("saved", savedIds.has(button.dataset.saveId));
+      const updateButton = (saved) => { button.classList.toggle("saved", saved); button.setAttribute("aria-pressed", String(saved)); };
+      updateButton(savedIds.has(button.dataset.saveId));
       button.addEventListener("click", async () => {
         const saving = !button.classList.contains("saved");
         button.disabled = true;
         try {
           const response = await fetch(`${API}/profile/saved${saving ? "" : `/${encodeURIComponent(button.dataset.saveId)}`}`, { method: saving ? "POST" : "DELETE", headers: { ...headers, ...(saving ? { "Content-Type": "application/json" } : {}) }, body: saving ? JSON.stringify({ opportunity_id: button.dataset.saveId }) : undefined });
-          if (response.status === 401 || response.status === 403) {
-            window.location.href = `auth.html?mode=login&returnTo=${encodeURIComponent(location.pathname + location.search)}`;
-            return;
-          }
+          if (response.status === 401 || response.status === 403) { window.location.href = `auth.html?mode=login&returnTo=${encodeURIComponent(location.pathname + location.search)}`; return; }
           if (!response.ok && response.status !== 409) throw new Error(await parseError(response));
-          button.classList.toggle("saved", saving);
-          button.setAttribute("aria-pressed", String(saving));
-        } catch (error) {
-          window.alert(`We could not update this saved opportunity. ${error.message}`);
-        } finally {
-          button.disabled = false;
-        }
+          updateButton(saving);
+        } catch (error) { window.alert(`We could not update this saved opportunity. ${error.message}`); }
+        finally { button.disabled = false; }
       });
     });
   };
