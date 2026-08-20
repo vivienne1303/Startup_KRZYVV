@@ -32,7 +32,7 @@ const createRegistration = async (client, payload, userId) => {
     .insert({
       user_id: userId,
       opportunity_id: payload.opportunity_id,
-      status: "pending",
+      status: "registered",
       notes: payload.notes || null,
       registered_at: new Date().toISOString(),
       ...application,

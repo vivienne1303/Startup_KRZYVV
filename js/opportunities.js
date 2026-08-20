@@ -289,20 +289,8 @@ const setupExternalRegistrationPrompt = () => {
         const data = await response.json().catch(() => ({}));
         if (!response.ok) throw new Error(data.error?.message || "Could not record your registration");
         localStorage.removeItem("teenlaunch_pending_external");
-        const registrationId = data.registration.id;
         const form = dialog.querySelector("form");
-        form.innerHTML = `<p class="eyebrow">Next step</p><h2>Add to your portfolio?</h2><p>We can remind you to upload proof of participation and a reflection later. It will not be marked verified until proof is reviewed.</p><div><button class="btn primary" type="button" data-add-portfolio>Yes, add reminder</button><button class="btn secondary" type="button" data-skip-portfolio>No thanks</button></div><p class="external-registration-message" aria-live="polite"></p>`;
-        form.querySelector("[data-skip-portfolio]").addEventListener("click", () => { dialog.close(); location.href = "profile.html?tab=applied"; });
-        form.querySelector("[data-add-portfolio]").addEventListener("click", async (portfolioEvent) => {
-          const portfolioButton = portfolioEvent.currentTarget, portfolioMessage = form.querySelector(".external-registration-message");
-          portfolioButton.disabled = true; portfolioMessage.textContent = "Adding portfolio reminder…";
-          try {
-            const reminderResponse = await fetch(`${resolveApiBase()}/registrations/${encodeURIComponent(registrationId)}/portfolio-reminder`, { method: "POST", headers: { Authorization: `Bearer ${token}` } });
-            const reminderData = await reminderResponse.json().catch(() => ({}));
-            if (!reminderResponse.ok) throw new Error(reminderData.error?.message || "Could not add the portfolio reminder");
-            form.innerHTML = `<p class="eyebrow">Registration recorded</p><h2>You’re all set!</h2><p>We’ll keep this opportunity in your profile and remind you to add proof of participation and a reflection.</p><div><a class="btn primary" href="portfolio-builder.html">Go to Portfolio →</a><a class="btn secondary" href="profile.html?tab=applied">View in Profile</a></div>`;
-          } catch (error) { portfolioMessage.textContent = error.message; portfolioButton.disabled = false; }
-        });
+        form.innerHTML = `<p class="eyebrow">Application recorded</p><h2>You’re all set!</h2><p>TeenLaunch has recorded that you applied for this opportunity. No verification is required.</p><div><a class="btn primary" href="profile.html?tab=applied">View My Applications</a><button class="btn secondary" value="close">Close</button></div>`;
       } catch (error) { message.textContent = error.message; button.disabled = false; }
     });
     dialog.showModal();

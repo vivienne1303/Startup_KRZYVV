@@ -70,7 +70,7 @@ const listInbox = asyncHandler(async (req, res) => {
     const deadline = item.opportunities?.deadline && new Date(`${item.opportunities.deadline}T23:59:59`);
     return deadline && deadline >= now && deadline - now <= 14 * 86400000;
   }).map((item) => ({ type: "deadline", id: item.id, title: `${item.opportunities.title} deadline`, body: `Deadline: ${item.opportunities.deadline}`, created_at: item.created_at }));
-  const applicationNotices = (applications || []).map((item) => ({ type: "application", id: item.id, title: `Application: ${item.opportunities?.title || "Opportunity"}`, body: `Your application status is ${item.status}.`, created_at: item.created_at }));
+  const applicationNotices = (applications || []).map((item) => ({ type: "application", id: item.id, title: `Application: ${item.opportunities?.title || "Opportunity"}`, body: "Your application was recorded through TeenLaunch.", created_at: item.created_at }));
   const followerNotices = (followers || []).map((item) => ({ type: "follower", id: item.follower_id, title: `${people.get(item.follower_id)?.username || people.get(item.follower_id)?.full_name || "Someone"} followed you`, body: "View your followers to follow them back.", created_at: item.created_at }));
   res.json({ threads: [...threads.values()], notifications: [...reminders, ...followerNotices, ...applicationNotices].sort((a, b) => new Date(b.created_at) - new Date(a.created_at)) });
 });
