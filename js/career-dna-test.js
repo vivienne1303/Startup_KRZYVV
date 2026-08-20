@@ -15,12 +15,12 @@
     { type: "Leader", text: "I enjoy presenting my ideas and encouraging others to support them." },
   ];
   const options = ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"];
-  const profileNames = {
-    "Creator|Leader": "Creative Initiator", "Connector|Creator": "Community Storyteller",
-    "Creator|Explorer": "Imaginative Researcher", "Builder|Creator": "Digital Maker",
-    "Builder|Explorer": "Technical Investigator", "Builder|Leader": "Innovation Driver",
-    "Builder|Connector": "Practical Supporter", "Explorer|Leader": "Strategic Visionary",
-    "Connector|Explorer": "Insightful Guide", "Connector|Leader": "Community Champion",
+  const stickerProfiles = {
+    "Creator|Leader": "Future Founder", "Connector|Creator": "Creative Thinker",
+    "Creator|Explorer": "Creative Thinker", "Builder|Creator": "Builder",
+    "Builder|Explorer": "Problem Solver", "Builder|Leader": "Future Founder",
+    "Builder|Connector": "Builder", "Explorer|Leader": "Future Founder",
+    "Connector|Explorer": "Explorer", "Connector|Leader": "Pitch Ready",
   };
   const recommendations = {
     Creator: { jobs: ["Design and media", "Content and communications", "Creative technology"], opportunities: ["Creative competitions", "Media projects", "Design workshops"] },
@@ -85,7 +85,7 @@
     const top = ranking[0];
     const secondary = ranking[1];
     const key = [top, secondary].sort().join("|");
-    return { raw, percentages, ranking, top, secondary, profileName: profileNames[key] };
+    return { raw, percentages, ranking, top, secondary, profileName: stickerProfiles[key] };
   };
 
   const submit = async () => {
@@ -104,7 +104,7 @@
       interests: [result.top, result.secondary],
       recommended_paths: { job_families: jobs, opportunity_types: opportunities },
       answers: Object.fromEntries(answers.map((answer, index) => [`question_${index + 1}`, answer])),
-      score: { raw_scores: result.raw, percentages: result.percentages, top_category: result.top, secondary_category: result.secondary, profile_name: result.profileName, recommended_job_families: jobs, recommended_opportunity_types: opportunities, test_version: "1.0", completion_date: completionDate },
+      score: { raw_scores: result.raw, percentages: result.percentages, top_category: result.top, secondary_category: result.secondary, profile_name: result.profileName, sticker_character: result.profileName, recommended_job_families: jobs, recommended_opportunity_types: opportunities, test_version: "2.0", completion_date: completionDate },
     };
     try {
       const response = await authFetch("/career-dna", { method: "POST", body: JSON.stringify(payload) });

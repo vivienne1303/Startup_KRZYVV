@@ -123,6 +123,19 @@
     }));
   };
 
+  const careerDnaStickerName = (value) => ({
+    "Creative Initiator": "Future Founder",
+    "Community Storyteller": "Creative Thinker",
+    "Imaginative Researcher": "Creative Thinker",
+    "Digital Maker": "Builder",
+    "Technical Investigator": "Problem Solver",
+    "Innovation Driver": "Future Founder",
+    "Practical Supporter": "Builder",
+    "Strategic Visionary": "Future Founder",
+    "Insightful Guide": "Explorer",
+    "Community Champion": "Pitch Ready",
+  }[value] || value);
+
   const renderCareerDna = (results) => {
     document.querySelector("[data-admin-career-dna]").innerHTML = results.length
       ? results
@@ -130,7 +143,7 @@
           .map(
             (result) => `
               <article class="admin-list-item">
-                <strong>${result.result_title || "Career DNA result"}</strong>
+                <strong>${careerDnaStickerName(result.result_title) || "Career DNA result"}</strong>
                 <span>${formatDate(result.created_at)}</span>
               </article>
             `

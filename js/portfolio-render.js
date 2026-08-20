@@ -1,6 +1,13 @@
 (function () {
   const esc = (value) => String(value ?? "").replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[character]));
   const t = (key) => window.TeenLaunchI18n?.translate(key) || key;
+  const stickerName = (value) => ({
+    "Creative Initiator": "Future Founder", "Community Storyteller": "Creative Thinker",
+    "Imaginative Researcher": "Creative Thinker", "Digital Maker": "Builder",
+    "Technical Investigator": "Problem Solver", "Innovation Driver": "Future Founder",
+    "Practical Supporter": "Builder", "Strategic Visionary": "Future Founder",
+    "Insightful Guide": "Explorer", "Community Champion": "Pitch Ready",
+  }[value] || value);
   const locale = () => window.TeenLaunchI18n?.getLanguage() === "zh" ? "zh-CN" : undefined;
   const careerSummary = (value) => {
     const text = String(value || "");
@@ -33,7 +40,7 @@
     const reflectionCards = reflections.length ? reflections.map((item) => `<article class="preview-card"><h3>${esc(item.registrations?.opportunities?.title || t("Reflection"))}</h3><blockquote>${esc(item.reflection)}</blockquote></article>`).join("") : `<p>${t("No published reflections.")}</p>`;
 
     root.innerHTML = `<section class="preview-hero"><img class="preview-avatar" src="${esc(picture)}" alt=""><div><p class="eyebrow">${t("Verified TeenLaunch Portfolio")}</p><h1>${esc(profile.full_name || profile.username || t("TeenLaunch member"))}</h1><p>${esc(portfolio.introduction || portfolio.personal_description || profile.bio || "")}</p></div></section>
-      ${data.career_dna ? `<section class="preview-section"><h2>${t("Career DNA")}</h2><div class="preview-card"><h3>${esc(t(data.career_dna.result_title))}</h3><p>${esc(careerSummary(data.career_dna.summary || ""))}</p>${chips(data.career_dna.strengths)}</div></section>` : ""}
+      ${data.career_dna ? `<section class="preview-section"><h2>${t("Career DNA")}</h2><div class="preview-card"><h3>${esc(t(stickerName(data.career_dna.result_title)))}</h3><p>${esc(careerSummary(data.career_dna.summary || ""))}</p>${chips(data.career_dna.strengths)}</div></section>` : ""}
       <section class="preview-section"><h2>${t("Verified Achievements")}</h2><div class="preview-grid">${achievementCards}</div></section>
       <section class="preview-section"><h2>${t("Projects")}</h2><div class="preview-grid">${projectCards}</div></section>
       <section class="preview-section"><h2>${t("Skills")}</h2>${skills.length ? chips(skills) : `<p>${t("No published skills.")}</p>`}</section>

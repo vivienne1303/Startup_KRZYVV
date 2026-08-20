@@ -9,6 +9,18 @@
   const clearSession = () => ["teenlaunch_token", "teenlaunch_user", "teenlaunch_profile"].forEach((key) => localStorage.removeItem(key));
   const toList = (value) => Array.isArray(value) ? value : [];
   const t = (key) => window.TeenLaunchI18n?.translate(key) || key;
+  const stickerName = (value) => ({
+    "Creative Initiator": "Future Founder",
+    "Community Storyteller": "Creative Thinker",
+    "Imaginative Researcher": "Creative Thinker",
+    "Digital Maker": "Builder",
+    "Technical Investigator": "Problem Solver",
+    "Innovation Driver": "Future Founder",
+    "Practical Supporter": "Builder",
+    "Strategic Visionary": "Future Founder",
+    "Insightful Guide": "Explorer",
+    "Community Champion": "Pitch Ready",
+  }[value] || value);
   const translatedSummary = (value) => {
     const text = String(value || "");
     const match = text.match(/^Your strongest Career DNA types are (.+) and (.+)\.$/);
@@ -22,7 +34,7 @@
     const score = result.score || {};
     const percentages = score.percentages || {};
     const paths = result.recommended_paths || {};
-    document.querySelector("[data-profile-name]").textContent = t(score.profile_name || result.result_title);
+    document.querySelector("[data-profile-name]").textContent = t(stickerName(score.sticker_character || score.profile_name || result.result_title));
     document.querySelector("[data-profile-summary]").textContent = translatedSummary(result.summary || "Your Career DNA highlights the ways you naturally create, solve and lead.");
     document.querySelector("[data-top-type]").textContent = t(score.top_category || result.interests?.[0] || "—");
     document.querySelector("[data-secondary-type]").textContent = t(score.secondary_category || result.interests?.[1] || "—");
