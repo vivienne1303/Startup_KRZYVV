@@ -7,8 +7,8 @@
   const firstName = String(storedProfile?.full_name || "").trim().split(/\s+/)[0];
   const startHref = token ? "pages/my-journey.html" : "pages/auth.html?mode=register&returnTo=my-journey.html";
   const startLabel = token ? "Continue my journey" : "Personalise my journey";
-  // Replace this empty string with the Luma event URL when registration opens.
-  const LAUNCH_EVENT_REGISTRATION_URL = "";
+  // Luma registration destination for the launch event.
+  const LAUNCH_EVENT_REGISTRATION_URL = "https://luma.com/pwwnwc1u";
   const launchRegistrationHref = LAUNCH_EVENT_REGISTRATION_URL || "#launch-tickets";
 
   main.className = "simplified-home joyful-home";
@@ -18,12 +18,13 @@
         <div class="launch-event-copy">
           <p class="launch-badge"><span aria-hidden="true">✦</span> You’re invited</p>
           <h1 id="launch-event-title">TeenLaunch is Launching! <span aria-hidden="true">🚀</span></h1>
-          <p class="launch-event-lead">Join us as we officially launch TeenLaunch — discover opportunities, connect with others and kickstart your journey.</p>
+          <p class="launch-event-lead">Join us as we officially launch TeenLaunch. Discover opportunities, connect with others and kickstart your journey.</p>
           <a class="btn launch-register-button" href="${launchRegistrationHref}" data-luma-registration-url="${LAUNCH_EVENT_REGISTRATION_URL}">Register for Launch Event <span aria-hidden="true">→</span></a>
           ${LAUNCH_EVENT_REGISTRATION_URL ? "" : '<small class="launch-link-note">Luma registration link coming soon</small>'}
           <div class="launch-ticket-grid" id="launch-tickets" aria-label="Launch event ticket categories">
             <article class="launch-ticket student-ticket"><span>STUDENTS</span><strong>FREE</strong><p>For the young people TeenLaunch is built to support.</p></article>
-            <article class="launch-ticket vip-ticket"><span>VIP · INVESTORS / ENTREPRENEURS</span><strong>$20</strong><p>For adult entrepreneurs and investors joining the launch.</p></article>
+            <article class="launch-ticket media-ticket"><span>MEDIA · KOL</span><strong>FREE</strong><p>For media guests and key opinion leaders covering the launch.</p></article>
+            <article class="launch-ticket vip-ticket"><span>VIP · INVESTOR / ENTREPRENEUR</span><strong>$20</strong><p>For adult investors and entrepreneurs joining the launch.</p></article>
           </div>
           <p class="launch-luma-note"><span aria-hidden="true">✓</span> Registration will be handled securely through Luma.</p>
         </div>
@@ -73,7 +74,7 @@
     </div></section>
     <section class="home-focus-section support-story">
       <div><p class="eyebrow">You are not doing this alone</p><h2>Stuck? Ask for a little help.</h2><p>Use Career Copilot to compare options, prepare an application, or work out one realistic thing to do next.</p><div class="focus-actions"><a class="btn primary" href="pages/career-copilot.html">Ask Career Copilot</a><a class="btn secondary" href="pages/resources.html">Explore resources</a></div></div>
-      <div class="support-chat" aria-label="Example Career Copilot conversation"><p>I’m interested in design, but I don’t know where to start.</p><p>That’s okay. Let’s find one beginner-friendly workshop you can try this month.</p></div>
+      <div class="support-chat" aria-label="Example Career Copilot conversation"><p>I’m interested in design, but I don’t know where to start.</p><p>That’s okay. Let’s find one workshop for beginners that you can try this month.</p></div>
     </section>
     <section class="home-focus-section focus-final joyful-final"><p class="eyebrow">Your future is yours to explore</p><h2>Ready for one joyful next step?</h2><p>Start with what interests you today. TeenLaunch will help with what comes next.</p><a class="btn primary" href="${startHref}">${startLabel} <span aria-hidden="true">→</span></a></section>`;
 
@@ -87,8 +88,11 @@
       const date = opportunity.application_deadline || opportunity.deadline || "Rolling deadline";
       const organiser = opportunity.organisation || opportunity.organizer || "TeenLaunch partner";
       const reason = item.explanation || `A ${opportunity.category || "growth"} opportunity worth exploring.`;
-      const href = `pages/opportunity-details.html?id=${encodeURIComponent(opportunity.id)}`;
-      return `<a class="opportunity-card" href="${href}">${opportunity.image_url ? `<img src="${escapeHtml(opportunity.image_url)}" alt="">` : `<div class="opportunity-placeholder" aria-hidden="true">${escapeHtml((opportunity.category || "Opportunity").slice(0, 1))}</div>`}<div class="card-topline">${match}<span class="category-pill">${escapeHtml(opportunity.category || "Opportunity")}</span></div><h3>${escapeHtml(opportunity.title)}</h3><strong>${escapeHtml(organiser)}</strong><small>${escapeHtml(date)}${opportunity.mode ? ` · ${escapeHtml(opportunity.mode.replace("_", " "))}` : ""}</small><p>${escapeHtml(reason)}</p><b class="card-action">See if it’s for me <span aria-hidden="true">→</span></b></a>`;
+      const officialUrl = opportunity.application_url || opportunity.source_url;
+      const href = officialUrl || `pages/opportunity-details.html?id=${encodeURIComponent(opportunity.id)}`;
+      const externalAttributes = officialUrl ? ' target="_blank" rel="noopener noreferrer"' : "";
+      const actionLabel = officialUrl ? "Visit official site" : "See if it’s for me";
+      return `<a class="opportunity-card" href="${escapeHtml(href)}"${externalAttributes}><div class="card-topline">${match}<span class="category-pill">${escapeHtml(opportunity.category || "Opportunity")}</span></div><h3>${escapeHtml(opportunity.title)}</h3><strong>${escapeHtml(organiser)}</strong><small>${escapeHtml(date)}${opportunity.mode ? ` · ${escapeHtml(opportunity.mode.replace("_", " "))}` : ""}</small><p>${escapeHtml(reason)}</p><b class="card-action">${actionLabel} <span aria-hidden="true">→</span></b></a>`;
     }).join("") : `<div class="empty-opportunities"><span aria-hidden="true">🌱</span><h3>Fresh opportunities are on the way.</h3><p>Our team is reviewing new options. Explore all opportunities or check back soon.</p><a class="btn secondary" href="pages/opportunities.html">Explore opportunities</a></div>`;
   };
 

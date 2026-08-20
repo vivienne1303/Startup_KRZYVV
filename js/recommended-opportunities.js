@@ -14,14 +14,13 @@
   const card = ({ opportunity, match_percentage: percentage, explanation }) => {
     const ages = opportunity.age_min || opportunity.age_max ? `Ages ${opportunity.age_min ?? "any"}–${opportunity.age_max ?? "any"}` : "Open age eligibility";
     return `<article class="opportunity-card recommendation-card">
-      ${opportunity.image_url ? `<img class="recommendation-image" src="${escapeHtml(opportunity.image_url)}" alt="">` : ""}
       <div class="match-badge">${percentage}% match</div>
       <span class="tag">${escapeHtml(opportunity.category)}</span>
       <h2>${escapeHtml(opportunity.title)}</h2>
       <p class="match-explanation">${escapeHtml(explanation)}</p>
       <p>${escapeHtml(opportunity.description)}</p>
       <ul><li>${escapeHtml(opportunity.organizer || "Organisation not specified")}</li><li>${escapeHtml(ages)}</li><li>${escapeHtml([opportunity.mode, opportunity.location].filter(Boolean).join(" · "))}</li><li>Deadline: ${opportunity.deadline ? new Date(`${opportunity.deadline}T00:00:00`).toLocaleDateString() : "Rolling"}</li></ul>
-      <div class="recommendation-actions"><a class="btn secondary" href="opportunity-details.html?id=${encodeURIComponent(opportunity.id)}">View details</a><a class="btn primary" href="apply.html?id=${encodeURIComponent(opportunity.id)}">Apply</a><button class="save-button" type="button" data-save-id="${escapeHtml(opportunity.id)}" aria-label="Save ${escapeHtml(opportunity.title)}"><img src="../assets/icons/save_icon.png" alt=""></button></div>
+      <div class="recommendation-actions">${opportunity.application_url || opportunity.source_url ? `<a class="btn primary" href="${escapeHtml(opportunity.application_url || opportunity.source_url)}" target="_blank" rel="noopener noreferrer">Visit official site</a>` : `<a class="btn secondary" href="opportunity-details.html?id=${encodeURIComponent(opportunity.id)}">View details</a><a class="btn primary" href="apply.html?id=${encodeURIComponent(opportunity.id)}">Apply</a>`}<button class="save-button" type="button" data-save-id="${escapeHtml(opportunity.id)}" aria-label="Save ${escapeHtml(opportunity.title)}"><img src="../assets/icons/save_icon.png" alt=""></button></div>
     </article>`;
   };
 

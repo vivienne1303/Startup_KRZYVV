@@ -66,8 +66,8 @@ em { color: var(--blue); font-style: normal; }
 .kicker { display: flex; align-items: center; gap: 10px; margin: 0 0 25px; color: var(--blue); font-size: 12px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
 .kicker span { width: 26px; height: 2px; border-radius: 2px; background: currentColor; }
 h1, h2, h3 { font-family: Manrope, sans-serif; }
-.hero h1 { margin: 0; font-size: clamp(3.7rem, 6.3vw, 6.2rem); line-height: .98; letter-spacing: -.065em; }
-.hero h1 em { display: inline-block; padding-right: .06em; background: linear-gradient(100deg, #2e83f7, #7665f5); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero h1 { margin: 0; padding-bottom: .12em; font-size: clamp(3.7rem, 6.3vw, 6.2rem); line-height: 1.04; letter-spacing: -.065em; overflow: visible; }
+.hero h1 em { display: inline-block; padding: 0 .06em .12em 0; margin-bottom: -.12em; background: linear-gradient(100deg, #2e83f7, #7665f5); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero-intro { width: min(510px, 100%); margin: 32px 0; color: var(--muted); font-size: 18px; line-height: 1.7; }
 .hero-actions { display: flex; align-items: center; gap: 32px; }
 .primary-action {
