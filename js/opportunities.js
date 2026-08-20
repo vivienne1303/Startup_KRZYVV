@@ -3,8 +3,8 @@ const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 const revealElements = document.querySelectorAll(".reveal");
 const searchInput = document.querySelector("#searchInput");
-const filters = document.querySelectorAll(".filter");
-const categoryFilters = document.querySelectorAll(".filter:not(.detail-filter)");
+const categoryFilterContainer = document.querySelector(".filters[aria-label='Opportunity categories']");
+let categoryFilters = document.querySelectorAll(".filter:not(.detail-filter)");
 const detailFilters = document.querySelectorAll(".detail-filter");
 let cards = document.querySelectorAll(".opportunity-card");
 const emptyState = document.querySelector("#emptyState");
@@ -24,6 +24,12 @@ const categoryAliases = {
   hackathons: "hackathon",
   grants: "grant",
 };
+const categoryKey = (value) => String(value || "Other")
+  .trim()
+  .toLowerCase()
+  .replace(/&/g, " and ")
+  .replace(/[^a-z0-9]+/g, "-")
+  .replace(/^-+|-+$/g, "") || "other";
 if (categoryAliases[initialCategory]) {
   activeFilter = categoryAliases[initialCategory];
   categoryFilters.forEach((button) => button.classList.toggle("active", button.dataset.filter === activeFilter));
@@ -65,14 +71,34 @@ const filterCards = () => {
   emptyState.style.display = visibleCount ? "none" : "block";
 };
 
-categoryFilters.forEach((button) => {
-  button.addEventListener("click", () => {
-    categoryFilters.forEach((item) => item.classList.remove("active"));
-    button.classList.add("active");
-    activeFilter = button.dataset.filter;
-    filterCards();
+const bindCategoryFilters = () => {
+  categoryFilters = document.querySelectorAll(".filter:not(.detail-filter)");
+  categoryFilters.forEach((button) => {
+    button.addEventListener("click", () => {
+      categoryFilters.forEach((item) => item.classList.remove("active"));
+      button.classList.add("active");
+      activeFilter = button.dataset.filter;
+      filterCards();
+    });
   });
-});
+};
+
+const renderCategoryFilters = (opportunities) => {
+  if (!categoryFilterContainer) return;
+  const categories = [...new Set(opportunities.map((item) => String(item.category || "Other").trim()).filter(Boolean))]
+    .sort((first, second) => first.localeCompare(second));
+  const availableKeys = new Set(categories.map(categoryKey));
+  const exactRequestedKey = categoryKey(initialCategory);
+  const requestedKey = availableKeys.has(exactRequestedKey) ? exactRequestedKey : (categoryAliases[initialCategory] || exactRequestedKey);
+  activeFilter = initialCategory && availableKeys.has(requestedKey) ? requestedKey : "all";
+  categoryFilterContainer.innerHTML = [
+    `<button class="filter${activeFilter === "all" ? " active" : ""}" data-filter="all">All</button>`,
+    ...categories.map((category) => `<button class="filter${activeFilter === categoryKey(category) ? " active" : ""}" data-filter="${escapeHtml(categoryKey(category))}">${escapeHtml(category)}</button>`),
+  ].join("");
+  bindCategoryFilters();
+};
+
+bindCategoryFilters();
 
 detailFilters.forEach((button) => {
   button.addEventListener("click", () => {
@@ -104,14 +130,7 @@ const translateUi = (text) => window.TeenLaunchI18n?.translate(text) || text;
 const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[character]));
 
 const opportunityMarkup = (opportunity) => {
-  const categoryLabel = String(opportunity.category || "other").toLowerCase();
-  const category = categoryLabel.includes("intern") ? "internship"
-    : categoryLabel.includes("compet") ? "competition"
-      : categoryLabel.includes("workshop") ? "workshop"
-        : categoryLabel.includes("volunteer") || categoryLabel.includes("community service") ? "volunteer"
-          : categoryLabel.includes("hackathon") ? "hackathon"
-            : categoryLabel.includes("grant") || categoryLabel.includes("funding") || categoryLabel.includes("scholarship") ? "grant"
-              : categoryLabel;
+  const category = categoryKey(opportunity.category);
   const mode = opportunity.mode === "in_person" ? "physical" : (opportunity.mode || "");
   const detailTokens = new Set();
   const format = String(opportunity.mode || opportunity.format || "").toLowerCase();
@@ -326,6 +345,7 @@ const loadOpportunities = async () => {
       emptyState.textContent = translateUi(message);
       return;
     }
+    renderCategoryFilters(opportunities);
     grid.innerHTML = opportunities.map(opportunityMarkup).join("");
     cards = document.querySelectorAll("#opportunityGrid .opportunity-card");
     filterCards();
