@@ -7,8 +7,9 @@
   const firstName = String(storedProfile?.full_name || "").trim().split(/\s+/)[0];
   const startHref = token ? "pages/my-journey.html" : "pages/auth.html?mode=register&returnTo=my-journey.html";
   const startLabel = token ? "Continue my journey" : "Personalise my journey";
-  // Luma registration destination for the launch event.
+  // Registration destinations for the launch event.
   const LAUNCH_EVENT_REGISTRATION_URL = "https://luma.com/pwwnwc1u";
+  const EVENTBRITE_REGISTRATION_URL = "https://www.eventbrite.com/e/teenlaunch-in-orchard-tickets-1999334339831?utm_experiment=test_share_listing&aff=ebdsshios&sg=accaa44637516052df7e8b0c251ac2a6d4a0f705e749050e67cc7b698a8bf7588ee6e25c3b6b680b30daac0a1ec6a09a5b5dd8eea78f2af6679fa6b96a220bac6c2d95ab68c3dcceb53b0e26d157";
   const launchRegistrationHref = LAUNCH_EVENT_REGISTRATION_URL || "#launch-tickets";
 
   main.className = "simplified-home joyful-home";
@@ -19,14 +20,17 @@
           <p class="launch-badge"><span aria-hidden="true">✦</span> You’re invited</p>
           <h1 id="launch-event-title">TeenLaunch is Launching! <span aria-hidden="true">🚀</span></h1>
           <p class="launch-event-lead">Join us as we officially launch TeenLaunch. Discover opportunities, connect with others and kickstart your journey.</p>
-          <a class="btn launch-register-button" href="${launchRegistrationHref}" data-luma-registration-url="${LAUNCH_EVENT_REGISTRATION_URL}">Register for Launch Event <span aria-hidden="true">→</span></a>
+          <div class="launch-registration-links">
+            <a class="btn launch-register-button" href="${launchRegistrationHref}" data-luma-registration-url="${LAUNCH_EVENT_REGISTRATION_URL}">Register on Luma <span aria-hidden="true">→</span></a>
+            <a class="btn launch-register-button launch-eventbrite-button" href="${EVENTBRITE_REGISTRATION_URL}">Eventbrite <span aria-hidden="true">→</span></a>
+          </div>
           ${LAUNCH_EVENT_REGISTRATION_URL ? "" : '<small class="launch-link-note">Luma registration link coming soon</small>'}
           <div class="launch-ticket-grid" id="launch-tickets" aria-label="Launch event ticket categories">
             <article class="launch-ticket student-ticket"><span>STUDENTS</span><strong>FREE</strong><p>For the young people TeenLaunch is built to support.</p></article>
             <article class="launch-ticket media-ticket"><span>MEDIA · KOL</span><strong>FREE</strong><p>For media guests and key opinion leaders covering the launch.</p></article>
             <article class="launch-ticket vip-ticket"><span>VIP · INVESTOR / ENTREPRENEUR</span><strong>$20</strong><p>For adult investors and entrepreneurs joining the launch.</p></article>
           </div>
-          <p class="launch-luma-note"><span aria-hidden="true">✓</span> Registration will be handled securely through Luma.</p>
+          <p class="launch-luma-note"><span aria-hidden="true">✓</span> Register securely through Luma or Eventbrite.</p>
         </div>
         <div class="launch-goodie-card">
           <div class="launch-goodie-heading"><p class="eyebrow">Exclusive for launch attendees</p><h2>🎁 Get Your TeenLaunch Launch Goodie Bag</h2><p>Register and join us to receive exclusive TeenLaunch goodies made to help you discover, plan and launch your next step.</p></div>
