@@ -3,10 +3,12 @@ const opportunityController = require("../controllers/opportunityController");
 const adminMiddleware = require("../middleware/adminMiddleware");
 const authMiddleware = require("../middleware/authMiddleware");
 
+const { requirePremium } = require("../middleware/premiumMiddleware");
+
 const router = express.Router();
 
 router.get("/", opportunityController.list);
-router.get("/recommended", authMiddleware, opportunityController.recommended);
+router.get("/recommended", authMiddleware, requirePremium, opportunityController.recommended);
 router.get("/:id", opportunityController.getById);
 router.post("/", authMiddleware, adminMiddleware, opportunityController.create);
 router.put("/:id", authMiddleware, adminMiddleware, opportunityController.update);

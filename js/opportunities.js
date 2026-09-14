@@ -187,6 +187,11 @@ const loadRecommendationPreview = async () => {
   const grid = document.querySelector("[data-preview-grid]");
   try {
     const response = await fetch(`${resolveApiBase()}/opportunities/recommended`, { headers: { Authorization: `Bearer ${token}` } });
+    if (response.status === 403 && (await response.clone().json()).code === "PREMIUM_REQUIRED") {
+      grid.innerHTML = "";
+      message.innerHTML = `Personalised recommendations require Premium. <a href="../index.html#pricing">View plans</a>`;
+      return;
+    }
     if (response.status === 401 || response.status === 403) {
       message.innerHTML = `Your session has expired. <a href="auth.html?mode=login&returnTo=${encodeURIComponent("recommended-opportunities.html")}">Log in again to view recommendations.</a>`;
       return;

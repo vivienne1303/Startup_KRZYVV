@@ -8,7 +8,8 @@
   const errorBox = document.querySelector("[data-recommendation-error]");
   const grid = document.querySelector("[data-recommendation-grid]");
   const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[character]));
-  const hideStates = () => [loading, onboarding, empty, errorBox, grid].forEach((element) => { element.hidden = true; });
+  const premium = document.querySelector("[data-recommendation-premium]");
+  const hideStates = () => [loading, onboarding, empty, errorBox, grid, premium].forEach((element) => { element.hidden = true; });
   const parseError = async (response) => { try { const data = await response.json(); return data?.error?.message || data?.message || "Please try again."; } catch { return "Please try again."; } };
 
   const card = ({ opportunity, match_percentage: percentage, explanation }) => {
@@ -47,7 +48,8 @@
         button.disabled = true;
         try {
           const response = await fetch(`${API}/profile/saved${saving ? "" : `/${encodeURIComponent(button.dataset.saveId)}`}`, { method: saving ? "POST" : "DELETE", headers: { ...headers, ...(saving ? { "Content-Type": "application/json" } : {}) }, body: saving ? JSON.stringify({ opportunity_id: button.dataset.saveId }) : undefined });
-          if (response.status === 401 || response.status === 403) { window.location.href = `auth.html?mode=login&returnTo=${encodeURIComponent(location.pathname + location.search)}`; return; }
+          if (response.status === 403 && (await response.clone().json()).code === "PREMIUM_REQUIRED") { hideStates(); premium.hidden = false; return; }
+      if (response.status === 401 || response.status === 403) { window.location.href = `auth.html?mode=login&returnTo=${encodeURIComponent(location.pathname + location.search)}`; return; }
           if (!response.ok && response.status !== 409) throw new Error(await parseError(response));
           updateButton(saving);
         } catch (error) { window.alert(`We could not update this saved opportunity. ${error.message}`); }
@@ -57,7 +59,9 @@
   };
 
   const load = async () => {
-    hideStates(); loading.hidden = false;
+    hideStates();
+    if (!token) { premium.hidden = false; premium.insertAdjacentHTML("beforeend", '<p>Already have Premium? <a href="auth.html?mode=login&amp;returnTo=recommended-opportunities.html">Log in</a></p>'); return; }
+    loading.hidden = false;
     try {
       const response = await fetch(`${API}/opportunities/recommended`, { headers });
       if (response.status === 401 || response.status === 403) { window.location.replace(`auth.html?mode=login&returnTo=${encodeURIComponent("recommended-opportunities.html")}`); return; }

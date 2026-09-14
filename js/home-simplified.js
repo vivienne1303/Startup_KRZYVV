@@ -35,9 +35,17 @@
       </div>
     </div></section>
     <section class="home-focus-section" aria-labelledby="opportunities-title">
-      <div class="section-row"><div class="focus-heading"><p class="eyebrow">${token ? "Picked for you" : "Start exploring"}</p><h2 id="opportunities-title">Good next steps, not endless choices.</h2><p>${token ? "Recommendations shaped by your profile and Career DNA." : "A few current opportunities to help you begin."}</p></div><a class="text-link" href="pages/opportunities.html">See all opportunities <span aria-hidden="true">→</span></a></div>
+      <div class="section-row"><div class="focus-heading"><p class="eyebrow">Start exploring</p><h2 id="opportunities-title">Good next steps, not endless choices.</h2><p>A few current opportunities to help you begin.</p></div><a class="text-link" href="pages/opportunities.html">See all opportunities <span aria-hidden="true">→</span></a></div>
       <div class="home-opportunity-grid" data-home-opportunities aria-live="polite"><p class="loading-note">Finding fresh opportunities for you…</p></div>
     </section>
+    <section class="home-focus-section premium-pricing" id="pricing" aria-labelledby="pricing-title">
+      <div class="pricing-heading"><p class="eyebrow">Grow at your own pace</p><h2 id="pricing-title">Your next step. Your plan.</h2><p>Explore for free. Unlock recommendations tailored to you with Premium.</p></div>
+      <div class="pricing-grid">
+        <article class="pricing-card"><h3>Free</h3><p>Discover what is out there.</p><p class="plan-price">$0 <span>/ always</span></p><ul><li>Browse all public opportunities</li><li>Discover your Career DNA</li><li>Save opportunities with an account</li><li>Track your journey and build a portfolio</li></ul><a class="btn secondary" href="pages/opportunities.html">Explore for free</a></article>
+        <article class="pricing-card premium-plan"><span class="plan-badge">Personalised for you</span><h3>Premium</h3><p>Find opportunities that fit who you are.</p><p class="plan-price coming-soon">Coming soon</p><ul><li>Everything in Free</li><li>Personalised opportunity recommendations</li><li>Matches based on your profile and Career DNA</li><li>Match scores and reasons for each recommendation</li></ul><button class="btn primary" type="button" disabled>Premium coming soon</button><small>Pricing and subscriptions will be announced here.</small></article>
+      </div>
+    </section>
+    <section class="home-focus-section premium-preview" aria-labelledby="premium-preview-title"><div class="focus-heading"><p class="eyebrow">TeenLaunch Premium</p><h2 id="premium-preview-title">Recommended for You</h2><p>Opportunity matches shaped by your profile and Career DNA.</p></div><div data-premium-home aria-live="polite"><p>Unlock personalised recommendations with Premium.</p><a class="btn primary" href="#pricing">View plans</a></div></section>
     <section class="journey-band" aria-labelledby="journey-title"><div class="home-focus-section">
       <div class="focus-heading"><p class="eyebrow">A journey that grows with you</p><h2 id="journey-title">From curious to confident.</h2><p>TeenLaunch keeps discovery, action, and reflection connected.</p></div>
       <div class="journey-strip joyful-journey">
@@ -71,6 +79,12 @@
     }).join("") : `<div class="empty-opportunities"><span aria-hidden="true">🌱</span><h3>Fresh opportunities are on the way.</h3><p>Our team is reviewing new options. Explore all opportunities or check back soon.</p><a class="btn secondary" href="pages/opportunities.html">Explore opportunities</a></div>`;
   };
 
-  const personalised = token ? fetch(`${window.TEENLAUNCH_API_BASE}/opportunities/recommended`, { headers: { Authorization: `Bearer ${token}` } }).then((response) => response.ok ? response.json() : Promise.reject()).then((data) => { const recommendations = data.recommendations || []; if (!recommendations.length) return Promise.reject(); renderCards(recommendations, true); }) : Promise.reject();
-  personalised.catch(() => fetch(`${window.TEENLAUNCH_API_BASE}/opportunities`).then((response) => response.ok ? response.json() : Promise.reject()).then((data) => renderCards(data.opportunities || [], false))).catch(() => { const root = document.querySelector("[data-home-opportunities]"); if (root) root.innerHTML = `<div class="empty-opportunities"><span aria-hidden="true">☁️</span><h3>We couldn’t load opportunities right now.</h3><p>Please try the full Explore page in a moment.</p><a class="btn secondary" href="pages/opportunities.html">Open Explore</a></div>`; });
+  fetch(`${window.TEENLAUNCH_API_BASE}/opportunities`).then(response => { if (!response.ok) throw new Error(); return response.json(); }).then(data => renderCards(data.opportunities || [], false)).catch(() => { document.querySelector("[data-home-opportunities]").innerHTML = '<p>Opportunities could not be loaded. <a href="pages/opportunities.html">Open Explore</a></p>'; });
+  if (token) fetch(`${window.TEENLAUNCH_API_BASE}/opportunities/recommended`, { headers: { Authorization: `Bearer ${token}` } }).then(async response => {
+    const root = document.querySelector("[data-premium-home]");
+    if (response.status === 403 && (await response.clone().json()).code === "PREMIUM_REQUIRED") return;
+    if (!response.ok) throw new Error();
+    const data = await response.json();
+    root.innerHTML = data.completed ? '<p>Your Premium recommendations are ready to explore.</p><a class="btn primary" href="pages/recommended-opportunities.html">View my recommendations</a>' : '<p>Complete Career DNA to start using your Premium recommendations.</p><a class="btn primary" href="pages/career_dna_test.html">Take Career DNA</a>';
+  }).catch(() => { document.querySelector("[data-premium-home]").innerHTML = '<p>We could not check your Premium access. <a href="pages/recommended-opportunities.html">Try again</a></p>'; });
 }());

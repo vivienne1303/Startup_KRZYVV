@@ -1,3 +1,4 @@
+const { hasPremium } = require("../middleware/premiumMiddleware");
 const asyncHandler = require("../utils/asyncHandler");
 const HttpError = require("../utils/httpError");
 
@@ -29,6 +30,7 @@ const buildContext = async (req) => {
   const profile = req.profile || {};
 
   return {
+    premium: hasPremium(req.user),
     user: {
       age: profile.age || null,
       education_level: profile.education_level || null,
@@ -55,6 +57,7 @@ const buildContext = async (req) => {
 };
 
 const rankOpportunities = (question, context) => {
+  if (!context.premium) return [];
   const words = new Set(String(question).toLowerCase().match(/[a-z0-9]+/g) || []);
   const dnaTerms = [context.career_dna?.top_category, context.career_dna?.secondary_category, ...(context.career_dna?.strengths || [])].filter(Boolean).map((item) => String(item).toLowerCase());
   return context.teenlaunch_opportunities.map((opportunity) => {
@@ -72,7 +75,7 @@ const fallbackResponse = (question, context) => {
   const second = context.career_dna?.secondary_category;
   const careerLine = top ? `Your Career DNA currently highlights ${top}${second ? ` and ${second}` : ""}.` : "You have not completed a Career DNA result yet, so start by identifying two subjects or activities you enjoy.";
   const skillSuggestions = context.portfolio.skills.length ? `You already show ${context.portfolio.skills.slice(0, 3).join(", ")}. Choose one of these to deepen through a small project.` : "Start with communication, teamwork and one practical skill connected to your career interest.";
-  const opportunityLines = recommendations.length ? recommendations.map((opportunity, index) => `${index + 1}. ${opportunity.title} — ${opportunity.link}\n   Why: It connects with your interests, eligibility or Career DNA context.`).join("\n") : "No suitable active TeenLaunch opportunity is currently available. Check the Opportunities page again later.";
+  const opportunityLines = recommendations.length ? recommendations.map((opportunity, index) => `${index + 1}. ${opportunity.title} — ${opportunity.link}\n   Why: It connects with your interests, eligibility or Career DNA context.`).join("\n") : (context.premium ? "No suitable active TeenLaunch opportunity is currently available. Check the Opportunities page again later." : "Personalised opportunity recommendations require Premium. Browse all opportunities for free, or view plans at index.html#pricing.");
   const needsFollowUp = !top && !/(ui|ux|design|entrepreneur|career|portfolio|skill|technology|creative|business)/i.test(question);
   return `${careerLine}\n\nSuggested next steps:\n1. Pick one career area to explore for the next four weeks.\n2. ${skillSuggestions}\n3. Complete a small project and add evidence to your portfolio.\n\nVerified TeenLaunch opportunities:\n${opportunityLines}\n\nWhy this may suit you:\nThis guidance uses the profile, Career DNA and TeenLaunch records currently available to your account.${needsFollowUp ? "\n\nWhich school subject, hobby or activity do you enjoy most?" : ""}\n\nThis is general guidance and does not guarantee jobs, admissions or income.`;
 };
