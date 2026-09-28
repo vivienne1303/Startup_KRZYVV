@@ -12,12 +12,14 @@
 
   // Keep the language control available even if a page forgets to include the
   // shared translation script explicitly.
-  window.setTimeout(() => {
+  const ensureLanguageScript = () => {
     if (window.TeenLaunchI18n || document.querySelector('script[src*="js/i18n.js"]')) return;
     const script = document.createElement("script");
     script.src = assetHref("js/i18n.js?v=20260820-global");
     document.body.appendChild(script);
-  }, 0);
+  };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", ensureLanguageScript, { once: true });
+  else ensureLanguageScript();
 
   if (!storedToken && !publicPages.has(currentPage)) {
     const returnTo = `${currentPage}${window.location.search}${window.location.hash}`;

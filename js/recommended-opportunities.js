@@ -1,7 +1,9 @@
 (function () {
   const API = window.TEENLAUNCH_API_BASE;
   const token = localStorage.getItem("teenlaunch_token");
-  const headers = { Authorization: `Bearer ${token}` };
+  const headers = token ? { Authorization: `Bearer ${token}` } : {};
+  const request = (url, options = {}) => fetch(url, { ...options, signal: AbortSignal.timeout(10000) });
+  const notice = document.querySelector("[data-recommendation-notice]");
   const loading = document.querySelector("[data-recommendation-loading]");
   const onboarding = document.querySelector("[data-recommendation-onboarding]");
   const empty = document.querySelector("[data-recommendation-empty]");
@@ -28,7 +30,7 @@
       ? `<a class="btn primary" href="opportunity-details.html?id=${encodeURIComponent(opportunity.id)}" target="_blank" rel="noopener noreferrer">Visit official site</a>`
       : `<a class="btn secondary" href="opportunity-details.html?id=${encodeURIComponent(opportunity.id)}">View details</a><a class="btn primary" href="apply.html?id=${encodeURIComponent(opportunity.id)}">Apply</a>`;
     return `<article class="opportunity-card recommendation-card">
-      <div class="match-badge">${percentage}% match</div>
+      ${Number.isFinite(percentage) ? `<div class="match-badge">${percentage}% match</div>` : ""}
       <span class="tag">${escapeHtml(opportunity.category)}</span>
       <h2>${escapeHtml(opportunity.title)}</h2>
       <p class="match-explanation">${escapeHtml(explanation)}</p>
@@ -38,43 +40,96 @@
     </article>`;
   };
 
-  const bindSaveButtons = async () => {
-    const savedResponse = await fetch(`${API}/profile/saved`, { headers });
-    const savedIds = savedResponse.ok ? new Set(((await savedResponse.json()).saved || []).map((item) => item.opportunity_id)) : new Set();
-    document.querySelectorAll("[data-save-id]").forEach((button) => {
-      const updateButton = (saved) => { button.classList.toggle("saved", saved); button.setAttribute("aria-pressed", String(saved)); };
-      updateButton(savedIds.has(button.dataset.saveId));
-      button.addEventListener("click", async () => {
-        const saving = !button.classList.contains("saved");
-        button.disabled = true;
-        try {
-          const response = await fetch(`${API}/profile/saved${saving ? "" : `/${encodeURIComponent(button.dataset.saveId)}`}`, { method: saving ? "POST" : "DELETE", headers: { ...headers, ...(saving ? { "Content-Type": "application/json" } : {}) }, body: saving ? JSON.stringify({ opportunity_id: button.dataset.saveId }) : undefined });
-          if (response.status === 403 && (await response.clone().json()).code === "PREMIUM_REQUIRED") { hideStates(); premium.hidden = false; return; }
-      if (response.status === 401 || response.status === 403) { window.location.href = `auth.html?mode=login&returnTo=${encodeURIComponent(location.pathname + location.search)}`; return; }
-          if (!response.ok && response.status !== 409) throw new Error(await parseError(response));
-          updateButton(saving);
-        } catch (error) { window.alert(`We could not update this saved opportunity. ${error.message}`); }
-        finally { button.disabled = false; }
-      });
-    });
-  };
-
-  const load = async () => {
-    hideStates();
-    if (!token) { premium.hidden = false; premium.insertAdjacentHTML("beforeend", '<p>Already have Premium? <a href="auth.html?mode=login&amp;returnTo=recommended-opportunities.html">Log in</a></p>'); return; }
-    loading.hidden = false;
+  const loginHref = 'auth.html?mode=login&returnTo=recommended-opportunities.html';
+  let generation = 0;
+  const savedIds = new Set();
+  const updateSavedButtons = () => grid.querySelectorAll('[data-save-id]').forEach(button => {
+    const saved = savedIds.has(button.dataset.saveId);
+    button.classList.toggle('saved', saved);
+    button.setAttribute('aria-pressed', String(saved));
+  });
+  grid.addEventListener('click', async event => {
+    const button = event.target.closest('[data-save-id]');
+    if (!button) return;
+    if (!token) { location.href = loginHref; return; }
+    const id = button.dataset.saveId, saving = !savedIds.has(id);
+    button.disabled = true;
     try {
-      const response = await fetch(`${API}/opportunities/recommended`, { headers });
-      if (response.status === 401 || response.status === 403) { window.location.replace(`auth.html?mode=login&returnTo=${encodeURIComponent("recommended-opportunities.html")}`); return; }
+      const response = await request(API + '/profile/saved' + (saving ? '' : '/' + encodeURIComponent(id)), {
+        method: saving ? 'POST' : 'DELETE',
+        headers: { ...headers, ...(saving ? { 'Content-Type': 'application/json' } : {}) },
+        body: saving ? JSON.stringify({ opportunity_id: id }) : undefined,
+      });
+      if (response.status === 401) { location.href = loginHref; return; }
+      if (!response.ok && response.status !== 409) throw new Error(await parseError(response));
+      if (saving) savedIds.add(id); else savedIds.delete(id);
+      updateSavedButtons();
+    } catch (error) { window.alert('We could not save this opportunity. ' + error.message); }
+    finally { button.disabled = false; }
+  });
+  // Saved-state loading must never hide otherwise successful recommendations.
+  if (token) request(API + '/profile/saved', { headers }).then(async response => {
+    if (!response.ok) return;
+    for (const item of (await response.json()).saved || []) savedIds.add(item.opportunity_id);
+    updateSavedButtons();
+  }).catch(() => {});
+
+  const render = (items, personalised) => {
+    grid.innerHTML = items.map(card).join('');
+    grid.hidden = false;
+    notice.textContent = personalised ? 'Your Career DNA matches' : 'Open opportunities to explore. These are not personalised matches.';
+    notice.hidden = false;
+    updateSavedButtons();
+  };
+  const load = async () => {
+    const run = ++generation;
+    hideStates(); notice.hidden = true;
+    loading.hidden = false;
+    let settled = false;
+    const publicResult = request(API + '/opportunities').then(async response => {
       if (!response.ok) throw new Error(await parseError(response));
       const data = await response.json();
-      hideStates();
-      if (!data.completed) { onboarding.hidden = false; return; }
-      if (!data.recommendations?.length) { empty.hidden = false; return; }
-      grid.innerHTML = data.recommendations.map(card).join("");
-      grid.hidden = false;
-      await bindSaveButtons();
-    } catch (error) { hideStates(); errorBox.hidden = false; document.querySelector("[data-recommendation-error-message]").textContent = error.message; }
+      return (data.opportunities || []).map(opportunity => ({ opportunity, explanation: '' }));
+    }).catch(() => []);
+    // Show useful listings while the private matching request is still running.
+    publicResult.then(items => {
+      if (run === generation && !settled && items.length) render(items, false);
+    });
+    const fallback = async () => {
+      const items = await publicResult;
+      if (run !== generation) return;
+      loading.hidden = true;
+      if (items.length) render(items, false);
+      else { grid.hidden = true; notice.hidden = true; empty.hidden = false; }
+    };
+    try {
+      if (!token) {
+        settled = true; loading.hidden = true; premium.hidden = false;
+        await fallback(); return;
+      }
+      const response = await request(API + '/opportunities/recommended', { headers });
+      const data = await response.json();
+      if (run !== generation) return;
+      settled = true; hideStates();
+      if (response.status === 403 && data.code === 'PREMIUM_REQUIRED') {
+        premium.hidden = false; await fallback(); return;
+      }
+      if (response.status === 401) {
+        errorBox.hidden = false;
+        document.querySelector('[data-recommendation-error-message]').textContent = 'Your session has expired. Log in again for personalised matches.';
+        await fallback(); return;
+      }
+      if (!response.ok) throw new Error(data.error?.message || data.message || 'Please try again.');
+      if (!data.completed) { onboarding.hidden = false; await fallback(); return; }
+      if (!data.recommendations?.length) { empty.hidden = false; await fallback(); return; }
+      render(data.recommendations, true);
+    } catch (error) {
+      if (run !== generation) return;
+      settled = true; hideStates(); errorBox.hidden = false;
+      document.querySelector('[data-recommendation-error-message]').textContent = error.name === 'TimeoutError' || error.name === 'AbortError'
+        ? 'Matching is taking longer than expected. You can browse open opportunities below or try again.' : error.message;
+      await fallback();
+    }
   };
 
   document.querySelector("[data-recommendation-retry]").addEventListener("click", load);
