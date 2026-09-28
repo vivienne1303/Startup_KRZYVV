@@ -38,11 +38,17 @@ const create = asyncHandler(async (req, res) => {
   if (missing.length) throw new HttpError(400, `Missing required fields: ${missing.join(", ")}`);
 
   const [opportunityResult, existing] = await Promise.all([
-    req.supabase.from("opportunities").select("id,title,deadline,age_min,age_max").eq("id", req.body.opportunity_id).single(),
+    req.supabase.from("opportunities").select("id,title,deadline,application_deadline,end_date,expiry_date,age_min,age_max,application_method,internal_application_enabled,status,is_published").eq("id", req.body.opportunity_id).single(),
     checkRegistration(req.supabase, req.body.opportunity_id),
   ]);
   const { data: opportunity, error: opportunityError } = opportunityResult;
   if (opportunityError || !opportunity) throw new HttpError(404, "Opportunity not found");
+  if (!opportunity.is_published || opportunity.status !== "published") throw new HttpError(400, "This opportunity is not accepting applications");
+  if (opportunity.application_method !== "internal" || opportunity.internal_application_enabled !== true) {
+    throw new HttpError(400, "Apply on the organiser's official website. TeenLaunch cannot submit this application for you.");
+  }
+  const todaySingapore = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Singapore", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+  if ([opportunity.application_deadline, opportunity.deadline, opportunity.end_date, opportunity.expiry_date].some(date => date && date.slice(0, 10) < todaySingapore)) throw new HttpError(400, "This opportunity's deadline has passed");
   if (existing.error) throw new HttpError(400, existing.error.message, existing.error.details);
   if (existing.data) throw new HttpError(409, "You have already applied for this opportunity");
   if (opportunity.deadline && new Date(`${opportunity.deadline}T23:59:59`).getTime() < Date.now()) throw new HttpError(400, "This opportunity's deadline has passed");
@@ -72,10 +78,11 @@ const create = asyncHandler(async (req, res) => {
 const confirmExternal = asyncHandler(async (req, res) => {
   if (!req.body.opportunity_id) throw new HttpError(400, "opportunity_id is required");
   const [opportunity, existing] = await Promise.all([
-    req.supabase.from("opportunities").select("id,application_url,source_url,status").eq("id", req.body.opportunity_id).single(),
+    req.supabase.from("opportunities").select("id,application_url,source_url,status,application_method,internal_application_enabled").eq("id", req.body.opportunity_id).single(),
     checkRegistration(req.supabase, req.body.opportunity_id),
   ]);
   if (opportunity.error || !opportunity.data) throw new HttpError(404, "Opportunity not found");
+  if (opportunity.data.application_method === "internal" && opportunity.data.internal_application_enabled === true) throw new HttpError(400, "Please complete the TeenLaunch application form for this opportunity");
   if (!opportunity.data.application_url && !opportunity.data.source_url) throw new HttpError(400, "This is not an external opportunity");
   if (existing.error) throw new HttpError(400, existing.error.message, existing.error.details);
   if (existing.data) return res.json({ registration: existing.data, already_recorded: true });

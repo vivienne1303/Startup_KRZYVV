@@ -22,9 +22,10 @@
     const formatAndLocation = [opportunity.format || opportunity.mode, opportunity.location].filter(Boolean).join(" · ");
     const metadata = [organisation, ages, formatAndLocation, `Deadline: ${deadline ? new Date(`${deadline}T00:00:00`).toLocaleDateString() : "Rolling"}`]
       .filter(Boolean).map((item) => `<li>${escapeHtml(item)}</li>`).join("");
-    const officialUrl = opportunity.application_url || opportunity.source_url;
+    const internal = opportunity.application_method === "internal" && opportunity.internal_application_enabled === true;
+    const officialUrl = !internal && (opportunity.application_url || opportunity.source_url);
     const primaryAction = officialUrl
-      ? `<a class="btn primary" href="${escapeHtml(officialUrl)}" target="_blank" rel="noopener noreferrer">Visit official site</a>`
+      ? `<a class="btn primary" href="opportunity-details.html?id=${encodeURIComponent(opportunity.id)}" target="_blank" rel="noopener noreferrer">Visit official site</a>`
       : `<a class="btn secondary" href="opportunity-details.html?id=${encodeURIComponent(opportunity.id)}">View details</a><a class="btn primary" href="apply.html?id=${encodeURIComponent(opportunity.id)}">Apply</a>`;
     return `<article class="opportunity-card recommendation-card">
       <div class="match-badge">${percentage}% match</div>

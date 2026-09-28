@@ -8,7 +8,7 @@
   const assetHref = (asset) => (inPagesFolder ? `../${asset}` : asset);
   const isCurrent = (...pages) => pages.includes(currentPage);
   const storedToken = localStorage.getItem("teenlaunch_token");
-  const publicPages = new Set(["index.html", "auth.html", "public-portfolio.html", "recommended-opportunities.html", "opportunities.html", "opportunity-details.html"]);
+  const publicPages = new Set(["index.html", "auth.html", "public-portfolio.html", "recommended-opportunities.html", "opportunities.html", "opportunity-details.html", "apply.html"]);
 
   // Keep the language control available even if a page forgets to include the
   // shared translation script explicitly.

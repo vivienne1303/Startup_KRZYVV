@@ -164,7 +164,9 @@ const opportunityMarkup = (opportunity) => {
     ageParts.length ? `<li><strong>Eligibility:</strong> Ages ${escapeHtml(ageParts.join(" "))}</li>` : "",
     [opportunity.mode, opportunity.location].filter(Boolean).length ? `<li>${escapeHtml([opportunity.mode, opportunity.location].filter(Boolean).join(" · "))}</li>` : "",
   ].filter(Boolean).join("");
-  const officialUrl = opportunity.application_url || opportunity.source_url;
+  const internal = opportunity.application_method === "internal" && opportunity.internal_application_enabled === true;
+  const candidateUrl = opportunity.application_url || opportunity.source_url;
+  const officialUrl = !internal && /^https?:\/\//i.test(candidateUrl || "") ? candidateUrl : null;
   const detailsHref = officialUrl || `opportunity-details.html?id=${encodeURIComponent(opportunity.id)}`;
   const detailsAttrs = officialUrl ? ' rel="noopener"' : '';
   const actions = isAdmin
@@ -263,15 +265,17 @@ const bindOpportunityActions = async () => {
 
 const setupExternalRegistrationPrompt = () => {
   const token = localStorage.getItem("teenlaunch_token");
-  document.querySelectorAll("[data-external-details]").forEach((link) => link.addEventListener("click", () => {
+  if (window.externalRegistrationPromptBound) return;
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest("[data-external-details]");
+    if (!link) return;
     localStorage.setItem("teenlaunch_pending_external", JSON.stringify({
       id: link.dataset.externalDetails,
       title: link.dataset.opportunityTitle,
       url: link.href,
       openedAt: Date.now(),
     }));
-  }));
-  if (window.externalRegistrationPromptBound) return;
+  });
   window.externalRegistrationPromptBound = true;
   const showPrompt = () => {
     let pending;
@@ -295,7 +299,7 @@ const setupExternalRegistrationPrompt = () => {
         if (!response.ok) throw new Error(data.error?.message || "Could not record your registration");
         localStorage.removeItem("teenlaunch_pending_external");
         const form = dialog.querySelector("form");
-        form.innerHTML = `<p class="eyebrow">Application recorded</p><h2>You’re all set!</h2><p>TeenLaunch has recorded that you applied for this opportunity. No verification is required.</p><div><a class="btn primary" href="profile.html?tab=applied">View My Applications</a><button class="btn secondary" value="close">Close</button></div>`;
+        form.innerHTML = `<p class="eyebrow">Application recorded</p><h2>Saved to your profile</h2><p>You marked this opportunity as applied. This does not submit an application or confirm acceptance by the organiser. Check your confirmation from the organiser.</p><div><a class="btn primary" href="profile.html?tab=applied">View My Applications</a><button class="btn secondary" value="close">Close</button></div>`;
       } catch (error) { message.textContent = error.message; button.disabled = false; }
     });
     dialog.showModal();

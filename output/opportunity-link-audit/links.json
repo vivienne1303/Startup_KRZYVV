@@ -1,0 +1,2174 @@
+[
+  {
+    "url": "https://boardofgovernors.gov1.qualtrics.com/jfe/form/SV_9Suh3WBv5pVYr7E",
+    "status": 200,
+    "final_url": "https://boardofgovernors.gov1.qualtrics.com/jfe/form/SV_9Suh3WBv5pVYr7E",
+    "title": "2026 College Fed Challenge Registration",
+    "soft_error": false,
+    "links": []
+  },
+  {
+    "url": "https://brilliantblue.org/global",
+    "status": 200,
+    "final_url": "https://brilliantblue.org/global",
+    "title": "Global - Brilliant Blue 2026",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://brilliantblue.org/global#",
+        "text": "REGISTER"
+      },
+      {
+        "url": "https://brilliantlabs.typeform.com/BrilliantBlue26",
+        "text": "Register Today"
+      },
+      {
+        "url": "https://brilliantlabs.typeform.com/BrilliantBlue26",
+        "text": "REGISTER NOW!"
+      },
+      {
+        "url": "https://brilliantlabs.typeform.com/BrilliantBlue26",
+        "text": "registration"
+      },
+      {
+        "url": "https://brilliantlabs.typeform.com/BrilliantBlue26",
+        "text": "Register"
+      }
+    ]
+  },
+  {
+    "url": "https://diamondchallenge.org/competition/",
+    "status": 200,
+    "final_url": "https://diamondchallenge.org/competition/",
+    "title": "Competition - Diamond Challenge",
+    "soft_error": false,
+    "links": []
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/Happy-Hour-with-Seniors--Chai-Chee-26-Nov-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/Happy-Hour-with-Seniors--Chai-Chee-26-Nov-2026",
+    "title": "Happy Hour with Seniors - Chai Chee (26 Nov 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "26 Nov 2026 - 26 Nov 2026",
+        "closingdate": "25 November 2026 23:59",
+        "isregistered": false,
+        "id": "36c972ad-d02d-497c-a01e-712bcda0eb76",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "24 Sep 2026 - 18 Nov 2026",
+        "closingdate": "25 November 2026 23:59",
+        "isregistered": false,
+        "id": "47c3364b-ae14-41fd-819e-5aae5d6e33d7",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/Happy-Hour-with-Seniors--Jurong-West-30-Sept-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/Happy-Hour-with-Seniors--Jurong-West-30-Sept-2026",
+    "title": "Happy Hour with Seniors - Jurong West (30 Sept 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "30 Sep 2026 - 30 Sep 2026",
+        "closingdate": "28 September 2026 23:59",
+        "isregistered": false,
+        "id": "832601e1-89ec-40e9-a3c0-5761314de353",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "16 Sep 2026 - 30 Sep 2026",
+        "closingdate": "28 September 2026 23:59",
+        "isregistered": false,
+        "id": "d10efa94-2dc5-4ab7-959c-2b5cd96dee72",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/Only-Mr-Group--Bukit-Merah-30-Sep-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/Only-Mr-Group--Bukit-Merah-30-Sep-2026",
+    "title": "Only Mr Group - Bukit Merah (30 Sep 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "30 Sep 2026 - 30 Sep 2026",
+        "closingdate": "28 September 2026 23:59",
+        "isregistered": false,
+        "id": "dade6fae-efac-4ec2-b615-fb2d04108e4c",
+        "label": "Volunteer Befriender"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Active-Mind-Active-Life--Sembawang-15-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Active-Mind-Active-Life--Sembawang-15-Oct-2026",
+    "title": "Active Mind Active Life - Sembawang (15 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "13 Oct 2026 - 15 Oct 2026",
+        "closingdate": "12 October 2026 23:59",
+        "isregistered": false,
+        "id": "3ac8a826-63b8-42dc-a9c7-b6e9cf490ec3",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "13 Oct 2026 - 15 Oct 2026",
+        "closingdate": "12 October 2026 23:59",
+        "isregistered": false,
+        "id": "5f3f7dda-328f-44ab-9e84-e83d2b4e9a2e",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Ask-Me-Anything-Leaf-it-to-the-Experts",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Ask-Me-Anything-Leaf-it-to-the-Experts",
+    "title": "Ask-Me-Anything: Leaf it to the Experts",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "participant-1",
+        "schedule": "10 Oct 2026 - 10 Oct 2026",
+        "closingdate": "03 October 2026 23:59",
+        "isregistered": false,
+        "id": "ca77af76-80dd-4221-9ee8-668424574856",
+        "label": "Participant"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Bedside-Befrienders--Woodlands-Hospital-Oct-to-Dec-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Bedside-Befrienders--Woodlands-Hospital-Oct-to-Dec-2026",
+    "title": "Bedside Befrienders - Woodlands Hospital (Oct to Dec 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "07 Oct 2026 - 11 Dec 2026",
+        "closingdate": "01 October 2026 23:59",
+        "isregistered": false,
+        "id": "c2582a7f-77fd-42d7-9729-13e1fe1a1949",
+        "label": "Volunteer Befriender"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Bridging-Generations--Our-Tampines-Hub-13-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Bridging-Generations--Our-Tampines-Hub-13-Oct-2026",
+    "title": "Bridging Generations - Our Tampines Hub (13 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "13 Oct 2026 - 13 Oct 2026",
+        "closingdate": "06 October 2026 23:59",
+        "isregistered": false,
+        "id": "030fdf24-c1ee-4909-8c8c-eb0778870d0c",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "13 Oct 2026 - 13 Oct 2026",
+        "closingdate": "06 October 2026 23:59",
+        "isregistered": false,
+        "id": "e49e5307-f61d-4983-8808-67c7237394e8",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Buddy-on-Deck--Singapore-Navy-Museum-22-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Buddy-on-Deck--Singapore-Navy-Museum-22-Oct-2026",
+    "title": "Buddy on Deck - Singapore Navy Museum (22 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "22 Oct 2026 - 22 Oct 2026",
+        "closingdate": "15 October 2026 23:59",
+        "isregistered": false,
+        "id": "eacfec8c-0d71-4d89-8cc0-263b34da0732",
+        "label": "Volunteer Befriender"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Click--Connect-Photography-with-Nikon-School",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Click--Connect-Photography-with-Nikon-School",
+    "title": "Click & Connect: Photography with Nikon School",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "participant-1",
+        "schedule": "25 Oct 2026 - 25 Oct 2026",
+        "closingdate": "02 October 2026 23:59",
+        "isregistered": false,
+        "id": "ef0f2cc5-efdd-4374-8de8-115113e39b59",
+        "label": "Participant"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Community-Connectors--Ang-Mo-Kio-24-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Community-Connectors--Ang-Mo-Kio-24-Oct-2026",
+    "title": "Community Connectors - Ang Mo Kio (24 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "24 Oct 2026 - 24 Oct 2026",
+        "closingdate": "21 October 2026 23:59",
+        "isregistered": false,
+        "id": "acea2563-1a3b-4e4a-9436-7a76a04c5562",
+        "label": "Volunteer Befriender"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Community-Connectors--Pasir-Ris-9-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Community-Connectors--Pasir-Ris-9-Oct-2026",
+    "title": "Community Connectors - Pasir Ris (9 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "09 Oct 2026 - 09 Oct 2026",
+        "closingdate": "06 October 2026 23:59",
+        "isregistered": false,
+        "id": "74fa5dc0-7665-4e1d-bd4c-7e3dbb1ddfd3",
+        "label": "Volunteer Befriender"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Companions-of-Care--Yishun-5-Oct--6-Nov-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Companions-of-Care--Yishun-5-Oct--6-Nov-2026",
+    "title": "Companions of Care - Yishun (5 Oct - 6 Nov 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "05 Oct 2026 - 06 Nov 2026",
+        "closingdate": "01 October 2026 23:59",
+        "isregistered": false,
+        "id": "d9dc5b55-8a6a-4413-af62-54435db51d20",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "05 Oct 2026 - 06 Nov 2026",
+        "closingdate": "01 October 2026 23:59",
+        "isregistered": false,
+        "id": "4c859e09-3acc-43a0-b122-eca22986989c",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/FlowerFolks--Gardens-by-the-Bay-13-oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/FlowerFolks--Gardens-by-the-Bay-13-oct-2026",
+    "title": "FlowerFolks - Gardens by the Bay (13 oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "13 Oct 2026 - 13 Oct 2026",
+        "closingdate": "08 October 2026 23:59",
+        "isregistered": false,
+        "id": "50b7ef97-e958-4a3b-abb0-e7cb46456c67",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "12 Oct 2026 - 13 Oct 2026",
+        "closingdate": "08 October 2026 23:59",
+        "isregistered": false,
+        "id": "1ea3fffc-148f-4e38-a285-c59a5fad1ba9",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/FlowerFolks--Gardens-by-the-Bay-21-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/FlowerFolks--Gardens-by-the-Bay-21-Oct-2026",
+    "title": "FlowerFolks - Gardens by the Bay (21 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "21 Oct 2026 - 21 Oct 2026",
+        "closingdate": "16 October 2026 23:59",
+        "isregistered": false,
+        "id": "c7badaa8-79e6-408a-a1cb-07445547c891",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "20 Oct 2026 - 21 Oct 2026",
+        "closingdate": "16 October 2026 23:59",
+        "isregistered": false,
+        "id": "7419bd17-328f-4f7e-a541-f5ad17de1b40",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/FlowerFolks--Gardens-by-the-Bay-24-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/FlowerFolks--Gardens-by-the-Bay-24-Oct-2026",
+    "title": "FlowerFolks - Gardens by the Bay (24 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "24 Oct 2026 - 24 Oct 2026",
+        "closingdate": "19 October 2026 23:59",
+        "isregistered": false,
+        "id": "b2e9bd15-a74f-4906-972d-8907610baf17",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "23 Oct 2026 - 24 Oct 2026",
+        "closingdate": "19 October 2026 23:59",
+        "isregistered": false,
+        "id": "d485f873-c01c-4c2f-bd73-74c069cc7250",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Gen-Gala-x-Fashion-Parade--Jalan-Besar-31-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Gen-Gala-x-Fashion-Parade--Jalan-Besar-31-Oct-2026",
+    "title": "Gen Gala x Fashion Parade - Jalan Besar (31 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "31 Oct 2026 - 31 Oct 2026",
+        "closingdate": "29 October 2026 23:59",
+        "isregistered": false,
+        "id": "f369d311-40e7-43ea-8f75-323fba17559e",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "31 Oct 2026 - 31 Oct 2026",
+        "closingdate": "29 October 2026 23:59",
+        "isregistered": false,
+        "id": "ad96da5b-4399-431e-b423-f93c8fb00f11",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Happy-Hour-with-Seniors--Chai-Chee-29-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Happy-Hour-with-Seniors--Chai-Chee-29-Oct-2026",
+    "title": "Happy Hour with Seniors - Chai Chee (29 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "29 Oct 2026 - 29 Oct 2026",
+        "closingdate": "28 October 2026 23:59",
+        "isregistered": false,
+        "id": "c917a639-e68a-436b-8efd-916fd14a31e2",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "21 Oct 2026 - 29 Oct 2026",
+        "closingdate": "28 October 2026 23:59",
+        "isregistered": false,
+        "id": "13a2d033-b057-4d0f-b768-71c3e57e0cd4",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Happy-Hour-with-Seniors--Jurong-West-28-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Happy-Hour-with-Seniors--Jurong-West-28-Oct-2026",
+    "title": "Happy Hour with Seniors - Jurong West (28 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "28 Oct 2026 - 28 Oct 2026",
+        "closingdate": "27 October 2026 23:59",
+        "isregistered": false,
+        "id": "91a05683-0622-4fc1-8b70-33cd01738b55",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "21 Oct 2026 - 28 Oct 2026",
+        "closingdate": "27 October 2026 23:59",
+        "isregistered": false,
+        "id": "fc24e25f-3c92-4ce7-88e4-4bf58dea38bc",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Happy-Hour-with-Seniors--Tampines-30-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Happy-Hour-with-Seniors--Tampines-30-Oct-2026",
+    "title": "Happy Hour with Seniors - Tampines (30 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "30 Oct 2026 - 30 Oct 2026",
+        "closingdate": "29 October 2026 23:59",
+        "isregistered": false,
+        "id": "909add36-7fef-4702-a81c-0e5ab3339e69",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "21 Oct 2026 - 30 Oct 2026",
+        "closingdate": "29 October 2026 23:59",
+        "isregistered": false,
+        "id": "9263849b-1869-479d-a2ce-51a886d6d903",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Health-in-Check---Volunteer-Facilitators",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Health-in-Check---Volunteer-Facilitators",
+    "title": "Health in Check - Volunteer Facilitators",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-facilitator-1",
+        "schedule": "08 Oct 2026 - 05 Dec 2026",
+        "closingdate": "28 September 2026 23:59",
+        "isregistered": false,
+        "id": "6679ed69-fdab-4cc8-9240-051a08006f35",
+        "label": "Volunteer Facilitator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Health-in-Check---Volunteer-Facilitators-Nov-Dec",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Health-in-Check---Volunteer-Facilitators-Nov-Dec",
+    "title": "Health in Check - Volunteer Facilitators [Nov-Dec]",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-facilitator-1",
+        "schedule": "08 Oct 2026 - 05 Dec 2026",
+        "closingdate": "28 September 2026 23:59",
+        "isregistered": false,
+        "id": "9c79ceca-d5b9-4fb1-910d-933264c99e61",
+        "label": "Volunteer Facilitator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Health-in-Check---Volunteer-Facilitators-Oct-Nov",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Health-in-Check---Volunteer-Facilitators-Oct-Nov",
+    "title": "Health in Check - Volunteer Facilitators [Oct-Nov]",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-facilitator-1",
+        "schedule": "08 Oct 2026 - 07 Nov 2026",
+        "closingdate": "28 September 2026 23:59",
+        "isregistered": false,
+        "id": "ccf42c3e-ac0f-4415-a808-37112305b5c4",
+        "label": "Volunteer Facilitator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Health-in-Check--Radin-Mas-CC-31-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Health-in-Check--Radin-Mas-CC-31-Oct-2026",
+    "title": "Health in Check - Radin Mas CC (31 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "16 Oct 2026 - 31 Oct 2026",
+        "closingdate": "01 October 2026 23:59",
+        "isregistered": false,
+        "id": "1beca67f-f513-44ae-bbd4-ab5ae3adf467",
+        "label": "Volunteer Befriender"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Impact-IRL",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Impact-IRL",
+    "title": "Impact, IRL",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "participant-1",
+        "schedule": "31 Oct 2026 - 31 Oct 2026",
+        "closingdate": "31 October 2026 23:59",
+        "isregistered": false,
+        "id": "5e4b203f-8080-44a7-b30c-34bfe3d4dfa5",
+        "label": "Participant"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Intergen-Evening-Escapades--NTUC-HNH-Geylang-East-22-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Intergen-Evening-Escapades--NTUC-HNH-Geylang-East-22-Oct-2026",
+    "title": "Intergen Evening Escapades - NTUC HNH Geylang East (22 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "22 Oct 2026 - 22 Oct 2026",
+        "closingdate": "12 October 2026 23:59",
+        "isregistered": false,
+        "id": "e19bf10a-5086-4e84-a197-2c7cfab790c8",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "22 Oct 2026 - 22 Oct 2026",
+        "closingdate": "12 October 2026 23:59",
+        "isregistered": false,
+        "id": "9bf47140-0219-4257-a52f-592e915971a0",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Intergen-Evening-Escapades--NTUC-HNH-Pasir-Ris-7-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Intergen-Evening-Escapades--NTUC-HNH-Pasir-Ris-7-Oct-2026",
+    "title": "Intergen Evening Escapades - NTUC HNH Pasir Ris (7 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "07 Oct 2026 - 07 Oct 2026",
+        "closingdate": "28 September 2026 23:59",
+        "isregistered": false,
+        "id": "1b175585-cc53-4ec0-8d25-e0427b6ba073",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "07 Oct 2026 - 07 Oct 2026",
+        "closingdate": "28 September 2026 23:59",
+        "isregistered": false,
+        "id": "9fb01c36-c6a5-4f05-ab40-28ac1ae6b50b",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Kampung-Birthday-Club--MacPherson-27-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Kampung-Birthday-Club--MacPherson-27-Oct-2026",
+    "title": "Kampung Birthday Club - MacPherson (27 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "20 Oct 2026 - 27 Oct 2026",
+        "closingdate": "24 October 2026 23:59",
+        "isregistered": false,
+        "id": "58bea365-d194-4b48-8eb2-e966372277a2",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "20 Oct 2026 - 27 Oct 2026",
+        "closingdate": "24 October 2026 23:59",
+        "isregistered": false,
+        "id": "e24a20a3-4cb9-4379-abc0-2c91b53859d8",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/LitterLifters--Boon-Lay-10-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/LitterLifters--Boon-Lay-10-Oct-2026",
+    "title": "LitterLifters - Boon Lay (10 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "10 Oct 2026 - 10 Oct 2026",
+        "closingdate": "03 October 2026 23:59",
+        "isregistered": false,
+        "id": "71c57763-ff0f-4547-9b9d-10dd274422fd",
+        "label": "Volunteer Befriender"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/LitterLifters--Clementi-24-Oct-2026",
+    "status": 404,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/LitterLifters--Clementi-24-Oct-2026",
+    "title": "Page Not Found",
+    "soft_error": true,
+    "links": []
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/PICS-HomeCare--TriGenTTSH-Oct-2026--Nov-2027",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/PICS-HomeCare--TriGenTTSH-Oct-2026--Nov-2027",
+    "title": "PICS HomeCare - TriGen@TTSH (Oct 2026 - Nov 2027)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "31 Oct 2026 - 27 Nov 2027",
+        "closingdate": "11 October 2026 23:59",
+        "isregistered": false,
+        "id": "efba98fd-7da8-4c4f-bc46-e1028aee9c37",
+        "label": "Volunteer Befriender"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Play-For-All--APSN-9-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Play-For-All--APSN-9-Oct-2026",
+    "title": "Play For All - APSN (9 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "09 Oct 2026 - 09 Oct 2026",
+        "closingdate": "28 September 2026 23:59",
+        "isregistered": false,
+        "id": "8fba919e-a486-4e7c-80a3-3a878c22691f",
+        "label": "Volunteer Befriender"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Reground--Dungeon--Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Reground--Dungeon--Oct-2026",
+    "title": "Re:ground @ Dungeon - Oct 2026",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "participant-1",
+        "schedule": "01 Oct 2026 - 29 Oct 2026",
+        "closingdate": "31 October 2026 23:59",
+        "isregistered": false,
+        "id": "1ac93d24-8514-448c-881e-28776b010679",
+        "label": "Participant"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Reground--Dungeon--The-Scrapbook-Club",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Reground--Dungeon--The-Scrapbook-Club",
+    "title": "Re:ground @ Dungeon – The Scrapbook Club",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "participant-1",
+        "schedule": "08 Oct 2026 - 08 Oct 2026",
+        "closingdate": "01 October 2026 23:59",
+        "isregistered": false,
+        "id": "03f45c08-238d-435a-af0a-29c843bb3216",
+        "label": "Participant"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Silver-Crafts--Ren-Ci-10-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Silver-Crafts--Ren-Ci-10-Oct-2026",
+    "title": "Silver Crafts - Ren Ci (10 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "10 Oct 2026 - 10 Oct 2026",
+        "closingdate": "03 October 2026 23:59",
+        "isregistered": false,
+        "id": "86f452f5-3d32-4ea2-b064-6963154a7de9",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "10 Oct 2026 - 10 Oct 2026",
+        "closingdate": "03 October 2026 23:59",
+        "isregistered": false,
+        "id": "5cc6bd85-c3fb-48d7-8a2b-16635583dda6",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Silver-Crafts--Ren-Ci-24-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Silver-Crafts--Ren-Ci-24-Oct-2026",
+    "title": "Silver Crafts - Ren Ci (24 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "24 Oct 2026 - 24 Oct 2026",
+        "closingdate": "17 October 2026 23:59",
+        "isregistered": false,
+        "id": "6dc2d58c-7bb2-44e5-83f7-a87362c25f8c",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "24 Oct 2026 - 24 Oct 2026",
+        "closingdate": "17 October 2026 23:59",
+        "isregistered": false,
+        "id": "d2abff12-1d29-4212-9954-539c3b270ab8",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/SpecialHearts--THK-Sembawang-17-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/SpecialHearts--THK-Sembawang-17-Oct-2026",
+    "title": "SpecialHearts - THK Sembawang (17 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "17 Oct 2026 - 17 Oct 2026",
+        "closingdate": "09 October 2026 23:59",
+        "isregistered": false,
+        "id": "b2741b90-f8d8-44ed-bbf9-393369762d9f",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "17 Oct 2026 - 17 Oct 2026",
+        "closingdate": "09 October 2026 23:59",
+        "isregistered": false,
+        "id": "ec25efe5-8dca-40b7-b817-91e09148a2bf",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Study-Buddy--Bukit-Batok-3-Oct--28-Nov",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Study-Buddy--Bukit-Batok-3-Oct--28-Nov",
+    "title": "Study Buddy - Bukit Batok (3 Oct - 28 Nov)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "03 Oct 2026 - 28 Nov 2026",
+        "closingdate": "30 September 2026 23:59",
+        "isregistered": false,
+        "id": "f367a29b-17c7-4a6e-9275-e632c69fa65e",
+        "label": "Volunteer Befriender"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Study-Buddy--Bukit-Batok-7-Oct--25-Nov",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Study-Buddy--Bukit-Batok-7-Oct--25-Nov",
+    "title": "Study Buddy - Bukit Batok (7 Oct - 25 Nov)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "07 Oct 2026 - 25 Nov 2026",
+        "closingdate": "05 October 2026 23:59",
+        "isregistered": false,
+        "id": "6eb42fe5-c3b8-4973-8c84-9509b21dfbbd",
+        "label": "Volunteer Befriender"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Study-Buddy-PM--Bukit-Batok-3-Oct--28-Nov",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Study-Buddy-PM--Bukit-Batok-3-Oct--28-Nov",
+    "title": "Study Buddy PM - Bukit Batok (3 Oct - 28 Nov)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "03 Oct 2026 - 28 Nov 2026",
+        "closingdate": "30 September 2026 23:59",
+        "isregistered": false,
+        "id": "9163e24b-71ba-4bd1-854c-44292e86dab3",
+        "label": "Volunteer Befriender"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Youth-Digital-Buddies--Wisma-Geylang-7-to-28-Oct-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Youth-Digital-Buddies--Wisma-Geylang-7-to-28-Oct-2026",
+    "title": "Youth Digital Buddies - Wisma Geylang (7 to 28 Oct 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "07 Oct 2026 - 28 Oct 2026",
+        "closingdate": "04 October 2026 23:59",
+        "isregistered": false,
+        "id": "7b201361-c99a-4c79-8dbe-c1616324dad7",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "07 Oct 2026 - 28 Oct 2026",
+        "closingdate": "04 October 2026 23:59",
+        "isregistered": false,
+        "id": "34c51221-7052-4a2b-9b9d-cc4f23720d45",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Bridging-Generations--Our-Tampines-Hub-10-Nov-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Bridging-Generations--Our-Tampines-Hub-10-Nov-2026",
+    "title": "Bridging Generations - Our Tampines Hub (10 Nov 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "10 Nov 2026 - 10 Nov 2026",
+        "closingdate": "06 November 2026 23:59",
+        "isregistered": false,
+        "id": "cf113e3d-f914-4481-89a7-1e7e09b6c11b",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "10 Nov 2026 - 10 Nov 2026",
+        "closingdate": "06 November 2026 23:59",
+        "isregistered": false,
+        "id": "ce1735d1-cb9d-4345-a0eb-7bef55def285",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Bridging-Generations--Our-Tampines-Hub-8-Dec-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Bridging-Generations--Our-Tampines-Hub-8-Dec-2026",
+    "title": "Bridging Generations - Our Tampines Hub (8 Dec 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "10 Nov 2026 - 10 Nov 2026",
+        "closingdate": "04 December 2026 23:59",
+        "isregistered": false,
+        "id": "fe21ba55-c9f5-4d24-85c5-830adf2b9f30",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "08 Dec 2026 - 08 Dec 2026",
+        "closingdate": "04 December 2026 23:59",
+        "isregistered": false,
+        "id": "1ebfe695-6ea3-469d-950b-a0f2d55f2304",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Community-Connectors--Ang-Mo-Kio-7-Nov-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Community-Connectors--Ang-Mo-Kio-7-Nov-2026",
+    "title": "Community Connectors - Ang Mo Kio (7 Nov 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "07 Nov 2026 - 07 Nov 2026",
+        "closingdate": "04 November 2026 23:59",
+        "isregistered": false,
+        "id": "f5c03859-1831-40e2-bef4-9f3e4606e330",
+        "label": "Volunteer Befriender"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/FlowerFolks--Gardens-by-the-Bay-14-Nov-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/FlowerFolks--Gardens-by-the-Bay-14-Nov-2026",
+    "title": "FlowerFolks - Gardens by the Bay (14 Nov 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "14 Nov 2026 - 14 Nov 2026",
+        "closingdate": "09 November 2026 23:59",
+        "isregistered": false,
+        "id": "87056c25-9198-4452-bf88-b64d44163014",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "13 Nov 2026 - 14 Nov 2026",
+        "closingdate": "09 November 2026 23:59",
+        "isregistered": false,
+        "id": "40901ba9-853f-4bd4-be79-d689a04d1354",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Gen-Gala-x-Fashion-Parade--Jalan-Besar-28-Nov-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Gen-Gala-x-Fashion-Parade--Jalan-Besar-28-Nov-2026",
+    "title": "Gen Gala x Fashion Parade - Jalan Besar (28 Nov 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "28 Nov 2026 - 28 Nov 2026",
+        "closingdate": "28 November 2026 23:59",
+        "isregistered": false,
+        "id": "6e5dc4a8-ce28-4601-9005-e23c03bc1c91",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "28 Nov 2026 - 28 Nov 2026",
+        "closingdate": "28 November 2026 23:59",
+        "isregistered": false,
+        "id": "8be1eb4e-e1d9-492f-ad31-62c6b54cb98b",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Happy-Hour-with-Seniors--Jurong-West-25-Nov-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Happy-Hour-with-Seniors--Jurong-West-25-Nov-2026",
+    "title": "Happy Hour with Seniors - Jurong West (25 Nov 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "25 Nov 2026 - 25 Nov 2026",
+        "closingdate": "24 November 2026 23:59",
+        "isregistered": false,
+        "id": "b13af7d1-1c5c-4b03-83ea-1f1750560ad8",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "18 Nov 2026 - 25 Nov 2026",
+        "closingdate": "24 November 2026 23:59",
+        "isregistered": false,
+        "id": "2e624d6d-bf08-4757-86ab-12a048836ddd",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Happy-Hour-with-Seniors--Tampines-27-Nov-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Happy-Hour-with-Seniors--Tampines-27-Nov-2026",
+    "title": "Happy Hour with Seniors - Tampines (27 Nov 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "27 Nov 2026 - 27 Nov 2026",
+        "closingdate": "26 November 2026 23:59",
+        "isregistered": false,
+        "id": "2f67ff20-d101-41d6-840b-d114351ff7e0",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "18 Nov 2026 - 27 Nov 2026",
+        "closingdate": "26 November 2026 23:59",
+        "isregistered": false,
+        "id": "844b09bb-d327-4f93-8980-32aba8144751",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Intergen-Evening-Escapades--NTUC-HNH-Geylang-East-19-Nov-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Intergen-Evening-Escapades--NTUC-HNH-Geylang-East-19-Nov-2026",
+    "title": "Intergen Evening Escapades - NTUC HNH Geylang East (19 Nov 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "19 Nov 2026 - 19 Nov 2026",
+        "closingdate": "09 November 2026 23:59",
+        "isregistered": false,
+        "id": "b68e38d5-8cd3-4075-827d-88b84f1489ec",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "19 Nov 2026 - 19 Nov 2026",
+        "closingdate": "09 November 2026 23:59",
+        "isregistered": false,
+        "id": "7a1d172d-14a3-4c71-a5f6-bf71e3d5ad63",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Intergen-Kopi-Kakis--NTUC-HNH-Pasir-Ris-7-Nov-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Intergen-Kopi-Kakis--NTUC-HNH-Pasir-Ris-7-Nov-2026",
+    "title": "Intergen Kopi Kakis - NTUC HNH Pasir Ris (7 Nov 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "07 Nov 2026 - 07 Nov 2026",
+        "closingdate": "26 October 2026 23:59",
+        "isregistered": false,
+        "id": "fcd3ed29-6593-4a10-8a8c-af804d405229",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "07 Nov 2026 - 07 Nov 2026",
+        "closingdate": "26 October 2026 23:59",
+        "isregistered": false,
+        "id": "6b65e725-7f72-468f-ac7f-0cd0a794dc2b",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Play-For-All--APSN-13-Nov-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Play-For-All--APSN-13-Nov-2026",
+    "title": "Play For All - APSN (13 Nov 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "13 Nov 2026 - 13 Nov 2026",
+        "closingdate": "02 November 2026 23:59",
+        "isregistered": false,
+        "id": "fc3bb26b-a1ab-4ffe-a700-98139b57560a",
+        "label": "Volunteer Befriender"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Silver-Crafts--Ren-Ci-21-Nov-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Silver-Crafts--Ren-Ci-21-Nov-2026",
+    "title": "Silver Crafts - Ren Ci (21 Nov 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "21 Nov 2026 - 21 Nov 2026",
+        "closingdate": "14 November 2026 23:59",
+        "isregistered": false,
+        "id": "4a1d5836-fa2f-47f4-a3e5-e5f6fcc78e31",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "21 Nov 2026 - 21 Nov 2026",
+        "closingdate": "14 November 2026 23:59",
+        "isregistered": false,
+        "id": "d88aaa45-5650-4e26-b51a-675c9608532a",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Silver-Crafts--Ren-Ci-7-Nov-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Silver-Crafts--Ren-Ci-7-Nov-2026",
+    "title": "Silver Crafts - Ren Ci (7 Nov 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "07 Nov 2026 - 07 Nov 2026",
+        "closingdate": "31 October 2026 23:59",
+        "isregistered": false,
+        "id": "e1b18602-5dac-4dc1-b7aa-245abf43fca4",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "07 Nov 2026 - 07 Nov 2026",
+        "closingdate": "31 October 2026 23:59",
+        "isregistered": false,
+        "id": "163df7ce-243b-4ff2-bcf6-f4eb637105de",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/SpecialHearts--THK-Sembawang-21-Nov-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/SpecialHearts--THK-Sembawang-21-Nov-2026",
+    "title": "SpecialHearts - THK Sembawang (21 Nov 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "21 Nov 2026 - 21 Nov 2026",
+        "closingdate": "13 November 2026 23:59",
+        "isregistered": false,
+        "id": "6758dab0-d732-45b0-8f0a-4de411973202",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "21 Nov 2026 - 21 Nov 2026",
+        "closingdate": "13 November 2026 23:59",
+        "isregistered": false,
+        "id": "2fecb609-d764-44d8-bfd3-c6c59bb4fb7d",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/FlowerFolks--Gardens-by-the-Bay-4-Dec-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/FlowerFolks--Gardens-by-the-Bay-4-Dec-2026",
+    "title": "FlowerFolks - Gardens by the Bay (4 Dec 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "04 Dec 2026 - 04 Dec 2026",
+        "closingdate": "30 November 2026 23:59",
+        "isregistered": false,
+        "id": "e741a909-e97e-444f-9708-18c7fd6d352f",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "03 Dec 2026 - 04 Dec 2026",
+        "closingdate": "30 November 2026 23:59",
+        "isregistered": false,
+        "id": "81b08a58-511d-49a3-b240-35ff242dd5b4",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Happy-Hour-with-Seniors--Chai-Chee-17-Dec-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Happy-Hour-with-Seniors--Chai-Chee-17-Dec-2026",
+    "title": "Happy Hour with Seniors - Chai Chee (17 Dec 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "17 Dec 2026 - 17 Dec 2026",
+        "closingdate": "16 December 2026 23:59",
+        "isregistered": false,
+        "id": "12801b3f-2ed8-4586-84df-b2081c5ad2d2",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "09 Dec 2026 - 17 Dec 2026",
+        "closingdate": "16 December 2026 23:59",
+        "isregistered": false,
+        "id": "65e73a95-3666-4622-9ca4-2f00b53dffc9",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Happy-Hour-with-Seniors--Jurong-West-23-Dec-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Happy-Hour-with-Seniors--Jurong-West-23-Dec-2026",
+    "title": "Happy Hour with Seniors - Jurong West (23 Dec 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "23 Dec 2026 - 23 Dec 2026",
+        "closingdate": "22 December 2026 23:59",
+        "isregistered": false,
+        "id": "18eca405-ae8e-4d8a-a66e-8f8700a9edcf",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "16 Dec 2026 - 23 Dec 2026",
+        "closingdate": "22 December 2026 23:59",
+        "isregistered": false,
+        "id": "a214e669-7723-4fd2-aab8-f0b9f97a7613",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Happy-Hour-with-Seniors--Tampines-18-Dec-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Happy-Hour-with-Seniors--Tampines-18-Dec-2026",
+    "title": "Happy Hour with Seniors - Tampines (18 Dec 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "18 Dec 2026 - 18 Dec 2026",
+        "closingdate": "17 December 2026 23:59",
+        "isregistered": false,
+        "id": "9e9776e9-12de-4fa0-89a1-58c71159a1d5",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "10 Dec 2026 - 18 Dec 2026",
+        "closingdate": "17 December 2026 23:59",
+        "isregistered": false,
+        "id": "ab637f5a-5689-4c9c-8a84-e81d3a1b2a8d",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Intergen-Evening-Escapades--NTUC-HNH-Geylang-East-17-Dec-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Intergen-Evening-Escapades--NTUC-HNH-Geylang-East-17-Dec-2026",
+    "title": "Intergen Evening Escapades - NTUC HNH Geylang East (17 Dec 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "17 Dec 2026 - 17 Dec 2026",
+        "closingdate": "07 December 2026 23:59",
+        "isregistered": false,
+        "id": "3cd18959-52ef-44a9-bc41-7d7e2179ebaa",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "17 Dec 2026 - 17 Dec 2026",
+        "closingdate": "07 December 2026 23:59",
+        "isregistered": false,
+        "id": "91cf79c6-9b33-4057-a8eb-3c3222c4ccb9",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Intergen-Evening-Escapades--NTUC-HNH-Pasir-Ris-9-Dec-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Intergen-Evening-Escapades--NTUC-HNH-Pasir-Ris-9-Dec-2026",
+    "title": "Intergen Evening Escapades - NTUC HNH Pasir Ris (9 Dec 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "09 Dec 2026 - 09 Dec 2026",
+        "closingdate": "30 November 2026 23:59",
+        "isregistered": false,
+        "id": "c2021c59-9d4e-410f-afee-179272f7c707",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "09 Dec 2026 - 09 Dec 2026",
+        "closingdate": "30 November 2026 23:59",
+        "isregistered": false,
+        "id": "f64dab85-932b-4afb-b719-f950ea6f57e7",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Play-For-All--APSN-11-Dec-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Play-For-All--APSN-11-Dec-2026",
+    "title": "Play For All - APSN (11 Dec 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "11 Dec 2026 - 11 Dec 2026",
+        "closingdate": "30 November 2026 23:59",
+        "isregistered": false,
+        "id": "d45b28bf-1008-4e77-8ff9-2b04cd899650",
+        "label": "Volunteer Befriender"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/SpecialHearts--THK-Sembawang-12-Dec-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/SpecialHearts--THK-Sembawang-12-Dec-2026",
+    "title": "SpecialHearts - THK Sembawang (12 Dec 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "12 Dec 2026 - 12 Dec 2026",
+        "closingdate": "04 December 2026 23:59",
+        "isregistered": false,
+        "id": "06a06063-69a0-4d51-bda1-f2c7ebad8be4",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "12 Dec 2026 - 12 Dec 2026",
+        "closingdate": "04 December 2026 23:59",
+        "isregistered": false,
+        "id": "98621306-6e1a-4bfa-8ca7-141f6303db93",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Visually-Impaired-Sensory-Tour--GBTB-12-Dec-2026",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Visually-Impaired-Sensory-Tour--GBTB-12-Dec-2026",
+    "title": "Visually Impaired Sensory Tour - GBTB (12 Dec 2026)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "11 Dec 2026 - 12 Dec 2026",
+        "closingdate": "07 December 2026 23:59",
+        "isregistered": false,
+        "id": "bbdbe72f-e539-49af-927e-c9172c31688e",
+        "label": "Volunteer Befriender"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2027/01/FlowerFolks--Gardens-by-the-Bay-16-Jan-2027",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2027/01/FlowerFolks--Gardens-by-the-Bay-16-Jan-2027",
+    "title": "FlowerFolks - Gardens by the Bay (16 Jan 2027)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "16 Jan 2027 - 16 Jan 2027",
+        "closingdate": "11 January 2027 23:59",
+        "isregistered": false,
+        "id": "a41f6db7-fa7c-4de6-b1b7-f392e93c4728",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "15 Jan 2027 - 16 Jan 2027",
+        "closingdate": "11 January 2027 23:59",
+        "isregistered": false,
+        "id": "13c4e2d2-2c77-47e6-a870-e38d8625d655",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2027/01/Healthcare-Youth-Leaders-Programme-20",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2027/01/Healthcare-Youth-Leaders-Programme-20",
+    "title": "Healthcare Youth Leaders Programme 2.0",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "aspirant-1",
+        "schedule": "09 Jan 2027 - 28 Feb 2027",
+        "closingdate": "18 October 2026 23:59",
+        "isregistered": false,
+        "id": "9c6e3b98-c89b-4e4f-9c2b-25e5a62b4d18",
+        "label": "Aspirant"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2027/01/SpecialHearts--THK-Sembawang-23-Jan-2027",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2027/01/SpecialHearts--THK-Sembawang-23-Jan-2027",
+    "title": "SpecialHearts - THK Sembawang (23 Jan 2027)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "23 Jan 2027 - 23 Jan 2027",
+        "closingdate": "18 January 2027 23:59",
+        "isregistered": false,
+        "id": "05f261fb-edfe-403e-beb7-736c2f125217",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "23 Jan 2027 - 23 Jan 2027",
+        "closingdate": "18 January 2027 23:59",
+        "isregistered": false,
+        "id": "9cd4318c-8639-4c83-8854-fdb8dcf534a2",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2027/02/FlowerFolks--Gardens-by-the-Bay-20-Feb-2027",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2027/02/FlowerFolks--Gardens-by-the-Bay-20-Feb-2027",
+    "title": "FlowerFolks - Gardens by the Bay (20 Feb 2027)",
+    "soft_error": false,
+    "links": [],
+    "roles": [
+      {
+        "idContent": "volunteer-befriender-1",
+        "schedule": "20 Feb 2027 - 20 Feb 2027",
+        "closingdate": "15 February 2027 23:59",
+        "isregistered": false,
+        "id": "716bf169-61ff-423a-92ff-8efbe00370d8",
+        "label": "Volunteer Befriender"
+      },
+      {
+        "idContent": "volunteer-coordinator-2",
+        "schedule": "19 Feb 2027 - 20 Feb 2027",
+        "closingdate": "15 February 2027 23:59",
+        "isregistered": false,
+        "id": "7e7ead0c-9aec-4556-9556-b3c50069e206",
+        "label": "Volunteer Coordinator"
+      }
+    ]
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/events/adult-cca-fair-mrt809ge",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/events/adult-cca-fair-mrt809ge",
+    "title": "Adult CCA Fair | Discover NYC",
+    "soft_error": false,
+    "links": []
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/events/an-intergenerational-book-club-october-meet-up-msa3noc9",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/events/an-intergenerational-book-club-october-meet-up-msa3noc9",
+    "title": "An Intergenerational Book Club - October Meet Up | Discover NYC",
+    "soft_error": false,
+    "links": []
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/events/founder-mode-one-day-one-market-one-entire-company-mtttdlkj",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/events/founder-mode-one-day-one-market-one-entire-company-mtttdlkj",
+    "title": "SLEUTH MODE: crack a fraud case by building your own AI agents | Discover NYC",
+    "soft_error": false,
+    "links": []
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/events/look-the-part-own-the-interview-mtsbacd5",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/events/look-the-part-own-the-interview-mtsbacd5",
+    "title": "Look the Part. Own the Interview. (8 Oct) | Discover NYC",
+    "soft_error": false,
+    "links": []
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/events/play-your-future-at-the-witgritfit-career-simulation-workshop-26-oct-2026-mtyicdhn",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/events/play-your-future-at-the-witgritfit-career-simulation-workshop-26-oct-2026-mtyicdhn",
+    "title": "Play Your Future at the WITGRITFIT Career Simulation Workshop (26 Oct 2026) | Discover NYC",
+    "soft_error": false,
+    "links": []
+  },
+  {
+    "url": "https://discover.nyc.gov.sg/events/singapore-hospitality-tourism-conference-2026-mu0x8rwb",
+    "status": 200,
+    "final_url": "https://discover.nyc.gov.sg/events/singapore-hospitality-tourism-conference-2026-mu0x8rwb",
+    "title": "Singapore Hospitality & Tourism Conference 2026 | Discover NYC",
+    "soft_error": false,
+    "links": []
+  },
+  {
+    "url": "https://for.sg/trigen-ttsh-pics",
+    "status": 200,
+    "final_url": "https://form.gov.sg/6a6383f52387926d9051e1a7",
+    "title": "TriGen@NHG PICS HomeCare Oct 2026 Youth Volunteer Recruitment",
+    "soft_error": false,
+    "links": []
+  },
+  {
+    "url": "https://go.gov.sg/hylp-c2",
+    "status": 200,
+    "final_url": "https://form.gov.sg/69a7a559e737224f61c7204d",
+    "title": "Healthcare Youth Leaders Programme (HYLP) 2.0 Application Form",
+    "soft_error": false,
+    "links": []
+  },
+  {
+    "url": "https://innovation-thinksport.agorize-platform.com/en/challenges/sic-gennext-challenge-2026/agreements?lang=en",
+    "status": 200,
+    "final_url": "https://innovation-thinksport.agorize-platform.com/en/challenges/sic-gennext-challenge-2026/agreements?lang=en",
+    "title": "Thinksport Innovation - 🎓 Gen-next Challenge 2026",
+    "soft_error": false,
+    "links": []
+  },
+  {
+    "url": "https://internships.tech.gov.sg/apply",
+    "status": 200,
+    "final_url": "https://internships.tech.gov.sg/apply",
+    "title": "Apply | GovTech Internships 2026",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://internships.tech.gov.sg/apply",
+        "text": "How to Apply"
+      },
+      {
+        "url": "https://go.gov.sg/govtech-internship-apply",
+        "text": "Apply Here"
+      },
+      {
+        "url": "https://go.gov.sg/govtech-internship-apply",
+        "text": "Apply Here"
+      }
+    ]
+  },
+  {
+    "url": "https://lkyspp.nus.edu.sg/research/case-insights-unit/case-writing-competition/case-writing-competition-2027",
+    "status": 200,
+    "final_url": "https://lkyspp.nus.edu.sg/research/case-insights-unit/case-writing-competition/case-writing-competition-2027",
+    "title": "",
+    "soft_error": false,
+    "links": []
+  },
+  {
+    "url": "https://mercadantecompetition.com/",
+    "status": 200,
+    "final_url": "https://mercadantecompetition.com/",
+    "title": "International Clarinet Competition \"S. Mercadante\" &#8211; Concorso Internazionale di Clarinetto",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://mercadantecompetition.com/registration/",
+        "text": "Registration"
+      },
+      {
+        "url": "https://mercadantecompetition.com/registration/",
+        "text": "Registration"
+      },
+      {
+        "url": "https://mercadantecompetition.com/registration/",
+        "text": "Registration"
+      },
+      {
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSeft8gGmzBIAo2rkKvTn3lMm_Z56k6QtiWT9X63G9A7QLOFRw/viewform?usp=pp_url",
+        "text": "Senior Soloists registration"
+      },
+      {
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSdOrXAsC5x6A-hfmBgaw9tSC9Eyu-dsd0fdQpJUcdZTyKFPAQ/viewform?usp=pp_url",
+        "text": "Junior Soloists registration"
+      },
+      {
+        "url": "https://mercadantecompetition.com/registration/",
+        "text": "Registration"
+      }
+    ]
+  },
+  {
+    "url": "https://nipponpaint.com.sg/ayda/?srsltid=AfmBOooOjIEJQ6QI_yh24SnMOA3TXXmoSuXhM7YVLoZveVW5L6KIWo7I",
+    "status": 200,
+    "final_url": "https://nipponpaint.com.sg/ayda/?srsltid=AfmBOooOjIEJQ6QI_yh24SnMOA3TXXmoSuXhM7YVLoZveVW5L6KIWo7I",
+    "title": "AYDA 2026 - Nippon Paint Singapore",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://nipponpaint.com.sg/ayda/registration",
+        "text": "Submit Your Entry"
+      },
+      {
+        "url": "https://nipponpaint.com.sg/ayda/registration",
+        "text": "Submit"
+      },
+      {
+        "url": "https://nipponpaint.com.sg/ayda/registration",
+        "text": "SUBMIT"
+      },
+      {
+        "url": "https://nipponpaint.com.sg/ayda/registration",
+        "text": "Submit Your Entry"
+      },
+      {
+        "url": "https://nipponpaint.com.sg/my-account",
+        "text": "sign up for one"
+      }
+    ]
+  },
+  {
+    "url": "https://nipponpaint.com.sg/my-account",
+    "status": 200,
+    "final_url": "https://nipponpaint.com.sg/my-account/",
+    "title": "My account - Nippon Paint Singapore",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://nipponpaint.com.sg/my-account",
+        "text": "sign up for one"
+      }
+    ]
+  },
+  {
+    "url": "https://northeast.cdc.gov.sg/programmes/employment-opportunities/nexus-internship/",
+    "status": 200,
+    "final_url": "https://northeast.cdc.gov.sg/programmes/employment-opportunities/nexus-internship/",
+    "title": "NExus Internship | North East CDC",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://go.gov.sg/necdccip",
+        "text": "Apply now (opens in new tab)"
+      },
+      {
+        "url": "https://go.gov.sg/nexusalumni",
+        "text": "Apply now (opens in new tab)"
+      }
+    ]
+  },
+  {
+    "url": "https://rsis.edu.sg/gpo/gpo-events-calendar/the-2026-rsis-policy-pitch-competition-for-students-in-asean-universities/",
+    "status": 403,
+    "final_url": "https://rsis.edu.sg/gpo/gpo-events-calendar/the-2026-rsis-policy-pitch-competition-for-students-in-asean-universities/",
+    "title": "Just a moment...",
+    "soft_error": true,
+    "links": []
+  },
+  {
+    "url": "https://worldyoungeconomist.org/",
+    "status": 200,
+    "final_url": "https://worldyoungeconomist.org/",
+    "title": "World Young Economist (WYE) | International Economics Essay Competition & Research Community",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://academy.wyeconomist.org/checkout/Course/42230",
+        "text": "Register →"
+      },
+      {
+        "url": "https://worldyoungeconomist.org/membership-en.dc.html",
+        "text": "Join the WYE galaxy · I Register Get announcements and use the library, forum and account features. Register now →"
+      },
+      {
+        "url": "https://worldyoungeconomist.org/membership-en.dc.html",
+        "text": "04 Register Get announcements and use the site library, forum and account features. →"
+      },
+      {
+        "url": "https://worldyoungeconomist.org/join-en.dc.html",
+        "text": "05 Join Us Start or join a school chapter, or apply for an editorial, research, events, resources or communications role. →"
+      },
+      {
+        "url": "https://academy.wyeconomist.org/checkout/c/Group/27112",
+        "text": "register a WYE account"
+      },
+      {
+        "url": "https://worldyoungeconomist.org/publications/grad-admissions.html",
+        "text": "A US/UK graduate applications For students and parents"
+      },
+      {
+        "url": "https://worldyoungeconomist.org/join-en.dc.html",
+        "text": "See every way to take part Compare the responsibilities and application routes of both tracks and find your place. Become one of us →"
+      },
+      {
+        "url": "https://worldyoungeconomist.org/wall-en.dc.html#wall",
+        "text": "DONE Can volunteer hours be certified? School applications need a formal record. Year 13 student · Suzhou · 13 May 2026"
+      },
+      {
+        "url": "https://worldyoungeconomist.org/membership-en.dc.html",
+        "text": "Register"
+      }
+    ]
+  },
+  {
+    "url": "https://www.caas.gov.sg/careers/scholarships-and-early-career-programmes/internships/",
+    "status": 200,
+    "final_url": "https://www.caas.gov.sg/careers/scholarships-and-early-career-programmes/internships/",
+    "title": "Internships | Civil Aviation Authority of Singapore",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://www.caas.gov.sg/careers/scholarships-and-early-career-programmes/internships/#eeda41c24cea366161b0c70e5b43d3da",
+        "text": "Who can apply for the internship"
+      },
+      {
+        "url": "https://www.caas.gov.sg/careers/scholarships-and-early-career-programmes/internships/#6ec5129da87afca8bf690fa6263cba7f",
+        "text": "How to apply"
+      }
+    ]
+  },
+  {
+    "url": "https://www.careers.gov.sg/join-us/grit-gov/",
+    "status": 200,
+    "final_url": "https://www.careers.gov.sg/join-us/grit-gov/",
+    "title": "GRIT@Gov | Careers@Gov",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://jobs.careers.gov.sg/",
+        "text": "Apply now ↗ (opens in new tab)"
+      },
+      {
+        "url": "https://jobs.careers.gov.sg/",
+        "text": "Apply now (opens in new tab)"
+      },
+      {
+        "url": "https://jobs.careers.gov.sg/",
+        "text": "Apply now (opens in new tab)"
+      }
+    ]
+  },
+  {
+    "url": "https://www.contest.comap.com/scudem/registration.html",
+    "status": 200,
+    "final_url": "https://www.contest.comap.com/scudem/registration.html",
+    "title": "COMAP: Mathematics Instructional Resources for Innovative Educators",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://www.contest.comap.com/scudem/registration.html",
+        "text": "Team Registration"
+      },
+      {
+        "url": "https://forms.comap.org/261473238311048",
+        "text": "Click Here To Register Your SCUDEM XI 2026 Team"
+      }
+    ]
+  },
+  {
+    "url": "https://www.contest.comap.com/scudem/student_info.html",
+    "status": 200,
+    "final_url": "https://www.contest.comap.com/scudem/student_info.html",
+    "title": "COMAP: Mathematics Instructional Resources for Innovative Educators",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://www.contest.comap.com/scudem/registration.html",
+        "text": "Team Registration"
+      },
+      {
+        "url": "https://www.contest.comap.com/scudem/registration.html",
+        "text": "register"
+      }
+    ]
+  },
+  {
+    "url": "https://www.cpf.gov.sg/member/who-we-are/careers/internship",
+    "status": 200,
+    "final_url": "https://www.cpf.gov.sg/member/who-we-are/careers/internship",
+    "title": "CPFB | CPF Board Internship",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://www.cpf.gov.sg/member/account-services/providing-for-your-loved-ones/making-a-cpf-nomination",
+        "text": "CPF nomination"
+      },
+      {
+        "url": "https://www.cpf.gov.sg/member/account-services/providing-for-your-loved-ones/making-a-cpf-nomination",
+        "text": "CPF nomination"
+      }
+    ]
+  },
+  {
+    "url": "https://www.enterprisesg.gov.sg/about-us/careers/for-students-and-graduates/internships",
+    "status": 200,
+    "final_url": "https://www.enterprisesg.gov.sg/about-us/careers/for-students-and-graduates/internships",
+    "title": "Internships",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://impress.ai/html-widget/chat-widget/789dcfa5-a0d8-49a4-b2ff-0d3c226815dd/",
+        "text": "Apply now"
+      },
+      {
+        "url": "https://impress.ai/html-widget/chat-widget/2dd73dfb-2575-4cb5-b7dc-e1a5e22aab7c/",
+        "text": "Apply now"
+      }
+    ]
+  },
+  {
+    "url": "https://www.federalreserve.gov/aboutthefed/educational-tools/college-fed-challenge-overview.htm",
+    "status": 200,
+    "final_url": "https://www.federalreserve.gov/aboutthefed/educational-tools/college-fed-challenge-overview.htm",
+    "title": "The Fed - College Fed Challenge 2026 Overview",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://www.federalreserve.gov/apps/ReportingForms/?reportTypesIdsJson=[",
+        "text": "Applications/Structure Change"
+      },
+      {
+        "url": "https://boardofgovernors.gov1.qualtrics.com/jfe/form/SV_9Suh3WBv5pVYr7E",
+        "text": "Register Your Team"
+      },
+      {
+        "url": "https://boardofgovernors.gov1.qualtrics.com/jfe/form/SV_08MS9btDuyG5ODA",
+        "text": "Submit Your Video Presentation"
+      }
+    ]
+  },
+  {
+    "url": "https://www.globalenvironmentchallenge.org/",
+    "status": 200,
+    "final_url": "https://www.globalenvironmentchallenge.org/",
+    "title": "IYEC · International Youth Environmental Challenge",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSc487tftJjAfLNuFsVuFODGCr7ljV-8DFdXyx9Lb5Szlxv24w/viewform",
+        "text": "Register Now"
+      },
+      {
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSc487tftJjAfLNuFsVuFODGCr7ljV-8DFdXyx9Lb5Szlxv24w/viewform",
+        "text": "Submit Your Project"
+      },
+      {
+        "url": "https://www.globalenvironmentchallenge.org/#register",
+        "text": "Register"
+      }
+    ]
+  },
+  {
+    "url": "https://www.gycata.com/writing2026season4",
+    "status": 200,
+    "final_url": "https://www.gycata.com/writing2026season4",
+    "title": "2026世界青少年寫作大賽-第四季 | GYCATA",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://www.gycata.com/_files/ugd/ce33ab_7657d823a2a443e395407373803f1d4c.xls?dn=%E5%85%A8%E7%90%83%E5%9C%98%E9%AB%94%E7%99%BB%E8%A8%98%E8%A1%A8%E6%A0%BC%E6%A8%A1%E7%89%88%20(1).xls",
+        "text": "Group Registration"
+      }
+    ]
+  },
+  {
+    "url": "https://www.makethechange.sg/youthcompetition2025",
+    "status": 200,
+    "final_url": "https://www.makethechange.sg/youthcompetition2025",
+    "title": "Competition Details | Make The Change",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://padlet.com/makethechange/submission-request/oO6VvP1xo3MMbrwD",
+        "text": "Submit your entries HERE"
+      },
+      {
+        "url": "https://padlet.com/makethechange/submission-request/RdZYv7lyJm3QbrPl",
+        "text": "Submit your entries HERE"
+      },
+      {
+        "url": "https://padlet.com/makethechange/submission-request/jA7rbn9KZVEJv498",
+        "text": "Submit your entries HERE"
+      }
+    ]
+  },
+  {
+    "url": "https://www.nparks.gov.sg/get-involved/volunteer",
+    "status": 200,
+    "final_url": "https://www.nparks.gov.sg/get-involved/volunteer",
+    "title": "Volunteer with us",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://www.nparks.gov.sg/docs/default-source/get-involved-doc/volunteer/volunteer-registration-sign-up-opportunity.pdf",
+        "text": "registration guide"
+      },
+      {
+        "url": "https://www.publichygienecouncil.sg/beachcleanup",
+        "text": "register with NEA and PHC"
+      }
+    ]
+  },
+  {
+    "url": "https://www.nyeawards.com/",
+    "status": 200,
+    "final_url": "https://www.nyeawards.com/",
+    "title": "NYEA 2026",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://acesg.sharepoint.com/:w:/s/ACE2/IQA6r_yUx2cvQaDOBxPQZV6jAQ72_vTrEIc33RghN_JNzUU?e=XmQDRe",
+        "text": "NYEA 2026 Application Form"
+      }
+    ]
+  },
+  {
+    "url": "https://www.nyoc.sg/",
+    "status": 200,
+    "final_url": "https://www.nyoc.sg/",
+    "title": "National Youth Orator Championships 2026 | Singapore Youth Public Speaking Competition",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSeX0GIr2XUqWAvfCMMJQK-_lwiYCwrbvZxQye63Phh4_h1yjA/viewform?usp=sharing&ouid=114895934544657267334",
+        "text": "Register"
+      },
+      {
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSeX0GIr2XUqWAvfCMMJQK-_lwiYCwrbvZxQye63Phh4_h1yjA/viewform?usp=sharing&ouid=114895934544657267334",
+        "text": "Register"
+      },
+      {
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSeX0GIr2XUqWAvfCMMJQK-_lwiYCwrbvZxQye63Phh4_h1yjA/viewform?usp=sharing&ouid=114895934544657267334",
+        "text": "Register"
+      },
+      {
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSeX0GIr2XUqWAvfCMMJQK-_lwiYCwrbvZxQye63Phh4_h1yjA/viewform?usp=sharing&ouid=114895934544657267334",
+        "text": "Register for the Championships"
+      }
+    ]
+  },
+  {
+    "url": "https://www.portraitsocietyofcanada.com/yportrait.php",
+    "status": 200,
+    "final_url": "https://www.portraitsocietyofcanada.com/yportrait.php",
+    "title": "Portrait Society of Canada",
+    "soft_error": false,
+    "links": []
+  },
+  {
+    "url": "https://www.scape.sg/whats-on/ownthemic/",
+    "status": 200,
+    "final_url": "https://www.scape.sg/whats-on/ownthemic/",
+    "title": "[Open Call] Own The Mic: Skill-Building Workshop - *SCAPE Singapore",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://bit.ly/scape_ownthemicform",
+        "text": "Register by 10 October 2026 Register by 10 October 2026 Register by 10 October 2026"
+      },
+      {
+        "url": "https://bit.ly/scape_ownthemicform",
+        "text": "Register by 10 October 2026 Register by 10 October 2026 Register by 10 October 2026"
+      },
+      {
+        "url": "https://bit.ly/scape_ownthemicform",
+        "text": "Register By 10 October 2026"
+      }
+    ]
+  },
+  {
+    "url": "https://www.scape.sg/whats-on/scape-frequency/",
+    "status": 200,
+    "final_url": "https://www.scape.sg/whats-on/scape-frequency/",
+    "title": "[OPEN CALL] *SCAPE FREQUENCY - *SCAPE Singapore",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://bit.ly/scape-frequency-form",
+        "text": "Submit Your Proposal By 4 October Submit Your Proposal By 4 October Submit Your Proposal By 4 October"
+      },
+      {
+        "url": "https://bit.ly/scape-frequency-form",
+        "text": "Submit Your Proposal By 4 October Submit Your Proposal By 4 October Submit Your Proposal By 4 October"
+      },
+      {
+        "url": "https://bit.ly/scape-frequency-form",
+        "text": "Submit Your Proposal By 4 October"
+      }
+    ]
+  },
+  {
+    "url": "https://www.sid.gov.sg/careers/internships-scholarships/internships/",
+    "status": 200,
+    "final_url": "https://www.sid.gov.sg/careers/internships-scholarships/internships/",
+    "title": "Internships | Security and Intelligence Division",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://jobs.careers.gov.sg/?a=Security+%26+Intelligence+Division",
+        "text": "Apply now (opens in new tab)"
+      },
+      {
+        "url": "https://go.gov.sg/preuniinternship2027",
+        "text": "Apply Now (opens in new tab)"
+      }
+    ]
+  },
+  {
+    "url": "https://www.spaceappschallenge.org/",
+    "error": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY"
+  },
+  {
+    "url": "https://www.studenttelevision.com/challenge",
+    "status": 200,
+    "final_url": "https://www.studenttelevision.com/challenge",
+    "title": "STN CHALLENGE &mdash; STN",
+    "soft_error": false,
+    "links": []
+  },
+  {
+    "url": "https://www.worldcasecomp.net/",
+    "status": 200,
+    "final_url": "https://www.worldcasecomp.net/",
+    "title": "WECC",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://www.worldcasecomp.net/registration-process",
+        "text": "- Registration Process"
+      },
+      {
+        "url": "https://www.worldcasecomp.net/registration-process",
+        "text": "- Registration Process"
+      },
+      {
+        "url": "https://www.worldcasecomp.net/register-a-team-1",
+        "text": "Folder: - REGISTER A TEAM"
+      },
+      {
+        "url": "https://www.worldcasecomp.net/registration-process",
+        "text": "- Registration Process"
+      }
+    ]
+  },
+  {
+    "url": "https://www.youthcorps.gov.sg/about-us/apply-for-youth-corps-internship",
+    "status": 200,
+    "final_url": "https://youthcorps.nyc.gov.sg/partner-us/apply-for-youth-corps-internship/",
+    "title": "Intern with Youth Corps | Youth Corps Singapore",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://go.gov.sg/ycsinternship",
+        "text": "Internship application form (opens in new tab)"
+      }
+    ]
+  },
+  {
+    "url": "https://www.youthcorps.gov.sg/volunteer/volunteering-programmes",
+    "status": 200,
+    "final_url": "https://youthcorps.nyc.gov.sg/volunteer/local-volunteering-programmes/",
+    "title": "Local Volunteering Programmes | Youth Corps Singapore",
+    "soft_error": false,
+    "links": []
+  },
+  {
+    "url": "https://www.zooniverse.org/get-involved/volunteer",
+    "status": 200,
+    "final_url": "https://www.zooniverse.org/get-involved/volunteer",
+    "title": "Zooniverse Logo",
+    "soft_error": false,
+    "links": [
+      {
+        "url": "https://www.zooniverse.org/accounts/register",
+        "text": "https://www.zooniverse.org/accounts/register"
+      },
+      {
+        "url": "https://www.zooniverse.org/accounts/register",
+        "text": "Register Today"
+      },
+      {
+        "url": "https://www.zooniverse.org/settings/email",
+        "text": "Sign Up for Testing"
+      }
+    ]
+  }
+]

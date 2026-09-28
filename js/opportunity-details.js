@@ -16,9 +16,11 @@
       if (!response.ok) throw new Error("Opportunity not found.");
       const opportunity = (await response.json()).opportunity;
       const officialUrl = opportunity.application_url || opportunity.source_url;
-      if (officialUrl) {
+      const internal = opportunity.application_method === "internal" && opportunity.internal_application_enabled === true;
+      if (officialUrl && !internal) {
         const destination = new URL(officialUrl, location.href);
         if (["http:", "https:"].includes(destination.protocol)) {
+          try { localStorage.setItem("teenlaunch_pending_external", JSON.stringify({ id, title: opportunity.title, url: destination.href, openedAt: Date.now() })); } catch {}
           location.replace(destination.href);
           return;
         }
@@ -43,9 +45,10 @@
       badgeRow.insertAdjacentHTML("beforeend", `<span class="verification-badge verified">${escapeHtml(sourceLabel)}</span>`);
       const image = document.querySelector("[data-detail-image]"); if (opportunity.image_url) { image.src = opportunity.image_url; image.hidden = false; }
       const apply = document.querySelector("[data-detail-apply]");
-      apply.hidden = true;
+      apply.hidden = !internal;
+      apply.href = `apply.html?id=${encodeURIComponent(id)}`;
       const external = document.querySelector("[data-detail-external]");
-      if (officialUrl) { external.href = officialUrl; external.textContent = "View official details"; external.hidden = false; }
+      if (officialUrl && /^https?:\/\//i.test(officialUrl)) { external.href = officialUrl; external.textContent = "View official details"; external.hidden = false; }
       const save = document.querySelector("[data-detail-save]");
       if (token) {
         const saved = await fetch(`${API}/profile/saved`, { headers: { Authorization: `Bearer ${token}` } });

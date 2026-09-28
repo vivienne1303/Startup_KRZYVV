@@ -1,0 +1,30 @@
+[
+  {
+    "id": "5869935c-0aff-4a0c-98e2-f1bf61e68241",
+    "payload": {
+      "application_url": "https://nipponpaint.com.sg/ayda/registration"
+    },
+    "reason": "Official AYDA 2026 entry form verified in browser; previous URL was a shopping account.",
+    "result": {
+      "id": "5869935c-0aff-4a0c-98e2-f1bf61e68241",
+      "title": "AYDA Awards 2026/2027 — Singapore",
+      "status": "published",
+      "application_url": "https://nipponpaint.com.sg/ayda/registration"
+    }
+  },
+  {
+    "id": "eb82ffef-3ae3-4b3c-b86e-9b11616c1c8f",
+    "payload": {
+      "is_published": false,
+      "status": "pending_review",
+      "verification_status": "pending_review"
+    },
+    "reason": "Official page returns 404 and displays Page Not Found in browser; keep archived for re-review.",
+    "result": {
+      "id": "eb82ffef-3ae3-4b3c-b86e-9b11616c1c8f",
+      "title": "LitterLifters — Clementi (24 October 2026)",
+      "status": "pending_review",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/LitterLifters--Clementi-24-Oct-2026"
+    }
+  }
+]
