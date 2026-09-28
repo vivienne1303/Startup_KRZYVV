@@ -1,0 +1,522 @@
+{
+  "as_of": "2026-09-28",
+  "applied": false,
+  "updated": [
+    {
+      "id": "03838545-10bf-4e34-9e90-a240034a2912",
+      "title": "KidsLearn Woodlands, Term 4 2026",
+      "status": "expired",
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "d28c45ee-7e79-49d1-9f3e-1002aadd8a05",
+      "title": "KidsCount Woodlands, Term 4 2026",
+      "status": "expired",
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "169549a4-46f7-4f02-ba98-d8dc11b6e69f",
+      "title": "KidsLearn Ang Mo Kio, Term 4 2026",
+      "status": "expired",
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "3501f9a1-fbd5-4bf0-b559-df80725eac9a",
+      "title": "KidsLearn Jurong East, Term 4 2026",
+      "status": "expired",
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "f2f78556-191f-43b5-9bb0-7b230f4c1694",
+      "title": "KidsLearn Kampong Chai Chee, Term 4 2026",
+      "status": "expired",
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "e921be5b-bfd1-4823-bd64-45a381418d8a",
+      "title": "KidsCount Marsiling, Term 4 2026",
+      "status": "expired",
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "f653277b-2a68-4f6f-8da8-7763b7b934c4",
+      "title": "KidsCount Bedok, Term 4 2026",
+      "status": "expired",
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "0181d577-2824-4143-8d52-de90981adb64",
+      "title": "KidsLearn Queenstown, Term 4 2026",
+      "status": "expired",
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "f534676f-e210-4611-907c-f47a4b92c165",
+      "title": "Healthy Living Adventures - Jurong West (4 - 25 Aug 2026)",
+      "status": "expired",
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "92bb14ba-0992-446a-a095-5380184ecb99",
+      "title": "Happy Helping Hands - Woodlands (15 Jul - 23 Sep 2026)",
+      "status": "expired",
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "8ce5dcbc-1ba2-44cd-be45-a06c9a30118b",
+      "title": "Beyond the Lobby: Opening Doors to Hospitality",
+      "status": "expired",
+      "reason": "Recorded application deadline or event end is in the past."
+    },
+    {
+      "id": "1d97393a-783d-4204-9b4f-8e818b40d216",
+      "title": "ARThematics Simei, September 2026",
+      "status": "expired",
+      "reason": "Recorded application deadline or event end is in the past."
+    },
+    {
+      "id": "784b576e-847c-4dce-8f9c-1f56952618d6",
+      "title": "広島学生AIハッカソン 2026",
+      "status": "expired",
+      "reason": "Recorded application deadline or event end is in the past."
+    },
+    {
+      "id": "77a83a25-06f4-49a1-8a4b-2daf8f27205f",
+      "title": "iUrban Teen's 2026 AI Hackathon — Long Beach",
+      "status": "expired",
+      "reason": "Recorded application deadline or event end is in the past."
+    },
+    {
+      "id": "dfc4e7f9-3a40-45ff-976c-0e42580d5534",
+      "title": "All things agentic hackathon",
+      "status": "expired",
+      "reason": "Official Devpost page explicitly says the hackathon has ended."
+    },
+    {
+      "id": "9398fc6a-ac55-4526-860b-16ea44683a94",
+      "title": "Volthacks",
+      "status": "expired",
+      "reason": "Official Devpost page explicitly says the hackathon has ended."
+    },
+    {
+      "id": "4180e5c0-a266-4977-9cc7-c838855319a0",
+      "title": "ETHack 2026 — Hack for Good | ETH Zürich",
+      "status": "expired",
+      "reason": "Official page metadata confirms 12–13 September 2026."
+    },
+    {
+      "id": "69cde5bd-7dcf-45cd-9ec0-f09c723e7d13",
+      "title": "HopHacks 2026",
+      "status": "expired",
+      "reason": "Official HopHacks application deadline and event dates have passed."
+    },
+    {
+      "id": "2698f169-48ca-4eb2-a4c6-39f0d5e920a9",
+      "title": "NYC Film Invitational &mdash; All American High School Film Festival",
+      "status": "expired",
+      "reason": "Official film invitational final registration closed 25 September."
+    },
+    {
+      "id": "7b77d168-7258-4f51-9380-df372f6002ba",
+      "title": "How to Apply for the University Retail Challenge | NRF Foundation",
+      "status": "expired",
+      "reason": "Official NRF 2026–27 submission deadline was 22 September."
+    },
+    {
+      "id": "1d9656a1-58c3-4024-bd03-d5601f6b9cd9",
+      "title": "National Robotics Competition | Science Centre Singapore",
+      "status": "expired",
+      "reason": "National Robotics Competition 2026 ended with the 1 September awards."
+    },
+    {
+      "id": "210f0710-9ee2-438e-ab24-7bd1b722594c",
+      "title": "Youth Corps Community Internship",
+      "status": "expired",
+      "reason": "Youth Corps official page says both current internship cycles are closed."
+    },
+    {
+      "id": "29c19417-1c1d-41d2-96df-40d6ceb41c1a",
+      "title": "National Youth Orator Championships 2026",
+      "status": "published",
+      "reason": "Organiser extended deadlines; restored with the later Primary 6 deadline and explicit category restrictions."
+    },
+    {
+      "id": "fbdfbe27-c741-496c-84c7-e6809613a1e6",
+      "title": "SCUDEM XI 2026 — Differential Equations Modeling",
+      "status": "published",
+      "reason": "Official COMAP schedule."
+    },
+    {
+      "id": "5869935c-0aff-4a0c-98e2-f1bf61e68241",
+      "title": "AYDA Awards 2026/2027 — Singapore",
+      "status": "published",
+      "reason": "Official Nippon Paint submission date."
+    },
+    {
+      "id": "ac3b6fb2-4cea-4c43-afde-2e3cb44d6da7",
+      "title": "College Fed Challenge 2026 Overview",
+      "status": "published",
+      "reason": "Official Federal Reserve registration schedule."
+    },
+    {
+      "id": "334eef44-915c-4376-a3a4-0e17e756f8a9",
+      "title": "STN Challenge 2026",
+      "status": "published",
+      "reason": "Official Student Television Network schedule."
+    },
+    {
+      "id": "07efb949-ba5a-442d-9201-c749489f276a",
+      "title": "S. Mercadante International Clarinet Competition 2026 — Young and Junior Soloists",
+      "status": "published",
+      "reason": "Official category-specific deadlines."
+    },
+    {
+      "id": "09a20253-4b08-4ef2-82ec-9ac32a035bd2",
+      "title": "Diamond Challenge 2027",
+      "status": "published",
+      "reason": "Official 2027 submission window is now open."
+    },
+    {
+      "id": "9748569a-ce81-426f-b7d0-cc24f95221a1",
+      "title": "2026世界青少年寫作大賽-第四季 | GYCATA",
+      "status": "published",
+      "reason": "Writing competition was incorrectly categorised as entrepreneurship."
+    }
+  ],
+  "inserted": [
+    {
+      "title": "Active Mind Active Life - Sembawang (15 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Ask-Me-Anything: Leaf it to the Experts",
+      "status": "published"
+    },
+    {
+      "title": "Bedside Befrienders - Woodlands Hospital (Oct to Dec 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Bridging Generations - Our Tampines Hub (10 Nov 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Bridging Generations - Our Tampines Hub (13 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Bridging Generations - Our Tampines Hub (8 Dec 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Buddy on Deck - Singapore Navy Museum (22 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Click & Connect: Photography with Nikon School",
+      "status": "published"
+    },
+    {
+      "title": "Community Connectors - Ang Mo Kio (24 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Community Connectors - Ang Mo Kio (7 Nov 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Community Connectors - Pasir Ris (9 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Companions of Care - Yishun (5 Oct - 6 Nov 2026)",
+      "status": "published"
+    },
+    {
+      "title": "FlowerFolks - Gardens by the Bay (13 oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "FlowerFolks - Gardens by the Bay (14 Nov 2026)",
+      "status": "published"
+    },
+    {
+      "title": "FlowerFolks - Gardens by the Bay (16 Jan 2027)",
+      "status": "published"
+    },
+    {
+      "title": "FlowerFolks - Gardens by the Bay (20 Feb 2027)",
+      "status": "published"
+    },
+    {
+      "title": "FlowerFolks - Gardens by the Bay (21 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "FlowerFolks - Gardens by the Bay (24 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "FlowerFolks - Gardens by the Bay (4 Dec 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Gen Gala x Fashion Parade - Jalan Besar (28 Nov 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Gen Gala x Fashion Parade - Jalan Besar (31 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Happy Hour with Seniors - Chai Chee (17 Dec 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Happy Hour with Seniors - Chai Chee (26 Nov 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Happy Hour with Seniors - Chai Chee (29 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Happy Hour with Seniors - Jurong West (23 Dec 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Happy Hour with Seniors - Jurong West (25 Nov 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Happy Hour with Seniors - Jurong West (28 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Happy Hour with Seniors - Jurong West (30 Sept 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Happy Hour with Seniors - Tampines (18 Dec 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Happy Hour with Seniors - Tampines (27 Nov 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Happy Hour with Seniors - Tampines (30 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Health in Check - Radin Mas CC (31 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Health in Check - Volunteer Facilitators",
+      "status": "published"
+    },
+    {
+      "title": "Health in Check - Volunteer Facilitators [Nov-Dec]",
+      "status": "published"
+    },
+    {
+      "title": "Health in Check - Volunteer Facilitators [Oct-Nov]",
+      "status": "published"
+    },
+    {
+      "title": "Healthcare Youth Leaders Programme 2.0",
+      "status": "published"
+    },
+    {
+      "title": "Impact, IRL",
+      "status": "published"
+    },
+    {
+      "title": "Intergen Evening Escapades - NTUC HNH Geylang East (17 Dec 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Intergen Evening Escapades - NTUC HNH Geylang East (19 Nov 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Intergen Evening Escapades - NTUC HNH Geylang East (22 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Intergen Evening Escapades - NTUC HNH Pasir Ris (7 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Intergen Evening Escapades - NTUC HNH Pasir Ris (9 Dec 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Intergen Kopi Kakis - NTUC HNH Pasir Ris (7 Nov 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Kampung Birthday Club - MacPherson (27 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Only Mr Group - Bukit Merah (30 Sep 2026)",
+      "status": "published"
+    },
+    {
+      "title": "PICS HomeCare - TriGen@TTSH (Oct 2026 - Nov 2027)",
+      "status": "published"
+    },
+    {
+      "title": "Play For All - APSN (11 Dec 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Play For All - APSN (13 Nov 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Play For All - APSN (9 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Re:ground @ Dungeon - Oct 2026",
+      "status": "published"
+    },
+    {
+      "title": "Re:ground @ Dungeon – The Scrapbook Club",
+      "status": "published"
+    },
+    {
+      "title": "Silver Crafts - Ren Ci (10 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Silver Crafts - Ren Ci (21 Nov 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Silver Crafts - Ren Ci (24 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Silver Crafts - Ren Ci (7 Nov 2026)",
+      "status": "published"
+    },
+    {
+      "title": "SpecialHearts - THK Sembawang (12 Dec 2026)",
+      "status": "published"
+    },
+    {
+      "title": "SpecialHearts - THK Sembawang (17 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "SpecialHearts - THK Sembawang (21 Nov 2026)",
+      "status": "published"
+    },
+    {
+      "title": "SpecialHearts - THK Sembawang (23 Jan 2027)",
+      "status": "published"
+    },
+    {
+      "title": "Study Buddy - Bukit Batok (3 Oct - 28 Nov)",
+      "status": "published"
+    },
+    {
+      "title": "Study Buddy - Bukit Batok (7 Oct - 25 Nov)",
+      "status": "published"
+    },
+    {
+      "title": "Study Buddy PM - Bukit Batok (3 Oct - 28 Nov)",
+      "status": "published"
+    },
+    {
+      "title": "Visually Impaired Sensory Tour - GBTB (12 Dec 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Youth Digital Buddies - Wisma Geylang (7 to 28 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "National Youth Entrepreneurship Awards 2026",
+      "status": "published"
+    },
+    {
+      "title": "Case Writing Competition 2026/27",
+      "status": "published"
+    },
+    {
+      "title": "RSIS Policy Pitch Competition 2026",
+      "status": "published"
+    },
+    {
+      "title": "Make The Change Youth Competition 2026",
+      "status": "published"
+    },
+    {
+      "title": "GovTech Internship — January to April 2027 Starts",
+      "status": "published"
+    },
+    {
+      "title": "SID Internship — January to March 2027 Intake",
+      "status": "published"
+    },
+    {
+      "title": "CAAS Internships — September–October Application Window",
+      "status": "published"
+    },
+    {
+      "title": "Own The Mic — October 2026 Workshop",
+      "status": "published"
+    },
+    {
+      "title": "*SCAPE FREQUENCY — Youth Project Open Call",
+      "status": "published"
+    },
+    {
+      "title": "Singapore Hospitality & Tourism Conference 2026",
+      "status": "published"
+    },
+    {
+      "title": "SLEUTH MODE — Build AI Agents to Crack a Fraud Case",
+      "status": "published"
+    },
+    {
+      "title": "Look the Part. Own the Interview. — 8 October",
+      "status": "published"
+    },
+    {
+      "title": "WITGRITFIT Career Simulation Workshop — 26 October",
+      "status": "published"
+    },
+    {
+      "title": "Intergenerational Book Club — October Meet Up",
+      "status": "published"
+    },
+    {
+      "title": "World Evaluation Case Competition 2026",
+      "status": "published"
+    },
+    {
+      "title": "World Young Economist Essay Prize 2026",
+      "status": "published"
+    },
+    {
+      "title": "Zooniverse — Online Research Volunteering",
+      "status": "published"
+    },
+    {
+      "title": "LitterLifters — Boon Lay (10 October 2026)",
+      "status": "published"
+    },
+    {
+      "title": "LitterLifters — Clementi (24 October 2026)",
+      "status": "published"
+    }
+  ],
+  "duplicates": [],
+  "errors": []
+}

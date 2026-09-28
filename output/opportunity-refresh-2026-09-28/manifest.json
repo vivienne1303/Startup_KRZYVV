@@ -1,0 +1,2379 @@
+{
+  "as_of": "2026-09-28",
+  "updates": [
+    {
+      "id": "03838545-10bf-4e34-9e90-a240034a2912",
+      "title": "KidsLearn Woodlands, Term 4 2026",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/KidsLearn--Woodlands-Term-4-2026",
+      "payload": {
+        "application_deadline": "2026-08-26",
+        "deadline": "2026-08-26",
+        "expiry_date": "2026-08-26",
+        "start_date": "2026-09-05",
+        "end_date": "2026-11-14",
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "d28c45ee-7e79-49d1-9f3e-1002aadd8a05",
+      "title": "KidsCount Woodlands, Term 4 2026",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/KidsCount--Woodlands-18-Sep--20-Nov-2026",
+      "payload": {
+        "application_deadline": "2026-09-17",
+        "deadline": "2026-09-17",
+        "expiry_date": "2026-09-17",
+        "start_date": "2026-09-18",
+        "end_date": "2026-11-20",
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "169549a4-46f7-4f02-ba98-d8dc11b6e69f",
+      "title": "KidsLearn Ang Mo Kio, Term 4 2026",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/KidsLearn--Ang-Mo-Kio-Term-4-2026",
+      "payload": {
+        "application_deadline": "2026-09-03",
+        "deadline": "2026-09-03",
+        "expiry_date": "2026-09-03",
+        "start_date": "2026-09-05",
+        "end_date": "2026-11-14",
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "3501f9a1-fbd5-4bf0-b559-df80725eac9a",
+      "title": "KidsLearn Jurong East, Term 4 2026",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/KidsLearn--Jurong-East-Term-4-2026",
+      "payload": {
+        "application_deadline": "2026-09-14",
+        "deadline": "2026-09-14",
+        "expiry_date": "2026-09-14",
+        "start_date": "2026-09-05",
+        "end_date": "2026-11-14",
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "f2f78556-191f-43b5-9bb0-7b230f4c1694",
+      "title": "KidsLearn Kampong Chai Chee, Term 4 2026",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/KidsLearn--Kampong-Chai-Chee-Term-4-2026",
+      "payload": {
+        "application_deadline": "2026-08-28",
+        "deadline": "2026-08-28",
+        "expiry_date": "2026-08-28",
+        "start_date": "2026-09-05",
+        "end_date": "2026-11-14",
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "e921be5b-bfd1-4823-bd64-45a381418d8a",
+      "title": "KidsCount Marsiling, Term 4 2026",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/KidsCount--Marsiling-18-Sep--21-Nov-2026",
+      "payload": {
+        "application_deadline": "2026-09-17",
+        "deadline": "2026-09-17",
+        "expiry_date": "2026-09-17",
+        "start_date": "2026-09-18",
+        "end_date": "2026-11-20",
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "f653277b-2a68-4f6f-8da8-7763b7b934c4",
+      "title": "KidsCount Bedok, Term 4 2026",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/KidsCount--Bedok-19-Sep--21-Nov-2026",
+      "payload": {
+        "application_deadline": "2026-09-19",
+        "deadline": "2026-09-19",
+        "expiry_date": "2026-09-19",
+        "start_date": "2026-09-19",
+        "end_date": "2026-11-21",
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "0181d577-2824-4143-8d52-de90981adb64",
+      "title": "KidsLearn Queenstown, Term 4 2026",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/KidsLearn--Queenstown-Term-4-2026",
+      "payload": {
+        "application_deadline": "2026-08-04",
+        "deadline": "2026-08-04",
+        "expiry_date": "2026-08-04",
+        "start_date": "2026-09-05",
+        "end_date": "2026-11-14",
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "f534676f-e210-4611-907c-f47a4b92c165",
+      "title": "Healthy Living Adventures - Jurong West (4 - 25 Aug 2026)",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/08/Healthy-Living-Adventures--Jurong-West-4--25-Aug-2026",
+      "payload": {
+        "application_deadline": "2026-08-18",
+        "deadline": "2026-08-18",
+        "expiry_date": "2026-08-18",
+        "start_date": "2026-08-04",
+        "end_date": "2026-08-25",
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "92bb14ba-0992-446a-a095-5380184ecb99",
+      "title": "Happy Helping Hands - Woodlands (15 Jul - 23 Sep 2026)",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/08/Happy-Helping-Hands--Woodlands-15-Jul--23-Sep-2026",
+      "payload": {
+        "application_deadline": "2026-09-14",
+        "deadline": "2026-09-14",
+        "expiry_date": "2026-09-14",
+        "start_date": "2026-08-19",
+        "end_date": "2026-09-23",
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "All roles closed; verified against the official public roles endpoint."
+    },
+    {
+      "id": "8ce5dcbc-1ba2-44cd-be45-a06c9a30118b",
+      "title": "Beyond the Lobby: Opening Doors to Hospitality",
+      "source_url": "https://discover.nyc.gov.sg/events/beyond-the-lobby-opening-doors-to-hospitality-mscpldfk",
+      "payload": {
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "Recorded application deadline or event end is in the past."
+    },
+    {
+      "id": "1d97393a-783d-4204-9b4f-8e818b40d216",
+      "title": "ARThematics Simei, September 2026",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/ARThematics--Simei-7-Sep-to-11-Sep-2026",
+      "payload": {
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "Recorded application deadline or event end is in the past."
+    },
+    {
+      "id": "784b576e-847c-4dce-8f9c-1f56952618d6",
+      "title": "広島学生AIハッカソン 2026",
+      "source_url": "https://hiroshima-ai-hackathon.jp/",
+      "payload": {
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "Recorded application deadline or event end is in the past."
+    },
+    {
+      "id": "77a83a25-06f4-49a1-8a4b-2daf8f27205f",
+      "title": "iUrban Teen's 2026 AI Hackathon — Long Beach",
+      "source_url": "https://longbeachaihackathon.org/",
+      "payload": {
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "Recorded application deadline or event end is in the past."
+    },
+    {
+      "id": "dfc4e7f9-3a40-45ff-976c-0e42580d5534",
+      "title": "All things agentic hackathon",
+      "source_url": "https://allthingsagentichackathon.devpost.com/",
+      "payload": {
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "Official Devpost page explicitly says the hackathon has ended."
+    },
+    {
+      "id": "9398fc6a-ac55-4526-860b-16ea44683a94",
+      "title": "Volthacks",
+      "source_url": "https://volthacks.devpost.com/",
+      "payload": {
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "Official Devpost page explicitly says the hackathon has ended."
+    },
+    {
+      "id": "4180e5c0-a266-4977-9cc7-c838855319a0",
+      "title": "ETHack 2026 — Hack for Good | ETH Zürich",
+      "source_url": "https://ethack.ch/",
+      "payload": {
+        "start_date": "2026-09-12",
+        "end_date": "2026-09-13",
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "Official page metadata confirms 12–13 September 2026."
+    },
+    {
+      "id": "69cde5bd-7dcf-45cd-9ec0-f09c723e7d13",
+      "title": "HopHacks 2026",
+      "source_url": "https://hophacks.com/",
+      "payload": {
+        "application_deadline": "2026-09-01",
+        "deadline": "2026-09-01",
+        "expiry_date": "2026-09-01",
+        "start_date": "2026-09-18",
+        "end_date": "2026-09-20",
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "Official HopHacks application deadline and event dates have passed."
+    },
+    {
+      "id": "2698f169-48ca-4eb2-a4c6-39f0d5e920a9",
+      "title": "NYC Film Invitational &mdash; All American High School Film Festival",
+      "source_url": "https://www.hsfilmfest.com/nyc-film-invitational",
+      "payload": {
+        "application_deadline": "2026-09-25",
+        "deadline": "2026-09-25",
+        "expiry_date": "2026-09-25",
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "Official film invitational final registration closed 25 September."
+    },
+    {
+      "id": "7b77d168-7258-4f51-9380-df372f6002ba",
+      "title": "How to Apply for the University Retail Challenge | NRF Foundation",
+      "source_url": "https://nrffoundation.org/campus/scholarships/university-challenge/how-to-apply",
+      "payload": {
+        "application_deadline": "2026-09-22",
+        "deadline": "2026-09-22",
+        "expiry_date": "2026-09-22",
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "Official NRF 2026–27 submission deadline was 22 September."
+    },
+    {
+      "id": "1d9656a1-58c3-4024-bd03-d5601f6b9cd9",
+      "title": "National Robotics Competition | Science Centre Singapore",
+      "source_url": "https://www.science.edu.sg/for-schools/competitions/national-robotics-competition",
+      "payload": {
+        "end_date": "2026-09-01",
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "National Robotics Competition 2026 ended with the 1 September awards."
+    },
+    {
+      "id": "210f0710-9ee2-438e-ab24-7bd1b722594c",
+      "title": "Youth Corps Community Internship",
+      "source_url": "https://www.youthcorps.gov.sg/whats-new/youth-corps-community-internship",
+      "payload": {
+        "application_deadline": "2026-08-07",
+        "deadline": "2026-08-07",
+        "expiry_date": "2026-08-07",
+        "status": "expired",
+        "is_published": false,
+        "verification_status": "expired"
+      },
+      "reason": "Youth Corps official page says both current internship cycles are closed."
+    },
+    {
+      "id": "29c19417-1c1d-41d2-96df-40d6ceb41c1a",
+      "title": "National Youth Orator Championships 2026",
+      "source_url": "https://www.nyoc.sg/",
+      "payload": {
+        "application_deadline": "2026-10-18",
+        "deadline": "2026-10-18",
+        "expiry_date": "2026-10-18",
+        "status": "published",
+        "is_published": true,
+        "verification_status": "verified",
+        "description": "Submit a recorded speech on the theme The Singapore We Want. The extended deadline is 30 September 2026 for all levels except Primary 6; Primary 6 students may submit until 18 October 2026.",
+        "eligibility": "Primary to university students. After 30 September, only Primary 6 submissions remain eligible."
+      },
+      "reason": "Organiser extended deadlines; restored with the later Primary 6 deadline and explicit category restrictions."
+    },
+    {
+      "id": "fbdfbe27-c741-496c-84c7-e6809613a1e6",
+      "title": "COMAP: Mathematics Instructional Resources for Innovative Educators",
+      "source_url": "https://www.contest.comap.com/scudem/student_info.html",
+      "payload": {
+        "title": "SCUDEM XI 2026 — Differential Equations Modeling",
+        "application_deadline": "2026-10-16",
+        "deadline": "2026-10-16",
+        "expiry_date": "2026-10-16",
+        "start_date": "2026-10-16",
+        "end_date": "2026-11-10",
+        "category": "Competitions",
+        "description": "Work in a team of three students with a coach to model a real problem using differential equations and present the result in a ten-minute video. Register by 16 October; final submissions are due 10 November 2026.",
+        "categories": [
+          "Competitions"
+        ]
+      },
+      "reason": "Official COMAP schedule."
+    },
+    {
+      "id": "5869935c-0aff-4a0c-98e2-f1bf61e68241",
+      "title": "AYDA 2026",
+      "source_url": "https://nipponpaint.com.sg/ayda/?srsltid=AfmBOooOjIEJQ6QI_yh24SnMOA3TXXmoSuXhM7YVLoZveVW5L6KIWo7I",
+      "payload": {
+        "title": "AYDA Awards 2026/2027 — Singapore",
+        "application_deadline": "2026-12-31",
+        "deadline": "2026-12-31",
+        "expiry_date": "2026-12-31"
+      },
+      "reason": "Official Nippon Paint submission date."
+    },
+    {
+      "id": "ac3b6fb2-4cea-4c43-afde-2e3cb44d6da7",
+      "title": "College Fed Challenge 2026 Overview",
+      "source_url": "https://www.federalreserve.gov/aboutthefed/educational-tools/college-fed-challenge-overview.htm",
+      "payload": {
+        "application_deadline": "2026-09-30",
+        "deadline": "2026-09-30",
+        "expiry_date": "2026-09-30",
+        "end_date": "2026-11-20",
+        "description": "University teams analyse economic conditions and present a monetary policy recommendation. Registration closes 30 September 2026 at 5pm EDT; videos are due 5 October.",
+        "eligibility": "Eligible US undergraduate college teams; check the Federal Reserve rules."
+      },
+      "reason": "Official Federal Reserve registration schedule."
+    },
+    {
+      "id": "334eef44-915c-4376-a3a4-0e17e756f8a9",
+      "title": "STN CHALLENGE &mdash; STN",
+      "source_url": "https://www.studenttelevision.com/challenge",
+      "payload": {
+        "title": "STN Challenge 2026",
+        "application_deadline": "2026-11-11",
+        "deadline": "2026-11-11",
+        "expiry_date": "2026-11-11",
+        "start_date": "2026-11-12",
+        "end_date": "2026-11-17"
+      },
+      "reason": "Official Student Television Network schedule."
+    },
+    {
+      "id": "07efb949-ba5a-442d-9201-c749489f276a",
+      "title": "Opportunity from mercadantecompetition.com",
+      "source_url": "https://mercadantecompetition.com/",
+      "payload": {
+        "title": "S. Mercadante International Clarinet Competition 2026 — Young and Junior Soloists",
+        "application_deadline": "2026-10-03",
+        "deadline": "2026-10-03",
+        "expiry_date": "2026-10-03",
+        "start_date": "2026-10-15",
+        "end_date": "2026-10-16",
+        "maximum_age": 20,
+        "age_max": 20,
+        "location": "Noci, Italy",
+        "description": "Compete in the young soloist (up to 15) or junior soloist (up to 20) clarinet categories in Noci. These categories accept applications until 3 October 2026. The senior category has already closed."
+      },
+      "reason": "Official category-specific deadlines."
+    },
+    {
+      "id": "09a20253-4b08-4ef2-82ec-9ac32a035bd2",
+      "title": "Diamond Challenge 2027",
+      "source_url": "https://diamondchallenge.org/competition/",
+      "payload": {
+        "description": "Teams of two to four high school students develop an original business or social venture concept. The 2027 submission window is open; entries close 14 January 2027 at 5pm EST.",
+        "eligibility": "High school students aged 14–18 at the deadline; each team needs an adult advisor aged at least 21."
+      },
+      "reason": "Official 2027 submission window is now open."
+    },
+    {
+      "id": "9748569a-ce81-426f-b7d0-cc24f95221a1",
+      "title": "2026世界青少年寫作大賽-第四季 | GYCATA",
+      "source_url": "https://www.gycata.com/writing2026season4",
+      "payload": {
+        "category": "Competitions",
+        "categories": [
+          "Competitions"
+        ]
+      },
+      "reason": "Writing competition was incorrectly categorised as entrepreneurship."
+    }
+  ],
+  "additions": [
+    {
+      "title": "Active Mind Active Life - Sembawang (15 Oct 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Engage seniors at Acacia Home through games, movement and creative activities, with patient support for residents who need additional encouragement.",
+      "category": "Volunteering",
+      "location": "Sembawang, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-15",
+      "application_deadline": "2026-10-12",
+      "minimum_age": 17,
+      "maximum_age": 35,
+      "eligibility": "Ages 17–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Active-Mind-Active-Life--Sembawang-15-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Active-Mind-Active-Life--Sembawang-15-Oct-2026",
+      "external_id": "9962d528-c1c6-46ef-8d77-7825786868c5",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Ask-Me-Anything: Leaf it to the Experts",
+      "organisation": "Youth Corps Singapore",
+      "description": "Explore nature and corporate sustainability careers through a question-and-answer session with people working in the sector.",
+      "category": "Career Exploration",
+      "location": "Orchard, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-10",
+      "end_date": "2026-10-10",
+      "application_deadline": "2026-10-03",
+      "minimum_age": null,
+      "maximum_age": null,
+      "eligibility": "Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Communication",
+        "Personal development"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Ask-Me-Anything-Leaf-it-to-the-Experts",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Ask-Me-Anything-Leaf-it-to-the-Experts",
+      "external_id": "f6bc9683-94af-42ee-9a8c-594a743f46f2",
+      "categories": [
+        "Career Exploration"
+      ]
+    },
+    {
+      "title": "Bedside Befrienders - Woodlands Hospital (Oct to Dec 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Keep hospital patients company through conversation and simple activities. Volunteers must meet the listed COVID-19, MMR, Tdap and chickenpox vaccination requirements and attend at least six sessions.",
+      "category": "Volunteering",
+      "location": "Woodlands, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-07",
+      "end_date": "2026-12-11",
+      "application_deadline": "2026-10-01",
+      "minimum_age": 18,
+      "maximum_age": 35,
+      "eligibility": "Ages 18–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Bedside-Befrienders--Woodlands-Hospital-Oct-to-Dec-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Bedside-Befrienders--Woodlands-Hospital-Oct-to-Dec-2026",
+      "external_id": "b1b8cef3-2e5b-4331-859e-1b2e3807c3d8",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Bridging Generations - Our Tampines Hub (10 Nov 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Spend time with seniors at Our Tampines Hub through walks, tabletop games and conversation.",
+      "category": "Volunteering",
+      "location": "Tampines, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-11-10",
+      "end_date": "2026-11-10",
+      "application_deadline": "2026-11-06",
+      "minimum_age": 17,
+      "maximum_age": 35,
+      "eligibility": "Ages 17–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Bridging-Generations--Our-Tampines-Hub-10-Nov-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Bridging-Generations--Our-Tampines-Hub-10-Nov-2026",
+      "external_id": "bf9bdc2d-527d-44f5-a02e-096d6ca700fc",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Bridging Generations - Our Tampines Hub (13 Oct 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Spend time with seniors at Our Tampines Hub through walks, tabletop games and conversation.",
+      "category": "Volunteering",
+      "location": "Tampines, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-13",
+      "application_deadline": "2026-10-06",
+      "minimum_age": 17,
+      "maximum_age": 35,
+      "eligibility": "Ages 17–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Bridging-Generations--Our-Tampines-Hub-13-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Bridging-Generations--Our-Tampines-Hub-13-Oct-2026",
+      "external_id": "b883924d-0a70-4891-bd24-5808e167ee6d",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Bridging Generations - Our Tampines Hub (8 Dec 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Spend time with seniors at Our Tampines Hub through walks, tabletop games and conversation.",
+      "category": "Volunteering",
+      "location": "Tampines, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-11-10",
+      "end_date": "2026-12-08",
+      "application_deadline": "2026-12-04",
+      "minimum_age": 17,
+      "maximum_age": 35,
+      "eligibility": "Ages 17–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Bridging-Generations--Our-Tampines-Hub-8-Dec-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Bridging-Generations--Our-Tampines-Hub-8-Dec-2026",
+      "external_id": "6938d21e-fa65-4458-929b-883dcaa5af86",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Buddy on Deck - Singapore Navy Museum (22 Oct 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Accompany seniors on a Singapore Navy Museum visit with gallery activities and crafts. Transport is provided from the organiser’s reporting point.",
+      "category": "Volunteering",
+      "location": "Sengkang, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-22",
+      "end_date": "2026-10-22",
+      "application_deadline": "2026-10-15",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Buddy-on-Deck--Singapore-Navy-Museum-22-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Buddy-on-Deck--Singapore-Navy-Museum-22-Oct-2026",
+      "external_id": "3457f2bb-90c2-4514-99c8-ba298539db56",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Click & Connect: Photography with Nikon School",
+      "organisation": "Youth Corps Singapore",
+      "description": "Practise beginner photography with Nikon School and meet the Youth Corps Media Team through hands-on activities.",
+      "category": "Workshops",
+      "location": "Orchard, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-25",
+      "end_date": "2026-10-25",
+      "application_deadline": "2026-10-02",
+      "minimum_age": null,
+      "maximum_age": null,
+      "eligibility": "Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Communication",
+        "Personal development"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Click--Connect-Photography-with-Nikon-School",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Click--Connect-Photography-with-Nikon-School",
+      "external_id": "59aad366-2a48-473a-8f89-75e53f2915f2",
+      "categories": [
+        "Workshops"
+      ]
+    },
+    {
+      "title": "Community Connectors - Ang Mo Kio (24 Oct 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Support an Active Ageing Centre with outreach to older residents and help connect seniors with community support.",
+      "category": "Volunteering",
+      "location": "Ang Mo Kio, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-24",
+      "end_date": "2026-10-24",
+      "application_deadline": "2026-10-21",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Community-Connectors--Ang-Mo-Kio-24-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Community-Connectors--Ang-Mo-Kio-24-Oct-2026",
+      "external_id": "09709cc6-66a9-4d9d-8dbe-02a96fc450c8",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Community Connectors - Ang Mo Kio (7 Nov 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Support an Active Ageing Centre with outreach to older residents and help connect seniors with community support.",
+      "category": "Volunteering",
+      "location": "Ang Mo Kio, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-11-07",
+      "end_date": "2026-11-07",
+      "application_deadline": "2026-11-04",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Community-Connectors--Ang-Mo-Kio-7-Nov-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Community-Connectors--Ang-Mo-Kio-7-Nov-2026",
+      "external_id": "14b5ff16-a5e8-41a8-97ff-7fa6a56c9348",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Community Connectors - Pasir Ris (9 Oct 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Support an Active Ageing Centre with outreach to older residents and help connect seniors with community support.",
+      "category": "Volunteering",
+      "location": "Pasir Ris, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-09",
+      "end_date": "2026-10-09",
+      "application_deadline": "2026-10-06",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Community-Connectors--Pasir-Ris-9-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Community-Connectors--Pasir-Ris-9-Oct-2026",
+      "external_id": "14847d3c-0a6d-4be5-86ea-538a7a1021be",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Companions of Care - Yishun (5 Oct - 6 Nov 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Offer companionship and friendly conversation to seniors at NKF Yishun Community Hospital.",
+      "category": "Volunteering",
+      "location": "Yishun, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-05",
+      "end_date": "2026-11-06",
+      "application_deadline": "2026-10-01",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Companions-of-Care--Yishun-5-Oct--6-Nov-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Companions-of-Care--Yishun-5-Oct--6-Nov-2026",
+      "external_id": "e86eddd4-b5b8-4db8-8667-abd6d3fff7dc",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "FlowerFolks - Gardens by the Bay (13 oct 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Accompany seniors on a Flower Dome outing at Gardens by the Bay and help them enjoy activities and conversation. Dates may include orientation before the outing.",
+      "category": "Volunteering",
+      "location": "Marina South, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-12",
+      "end_date": "2026-10-13",
+      "application_deadline": "2026-10-08",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/FlowerFolks--Gardens-by-the-Bay-13-oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/FlowerFolks--Gardens-by-the-Bay-13-oct-2026",
+      "external_id": "170f167d-c4a8-4323-a7aa-3a4ef259bbb4",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "FlowerFolks - Gardens by the Bay (14 Nov 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Accompany seniors on a Flower Dome outing at Gardens by the Bay and help them enjoy activities and conversation. Dates may include orientation before the outing.",
+      "category": "Volunteering",
+      "location": "Marina South, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-11-13",
+      "end_date": "2026-11-14",
+      "application_deadline": "2026-11-09",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/FlowerFolks--Gardens-by-the-Bay-14-Nov-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/FlowerFolks--Gardens-by-the-Bay-14-Nov-2026",
+      "external_id": "b04f3e85-e611-4330-9567-659206337b03",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "FlowerFolks - Gardens by the Bay (16 Jan 2027)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Accompany seniors on a Flower Dome outing at Gardens by the Bay and help them enjoy activities and conversation. Dates may include orientation before the outing.",
+      "category": "Volunteering",
+      "location": "Marina South, Singapore",
+      "mode": "in_person",
+      "start_date": "2027-01-15",
+      "end_date": "2027-01-16",
+      "application_deadline": "2027-01-11",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2027/01/FlowerFolks--Gardens-by-the-Bay-16-Jan-2027",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2027/01/FlowerFolks--Gardens-by-the-Bay-16-Jan-2027",
+      "external_id": "9c9fe4bc-74a6-42e2-aa92-97c2d3470b63",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "FlowerFolks - Gardens by the Bay (20 Feb 2027)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Accompany seniors on a Flower Dome outing at Gardens by the Bay and help them enjoy activities and conversation. Dates may include orientation before the outing.",
+      "category": "Volunteering",
+      "location": "Marina South, Singapore",
+      "mode": "in_person",
+      "start_date": "2027-02-19",
+      "end_date": "2027-02-20",
+      "application_deadline": "2027-02-15",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2027/02/FlowerFolks--Gardens-by-the-Bay-20-Feb-2027",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2027/02/FlowerFolks--Gardens-by-the-Bay-20-Feb-2027",
+      "external_id": "7c6815ba-7d08-403a-b18b-68cc52c9da3c",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "FlowerFolks - Gardens by the Bay (21 Oct 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Accompany seniors on a Flower Dome outing at Gardens by the Bay and help them enjoy activities and conversation. Dates may include orientation before the outing.",
+      "category": "Volunteering",
+      "location": "Marina South, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-20",
+      "end_date": "2026-10-21",
+      "application_deadline": "2026-10-16",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/FlowerFolks--Gardens-by-the-Bay-21-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/FlowerFolks--Gardens-by-the-Bay-21-Oct-2026",
+      "external_id": "91a5bc5a-fbb8-4c0c-b8d7-fa7df01698d2",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "FlowerFolks - Gardens by the Bay (24 Oct 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Accompany seniors on a Flower Dome outing at Gardens by the Bay and help them enjoy activities and conversation. Dates may include orientation before the outing.",
+      "category": "Volunteering",
+      "location": "Marina South, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-23",
+      "end_date": "2026-10-24",
+      "application_deadline": "2026-10-19",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/FlowerFolks--Gardens-by-the-Bay-24-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/FlowerFolks--Gardens-by-the-Bay-24-Oct-2026",
+      "external_id": "4cd6cac9-dff1-4f1a-b443-3aa1ccc532ca",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "FlowerFolks - Gardens by the Bay (4 Dec 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Accompany seniors on a Flower Dome outing at Gardens by the Bay and help them enjoy activities and conversation. Dates may include orientation before the outing.",
+      "category": "Volunteering",
+      "location": "Marina South, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-12-03",
+      "end_date": "2026-12-04",
+      "application_deadline": "2026-11-30",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/FlowerFolks--Gardens-by-the-Bay-4-Dec-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/FlowerFolks--Gardens-by-the-Bay-4-Dec-2026",
+      "external_id": "8d5775f5-c52e-4220-973e-e78c44b80946",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Gen Gala x Fashion Parade - Jalan Besar (28 Nov 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Support an intergenerational arts and fashion programme where volunteers connect with older adults through shared memories and creative activities.",
+      "category": "Volunteering",
+      "location": "Kallang, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-11-28",
+      "end_date": "2026-11-28",
+      "application_deadline": "2026-11-28",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Gen-Gala-x-Fashion-Parade--Jalan-Besar-28-Nov-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Gen-Gala-x-Fashion-Parade--Jalan-Besar-28-Nov-2026",
+      "external_id": "a0196692-26f0-415b-8a1a-ad8c7ada9527",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Gen Gala x Fashion Parade - Jalan Besar (31 Oct 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Support an intergenerational arts and fashion programme where volunteers connect with older adults through shared memories and creative activities.",
+      "category": "Volunteering",
+      "location": "Kallang, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-31",
+      "end_date": "2026-10-31",
+      "application_deadline": "2026-10-29",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Gen-Gala-x-Fashion-Parade--Jalan-Besar-31-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Gen-Gala-x-Fashion-Parade--Jalan-Besar-31-Oct-2026",
+      "external_id": "6602f199-9dfc-454a-a1e0-6863596a47cd",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Happy Hour with Seniors - Chai Chee (17 Dec 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Befriend nursing home residents through games, karaoke, conversation and outings. Activities may include non-alcoholic beer and card or mahjong games without gambling.",
+      "category": "Volunteering",
+      "location": "Bedok, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-12-09",
+      "end_date": "2026-12-17",
+      "application_deadline": "2026-12-16",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Happy-Hour-with-Seniors--Chai-Chee-17-Dec-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Happy-Hour-with-Seniors--Chai-Chee-17-Dec-2026",
+      "external_id": "d9e93b26-3037-4db8-94f1-a9b2e59edbf1",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Happy Hour with Seniors - Chai Chee (26 Nov 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Befriend nursing home residents through games, karaoke, conversation and outings. Activities may include non-alcoholic beer and card or mahjong games without gambling.",
+      "category": "Volunteering",
+      "location": "Bedok, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-09-24",
+      "end_date": "2026-11-26",
+      "application_deadline": "2026-11-25",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/Happy-Hour-with-Seniors--Chai-Chee-26-Nov-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/Happy-Hour-with-Seniors--Chai-Chee-26-Nov-2026",
+      "external_id": "024bbdb9-65a0-492c-8bd0-2409d1e359d6",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Happy Hour with Seniors - Chai Chee (29 Oct 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Befriend nursing home residents through games, karaoke, conversation and outings. Activities may include non-alcoholic beer and card or mahjong games without gambling.",
+      "category": "Volunteering",
+      "location": "Bedok, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-21",
+      "end_date": "2026-10-29",
+      "application_deadline": "2026-10-28",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Happy-Hour-with-Seniors--Chai-Chee-29-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Happy-Hour-with-Seniors--Chai-Chee-29-Oct-2026",
+      "external_id": "3dfebc1c-b604-4f13-a651-88ddb96f37e1",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Happy Hour with Seniors - Jurong West (23 Dec 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Befriend nursing home residents through games, karaoke, conversation and outings. Activities may include non-alcoholic beer and card or mahjong games without gambling.",
+      "category": "Volunteering",
+      "location": "Jurong West, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-12-16",
+      "end_date": "2026-12-23",
+      "application_deadline": "2026-12-22",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Happy-Hour-with-Seniors--Jurong-West-23-Dec-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Happy-Hour-with-Seniors--Jurong-West-23-Dec-2026",
+      "external_id": "623562dd-1dd4-4d42-8d2b-6ace216f40cd",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Happy Hour with Seniors - Jurong West (25 Nov 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Befriend nursing home residents through games, karaoke, conversation and outings. Activities may include non-alcoholic beer and card or mahjong games without gambling.",
+      "category": "Volunteering",
+      "location": "Jurong West, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-11-18",
+      "end_date": "2026-11-25",
+      "application_deadline": "2026-11-24",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Happy-Hour-with-Seniors--Jurong-West-25-Nov-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Happy-Hour-with-Seniors--Jurong-West-25-Nov-2026",
+      "external_id": "6692bf94-3721-4d47-beaa-2889844561db",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Happy Hour with Seniors - Jurong West (28 Oct 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Befriend nursing home residents through games, karaoke, conversation and outings. Activities may include non-alcoholic beer and card or mahjong games without gambling.",
+      "category": "Volunteering",
+      "location": "Jurong West, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-21",
+      "end_date": "2026-10-28",
+      "application_deadline": "2026-10-27",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Happy-Hour-with-Seniors--Jurong-West-28-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Happy-Hour-with-Seniors--Jurong-West-28-Oct-2026",
+      "external_id": "b0bf8471-a74b-457a-b979-dd33bfc0fd34",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Happy Hour with Seniors - Jurong West (30 Sept 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Befriend nursing home residents through games, karaoke, conversation and outings. Activities may include non-alcoholic beer and card or mahjong games without gambling.",
+      "category": "Volunteering",
+      "location": "Jurong West, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-09-16",
+      "end_date": "2026-09-30",
+      "application_deadline": "2026-09-28",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/Happy-Hour-with-Seniors--Jurong-West-30-Sept-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/Happy-Hour-with-Seniors--Jurong-West-30-Sept-2026",
+      "external_id": "37150c05-eb74-40a2-a477-53a3f6d154ca",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Happy Hour with Seniors - Tampines (18 Dec 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Befriend nursing home residents through games, karaoke, conversation and outings. Activities may include non-alcoholic beer and card or mahjong games without gambling.",
+      "category": "Volunteering",
+      "location": "Tampines, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-12-10",
+      "end_date": "2026-12-18",
+      "application_deadline": "2026-12-17",
+      "minimum_age": null,
+      "maximum_age": null,
+      "eligibility": "Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Happy-Hour-with-Seniors--Tampines-18-Dec-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Happy-Hour-with-Seniors--Tampines-18-Dec-2026",
+      "external_id": "c1686488-9194-4130-bcca-701c645b4ba5",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Happy Hour with Seniors - Tampines (27 Nov 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Befriend nursing home residents through games, karaoke, conversation and outings. Activities may include non-alcoholic beer and card or mahjong games without gambling.",
+      "category": "Volunteering",
+      "location": "Tampines, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-11-18",
+      "end_date": "2026-11-27",
+      "application_deadline": "2026-11-26",
+      "minimum_age": null,
+      "maximum_age": null,
+      "eligibility": "Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Happy-Hour-with-Seniors--Tampines-27-Nov-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Happy-Hour-with-Seniors--Tampines-27-Nov-2026",
+      "external_id": "1995c016-ae53-4c7a-89be-4b912b31b10f",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Happy Hour with Seniors - Tampines (30 Oct 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Befriend nursing home residents through games, karaoke, conversation and outings. Activities may include non-alcoholic beer and card or mahjong games without gambling.",
+      "category": "Volunteering",
+      "location": "Tampines, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-21",
+      "end_date": "2026-10-30",
+      "application_deadline": "2026-10-29",
+      "minimum_age": null,
+      "maximum_age": null,
+      "eligibility": "Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Happy-Hour-with-Seniors--Tampines-30-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Happy-Hour-with-Seniors--Tampines-30-Oct-2026",
+      "external_id": "2b62a57d-c945-4dde-95a3-456fddf7321a",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Health in Check - Radin Mas CC (31 Oct 2026)",
+      "organisation": "Singapore General Hospital and Youth Corps Singapore",
+      "description": "Support a community screening event through ushering, station assistance and trained questionnaire activities with seniors.",
+      "category": "Volunteering",
+      "location": "Bukit Merah, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-16",
+      "end_date": "2026-10-31",
+      "application_deadline": "2026-10-01",
+      "minimum_age": null,
+      "maximum_age": null,
+      "eligibility": "Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Health-in-Check--Radin-Mas-CC-31-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Health-in-Check--Radin-Mas-CC-31-Oct-2026",
+      "external_id": "6501a461-d3b7-46f0-8a95-7c7f89ab782b",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Health in Check - Volunteer Facilitators",
+      "organisation": "Singapore General Hospital and Youth Corps Singapore",
+      "description": "Help prepare SGH volunteers through online breakout-room facilitation and practice for community health screening events.",
+      "category": "Volunteering",
+      "location": "Bukit Merah, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-08",
+      "end_date": "2026-12-05",
+      "application_deadline": "2026-09-28",
+      "minimum_age": null,
+      "maximum_age": null,
+      "eligibility": "Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Health-in-Check---Volunteer-Facilitators",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Health-in-Check---Volunteer-Facilitators",
+      "external_id": "fcc17d36-0cb9-4cef-b308-a075515681f1",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Health in Check - Volunteer Facilitators [Nov-Dec]",
+      "organisation": "Singapore General Hospital and Youth Corps Singapore",
+      "description": "Help prepare SGH volunteers through online breakout-room facilitation and practice for community health screening events.",
+      "category": "Volunteering",
+      "location": "Bukit Merah, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-08",
+      "end_date": "2026-12-05",
+      "application_deadline": "2026-09-28",
+      "minimum_age": null,
+      "maximum_age": null,
+      "eligibility": "Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Health-in-Check---Volunteer-Facilitators-Nov-Dec",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Health-in-Check---Volunteer-Facilitators-Nov-Dec",
+      "external_id": "3dfb6e8e-6554-4d84-9ed1-8b6d12cde886",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Health in Check - Volunteer Facilitators [Oct-Nov]",
+      "organisation": "Singapore General Hospital and Youth Corps Singapore",
+      "description": "Help prepare SGH volunteers through online breakout-room facilitation and practice for community health screening events.",
+      "category": "Volunteering",
+      "location": "Bukit Merah, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-08",
+      "end_date": "2026-11-07",
+      "application_deadline": "2026-09-28",
+      "minimum_age": null,
+      "maximum_age": null,
+      "eligibility": "Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Health-in-Check---Volunteer-Facilitators-Oct-Nov",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Health-in-Check---Volunteer-Facilitators-Oct-Nov",
+      "external_id": "e7bfaa2d-6396-4a59-a120-5df4a9102ea8",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Healthcare Youth Leaders Programme 2.0",
+      "organisation": "Youth Corps Singapore",
+      "description": "Develop leadership skills and healthcare knowledge through a twelve-month youth programme. No prior experience is required. Apply through the designated programme form; the source schedule shows initial sessions only.",
+      "category": "Volunteering",
+      "location": "Orchard, Singapore",
+      "mode": "in_person",
+      "start_date": "2027-01-09",
+      "end_date": null,
+      "application_deadline": "2026-10-18",
+      "minimum_age": null,
+      "maximum_age": null,
+      "eligibility": "Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2027/01/Healthcare-Youth-Leaders-Programme-20",
+      "application_url": "https://go.gov.sg/hylp-c2",
+      "external_id": "965e5495-c03d-41db-a7ed-1331e0c27000",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Impact, IRL",
+      "organisation": "National Youth Council and National Volunteer and Philanthropy Centre",
+      "description": "Meet youth changemakers, community organisations and partners at a day of talks and activities focused on turning ideas into community action. Non-Singpass users can request an alternative registration link from the organiser.",
+      "category": "Community Events",
+      "location": "Marina Bay Sands Expo & Convention Centre, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-31",
+      "end_date": "2026-10-31",
+      "application_deadline": "2026-10-31",
+      "minimum_age": null,
+      "maximum_age": null,
+      "eligibility": "Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Communication",
+        "Personal development"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Impact-IRL",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Impact-IRL",
+      "external_id": "81c41c63-db3f-4d20-89d3-a411862b9bab",
+      "categories": [
+        "Community Events"
+      ]
+    },
+    {
+      "title": "Intergen Evening Escapades - NTUC HNH Geylang East (17 Dec 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Join nursing home residents for games, karaoke, crafts and conversation. Refreshments may include non-alcoholic beer.",
+      "category": "Volunteering",
+      "location": "Geylang, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-12-17",
+      "end_date": "2026-12-17",
+      "application_deadline": "2026-12-07",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Intergen-Evening-Escapades--NTUC-HNH-Geylang-East-17-Dec-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Intergen-Evening-Escapades--NTUC-HNH-Geylang-East-17-Dec-2026",
+      "external_id": "561091d7-9617-444d-90ec-ef4e47f4320c",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Intergen Evening Escapades - NTUC HNH Geylang East (19 Nov 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Join nursing home residents for games, karaoke, crafts and conversation. Refreshments may include non-alcoholic beer.",
+      "category": "Volunteering",
+      "location": "Geylang, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-11-19",
+      "end_date": "2026-11-19",
+      "application_deadline": "2026-11-09",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Intergen-Evening-Escapades--NTUC-HNH-Geylang-East-19-Nov-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Intergen-Evening-Escapades--NTUC-HNH-Geylang-East-19-Nov-2026",
+      "external_id": "a58f112e-812a-4e98-973a-181063805cd2",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Intergen Evening Escapades - NTUC HNH Geylang East (22 Oct 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Join nursing home residents for games, karaoke, crafts and conversation. Refreshments may include non-alcoholic beer.",
+      "category": "Volunteering",
+      "location": "Geylang, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-22",
+      "end_date": "2026-10-22",
+      "application_deadline": "2026-10-12",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Intergen-Evening-Escapades--NTUC-HNH-Geylang-East-22-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Intergen-Evening-Escapades--NTUC-HNH-Geylang-East-22-Oct-2026",
+      "external_id": "fa4b34d0-428e-43f6-a348-d9379839546a",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Intergen Evening Escapades - NTUC HNH Pasir Ris (7 Oct 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Join nursing home residents for games, karaoke, crafts and conversation. Refreshments may include non-alcoholic beer.",
+      "category": "Volunteering",
+      "location": "Pasir Ris, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-07",
+      "end_date": "2026-10-07",
+      "application_deadline": "2026-09-28",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Intergen-Evening-Escapades--NTUC-HNH-Pasir-Ris-7-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Intergen-Evening-Escapades--NTUC-HNH-Pasir-Ris-7-Oct-2026",
+      "external_id": "bd2393ac-9343-422b-805d-7b71a18f4de6",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Intergen Evening Escapades - NTUC HNH Pasir Ris (9 Dec 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Join nursing home residents for games, karaoke, crafts and conversation. Refreshments may include non-alcoholic beer.",
+      "category": "Volunteering",
+      "location": "Pasir Ris, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-12-09",
+      "end_date": "2026-12-09",
+      "application_deadline": "2026-11-30",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Intergen-Evening-Escapades--NTUC-HNH-Pasir-Ris-9-Dec-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Intergen-Evening-Escapades--NTUC-HNH-Pasir-Ris-9-Dec-2026",
+      "external_id": "dfff201e-5e65-420f-951d-90d40962418a",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Intergen Kopi Kakis - NTUC HNH Pasir Ris (7 Nov 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Spend time with nursing home residents through crafts, karaoke and relaxed conversation over kopi.",
+      "category": "Volunteering",
+      "location": "Pasir Ris, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-11-07",
+      "end_date": "2026-11-07",
+      "application_deadline": "2026-10-26",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Intergen-Kopi-Kakis--NTUC-HNH-Pasir-Ris-7-Nov-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Intergen-Kopi-Kakis--NTUC-HNH-Pasir-Ris-7-Nov-2026",
+      "external_id": "fe9b2a9c-e0fc-4e15-a580-91cdfe9bc55d",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Kampung Birthday Club - MacPherson (27 Oct 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Help older adults celebrate with music, games, conversation and festive activities at their community centre.",
+      "category": "Volunteering",
+      "location": "Geylang, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-20",
+      "end_date": "2026-10-27",
+      "application_deadline": "2026-10-24",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Kampung-Birthday-Club--MacPherson-27-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Kampung-Birthday-Club--MacPherson-27-Oct-2026",
+      "external_id": "7e7dbfb0-f138-4ed1-8365-ed0ff12c8e11",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Only Mr Group - Bukit Merah (30 Sep 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Support a social activity group for older men and caregivers through games, movement and friendly interaction.",
+      "category": "Volunteering",
+      "location": "Bukit Merah, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-09-30",
+      "end_date": "2026-09-30",
+      "application_deadline": "2026-09-28",
+      "minimum_age": null,
+      "maximum_age": null,
+      "eligibility": "Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/Only-Mr-Group--Bukit-Merah-30-Sep-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/09/Only-Mr-Group--Bukit-Merah-30-Sep-2026",
+      "external_id": "43f9408e-a28a-4c37-8c54-3457a53209e5",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "PICS HomeCare - TriGen@TTSH (Oct 2026 - Nov 2027)",
+      "organisation": "TriGen and Tan Tock Seng Hospital",
+      "description": "Volunteer alongside healthcare professionals to support seniors returning home after hospital stays, through companionship and supervised community care activities. Check the full training and commitment requirements.",
+      "category": "Volunteering",
+      "location": "Novena, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-31",
+      "end_date": "2027-11-27",
+      "application_deadline": "2026-10-11",
+      "minimum_age": null,
+      "maximum_age": null,
+      "eligibility": "Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/PICS-HomeCare--TriGenTTSH-Oct-2026--Nov-2027",
+      "application_url": "https://for.sg/trigen-ttsh-pics",
+      "external_id": "dd009d18-10f7-4f6b-9891-16ff3f181a15",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Play For All - APSN (11 Dec 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Engage APSN trainees with special needs through inclusive activities and games. Training and activity materials are provided.",
+      "category": "Volunteering",
+      "location": "Paya Lebar, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-12-11",
+      "end_date": "2026-12-11",
+      "application_deadline": "2026-11-30",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Play-For-All--APSN-11-Dec-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Play-For-All--APSN-11-Dec-2026",
+      "external_id": "ad2a1df7-b25f-478a-b95c-304730d0e4c1",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Play For All - APSN (13 Nov 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Engage APSN trainees with special needs through inclusive activities and games. Training and activity materials are provided.",
+      "category": "Volunteering",
+      "location": "Paya Lebar, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-11-13",
+      "end_date": "2026-11-13",
+      "application_deadline": "2026-11-02",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Play-For-All--APSN-13-Nov-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Play-For-All--APSN-13-Nov-2026",
+      "external_id": "8f627bdb-7c98-43a8-8b6f-22ddf2e19cae",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Play For All - APSN (9 Oct 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Engage APSN trainees with special needs through inclusive activities and games. Training and activity materials are provided.",
+      "category": "Volunteering",
+      "location": "Paya Lebar, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-09",
+      "end_date": "2026-10-09",
+      "application_deadline": "2026-09-28",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Play-For-All--APSN-9-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Play-For-All--APSN-9-Oct-2026",
+      "external_id": "6217b461-eb88-4230-b16e-58c25d473297",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Re:ground @ Dungeon - Oct 2026",
+      "organisation": "Youth Corps Singapore",
+      "description": "Join informal creative and social activities at The Red Box to unwind and connect with peers. This is a participation event; it does not award volunteering service hours.",
+      "category": "Workshops",
+      "location": "Orchard, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-29",
+      "application_deadline": "2026-10-31",
+      "minimum_age": null,
+      "maximum_age": null,
+      "eligibility": "Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Communication",
+        "Personal development"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Reground--Dungeon--Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Reground--Dungeon--Oct-2026",
+      "external_id": "a6fb79c1-df8f-449b-8f9a-791ccd6790b6",
+      "categories": [
+        "Workshops"
+      ]
+    },
+    {
+      "title": "Re:ground @ Dungeon – The Scrapbook Club",
+      "organisation": "Youth Corps Singapore",
+      "description": "Create a personal scrapbook in a guided evening of reflection and creativity. This is a participation event; it does not award volunteering service hours.",
+      "category": "Workshops",
+      "location": "Orchard, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-08",
+      "end_date": "2026-10-08",
+      "application_deadline": "2026-10-01",
+      "minimum_age": null,
+      "maximum_age": null,
+      "eligibility": "Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Communication",
+        "Personal development"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Reground--Dungeon--The-Scrapbook-Club",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Reground--Dungeon--The-Scrapbook-Club",
+      "external_id": "8f6ec3da-c031-46bd-bc5b-23ab8205b929",
+      "categories": [
+        "Workshops"
+      ]
+    },
+    {
+      "title": "Silver Crafts - Ren Ci (10 Oct 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Make art and build friendly connections with seniors at Ren Ci nursing home in Bukit Batok.",
+      "category": "Volunteering",
+      "location": "Bukit Batok, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-10",
+      "end_date": "2026-10-10",
+      "application_deadline": "2026-10-03",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Silver-Crafts--Ren-Ci-10-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Silver-Crafts--Ren-Ci-10-Oct-2026",
+      "external_id": "c3501d39-e8fc-453f-b5cf-79a0151a036f",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Silver Crafts - Ren Ci (21 Nov 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Make art and build friendly connections with seniors at Ren Ci nursing home in Bukit Batok.",
+      "category": "Volunteering",
+      "location": "Bukit Batok, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-21",
+      "application_deadline": "2026-11-14",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Silver-Crafts--Ren-Ci-21-Nov-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Silver-Crafts--Ren-Ci-21-Nov-2026",
+      "external_id": "78ab33ee-8212-43f5-ae92-f9a3027ea5b1",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Silver Crafts - Ren Ci (24 Oct 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Make art and build friendly connections with seniors at Ren Ci nursing home in Bukit Batok.",
+      "category": "Volunteering",
+      "location": "Bukit Batok, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-24",
+      "end_date": "2026-10-24",
+      "application_deadline": "2026-10-17",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Silver-Crafts--Ren-Ci-24-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Silver-Crafts--Ren-Ci-24-Oct-2026",
+      "external_id": "1394e054-9de5-4f7a-8602-150611bbdf2e",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Silver Crafts - Ren Ci (7 Nov 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Make art and build friendly connections with seniors at Ren Ci nursing home in Bukit Batok.",
+      "category": "Volunteering",
+      "location": "Bukit Batok, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-11-07",
+      "end_date": "2026-11-07",
+      "application_deadline": "2026-10-31",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Silver-Crafts--Ren-Ci-7-Nov-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/Silver-Crafts--Ren-Ci-7-Nov-2026",
+      "external_id": "6be23f7c-3612-46c8-a949-eacb5e765dcf",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "SpecialHearts - THK Sembawang (12 Dec 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Engage female residents with special needs at THK Sembawang through inclusive games, activities and exercises.",
+      "category": "Volunteering",
+      "location": "Sembawang, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-12-12",
+      "end_date": "2026-12-12",
+      "application_deadline": "2026-12-04",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/SpecialHearts--THK-Sembawang-12-Dec-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/SpecialHearts--THK-Sembawang-12-Dec-2026",
+      "external_id": "21920764-4915-4f3f-80fe-b25de7ea8200",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "SpecialHearts - THK Sembawang (17 Oct 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Engage female residents with special needs at THK Sembawang through inclusive games, activities and exercises.",
+      "category": "Volunteering",
+      "location": "Sembawang, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-17",
+      "end_date": "2026-10-17",
+      "application_deadline": "2026-10-09",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/SpecialHearts--THK-Sembawang-17-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/SpecialHearts--THK-Sembawang-17-Oct-2026",
+      "external_id": "e098395a-e269-4a8d-a791-5e3cba90c8bb",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "SpecialHearts - THK Sembawang (21 Nov 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Engage female residents with special needs at THK Sembawang through inclusive games, activities and exercises.",
+      "category": "Volunteering",
+      "location": "Sembawang, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-21",
+      "application_deadline": "2026-11-13",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/SpecialHearts--THK-Sembawang-21-Nov-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/11/SpecialHearts--THK-Sembawang-21-Nov-2026",
+      "external_id": "dec7c0fb-6224-4d82-ac3b-943e0e97e281",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "SpecialHearts - THK Sembawang (23 Jan 2027)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Engage female residents with special needs at THK Sembawang through inclusive games, activities and exercises.",
+      "category": "Volunteering",
+      "location": "Sembawang, Singapore",
+      "mode": "in_person",
+      "start_date": "2027-01-23",
+      "end_date": "2027-01-23",
+      "application_deadline": "2027-01-18",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2027/01/SpecialHearts--THK-Sembawang-23-Jan-2027",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2027/01/SpecialHearts--THK-Sembawang-23-Jan-2027",
+      "external_id": "4186d1fb-18f5-4d58-82dc-187492e1b8f5",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Study Buddy - Bukit Batok (3 Oct - 28 Nov)",
+      "organisation": "Care Corner Singapore",
+      "description": "Support primary pupils with school subjects and social activities at a regular tutoring programme in Bukit Batok. Check the session schedule and required commitment.",
+      "category": "Volunteering",
+      "location": "Bukit Batok, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-03",
+      "end_date": "2026-11-28",
+      "application_deadline": "2026-09-30",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Study-Buddy--Bukit-Batok-3-Oct--28-Nov",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Study-Buddy--Bukit-Batok-3-Oct--28-Nov",
+      "external_id": "5ef07c40-c795-4eda-9402-a74de6cfccc7",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Study Buddy - Bukit Batok (7 Oct - 25 Nov)",
+      "organisation": "Care Corner Singapore",
+      "description": "Support primary pupils with school subjects and social activities at a regular tutoring programme in Bukit Batok. Check the session schedule and required commitment.",
+      "category": "Volunteering",
+      "location": "Bukit Batok, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-07",
+      "end_date": "2026-11-25",
+      "application_deadline": "2026-10-05",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Study-Buddy--Bukit-Batok-7-Oct--25-Nov",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Study-Buddy--Bukit-Batok-7-Oct--25-Nov",
+      "external_id": "8f6a0558-0134-4a8e-85e7-94dc7628c3ce",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Study Buddy PM - Bukit Batok (3 Oct - 28 Nov)",
+      "organisation": "Care Corner Singapore",
+      "description": "Support primary pupils with school subjects and social activities at a regular tutoring programme in Bukit Batok. Check the session schedule and required commitment.",
+      "category": "Volunteering",
+      "location": "Bukit Batok, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-03",
+      "end_date": "2026-11-28",
+      "application_deadline": "2026-09-30",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Study-Buddy-PM--Bukit-Batok-3-Oct--28-Nov",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Study-Buddy-PM--Bukit-Batok-3-Oct--28-Nov",
+      "external_id": "4c90c06f-d090-4da2-9af0-d09b3738f2ee",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Visually Impaired Sensory Tour - GBTB (12 Dec 2026)",
+      "organisation": "Youth Corps Singapore",
+      "description": "Accompany people with visual impairments on a Gardens by the Bay sensory tour. Training covers guiding techniques and befriending.",
+      "category": "Volunteering",
+      "location": "Marina South, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-12-11",
+      "end_date": "2026-12-12",
+      "application_deadline": "2026-12-07",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Visually-Impaired-Sensory-Tour--GBTB-12-Dec-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/Visually-Impaired-Sensory-Tour--GBTB-12-Dec-2026",
+      "external_id": "95902c68-0b85-4fa7-aba1-42843a8278d8",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "Youth Digital Buddies - Wisma Geylang (7 to 28 Oct 2026)",
+      "organisation": "Care Corner Singapore",
+      "description": "Help seniors learn to use social media and understand digital trends through a series of practical community sessions.",
+      "category": "Volunteering",
+      "location": "Paya Lebar, Singapore",
+      "mode": "in_person",
+      "start_date": "2026-10-07",
+      "end_date": "2026-10-28",
+      "application_deadline": "2026-10-04",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Ages 15–35. Check the organiser’s role, training and attendance requirements.",
+      "skills": [
+        "Community service",
+        "Communication",
+        "Teamwork"
+      ],
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Youth-Digital-Buddies--Wisma-Geylang-7-to-28-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Youth-Digital-Buddies--Wisma-Geylang-7-to-28-Oct-2026",
+      "external_id": "273a04a5-7c53-4535-8b92-420ff97193c8",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "National Youth Entrepreneurship Awards 2026",
+      "organisation": "ACE.SG",
+      "category": "Youth Entrepreneurship",
+      "source_url": "https://www.nyeawards.com/",
+      "application_url": "https://www.nyeawards.com/",
+      "description": "Recognition for young founders representing incorporated businesses. Complete the nomination form and email it as instructed by the organiser by 16 October 2026 at 23:59.",
+      "location": "Singapore",
+      "application_deadline": "2026-10-16",
+      "minimum_age": 17,
+      "maximum_age": 35,
+      "eligibility": "Ages 17–35 in 2026; must represent an incorporated business. Previous winners are not eligible.",
+      "categories": [
+        "Youth Entrepreneurship"
+      ]
+    },
+    {
+      "title": "Case Writing Competition 2026/27",
+      "organisation": "Lee Kuan Yew School of Public Policy, NUS",
+      "category": "Competitions",
+      "source_url": "https://lkyspp.nus.edu.sg/research/case-insights-unit/case-writing-competition/case-writing-competition-2027",
+      "application_url": "https://lkyspp.nus.edu.sg/research/case-insights-unit/case-writing-competition/case-writing-competition-2027",
+      "description": "Write a public policy case on a contemporary Asian issue. Registration closes 9 October 2026; the completed case is due 15 January 2027.",
+      "location": "Singapore",
+      "application_deadline": "2026-10-09",
+      "end_date": "2027-01-15",
+      "education_levels": [
+        "University"
+      ],
+      "eligibility": "Students in degree programmes at Singapore public universities; enter alone or in a team of up to three from the same institution.",
+      "categories": [
+        "Competitions"
+      ]
+    },
+    {
+      "title": "RSIS Policy Pitch Competition 2026",
+      "organisation": "S. Rajaratnam School of International Studies, NTU",
+      "category": "Competitions",
+      "source_url": "https://rsis.edu.sg/gpo/gpo-events-calendar/the-2026-rsis-policy-pitch-competition-for-students-in-asean-universities/",
+      "application_url": "https://rsis.edu.sg/gpo/gpo-events-calendar/the-2026-rsis-policy-pitch-competition-for-students-in-asean-universities/",
+      "description": "Develop a written and video policy pitch addressing a regional development, resilience or international affairs challenge. Submit by 20 November 2026 at 23:59 Singapore time.",
+      "location": "ASEAN",
+      "application_deadline": "2026-11-20",
+      "mode": "online",
+      "education_levels": [
+        "University"
+      ],
+      "eligibility": "Undergraduates at universities in any of the eleven ASEAN countries, regardless of nationality; individuals or teams of up to three.",
+      "categories": [
+        "Competitions"
+      ]
+    },
+    {
+      "title": "Make The Change Youth Competition 2026",
+      "organisation": "Make The Change",
+      "category": "Competitions",
+      "source_url": "https://www.makethechange.sg/youthcompetition2025",
+      "application_url": "https://www.makethechange.sg/youthcompetition2025",
+      "description": "Create a submission exploring how to balance screen time. Follow the brief and submission format for your school category.",
+      "location": "Singapore",
+      "application_deadline": "2026-09-30",
+      "education_levels": [
+        "Primary School",
+        "Secondary School",
+        "Junior College",
+        "ITE",
+        "Polytechnic"
+      ],
+      "categories": [
+        "Competitions"
+      ]
+    },
+    {
+      "title": "GovTech Internship — January to April 2027 Starts",
+      "organisation": "Government Technology Agency of Singapore",
+      "category": "Internships",
+      "source_url": "https://internships.tech.gov.sg/apply",
+      "application_url": "https://internships.tech.gov.sg/apply",
+      "description": "Contribute to public technology projects in a full-time internship of at least twelve weeks. Apply by 30 September 2026 at 12 noon; start dates fall between January and April 2027.",
+      "location": "Singapore",
+      "application_deadline": "2026-09-30",
+      "eligibility": "Singapore citizens or permanent residents; polytechnic students, undergraduates, or A-Level/diploma graduates awaiting university. Minimum twelve-week full-time commitment.",
+      "education_levels": [
+        "Polytechnic",
+        "University",
+        "Junior College"
+      ],
+      "categories": [
+        "Internships"
+      ]
+    },
+    {
+      "title": "SID Internship — January to March 2027 Intake",
+      "organisation": "Security and Intelligence Division",
+      "category": "Internships",
+      "source_url": "https://www.sid.gov.sg/careers/internships-scholarships/internships/",
+      "application_url": "https://www.sid.gov.sg/careers/internships-scholarships/internships/",
+      "description": "Research geopolitical issues with mentorship from SID officers during an eight-week internship. Applications for the January–March 2027 intake close 31 October 2026.",
+      "location": "Singapore",
+      "application_deadline": "2026-10-31",
+      "eligibility": "Singapore citizens: eligible JC2 students, final-year polytechnic students, NSFs awaiting university, and undergraduates from Year 1 to penultimate year. Full eight-week commitment required.",
+      "categories": [
+        "Internships"
+      ]
+    },
+    {
+      "title": "CAAS Internships — September–October Application Window",
+      "organisation": "Civil Aviation Authority of Singapore",
+      "category": "Internships",
+      "source_url": "https://www.caas.gov.sg/careers/scholarships-and-early-career-programmes/internships/",
+      "application_url": "https://www.caas.gov.sg/careers/scholarships-and-early-career-programmes/internships/",
+      "description": "Explore aviation policy, safety, technology or operations through an internship. CAAS lists a September–October application window; consult Careers@Gov for current roles and each role’s exact closing date.",
+      "location": "Singapore",
+      "eligibility": "Singapore citizens or permanent residents in tertiary education, from any discipline.",
+      "education_levels": [
+        "Polytechnic",
+        "University"
+      ],
+      "expiry_date": "2026-10-31",
+      "categories": [
+        "Internships"
+      ]
+    },
+    {
+      "title": "Own The Mic — October 2026 Workshop",
+      "organisation": "*SCAPE",
+      "category": "Workshops",
+      "source_url": "https://www.scape.sg/whats-on/ownthemic/",
+      "application_url": "https://www.scape.sg/whats-on/ownthemic/",
+      "description": "Practise emceeing, improvisation and hosting scripts with Joshua Simon over two workshop days. Selected participants must attend both days; prior hosting experience is required.",
+      "location": "*SCAPE The TreeTop, Singapore",
+      "application_deadline": "2026-10-10",
+      "start_date": "2026-10-24",
+      "end_date": "2026-10-25",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "mode": "in_person",
+      "eligibility": "Ages 15–35 with prior hosting experience. Twenty participants selected; both days required.",
+      "categories": [
+        "Workshops"
+      ]
+    },
+    {
+      "title": "*SCAPE FREQUENCY — Youth Project Open Call",
+      "organisation": "*SCAPE",
+      "category": "Grants",
+      "source_url": "https://www.scape.sg/whats-on/scape-frequency/",
+      "application_url": "https://www.scape.sg/whats-on/scape-frequency/",
+      "description": "Propose a series of public arts, culture or community activities for the November–December holidays. Selected projects receive venue support and may receive up to S$1,000 in project funding.",
+      "location": "Singapore",
+      "application_deadline": "2026-10-04",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "eligibility": "Singapore-based youth aged 15–35. Individuals or groups; proposals need at least three activations.",
+      "categories": [
+        "Grants"
+      ]
+    },
+    {
+      "title": "Singapore Hospitality & Tourism Conference 2026",
+      "organisation": "Singapore Tourism Board and partner institutions",
+      "category": "Career Exploration",
+      "source_url": "https://discover.nyc.gov.sg/events/singapore-hospitality-tourism-conference-2026-mu0x8rwb",
+      "application_url": "https://discover.nyc.gov.sg/events/singapore-hospitality-tourism-conference-2026-mu0x8rwb",
+      "description": "Meet tourism and hospitality employers at a career fair and explore student innovation through a hackathon showcase. The youth visit runs from 10:45am to 3pm.",
+      "location": "Begonia Ballroom, Sands Expo & Convention Centre, Singapore",
+      "start_date": "2026-10-23",
+      "end_date": "2026-10-23",
+      "mode": "in_person",
+      "categories": [
+        "Career Exploration"
+      ]
+    },
+    {
+      "title": "SLEUTH MODE — Build AI Agents to Crack a Fraud Case",
+      "organisation": "Digital Defence Alliance Singapore and CWG",
+      "category": "Hackathons",
+      "source_url": "https://discover.nyc.gov.sg/events/founder-mode-one-day-one-market-one-entire-company-mtttdlkj",
+      "application_url": "https://discover.nyc.gov.sg/events/founder-mode-one-day-one-market-one-entire-company-mtttdlkj",
+      "description": "Build AI agents to investigate a simulated fraud case in teams of four. This free full-day event welcomes students and young working adults from any discipline; bring a laptop.",
+      "location": "Suntec Convention Centre, Singapore",
+      "start_date": "2026-10-17",
+      "end_date": "2026-10-17",
+      "maximum_age": 29,
+      "mode": "in_person",
+      "eligibility": "Students and working adults under 30; bring a laptop. Join alone or with a team.",
+      "categories": [
+        "Hackathons"
+      ]
+    },
+    {
+      "title": "Look the Part. Own the Interview. — 8 October",
+      "organisation": "Movement Asia",
+      "category": "Career Exploration",
+      "source_url": "https://discover.nyc.gov.sg/events/look-the-part-own-the-interview-mtsbacd5",
+      "application_url": "https://discover.nyc.gov.sg/events/look-the-part-own-the-interview-mtsbacd5",
+      "description": "Prepare for interviews through styling and colour analysis, then meet industry mentors for practical advice on presenting your strengths.",
+      "location": "National Youth Council, Toa Payoh, Singapore",
+      "start_date": "2026-10-08",
+      "end_date": "2026-10-08",
+      "mode": "in_person",
+      "categories": [
+        "Career Exploration"
+      ]
+    },
+    {
+      "title": "WITGRITFIT Career Simulation Workshop — 26 October",
+      "organisation": "Avid Adventures",
+      "category": "Career Exploration",
+      "source_url": "https://discover.nyc.gov.sg/events/play-your-future-at-the-witgritfit-career-simulation-workshop-26-oct-2026-mtyicdhn",
+      "application_url": "https://discover.nyc.gov.sg/events/play-your-future-at-the-witgritfit-career-simulation-workshop-26-oct-2026-mtyicdhn",
+      "description": "Explore career choices through an interactive simulation and create a personal career canvas. The free online workshop runs from 1pm to 4pm.",
+      "location": "Singapore",
+      "start_date": "2026-10-26",
+      "end_date": "2026-10-26",
+      "mode": "online",
+      "categories": [
+        "Career Exploration"
+      ]
+    },
+    {
+      "title": "Intergenerational Book Club — October Meet Up",
+      "organisation": "Growthbeans",
+      "category": "Community Events",
+      "source_url": "https://discover.nyc.gov.sg/events/an-intergenerational-book-club-october-meet-up-msa3noc9",
+      "application_url": "https://discover.nyc.gov.sg/events/an-intergenerational-book-club-october-meet-up-msa3noc9",
+      "description": "Meet readers across generations to share perspectives and connect through books at a free evening gathering.",
+      "location": "Dakota Breeze Residents’ Network, Singapore",
+      "start_date": "2026-10-09",
+      "end_date": "2026-10-09",
+      "mode": "in_person",
+      "categories": [
+        "Community Events"
+      ]
+    },
+    {
+      "title": "World Evaluation Case Competition 2026",
+      "organisation": "World Evaluation Case Competition",
+      "category": "Competitions",
+      "source_url": "https://www.worldcasecomp.net/",
+      "application_url": "https://www.worldcasecomp.net/",
+      "description": "Student teams from around the world tackle an evaluation case. Register by 23 October for the competition on 7 November 2026.",
+      "location": "Global",
+      "application_deadline": "2026-10-23",
+      "start_date": "2026-11-07",
+      "end_date": "2026-11-07",
+      "eligibility": "Student teams; consult the organiser’s team and coach rules.",
+      "categories": [
+        "Competitions"
+      ]
+    },
+    {
+      "title": "World Young Economist Essay Prize 2026",
+      "organisation": "World Young Economist",
+      "category": "Competitions",
+      "source_url": "https://worldyoungeconomist.org/",
+      "application_url": "https://worldyoungeconomist.org/",
+      "description": "Write an original evidence-based economics essay in English of up to 2,000 words responding to an official prompt. The first essay is free to enter.",
+      "location": "Global",
+      "application_deadline": "2026-10-05",
+      "mode": "online",
+      "eligibility": "High school students, undergraduates and self-taught peers worldwide; consult the entry rules.",
+      "categories": [
+        "Competitions"
+      ]
+    },
+    {
+      "title": "Zooniverse — Online Research Volunteering",
+      "organisation": "Zooniverse",
+      "category": "Volunteering",
+      "source_url": "https://www.zooniverse.org/get-involved/volunteer",
+      "application_url": "https://www.zooniverse.org/get-involved/volunteer",
+      "description": "Help research teams classify data across science, nature, history and other fields. Choose projects and volunteer flexibly with no minimum time commitment.",
+      "location": "Global",
+      "mode": "online",
+      "eligibility": "Open participation. Under-16s need parent or guardian sign-off when registering.",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "LitterLifters — Boon Lay (10 October 2026)",
+      "organisation": "Youth Corps Singapore",
+      "category": "Volunteering",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/LitterLifters--Boon-Lay-10-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/LitterLifters--Boon-Lay-10-Oct-2026",
+      "description": "Help remove litter from public spaces and learn how waste affects local communities. Confirm the reporting point with the organiser before attending.",
+      "location": "Boon Lay, Singapore",
+      "application_deadline": "2026-10-03",
+      "start_date": "2026-10-10",
+      "end_date": "2026-10-10",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "mode": "in_person",
+      "categories": [
+        "Volunteering"
+      ]
+    },
+    {
+      "title": "LitterLifters — Clementi (24 October 2026)",
+      "organisation": "Youth Corps Singapore",
+      "category": "Volunteering",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/LitterLifters--Clementi-24-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/LitterLifters--Clementi-24-Oct-2026",
+      "description": "Help remove litter from public spaces and learn how waste affects local communities. Confirm the reporting point with the organiser before attending.",
+      "location": "Clementi, Singapore",
+      "application_deadline": "2026-10-17",
+      "start_date": "2026-10-24",
+      "end_date": "2026-10-24",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "mode": "in_person",
+      "categories": [
+        "Volunteering"
+      ]
+    }
+  ],
+  "skipped": [
+    {
+      "title": "Active Mind Active Life Sembawang (15 Oct 2026)",
+      "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Active-Mind-Active-Life-Sembawang-15-Oct-2026",
+      "reason": "Duplicate programme and date"
+    },
+    {
+      "title": "Care Beyond Memory - Potong Pasir (22 Aug 26 to 28 Nov 26) ",
+      "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/08/Care-Beyond-Memory--Potong-Pasir-22-Aug-26-to-28-Nov-26",
+      "reason": "Already underway; closing date conflicts with programme end; late entry unconfirmed"
+    },
+    {
+      "title": "Kampung Birthday Club - Chinatown (22 Aug 2026)",
+      "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/08/Kampung-Birthday-Club--Chinatown-22-Aug-2026",
+      "reason": "Already closed or completed"
+    },
+    {
+      "title": "KidsLearn - Term 1 2027",
+      "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Landing/KidsLearn---Term-1-2027",
+      "reason": "No verifiable individual schedule/deadline"
+    },
+    {
+      "title": "LitterLifters+ (Coastal Clean Ups) - Sep 2026",
+      "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Landing/LitterLifters-Coastal-Clean-Ups---Sep-2026",
+      "reason": "No verifiable individual schedule/deadline"
+    },
+    {
+      "title": "LitterLifters+ (Urban Clean Ups) - Sep 2026",
+      "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Landing/LitterLifters-Urban-Clean-Ups---Sep-2026",
+      "reason": "No verifiable individual schedule/deadline"
+    },
+    {
+      "title": "We Like To Move It Move It - Jurong West (2 to 23 Sep 2026)",
+      "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/08/We-Like-To-Move-It-Move-It--Jurong-West-2-to-23-Sep-2026",
+      "reason": "Already closed or completed"
+    }
+  ]
+}
