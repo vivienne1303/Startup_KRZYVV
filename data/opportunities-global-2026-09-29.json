@@ -1,0 +1,106 @@
+{
+  "as_of": "2026-09-29",
+  "browser_verified_links": {
+    "https://sistercities.org/what-we-do/programs/yaas/": "Verified official 2027 source page in the browser on 2026-09-29; automated fetch receives 403.",
+    "https://sistercities.fillout.com/2027yaas": "Verified browser Start button opens the 2027 eligibility and application form, deadline 1 April 2027 11:59PM ET; automated fetch receives 404. No declarations or application submitted."
+  },
+  "additions": [
+    {
+      "title": "Bow Seat Blue Planet Awareness Contest 2027",
+      "organisation": "Bow Seat Creative Action for Conservation",
+      "description": "Create art, writing, film, performance or multimedia about environmental disinformation for the Nature of Truth theme. Entry is free. Submit online by 7 June 2027, 11:59pm Eastern Time. An adult sponsor is required; entrants under 13 need a parent or guardian consent form.",
+      "eligibility": "Middle and high school students aged 11-18 worldwide, including home-school students. Follow the category and consent rules.",
+      "minimum_age": 11, "maximum_age": 18,
+      "application_deadline": "2027-06-07",
+      "source_url": "https://bowseat.org/programs/blue-planet-awareness-contest/faqs/",
+      "application_url": "https://bowseat.secure-platform.com/a/page/home/submit-blue-planet-awareness",
+      "travel_required": false,
+      "skills": ["Creativity", "Sustainability", "Communication"]
+    },
+    {
+      "title": "TSL International Student Competition 2027 - Navigating El Nino",
+      "organisation": "Trust for Sustainable Living",
+      "description": "Share how world leaders should respond to worsening extreme weather through writing, art, audio or video. A teacher, parent or guardian submits through the official platform as a Teacher Champion. Entries close 1 March 2027; consult the official deadline time. Written entries have a 600-word limit and audio/video a three-minute limit.",
+      "eligibility": "Students aged 7-18 worldwide, in the 7-11 and 12-18 categories. Entries are coordinated by an adult Teacher Champion; home-school and independent students can participate.",
+      "minimum_age": 7, "maximum_age": 18,
+      "application_deadline": "2027-03-01",
+      "source_url": "https://trustforsustainableliving.org/take-part/international-schools-essay-competition-and-debate",
+      "eligibility_evidence_url": "https://trustforsustainableliving.org/take-part/international-schools-essay-competition-and-debate/faqs-essay-competition",
+      "application_url": "https://trustforsustainableliving.submittable.com/submit",
+      "travel_required": false,
+      "skills": ["Sustainability", "Writing", "Creativity"]
+    },
+    {
+      "title": "Sony World Photography Awards 2027 - Youth Competition",
+      "organisation": "World Photography Organisation",
+      "description": "Enter up to three photographs taken in 2026. Entry is free and closes 5 January 2027 at 16:00 GMT. Upload through the official photography account portal. The winner receives photography equipment and recognition, with a London awards ceremony included in the prize arrangements.",
+      "eligibility": "Open internationally to photographers aged 19 or younger on the closing date. Follow image ownership, size and originality rules; this listing is the Youth category.",
+      "maximum_age": 19,
+      "application_deadline": "2027-01-05",
+      "source_url": "https://www.worldphoto.org/sony-world-photography-awards/youth",
+      "application_url": "https://users.worldphoto.org/competition/169/categories",
+      "travel_required": null,
+      "skills": ["Photography", "Creativity"]
+    },
+    {
+      "title": "Sony World Photography Awards 2027 - Student Competition",
+      "organisation": "World Photography Organisation",
+      "description": "Submit a photographic series of 5-10 images responding to Journeys. Entry is free through the official account portal. Deadline: 27 November 2026. The page lists 16:00 GMT but a rules clause says 13:00 GMT, so submit before 13:00 GMT or confirm with the organiser. Your photography institution must be registered.",
+      "eligibility": "Photography students aged 18-30 worldwide at eligible World Photography Organisation institutions. Institutional registration and the image rules apply.",
+      "minimum_age": 18, "maximum_age": 30,
+      "application_deadline": "2026-11-27",
+      "source_url": "https://www.worldphoto.org/sony-world-photography-awards/student",
+      "application_url": "https://users.worldphoto.org/competition/171/categories",
+      "travel_required": null,
+      "skills": ["Photography", "Storytelling"]
+    },
+    {
+      "title": "Sister Cities Young Artists and Authors Showcase 2027",
+      "organisation": "Sister Cities International",
+      "description": "Create one original work of art, photography, writing, poetry or music for A Tapestry of Cultures and the Threads That Connect Us. Submit digitally by 1 April 2027. Coordinate with your local Sister Cities programme first: its membership and approval are required, and local membership conditions or fees may apply.",
+      "eligibility": "Students aged 12-18 worldwide who are affiliated with a dues-paying Sister Cities International member or its international partner community, with a direct programme contact. Independent submission without programme approval is not eligible.",
+      "minimum_age": 12, "maximum_age": 18,
+      "application_deadline": "2027-04-01",
+      "source_url": "https://sistercities.org/what-we-do/programs/yaas/",
+      "application_url": "https://sistercities.fillout.com/2027yaas",
+      "travel_required": null,
+      "skills": ["Creativity", "Writing", "Cultural exchange"]
+    },
+    {
+      "title": "Intellectaa iChallenge - Global Student Innovation Challenge 2026",
+      "organisation": "Intellectaa",
+      "description": "Submit an original research or build project using the organiser's 1,500-word template by 30 November 2026. Entry costs US$5, $10 or $20 plus applicable taxes depending on country income classification, payable through the link emailed after submission. Publication awards are subject to editorial review; other publication fees may apply.",
+      "eligibility": "School students in grades 8-12 or equivalent worldwide. Parent or guardian consent is required. One entry per student for this edition.",
+      "application_deadline": "2026-11-30",
+      "source_url": "https://ichallenge.intellectaa.com/",
+      "application_url": "https://ichallenge.intellectaa.com/",
+      "travel_required": false,
+      "skills": ["Research", "Innovation", "Writing"]
+    },
+    {
+      "title": "Oxford Agora Global Essay and Defence Prize 2027",
+      "organisation": "Oxford Global Education",
+      "description": "Write an English essay on one of ten questions, then discuss your argument by video if shortlisted. Free registration and entry; essays close 31 January 2027 at 23:59 GMT. Junior essays allow 1,000 words and senior essays 1,500. The organiser is independent of Oxford and Cambridge universities. Any Oxford ceremony attendance is optional.",
+      "eligibility": "Students aged 11-18 on 31 January 2027 from any country or school system, including home-school students. Entrants under 18 need parent or guardian support. Junior cohort: 11-13; senior: 14-18.",
+      "minimum_age": 11, "maximum_age": 18,
+      "application_deadline": "2027-01-31",
+      "source_url": "https://oxfordglobaleducation.com/oxford-agora",
+      "application_url": "https://oxfordglobaleducation.com/oxford-agora#registration",
+      "travel_required": false,
+      "skills": ["Writing", "Critical thinking", "Debate"]
+    }
+  ],
+  "updates": [
+    {"id":"09a20253-4b08-4ef2-82ec-9ac32a035bd2","evidence":["https://diamondchallenge.org/competition/","https://limitlessworldsummit.org/"],"payload":{"host_country":"US","location":"Online rounds; final in Wilmington, Delaware, United States","eligibility_scope":"worldwide","eligible_countries":[],"travel_required":true,"description":"Teams of two to four high school students develop an original business or social venture concept. Entries close 14 January 2027 at 5pm EST. Initial rounds offer virtual participation; finalists must send at least one team member to the in-person summit in Wilmington, Delaware, on 29-30 April 2027."}},
+    {"id":"762bd823-bde8-4830-bbd2-59a29f69d2ca","evidence":["https://www.planetpluschallenge.com/how-it-works"],"payload":{"host_country":"SG","eligibility_scope":"worldwide","eligible_countries":[],"travel_required":true}},
+    {"id":"e82640b8-d349-4277-aa87-915b4875747c","evidence":["https://www.dukechinaessay.com/"],"payload":{"eligibility_scope":"worldwide","eligible_countries":[],"travel_required":false}},
+    {"id":"b4310725-07e1-4e0b-9fd4-d034ce623d5a","evidence":["https://www.lumiere-education.com/junior-scholars-essay-contest"],"payload":{"eligibility_scope":"worldwide","eligible_countries":[],"travel_required":false}},
+    {"id":"5cdb4249-f99e-47d7-b9e7-779318c76ac6","evidence":["https://www.zooniverse.org/about"],"payload":{"eligibility_scope":"worldwide","eligible_countries":[],"travel_required":false}},
+    {"id":"a329b4d5-7065-4b41-931e-aa4af9bf896d","evidence":["https://www.dis.gov.sg/sentinel-programme/apply/"],"payload":{"host_country":"SG","eligibility_scope":"countries","eligible_countries":["SG"],"travel_required":null}},
+    {"id":"542c3320-2941-45ba-ac68-d8ec589f1259","evidence":["https://www.dis.gov.sg/sentinel-programme/apply/"],"payload":{"host_country":"SG","eligibility_scope":"countries","eligible_countries":["SG"],"travel_required":false}}
+  ],
+  "not_added": [
+    {"title":"iF Design Student Award 2027","reason":"Official pages returned HTTP 403 during the application-link audit; retained for later verification, not published."},
+    {"title":"Science Without Borders Challenge 2027","reason":"Search results suggested a new cycle, but the official theme page retrieved still described 2026. Not published without reliable current-cycle verification."}
+  ]
+}
