@@ -54,22 +54,7 @@ navToggle.addEventListener("click", () => {
 
 navLinks.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
 
-const filterCards = () => {
-  const query = searchInput.value.trim().toLowerCase();
-  let visibleCount = 0;
-
-  cards.forEach((card) => {
-    const matchesCategory = activeFilter === "all" || card.dataset.category === activeFilter;
-    const matchesDetail = activeDetail === "all" || card.dataset.details.includes(activeDetail);
-    const matchesSearch = card.dataset.title.includes(query) || card.textContent.toLowerCase().includes(query);
-    const isVisible = matchesCategory && matchesDetail && matchesSearch;
-
-    card.style.display = isVisible ? "grid" : "none";
-    if (isVisible) visibleCount += 1;
-  });
-
-  emptyState.style.display = visibleCount ? "none" : "block";
-};
+const filterCards = () => { currentPage = 1; loadPage(); };
 
 const bindCategoryFilters = () => {
   categoryFilters = document.querySelectorAll(".filter:not(.detail-filter)");
@@ -87,13 +72,19 @@ const renderCategoryFilters = (opportunities) => {
   if (!categoryFilterContainer) return;
   const categories = [...new Set(opportunities.map((item) => String(item.category || "Other").trim()).filter(Boolean))]
     .sort((first, second) => first.localeCompare(second));
-  const availableKeys = new Set(categories.map(categoryKey));
-  const exactRequestedKey = categoryKey(initialCategory);
-  const requestedKey = availableKeys.has(exactRequestedKey) ? exactRequestedKey : (categoryAliases[initialCategory] || exactRequestedKey);
-  activeFilter = initialCategory && availableKeys.has(requestedKey) ? requestedKey : "all";
+  // Keep the focused category button in the DOM across page/filter changes.
+  const signature = JSON.stringify(categories);
+  if (categoryFilterContainer.dataset.categories === signature) {
+    categoryFilters.forEach(button => {
+      button.classList.toggle("active", button.dataset.filter === activeFilter);
+      button.setAttribute("aria-pressed", String(button.dataset.filter === activeFilter));
+    });
+    return;
+  }
+  categoryFilterContainer.dataset.categories = signature;
   categoryFilterContainer.innerHTML = [
-    `<button class="filter${activeFilter === "all" ? " active" : ""}" data-filter="all">All</button>`,
-    ...categories.map((category) => `<button class="filter${activeFilter === categoryKey(category) ? " active" : ""}" data-filter="${escapeHtml(categoryKey(category))}">${escapeHtml(category)}</button>`),
+    `<button type="button" aria-pressed="${activeFilter === "all"}" class="filter${activeFilter === "all" ? " active" : ""}" data-filter="all">All</button>`,
+    ...categories.map((category) => `<button type="button" aria-pressed="${activeFilter === categoryKey(category)}" class="filter${activeFilter === categoryKey(category) ? " active" : ""}" data-filter="${escapeHtml(categoryKey(category))}">${escapeHtml(category)}</button>`),
   ].join("");
   bindCategoryFilters();
 };
@@ -109,7 +100,8 @@ detailFilters.forEach((button) => {
   });
 });
 
-searchInput.addEventListener("input", filterCards);
+let searchTimer;
+searchInput.addEventListener("input", () => { clearTimeout(searchTimer); searchTimer = setTimeout(filterCards, 250); });
 
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -162,7 +154,8 @@ const opportunityMarkup = (opportunity) => {
   const metaItems = [
     `<li><strong>Deadline:</strong> ${displayDeadline ? new Date(`${displayDeadline}T00:00:00`).toLocaleDateString() : "Rolling"}</li>`,
     ageParts.length ? `<li><strong>Eligibility:</strong> Ages ${escapeHtml(ageParts.join(" "))}</li>` : "",
-    [opportunity.mode, opportunity.location].filter(Boolean).length ? `<li>${escapeHtml([opportunity.mode, opportunity.location].filter(Boolean).join(" · "))}</li>` : "",
+    `<li class="opportunity-location">${escapeHtml(OpportunityFilters.locationLabel(opportunity, language()))}</li>`,
+    `<li>${escapeHtml(translateUi(({ online: "Online", in_person: "In person", hybrid: "Hybrid" })[opportunity.format || opportunity.mode] || "Format not specified"))}${opportunity.travel_required == null ? "" : ` · ${escapeHtml(translateUi(opportunity.travel_required ? "Travel required" : "No travel required"))}`}</li>`,
   ].filter(Boolean).join("");
   const internal = opportunity.application_method === "internal" && opportunity.internal_application_enabled === true;
   const candidateUrl = opportunity.application_url || opportunity.source_url;
@@ -213,7 +206,7 @@ const loadRecommendationPreview = async () => {
 const bindOpportunityActions = async () => {
   const token = localStorage.getItem("teenlaunch_token");
   if (isAdmin) {
-    document.querySelectorAll("[data-delete-id]").forEach((button) => button.addEventListener("click", async () => {
+    document.querySelectorAll("#opportunityGrid [data-delete-id]").forEach((button) => button.addEventListener("click", async () => {
       if (!window.confirm(`${translateUi("Delete")} “${button.dataset.deleteTitle}”? ${translateUi("This cannot be undone.")}`)) return;
       button.disabled = true;
       try {
@@ -221,12 +214,13 @@ const bindOpportunityActions = async () => {
         if (!response.ok) throw new Error("Delete failed");
         document.querySelector(`[data-opportunity-card-id="${CSS.escape(button.dataset.deleteId)}"]`)?.remove();
         cards = document.querySelectorAll(".opportunity-card");
-        filterCards();
+        legacyRows = null;
+        loadPage();
       } catch (_) { window.alert(translateUi("The opportunity could not be deleted. Please try again.")); button.disabled = false; }
     }));
     return;
   }
-  document.querySelectorAll(".save-button").forEach((button) => button.addEventListener("click", async () => {
+  document.querySelectorAll("#opportunityGrid .save-button").forEach((button) => button.addEventListener("click", async () => {
     if (!token) { window.location.href = `auth.html?mode=login&returnTo=${encodeURIComponent("opportunities.html")}`; return; }
     const saving = !button.classList.contains("saved");
     button.classList.toggle("saved", saving);
@@ -250,7 +244,7 @@ const bindOpportunityActions = async () => {
     fetch(`${resolveApiBase()}/profile/saved`, { headers }),
     fetch(`${resolveApiBase()}/registrations/me`, { headers }),
   ]);
-  if (savedResponse.ok) { const ids = new Set(((await savedResponse.json()).saved || []).map(item => item.opportunity_id)); document.querySelectorAll(".save-button").forEach(button => { const saved = ids.has(button.dataset.saveId); button.classList.toggle("saved", saved); button.setAttribute("aria-pressed", String(saved)); }); }
+  if (savedResponse.ok) { const ids = new Set(((await savedResponse.json()).saved || []).map(item => item.opportunity_id)); document.querySelectorAll("#opportunityGrid .save-button").forEach(button => { const saved = ids.has(button.dataset.saveId); button.classList.toggle("saved", saved); button.setAttribute("aria-pressed", String(saved)); }); }
   if (registrationsResponse.ok) {
     const appliedIds = new Set(((await registrationsResponse.json()).registrations || []).map(item => item.opportunity_id));
     document.querySelectorAll(".apply-button").forEach((link) => {
@@ -310,56 +304,121 @@ const setupExternalRegistrationPrompt = () => {
   window.setTimeout(showPrompt, 1200);
 };
 
-const loadOpportunities = async () => {
+const language = () => window.TeenLaunchI18n?.getLanguage() || "en";
+const locationFilter = document.querySelector("#locationFilter");
+const countrySearch = document.querySelector("#countrySearch");
+const resultCount = document.querySelector("#resultCount");
+const previousPage = document.querySelector("#previousPage");
+const nextPage = document.querySelector("#nextPage");
+let currentPage = 1, currentCountry = "all", requestVersion = 0, currentRequest;
+let currentResult = null, countryCodes = [], legacyRows = null;
+activeFilter = initialCategory === "innovation workshops" ? "workshops" : initialCategory ? categoryKey(initialCategory) : "all";
+
+const renderCountryOptions = () => {
+  const query = countrySearch.value.trim().toLowerCase();
+  const matching = countryCodes.filter(code => [code, OpportunityFilters.countryName(code, "en"), OpportunityFilters.countryName(code, "zh")].some(name => name.toLowerCase().includes(query)));
+  const visible = [...new Set([...matching, ...(countryCodes.includes(currentCountry) ? [currentCountry] : [])])]
+    .sort((a,b) => OpportunityFilters.countryName(a, language()).localeCompare(OpportunityFilters.countryName(b, language()), language()));
+  locationFilter.innerHTML = `<option value="all">${escapeHtml(translateUi("All opportunities"))}</option><option value="global">${escapeHtml(translateUi("Global opportunities"))}</option>`
+    + visible.map(code => `<option value="${escapeHtml(code)}">${escapeHtml(OpportunityFilters.countryName(code, language()))}</option>`).join("");
+  locationFilter.value = currentCountry;
+  document.querySelector("#countrySearchStatus").innerHTML = query && !matching.length ? escapeHtml(translateUi("No matching countries. Try another country name.")) : "";
+  document.querySelector("#clearLocation").disabled = currentCountry === "all" && !query;
+};
+const renderPage = () => {
+  if (!currentResult) return;
+  const { opportunities, total, page, pages, facets } = currentResult;
+  countryCodes = facets.countries;
+  renderCountryOptions();
+  renderCategoryFilters(facets.categories.map(category => ({category})));
+  const grid = document.querySelector("#opportunityGrid");
+  grid.innerHTML = opportunities.map(opportunityMarkup).join("");
+  cards = grid.querySelectorAll(".opportunity-card");
+  const first = total ? (page - 1) * 25 + 1 : 0, last = Math.min(page * 25, total);
+  resultCount.innerHTML = escapeHtml(language() === "zh" ? `显示第 ${first}–${last} 条，共 ${total} 个机会` : `Showing ${first}–${last} of ${total} opportunities`);
+  document.querySelector("#pageStatus").innerHTML = escapeHtml(language() === "zh" ? `第 ${page} 页，共 ${pages} 页` : `Page ${page} of ${pages}`);
+  previousPage.disabled = page <= 1;
+  nextPage.disabled = page >= pages;
+  emptyState.hidden = total > 0;
+  emptyState.style.display = total ? "none" : "block";
+  emptyState.innerHTML = total ? "" : `<p>${escapeHtml(translateUi("No opportunities match these filters. Try another country, broaden your search, or clear the filters."))}</p><p>${escapeHtml(translateUi("Listings with unspecified eligibility appear under All opportunities only."))}</p>`;
+  bindOpportunityActions().catch(() => {});
+};
+const loadPage = async () => {
+  const version = ++requestVersion;
+  currentRequest?.abort();
+  currentRequest = new AbortController();
+  const controller = currentRequest;
+  const timeout = setTimeout(() => controller.abort(), 15000);
   const grid = document.querySelector("#opportunityGrid");
   grid.setAttribute("aria-busy", "true");
-  grid.innerHTML = `
-    <div class="opportunity-load-state" role="status">
-      <span class="opportunity-spinner" aria-hidden="true"></span>
-      <strong>Loading verified opportunities...</strong>
-      <p>Checking current deadlines and application details.</p>
-    </div>`;
+  previousPage.disabled = nextPage.disabled = true;
+  resultCount.innerHTML = escapeHtml(translateUi("Loading verified opportunities..."));
+  emptyState.hidden = true;
   emptyState.style.display = "none";
+  const filters = { search: searchInput.value.trim(), category: activeFilter, detail: activeDetail, country: currentCountry, page: currentPage };
   try {
-    const token = localStorage.getItem("teenlaunch_token");
-    const sessionRequest = token
-      ? fetch(`${resolveApiBase()}/auth/me`, { headers: { Authorization: `Bearer ${token}` } })
-      : Promise.resolve(null);
-    const [response, sessionResponse] = await Promise.all([
-      fetch(`${resolveApiBase()}/opportunities`),
-      sessionRequest,
-    ]);
-    if (sessionResponse?.ok) isAdmin = (await sessionResponse.json()).role === "admin";
-    if (!response.ok) throw new Error("Verified opportunities could not be loaded.");
-    const { opportunities } = await response.json();
-    if (!Array.isArray(opportunities)) throw new Error("The opportunity response was invalid.");
-    if (!opportunities.length) {
-      grid.innerHTML = "";
-      const message = "No verified opportunities are open right now. Please check again soon.";
-      emptyState.hidden = false;
-      emptyState.removeAttribute("data-i18n");
-      emptyState.style.setProperty("display", "block", "important");
-      emptyState.textContent = translateUi(message);
-      return;
+    let data;
+    if (legacyRows) data = OpportunityFilters.browse(legacyRows, filters);
+    else {
+      const response = await fetch(`${resolveApiBase()}/opportunities?${new URLSearchParams({ paged: "true", ...filters })}`, { signal: controller.signal });
+      if (!response.ok) throw new Error("Opportunities unavailable");
+      data = await response.json();
+      // The old API ignores paged and applies some filters itself. Fetch an unfiltered
+      // copy once during a staggered deployment; never mistake one filtered page for all data.
+      if (!data.facets) {
+        const legacyResponse = await fetch(`${resolveApiBase()}/opportunities`, { signal: controller.signal });
+        if (!legacyResponse.ok) throw new Error("Opportunities unavailable");
+        const legacy = await legacyResponse.json();
+        if (!Array.isArray(legacy.opportunities)) throw new Error("Invalid opportunities");
+        if (version !== requestVersion) return;
+        legacyRows = legacy.opportunities;
+        data = OpportunityFilters.browse(legacyRows, filters);
+      }
     }
-    renderCategoryFilters(opportunities);
-    grid.innerHTML = opportunities.map(opportunityMarkup).join("");
-    cards = document.querySelectorAll("#opportunityGrid .opportunity-card");
-    filterCards();
-    bindOpportunityActions().catch(() => {});
-    setupExternalRegistrationPrompt();
-    loadRecommendationPreview();
+    if (version !== requestVersion) return;
+    if (!Array.isArray(data.opportunities) || !data.facets) throw new Error("Invalid opportunities");
+    currentResult = data;
+    currentPage = data.page;
+    renderPage();
   } catch (_) {
+    if (version !== requestVersion) return;
     grid.innerHTML = "";
-    cards = document.querySelectorAll("#opportunityGrid .opportunity-card");
+    currentResult = null;
+    resultCount.innerHTML = "";
+    document.querySelector("#pageStatus").innerHTML = "";
     emptyState.hidden = false;
-    emptyState.removeAttribute("data-i18n");
-    emptyState.style.setProperty("display", "block", "important");
-    emptyState.innerHTML = `${translateUi("Verified opportunities could not be loaded right now.")} <button class="btn secondary opportunity-retry" type="button">${translateUi("Try again")}</button>`;
-    emptyState.querySelector(".opportunity-retry").addEventListener("click", loadOpportunities, { once: true });
+    emptyState.style.display = "block";
+    emptyState.innerHTML = `${escapeHtml(translateUi("Verified opportunities could not be loaded right now."))} <button class="btn secondary opportunity-retry" type="button">${escapeHtml(translateUi("Try again"))}</button>`;
+    emptyState.querySelector("button").addEventListener("click", loadPage, { once: true });
   } finally {
-    grid.removeAttribute("aria-busy");
+    clearTimeout(timeout);
+    if (version === requestVersion) grid.removeAttribute("aria-busy");
   }
 };
-
+countrySearch.addEventListener("input", renderCountryOptions);
+locationFilter.addEventListener("change", () => { currentCountry = locationFilter.value; filterCards(); });
+document.querySelector("#clearLocation").addEventListener("click", () => { currentCountry = "all"; countrySearch.value = ""; filterCards(); });
+document.querySelector("#clearFilters").addEventListener("click", () => {
+  clearTimeout(searchTimer);
+  currentCountry = activeFilter = activeDetail = "all";
+  countrySearch.value = searchInput.value = "";
+  detailFilters.forEach(button => button.classList.toggle("active", button.dataset.detail === "all"));
+  filterCards();
+});
+previousPage.addEventListener("click", () => { currentPage--; loadPage(); });
+nextPage.addEventListener("click", () => { currentPage++; loadPage(); });
+document.addEventListener("teenlaunch:languagechange", () => { renderPage(); });
+const loadOpportunities = async () => {
+  const token = localStorage.getItem("teenlaunch_token");
+  if (token) {
+    try {
+      const response = await fetch(`${resolveApiBase()}/auth/me`, { headers: { Authorization: `Bearer ${token}` }, signal: AbortSignal.timeout(10000) });
+      if (response.ok) isAdmin = (await response.json()).role === "admin";
+    } catch (_) { /* Public opportunities remain available without session verification. */ }
+  }
+  await loadPage();
+  setupExternalRegistrationPrompt();
+  loadRecommendationPreview();
+};
 loadOpportunities();

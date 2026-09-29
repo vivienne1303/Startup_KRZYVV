@@ -174,6 +174,11 @@
             Location
             <input type="text" name="location" placeholder="Singapore or Online" data-i18n-placeholder="Singapore or Online">
           </label>
+          <label>Host country (two-letter code)<input name="host_country" maxlength="2" pattern="[A-Za-z]{2}" placeholder="SG"></label>
+          <label>Applicant eligibility<select name="eligibility_scope"><option value="unknown">Eligibility not specified</option><option value="worldwide">Open worldwide</option><option value="countries">Specific countries</option></select></label>
+          <label class="admin-wide">Eligible country codes<input name="eligible_countries" placeholder="SG, MY, US"><small>Enter verified applicant countries only. Leave blank for worldwide or unspecified eligibility.</small></label>
+          <label>Travel required<select name="travel_required"><option value="">Not specified</option><option value="true">Yes</option><option value="false">No</option></select></label>
+          <label class="admin-wide">Eligibility details<textarea name="eligibility" rows="3" placeholder="Age, school membership, residency rules and source evidence"></textarea></label>
           <label class="admin-wide">
             Application URL
             <input type="url" name="application_url" placeholder="https://example.com/apply" data-i18n-placeholder="https://example.com/apply">
@@ -267,8 +272,8 @@
   </footer>
   <script src="../js/auth-nav.js"></script>
   <script src="../script.js"></script>
-  <script src="../js/admin-dashboard.js"></script>
+  <script src="../js/admin-dashboard.js?v=20260929-location"></script>
   <script src="../js/admin-opportunity-scout.js"></script>
-  <script src="../js/i18n.js"></script>
+  <script src="../js/i18n.js?v=20260929-location"></script>
 </body>
 </html>

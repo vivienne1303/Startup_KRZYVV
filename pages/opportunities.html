@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/opportunities.css">
+  <link rel="stylesheet" href="../css/opportunities.css?v=20260929-location">
   <link rel="stylesheet" href="../css/opportunity-scout.css">
   <link rel="stylesheet" href="../css/theme.css?v=20260820-explore-tabs">
   <link rel="stylesheet" href="../css/settings.css">
@@ -62,6 +62,17 @@
           <span data-i18n="Search">Search</span>
           <input id="searchInput" type="search" placeholder="Search opportunities...">
         </label>
+        <fieldset class="location-controls">
+          <legend data-i18n="Location">Location</legend>
+          <p id="locationHelp" data-i18n="Filter by where you can apply from, not where the event takes place.">Filter by where you can apply from, not where the event takes place.</p>
+          <div class="location-fields">
+            <label><span data-i18n="Find a country">Find a country</span><input id="countrySearch" type="search" autocomplete="off" aria-controls="locationFilter" placeholder="Search countries..."></label>
+            <label><span data-i18n="Applicant location">Applicant location</span><select id="locationFilter" aria-describedby="locationHelp"><option value="all">All opportunities</option><option value="global">Global opportunities</option></select></label>
+            <button id="clearLocation" class="btn secondary" type="button" data-i18n="Clear location">Clear location</button>
+          </div>
+          <p id="countrySearchStatus" role="status" aria-live="polite"></p>
+          <small data-i18n="Global means applicants from multiple countries or worldwide are eligible. Other entry requirements still apply.">Global means applicants from multiple countries or worldwide are eligible. Other entry requirements still apply.</small>
+        </fieldset>
         <div class="filters" aria-label="Opportunity categories">
           <button class="filter active" data-filter="all" data-i18n="All">All</button>
           <button class="filter" data-filter="internship">Internships</button>
@@ -73,80 +84,17 @@
         </div>
       </div>
 
-      <div class="opportunity-grid" id="opportunityGrid">
-        <div class="opportunity-load-state" role="status">
-          <span class="opportunity-spinner" aria-hidden="true"></span>
-          <strong>Loading verified opportunities...</strong>
-          <p>Checking current deadlines and application details.</p>
-        </div>
-        <article class="opportunity-card reveal" data-category="startup" data-details="14-16 17-19 physical advanced soon" data-title="young founder accelerator startup programme deadline soon">
-          <span class="tag" data-i18n="Startup Programmes">Startup Programmes</span>
-          <h3 data-i18n="Young Founder Accelerator">Young Founder Accelerator</h3>
-          <p data-i18n="Entrepreneurship programme for students building their first business idea.">Entrepreneurship programme for students building their first business idea.</p>
-          <ul>
-            <li data-i18n="Deadline: 28 Jun 2026">Deadline: 28 Jun 2026</li>
-            <li data-i18n="Eligibility: Ages 14-19">Eligibility: Ages 14-19</li>
-            <li>Physical, advanced</li>
-          </ul>
-          <a class="btn secondary" href="#" data-i18n="Apply">Apply</a>
-        </article>
-        <article class="opportunity-card reveal" data-category="workshop" data-details="10-13 14-16 17-19 online beginner soon" data-title="innovation workshop ai prototype deadline soon">
-          <span class="tag" data-i18n="Innovation Workshops">Innovation Workshops</span>
-          <h3 data-i18n="AI Innovation Workshop">AI Innovation Workshop</h3>
-          <p data-i18n="Hands-on sessions for using AI tools to research, prototype, and present ideas.">Hands-on sessions for using AI tools to research, prototype, and present ideas.</p>
-          <ul>
-            <li data-i18n="Deadline: 12 Jul 2026">Deadline: 12 Jul 2026</li>
-            <li data-i18n="Eligibility: Ages 12-19">Eligibility: Ages 12-19</li>
-            <li>Online, beginner</li>
-          </ul>
-          <a class="btn secondary" href="#" data-i18n="Apply">Apply</a>
-        </article>
-        <article class="opportunity-card reveal" data-category="camp" data-details="10-13 14-16 physical beginner" data-title="future leaders camp leadership">
-          <span class="tag" data-i18n="Leadership Camps">Leadership Camps</span>
-          <h3 data-i18n="Future Leaders Camp">Future Leaders Camp</h3>
-          <p data-i18n="A confidence-building camp focused on teamwork, decision-making, and service.">A confidence-building camp focused on teamwork, decision-making, and service.</p>
-          <ul>
-            <li data-i18n="Deadline: 5 Aug 2026">Deadline: 5 Aug 2026</li>
-            <li data-i18n="Eligibility: Ages 10-16">Eligibility: Ages 10-16</li>
-            <li>Physical, beginner</li>
-          </ul>
-          <a class="btn secondary" href="#" data-i18n="Apply">Apply</a>
-        </article>
-        <article class="opportunity-card reveal" data-category="entrepreneurship" data-details="14-16 17-19 online beginner" data-title="youth entrepreneurship programme startup basics">
-          <span class="tag" data-i18n="Youth Entrepreneurship">Youth Entrepreneurship</span>
-          <h3 data-i18n="Startup Basics Cohort">Startup Basics Cohort</h3>
-          <p data-i18n="A guided online programme covering ideation, customer research, simple finance, and pitching.">A guided online programme covering ideation, customer research, simple finance, and pitching.</p>
-          <ul>
-            <li data-i18n="Deadline: 22 Jul 2026">Deadline: 22 Jul 2026</li>
-            <li data-i18n="Eligibility: Ages 14-19">Eligibility: Ages 14-19</li>
-            <li>Online, beginner</li>
-          </ul>
-          <a class="btn secondary" href="#" data-i18n="Apply">Apply</a>
-        </article>
-        <article class="opportunity-card reveal" data-category="workshop" data-details="10-13 14-16 physical beginner" data-title="design thinking innovation workshop">
-          <span class="tag" data-i18n="Innovation Workshops">Innovation Workshops</span>
-          <h3 data-i18n="Design Thinking Lab">Design Thinking Lab</h3>
-          <p data-i18n="A practical workshop for turning everyday problems into testable youth project ideas.">A practical workshop for turning everyday problems into testable youth project ideas.</p>
-          <ul>
-            <li data-i18n="Deadline: Rolling">Deadline: Rolling</li>
-            <li data-i18n="Eligibility: Ages 10-24">Eligibility: Ages 10-24</li>
-            <li>Physical, beginner</li>
-          </ul>
-          <a class="btn secondary" href="#" data-i18n="Apply">Apply</a>
-        </article>
-        <article class="opportunity-card reveal" data-category="internship" data-details="17-19 physical advanced" data-title="student tech internship startup operations">
-          <span class="tag" data-i18n="Internships">Internships</span>
-          <h3 data-i18n="Student Tech Internship">Student Tech Internship</h3>
-          <p data-i18n="Beginner-friendly internship shadowing product, design, and startup operations teams.">Beginner-friendly internship shadowing product, design, and startup operations teams.</p>
-          <ul>
-            <li data-i18n="Deadline: 18 Aug 2026">Deadline: 18 Aug 2026</li>
-            <li data-i18n="Eligibility: Ages 16-19">Eligibility: Ages 16-19</li>
-            <li>Physical, advanced</li>
-          </ul>
-          <a class="btn secondary" href="#" data-i18n="Apply">Apply</a>
-        </article>
+      <div class="browse-summary">
+        <p id="resultCount" role="status" aria-live="polite"></p>
+        <button id="clearFilters" class="btn secondary" type="button" data-i18n="Clear all filters">Clear all filters</button>
       </div>
-      <p class="empty-state" id="emptyState" data-i18n="No matching opportunities yet. Try another search or category.">No matching opportunities yet. Try another search or category.</p>
+      <div class="opportunity-grid" id="opportunityGrid" aria-busy="true"></div>
+      <div class="empty-state" id="emptyState" role="status" hidden></div>
+      <nav class="opportunity-pagination" aria-label="Opportunity pages">
+        <button id="previousPage" class="btn secondary" type="button" data-i18n="Previous page">Previous page</button>
+        <span id="pageStatus" aria-live="polite"></span>
+        <button id="nextPage" class="btn secondary" type="button" data-i18n="Next page">Next page</button>
+      </nav>
     </section>
 
     <section class="section highlight-grid">
@@ -170,7 +118,8 @@
   </footer>
   <script src="../js/auth-nav.js"></script>
 
-  <script src="../js/i18n.js"></script>
-  <script src="../js/opportunities.js?v=20260805"></script>
+  <script src="../js/i18n.js?v=20260929-location"></script>
+  <script src="../js/opportunity-filters.js?v=20260929-location"></script>
+  <script src="../js/opportunities.js?v=20260929-location"></script>
 </body>
 </html>

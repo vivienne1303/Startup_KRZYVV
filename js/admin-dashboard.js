@@ -205,6 +205,11 @@
     opportunityForm.elements.skills.value = (opportunity?.skills || []).join(", ");
     opportunityForm.elements.mode.value = opportunity?.mode || "";
     opportunityForm.elements.location.value = opportunity?.location || "";
+    opportunityForm.elements.host_country.value = opportunity?.host_country || "";
+    opportunityForm.elements.eligibility_scope.value = opportunity?.eligibility_scope || "unknown";
+    opportunityForm.elements.eligible_countries.value = (opportunity?.eligible_countries || []).join(", ");
+    opportunityForm.elements.travel_required.value = opportunity?.travel_required == null ? "" : String(opportunity.travel_required);
+    opportunityForm.elements.eligibility.value = opportunity?.eligibility || "";
     opportunityForm.elements.is_published.checked = Boolean(opportunity?.is_published);
     opportunityForm.elements.internal_application_enabled.checked = opportunity?.internal_application_enabled !== false;
     opportunityFormTitle.textContent = "Edit opportunity";
@@ -261,7 +266,11 @@
           end_date: formData.get("end_date") || null,
           application_url: String(formData.get("application_url") || "").trim() || null,
           organisation: String(formData.get("organizer") || "").trim() || null,
-          eligibility: null,
+          eligibility: String(formData.get("eligibility") || "").trim() || null,
+          host_country: String(formData.get("host_country") || "").trim().toUpperCase() || null,
+          eligibility_scope: formData.get("eligibility_scope") || "unknown",
+          eligible_countries: String(formData.get("eligible_countries") || "").split(",").map(code => code.trim().toUpperCase()).filter(Boolean),
+          travel_required: formData.get("travel_required") === "" ? null : formData.get("travel_required") === "true",
           minimum_age: ageMin, maximum_age: ageMax,
           education_level: educationLevels.join(", ") || null,
           format: mode || null,

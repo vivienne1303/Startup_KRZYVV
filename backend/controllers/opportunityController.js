@@ -5,6 +5,8 @@ const { getMatchedOpportunities } = require("../services/opportunityMatchingServ
 const manualSource = require("../services/opportunitySources/manualSource");
 const OpportunitySource = require("../services/opportunitySources/apiSourceBase");
 const expiryManager = new OpportunitySource();
+const browseService = require("../services/opportunityBrowseService");
+const normalizeGeography = require("../utils/opportunityGeography");
 const {
   createOpportunity,
   deleteOpportunity,
@@ -14,6 +16,9 @@ const {
 } = require("../services/opportunityService");
 
 const list = asyncHandler(async (req, res) => {
+  if (req.query.paged === "true") {
+    return res.json(await browseService.browseOpportunities(supabase, req.query));
+  }
   await expiryManager.markExpiredOpportunities(supabaseAdmin);
   let { data, error } = await listOpportunities(supabase, req.query);
 
@@ -44,7 +49,7 @@ const create = asyncHandler(async (req, res) => {
     throw new HttpError(400, "title, description, and category are required");
   }
 
-  const payload = manualSource.normaliseOpportunity(req.body, req.user.id);
+  const payload = manualSource.normaliseOpportunity({ ...req.body, ...normalizeGeography(req.body) }, req.user.id);
   const duplicates = await manualSource.detectDuplicates(req.supabase, payload);
   if (duplicates.error) throw new HttpError(400, duplicates.error.message, duplicates.error.details);
   if (duplicates.data.length) throw new HttpError(409, "A similar opportunity already exists", duplicates.data);
@@ -52,14 +57,16 @@ const create = asyncHandler(async (req, res) => {
 
   if (error) throw new HttpError(403, error.message, error.details);
 
+  browseService.invalidate();
   res.status(201).json({ opportunity: data });
 });
 
 const update = asyncHandler(async (req, res) => {
-  const { data, error } = await updateOpportunity(req.supabase, req.params.id, req.body);
+  const { data, error } = await updateOpportunity(req.supabase, req.params.id, { ...req.body, ...normalizeGeography(req.body) });
 
   if (error) throw new HttpError(403, error.message, error.details);
 
+  browseService.invalidate();
   res.json({ opportunity: data });
 });
 
@@ -68,6 +75,7 @@ const remove = asyncHandler(async (req, res) => {
 
   if (error) throw new HttpError(403, error.message, error.details);
 
+  browseService.invalidate();
   res.status(204).send();
 });
 
