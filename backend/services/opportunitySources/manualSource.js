@@ -1,11 +1,15 @@
 const OpportunitySource = require("./apiSourceBase");
+const { normalizeDiscovery, isConfirmed } = require('../../utils/opportunityDiscovery');
 
 class ManualSource extends OpportunitySource {
   normaliseOpportunity(payload, adminId) {
     const sourceType = ["partner", "ai_fetched"].includes(payload.source_type) ? payload.source_type : "manual";
     const publish = payload.status === "published" || payload.is_published === true;
+    const discovery = normalizeDiscovery(payload.discovery);
+    const verified = publish && (discovery ? isConfirmed(discovery) : true);
     return {
       ...payload,
+      ...(discovery ? { discovery } : {}),
       organisation: payload.organisation || payload.organizer || null, organizer: payload.organisation || payload.organizer || null,
       minimum_age: payload.minimum_age ?? payload.age_min ?? null, age_min: payload.minimum_age ?? payload.age_min ?? null,
       maximum_age: payload.maximum_age ?? payload.age_max ?? null, age_max: payload.maximum_age ?? payload.age_max ?? null,
@@ -14,11 +18,11 @@ class ManualSource extends OpportunitySource {
       education_levels: payload.education_levels || (payload.education_level ? String(payload.education_level).split(',').map((x) => x.trim()).filter(Boolean) : []),
       source_type: sourceType, source_name: payload.source_name || payload.organisation || payload.organizer || "TeenLaunch",
       status: publish ? "published" : (payload.status === "draft" ? "draft" : "pending_review"), is_published: publish,
-      verification_status: publish ? "verified" : "pending_review", verified_by: publish ? adminId : null,
-      verified_at: publish ? new Date().toISOString() : null, last_verified_at: publish ? new Date().toISOString() : null,
+      verification_status: verified ? "verified" : "pending_review", verified_by: verified ? adminId : null,
+      verified_at: verified ? new Date().toISOString() : null, last_verified_at: verified ? new Date().toISOString() : null,
       expiry_date: payload.application_deadline || payload.deadline || null,
-      application_method: payload.application_method || (payload.application_url ? "external" : "internal"),
-      internal_application_enabled: payload.application_url ? false : payload.internal_application_enabled !== false,
+      application_method: payload.application_method || (discovery || payload.application_url ? "external" : "internal"),
+      internal_application_enabled: discovery || payload.application_url ? false : payload.internal_application_enabled !== false,
     };
   }
 }

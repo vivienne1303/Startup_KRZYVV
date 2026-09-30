@@ -152,7 +152,13 @@ const opportunityMarkup = (opportunity) => {
   if (Number.isFinite(maximumAge)) ageParts.push(`up to ${maximumAge}`);
   const displayDeadline = opportunity.application_deadline || opportunity.deadline;
   const metaItems = [
-    `<li><strong>Deadline:</strong> ${displayDeadline ? new Date(`${displayDeadline}T00:00:00`).toLocaleDateString() : "Rolling"}</li>`,
+    `<li><strong>Deadline:</strong> ${displayDeadline ? new Date(`${displayDeadline}T00:00:00`).toLocaleDateString() : opportunity.discovery?.deadline_status === "rolling" ? "Rolling (confirmed)" : "Not confirmed"}</li>`,
+    `<li><strong>Last checked:</strong> ${escapeHtml((opportunity.discovery?.last_checked_at || opportunity.last_verified_at || "Not recorded").slice(0, 10))}</li>`,
+    /^https?:\/\//i.test(opportunity.source_url || "") ? `<li><a href="${escapeHtml(opportunity.source_url)}" target="_blank" rel="noopener">Source</a></li>` : "",
+    opportunity.discovery ? `<li><strong>Fees:</strong> ${escapeHtml(opportunity.discovery.fees || "Unknown")}</li>` : "",
+    opportunity.discovery ? `<li><strong>Restrictions:</strong> ${escapeHtml(opportunity.eligibility || opportunity.discovery.restrictions || "Unknown")}</li>` : "",
+    opportunity.discovery ? `<li><strong>Parental consent:</strong> ${escapeHtml(opportunity.discovery.parental_consent || "Unknown")}</li>` : "",
+    opportunity.discovery?.notes ? `<li>${escapeHtml(opportunity.discovery.notes)}</li>` : "",
     ageParts.length ? `<li><strong>Eligibility:</strong> Ages ${escapeHtml(ageParts.join(" "))}</li>` : "",
     `<li class="opportunity-location">${escapeHtml(OpportunityFilters.locationLabel(opportunity, language()))}</li>`,
     `<li>${escapeHtml(translateUi(({ online: "Online", in_person: "In person", hybrid: "Hybrid" })[opportunity.format || opportunity.mode] || "Format not specified"))}${opportunity.travel_required == null ? "" : ` · ${escapeHtml(translateUi(opportunity.travel_required ? "Travel required" : "No travel required"))}`}</li>`,
@@ -165,8 +171,8 @@ const opportunityMarkup = (opportunity) => {
   const actions = isAdmin
     ? `<div class="opportunity-actions admin-opportunity-actions"><a class="btn secondary admin-edit-button" href="admin-dashboard.html?edit=${encodeURIComponent(opportunity.id)}"><img src="../assets/icons/edit-button.svg" alt="">Edit</a><button class="save-button admin-delete-button" type="button" data-delete-id="${escapeHtml(opportunity.id)}" data-delete-title="${escapeHtml(opportunity.title)}" aria-label="Delete ${escapeHtml(opportunity.title)}"><img src="../assets/icons/delete-icon.jpg" alt=""></button></div>`
     : `<div class="opportunity-actions user-opportunity-actions"><a class="btn secondary" href="${escapeHtml(detailsHref)}"${detailsAttrs}${officialUrl ? ` data-external-details="${escapeHtml(opportunity.id)}" data-opportunity-title="${escapeHtml(opportunity.title)}"` : ""}>Details</a><button class="save-button" type="button" data-save-id="${escapeHtml(opportunity.id)}" aria-label="Save ${escapeHtml(opportunity.title)}" aria-pressed="false"><img src="../assets/icons/save_icon.png" alt=""></button></div>`;
-  const sourceLabel = opportunity.source_type === "partner" ? `Verified partner · ${opportunity.source_name || opportunity.organisation || "Partner"}` : opportunity.source_type === "ai_fetched" ? "External source · Admin reviewed" : "TeenLaunch verified";
-  return `<article class="opportunity-card visible" data-opportunity-card-id="${escapeHtml(opportunity.id)}" data-category="${escapeHtml(category)}" data-details="${escapeHtml([...detailTokens].join(" ") || mode)}" data-title="${escapeHtml(String(opportunity.title || "").toLowerCase())}"><div class="opportunity-badges"><span class="tag">${escapeHtml(opportunity.category)}</span><span class="verification-badge verified">${escapeHtml(sourceLabel)}</span></div><h3>${escapeHtml(opportunity.title)}</h3><p class="opportunity-description">${escapeHtml(opportunity.description)}</p><ul class="opportunity-meta">${metaItems}</ul>${actions}</article>`;
+  const sourceLabel = opportunity.verification_status !== "verified" ? "Details need checking" : opportunity.source_type === "partner" ? `Verified partner · ${opportunity.source_name || opportunity.organisation || "Partner"}` : opportunity.source_type === "ai_fetched" ? "External source · Admin reviewed" : "TeenLaunch verified";
+  return `<article class="opportunity-card visible" data-opportunity-card-id="${escapeHtml(opportunity.id)}" data-category="${escapeHtml(category)}" data-details="${escapeHtml([...detailTokens].join(" ") || mode)}" data-title="${escapeHtml(String(opportunity.title || "").toLowerCase())}"><div class="opportunity-badges"><span class="tag">${escapeHtml(opportunity.category)}</span><span class="verification-badge verified">${escapeHtml(sourceLabel)}</span></div><div class="opportunity-status-labels">${OpportunityFilters.statusLabels(opportunity).map(label => `<span class="tag">${escapeHtml(translateUi(label))}</span>`).join(" ")}</div><h3>${escapeHtml(opportunity.title)}</h3><p class="opportunity-description">${escapeHtml(opportunity.description)}</p><ul class="opportunity-meta">${metaItems}</ul>${actions}</article>`;
 };
 
 const recommendationMarkup = ({ opportunity, match_percentage: percentage, explanation }) => {
@@ -319,7 +325,7 @@ const renderCountryOptions = () => {
   const matching = countryCodes.filter(code => [code, OpportunityFilters.countryName(code, "en"), OpportunityFilters.countryName(code, "zh")].some(name => name.toLowerCase().includes(query)));
   const visible = [...new Set([...matching, ...(countryCodes.includes(currentCountry) ? [currentCountry] : [])])]
     .sort((a,b) => OpportunityFilters.countryName(a, language()).localeCompare(OpportunityFilters.countryName(b, language()), language()));
-  locationFilter.innerHTML = `<option value="all">${escapeHtml(translateUi("All opportunities"))}</option><option value="global">${escapeHtml(translateUi("Global opportunities"))}</option>`
+  locationFilter.innerHTML = `<option value="all">${escapeHtml(translateUi("All locations"))}</option><option value="global">${escapeHtml(translateUi("Online / worldwide"))}</option>`
     + visible.map(code => `<option value="${escapeHtml(code)}">${escapeHtml(OpportunityFilters.countryName(code, language()))}</option>`).join("");
   locationFilter.value = currentCountry;
   document.querySelector("#countrySearchStatus").innerHTML = query && !matching.length ? escapeHtml(translateUi("No matching countries. Try another country name.")) : "";
@@ -353,7 +359,7 @@ const loadPage = async () => {
   const grid = document.querySelector("#opportunityGrid");
   grid.setAttribute("aria-busy", "true");
   previousPage.disabled = nextPage.disabled = true;
-  resultCount.innerHTML = escapeHtml(translateUi("Loading verified opportunities..."));
+  resultCount.innerHTML = escapeHtml(translateUi("Loading opportunities..."));
   emptyState.hidden = true;
   emptyState.style.display = "none";
   const filters = { search: searchInput.value.trim(), category: activeFilter, detail: activeDetail, country: currentCountry, page: currentPage };

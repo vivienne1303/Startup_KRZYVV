@@ -1,0 +1,79 @@
+{
+  "applied": false,
+  "as_of": "2026-09-30",
+  "duplicate_check": "Local snapshot only; live check required",
+  "added": [
+    {
+      "id": null,
+      "title": "Lions Befrienders — 1:1 Befriender",
+      "labels": [
+        "Open now",
+        "Application link unavailable"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Heartware Youthbank — Youth Volunteering",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": null,
+      "title": "University YMCA — Uni-Y Service Programmes",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Be My Eyes — Remote Visual Assistance",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Science Centre Singapore — Volunteer Programme",
+      "labels": [
+        "Check deadline",
+        "Application link unavailable"
+      ]
+    },
+    {
+      "id": null,
+      "title": "HAN Heritage Champions — Volunteer Interest",
+      "labels": [
+        "Check deadline",
+        "Check eligibility",
+        "Application link unavailable"
+      ]
+    },
+    {
+      "id": null,
+      "title": "UNV Online Volunteering — Assignment Finder",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": null,
+      "title": "CS50x — Introduction to Computer Science",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Hack Club — Teen Maker Community",
+      "labels": [
+        "Check deadline"
+      ]
+    }
+  ],
+  "merged": []
+}

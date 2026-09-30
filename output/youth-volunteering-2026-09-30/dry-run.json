@@ -1,0 +1,82 @@
+{
+  "applied": false,
+  "as_of": "2026-09-30",
+  "duplicate_check": "Local snapshot only; live check required",
+  "added": [
+    {
+      "id": null,
+      "title": "OBS Instructor Job Taster — Run 2",
+      "labels": [
+        "Open now",
+        "Check eligibility",
+        "Check application link"
+      ]
+    },
+    {
+      "id": null,
+      "title": "iASPIRE — From Campus Crunch to Corporate Clocks",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": null,
+      "title": "POV: You’re an NYC Officer — Run 2",
+      "labels": [
+        "Upcoming",
+        "Check application link"
+      ]
+    },
+    {
+      "id": null,
+      "title": "KPMG Flash Mentoring — Session 9",
+      "labels": [
+        "Check deadline",
+        "Check eligibility",
+        "Check application link"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Red Cross Youth — Youth @ Community",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Food Bank Singapore — Individual Volunteering",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Habitat Campus Chapters & Youth Volunteer Leaders",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Project HomeWorks — Individual Volunteers",
+      "labels": [
+        "Check deadline",
+        "Application link unavailable"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Girl Up Global Leadership Summit 2026 — Rise to Lead",
+      "labels": [
+        "Check deadline",
+        "Check eligibility",
+        "Application link unavailable"
+      ]
+    }
+  ],
+  "merged": []
+}

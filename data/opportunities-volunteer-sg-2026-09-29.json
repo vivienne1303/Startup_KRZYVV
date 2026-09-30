@@ -1,0 +1,422 @@
+{
+  "as_of": "2026-09-29",
+  "discovery_source": "https://www.volunteer.gov.sg/",
+  "additions": [
+    {
+      "title": "KidSTART HWK Delivery Squad — October 2026",
+      "organisation": "KidSTART Singapore Ltd",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "Deliver fresh food to families. Visible shifts run 20–22 October. Registration closes 30 September: 5pm for 20 October and 8pm for 21–22 October.",
+      "eligibility": "Own transport required; driver/passenger pairs encouraged. Under-18s can accompany parents, who take responsibility for them. Citizenship/residency eligibility not specified.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-09-30",
+      "start_date": "2026-10-20",
+      "end_date": "2026-10-22",
+      "source_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=ecb1bfdc-1680-f111-ac88-027d80ecb760",
+      "application_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=ecb1bfdc-1680-f111-ac88-027d80ecb760",
+      "host_country": "SG",
+      "location": "Boys’ Brigade HQ, 10 Kwong Avenue, Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Volunteer.gov.sg",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "unknown",
+        "discovered_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=ecb1bfdc-1680-f111-ac88-027d80ecb760",
+        "official_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=ecb1bfdc-1680-f111-ac88-027d80ecb760",
+        "last_checked_at": "2026-09-29",
+        "fees": null,
+        "parental_consent": "Under-18s may accompany parents, who take full responsibility; independent participation is not confirmed.",
+        "school_membership": null,
+        "restrictions": "Own transport required; driver/passenger pairs encouraged. Under-18s can accompany parents, who take responsibility for them.",
+        "notes": "Official listing and Apply controls loaded; authenticated registration flow not verified. Fees and unspecified eligibility requirements remain unknown.",
+        "evidence_urls": [
+          "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=ecb1bfdc-1680-f111-ac88-027d80ecb760"
+        ]
+      }
+    },
+    {
+      "title": "Community Nursing Event — Montfort GoodLife Studio (October 2026)",
+      "organisation": "Singapore General Hospital",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "Help with event logistics, queues and booths. Registration closes 11 October at 11:45pm. Event date needs confirmation: the role text says 31 October, but its shift table says 22 October.",
+      "eligibility": "Age 17+. Attend at least one session and the required briefing. Citizenship/residency eligibility not specified.",
+      "minimum_age": 17,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-10-11",
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=bb0df9f3-3565-f111-ac86-027d80ecb760",
+      "application_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=bb0df9f3-3565-f111-ac86-027d80ecb760",
+      "host_country": "SG",
+      "location": "15 Marine Terrace, Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Volunteer.gov.sg",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "unknown",
+        "discovered_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=bb0df9f3-3565-f111-ac86-027d80ecb760",
+        "official_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=bb0df9f3-3565-f111-ac86-027d80ecb760",
+        "last_checked_at": "2026-09-29",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Age 17+. Attend at least one session and the required briefing.",
+        "notes": "Conflicting event dates: 31 October in role text versus 22 October in shift table. Event dates stored as unknown. Apply controls loaded; authenticated registration not tested.",
+        "evidence_urls": [
+          "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=bb0df9f3-3565-f111-ac86-027d80ecb760"
+        ]
+      }
+    },
+    {
+      "title": "School Sports Fiesta 2026 — Team Nila Sport Photographer",
+      "organisation": "Team Nila",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "Photograph the 11 November school sports event, 8:30am–noon. Registration closes 15 October at 00:00 Singapore time. No meals provided.",
+      "eligibility": "Own camera required; phone cameras are not accepted. Team Nila attire and pre-event briefing required. Age and school membership requirements not specified. Citizenship/residency eligibility not specified.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-10-15",
+      "start_date": "2026-11-11",
+      "end_date": "2026-11-11",
+      "source_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=ce875041-cb5f-f111-ac86-027d80ecb760",
+      "application_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=ce875041-cb5f-f111-ac86-027d80ecb760",
+      "host_country": "SG",
+      "location": "Kent Ridge Secondary School, 147 West Coast Road, Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Volunteer.gov.sg",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "unknown",
+        "application_access": "unknown",
+        "discovered_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=ce875041-cb5f-f111-ac86-027d80ecb760",
+        "official_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=ce875041-cb5f-f111-ac86-027d80ecb760",
+        "last_checked_at": "2026-09-29",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Own camera required; phone cameras are not accepted. Team Nila attire and pre-event briefing required. Age and school membership requirements not specified.",
+        "notes": "Official listing and Apply controls loaded; authenticated registration flow not verified. Fees and unspecified eligibility requirements remain unknown.",
+        "evidence_urls": [
+          "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=ce875041-cb5f-f111-ac86-027d80ecb760"
+        ]
+      }
+    },
+    {
+      "title": "Active Health Ambassador @ Bukit Canberra — November 2026",
+      "organisation": "Team Nila",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "Assist with lab administration, enquiries and exercise activities. Registration opens 1 October at noon. Early November shifts close 29 October at 00:00; later shifts close 12 November at 00:00.",
+      "eligibility": "Completed Active Health Online Certification required. Age and student eligibility not specified. Citizenship/residency eligibility not specified.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-11-12",
+      "start_date": "2026-11-03",
+      "end_date": "2026-11-28",
+      "source_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=5afc7c0b-2180-f111-ac88-027d80ecb760",
+      "application_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=5afc7c0b-2180-f111-ac88-027d80ecb760",
+      "host_country": "SG",
+      "location": "Active Health Lab, 21 Canberra Link, Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Volunteer.gov.sg",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "upcoming",
+        "student_eligibility": "unknown",
+        "application_access": "unknown",
+        "discovered_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=5afc7c0b-2180-f111-ac88-027d80ecb760",
+        "official_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=5afc7c0b-2180-f111-ac88-027d80ecb760",
+        "last_checked_at": "2026-09-29",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Completed Active Health Online Certification required. Age and student eligibility not specified.",
+        "notes": "Official listing and Apply controls loaded; authenticated registration flow not verified. Fees and unspecified eligibility requirements remain unknown.",
+        "evidence_urls": [
+          "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=5afc7c0b-2180-f111-ac88-027d80ecb760"
+        ],
+        "registration_opens_at": "2026-10-01T12:00:00+08:00"
+      }
+    },
+    {
+      "title": "Para Sport Academy — Frame Running (November–December 2026)",
+      "organisation": "Team Nila",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "Support participants and prepare sports equipment at Sunday morning sessions. Listed future shifts include 8 and 29 November and 6 December, 8:30–10:30am. Registration closes 26 October at 00:00.",
+      "eligibility": "Minimum two sessions per month; maximum one shift weekly. Comfortable interacting with participants with disabilities. Team Nila shirt and covered shoes required. Confirm sufficient December shifts with organiser. Citizenship/residency eligibility not specified.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-10-26",
+      "start_date": "2026-11-08",
+      "end_date": "2026-12-06",
+      "source_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=ce7a2bf8-24a8-f111-ac8c-027d80ecb760",
+      "application_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=ce7a2bf8-24a8-f111-ac8c-027d80ecb760",
+      "host_country": "SG",
+      "location": "Hougang Stadium, 93 Hougang Avenue 4, Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Volunteer.gov.sg",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "unknown",
+        "application_access": "unknown",
+        "discovered_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=ce7a2bf8-24a8-f111-ac8c-027d80ecb760",
+        "official_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=ce7a2bf8-24a8-f111-ac8c-027d80ecb760",
+        "last_checked_at": "2026-09-29",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Minimum two sessions per month; maximum one shift weekly. Comfortable interacting with participants with disabilities. Team Nila shirt and covered shoes required. Confirm sufficient December shifts with organiser.",
+        "notes": "Official listing and Apply controls loaded; authenticated registration flow not verified. Fees and unspecified eligibility requirements remain unknown.",
+        "evidence_urls": [
+          "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=ce7a2bf8-24a8-f111-ac8c-027d80ecb760"
+        ]
+      }
+    },
+    {
+      "title": "Horticulture Maintenance @ Bishan–Ang Mo Kio Park — 3 October",
+      "organisation": "NParks",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "Volunteer Member gardening session on 3 October, 9–11am. Registration closes 30 September at 2pm. Later sessions have separate registration windows on the same source page.",
+      "eligibility": "Individual registration required; no walk-ins or group bookings. Covered shoes and long trousers required. Subject to weather. Age not specified; this entry is for the member role. Citizenship/residency eligibility not specified.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-09-30",
+      "start_date": "2026-10-03",
+      "end_date": "2026-10-03",
+      "source_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=e02561eb-17e2-f011-ac7f-027d80ecb760",
+      "application_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=e02561eb-17e2-f011-ac7f-027d80ecb760",
+      "host_country": "SG",
+      "location": "Bishan–Ang Mo Kio Park, Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Volunteer.gov.sg",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "unknown",
+        "application_access": "unknown",
+        "discovered_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=e02561eb-17e2-f011-ac7f-027d80ecb760",
+        "official_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=e02561eb-17e2-f011-ac7f-027d80ecb760",
+        "last_checked_at": "2026-09-29",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Individual registration required; no walk-ins or group bookings. Covered shoes and long trousers required. Subject to weather. Age not specified; this entry is for the member role.",
+        "notes": "Official listing and Apply controls loaded; authenticated registration flow not verified. Fees and unspecified eligibility requirements remain unknown.",
+        "evidence_urls": [
+          "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=e02561eb-17e2-f011-ac7f-027d80ecb760"
+        ]
+      }
+    },
+    {
+      "title": "Butterfly Habitat Enhancement @ Bishan–Ang Mo Kio Park — 7 October",
+      "organisation": "NParks",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "Volunteer Member habitat gardening session on 7 October, 9–11am. Registration opens 30 September at 1pm and closes 6 October at 9am. Later sessions have separate windows.",
+      "eligibility": "Individual registration required; no walk-ins or group bookings. Covered shoes and long trousers required. Age not specified. Leader prerequisites do not apply to this member listing. Citizenship/residency eligibility not specified.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-10-06",
+      "start_date": "2026-10-07",
+      "end_date": "2026-10-07",
+      "source_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=28d84258-2fe3-f011-ac7f-027d80ecb760",
+      "application_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=28d84258-2fe3-f011-ac7f-027d80ecb760",
+      "host_country": "SG",
+      "location": "Bishan–Ang Mo Kio Park, Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Volunteer.gov.sg",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "upcoming",
+        "student_eligibility": "unknown",
+        "application_access": "unknown",
+        "discovered_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=28d84258-2fe3-f011-ac7f-027d80ecb760",
+        "official_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=28d84258-2fe3-f011-ac7f-027d80ecb760",
+        "last_checked_at": "2026-09-29",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Individual registration required; no walk-ins or group bookings. Covered shoes and long trousers required. Age not specified. Leader prerequisites do not apply to this member listing.",
+        "notes": "Official listing and Apply controls loaded; authenticated registration flow not verified. Fees and unspecified eligibility requirements remain unknown.",
+        "evidence_urls": [
+          "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=28d84258-2fe3-f011-ac7f-027d80ecb760"
+        ],
+        "registration_opens_at": "2026-09-30T13:00:00+08:00"
+      }
+    },
+    {
+      "title": "MENDAKI Befrienders",
+      "organisation": "MENDAKI",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "Support families through monthly home visits. Registration closes 30 November at 00:00. The portal’s administrative shift dates do not replace the one-year commitment.",
+      "eligibility": "Age 21+. English and Malay required; comfortable supporting families and young parents. Minimum one year, monthly visits, training and selection chat. Personal details may be shared with partner agencies. Citizenship/residency eligibility not specified.",
+      "minimum_age": 21,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-11-30",
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=161d5c1d-77f7-f011-ac80-027d80ecb760",
+      "application_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=161d5c1d-77f7-f011-ac80-027d80ecb760",
+      "host_country": "SG",
+      "location": "Family homes in Singapore; deployment confirmed by MENDAKI",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Volunteer.gov.sg",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "unknown",
+        "discovered_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=161d5c1d-77f7-f011-ac80-027d80ecb760",
+        "official_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=161d5c1d-77f7-f011-ac80-027d80ecb760",
+        "last_checked_at": "2026-09-29",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Age 21+. English and Malay required; comfortable supporting families and young parents. Minimum one year, monthly visits, training and selection chat. Personal details may be shared with partner agencies.",
+        "notes": "Official listing and Apply controls loaded; authenticated registration flow not verified. Fees and unspecified eligibility requirements remain unknown.",
+        "evidence_urls": [
+          "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=161d5c1d-77f7-f011-ac80-027d80ecb760"
+        ]
+      }
+    },
+    {
+      "title": "Ready, Set, Learn! Math Explorer — Facilitator",
+      "organisation": "MENDAKI",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "Facilitate four weekly parent-and-preschooler sessions of 2–3 hours. Registration closes 24 December at 00:00. Deployed facilitators receive an unspecified honorarium; actual session dates are arranged separately.",
+      "eligibility": "Age 18+, GCE O-Level or above, fluent English and basic Malay. Weekend commitment, two core training modules, on-the-job training and selection chat required. Citizenship/residency eligibility not specified.",
+      "minimum_age": 18,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-12-24",
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=35b97528-22db-f011-ac7f-027d80ecb760",
+      "application_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=35b97528-22db-f011-ac7f-027d80ecb760",
+      "host_country": "SG",
+      "location": "Singapore; deployment confirmed by MENDAKI",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Volunteer.gov.sg",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "unknown",
+        "discovered_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=35b97528-22db-f011-ac7f-027d80ecb760",
+        "official_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=35b97528-22db-f011-ac7f-027d80ecb760",
+        "last_checked_at": "2026-09-29",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Age 18+, GCE O-Level or above, fluent English and basic Malay. Weekend commitment, two core training modules, on-the-job training and selection chat required.",
+        "notes": "Official listing and Apply controls loaded; authenticated registration flow not verified. Fees and unspecified eligibility requirements remain unknown.",
+        "evidence_urls": [
+          "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=35b97528-22db-f011-ac7f-027d80ecb760"
+        ]
+      }
+    }
+  ],
+  "excluded": [
+    {
+      "source_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=db582b08-8e6f-f111-ac86-027d80ecb760",
+      "reason": "Health in Check — Radin Mas: existing Youth Corps cross-post; do not duplicate."
+    },
+    {
+      "source_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=0e39a449-9776-f111-ac88-027d80ecb760",
+      "reason": "Health in Check facilitators: cohorts already present under Youth Corps sources."
+    },
+    {
+      "source_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=fbf44388-159d-f111-ac8a-027d80ecb760",
+      "reason": "Nursing Care Buddies: registration closed by 28 September despite future event dates."
+    },
+    {
+      "source_url": "https://www.volunteer.gov.sg/volunteer/opportunity/details/?id=05e724a3-8560-f111-ac86-027d80ecb760",
+      "reason": "Rapid Screening: latest registration closed 28 September."
+    }
+  ]
+}

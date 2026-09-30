@@ -9,7 +9,7 @@ async function run({ token = 'test', status = 200, data = {}, failure = false, s
     return elements.get(selector);
   };
   vm.runInNewContext(fs.readFileSync('js/recommended-opportunities.js', 'utf8'), {
-    window: { TEENLAUNCH_API_BASE: '/api', alert() {}, location: { replace: url => redirects.push(url) } },
+    window: { TEENLAUNCH_API_BASE: '/api', OpportunityFilters: require('../js/opportunity-filters'), alert() {}, location: { replace: url => redirects.push(url) } },
     location: {}, AbortSignal, URL, Date, encodeURIComponent, Number, Set,
     localStorage: { getItem: () => token }, document: { querySelector: element },
     fetch: async (url, options) => {

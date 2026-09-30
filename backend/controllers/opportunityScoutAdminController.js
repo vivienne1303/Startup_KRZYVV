@@ -87,15 +87,20 @@ const reviewQueue = asyncHandler(async (_req, res) => {
 const reviewOpportunity = asyncHandler(async (req, res) => {
   const action = req.body.action;
   if (!["approve", "reject", "expire", "return_to_review"].includes(action)) throw new HttpError(400, "Invalid review action");
+  let confirmed = true;
   if (action === "approve") {
-    const current = await supabaseAdmin.from("opportunities").select("application_deadline").eq("id", req.params.id).single(); fail(current.error);
+    const current = await supabaseAdmin.from("opportunities").select("application_deadline,discovery").eq("id", req.params.id).single(); fail(current.error);
     if (current.data.application_deadline && current.data.application_deadline < new Date().toISOString().slice(0, 10)) throw new HttpError(400, "An opportunity with a past deadline cannot be published");
+    confirmed = !current.data.discovery || require('../utils/opportunityDiscovery').isConfirmed(current.data.discovery);
   }
   const updates = action === "approve" ? { verification_status: "verified", verified_by: req.user.id, verified_at: new Date().toISOString(), last_verified_at: new Date().toISOString(), status: "published", is_published: true }
     : action === "reject" ? { verification_status: "rejected", verified_by: req.user.id, verified_at: new Date().toISOString(), status: "draft", is_published: false }
       : action === "expire" ? { verification_status: "expired", status: "expired", is_published: false }
         : { verification_status: "pending_review", verified_by: null, verified_at: null, status: "draft", is_published: false };
-  const result = await supabaseAdmin.from("opportunities").update(updates).eq("id", req.params.id).select(opportunityColumns).single(); fail(result.error); res.json({ opportunity: result.data });
+  if (action === 'approve' && !confirmed) Object.assign(updates, { verification_status: 'pending_review', verified_by: null, verified_at: null, last_verified_at: null });
+  const result = await supabaseAdmin.from("opportunities").update(updates).eq("id", req.params.id).select(opportunityColumns).single(); fail(result.error);
+  require('../services/opportunityBrowseService').invalidate();
+  res.json({ opportunity: result.data });
 });
 
 module.exports = { bulkImport, listPartners, previewImport, reviewPartner, reviewQueue, reviewOpportunity, saveImport };

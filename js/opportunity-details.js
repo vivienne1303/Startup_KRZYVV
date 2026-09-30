@@ -31,12 +31,12 @@
       setText("[data-detail-title]", opportunity.title);
       setText("[data-detail-organisation]", opportunity.organizer);
       setText("[data-detail-description]", opportunity.description);
-      setText("[data-detail-deadline]", opportunity.deadline ? new Date(`${opportunity.deadline}T00:00:00`).toLocaleDateString() : "Rolling");
-      setText("[data-detail-age]", opportunity.age_min || opportunity.age_max ? `Ages ${opportunity.age_min ?? "any"}–${opportunity.age_max ?? "any"}` : "Open eligibility");
-      setText("[data-detail-education]", education.join(", ") || "All education levels");
+      setText("[data-detail-deadline]", opportunity.deadline ? new Date(`${opportunity.deadline}T00:00:00`).toLocaleDateString() : opportunity.discovery?.deadline_status === "rolling" ? "Rolling (confirmed)" : "Not confirmed");
+      setText("[data-detail-age]", opportunity.age_min || opportunity.age_max ? `Ages ${opportunity.age_min ?? "any"}–${opportunity.age_max ?? "any"}` : "Not specified");
+      setText("[data-detail-education]", education.join(", ") || "Not specified");
       setText("[data-detail-location]", [opportunity.mode, opportunity.location].filter(Boolean).join(" · "));
       document.querySelector("[data-detail-skills]").innerHTML = skills.length ? skills.map((skill) => `<span class="tag">${escapeHtml(skill)}</span>`).join("") : "<p>No specific skills listed.</p>";
-      const sourceLabel = opportunity.source_type === "partner" ? `Verified partner · ${opportunity.source_name || opportunity.organisation}` : opportunity.source_type === "ai_fetched" ? "External source · Admin reviewed" : "TeenLaunch verified";
+      const sourceLabel = opportunity.verification_status !== "verified" ? "Details need checking" : opportunity.source_type === "partner" ? `Verified partner · ${opportunity.source_name || opportunity.organisation}` : opportunity.source_type === "ai_fetched" ? "External source · Admin reviewed" : "TeenLaunch verified";
       const category = document.querySelector("[data-detail-category]");
       const badgeRow = document.createElement("div");
       badgeRow.className = "opportunity-badges detail-badges";

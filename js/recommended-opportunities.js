@@ -19,10 +19,10 @@
     const maximumAge = opportunity.maximum_age ?? opportunity.age_max;
     const deadline = opportunity.application_deadline || opportunity.deadline;
     const hasAge = minimumAge != null || maximumAge != null;
-    const ages = hasAge ? `Ages ${minimumAge ?? "any"} to ${maximumAge ?? "any"}` : "Open age eligibility";
+    const ages = hasAge ? `Ages ${minimumAge ?? "not specified"} to ${maximumAge ?? "not specified"}` : "Age eligibility not specified";
     const organisation = opportunity.organisation || opportunity.organizer || opportunity.source_name;
     const formatAndLocation = [opportunity.format || opportunity.mode, opportunity.location].filter(Boolean).join(" · ");
-    const metadata = [organisation, ages, formatAndLocation, `Deadline: ${deadline ? new Date(`${deadline}T00:00:00`).toLocaleDateString() : "Rolling"}`]
+    const metadata = [organisation, ages, formatAndLocation, `Deadline: ${deadline ? new Date(`${deadline}T00:00:00`).toLocaleDateString() : opportunity.discovery?.deadline_status === "rolling" ? "Rolling (confirmed)" : "Not confirmed"}`]
       .filter(Boolean).map((item) => `<li>${escapeHtml(item)}</li>`).join("");
     const internal = opportunity.application_method === "internal" && opportunity.internal_application_enabled === true;
     const officialUrl = !internal && (opportunity.application_url || opportunity.source_url);
@@ -32,10 +32,14 @@
     return `<article class="opportunity-card recommendation-card">
       ${Number.isFinite(percentage) ? `<div class="match-badge">${percentage}% match</div>` : ""}
       <span class="tag">${escapeHtml(opportunity.category)}</span>
+      <div class="opportunity-status-labels">${window.OpportunityFilters.statusLabels(opportunity).map(label => `<span class="tag">${escapeHtml(label)}</span>`).join(' ')}</div>
       <h2>${escapeHtml(opportunity.title)}</h2>
       <p class="match-explanation">${escapeHtml(explanation)}</p>
       <p class="recommendation-description">${escapeHtml(opportunity.description)}</p>
       <ul class="recommendation-meta">${metadata}</ul>
+      <p>Last checked: ${escapeHtml((opportunity.discovery?.last_checked_at || opportunity.last_verified_at || 'Not recorded').slice(0,10))}</p>
+      ${opportunity.discovery ? `<p>Fees: ${escapeHtml(opportunity.discovery.fees || 'Unknown')}</p><p>${escapeHtml(opportunity.eligibility || 'Eligibility not confirmed')}</p><p>${escapeHtml(opportunity.discovery.notes || '')}</p>` : ''}
+      ${/^https?:\/\//i.test(opportunity.source_url || '') ? `<a href="${escapeHtml(opportunity.source_url)}" target="_blank" rel="noopener">Source</a>` : ''}
       <div class="recommendation-actions">${primaryAction}<button class="save-button" type="button" data-save-id="${escapeHtml(opportunity.id)}" aria-label="Save ${escapeHtml(opportunity.title)}"><img src="../assets/icons/save_icon.png" alt=""></button></div>
     </article>`;
   };
@@ -75,9 +79,10 @@
   }).catch(() => {});
 
   const render = (items, personalised) => {
-    grid.innerHTML = items.map(card).join('');
+    grid.innerHTML = items.filter(item => !window.OpportunityFilters.expired(item.opportunity))
+      .sort((a,b) => window.OpportunityFilters.confidenceRank(a.opportunity) - window.OpportunityFilters.confidenceRank(b.opportunity)).map(card).join('');
     grid.hidden = false;
-    notice.textContent = personalised ? 'Your Career DNA matches' : 'Open opportunities to explore. These are not personalised matches.';
+    notice.textContent = personalised ? 'Your Career DNA matches' : 'Opportunities to explore. Check each listing’s status and restrictions.';
     notice.hidden = false;
     updateSavedButtons();
   };

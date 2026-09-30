@@ -120,12 +120,13 @@ const scoreOpportunity = ({ result, profile, opportunity }) => {
 };
 
 const getMatchedOpportunities = async (client, userId) => {
+  const { expired, confidenceRank } = require('../../js/opportunity-filters');
   const today = new Date().toISOString().slice(0, 10);
   const [careerResult, profileResult, opportunityResult] = await Promise.all([
     client.from("career_dna_results").select("id, score, interests, recommended_paths").eq("user_id", userId).order("created_at", { ascending: false }).limit(1).maybeSingle(),
     client.from("user_profiles").select("age, education_level, country").eq("id", userId).single(),
     client.from("opportunities")
-      .select("id, title, description, category, categories, skills, education_levels, organisation, organizer, source_name, location, format, mode, minimum_age, maximum_age, age_min, age_max, application_deadline, deadline, start_date, end_date, source_url, application_url, application_method, internal_application_enabled, image_url, status, is_published, created_at")
+      .select(require('./opportunityService').opportunityColumns)
       .eq("is_published", true)
       .eq("status", "published")
       .or(`application_deadline.is.null,application_deadline.gte.${today}`)
@@ -137,9 +138,9 @@ const getMatchedOpportunities = async (client, userId) => {
   if (!careerResult.data) return { data: { completed: false, recommendations: [] }, error: null };
 
   const recommendations = (opportunityResult.data || [])
-    .filter((opportunity) => profileIsEligible(profileResult.data, opportunity))
+    .filter((opportunity) => !expired(opportunity) && opportunity.discovery?.student_eligibility !== 'ineligible' && profileIsEligible(profileResult.data, opportunity))
     .map((opportunity) => scoreOpportunity({ result: careerResult.data, profile: profileResult.data, opportunity }))
-    .sort((a, b) => b.match_percentage - a.match_percentage || String(a.opportunity.deadline || "9999").localeCompare(String(b.opportunity.deadline || "9999")));
+    .sort((a, b) => confidenceRank(a.opportunity) - confidenceRank(b.opportunity) || b.match_percentage - a.match_percentage || String(a.opportunity.deadline || "9999").localeCompare(String(b.opportunity.deadline || "9999")));
 
   return { data: { completed: true, recommendations }, error: null };
 };

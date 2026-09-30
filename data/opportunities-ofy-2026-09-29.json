@@ -1,0 +1,460 @@
+{
+  "as_of": "2026-09-29",
+  "discovery_source": "https://opportunitiesforyouth.org/",
+  "additions": [
+    {
+      "title": "Yale Young Global Scholars 2027",
+      "organisation": "Yale University",
+      "category": "Academic Programmes",
+      "categories": [
+        "Academic Programmes"
+      ],
+      "description": "Two-week residential academic programme. Early Action closes 15 October 2026; Regular Decision closes 6 January 2027, both at 11:59pm Eastern Time.",
+      "eligibility": "Age 16–18 on 18 July 2027; current sophomore/junior or equivalent; specified 2027–2029 graduation cohorts; English fluency; first-time participants. All countries eligible.",
+      "minimum_age": 16,
+      "maximum_age": 18,
+      "education_levels": [
+        "Secondary school"
+      ],
+      "application_deadline": "2027-01-06",
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://globalscholars.yale.edu/eligibility",
+      "application_url": "https://apply.globalscholars.yale.edu/apply/",
+      "host_country": "US",
+      "location": "New Haven, Connecticut, United States",
+      "format": "in_person",
+      "eligibility_scope": "worldwide",
+      "eligible_countries": [],
+      "travel_required": true,
+      "source_type": "ai_fetched",
+      "source_name": "Opportunities for Youth",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "login_required",
+        "discovered_url": "https://opportunitiesforyouth.org/2026/09/18/yale-young-global-scholars-program-2024-for-high-school-students-worldwide-scholarships-and-financial-aid-available/",
+        "official_url": "https://globalscholars.yale.edu/eligibility",
+        "last_checked_at": "2026-09-29",
+        "fees": "US$7,500 tuition, plus travel. Application: US$85 Early Action or US$100 Regular Decision. Need-based tuition aid and application fee waivers available.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Check graduation-cohort requirements on the source page. Login/register portal loaded; no application submitted.",
+        "evidence_urls": [
+          "https://globalscholars.yale.edu/application-deadlines",
+          "https://globalscholars.yale.edu/tuition",
+          "https://apply.globalscholars.yale.edu/apply/"
+        ]
+      }
+    },
+    {
+      "title": "Hansen Leadership Institute 2027",
+      "organisation": "Hansen Leadership Institute",
+      "category": "Fellowships",
+      "categories": [
+        "Fellowships"
+      ],
+      "description": "Leadership and peacebuilding programme, 29 June–20 July 2027. International deadline: 15 January; US deadline: 15 March 2027, both 11:55pm Pacific Time.",
+      "eligibility": "Age 20–25 on 1 July 2027; at least one university year completed. Non-enrolled applicants must be 2025/2026 graduates. Academic referee verifies English. Full attendance required. US and international routes have different deadlines; country-specific rules not confirmed.",
+      "minimum_age": 20,
+      "maximum_age": 25,
+      "education_levels": [
+        "University"
+      ],
+      "application_deadline": "2027-03-15",
+      "start_date": "2027-06-29",
+      "end_date": "2027-07-20",
+      "source_url": "https://hansenleadershipinstitute.org/apply-now/",
+      "application_url": "https://hansenleadershipinstitute.awardsplatform.com/",
+      "host_country": "US",
+      "location": "San Diego, United States",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": true,
+      "source_type": "ai_fetched",
+      "source_name": "Opportunities for Youth",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "unknown",
+        "discovered_url": "https://opportunitiesforyouth.org/2026/09/27/hansen-leadership-institute-fellowship-program-2024-in-usa-fully-funded-and-open-to-us-and-non-usa-citizens/",
+        "official_url": "https://hansenleadershipinstitute.org/apply-now/",
+        "last_checked_at": "2026-09-29",
+        "fees": "Airfare, accommodation, meals and programme funded. Passport and personal spending remain the participant’s responsibility.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Application platform returned a JavaScript shell, so form access is not confirmed. International applicants must use the earlier 15 January deadline.",
+        "evidence_urls": [
+          "https://hansenleadershipinstitute.org/faq/"
+        ]
+      }
+    },
+    {
+      "title": "Oxford Farming Conference Breaking Barriers 2027",
+      "organisation": "Oxford Farming Conference",
+      "category": "Fellowships",
+      "categories": [
+        "Fellowships"
+      ],
+      "description": "Eight funded places for people facing barriers to entering food and agriculture. Includes UK gatherings and the January 2027 conference.",
+      "eligibility": "UK residents facing barriers in food/agriculture. No current sector employment or study required. Full programme attendance required. Upper age limit needs clarification: page says both under 30 and 18–30.",
+      "minimum_age": 18,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-10-16",
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.ofc.org.uk/scholarship-programme",
+      "application_url": "https://www.ofc.org.uk/form/breaking-barriers-2027-applicati",
+      "host_country": "GB",
+      "location": "Oxford, London and Shropshire, United Kingdom",
+      "format": "hybrid",
+      "eligibility_scope": "countries",
+      "eligible_countries": [
+        "GB"
+      ],
+      "travel_required": true,
+      "source_type": "ai_fetched",
+      "source_name": "Opportunities for Youth",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "unknown",
+        "application_access": "available",
+        "discovered_url": "https://opportunitiesforyouth.org/2026/09/28/oxford-farming-conference-scholars-programme-2027-1000-fully-funded-opportunity-for-young-people-under-30/",
+        "official_url": "https://www.ofc.org.uk/scholarship-programme",
+        "last_checked_at": "2026-09-29",
+        "fees": "Breaking Barriers has eight fully funded places; travel coverage not confirmed. The separate standard Scholars route costs the sponsor £1,000 plus VAT and excludes travel.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Breaking Barriers deadline: 16 October 2026 at 5pm. Use its direct form. Standard Scholars text elsewhere on the page has a conflicting deadline year; that separate route is not imported."
+      }
+    },
+    {
+      "title": "Rise to Lead: Girl Up Global Leadership Summit 2026",
+      "organisation": "Girl Up",
+      "category": "Conferences",
+      "categories": [
+        "Conferences"
+      ],
+      "description": "Youth leadership and gender-justice summit lead from Opportunities for Youth. Organiser details still need confirmation.",
+      "eligibility": null,
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://opportunitiesforyouth.org/2026/09/24/rise-to-lead-girl-up-2026-global-leadership-summit-join-young-leaders-worldwide-for-a-virtual-gender-justice-summit/",
+      "application_url": "https://us02web.zoom.us/webinar/register/WN_wzlX8vwqQkKnc6zTcswyuQ",
+      "host_country": null,
+      "location": null,
+      "format": null,
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Opportunities for Youth",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "unavailable",
+        "discovered_url": "https://opportunitiesforyouth.org/2026/09/24/rise-to-lead-girl-up-2026-global-leadership-summit-join-young-leaders-worldwide-for-a-virtual-gender-justice-summit/",
+        "official_url": null,
+        "last_checked_at": "2026-09-29",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "The linked Zoom registration could not be loaded during this check. OFY reports an online event on 10 October 2026 for ages 13–24; these are unconfirmed claims, not verified eligibility or an application deadline.",
+        "claims": {
+          "event_date": "2026-10-10",
+          "minimum_age": 13,
+          "maximum_age": 24,
+          "format": "online"
+        }
+      }
+    },
+    {
+      "title": "Introduction to Sports for Climate Action",
+      "organisation": "UNITAR / UN CC:Learn",
+      "category": "Online Courses",
+      "categories": [
+        "Online Courses"
+      ],
+      "description": "Introductory self-paced course on sport and climate, approximately 1.5 hours.",
+      "eligibility": "Designed for sports professionals and the interested general public. Minimum age, school membership and country eligibility not specified.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://unccelearn.org/course/view.php?id=214&page=overview",
+      "application_url": "https://unccelearn.org/course/view.php?id=214&page=overview",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": false,
+      "source_type": "ai_fetched",
+      "source_name": "Opportunities for Youth",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "login_required",
+        "discovered_url": "https://opportunitiesforyouth.org/2026/09/26/18-free-sustainability-courses-from-unitar-online-un-courses-on-climate-action-sdgs-and-sustainable-development-free-certificate-self-paced-online/",
+        "official_url": "https://unccelearn.org/course/view.php?id=214&page=overview",
+        "last_checked_at": "2026-09-29",
+        "fees": "Course learning is listed as free by UN SDG:Learn; digital certificate costs US$30 on the current course platform.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Self-paced course and enrolment login loaded. No explicit closing date or rolling-admissions statement found; deadline remains unknown. Country eligibility remains unspecified.",
+        "evidence_urls": [
+          "https://www.unsdglearn.org/courses/introduction-to-sports-for-climate-action/",
+          "https://unccelearn.org/login/index.php"
+        ]
+      }
+    },
+    {
+      "title": "Developing Skills for Women Leadership in Climate Action",
+      "organisation": "UNITAR / UN CC:Learn",
+      "category": "Online Courses",
+      "categories": [
+        "Online Courses"
+      ],
+      "description": "Self-paced course to help women and girls develop climate leadership skills; approximately nine hours plus a practical exercise.",
+      "eligibility": "Designed for women and girls starting their climate journey. Exact minimum age, school membership and country eligibility not specified.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://unccelearn.org/course/view.php?id=189&page=overview",
+      "application_url": "https://unccelearn.org/course/view.php?id=189&page=overview",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": false,
+      "source_type": "ai_fetched",
+      "source_name": "Opportunities for Youth",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "login_required",
+        "discovered_url": "https://opportunitiesforyouth.org/2026/09/26/18-free-sustainability-courses-from-unitar-online-un-courses-on-climate-action-sdgs-and-sustainable-development-free-certificate-self-paced-online/",
+        "official_url": "https://unccelearn.org/course/view.php?id=189&page=overview",
+        "last_checked_at": "2026-09-29",
+        "fees": "Course learning is listed as free by UN SDG:Learn; digital certificate costs US$30 on the current course platform.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Self-paced course and enrolment login loaded. No explicit closing date or rolling-admissions statement found; deadline remains unknown. Country eligibility remains unspecified.",
+        "evidence_urls": [
+          "https://www.unsdglearn.org/courses/developing-skills-for-women-leadership-in-climate-action/",
+          "https://unccelearn.org/login/index.php"
+        ]
+      }
+    },
+    {
+      "title": "Mastering International Climate Negotiations",
+      "organisation": "UNITAR / UN CC:Learn",
+      "category": "Online Courses",
+      "categories": [
+        "Online Courses"
+      ],
+      "description": "Introductory self-paced course about the UNFCCC process, approximately 3.5 hours.",
+      "eligibility": "Designed especially for youth negotiators and youth organisations, and other interested learners. Exact age and country eligibility not specified.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://unccelearn.org/course/view.php?id=206&page=overview",
+      "application_url": "https://unccelearn.org/course/view.php?id=206&page=overview",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": false,
+      "source_type": "ai_fetched",
+      "source_name": "Opportunities for Youth",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "login_required",
+        "discovered_url": "https://opportunitiesforyouth.org/2026/09/26/18-free-sustainability-courses-from-unitar-online-un-courses-on-climate-action-sdgs-and-sustainable-development-free-certificate-self-paced-online/",
+        "official_url": "https://unccelearn.org/course/view.php?id=206&page=overview",
+        "last_checked_at": "2026-09-29",
+        "fees": "Course learning is listed as free by UN SDG:Learn; digital certificate costs US$30 on the current course platform.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Self-paced course and enrolment login loaded. No explicit closing date or rolling-admissions statement found; deadline remains unknown. Country eligibility remains unspecified.",
+        "evidence_urls": [
+          "https://www.unsdglearn.org/courses/mastering-international-climate-negotiations-all-you-need-to-know/",
+          "https://unccelearn.org/login/index.php"
+        ]
+      }
+    },
+    {
+      "title": "UNICEF Internship Programme — vacancy discovery",
+      "organisation": "UNICEF",
+      "category": "Internships",
+      "categories": [
+        "Internships"
+      ],
+      "description": "Programme directory for student and graduate internships. Individual vacancies have their own deadlines and restrictions; this is not a single confirmed open placement.",
+      "eligibility": "18+; enrolled undergraduate/postgraduate/PhD or graduated within two years. Relevant language proficiency and strong academics required. Immediate relatives at UNICEF or relatives in the reporting line disqualify. Country, work authorisation and education restrictions vary by vacancy.",
+      "minimum_age": 18,
+      "maximum_age": null,
+      "education_levels": [
+        "University"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.unicef.org/careers/internships",
+      "application_url": "https://jobs.unicef.org/en-us/filter/?search-keyword=&work-type=internship",
+      "host_country": null,
+      "location": null,
+      "format": null,
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Opportunities for Youth",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "unknown",
+        "discovered_url": "https://opportunitiesforyouth.org/2026/05/25/unicef-internship-programme-2021-fully-funded-internships/",
+        "official_url": "https://www.unicef.org/careers/internships",
+        "last_checked_at": "2026-09-29",
+        "fees": "Monthly stipend; travel/visa contribution may be available. Applicant fees not confirmed in the reviewed page.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Vacancy directory loaded. A specific placement and its application form were not verified. Year-round vacancy advertising does not mean every vacancy has rolling applications."
+      }
+    },
+    {
+      "title": "FAO Internship Programme — Asia and the Pacific call",
+      "organisation": "Food and Agriculture Organization of the United Nations",
+      "category": "Internships",
+      "categories": [
+        "Internships"
+      ],
+      "description": "Regional internship call discovered through OFY. General programme eligibility is confirmed; the linked vacancy’s deadline and form are not.",
+      "eligibility": "FAO-member nationals, age 21–30 at start; university students or recent graduates; one FAO language; appropriate residence/immigration status at the assignment location. Immediate family employed by FAO disqualifies. Member-country list has not been mapped to country filters.",
+      "minimum_age": 21,
+      "maximum_age": 30,
+      "education_levels": [
+        "University"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.fao.org/employment/young-talent-programme/internship-programme/en",
+      "application_url": "https://jobs.fao.org/careersection/fao_external/jobdetail.ftl?job=2601981&tz=GMT%2B01%3A00&tzname=Europe%2FLondon",
+      "host_country": null,
+      "location": null,
+      "format": null,
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Opportunities for Youth",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "unavailable",
+        "discovered_url": "https://opportunitiesforyouth.org/2026/09/28/internship-opportunities-at-united-nations-fao-italy-2022fully-funded/",
+        "official_url": "https://www.fao.org/employment/young-talent-programme/internship-programme/en",
+        "last_checked_at": "2026-09-29",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Vacancy 2601981 could not be loaded. OFY’s 31 December 2026 closing date remains an unverified claim; deadline is stored as null.",
+        "claims": {
+          "application_deadline": "2026-12-31"
+        }
+      }
+    },
+    {
+      "title": "beVisioneers: The Mercedes-Benz Fellowship — 2027 lead",
+      "organisation": "The DO School Fellowships",
+      "category": "Fellowships",
+      "categories": [
+        "Fellowships"
+      ],
+      "description": "Environmental project fellowship lead. The linked official portal shows an older 2026/27 round, so the advertised 2027 cohort needs checking.",
+      "eligibility": null,
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://applications.bevisioneers.world/courses/course/11-bevisioneers-mercedes-benz-fellowship",
+      "application_url": "https://applications.bevisioneers.world/courses/course/11-bevisioneers-mercedes-benz-fellowship",
+      "host_country": null,
+      "location": null,
+      "format": null,
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Opportunities for Youth",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "unknown",
+        "discovered_url": "https://opportunitiesforyouth.org/2026/09/21/apply-now-for-the-bevisioneers-the-mercedes-benz-fellowship/",
+        "official_url": "https://applications.bevisioneers.world/courses/course/11-bevisioneers-mercedes-benz-fellowship",
+        "last_checked_at": "2026-09-29",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official page and OFY disagree on cohort and age rules. Do not reuse the old round’s country list, dates or funding for 2027. Keep deadline, age, country eligibility and current application access unknown."
+      }
+    }
+  ],
+  "review_notes": [
+    "No applications submitted or accounts created.",
+    "Existing local listings checked; live duplicate check required before writes.",
+    "Professional jobs, institutional grants and PhD-only advertisements omitted from this student-focused batch."
+  ]
+}

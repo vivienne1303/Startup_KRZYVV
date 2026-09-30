@@ -1,0 +1,73 @@
+{
+  "applied": false,
+  "as_of": "2026-09-30",
+  "duplicate_check": "Local snapshot only; live check required",
+  "added": [
+    {
+      "id": null,
+      "title": "Singapore Book Council — Festival and Programme Volunteers",
+      "labels": [
+        "Check deadline",
+        "Check eligibility",
+        "Application link unavailable"
+      ]
+    },
+    {
+      "id": null,
+      "title": "RDA Singapore — Therapy Session Volunteers",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Pro Bono SG — Student Internship Interest",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "SAMH — Mental Wellness Volunteering",
+      "labels": [
+        "Check deadline",
+        "Check eligibility",
+        "Application link unavailable"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Esplanade — Volunteer Interest",
+      "labels": [
+        "Check deadline",
+        "Check eligibility",
+        "Check application link"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Youths for Autism — December 2026 Internship Intake",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Net Zero 101: What, Why and How",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Climate Change: From Learning to Action",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    }
+  ],
+  "merged": []
+}
