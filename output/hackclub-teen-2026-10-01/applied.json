@@ -1,0 +1,248 @@
+{
+  "applied": true,
+  "as_of": "2026-10-01",
+  "duplicate_check": "Live database",
+  "added": [
+    {
+      "id": "2c72ad93-3ac2-4d65-ade9-52c0e2ca195b",
+      "title": "Crescent — Hack Club You Ship, We Ship",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "03428956-ec0d-4fd4-8289-59822055bf27",
+      "title": "Gadget Market — Hack Club You Ship, We Ship",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "4bc2342a-e299-48b7-b38a-192ed2dd860d",
+      "title": "CloudFall — Hack Club You Ship, We Ship",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "1e21ef7f-7fcc-4736-8945-9b352d646603",
+      "title": "3AM — Hack Club You Ship, We Ship",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "a5ef746a-c46a-450a-8404-84bee5b01c90",
+      "title": "You Spud, We Spud — Hack Club You Ship, We Ship",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "e24943ba-712c-4fa8-9af4-51cfd9ae0902",
+      "title": "Alchemize — Hack Club You Ship, We Ship",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "5d47e648-c009-462b-b4de-b0ee799c8283",
+      "title": "Forge — Hack Club You Ship, We Ship",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "da850deb-4db8-47d3-bf79-dd87a6615d2e",
+      "title": "Resolution — Hack Club You Ship, We Ship",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "ede2ac00-5cc5-4fc8-8fc6-a1e3f87cfa7a",
+      "title": "Swirl — Hack Club You Ship, We Ship",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "357bb38e-0665-4952-9961-3551b3eb2bf7",
+      "title": "HackCraft — Hack Club You Ship, We Ship",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "66b37cc9-fa0c-4137-b629-eae7fa09c44e",
+      "title": "Fusering — Hack Club You Ship, We Ship",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "a78f4c27-e3a2-4c86-96d4-c8a2dab7f808",
+      "title": "BakeBuild — Hack Club You Ship, We Ship",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "7884b31b-3b27-48aa-8bc0-9e713d577c2a",
+      "title": "Pixl — Hack Club You Ship, We Ship",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "26f30bf6-d530-4e99-8c0d-db41ecfa1969",
+      "title": "Jame Gam — Hack Club You Ship, We Ship",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ad444276-1851-458a-afec-9a33d5c69fe4",
+      "title": "iplace — Hack Club You Ship, We Ship",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "88bf9cd0-ca4e-4fbb-b492-f3b11e9fdff9",
+      "title": "Hacklet v2 — Hack Club You Ship, We Ship",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "848884a4-c385-4ed5-abc8-c4e35ce2db1b",
+      "title": "Waffles — Hack Club You Ship, We Ship",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "0c0123a8-41f7-418d-97ee-d0b88d172e22",
+      "title": "Terminal Craft v5 — Hack Club You Ship, We Ship",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "1cebd983-2083-420a-864e-262dfe79a89c",
+      "title": "Carnival — Hack Club You Ship, We Ship",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "c3e3ef4b-1151-46b0-bbac-34d5cd757493",
+      "title": "Sprig — Hack Club You Ship, We Ship",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "7949b9d2-7f43-4b76-8391-eef5a32c4c1a",
+      "title": "Boba Drops — Hack Club You Ship, We Ship",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "76c14c9b-c129-443b-9ebe-1f258bb07d44",
+      "title": "Storyboard — Hack Club You Ship, We Ship",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4c45a9c1-9d85-44e9-a165-a24b1ca79c75",
+      "title": "Toppings — Hack Club You Ship, We Ship",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "88bcdb14-628f-4f03-b256-c51a877a3d98",
+      "title": "Sentinel Hacks — High School Hackathon",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "a6dc1f89-cd94-4a3c-89b2-51ff02b62049",
+      "title": "Telos Hacks — High School Hackathon",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "f5fad44a-4eb5-48db-a6f8-8b2aa1271fe8",
+      "title": "Pixel Forge Mega Jam 2027",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "eb19d8c6-12fa-4634-a911-5b3515b5eac0",
+      "title": "MathHacks 2.0 — Toronto High School Hackathon",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "e61e83bb-d233-4bb9-a491-fb8864880acf",
+      "title": "Capitol — Hack Club Hackathon in Washington, D.C.",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "6fae18c8-55bc-4c68-9077-4c195ec9007f",
+      "title": "PHANTOM — Hack Club Escape Room Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "180a56b2-c646-40cb-bf26-ec20525b8791",
+      "title": "VNU Hack '26 — Connect The Dots",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "9fa9c6fe-3fc8-4af7-b49e-1586a5a019ad",
+      "title": "Haven — Hack Club Teen Game Jam in 200+ Cities",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "e4503a13-6834-465d-9723-a28ea45b119b",
+      "title": "Snowglobe — All-Girls High School Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    }
+  ],
+  "merged": []
+}
