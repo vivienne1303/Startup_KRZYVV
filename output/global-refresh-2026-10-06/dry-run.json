@@ -1,0 +1,59 @@
+{
+  "applied": false,
+  "as_of": "2026-10-06",
+  "duplicate_check": "Local snapshot only; live check required",
+  "added": [
+    {
+      "id": null,
+      "title": "Aldevere Research Question Prize - November 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "International Public Policy Forum 2026-27",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Immerse Education Essay Competition 2027 - October Entry Round",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Missing Maps - Remote Humanitarian Mapping",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Translators without Borders - Remote Language Volunteering",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Smithsonian Transcription Center - Digital Volunteering",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Distributed Proofreaders - Online E-book Proofreading",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    }
+  ],
+  "merged": []
+}
