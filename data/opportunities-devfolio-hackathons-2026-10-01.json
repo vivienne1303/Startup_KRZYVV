@@ -1,0 +1,900 @@
+{
+  "as_of": "2026-10-01",
+  "discovery_source": "Direct organiser research",
+  "additions": [
+    {
+      "title": "Hackify 3.0 — Devfolio Hackathon",
+      "organisation": "Hackify 3.0 organisers (Kothamangalam)",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "HACK TO DEFY. In-person hackathon, 2026-10-09 to 2026-10-11. Teams of 1–4.",
+      "eligibility": "Organiser FAQ: Students from any recognized college or university are eligible to participate.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "University"
+      ],
+      "application_deadline": "2026-10-02",
+      "start_date": "2026-10-09",
+      "end_date": "2026-10-11",
+      "source_url": "https://hackify-3.devfolio.co/",
+      "application_url": "https://hackify-3.devfolio.co/",
+      "host_country": "IN",
+      "location": "Kothamangalam, Kerala, India",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://hackify-3.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": "No. Participation in Hackify 3.0 is completely free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-10-02T18:29:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://hackify-3.devfolio.co/"
+        ]
+      }
+    },
+    {
+      "title": "ALGOTHON'26 — Devfolio Hackathon",
+      "organisation": "ALGOTHON'26 organisers",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "Build with Logic, Rise with ALGoxilla.. Online hackathon, 2026-10-04 to 2026-10-04. Teams of 1–3.",
+      "eligibility": "Organiser FAQ: ALGOTHON'26 is open to students and coding enthusiasts who are interested in programming, problem-solving, and building innovative solutions.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-10-03",
+      "start_date": "2026-10-04",
+      "end_date": "2026-10-04",
+      "source_url": "https://algothon.devfolio.co/",
+      "application_url": "https://algothon.devfolio.co/",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://algothon.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-10-02T18:30:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://algothon.devfolio.co/"
+        ]
+      }
+    },
+    {
+      "title": "Hackverse.2026 — Devfolio Hackathon",
+      "organisation": "Hackverse.2026 organisers (Navi Mumbai)",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "In-person hackathon, 2026-10-05 to 2026-10-06. Teams of 2–4.",
+      "eligibility": "Eligibility not stated in the organiser FAQ.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-10-04",
+      "start_date": "2026-10-05",
+      "end_date": "2026-10-06",
+      "source_url": "https://hackverse-19.devfolio.co/",
+      "application_url": "https://hackverse-19.devfolio.co/",
+      "host_country": "IN",
+      "location": "Navi Mumbai, Maharashtra, India",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "unknown",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://hackverse-19.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-10-04T18:29:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://hackverse-19.devfolio.co/"
+        ]
+      }
+    },
+    {
+      "title": "sudo Hacktober — Devfolio Hackathon",
+      "organisation": "sudo Hacktober organisers (Mangalagiri)",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "In-person hackathon, 2026-10-10 to 2026-10-11. Teams of 1–1.",
+      "eligibility": "Eligibility not stated in the organiser FAQ.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-10-05",
+      "start_date": "2026-10-10",
+      "end_date": "2026-10-11",
+      "source_url": "https://sudo-hacktober.devfolio.co/",
+      "application_url": "https://sudo-hacktober.devfolio.co/",
+      "host_country": "IN",
+      "location": "Mangalagiri, Andhra Pradesh, India",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "unknown",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://sudo-hacktober.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": "The hackathon is completely free for all participants.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-10-05T18:29:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://sudo-hacktober.devfolio.co/"
+        ]
+      }
+    },
+    {
+      "title": "Q-HACK INDIA 2026 — Devfolio Hackathon",
+      "organisation": "Q-HACK INDIA 2026 organisers (Bengaluru)",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "The Quantum Build Challenge. In-person hackathon, 2026-10-30 to 2026-10-31. Teams of 3–4.",
+      "eligibility": "Organiser FAQ: Undergraduate and postgraduate students can participate.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "University"
+      ],
+      "application_deadline": "2026-10-07",
+      "start_date": "2026-10-30",
+      "end_date": "2026-10-31",
+      "source_url": "https://qhack-india.devfolio.co/",
+      "application_url": "https://qhack-india.devfolio.co/",
+      "host_country": "IN",
+      "location": "Bengaluru, Karnataka, India",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://qhack-india.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-10-07T18:29:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://qhack-india.devfolio.co/"
+        ]
+      }
+    },
+    {
+      "title": "Wild Bugs — Devfolio Hackathon",
+      "organisation": "Wild Bugs organisers",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "Code. Crash. Survive.. Online hackathon, 2026-10-14 to 2026-10-15. Teams of 1–4.",
+      "eligibility": "Eligibility not stated in the organiser FAQ.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-10-09",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-15",
+      "source_url": "https://wild-bugs.devfolio.co/",
+      "application_url": "https://wild-bugs.devfolio.co/",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "unknown",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://wild-bugs.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-10-09T18:29:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://wild-bugs.devfolio.co/"
+        ]
+      }
+    },
+    {
+      "title": "CODEARAMBH 2.0 — Devfolio Hackathon",
+      "organisation": "CODEARAMBH 2.0 organisers (Ghaziabad)",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "Code Beyond Limits. Create the Extraordinary.. In-person hackathon, 2026-10-23 to 2026-10-24. Teams of 2–4.",
+      "eligibility": "Organiser FAQ: Yes. All participants must complete their registration on Devfolio. Please follow the official hackathon instructions for any additional registration or submission requirements.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-10-10",
+      "start_date": "2026-10-23",
+      "end_date": "2026-10-24",
+      "source_url": "https://codearambh.devfolio.co/",
+      "application_url": "https://codearambh.devfolio.co/",
+      "host_country": "IN",
+      "location": "Ghaziabad, Uttar Pradesh, India",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "unknown",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://codearambh.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-10-10T18:15:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://codearambh.devfolio.co/"
+        ]
+      }
+    },
+    {
+      "title": "Winter of Code 2026 — Devfolio Hackathon",
+      "organisation": "Winter of Code 2026 organisers",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "Code. Contribute. Collaborate. Create.. Online hackathon, 2026-10-15 to 2026-12-01. Teams of 1–1.",
+      "eligibility": "Organiser FAQ: IEEE Winter of Code 2026 is open to students worldwide. Students from any college, course, semester, or academic background can participate. You do not need to be a student of BMSIT&M or an IEEE member to participate.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "University"
+      ],
+      "application_deadline": "2026-10-14",
+      "start_date": "2026-10-15",
+      "end_date": "2026-12-01",
+      "source_url": "https://winter-of-code-4.devfolio.co/",
+      "application_url": "https://winter-of-code-4.devfolio.co/",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "worldwide",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://winter-of-code-4.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-10-13T18:30:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://winter-of-code-4.devfolio.co/"
+        ]
+      }
+    },
+    {
+      "title": "CodeStorm 2026: FutureForge — Devfolio Hackathon",
+      "organisation": "CodeStorm 2026: FutureForge organisers",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "Build the Future. Shape the Impossible.. Online hackathon, 2026-08-01 to 2026-10-15. Teams of 1–6.",
+      "eligibility": "Organiser FAQ: Individuals with a passion for technology, coding, design, or innovation are encouraged to participate. Whether you are a student, beginner, or an experienced developer, all are welcome.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "University"
+      ],
+      "application_deadline": "2026-10-14",
+      "start_date": "2026-08-01",
+      "end_date": "2026-10-15",
+      "source_url": "https://codestorm-futureforge.devfolio.co/",
+      "application_url": "https://codestorm-futureforge.devfolio.co/",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://codestorm-futureforge.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": "No. CodeStorm 2026 is completely free to participate in.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-10-14T18:29:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://codestorm-futureforge.devfolio.co/"
+        ]
+      }
+    },
+    {
+      "title": "Hack On Hills 8.0 — Devfolio Hackathon",
+      "organisation": "Hack On Hills 8.0 organisers (Hamirpur)",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "The Age of Autonomous Agents. In-person hackathon, 2026-10-31 to 2026-11-02. Teams of 2–4.",
+      "eligibility": "Eligibility not stated in the organiser FAQ.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-10-15",
+      "start_date": "2026-10-31",
+      "end_date": "2026-11-02",
+      "source_url": "https://hackonhills8.devfolio.co/",
+      "application_url": "https://hackonhills8.devfolio.co/",
+      "host_country": "IN",
+      "location": "Hamirpur, Himachal Pradesh, India",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "unknown",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://hackonhills8.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": "No, Participation is completely free",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-10-15T18:29:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://hackonhills8.devfolio.co/"
+        ]
+      }
+    },
+    {
+      "title": "QuantHacks — Devfolio Hackathon",
+      "organisation": "QuantHacks organisers",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "QuantHacks — Code. Quantify. Innovate.. In-person hackathon, 2026-10-23 to 2026-10-24. Teams of 1–4.",
+      "eligibility": "Eligibility not stated in the organiser FAQ.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-10-16",
+      "start_date": "2026-10-23",
+      "end_date": "2026-10-24",
+      "source_url": "https://quanthacks2026.devfolio.co/",
+      "application_url": "https://quanthacks2026.devfolio.co/",
+      "host_country": null,
+      "location": null,
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "unknown",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://quanthacks2026.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-10-15T22:59:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://quanthacks2026.devfolio.co/"
+        ]
+      }
+    },
+    {
+      "title": "Srijan Setu — Devfolio Hackathon",
+      "organisation": "Srijan Setu organisers (New Chandigarh)",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "Bridging Problems & Solutions. In-person hackathon, 2026-10-23 to 2026-10-24. Teams of 2–4.",
+      "eligibility": "Organiser FAQ: Srijan Setu is open to students from all colleges.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "University"
+      ],
+      "application_deadline": "2026-10-20",
+      "start_date": "2026-10-23",
+      "end_date": "2026-10-24",
+      "source_url": "https://srijan-setu.devfolio.co/",
+      "application_url": "https://srijan-setu.devfolio.co/",
+      "host_country": "IN",
+      "location": "New Chandigarh, Punjab, India",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://srijan-setu.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-10-20T17:30:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://srijan-setu.devfolio.co/"
+        ]
+      }
+    },
+    {
+      "title": "Innosprint2.0 — Devfolio Hackathon",
+      "organisation": "Innosprint2.0 organisers (Chandigarh State)",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "India's Largest student-led hackathon. In-person hackathon, 2026-10-24 to 2026-10-24. Teams of 1–4.",
+      "eligibility": "Eligibility not stated in the organiser FAQ.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-10-23",
+      "start_date": "2026-10-24",
+      "end_date": "2026-10-24",
+      "source_url": "https://innosprint-3.devfolio.co/",
+      "application_url": "https://innosprint-3.devfolio.co/",
+      "host_country": "IN",
+      "location": "Chandigarh State, Punjab, India",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "unknown",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://innosprint-3.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-10-22T18:30:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://innosprint-3.devfolio.co/"
+        ]
+      }
+    },
+    {
+      "title": "GeNarrative Clash — Devfolio Hackathon",
+      "organisation": "GeNarrative Clash organisers (Kolkata)",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "Where Generative AI Meets Human Creativity: Kolkata's Ultimate Prompt Engineering Challenge. In-person hackathon, 2026-10-31 to 2026-10-31. Teams of 2–4.",
+      "eligibility": "Organiser FAQ: GeNarrative Clash is exclusively for currently enrolled university and college students. Working professionals are not eligible to compete as participants, though they are welcome to join us as mentors or judges.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-10-27",
+      "start_date": "2026-10-31",
+      "end_date": "2026-10-31",
+      "source_url": "https://genarrative-clash.devfolio.co/",
+      "application_url": "https://genarrative-clash.devfolio.co/",
+      "host_country": "IN",
+      "location": "Kolkata, West Bengal, India",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://genarrative-clash.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": "No, participation is completely free! There are no entry fees or hidden costs to register, build, or compete in the hackathon.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-10-27T18:29:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://genarrative-clash.devfolio.co/"
+        ]
+      }
+    },
+    {
+      "title": "TUM Blockchain & AI Hackathon — Devfolio Hackathon",
+      "organisation": "TUM Blockchain & AI Hackathon organisers (München)",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "The hackathon where Blockchain and AI meet. In-person hackathon, 2026-10-30 to 2026-10-31. Teams of 1–5.",
+      "eligibility": "Eligibility not stated in the organiser FAQ.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-10-29",
+      "start_date": "2026-10-30",
+      "end_date": "2026-10-31",
+      "source_url": "https://tum.devfolio.co/",
+      "application_url": "https://tum.devfolio.co/",
+      "host_country": "DE",
+      "location": "München, Bayern, Germany",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "unknown",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://tum.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-10-29T12:00:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://tum.devfolio.co/"
+        ]
+      }
+    },
+    {
+      "title": "Hacknauts 2.0 — Devfolio Hackathon",
+      "organisation": "Hacknauts 2.0 organisers (Ludhiana)",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "In-person hackathon, 2026-11-14 to 2026-11-15. Teams of 2–4.",
+      "eligibility": "Organiser FAQ: The hackathon is open to students pursuing undergraduate or postgraduate degrees in computer science, engineering, or related fields.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "University"
+      ],
+      "application_deadline": "2026-10-30",
+      "start_date": "2026-11-14",
+      "end_date": "2026-11-15",
+      "source_url": "https://hacknauts26.devfolio.co/",
+      "application_url": "https://hacknauts26.devfolio.co/",
+      "host_country": "IN",
+      "location": "Ludhiana, Punjab, India",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://hacknauts26.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": "Don't worry! We'll keep the energy up with engaging activities throughout the event. If you need a break, there will be designated resting zones, or you can tak",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-10-30T18:00:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://hacknauts26.devfolio.co/"
+        ]
+      }
+    },
+    {
+      "title": "hackodisha-6.0 — Devfolio Hackathon",
+      "organisation": "hackodisha-6.0 organisers",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "Eastern India's one of the largest hackathon organized by Webwiz, NIT Rourkela.. Online hackathon, 2026-10-31 to 2026-11-01. Teams of 1–5.",
+      "eligibility": "Organiser FAQ: Anyone interested in technology, innovation, and problem-solving can participate. Students, professionals, and enthusiasts are all welcome.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-10-30",
+      "start_date": "2026-10-31",
+      "end_date": "2026-11-01",
+      "source_url": "https://hackodisha-6a.devfolio.co/",
+      "application_url": "https://hackodisha-6a.devfolio.co/",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://hackodisha-6a.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-10-30T18:29:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://hackodisha-6a.devfolio.co/"
+        ]
+      }
+    },
+    {
+      "title": "haxfinity — Devfolio Hackathon",
+      "organisation": "haxfinity organisers (Myladi)",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "In-person hackathon, 2026-12-12 to 2026-12-13. Teams of 2–4.",
+      "eligibility": "Eligibility not stated in the organiser FAQ.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-11-10",
+      "start_date": "2026-12-12",
+      "end_date": "2026-12-13",
+      "source_url": "https://haxfinity.devfolio.co/",
+      "application_url": "https://haxfinity.devfolio.co/",
+      "host_country": "IN",
+      "location": "Myladi, Kerala, India",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "unknown",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://haxfinity.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-11-10T18:29:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://haxfinity.devfolio.co/"
+        ]
+      }
+    },
+    {
+      "title": "DevNexus 2.0 — Devfolio Hackathon",
+      "organisation": "DevNexus 2.0 organisers (Kolkata)",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "Code Through the Night. Build Beyond the Fear.. In-person hackathon, 2026-11-28 to 2026-11-29. Teams of 2–4.",
+      "eligibility": "Organiser FAQ: Students from colleges and universities across the country are welcome to participate in DevNexus.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "University"
+      ],
+      "application_deadline": "2026-11-15",
+      "start_date": "2026-11-28",
+      "end_date": "2026-11-29",
+      "source_url": "https://devnexus2.devfolio.co/",
+      "application_url": "https://devnexus2.devfolio.co/",
+      "host_country": "IN",
+      "location": "Kolkata, West Bengal, India",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://devnexus2.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": "No! DevNexus 2.0 is completely free to participate in.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-11-14T18:30:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://devnexus2.devfolio.co/"
+        ]
+      }
+    },
+    {
+      "title": "HACK WITH GDG S4 — Devfolio Hackathon",
+      "organisation": "HACK WITH GDG S4 organisers (KSR Kalvi Nagar)",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "Challenge Reality. Build What's Next.. In-person hackathon, 2027-01-22 to 2027-01-24. Teams of 1–4.",
+      "eligibility": "Eligibility not stated in the organiser FAQ.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-12-31",
+      "start_date": "2027-01-22",
+      "end_date": "2027-01-24",
+      "source_url": "https://hack-with-gdg-s4.devfolio.co/",
+      "application_url": "https://hack-with-gdg-s4.devfolio.co/",
+      "host_country": "IN",
+      "location": "KSR Kalvi Nagar, Tamil Nadu, India",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Devfolio",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "unknown",
+        "application_access": "login_required",
+        "discovered_url": "https://devfolio.co/hackathons/open",
+        "official_url": "https://hack-with-gdg-s4.devfolio.co/",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official Devfolio listing: applications close 2026-12-31T18:29:00+00:00. Applying requires a Devfolio account.",
+        "evidence_urls": [
+          "https://hack-with-gdg-s4.devfolio.co/"
+        ]
+      }
+    }
+  ]
+}

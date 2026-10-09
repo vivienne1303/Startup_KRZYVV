@@ -1,0 +1,94 @@
+{
+  "as_of": "2026-10-01",
+  "discovery_source": "Direct organiser research",
+  "additions": [
+    {
+      "title": "Care Beyond Memory - Potong Pasir (22 Aug 26 to 28 Nov 26)",
+      "organisation": "Youth Corps Singapore and Care Corner",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "Bring joy to seniors with dementia through games, crafts and karaoke. Roles: Volunteer Befriender or Volunteer Coordinator; sessions run until 28 November 2026.",
+      "eligibility": "Volunteers aged 15 to 35.",
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "education_levels": [],
+      "application_deadline": "2026-12-07",
+      "start_date": "2026-08-18",
+      "end_date": "2026-11-28",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/08/Care-Beyond-Memory--Potong-Pasir-22-Aug-26-to-28-Nov-26",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/08/Care-Beyond-Memory--Potong-Pasir-22-Aug-26-to-28-Nov-26",
+      "host_country": "SG",
+      "location": "Potong Pasir (Toa Payoh), Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Discover NYC",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "login_required",
+        "discovered_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities",
+        "official_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/08/Care-Beyond-Memory--Potong-Pasir-22-Aug-26-to-28-Nov-26",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official roles API lists Volunteer Befriender and Volunteer Coordinator roles, closing 7 December 2026 23:59. Late joiners can only take remaining sessions before 28 November.",
+        "evidence_urls": [
+          "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/08/Care-Beyond-Memory--Potong-Pasir-22-Aug-26-to-28-Nov-26"
+        ]
+      }
+    },
+    {
+      "title": "TimeSnaps! — Youth Corps Heritage Befriending",
+      "organisation": "Youth Corps Singapore",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "A two-part engagement programme: guide younger youths exploring Singapore River heritage through interactive activities and basic photography.",
+      "eligibility": "Volunteers aged 16 to 35.",
+      "minimum_age": 16,
+      "maximum_age": 35,
+      "education_levels": [],
+      "application_deadline": "2026-10-16",
+      "start_date": "2026-10-05",
+      "end_date": "2026-11-21",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/TimeSnaps",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/TimeSnaps",
+      "host_country": "SG",
+      "location": "Punggol / Singapore River, Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Discover NYC",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "login_required",
+        "discovered_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities",
+        "official_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/TimeSnaps",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official roles API: Volunteer Befriender role closes 16 October 2026 23:59.",
+        "evidence_urls": [
+          "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/TimeSnaps"
+        ]
+      }
+    }
+  ]
+}

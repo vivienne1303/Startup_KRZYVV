@@ -55,6 +55,10 @@
         <a href="pages/portfolio-builder.html"><strong>04</strong><span aria-hidden="true">🌟</span><h3>Tell your story</h3><p>Turn what you did into proof of growth.</p><b>Build my portfolio →</b></a>
       </div>
     </div></section>
+    <section class="home-focus-section" aria-labelledby="home-founders-title">
+      <div class="focus-heading"><p class="eyebrow">The people behind TeenLaunch</p><h2 id="home-founders-title">Meet our founders</h2><p>Get to know Keren, Ziying and Vivienne, their aspirations, and what TeenLaunch means to each of them.</p></div>
+      <div class="focus-actions"><a class="btn secondary" href="pages/founder-keren.html">Meet Keren</a><a class="btn secondary" href="pages/founder-ziying.html">Meet Ziying</a><a class="btn secondary" href="pages/founder-vivienne.html">Meet Vivienne</a></div>
+    </section>
     <section class="home-focus-section support-story">
       <div><p class="eyebrow">You are not doing this alone</p><h2>Stuck? Ask for a little help.</h2><p>Use Career Copilot to compare options, prepare an application, or work out one realistic thing to do next.</p><div class="focus-actions"><a class="btn primary" href="pages/career-copilot.html">Ask Career Copilot</a><a class="btn secondary" href="pages/resources.html">Explore resources</a></div></div>
       <div class="support-chat" aria-label="Example Career Copilot conversation"><p>I’m interested in design, but I don’t know where to start.</p><p>That’s okay. Let’s find one workshop for beginners that you can try this month.</p></div>

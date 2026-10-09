@@ -1,0 +1,158 @@
+{
+  "applied": true,
+  "as_of": "2026-10-01",
+  "duplicate_check": "Live database",
+  "added": [
+    {
+      "id": "0459d538-023c-4de0-bd1c-f15db54efaea",
+      "title": "Hackify 3.0 — Devfolio Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "5718208b-94b9-4902-8f4e-9376e2dcea50",
+      "title": "ALGOTHON'26 — Devfolio Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ee534e1a-b05c-45ef-a5c7-724b345ff7cc",
+      "title": "Hackverse.2026 — Devfolio Hackathon",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "8c14229f-aab8-4b1b-a95a-2b147a9e34e4",
+      "title": "sudo Hacktober — Devfolio Hackathon",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "f2401bc6-98c0-418d-a9db-f5ee9a653721",
+      "title": "Q-HACK INDIA 2026 — Devfolio Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6d28d1e6-6d10-409a-ac36-a7a480ac44ad",
+      "title": "Wild Bugs — Devfolio Hackathon",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "e7dd2d56-7917-44a1-bd1e-becdfd037a30",
+      "title": "CODEARAMBH 2.0 — Devfolio Hackathon",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "af246112-2dff-457f-be60-1ae7ba8bd099",
+      "title": "Winter of Code 2026 — Devfolio Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "d3831067-9e57-441a-9d35-de0054fbc8a1",
+      "title": "CodeStorm 2026: FutureForge — Devfolio Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "1540117c-ede8-494b-942f-8bb92438d27d",
+      "title": "Hack On Hills 8.0 — Devfolio Hackathon",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "2f26502e-a700-4184-ba3e-68b759742998",
+      "title": "QuantHacks — Devfolio Hackathon",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "1ec8a8f7-48a4-4f84-aff5-8d9cb98dd5df",
+      "title": "Srijan Setu — Devfolio Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "55b4e2df-8e9e-43e8-80be-25aa589669f6",
+      "title": "Innosprint2.0 — Devfolio Hackathon",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "eb603d1c-ff28-4bc6-9464-eb78284902f4",
+      "title": "GeNarrative Clash — Devfolio Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "bde9202c-327e-4263-860b-74c6d37ec3e8",
+      "title": "TUM Blockchain & AI Hackathon — Devfolio Hackathon",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "fe94789f-1d10-4dec-92bb-487810409925",
+      "title": "Hacknauts 2.0 — Devfolio Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "015ba72a-cab9-4c0a-b0ed-4b3bc5a38982",
+      "title": "hackodisha-6.0 — Devfolio Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6f3f42d7-6c19-4a6d-9497-ff2bd2e0d1ec",
+      "title": "haxfinity — Devfolio Hackathon",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "a987ecd3-98d9-440c-b04e-c6d0d156f49c",
+      "title": "DevNexus 2.0 — Devfolio Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "5d6e3f49-4542-4993-a7fb-efa128ef5bfa",
+      "title": "HACK WITH GDG S4 — Devfolio Hackathon",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    }
+  ],
+  "merged": []
+}

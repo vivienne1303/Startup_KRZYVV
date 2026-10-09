@@ -1,0 +1,1464 @@
+{
+  "applied": true,
+  "as_of": "2026-10-01",
+  "duplicate_check": "Live database",
+  "added": [
+    {
+      "id": "bb09a3bb-fe42-4f8c-8c0b-3ef4d507068d",
+      "title": "Crack the Crude — IIT ISM Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "7fe6f71f-294a-4a52-8e5c-3661b1f43f4d",
+      "title": "Kill Switch — Bharati Vidyapeeth's College of Engineering",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b2c48d48-473c-4b70-8ac1-e5503617602c",
+      "title": "QC@IITI x IBM Qiskit Fall Fest'26 — IIT Indore",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "1fc17ca8-2896-412e-bed6-f09b4884aa0a",
+      "title": "Young Business Leader 2026 – The Business Decision & Leadership Challenge — Lloyd Business School",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a2bb9ced-79d5-4814-9f0e-13fde0067bf9",
+      "title": "The Code Voyage — GTBIT New Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9ab941a4-2f7e-41ce-b078-562384c26392",
+      "title": "Tech Grand Prix — GTBIT New Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9a0aae44-6071-48d2-aa10-3c2b123fa0a2",
+      "title": "The Corporate Cinematic Universe 2026 — SIMS Pune",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9d430065-3602-4bc4-8788-7bf92e5331fd",
+      "title": "Veiled Ventures: The Blind Funding Competition — Shaheed Rajguru College of Applied Sciences for Women, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "bb529f9a-9b5c-4b75-9bd3-31a968aadef5",
+      "title": "Moolyankan 2026 - Equity Research Competition — NMIMS Mumbai",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4e127f57-fb56-4753-ae3d-d0a58860957e",
+      "title": "No Oil. No Boil. — IIPM Karnataka",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "c358374e-5a9b-4295-9cef-9343631d6bb2",
+      "title": "Design Decode '26: Redesign. Rethink. Refine. — IIT ISM Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "dce1f963-4ef6-47c6-ac59-6ea1a7ef70e3",
+      "title": "Case Crash – Think. Build. Pitch. — Shaheed Rajguru College of Applied Sciences for Women, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b34fc176-01ef-40f0-81fc-3b31cbd802b3",
+      "title": "Idea to Plate Pitch — IIPM Karnataka",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "82e2b140-e390-4b0c-9257-73d016b51348",
+      "title": "J.A.M: Just A Minute — RGIPT Uttar Pradesh",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "35103509-5f21-400c-a190-134728b82b69",
+      "title": "Oxford Style English Debate — RGIPT Uttar Pradesh",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "25308b60-a66e-4a5f-931b-183cfe1b6b29",
+      "title": "VANTAGE — Masters' Union School of Business",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "07c8a4ec-d7d2-4ba8-a27e-0d301a4ddf73",
+      "title": "The Decision Protocol:One Decision.Infinite Outcomes — Shaheed Rajguru College of Applied Sciences for Women",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6acfb792-8584-4e4c-84cf-3b5ce7a1a67e",
+      "title": "Reverse Tank — LC Chennai",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9b4873ef-07a3-4ee5-b346-b95e4b8c44d2",
+      "title": "QBlueprint — Indian Institute of Technology Indian School of Mines Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "c618d243-efc7-405b-838c-49b65bba8f20",
+      "title": "Quantum Mania — Indian Institute of Technology Indian School of Mines Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "bd46b467-4a27-4748-94db-f4262f34ecc7",
+      "title": "Pitch Perfect : The Worst Product Wins — Shaheed Rajguru College of Applied Sciences for Women, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "c2b51fcb-1fa0-4e45-a98b-ab830e4014f7",
+      "title": "Bio-Economy Hackathon - Jodhpur — Indian Institute of Forest Management",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "042852e0-4b8e-4dcd-8ff9-b866118caac8",
+      "title": "Bio-Economy Hackathon - Delhi — Indian Institute of Forest Management",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "02fa1d20-b7ef-44b9-ab9a-a3045d59c0e5",
+      "title": "The Visual Persuasion Relay'26 — SIMS Pune",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e6247766-7be5-4144-8c7f-7e5ff636ef50",
+      "title": "Bull-vs-Bear: The Live Mockstock Exchange — Shaheed Rajguru College of Applied Sciences for Women, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ccf0d28f-b00d-457d-bb42-1e5f86cb1a8a",
+      "title": "Wiki-Race — IIIT Bangalore",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6f1de735-b85b-4d7b-a66f-17d09ad69d83",
+      "title": "Tech Fusion 2026 - Ideathon — Tulsiramji Gaikwad Patil College of Engineering and Technology, Polytechnic",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "5b09f98a-2d14-4be1-82c8-326c4322bc8f",
+      "title": "Mathalon — IIT ISM Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "2c9c3b04-642e-47ed-9a14-2ac7f2fc15e0",
+      "title": "Cipher Trail CTF — Vivekananda Institute of Professional Studies - Technical Campus",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9f659aae-9cdc-4399-98b9-4d571967abec",
+      "title": "Shot-ify — IIIT Bangalore",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "aa33d624-6883-448d-b205-21c0cacd32ed",
+      "title": "Stellar IQ: Space Quiz — AIT Pune",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "c029b8be-a0ce-4015-bd55-38b62e134064",
+      "title": "Trivia-Verse — IIIT Bangalore",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "1aa7ff3e-864a-4377-8121-24b14a564fec",
+      "title": "Bid & Build — IIIT Bangalore",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f666baa5-7481-45cf-8881-049882f9db9a",
+      "title": "Banks & Bloodlines — IIIT Bangalore",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f3cba409-bac6-4dae-99e8-224cd5265ba7",
+      "title": "Sociothon: Hackathon for Social Impact — Vishwakarma Institute of Technology, Pune",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e9160cd9-11c0-47a5-b849-530ed856bb9f",
+      "title": "Cortex Hackathon — MIT World Peace University, Pune",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "1b599c40-1134-4630-940a-f66834f56a46",
+      "title": "Hack the Fork: AI & Food Hackathon — NIFTEM Sonipat",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "0e2ca2b0-f08c-4834-80fe-15210f4d54ce",
+      "title": "Triwizathon 2026 : Where Code Meets Magic — Sanjay Ghodawat University, Kolhapur",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "32bb1bdc-afd2-4209-97ac-b26739357400",
+      "title": "HackCOSMIC — Vivekananda Institute of Professional Studies - Technical Campus",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "07ca3317-5111-4404-85b7-403cf6d845fe",
+      "title": "ALCHENOVA - Every Blindspot Has A Blueprint — Gargi College, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "2e4696f6-a865-4f69-93ee-d169f9ef0abb",
+      "title": "Code Yudh - Battle of Codes — CU Punjab",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "0af1d019-5cef-4a21-b613-40bc7b2f79e0",
+      "title": "Arth Chakra 2026 — SIMS Pune",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "39c5f926-2283-4e1d-94df-c9f3992e16a3",
+      "title": "Case Union 4.0 — Masters' Union School of Business",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "483e5570-10d5-4298-95d3-8e6e1770f565",
+      "title": "Perceptron Hackathon 2026 — IIT Bombay",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9c0db1f0-7c6f-4bc0-b208-f8a42bea2766",
+      "title": "Case Union 4.0 — Masters' Union School of Business (1762463)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f3110ed1-0e30-4ca5-b4fb-729e107c5a33",
+      "title": "GateCraft: The Redstone Logic Challenge — ISM IIT Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "84eccd25-56a2-4e9c-a8c6-5a324555cda8",
+      "title": "Dashboard Diaries — AU Noida",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b80679ca-d625-4ee4-882a-26086bdf09ca",
+      "title": "Auction Theory 2026 — SIMS Pune",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "68bbc262-8c61-45f9-a5e8-57bb79905ad1",
+      "title": "Delta Code — NIT Warangal",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "85cb4cd1-b9d2-4844-84a6-107916a00d85",
+      "title": "EKAM - The Jack of All Traits — SIMS Pune",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "7c20cfa2-1806-4422-bfee-8c611307a1ac",
+      "title": "Jack of All Trades 2026 — SIMS Pune",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "8aca6a23-c64a-4369-a0d2-9ab76c57e882",
+      "title": "RoboWars — IIIT Bangalore",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "49e64db5-8326-4bdd-8006-b3f3d984e5c0",
+      "title": "Steel War - ROBOWARS — IIIT Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "0b49e763-00f3-4cfd-9d6b-b6cdd014dde1",
+      "title": "Investor's Dilemma '26 - Lucknow — PW Institute of Innovation",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "608cdc4e-2ada-4c67-8a4c-e64de2201322",
+      "title": "Webweave 2K26 — RVRJCCE Guntur",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a1e8c275-d943-42bf-bd2b-353292d3bfc9",
+      "title": "Dohyo: Robo Sumo — GTBIT New Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ef4efec2-54fc-4b56-a6e6-ca83ac09ca02",
+      "title": "Takeshi's Bots: Robo Maze — GTBIT New Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "67b22158-f2f4-483e-a4fb-2d3aae770b1c",
+      "title": "Overdrive: Robo Race — GTBIT New Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f55ad05b-f9bc-4733-942e-2b64db38c24d",
+      "title": "Conceptia ‘26 — BMSITM Bangalore",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a1e02686-f946-49f0-b66a-145103b980ae",
+      "title": "SPACE OUT: Space Innovation Ideathon 2026 — GLAU Uttar Pradesh",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e2f9e583-caae-46a4-be93-6067c44cc6c8",
+      "title": "Odyssey '26 — MCET Tamil Nadu",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "22b0c1aa-e47c-4641-bbdd-86718dbaab77",
+      "title": "INSTOLUTIONS 4.0 – Inter-College Industry Connect Innovation Challenge — Alpha College of Engineering, Chennai",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "268765e2-0123-4c0e-84bc-5dcdb93713cb",
+      "title": "Aeroglide — IIT ISM Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4c71e283-1153-4922-a19b-815e0478f57f",
+      "title": "Off Brand: The Marketing Case Competition — Miranda House College, University of Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f36efdbd-4cee-4960-b3e7-e9da3835e222",
+      "title": "Re:Venture: The Business Strategy Case Competition — Miranda House College, University of Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "56180d96-6c92-4735-a92d-d9d1a973543a",
+      "title": "Namo Bharat – 30-Hour National Hackathon 2026 — Sanskriti University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "1c8644b8-5b49-4dec-8d84-0f035a62090f",
+      "title": "Xtract 5.0 — DJSCE Mumbai",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "208e2a2b-d486-45b3-8b0e-12ea9941876a",
+      "title": "Sustain-A-Thon 2.0 (2026) — SU Greater Noida",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "d5a420ae-5e03-4659-99f8-eee7e22e6015",
+      "title": "Logic Odyssey — IIT ISM Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "7023fd68-03c5-4635-a31d-37fc52a94e0d",
+      "title": "The Credit Conundrum — KMC Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b3917a5c-a7e5-4dee-9f26-28a491ca2fc2",
+      "title": "Prashnotsav — NIT Uttarakhand",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a3ece6af-ccbe-4afc-9c88-46d2408b4539",
+      "title": "The M&A Championship 4.0 — KMC Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "14a95c48-0bfe-4837-857e-3fd91ce5d1ea",
+      "title": "IPL (IIITD Programming League) 2026 — IIIT Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ef8772a7-c00f-4b32-bdac-3d3d2afa6ddc",
+      "title": "HackIIITD — IIIT Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "806c6fe7-ae64-4d94-8b5a-7af06cf8c28e",
+      "title": "BrandStorm 2026 — SIMS Pune",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e68de0b1-084e-4025-ad9a-05f3ef7274aa",
+      "title": "Techashy 2.0 Hackathon 2026 — IIIT",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ec396e4a-cbe3-4577-951a-d72205498b94",
+      "title": "Venture Vortex — Entrepreneurship Club, NIT Warangal",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6ee203ec-0f95-40d1-833c-e02affea3765",
+      "title": "HAC - TIC - THON :- Come With Ideas, Leave With Bugs. — Shaheed Rajguru College of Applied Sciences for Women, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "db0f5153-2ed3-4f2d-943b-47bd7147131a",
+      "title": "Zephoria2K26 Quiz — Vel Tech High Tech Dr. Rangarajan Dr. Sakunthala Engineering College, Chennai",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "2a0f85f2-58f5-4e42-98dc-cf109105989c",
+      "title": "MaggieSpeak Season 7 — XLRI",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "c6f4f929-2def-4560-ab8a-6c1d589bd1b7",
+      "title": "Vibeathon - AI Powered Development — GU Greater Noida",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "21f71c46-48d1-4fa7-86b2-8ad71b8832a2",
+      "title": "RAKSHAM - AI Cybersecurity Hackathon — IIT Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "06ba4a83-b2b1-4012-8935-508e789edc8d",
+      "title": "The Takeover — Shaheed Rajguru College of Applied Sciences for Women, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "2345b8d5-9cae-4b9a-ad97-f3c98b16689b",
+      "title": "Market Riot — Shaheed Rajguru College of Applied Sciences for Women, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "72c0ee8d-fa9a-45c6-a0cd-e104f1c78041",
+      "title": "Vibehack'26 : Build. Break. Laugh. — IIT ISM Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "aa32c89c-39a8-467b-a6dd-e8400918068b",
+      "title": "Computer Vision AI Hackathon — E-Cell, IIT Bombay",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "88e483a9-cc5e-40f1-b830-6c37185ff51d",
+      "title": "Axis HackSprint 2.0 — Axis Institute of Technology & Management",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "550ef42d-b9ba-450a-b127-c002bf531e18",
+      "title": "Arambh'26: Innovate, Pitch & Transform — College of Social Work Nirmala Niketan",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f6eb8516-56ce-43b0-90b7-207bed9e26e1",
+      "title": "The Perfect Candidate — School of Business Management, NMIMS Mumbai",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "7d06f3ed-edca-4514-a17e-2a60c571ed8d",
+      "title": "The Price of Power — Shaheed Rajguru College of Applied Sciences for Women, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "96ce5597-a13f-4979-8212-c4483f2f4711",
+      "title": "Shark Tank Summit — Shaheed Rajguru College of Applied Sciences for Women, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "772dc149-0c2c-4254-b5d9-1d69f256e312",
+      "title": "Tech Utsav 2.0: A National Level Project Expo and Technology Innovation Festival — CMR University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "20a6f1cc-3cda-46c9-a262-8e0be03be3e5",
+      "title": "Consultancy Club: The Perfect Consultant — LM Thapar School of Management",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b88cae3c-8058-4334-b791-0051c127e398",
+      "title": "Public Speaking Club : Debate Competition - Clash of Convictions — LM Thapar School of Management",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a7b6d94b-4bf2-426c-bf4c-e46f991c8ead",
+      "title": "Finance Club: Stake to Success — LM Thapar School of Management",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "41102599-d858-4f9b-a40d-220d3e6a2176",
+      "title": "Operations Club-The Last Heist — LM Thapar School of Management",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "67161dcd-9ab0-478d-b304-707bcdbc1afb",
+      "title": "Sustainability Club: Roll for Sustainable Future — LM Thapar School of Management",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "743d22aa-f8e5-4639-b31f-98a75780e80c",
+      "title": "Robowars 2.0 — MU Jaipur",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "1a0fafe9-4a16-438b-8098-510c151f28f8",
+      "title": "CADathon — NIT Uttarakhand",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e13de628-61cd-4739-914c-cbe50396d1aa",
+      "title": "Auction to Action — BVIMR New Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "84d35a97-b166-44ed-9843-d2a9eb0792ad",
+      "title": "GITAM National AI Challenge 2026 — GITAM UNIVERSITY",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "bcb494fd-c550-4588-870e-855ec85a0bae",
+      "title": "Gyanotsav 6.0 – Budget Battle Royale | Finance — RDIAS Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e6e2ba86-3162-49cd-8feb-0f832b562395",
+      "title": "Pitchverse — Sant Longowal Institute of Engineering and Technology, Longowal",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "2e1d4e07-6139-43fb-bc9f-dd9fb2c135f7",
+      "title": "Business Pitch — Vijaybhoomi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4f785a1b-830a-4693-be87-663a3f906dcf",
+      "title": "Courtroom Drama — Vijaybhoomi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f4835db2-481f-4270-8b2a-45ade5687605",
+      "title": "Legal Shark Tank — Vijaybhoomi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6b5dc719-926e-4ca5-80d7-369263b4a6dd",
+      "title": "UAV Competition — Vijaybhoomi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "accf7b6f-8a07-48d8-9d18-fbdf67230df2",
+      "title": "Line Follower Race (LFR) — Vijaybhoomi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "eacbfd68-6eae-465c-9bc0-3866f3f6dd90",
+      "title": "Robo Race — Vijaybhoomi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b33b1419-c213-47ce-8f5b-a546fc982b71",
+      "title": "Drishti — VIT Mumbai",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f4a633d2-9bf1-49af-9543-36c7f0f5d618",
+      "title": "AppSurd'26: Code.Compile.Chaos — IIT ISM Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "1d0fed51-5c7f-467d-a869-01d8baf0d6a7",
+      "title": "Neeti Tantra 2026 - Powered by Punjab National Bank, Raisina House and Indian Oil — DU New Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a70f5a8e-7597-4812-99e4-30b423643639",
+      "title": "GENESIS - THE HACKATHON — JSPM Rajarshi Shahu College of Engineering, Tathawade",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "368e3366-e165-4345-b297-6de339dc9677",
+      "title": "HackSprint — GTBIT New Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "28431d68-adb3-4260-8b68-8cb81cb13fd5",
+      "title": "Impact Tank — NIT Warangal",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "59b635f5-a764-4772-ae23-1751daf83ebb",
+      "title": "The Best Manager 2026 — SIMS Pune",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "c6d47667-433d-481a-b357-19790d6af641",
+      "title": "AptiQuest | IIT Dhanbad — IIT ISM Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "62deafa1-fbd5-4161-a194-67f9bf522cbd",
+      "title": "SGU_HackX - 1.0 — SDGI Global University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "57cb37c5-46b1-44f6-a1f6-fa253c923467",
+      "title": "INDUX 5.0 - 2026 International 24-Hour AI Hackathon — Vikrant University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "bcd19d18-0819-469f-af06-fb628d513412",
+      "title": "Conv_Cup '26: FIFA of Bots — IIT ISM Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ce325abd-38c3-4ccf-acfa-b8539e63fd2d",
+      "title": "Auction Arena — USME, Delhi Technological University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "1453315a-ffd6-402f-a012-734f279efddb",
+      "title": "Pixel Paranoia - 6 Hours UI/UX Hackathon — DJSCE Mumbai",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "fb4b6cb1-b46e-4d3a-81ad-78895e201511",
+      "title": "AI & DS Club: AI Gladiator's — LM Thapar School of Management",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "88024b11-7f08-4c42-b7d6-ad79b1d78bba",
+      "title": "Venture Club: Business Ideation — LM Thapar School of Management",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "43a9d1c8-f9c3-48e3-9571-b2d88c44e67d",
+      "title": "Marketing Club: MARK-O-MIND — LM Thapar School of Management",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6682d2d8-fcf2-46c9-9ade-86d4366e8c04",
+      "title": "HR Club: Crisis simulation-The HR Escape Room — LM Thapar School of Management",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b65d5273-c213-409a-9d3f-ae461dc43e24",
+      "title": "Spectrona Hackathon 2026 — National Forensic Sciences University, Guwahati",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a19077c0-966e-4182-8ee7-74ec682ce899",
+      "title": "The Verdict 2.0 - A National Case Competition — MNC Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "d7f1a8a1-2b3f-4a5f-80e1-3928f1f4b81f",
+      "title": "Investor's Dilemma '26 - Pune — PW Institute of Innovation",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "1fd02b9e-ca55-4b52-8540-38403480c3ed",
+      "title": "Monopoly Moves — St. Stephen's College, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a2ffdfef-2ee8-4198-8802-091c1a675243",
+      "title": "Biz-Tech Quiz — Motilal Nehru National Institute of Technology",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ac202e27-55e7-4832-9efc-f556e755ba43",
+      "title": "Break The Case '26 — BITS Hyderabad Campus",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "84feb617-cc41-4b11-afb9-bf7c43fe21d4",
+      "title": "Genie X Hub represents Project : Eclipse Hackathon — ACT Chennai",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "0d685c45-fdb5-4c87-a452-28faafca48f5",
+      "title": "NASA Space Apps Challenge 2026 — Chandigarh University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "c9259968-b41e-4e42-a51c-e6b5c29b5f3c",
+      "title": "Nakshatra - The Aerospace Hackathon 2026 — MITS Gwalior",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "79dd8905-fb41-426d-9001-ba29b231e429",
+      "title": "Code Clash 2.0 — DCRUST Haryana",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4af84f15-d8e4-49eb-8ca0-e9e19947ad93",
+      "title": "GenZpreneur — International School of Business and Media",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "8dd6c5ff-0410-469e-a25e-c9b3285860aa",
+      "title": "IBM Qiskit Fall Fest 2026 | Symbiosis Quantum Club — SIT Pune",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6f5a21f2-60b9-426d-bea8-edfd2400ef6c",
+      "title": "Wizarding Minds — Think Beyond the Ordinary — JIIT Noida",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "3c85f515-2a64-4e02-b228-0e10060b8ec9",
+      "title": "Product Verse — MANIT Bhopal",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "bdc39eef-8f7d-4f8e-9ef1-c7407d30c602",
+      "title": "Crack-The-Case — MANIT Bhopal",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "8e165cb1-3da3-42e5-9810-0ecf082e7a2c",
+      "title": "Bharat Boardroom — LSR",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "55fdf2b1-046c-4875-b036-a630cd871f9c",
+      "title": "The Corporate Heist 1.0 | The Forensic Investigation Case Competition — Bharati College, University of Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "7fd5dcde-178b-4273-93e4-e58f6449ad46",
+      "title": "Dr Saroj Gupta Paper Presentation Competition — LSR",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "91c2c3b9-ebef-4e05-968e-858bb08c38c5",
+      "title": "Encide Vibethon 2.0 — MACE Kerala",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4951dc16-3900-4aa5-84c7-716376e4068f",
+      "title": "Smart Tank 5.0 | National Case Competition — FLAME University, Pune",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ad4d4328-b206-4532-b5ce-0cf878cb6c29",
+      "title": "UAV-X: Resilient BVLOS Swarm Challenge — IIT Bombay",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "572d86e8-89b3-43f1-a404-6b9320d00cc7",
+      "title": "Startup Competition 2026 - 27 | Global Entrepreneurship Summit — Jai Hind College, Mumbai",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e109d28f-afac-4450-bb27-75bcbc96f79e",
+      "title": "Boeing Aeromodelling Competition — IIT Gandhinagar",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a15f2e13-4e5e-428f-9c54-43b22dccdf76",
+      "title": "HAQATHON 2.0 – Hack the Next Quantum Decade — RGUKT",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "fb0cf771-8a17-4f2b-beea-b6cb40f33993",
+      "title": "ORBION: 8-Hour Hackathon — Institute of Engineering and Management",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "023e5742-5675-4bb0-8038-b3fd68c9b942",
+      "title": "Hack N Build — SRM University, Modinagar",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "88487c15-7cc3-4a03-aad9-9e37770ec27f",
+      "title": "Hackdays 2.0 — GCET Greater Noida",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "71b99867-9518-42ed-a371-48537dfc3e23",
+      "title": "EquiNova 2.0 — LSR",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "8bed4c71-10ba-4956-9ed4-0f910af984c4",
+      "title": "BioBridge – Bio Innovation Hackathon 2026 — KSRCT Namakkal",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "58d83dd1-3858-4fac-bcd0-61f24fa625c6",
+      "title": "Ride Hack-26 — JIIT Noida",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "d9d8eab0-968b-4c6e-bb2c-107956c64d9e",
+      "title": "Pirates of the Portfolio: A Finance & Investment Competition — LSR",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a7e35f86-d72b-4e64-b699-983ac24958b0",
+      "title": "Singularity 2.0 — KC College of Engineering and Management Studies and Research",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "dc872173-64ea-47ba-9453-5adeb6e38196",
+      "title": "12 Gavels: A Battle of Ideas — LSR",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "0c7caab7-67d7-48cb-8ac8-b5b147ab7429",
+      "title": "Sawaal Jawaab 5.0 — LSR",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "2019d9dc-8020-425c-9e78-bffaa55a3720",
+      "title": "Policy Dilemma — LSR",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "8eab3516-2aa7-411a-99b4-80b15cb63116",
+      "title": "Green Gambit - 2026 — LSR",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "943de59c-a980-45fe-b398-ea3928075822",
+      "title": "Case for Change: A Business Crisis Case Competition — LSR",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b8d9b1ba-8f01-4ae7-aa69-a5f11e42c4ad",
+      "title": "DataHeist — DTU New Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "fc830308-042b-4d40-8b1d-d9a2ee0410ad",
+      "title": "Competitive Programming Hackathon — GL Bajaj Institute of Technology and Management, Delhi NCR",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "40d5de58-ed25-4896-95bd-6354642f9ab0",
+      "title": "Startupathon — GL Bajaj Institute of Technology and Management, Delhi NCR",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "32bea05e-e683-483a-b919-c786ef4c63a4",
+      "title": "Eco Prayog - 2026 — LSR",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "3b131777-327f-417c-b516-090f357f8109",
+      "title": "BIO-ECONOMY HACKATHON 2026 — Indian Institute of Forest Management",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "8ae5009d-b551-4f5b-af08-470fc38e38c4",
+      "title": "Ecquizzite 2026 — St. Stephen's College, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "2ae46c5b-0f49-4c38-9325-78c779a83ab9",
+      "title": "Gyanotsav 6.0 – The Ad Showdown | Marketing — RDIAS Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f2ce5437-be3e-4d7d-b2e0-7d8918bff8b7",
+      "title": "Mesa Venture League 2027 | National Inter-College Venture Competition — Mesa School of Business, Bangalore",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "737a3165-661e-4d26-933f-0791c5b2ad3a",
+      "title": "Lift Off — IIT Kharagpur",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "72a25bad-ed23-4834-9176-7d7f471e0598",
+      "title": "Eggstravaganza — IIT Kharagpur",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "64d682bf-4f56-47d2-beb4-b9fd9296fa31",
+      "title": "Terra Drive — IIT Kharagpur",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "18b9043e-94a5-4ac6-988f-e1874700a513",
+      "title": "Maze Runner — IIT Kharagpur",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "c0ea0682-29bb-4b72-a01b-219f61f1ee8c",
+      "title": "HackNext'26 Series 2.0 — SNSCT Tamil Nadu",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "fa5155ba-39c1-4a67-a486-f5062217ebae",
+      "title": "AVISHKAAR Season 4 Hackathon: A National-Level Innovation Challenge — AITAM Andhra Pradesh",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "36ddf913-37a7-425c-ba52-cc264314470c",
+      "title": "Zinnovatio 4.0 — CU Punjab",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "14e58d7e-ef27-49ab-b5ca-d8d223018d31",
+      "title": "Mind The Product 2026: Test 5 — IIT Guwahati",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9d35243e-33bd-4d87-b6b4-c18df5335749",
+      "title": "Eco Circuit — IIT Bombay",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ca30b47b-2d99-488e-afda-f7086b68c54d",
+      "title": "Ethical Crosstalk — Sant Longowal Institute of Engineering and Technology, Longowal",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "59add53a-efaa-4b46-8955-fb7484644b26",
+      "title": "National Probability Challenge | Techfest 2026-27 — IIT Bombay",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "7614797e-af36-4a79-aab7-8706a60851b7",
+      "title": "Technical Quiz Competition — Sant Longowal Institute of Engineering and Technology, Longowal",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f884a811-54e7-42e0-b1b6-6d3b993ce690",
+      "title": "ThetaShift: Spherical Bot Making Competition | Techfest, IIT Bombay 2026-27 — IIT Bombay",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "62fd111e-6c69-49dc-bcc5-3d3ebf5f023e",
+      "title": "CodeRumble 4.0 — IIITDM Jabalpur",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a285f672-7f62-43d3-9ef7-5beabb07fe89",
+      "title": "Turncoat Debate — Vijaybhoomi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9fa88d5e-6dc8-4490-9d42-b6ee07dc26c4",
+      "title": "Ideathon — Vijaybhoomi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "c9559602-7db5-4162-8e07-44d9af034e94",
+      "title": "Hackathon — Vijaybhoomi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "0edba091-4730-47d1-ac7d-f14138e8da08",
+      "title": "Reforged '26 — BPIT Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "7b33aa65-bc22-4b92-abe4-63ba32432b57",
+      "title": "Graviton — ISTE CGC UNIVERSITY",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "cfcbdeb8-217a-42a3-b7cd-c54a930dc190",
+      "title": "NexHack 2.0 — Geeta University, Naultha",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a504a5e2-ae99-4012-a699-793faa938965",
+      "title": "Pragnya - The Business Quiz Competition — IIM Indore",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "0f409ef2-e331-46e4-b0f6-81229cda866b",
+      "title": "Game of Shadows: The Game Theory Competition — IIM Indore",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6eace0a0-c681-45cc-bf76-ae9435cfc470",
+      "title": "The IPL Auction — IIM Indore",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4919502d-8499-41b9-98bd-cdb3eca06d40",
+      "title": "VJ Hackathon 2026 — Vallurupalli Nageswara Rao Vignana Jyothi Institute of Engineering & Technology, Telangana",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9ca2cc9e-f6b7-4f3b-a2b5-f3402ed85aa1",
+      "title": "Hack in Hills ’26 — GU Greater Noida",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "225ed2fc-5e29-4dfa-88c9-e5a0684346a7",
+      "title": "Web Spark 2026 — Malla Reddy Engineering College for Women",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6bbb4f68-9ff0-470d-afaf-8232ed537bde",
+      "title": "Git Beyond the Basics | Branches, Merge, Rebase & Collaboration — CipherSchools",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ca64611b-e836-40fd-9c91-5ba30f7e2827",
+      "title": "Fest Stall Challenge Night: Brand It. Pitch It. Launch It. — IIT Patna",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "41e88d5a-935c-4706-a396-60ae28be6e78",
+      "title": "Fest Stall Challenge Night | Build, Brand & Pitch Your College Fest Stall — IIT Patna",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "7451b8c8-a01d-44a9-932c-81930ad30830",
+      "title": "Founders Playbook Webinar Series - 12 — IIT Madras",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ad7acf59-efd2-4e76-b4a6-07dead2e013d",
+      "title": "Data Science Workshop — IIT Bombay",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "2e882b41-62f1-477f-a306-94220a74509c",
+      "title": "Algorithmic Trading Workshop — IIT Bombay",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4e77832b-d6cc-44f4-92a5-5b16ddadc346",
+      "title": "AWS Student Builder Event – Unlock Your AWS Certification Journey — IES University, Bhopal",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f9974662-c8cf-4cc2-98c1-c2bce851a04f",
+      "title": "MECTROZ-26 Technical Paper Presentation on Engineering the Future: Emerging Technologies, Sustainable Innovation & Intelligent Mechanical Systems — EGS Pillay Engineering College",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e45cb2a3-4270-4807-a6c8-46fac328c448",
+      "title": "Syntronix'26 (International Student Symposium On Humanizing Technology - 2026) — EGS Pillay Engineering College",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a9c825e8-d9f6-4a3a-85b3-e6e462e53853",
+      "title": "Atmanirbhar Urja: Forging India's Sovereign Energy Future- National Techno-Managerial Ideathon & Leadership Conference 2026–27 (IIM Visakhapatnam) — Indian Institute Of Management, Vishakapatnam",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "5e06787b-cd61-4d78-be33-1502590d17ab",
+      "title": "Engineers' Ring of Honour 2026 — IES University, Bhopal",
+      "labels": [
+        "Open now"
+      ]
+    }
+  ],
+  "merged": []
+}
