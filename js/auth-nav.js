@@ -8,7 +8,7 @@
   const assetHref = (asset) => (inPagesFolder ? `../${asset}` : asset);
   const isCurrent = (...pages) => pages.includes(currentPage);
   const storedToken = localStorage.getItem("teenlaunch_token");
-  const publicPages = new Set(["index.html", "auth.html", "public-portfolio.html", "recommended-opportunities.html", "opportunities.html", "opportunity-details.html", "apply.html"]);
+  const publicPages = new Set(["index.html", "auth.html", "public-portfolio.html", "recommended-opportunities.html", "opportunities.html", "opportunity-details.html", "apply.html", "about.html", "founder-keren.html", "founder-ziying.html", "founder-vivienne.html"]);
 
   // Keep the language control available even if a page forgets to include the
   // shared translation script explicitly.
@@ -82,7 +82,7 @@
       <a class="${isCurrent("opportunities.html") ? "active" : ""}" href="${pageHref("opportunities.html")}" data-i18n="Explore">Explore</a>
       <a class="${isCurrent("my-journey.html", "career_dna_test.html", "career_dna_result.html", "recommended-opportunities.html", "life-planner.html") ? "active" : ""}" href="${pageHref("my-journey.html")}" data-i18n="My Journey">My Journey</a>
       <a class="${isCurrent("profile.html", "portfolio-builder.html", "my-portfolio.html", "public-portfolio.html") ? "active" : ""}" href="${pageHref("profile.html?tab=applied")}" data-i18n="Profile">Profile</a>
-      <a class="${isCurrent("about.html", "help.html", "partner-submission.html") ? "active" : ""}" href="${pageHref("about.html")}" data-i18n="About">About</a>
+      <a class="${isCurrent("about.html", "help.html", "partner-submission.html", "founder-keren.html", "founder-ziying.html", "founder-vivienne.html") ? "active" : ""}" href="${pageHref("about.html")}" data-i18n="About">About</a>
       <a class="${isCurrent("settings.html", "display-settings.html") ? "active" : ""}" href="${pageHref("settings.html")}" data-i18n="Settings">Settings</a>
       <a class="auth-link" href="${pageHref("auth.html")}" data-i18n="Login">Login</a>`;
 
