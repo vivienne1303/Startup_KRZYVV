@@ -1,0 +1,125 @@
+<!doctype html><html lang="en"><head><title>MyCareersFuture Singapore</title><meta charset="utf-8"/><meta property="og:title" content="MyCareersFuture Singapore"/><meta name="description" property="og:description" content="The smarter way for Singaporeans to find jobs. Match jobs to your skills, explore new careers, and access job opportunities with government support."/><meta name="og:author" content="Skills and Workforce Development Agency + GovTech"/><meta property="og:url" content="https://www.mycareersfuture.gov.sg"/><meta property="og:image" content="https://www.mycareersfuture.gov.sg/images/og-mcf-logo.png"/><meta property="og:site_name" content="MyCareersFuture Singapore"/><meta property="og:type" content="website"/><meta name="gtmCode" content="5XZQNCL"/><meta name="wogaaUrl" content="https://assets.wogaa.sg/scripts/wogaa.js"/><meta name="google-site-verification" content="cNK77SoJSM_t-TivaafxeOjn7sqTJDdi7TVwyMDLtLA"/><meta name="keywords" content="job listings,search jobs,career,mycareersfuture,my careersfuture,careersfuture,jobs,skills match,match jobs from skills,government support,job portal,government,PMET,schemes,job search engine,employment,work,find jobs,Singapore,Skills and Workforce Development Agency,SWDA,career planning,career plan,career health,GRaduate Industry Traineeships,Mid-Career Pathways Programme,Career Conversion Programme,CCP,flexible work arrangements,personalised recommendations"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#5E2CA5"/><link rel="shortcut icon" href="/images/android-chrome-256x256.png"/><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"/><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"/><style>html,
+      body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+      }
+
+      @keyframes loader {
+        0% {
+          width: 0;
+          margin-left: 0;
+        }
+
+        50% {
+          width: 30%;
+          margin-left: 50%;
+        }
+
+        100% {
+          width: 40%;
+          margin-left: 100%;
+        }
+      }
+
+      @-webkit-keyframes loader {
+        0% {
+          width: 0;
+          margin-left: 0;
+        }
+
+        50% {
+          width: 30%;
+          margin-left: 50%;
+        }
+
+        100% {
+          width: 40%;
+          margin-left: 100%;
+        }
+      }
+
+      .progress-bar {
+        overflow: hidden;
+        width: 100%;
+        max-width: 250px;
+        padding-top: 2rem;
+      }
+
+      .progress-bar span {
+        display: block;
+      }
+
+      .bar {
+        background: rgba(255, 255, 255, 0.3);
+        width: 100%;
+      }
+
+      .progress {
+        animation: loader 1s ease infinite;
+        -webkit-animation: loader 1s ease infinite;
+        height: 2px;
+        background: #d5008f;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .logotype {
+        font-family: 'Open Sans', 'Mada', 'Ubuntu', Helvetica, Arial, sans-serif;
+        color: #5e2ca5;
+        font-weight: 600;
+        font-size: 1.25rem;
+      }
+
+      div#react-root-unloaded {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.1);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        font-weight: 300;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        height: 100%;
+        opacity: 1;
+        position: absolute;
+        text-align: center;
+        transition: 0.3s ease all;
+        -webkit-transition: 0.3s ease all;
+        -moz-transition: 0.3s ease all;
+        -o-transition: 0.3s ease all;
+        width: 100%;
+        z-index: 1;
+      }
+
+      div.removing#react-root-unloaded {
+        background-color: rgba(255, 255, 255, 0.1);
+        opacity: 0;
+        position: fixed;
+        transform: scale(3);
+        -webkit-transform: scale(3);
+        -moz-transform: scale(3);
+        -o-transform: scale(3);
+        transition: 0.3s ease all;
+        -webkit-transition: 0.3s ease all;
+        -moz-transition: 0.3s ease all;
+        -o-transition: 0.3s ease all;
+      }
+
+      div.removed#react-root-unloaded {
+        display: none;
+      }
+
+      div#react-root {
+        height: 100%;
+        min-height: 100%;
+        width: 100%;
+        opacity: 1;
+      }</style><link href="/styles.13e066d82a2750cef5bc.css" rel="stylesheet"></head><body class="overflow-x-hidden"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XZQNCL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="react-root-unloaded" role="progressbar" aria-label="mcf-loading-icon"><img src="/images/MCF-logo.svg" alt="MyCareersFuture's logo" title="MyCareersFuture" width="240"/><div class="progress-bar pt4"><span class="bar"><span class="progress"></span></span></div></div><div id="react-root"></div><div id="lib-ui-modal-root"></div><div id="growl-root" role="alert"></div><script src="/analyticsScript.a5ff3ce47e6d17cada1f.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/npm.apollo.30d6e94214cc538ccae3.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/npm.lodash-767bc705.b71a27f3e988c8ea6d3c.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/npm.lodash-1cdde194.2218b41964bc76b49a11.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/npm.mcf-8104721c.7fba23938e5399805e0a.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/npm.mcf-169ea552.cf7676b6b2d8dac6d8a7.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/npm.date-fns.01530c3f15119f9a1a34.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/npm.moment.df1d3dd1772273a0f6d4.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/npm.react-dom.a42141f7dd2a1d6bcdec.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/npm.superagent.4a84903f477cc1881d30.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/npm.react-select.9f84765fdaf44c67c254.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/npm.react-router-ce2680e3.d5df46a457bd2d08408c.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/npm.react-router-fcab6d25.c415824d615e3834fe4e.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/app-cfcd9465.9640e4542943c4ad898c.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/app-8f6cd0a0.00fd4523bda11dd23da2.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/app-835983f3.c0806614abf908630bca.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/app-36a762c8.d94b25cf1056534267b3.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/app-45ae2c02.02b5f6ac65e126f55d30.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/app-8a38c27e.01dd5b59e67eb079aa63.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/app-1b08af27.349ab7f88bab969437c7.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/app-43dd7041.14debaccd782d37026ad.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/app-2b4841d6.a188d9ba625d46e9a8e9.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/app-0bc0478e.42b044dc523c3c717e16.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/app-e5bca7e4.d1e7303ebc38ab5fa507.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/app-49ceb22a.ff4faf9813d4be02ec8e.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/app-27545368.67abcb1c2aa1d27c4cb9.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script><script src="/app-e96e9bea.906e863175b01dedcdfa.js" nonce="NNsOKOg+YheOFaEYTqR/WA=="></script></body></html>

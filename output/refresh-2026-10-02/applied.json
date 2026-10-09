@@ -1,0 +1,46 @@
+{
+  "applied": true,
+  "as_of": "2026-10-02",
+  "duplicate_check": "Live database",
+  "added": [
+    {
+      "id": "97dff04e-8b33-4af3-b8ee-0dd560359da9",
+      "title": "Willing Hearts - Kitchen Volunteering",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "fea3c5b3-c7cf-4923-b021-4e2217545fa3",
+      "title": "ACRES - Animal Care Volunteer",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b212cccf-09d5-4736-8279-da38b08a2b5b",
+      "title": "ReadAble / CountAble - Teaching and Learning Volunteers",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "3744aaec-1d8a-498d-8a38-9803008cdf19",
+      "title": "Engineering Good - Makers and Laptop Maintenance Volunteers",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "0ad5d703-7bc8-4102-857b-a3bb19b64d2d",
+      "title": "Food from the Heart - Food Packing and Distribution Volunteering",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    }
+  ],
+  "merged": []
+}

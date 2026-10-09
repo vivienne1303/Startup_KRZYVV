@@ -1,0 +1,82 @@
+{
+  "applied": true,
+  "as_of": "2026-09-30",
+  "duplicate_check": "Live database",
+  "added": [
+    {
+      "id": "68e5c879-91d5-4d4c-b963-2e576d7aab5b",
+      "title": "OBS Instructor Job Taster — Run 2",
+      "labels": [
+        "Open now",
+        "Check eligibility",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "7f12add7-e17b-41ff-a1f6-e34918f93f93",
+      "title": "iASPIRE — From Campus Crunch to Corporate Clocks",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "437e05dd-6e6e-4e18-a133-daeac59e0df7",
+      "title": "POV: You’re an NYC Officer — Run 2",
+      "labels": [
+        "Upcoming",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "dbf17f0b-b9aa-4a03-87ec-d3a9c35cdd3d",
+      "title": "KPMG Flash Mentoring — Session 9",
+      "labels": [
+        "Check deadline",
+        "Check eligibility",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "42032203-2314-4431-9c54-ce465ef5ee46",
+      "title": "Red Cross Youth — Youth @ Community",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "6e6c2d14-dfea-4b24-9b7d-1e7e7cf98401",
+      "title": "Food Bank Singapore — Individual Volunteering",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "f02d506b-29eb-4e38-ad5f-6029534e65b0",
+      "title": "Habitat Campus Chapters & Youth Volunteer Leaders",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "2c50e9ee-8cf8-4d74-971a-3322202ac39f",
+      "title": "Project HomeWorks — Individual Volunteers",
+      "labels": [
+        "Check deadline",
+        "Application link unavailable"
+      ]
+    },
+    {
+      "id": "f934a391-9442-49e7-b17d-e00fe9b9466f",
+      "title": "Girl Up Global Leadership Summit 2026 — Rise to Lead",
+      "labels": [
+        "Check deadline",
+        "Check eligibility",
+        "Application link unavailable"
+      ]
+    }
+  ],
+  "merged": []
+}

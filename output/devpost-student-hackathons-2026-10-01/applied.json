@@ -1,0 +1,647 @@
+{
+  "applied": true,
+  "as_of": "2026-10-01",
+  "duplicate_check": "Live database",
+  "added": [
+    {
+      "id": "7de6d070-aef2-49e5-b1ef-cde11afd0b2d",
+      "title": "OneAquaHealth IEEE Global Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e5e7c2db-d7b4-401c-a384-2f43f88edfad",
+      "title": "Multimodal AI Hackathon 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "2d82b58f-5fdb-4120-9463-94db691619b3",
+      "title": "WarriorHacks 2.0",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9a93ce3c-2d7b-481f-b875-5cfbd126b0da",
+      "title": "Beginner's Paradise - FirstCommit",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9fa3c920-32a2-4e28-a455-27a1c3d083e5",
+      "title": "Global Innovation Build Challenge V2",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a43294cc-2dc0-4518-af0e-bae48b9eaa61",
+      "title": "MLAI Hackathon 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f4e4a7c8-bd31-414f-9887-ea56aa8ceb96",
+      "title": "Databricks AI Social Impact (DAISI) Challenge - Singapore",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "239af516-12df-49c8-a2fd-ec98c3ca809d",
+      "title": "Galuxium Nexus V2",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "44e7a810-7a17-4199-b1da-9c4e3fb53308",
+      "title": "UnivaBio ($40,000 in prizes)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "7b4aa7d3-5401-45da-8200-b675cf189e18",
+      "title": "Next Founders Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "fd89fc38-fccc-4339-95fe-5aa28eb0b023",
+      "title": "Syntax Summit",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "919ef39c-f479-42f2-aff2-8a81ab6ad18c",
+      "title": "DSH Hacks V2 ($100k+ in prizes!)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "687fea2a-0aa8-4b0e-82c6-88c5172672d9",
+      "title": "ML Empowerment Build Challenge 3.0 - ($96,000 in prizes!)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "fb1f6d81-bb90-4a82-aa43-6e7d5797bbc4",
+      "title": "Code for Humanity",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "27c5f0d2-c35d-496f-82b9-48dc041d7613",
+      "title": "CSC Back-to-School Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "3dc9f6ec-ca77-4785-87de-6d1ef125f93a",
+      "title": "InnovArt 2027: Art and Technology Hack Day",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "679857b3-28ee-4308-87b8-0ec7a4f94db4",
+      "title": "HACK47: OFFGRID",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "08229ee5-fead-4fab-bb68-493ee2c903b7",
+      "title": "LovHack Season 3",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "d0fdcbda-1be0-4fe6-b67c-55aef3e3f291",
+      "title": "EurekaDev 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a9f22b9d-f769-46c6-a157-66ab9ba1718f",
+      "title": "2026-2027 Fall ESE Senior Design",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "1d5cece7-8820-4004-8450-ac86a4495b5a",
+      "title": "INDUX 5.0-2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "d9d45399-740c-457c-982f-1b9a503f150d",
+      "title": "Hack Away Hunger: Food Insecurity Challenge",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "35907c1e-836a-434f-b27a-dd813d73e390",
+      "title": "Bharat Innovation Challenge 2.0",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e264c638-6d03-44fd-a13b-fb0941d0aed7",
+      "title": "SVYCA Youth for Earth (Y4E) Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "bb7da696-6e29-4d08-a64c-d05a6a10e2a6",
+      "title": "Hackyard Build 2026 | 24-Hour Hackathon at IIT Guwahati",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "39bed205-ba81-42a2-a47a-90f1db4b1b0e",
+      "title": "FIK FAIR 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "dcdab00b-32a8-42f2-9f80-96df884c4cc0",
+      "title": "AIC Internal Competition -2026 (Agentic AI)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "149751e5-24fa-4d8f-81b8-48646f38d08f",
+      "title": "ForgeHacks Online 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "5fcc8759-5e4f-4ff9-a532-65b0039b3514",
+      "title": "IEEE ClimateChain Global Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "fa3a8e36-afab-4eb2-938c-6e9f0b3b1aef",
+      "title": "StormHacks 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a4c48611-a058-4c4f-9ec7-26e694284700",
+      "title": "ImpactHack 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "1049c805-2623-4bfd-861d-27cacb061c12",
+      "title": "United Hacks V8",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "c91c61c2-3031-4339-bdc3-13c523e760fa",
+      "title": "Arbiter Hacks V1",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "21d29fcb-aee1-48c7-9336-a823acb913c5",
+      "title": "Banana Hacks",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "049a0253-2e66-43da-b8ce-e3a22a9d2851",
+      "title": "HackTitan",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4591a145-fe98-4f53-9b7a-c33b1bbb3905",
+      "title": "United Hackathons V1",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "7a5c00ea-9179-429b-9017-60939c511445",
+      "title": "Cosmo Hacks",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9c79f56d-8881-4927-9f41-1d78fb14e69c",
+      "title": "Neighborhood Hacks",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "06f75d81-b9f8-471e-80cc-cb21bcd47db3",
+      "title": "Brewing Codes 4.0",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "34348884-4bae-4d64-891c-7bd4991e7397",
+      "title": "Tech to Treasure Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "7e51b3bb-41f7-4976-b5dc-1834cb2b69b9",
+      "title": "HuskyHack 2026:Phase 1",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e43d9ee4-835f-4168-96fb-1a99b334a768",
+      "title": "STEMergent Hacks 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "43d2def0-25b9-4b20-9f4f-2d32235e3ebc",
+      "title": "Gator Hack V - AI Days 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "3ba7342a-455d-49c6-8b3b-7f7e2b937915",
+      "title": "Kurukshetra CTF",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "7476cf7b-ec3f-447d-97cd-6945836b8290",
+      "title": "Hyperbloom October- UI/UX and Web Design",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6516e860-853d-4dfd-9f81-195af57cab14",
+      "title": "BioHacks",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "aea5a5b4-2339-471a-817b-baeae87f11c9",
+      "title": "MLH Hacktoberfest Hack Day Teens Delhi X ElevenLabs",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "800a1355-8c84-4e7e-b6cc-83b330373352",
+      "title": "Case Closed",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "3b32ba1c-b28f-45ce-9637-973f09135fa9",
+      "title": "Dublin Hacx",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "abd36fc0-1176-4f87-ac6a-05c8fc89e941",
+      "title": "Girls Hoo Hack 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "280d0bf2-ec8a-40a9-885c-f9d982a329cf",
+      "title": "2026 AI for Good Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "05f94aa7-b3ca-4115-9fca-29177982eec8",
+      "title": "AI Agents for Founders Challenge — HETIC 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "2463e377-6909-4d5b-b9ac-3c35881127b2",
+      "title": "Bridge The Gap Hacks",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "2b888b7e-4232-4206-8bb3-31a33ad4243f",
+      "title": "BearHacks 2027",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "8387a86a-bd61-4ac8-beb1-483f9154f672",
+      "title": "Prompt2Product: MLH Hack Day @ AITR",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "39d4feae-6d62-40d1-8e56-4d6a8efa5798",
+      "title": "Hack the Change 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "cb254ce7-1408-44ac-8152-3ca82e932bd8",
+      "title": "GoatHacks 2027",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f626cfd0-72b7-4ba7-9223-e3586533ec27",
+      "title": "H.A.R.D. Hack 2027",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6d8db31f-5b07-4d96-bd0e-7f4bbfbcd5f5",
+      "title": "Financial Cybersecurity Challenge 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "7795ccdb-e11c-4747-869d-072f8d5317ce",
+      "title": "EthnoHACK",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4be9e8dc-a6a0-4613-a0b5-fa9c0de174b1",
+      "title": "804 Hacks",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9bbd261b-486f-4f71-ab76-bc012d19ec12",
+      "title": "Hyphen-Hacks",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4d8245ef-1124-40a4-ad64-0c73fd777b05",
+      "title": "checkpoint 1 — games for good",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4ca96dfc-d1e1-4cf1-8c25-5180db27da87",
+      "title": "OCCHacks",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f20960d8-7493-49cc-949f-1edac60d96da",
+      "title": "Cutie Hack 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ad9e3822-555a-42a9-b152-1e14687d1934",
+      "title": "Future innovators hackothon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "862f7469-2c08-466d-a93e-8fb63bde6116",
+      "title": "hack::peel 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "1e110941-4de9-49b5-b153-d523d5e51ef1",
+      "title": "Teens Hack Houston Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "2a504a48-84b8-4d84-b762-14929dbe7050",
+      "title": "GeauxHack 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f6317f88-6bfa-47b7-aafb-7b803a11a3a3",
+      "title": "Sierra Hacks 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a46a7e5c-465a-4e54-b4a1-2d0f584980f5",
+      "title": "SUSTAIN-A-THON 2.0",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "296b00ac-f540-40ed-b2c2-3efd10d38d2b",
+      "title": "EvoHacks2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "2d7a47d9-8343-482a-bcf0-c38313867f42",
+      "title": "FutureForge Hacks",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "c06f4386-4d68-4776-a50a-0efcbb01eb2e",
+      "title": "CrownHacks",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "98b14754-b21b-48f3-9a7c-01c465249ce6",
+      "title": "RESPAWN",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "70f508ed-a0b0-420d-857e-ac3531e2fdd0",
+      "title": "Hack Western 13",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "3bb1067c-3a01-41b4-8e8d-c236de8348e0",
+      "title": ".devHacks 2027",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "91f8a3e1-faaf-40f4-a111-482f95df3d61",
+      "title": "CCT IT CLUB X INOVEXHQ HACK DAYS",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "dffba5ae-5b17-4381-8343-91d1c5320df6",
+      "title": "BigRed//Hacks 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "8001784a-0409-4799-b6f9-5981922ac35b",
+      "title": "NSH @RPI 2027",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b899220d-6e03-4c58-9c66-95f8553e2a66",
+      "title": "WiCS Hackathon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "39804d7f-43e1-45b8-93d0-b083aa19e6ab",
+      "title": "Code For DFW",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "594094f5-c236-47d3-afba-f5752b7fbf2c",
+      "title": "Hacktoberfest Hack Day Dinajpur",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "d6d66a03-9684-4145-bebf-d8a282354d4f",
+      "title": "Blank Page",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f8a3cd42-8189-4446-9c1e-d715fa546898",
+      "title": "Ensign Build",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "bd47fcdc-a776-4a2b-9255-6d46ce5fa36e",
+      "title": "Gear Up Hacks 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "135f0cb8-7d0d-44ed-bcb7-d0d9df3de80d",
+      "title": "Revolution",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "bb912faf-525c-4b17-85d9-3b36c72429ee",
+      "title": "KUK VIRTUAL HACKATHON",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "208e40c5-f96c-4728-8657-dc3331722a91",
+      "title": "SDC Hackathon 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "d5a7757f-967d-497f-9b42-c0825881c196",
+      "title": "Redhawk Builds 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "96fcafc3-d0b4-43bc-98d4-ad83212bc1dd",
+      "title": "Haven Asbury Park Game Jam - High School",
+      "labels": [
+        "Open now"
+      ]
+    }
+  ],
+  "merged": []
+}
