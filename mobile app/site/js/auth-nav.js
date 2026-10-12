@@ -171,7 +171,7 @@
   const navLinks = authLink.closest(".nav-links");
 
   const clearSession = () => {
-    localStorage.removeItem("teenlaunch_token");
+    window.TeenLaunchSession?.clearSession(); localStorage.removeItem("teenlaunch_token"); localStorage.removeItem("teenlaunch_refresh_token");
     localStorage.removeItem("teenlaunch_user");
     localStorage.removeItem("teenlaunch_profile");
   };

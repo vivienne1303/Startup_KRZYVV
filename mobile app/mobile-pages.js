@@ -1,4 +1,4 @@
-﻿(()=>{
+(()=>{
 const script=document.currentScript;
 const root=new URL('./',script.src);
 const links=[['⌂','Home','index.html'],['⌕','Explore','site/pages/opportunities.html'],['▤','Learn','site/pages/resources.html'],['✧','Copilot','site/pages/career-copilot.html'],['⚑','Journey','site/pages/my-journey.html']];
@@ -7,5 +7,5 @@ links.forEach(([icon,label,path])=>{const a=document.createElement('a');a.href=n
 document.body.append(nav);
 const setHome=()=>document.querySelectorAll('.brand').forEach(a=>a.href=new URL('index.html',root).href);
 setHome();new MutationObserver(setHome).observe(document.body,{childList:true,subtree:true});
-if('serviceWorker' in navigator&&location.protocol!=='file:')navigator.serviceWorker.register(new URL('sw.js',root)).catch(()=>{});
+if(!window.Capacitor?.isNativePlatform()&&'serviceWorker' in navigator&&location.protocol!=='file:')navigator.serviceWorker.register(new URL('sw.js',root)).catch(()=>{});
 })();

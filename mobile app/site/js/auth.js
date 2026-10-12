@@ -7,7 +7,7 @@
 
   const params = new URLSearchParams(window.location.search);
   if (params.get("logout") === "1") {
-    localStorage.removeItem(tokenKey);
+    window.TeenLaunchSession?.clearSession(); localStorage.removeItem(tokenKey); localStorage.removeItem("teenlaunch_refresh_token");
     localStorage.removeItem(userKey);
     localStorage.removeItem(profileKey);
     window.history.replaceState({}, "", window.location.pathname);
@@ -57,12 +57,12 @@
   };
 
   const saveSession = (data) => {
+    if (window.TeenLaunchSession) return window.TeenLaunchSession.saveSession(data);
     const token = data.token || data.access_token || data.session?.access_token;
-    if (!token) {
-      throw new Error("Login succeeded, but no token was returned.");
-    }
-
+    if (!token) throw new Error("Login succeeded, but no token was returned.");
     localStorage.setItem(tokenKey, token);
+    if (data.refreshToken) localStorage.setItem("teenlaunch_refresh_token", data.refreshToken);
+    else localStorage.removeItem("teenlaunch_refresh_token");
     localStorage.setItem(userKey, JSON.stringify(data.user || {}));
     localStorage.setItem(profileKey, JSON.stringify(data.profile || {}));
   };
@@ -110,7 +110,7 @@
   const safeReturnTo = () => {
     const isCareerTest = /career_dna_test\.html/i.test(returnTo);
     const isExplicitRetake = /career_dna_test\.html\?[^#]*\bretake=true\b/i.test(returnTo);
-    if (!returnTo || /(?:^|\/)auth\.html(?:[?#]|$)/i.test(returnTo) || (isCareerTest && !isExplicitRetake)) {
+    if (new URL(returnTo, location.href).origin !== location.origin || !returnTo || /(?:^|\/)auth\.html(?:[?#]|$)/i.test(returnTo) || (isCareerTest && !isExplicitRetake)) {
       return "../index.html";
     }
     return returnTo;
@@ -130,7 +130,7 @@
       });
 
       if (response.status === 401 || response.status === 403) {
-        localStorage.removeItem(tokenKey);
+        window.TeenLaunchSession?.clearSession(); localStorage.removeItem(tokenKey); localStorage.removeItem("teenlaunch_refresh_token");
         localStorage.removeItem(userKey);
         localStorage.removeItem(profileKey);
         document.querySelectorAll("[data-auth-form] input, [data-auth-form] select, [data-auth-form] button")
