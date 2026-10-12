@@ -3,7 +3,7 @@ name: Daily opportunity refresh
 on:
   schedule:
     # 4:17am Singapore time
-    - cron: '17 20 * * *'
+    - cron: '0 1 * * *'
   workflow_dispatch:
 
 permissions:
