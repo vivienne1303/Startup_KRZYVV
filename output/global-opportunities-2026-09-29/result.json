@@ -1,0 +1,79 @@
+{
+  "as_of": "2026-09-29",
+  "applied": true,
+  "added": [
+    {
+      "id": "78ff8d44-8b47-4336-838e-863a17fdebd6",
+      "title": "Bow Seat Blue Planet Awareness Contest 2027",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "d19d6a87-7701-4fe3-9bae-069f0ee09ddc",
+      "title": "TSL International Student Competition 2027 - Navigating El Nino",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "b16c5706-495f-4e60-988d-c324ba861cfe",
+      "title": "Sony World Photography Awards 2027 - Youth Competition",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "6a42e872-838e-4157-87db-83f0f794296f",
+      "title": "Sony World Photography Awards 2027 - Student Competition",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "4a13a4e3-d60d-4cd3-86d5-f7d28f4b12f5",
+      "title": "Sister Cities Young Artists and Authors Showcase 2027",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "f30d353e-bd3c-4063-88a2-cdbb4df6b5dd",
+      "title": "Intellectaa iChallenge - Global Student Innovation Challenge 2026",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "f865816f-c042-4064-8a21-6bcb308b378a",
+      "title": "Oxford Agora Global Essay and Defence Prize 2027",
+      "status": "published",
+      "is_published": true
+    }
+  ],
+  "updated": [
+    {
+      "id": "09a20253-4b08-4ef2-82ec-9ac32a035bd2",
+      "title": "Diamond Challenge 2027"
+    },
+    {
+      "id": "762bd823-bde8-4830-bbd2-59a29f69d2ca",
+      "title": "Planet+ Climate Solutions Challenge 2026-27"
+    },
+    {
+      "id": "e82640b8-d349-4277-aa87-915b4875747c",
+      "title": "Duke-UNC CLS Essay Competition 2026"
+    },
+    {
+      "id": "b4310725-07e1-4e0b-9fd4-d034ce623d5a",
+      "title": "Lumiere Junior Scholars Essay Contest 2026"
+    },
+    {
+      "id": "5cdb4249-f99e-47d7-b9e7-779318c76ac6",
+      "title": "Zooniverse — Online Research Volunteering"
+    },
+    {
+      "id": "a329b4d5-7065-4b41-931e-aa4af9bf896d",
+      "title": "Sentinel Programme - 2027 Secondary 3 Intake"
+    },
+    {
+      "id": "542c3320-2941-45ba-ac68-d8ec589f1259",
+      "title": "Sentinel Online Taster Workshops - October and November 2026"
+    }
+  ],
+  "duplicates": []
+}

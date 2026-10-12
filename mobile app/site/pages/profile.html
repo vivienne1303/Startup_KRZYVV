@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title data-i18n="TeenLaunch | My Profile">TeenLaunch | My Profile</title>
+  <script src="../js/theme-mode.js"></script>
+  <script src="../js/api-config.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../css/theme.css"><link rel="stylesheet" href="../css/settings.css"><link rel="stylesheet" href="../css/profile.css?v=20260813-rewards-mobile">
+<link rel="stylesheet" href="../../mobile-pages.css"></head>
+<body>
+  <header class="site-header profile-site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/images/light_logo.png" alt="" aria-hidden="true"><span>TeenLaunch<small>Future founders start here</small></span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="opportunities.html">Opportunities</a>
+        <a href="resources.html">Resources</a>
+        <a href="debate.html">Soft Skills &amp; Debate</a>
+        <a href="aiassistant.html">AI Chatbot</a>
+        <a class="profile-nav-link active" href="profile.html" aria-current="page">My Profile</a>
+        <a class="auth-link" href="auth.html">Logout</a>
+        <a class="settings-button" href="settings.html" aria-label="Settings"><img src="../assets/icons/settings.jpg" alt="" aria-hidden="true"></a>
+        <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">中文</button>
+      </div>
+    </nav>
+  </header>
+  <main class="profile-main"><section class="profile-shell">
+    <p data-profile-loading>Loading your profile...</p>
+    <div data-profile-content hidden>
+      <header class="profile-header">
+        <div class="profile-avatar"><img data-profile-picture alt="Profile picture"><span data-profile-initials></span></div>
+        <div class="profile-info">
+          <div class="profile-title"><h1 data-username></h1></div>
+          <div class="profile-stats"><div><strong data-app-count>0</strong><span>Applications</span></div><a data-own-followers><strong data-followers>0</strong><span>Followers</span></a><a data-own-following><strong data-following>0</strong><span>Following</span></a></div>
+          <div class="profile-details"><h2 data-full-name></h2><p data-bio></p><p data-school></p></div>
+          <div class="profile-actions"><a class="btn primary" href="portfolio-builder.html">My Portfolio</a><a class="btn secondary" href="community.html">Find People</a><a class="btn secondary" href="inbox.html">Inbox</a></div>
+        </div>
+      </header>
+      <section class="engagement-card" data-engagement-card>
+        <div class="tier-badge"><span>MY TIER</span><strong data-tier-name>Explorer</strong></div>
+        <div class="tier-progress"><div><strong><span data-xp>0</span> XP</strong><span data-next-tier>Start your journey</span></div><div class="xp-track"><i data-xp-progress></i></div></div>
+        <div class="streak-stat"><span>🔥</span><strong data-streak>0</strong><small><span data-streak-unit>day</span> streak</small></div>
+      </section>
+      <section class="rewards-card"><div><p class="eyebrow">Rewards journey</p><h2>Level up. Unlock more.</h2></div><div class="reward-track" data-rewards></div></section>
+      <nav class="profile-tabs" aria-label="Profile sections"><button class="active" data-tab="experiences">Experiences</button><button data-tab="applied">Applied</button><button data-tab="saved">Saved</button><button data-tab="about">About</button></nav>
+      <section data-panel="experiences">
+        <div class="experience-heading"><div><h2>My experiences</h2><p>Your visual diary of events, projects and growth.</p></div><button class="btn primary" type="button" data-open-experience>＋ Add experience</button></div>
+        <form class="experience-form" data-experience-form hidden><label>Event or experience<input name="title" maxlength="100" required placeholder="e.g. Youth Founders Bootcamp" data-i18n-placeholder="e.g. Youth Founders Bootcamp"></label><label>Date<input name="event_date" type="date" required></label><label class="wide">Caption<textarea name="caption" maxlength="1000" rows="3" placeholder="What happened? What did you learn?" data-i18n-placeholder="What happened? What did you learn?"></textarea></label><label class="wide photo-drop">Photo<input name="photo" type="file" accept="image/jpeg,image/png,image/webp" required><small>JPG, PNG or WebP · maximum 4 MB</small></label><div class="wide form-actions"><button class="btn primary" type="submit">Share experience</button><button class="btn secondary" type="button" data-cancel-experience>Cancel</button></div><p class="wide experience-message" data-experience-message aria-live="polite"></p></form>
+        <div class="experience-grid" data-experiences></div><div class="profile-empty" data-experiences-empty hidden><p>Your experience story starts here.</p><button class="btn primary" type="button" data-empty-add>Add your first experience</button></div>
+      </section>
+      <section data-panel="applied" hidden><h2>Applied Opportunities</h2><div class="applied-grid" data-applications></div><div class="profile-empty" data-empty hidden><p>You have not applied for any opportunities yet.</p><a class="btn primary" href="opportunities.html">Browse Opportunities</a></div></section>
+      <section data-panel="saved" hidden><h2>Saved Opportunities</h2><div class="applied-grid" data-saved></div><div class="profile-empty" data-saved-empty hidden><p>You have not saved any opportunities yet.</p><a class="btn primary" href="opportunities.html">Browse Opportunities</a></div></section>
+      <section data-panel="about" hidden><article class="about-card"><h2>About</h2><dl><div><dt>Full name</dt><dd data-about-name></dd></div><div><dt>Bio</dt><dd data-about-bio></dd></div><div><dt>School</dt><dd data-about-school></dd></div><div><dt>Education</dt><dd data-about-education></dd></div></dl></article></section>
+    </div>
+    <div class="profile-error" data-profile-error hidden><p data-profile-error-message></p><button class="btn primary" data-retry>Retry</button></div>
+  </section></main>
+  <footer class="footer profile-footer"><p>&copy; 2026 TeenLaunch</p><a href="opportunities.html" data-i18n="Find opportunities">Find opportunities</a><a href="mailto:vivienne@teenlaunch.app" data-i18n="Contact">Contact</a></footer>
+  <dialog class="experience-dialog" data-experience-dialog aria-labelledby="experienceDialogTitle"><button class="experience-dialog-close" type="button" data-close-experience-dialog aria-label="Close post">×</button><img data-dialog-image alt=""><div class="experience-dialog-copy"><h2 id="experienceDialogTitle" data-dialog-title></h2><time data-dialog-date></time><p data-dialog-caption></p><strong>+5 XP earned</strong></div></dialog>
+  <script src="../js/auth-nav.js"></script>
+  <script src="../js/i18n.js?v=20260805-profile"></script>
+  <script src="../script.js"></script>
+  <script src="../js/profile.js?v=20260805-profile"></script>
+  <script src="../js/profile-opportunity-links.js"></script>
+  <script src="../js/profile-social-links.js"></script>
+<script src="../../mobile-pages.js"></script></body></html>

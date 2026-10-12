@@ -1,0 +1,35 @@
+{
+  "status": 200,
+  "code": [
+    {
+      "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/KidsLearn-Plus--Ang-Mo-Kio-Term-1-2027",
+      "id": "37978358-4c2a-4047-aebb-40bf64b53fcd",
+      "label": "Ang Mo Kio"
+    },
+    {
+      "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/KidsLearn--Kampong-Chai-Chee-Term-1-2027",
+      "id": "88f4f3fe-55c2-49af-9f7f-dfd3fcc7ad1e",
+      "label": "Bedok"
+    },
+    {
+      "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/KidsLearn--Boon-Lay-Term-1-2027",
+      "id": "4ab5649f-163d-4136-8e47-0e9d0f841871",
+      "label": "Boon Lay"
+    },
+    {
+      "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/KidsLearn--Jurong-East-Term-1-2027",
+      "id": "8a59fe97-71d6-43cc-a0bd-bd9df3519382",
+      "label": "Jurong East"
+    },
+    {
+      "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/KidsLearn--Queenstown-Term-1-2027",
+      "id": "ffa943c3-c243-4966-bd42-259f2daebafe",
+      "label": "Queenstown"
+    },
+    {
+      "url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/KidsLearn--Woodlands-Term-1-2027",
+      "id": "135dd557-9650-47d5-af48-d21fbda9e401",
+      "label": "Woodlands"
+    }
+  ]
+}
