@@ -1,4 +1,4 @@
-import { Capacitor } from '@capacitor/core';
+import { Capacitor, registerPlugin } from '@capacitor/core';
 import { App } from '@capacitor/app';
 import { Browser } from '@capacitor/browser';
 import { Clipboard } from '@capacitor/clipboard';
@@ -36,6 +36,8 @@ window.TeenLaunchNative = {
 
 if (native) {
   document.documentElement.classList.add('native-app');
+  const NativePrint = registerPlugin('TeenLaunchPrint');
+  window.print = () => NativePrint.print().catch(report);
   // Always use the installed web bundle; a browser service worker must not serve an older UI.
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then(items => Promise.all(items.map(item => item.unregister()))).catch(report);

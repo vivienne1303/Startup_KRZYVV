@@ -38,7 +38,7 @@
   let progressKey = "";
   let saving = false;
 
-  const clearSession = () => ["teenlaunch_token", "teenlaunch_user", "teenlaunch_profile"].forEach((key) => localStorage.removeItem(key));
+  const clearSession = () => ["teenlaunch_token", "teenlaunch_refresh_token", "teenlaunch_user", "teenlaunch_profile"].forEach((key) => localStorage.removeItem(key));
   const goToLogin = () => window.location.replace(`auth.html?mode=login&returnTo=${encodeURIComponent("career_dna_test.html" + window.location.search)}`);
   const authFetch = (path, options = {}) => fetch(`${API_BASE}${path}`, { ...options, headers: { "Content-Type": "application/json", Authorization: `Bearer ${localStorage.getItem(tokenKey)}`, ...(options.headers || {}) } });
   const errorMessage = async (response) => { try { const data = await response.json(); return data?.error?.message || data?.message || "Please try again."; } catch (_) { return "Please try again."; } };

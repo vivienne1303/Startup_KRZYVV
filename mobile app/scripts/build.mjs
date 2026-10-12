@@ -18,6 +18,7 @@ async function copyRuntime(from, to) {
       await copyRuntime(path.join(from,name), path.join(to,name));
     }
   } else if (allowed.has(path.extname(from).toLowerCase())) {
+    await fs.mkdir(path.dirname(to), { recursive: true });
     await fs.copyFile(from, to);
   }
 }
@@ -25,8 +26,10 @@ for (const file of ['index.html','app.css','app.js','mobile-pages.css','mobile-p
   await copyRuntime(path.join(root,file),path.join(out,file));
 }
 for (const name of ['index.html','mobile-showcase.html','script.js','style.css','assets','css','js','pages','output','data','components']) {
-  try { await copyRuntime(path.join(root,'site',name),path.join(out,'site',name)); }
-  catch (error) { if (error.code !== 'ENOENT') throw error; }
+  const source = path.join(root, 'site', name);
+  try { await fs.access(source); }
+  catch (error) { if (error.code === 'ENOENT' && ['output','data','components'].includes(name)) continue; throw error; }
+  await copyRuntime(source, path.join(out,'site',name));
 }
 await fs.copyFile(path.join(root,'src/native.css'),path.join(out,'native.css'));
 await build({ entryPoints:[path.join(root,'src/native.js')], bundle:true, format:'iife', target:'chrome110', outfile:path.join(out,'native.js') });

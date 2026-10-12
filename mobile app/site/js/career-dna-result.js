@@ -6,7 +6,7 @@
   const errorBox = document.querySelector("[data-result-error]");
   const authFetch = (path) => fetch(`${API_BASE}${path}`, { headers: { Authorization: `Bearer ${localStorage.getItem(tokenKey)}` } });
   const login = () => window.location.replace(`auth.html?mode=login&returnTo=${encodeURIComponent("career_dna_result.html")}`);
-  const clearSession = () => ["teenlaunch_token", "teenlaunch_user", "teenlaunch_profile"].forEach((key) => localStorage.removeItem(key));
+  const clearSession = () => ["teenlaunch_token", "teenlaunch_refresh_token", "teenlaunch_user", "teenlaunch_profile"].forEach((key) => localStorage.removeItem(key));
   const toList = (value) => Array.isArray(value) ? value : [];
   const t = (key) => window.TeenLaunchI18n?.translate(key) || key;
   const stickerName = (value) => ({

@@ -9,7 +9,7 @@
 
   const request = async (path, options = {}) => {
     const response = await fetch(API + path, { ...options, headers: { ...headers, ...(options.body ? { "Content-Type": "application/json" } : {}), ...options.headers } });
-    if (response.status === 401) { localStorage.removeItem("teenlaunch_token"); location.replace("auth.html?mode=login&returnTo=profile.html"); throw new Error("Please log in again."); }
+    if (response.status === 401) { window.TeenLaunchSession?.clearSession(); localStorage.removeItem("teenlaunch_token"); localStorage.removeItem("teenlaunch_refresh_token"); location.replace("auth.html?mode=login&returnTo=profile.html"); throw new Error("Please log in again."); }
     if (!response.ok) { const body = await response.json().catch(() => ({})); throw new Error(body.error?.message || "Something went wrong."); }
     return response.status === 204 ? null : response.json();
   };
