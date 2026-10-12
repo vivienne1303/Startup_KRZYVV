@@ -98,8 +98,8 @@
   .profile-stats a { display: grid; gap: 2px; text-align: center; }
 }
 
-/* The simplified six-link navigation fits normal laptops; keep it horizontal. */
-@media (min-width: 1181px) {
+/* Keep all navigation links horizontal only when the full menu fits. */
+@media (min-width: 1461px) {
   .standard-site-header .nav-toggle { display: none !important; }
   .standard-site-header .nav-links,
   .standard-site-header .nav-links:not(.open) {
@@ -1863,7 +1863,7 @@ a {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: .85rem;
   width: min(1160px, calc(100% - 32px));
-  margin: 108px auto -72px;
+  margin: 24px auto;
   padding: .8rem;
   border: 1px solid rgba(45, 112, 190, .22);
   border-radius: 22px;
@@ -1913,14 +1913,13 @@ a {
 @media (max-width: 700px) {
   .explore-section-nav {
     grid-template-columns: 1fr;
-    margin-top: 92px;
-    margin-bottom: -42px;
+    margin-block: 16px;
   }
   .explore-section-nav > a,
   .explore-competition-group > a { min-height: 44px; }
 }
 
-@media (min-width: 1181px) {
+@media (min-width: 1461px) {
   body .standard-site-header .nav-toggle { display: none !important; }
   body .standard-site-header .nav-links,
   body .standard-site-header .nav-links:not(.open) {

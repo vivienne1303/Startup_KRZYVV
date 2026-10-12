@@ -8,6 +8,13 @@ html body .navbar{max-width:100%!important;width:calc(100% - 32px)!important;hei
 html body .nav-links{inset:72px 12px auto!important;width:auto!important;max-width:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important;transform:none!important}
 html body .nav-links.open{visibility:visible!important;opacity:1!important;pointer-events:auto!important}
 html body .nav-toggle{display:block!important}
+/* The app remains a compact layout even inside a wide desktop browser. */
+html body .site-header.standard-site-header .nav-toggle{display:block!important}
+html body .site-header.standard-site-header .nav-links,
+html body .site-header.standard-site-header .nav-links:not(.open){position:fixed!important;inset:64px 12px auto!important;display:grid!important;width:auto!important;max-height:70dvh!important;overflow:auto!important;gap:5px!important;padding:16px!important;border:1px solid #e5eaf2!important;border-radius:18px!important;background:#fff!important;box-shadow:0 12px 32px #172a4914!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important;transform:none!important}
+html body .site-header.standard-site-header .nav-links:not(.open) *{visibility:hidden!important;pointer-events:none!important}
+html body .site-header.standard-site-header .nav-links.open{visibility:visible!important;opacity:1!important;pointer-events:auto!important}
+html body .site-header.standard-site-header .nav-links.open a{width:100%!important;padding:10px!important}
 html body main{min-width:0;max-width:100%}
 html body .site-header+main{padding-top:96px!important}
 html body .site-header+main>.hero{padding-top:0!important}

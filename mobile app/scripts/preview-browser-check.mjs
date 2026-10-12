@@ -102,6 +102,48 @@ try {
   assert.equal(await evaluate('document.querySelectorAll(".mobile-tabs a").length'),5);
   assert.equal(await evaluate('document.documentElement.scrollWidth <= innerWidth'),true,'Resources overflows phone viewport');
   assert.equal(await evaluate('navigator.serviceWorker.getRegistrations().then(items=>items.length)'),0);
+  // The website and mobile copy share Explore tabs but have different header widths.
+  await evaluate(`localStorage.setItem('teenlaunch-api-origin','https://teenlaunch-production.up.railway.app')`);
+  for (const width of [390, 768, 1011, 1280, 1440, 1920]) {
+    await command('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:width<700});
+    for (const prefix of [new URL('/',base).href, base+'site/']) {
+      for (const page of ['opportunities.html','recommended-opportunities.html']) {
+        await navigate(prefix+'pages/'+page,page);
+        const layout = await evaluate(`(() => {
+          const tabs=document.querySelector('.explore-section-nav').getBoundingClientRect();
+          const heading=document.querySelector('main h1').getBoundingClientRect();
+          const header=document.querySelector('.site-header').getBoundingClientRect();
+          const menu=document.querySelector('.nav-links');
+          const visible=getComputedStyle(menu).visibility!=='hidden' && getComputedStyle(menu).opacity!=='0';
+          return {tabsTop:tabs.top,tabsBottom:tabs.bottom,headingTop:heading.top,headerBottom:header.bottom,
+            overflow:document.documentElement.scrollWidth>innerWidth,
+            menuFits:!visible||[...menu.querySelectorAll('a')].every(a=>a.getBoundingClientRect().right<=innerWidth+1)};
+        })()`);
+        assert.ok(layout.tabsTop>=layout.headerBottom-1,'Explore tabs under fixed header');
+        assert.ok(layout.headingTop>=layout.tabsBottom,'Explore tabs overlap page heading');
+        assert.equal(layout.menuFits,true,'Header links extend beyond viewport');
+        assert.equal(layout.overflow,false,'Explore page horizontal overflow');
+        const collapsed = await evaluate('getComputedStyle(document.querySelector(".nav-toggle")).display!=="none"');
+        if (prefix.includes('mobile%20app')) assert.equal(collapsed,true,'Mobile app must keep its compact menu on desktop');
+        if (collapsed) {
+          await evaluate('document.querySelector(".nav-toggle").click()');
+          await delay(300);
+          assert.equal(await evaluate(`(() => {
+            const menu=document.querySelector('.nav-links'),rect=menu.getBoundingClientRect();
+            const header=document.querySelector('.site-header').getBoundingClientRect();
+            return menu.classList.contains('open') && getComputedStyle(menu).visibility==='visible'
+              && rect.left>=header.left-1 && rect.right<=header.right+1
+              && rect.bottom<=innerHeight+1 && menu.scrollWidth<=menu.clientWidth+1;
+          })()`),true,'Expanded menu must fit within the page and remain scrollable');
+          await evaluate('document.querySelector(".nav-toggle").click()');
+        }
+        if (width===1011 || width===390) {
+          const image=await command('Page.captureScreenshot',{format:'png'});
+          await fs.writeFile(path.join(profile,`explore-${prefix.includes('mobile%20app')?'mobile':'website'}-${width}-${page}.png`),Buffer.from(image.data,'base64'));
+        }
+      }
+    }
+  }
   assert.deepEqual(errors,[],'Browser JavaScript exceptions');assert.deepEqual(failed,[],'Local asset 404s');
   assert.ok(calls.some(call=>call.url.endsWith('/auth/login')&&call.method==='POST'));
   console.log('Phone browser passed: home, Explore, resources, navigation, mocked login/return path, token persistence after reload, public portfolio URL, no JS exceptions or missing assets. No production API writes.');
