@@ -19,6 +19,8 @@ Validation completed after resolution:
 - Website index, JS, CSS, pages and root package.json match origin/main exactly; the local session-refresh controller and route are the only extra backend changes.
 - No unresolved Git index entries remain. Working/staged source marker checks and whitespace checks were run.
 
-A merge commit (36f25e9) appeared during verification. Reviewed corrections are saved in a follow-up commit; no history is rewritten. The separately staged mobile app.zip archive is intentionally excluded from that resolution commit.
+A merge commit (36f25e9) appeared during verification. Reviewed corrections are saved in a follow-up commit; no history is rewritten. The mobile app.zip archive was not changed by the conflict-resolution edits.
 
 Remaining limitations: Android APK compilation needs Android Studio/SDK/Java; real-device behaviour has not been tested. Production token renewal requires separately deploying the prepared refresh endpoint; nothing has been deployed. Website checks used the available Node 24 executable, while the backend package declares Node 22 for production. No production data writes or workflow execution were performed.
+
+Final verification: the later incoming commit 5502db8 removes the blank mobile-app placeholder; it does not change the preserved functional mobile files. The final working tree has no unresolved index entries or source conflict markers. Android sync completed successfully after the merge. One cached-object scan encountered a OneDrive mmap error; the final working-tree scan and Git status completed successfully.
