@@ -4,6 +4,30 @@
   else root.OpportunityFilters = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this, function () {
   const PAGE_SIZE = 25;
+  const today = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Singapore', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+  function expired(item, day = today()) {
+    return item.status === 'expired' || item.discovery?.deadline_status === 'closed'
+      || [item.application_deadline, item.deadline, item.expiry_date, item.end_date].some(d => d && d.slice(0, 10) < day);
+  }
+  function statusLabels(item, day = today()) {
+    if (expired(item, day)) return ['Closed'];
+    const d = item.discovery;
+    const deadline = item.application_deadline || item.deadline;
+    const labels = [];
+    if (d?.deadline_status === 'upcoming') labels.push('Upcoming');
+    else if (d ? ['confirmed','rolling'].includes(d.deadline_status) && (d.deadline_status === 'rolling' || deadline) : deadline && item.verification_status === 'verified') labels.push('Open now');
+    else labels.push('Check deadline');
+    if (d ? d.student_eligibility !== 'confirmed' : item.verification_status !== 'verified') labels.push('Check eligibility');
+    if (d?.application_access === 'unavailable') labels.push('Application link unavailable');
+    else if (d?.application_access === 'unknown' || (!item.application_url && item.application_method !== 'internal')) labels.push('Check application link');
+    return labels;
+  }
+  function confidenceRank(item) {
+    const labels = statusLabels(item);
+    if (labels.length === 1 && labels[0] === 'Open now') return 0;
+    if (labels.includes('Upcoming')) return 1;
+    return 2;
+  }
   const categoryKey = value => String(value || 'Other').trim().toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'other';
   const countries = item => item.eligibility_scope === 'countries' && Array.isArray(item.eligible_countries)
     ? [...new Set(item.eligible_countries.filter(code => /^[A-Z]{2}$/.test(code)))] : [];
@@ -41,6 +65,7 @@
   }
   function browse(rows, filters = {}) {
     const query = String(filters.search || '').trim().toLowerCase();
+    rows = rows.filter(item => !expired(item) && item.discovery?.student_eligibility !== 'ineligible');
     const filtered = rows.filter(item => {
       if (!matchesCountry(item, filters.country)) return false;
       if (filters.category && filters.category !== 'all' && ![item.category, ...(item.categories || [])].some(x => categoryKey(x) === categoryKey(filters.category))) return false;
@@ -49,7 +74,7 @@
       if (!query) return true;
       const text = [item.title,item.description,item.eligibility,item.organisation,item.organizer,item.category,...(item.categories || []),...(item.skills || []),item.location,locationLabel(item,'en'),locationLabel(item,'zh')].join(' ').toLowerCase();
       return !query || text.includes(query);
-    });
+    }).sort((a, b) => confidenceRank(a) - confidenceRank(b));
     const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
     const page = Math.min(pages, Math.max(1, Math.floor(Number(filters.page) || 1)));
     const codes = new Set(rows.flatMap(countries));
@@ -57,5 +82,5 @@
     return { opportunities: filtered.slice((page-1)*PAGE_SIZE, page*PAGE_SIZE), page, page_size: PAGE_SIZE, total: filtered.length, pages,
       facets: { countries: [...codes].sort(), categories: [...new Set(rows.flatMap(item => [item.category,...(item.categories || [])]).filter(Boolean))].sort() } };
   }
-  return { PAGE_SIZE, categoryKey, countries, isGlobal, matchesCountry, countryName, locationLabel, detailTokens, browse };
+  return { PAGE_SIZE, categoryKey, countries, isGlobal, matchesCountry, countryName, locationLabel, detailTokens, browse, expired, statusLabels, confidenceRank };
 });

@@ -1,0 +1,79 @@
+{
+  "applied": true,
+  "as_of": "2026-09-30",
+  "duplicate_check": "Live database",
+  "added": [
+    {
+      "id": "f8d06868-e205-4c14-9df3-777150226d35",
+      "title": "Lions Befrienders — 1:1 Befriender",
+      "labels": [
+        "Open now",
+        "Application link unavailable"
+      ]
+    },
+    {
+      "id": "6a57fd9b-cd85-4cc6-b785-4795ba43a30a",
+      "title": "Heartware Youthbank — Youth Volunteering",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "d933f180-3e04-4a57-b563-0e9cc92b457c",
+      "title": "University YMCA — Uni-Y Service Programmes",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "334efcde-9ab5-4c40-8e05-0da79091366a",
+      "title": "Be My Eyes — Remote Visual Assistance",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "36683a7f-a2b3-48e9-a791-c5cf9e05099e",
+      "title": "Science Centre Singapore — Volunteer Programme",
+      "labels": [
+        "Check deadline",
+        "Application link unavailable"
+      ]
+    },
+    {
+      "id": "6ddb278b-a6c7-4e2e-9ce1-bd91d21ea231",
+      "title": "HAN Heritage Champions — Volunteer Interest",
+      "labels": [
+        "Check deadline",
+        "Check eligibility",
+        "Application link unavailable"
+      ]
+    },
+    {
+      "id": "b74cf823-6eb9-43d9-9acc-07e90af3d0cb",
+      "title": "UNV Online Volunteering — Assignment Finder",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "bca9e011-0679-420e-b720-62469bd4424d",
+      "title": "CS50x — Introduction to Computer Science",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "4da3b038-b5b8-43ec-80eb-3a5af166eaf4",
+      "title": "Hack Club — Teen Maker Community",
+      "labels": [
+        "Check deadline"
+      ]
+    }
+  ],
+  "merged": []
+}

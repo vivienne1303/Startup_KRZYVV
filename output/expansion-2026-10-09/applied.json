@@ -1,0 +1,362 @@
+{
+  "applied": true,
+  "as_of": "2026-10-09",
+  "duplicate_check": "Live database",
+  "added": [
+    {
+      "id": "704271bf-4d74-4bfa-b165-dd7f47c670dc",
+      "title": "Digital Media & AI Intern � Brompton Experiences",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "5e53899f-e2d1-4070-a6b7-7d010ac97486",
+      "title": "Data Engineer Intern (Backend Engineering) � IFS Capital Limited",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "b09cae73-a39c-4bb6-8e5d-f336ee695038",
+      "title": "IoT Hardware and Test Engineering Intern � Datakrew Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "9952d65c-d331-45d2-ad85-d5dbd2490a6e",
+      "title": "Data Acquisition Intern � Datakrew Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "607a0a94-7e91-47c5-a8ae-354a395dd9b2",
+      "title": "Marketing & Events Intern � Ocean Butterflies Music Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "7ede50e1-9dc3-4a77-86e5-e97c47606b60",
+      "title": "Human Resource Intern � Ma Kuang Healthcare Management Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "50a02d40-7ac7-4fd0-8a63-d8d5852f9ede",
+      "title": "Retail & Brand Marketing Intern (Dermocosmetics & Beauty-Tech) � Z7 Trading Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "8fd5ef17-92d7-43e4-8e52-ac5e7b6b41d3",
+      "title": "IPL Auction � Ram Lal Anand College, University of Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "62b398a5-fc77-4aa8-bfb5-707b45bdfceb",
+      "title": "Veritas Clash - British Parliamentary Debate � Scaler School of Technology, Bengaluru, Karnataka",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a6076f19-6a54-443e-8bd5-b8d944b9cdc1",
+      "title": "Sparkathon 2.0 � Indian Institute of Technology, Indian School of Mines (IIT ISM), Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "bf502afe-6af5-450d-a760-7d5e0e9bf16e",
+      "title": "Fault Hunt � Society of Electronics Engineers (SEE), Indian Institute of Technology (Indian School of Mines), Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "feeb5f9c-0ffb-4807-afa0-86bb0747039e",
+      "title": "Comqueer 8.0 � College of Vocational Studies (CVS), Delhi University (DU)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ca0802f0-48ac-4853-9b93-54006b054b62",
+      "title": "Flow Rush � Indian Institute of Technology, Indian School of Mines (IIT ISM), Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9f8682b8-77f3-4ffc-9d12-2a8f3f8b8eaf",
+      "title": "Tech Mafia - Trust No One. Debug Everyone. � Netaji Subhas University of Technology (NSUT), Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "0eaf4c53-dbc6-43c6-99cb-c51dd7f3e233",
+      "title": "Vishwayouth 2026 � Narsee Monjee Institute of Management Studies (NMIMS), Navi Mumbai",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ce98f20b-6b56-46a7-aca5-5b14c6fe0002",
+      "title": "Line-O-Mania | A Line Follower Competition � Indian Institute of Information Technology (IIIT), Nagpur",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "70d1cd81-5505-4252-ab21-03a1b77dfe77",
+      "title": "AeroCraft � Design & Innovation Challenge � Fr. Conceicao Rodrigues College of Engineering (FRCRCE), Bandra",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "15eb1fc5-0afe-44c3-9ae0-135233085055",
+      "title": "Agnirakshak - Autonomous Fire Fighting Bot Challenge. � Fr. Conceicao Rodrigues College of Engineering (FRCRCE), Bandra",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "8cc6ea5d-b3d4-4e63-b56d-8f2f2646f841",
+      "title": "The Insider � Ram Lal Anand College, University of Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b8ffface-5f28-491a-b6a3-90f307afac7d",
+      "title": "Chem-E-Prix: NITR INNOVISION 2026 � National Institute of Technology (NIT), Rourkela",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b1848baa-5716-413a-9e43-65e7038dda2a",
+      "title": "The Fictional CEO � Atma Ram Sanatan Dharma College (ARSD), University of Delhi (DU), New Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "76af01b4-f4e4-42fc-887a-cc2972b7067d",
+      "title": "AI Arena by Udaan | Concetto '26 � Indian Institute of Technology, Indian School of Mines (IIT ISM), Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "0a3ff336-2e8f-46f8-b79d-dc3c41da86d7",
+      "title": "Escape Room � Fr. Conceicao Rodrigues College of Engineering (FRCRCE), Bandra",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "8a6028ac-caea-4a59-a05a-67ccfc77d04d",
+      "title": "Scarlet Deception � College of Vocational Studies (CVS), Delhi University (DU)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "d5f103ef-e3e0-4c16-8feb-9ee04dd11e80",
+      "title": "Entrexpo 5.0 � ICFAI Business School (IBS), Hyderabad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9c600279-686c-49fa-b41b-1cdd84824071",
+      "title": "Idea got Latent � Bharati Vidyapeeth's College of Engineering",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e3df9b3c-bb65-47b0-8cc6-91b825edaea6",
+      "title": "Pixel Patakha � Bharati Vidyapeeth's College of Engineering",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "0aa9a710-6530-4361-9e67-f631af808327",
+      "title": "Snail Scribe Archive - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "5767450e-ad72-4c85-85ca-350a91f6045c",
+      "title": "SquirrelMapper - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "258888fa-70de-4089-a943-31b8e8b10b2a",
+      "title": "Disk Detective - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "478e4fa0-4b45-446e-bcde-582f59eba726",
+      "title": "Cameras for Conservation - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a1a95533-32dd-4cbd-bed9-9dc1ed8d7bfe",
+      "title": "Rubin: Blobs and Blurs - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f70ceb3c-56c1-4b52-b787-27c88f9e73e5",
+      "title": "Cloudspotting on Mars - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "2264d286-d4bc-4af1-ba1c-402008a054d5",
+      "title": "Rubin Comet Catchers - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "01d8a88e-5d4c-4df8-8a22-690fa760d7c2",
+      "title": "Solar Radio Burst Tracker - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "7d60dd61-cda0-4e89-8f38-826a269f6a82",
+      "title": "Monkey Health Explorer - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "bd6cb34e-5e05-48be-90ae-109ad5998638",
+      "title": "Gaia Vari - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a59159f0-0e1c-4943-93c9-b3ee0aaafe69",
+      "title": "Kilonova Seekers - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "3e991b5c-1076-414c-ba4b-492fb7ce991d",
+      "title": "Sunspot Detectives - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "5b7a2e6a-b3d4-4b89-b2fb-c7adbc4bba37",
+      "title": "ReData - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "480c78d9-a190-48ba-965c-b3f24c1b24f7",
+      "title": "Everglades Wildlife Watch - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "39fdb583-f84b-4bed-bb38-14b969d56e6d",
+      "title": "Savanna Spy: Sound - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "d593e9a0-86a3-4058-855c-487fc24e1410",
+      "title": "Notes from Nature - CAS Plants to Pixels - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e04e7475-ea25-45a5-b8d6-61b88527aeb3",
+      "title": "Spiral Graph: Cluster Buster - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e342a694-fd75-45c6-9042-7b35e3c70755",
+      "title": "Snapshot Dubuque Iowa - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "bed78e88-2cec-460d-8510-c3d0d873d15e",
+      "title": "Dolphin Spotting - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "fd87ee27-f200-45a8-bca2-a6afd97d9e70",
+      "title": "Exoasteroids - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "3249c4e4-41be-420a-8aef-991831570859",
+      "title": "Back Bay Bird Identification - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "49a412e9-b5cc-4d72-a9b5-89570477864e",
+      "title": "Kelp Quest (Seattle Aquarium) - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "bd9f5056-20b1-430d-bebb-f49ce3e8419c",
+      "title": "New Particle Search at CERN - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    }
+  ],
+  "merged": []
+}

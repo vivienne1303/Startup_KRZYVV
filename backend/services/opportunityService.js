@@ -1,5 +1,6 @@
+const { expired, confidenceRank } = require('../../js/opportunity-filters');
 const opportunityColumns =
-  "id, title, organisation, organizer, description, category, categories, eligibility, minimum_age, maximum_age, age_min, age_max, education_level, education_levels, location, format, mode, application_deadline, deadline, start_date, end_date, source_url, application_url, source_type, status, created_at, last_verified_at, updated_at, skills, image_url, is_published, created_by, source_name, partner_id, external_id, last_synced_at, verification_status, verified_by, verified_at, expiry_date, application_method, internal_application_enabled, host_country, eligibility_scope, eligible_countries, travel_required";
+  "id, title, organisation, organizer, description, category, categories, eligibility, minimum_age, maximum_age, age_min, age_max, education_level, education_levels, location, format, mode, application_deadline, deadline, start_date, end_date, source_url, application_url, source_type, status, created_at, last_verified_at, updated_at, skills, image_url, is_published, created_by, source_name, partner_id, external_id, last_synced_at, verification_status, verified_by, verified_at, expiry_date, application_method, internal_application_enabled, host_country, eligibility_scope, eligible_countries, travel_required, discovery";
 
 const listOpportunities = async (client, filters = {}) => {
   let query = client
@@ -15,7 +16,8 @@ const listOpportunities = async (client, filters = {}) => {
   if (filters.search) query = query.ilike("title", `%${filters.search}%`);
 
   const { data, error } = await query;
-  return { data, error };
+  return { data: data?.filter(item => !expired(item) && item.discovery?.student_eligibility !== 'ineligible')
+    .sort((a,b) => confidenceRank(a) - confidenceRank(b)), error };
 };
 
 const getOpportunityById = async (client, id) => {

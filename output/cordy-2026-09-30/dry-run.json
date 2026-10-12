@@ -1,0 +1,51 @@
+{
+  "applied": false,
+  "as_of": "2026-09-30",
+  "duplicate_check": "Local snapshot only; live check required",
+  "added": [
+    {
+      "id": null,
+      "title": "Art Outreach — Volunteer Applications",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": null,
+      "title": "WWF-Singapore — Panda Volunteer Community",
+      "labels": [
+        "Check deadline",
+        "Check eligibility",
+        "Check application link"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Greatest Build Together — October 2026",
+      "labels": [
+        "Check deadline",
+        "Check eligibility",
+        "Application link unavailable"
+      ]
+    },
+    {
+      "id": null,
+      "title": "SHG Joint Youth Dialogue 2026",
+      "labels": [
+        "Check deadline",
+        "Application link unavailable"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Singapore Youth Photography Awards 2026 — Exhibition Visit",
+      "labels": [
+        "Check deadline",
+        "Check eligibility",
+        "Check application link"
+      ]
+    }
+  ],
+  "merged": []
+}

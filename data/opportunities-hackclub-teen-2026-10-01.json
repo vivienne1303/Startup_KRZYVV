@@ -1,0 +1,1525 @@
+{
+  "as_of": "2026-10-01",
+  "discovery_source": "Direct organiser research",
+  "additions": [
+    {
+      "title": "Crescent — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "Every Monday morning Crescent deals five build prompts and a wildcard. Take a card, let Hackatime count the hours while you build, then ship a repo, a demo and a screenshot for review. Approved hours become stars at the week's rate, multiplied by the card you took, and the shop posts the prizes to y Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Anyone aged 13 through 18, from all over the world. Free to join.",
+      "minimum_age": 13,
+      "maximum_age": 18,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": "2026-11-22",
+      "start_date": "2026-09-21",
+      "end_date": null,
+      "source_url": "https://crescent.hackclub.com/",
+      "application_url": "https://crescent.hackclub.com/",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "worldwide",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://crescent.hackclub.com/",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as a limited-time programme in Hack Club's official YSWS catalog, deadline 2026-11-22. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://crescent.hackclub.com/"
+        ]
+      }
+    },
+    {
+      "title": "Gadget Market — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "Make a hardware gadget, then trade it on the Gadget Market! Get up to 210 USD to build your hardware project, and 30+ USD to mail it to other teens around the world! Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Teenagers around the world. Free to join.",
+      "minimum_age": null,
+      "maximum_age": 18,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://gadget.hackclub.com",
+      "application_url": "https://gadget.hackclub.com",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "worldwide",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://gadget.hackclub.com",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as a limited-time programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://gadget.hackclub.com"
+        ]
+      }
+    },
+    {
+      "title": "CloudFall — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "CloudFall challenges you to replace a subscription you pay for, like the gym, Netflix, or Spotify, with an open source solution of your own. Log your coding time with Hackatime, post devlogs as you build, then ship your project for review and spend your approved hours on prizes in the shop, includin Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Hack Club YSWS programmes are for teenagers; this page did not state the age rule on the check date.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": "2026-11-05",
+      "start_date": "2026-08-05",
+      "end_date": null,
+      "source_url": "https://cloudfall.hackclub.com",
+      "application_url": "https://cloudfall.hackclub.com",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "unknown",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://cloudfall.hackclub.com",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as a limited-time programme in Hack Club's official YSWS catalog, deadline 2026-11-05. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://cloudfall.hackclub.com"
+        ]
+      }
+    },
+    {
+      "title": "3AM — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "Build a dark-themed project like a website, game .etc late at night and earn rewards based on your Hackatime hours. Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Ages 13 to 18, wherever you live. Free to join.",
+      "minimum_age": 13,
+      "maximum_age": 18,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://3am.hackclub.com",
+      "application_url": "https://3am.hackclub.com",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "worldwide",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://3am.hackclub.com",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as a limited-time programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://3am.hackclub.com"
+        ]
+      }
+    },
+    {
+      "title": "You Spud, We Spud — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "Challenge yourself to build fast, lightweight, dependency free web applications using only vanilla HTML, CSS, and JavaScript! Earn custom Aussie loot and potato themed rewards based on how compact your project's total bundle size is across three difficulty tiers.\n\n**STANDARD MODE (<15KB):**\n- Custom Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Hack Club YSWS programmes are for teenagers; this page did not state the age rule on the check date.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://youspudwespud.sami-s.dev",
+      "application_url": "https://youspudwespud.sami-s.dev",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://youspudwespud.sami-s.dev",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as a limited-time programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://youspudwespud.sami-s.dev"
+        ]
+      }
+    },
+    {
+      "title": "Alchemize — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "Make one of the 3 theme-based projects and earn Potion Mix to get the prizes you choose Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Hack Club YSWS programmes are for teenagers; this page did not state the age rule on the check date.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://alchemize.hackclub.com",
+      "application_url": "https://alchemize.hackclub.com",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://alchemize.hackclub.com",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as a limited-time programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://alchemize.hackclub.com"
+        ]
+      }
+    },
+    {
+      "title": "Forge — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "Forge is a Hack Club YSWS (You ship, we ship) program where teens like yourself can design and build hardware projects, and get them funded! Forge your project now Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Hack Club YSWS programmes are for teenagers; this page did not state the age rule on the check date.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": "2026-11-30",
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://forge.hackclub.com/",
+      "application_url": "https://forge.hackclub.com/",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "unknown",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://forge.hackclub.com/",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as a limited-time programme in Hack Club's official YSWS catalog, deadline 2026-11-30. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://forge.hackclub.com/"
+        ]
+      }
+    },
+    {
+      "title": "Resolution — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "Resolution is an 8-week challenge where you set goals, ship every week, and earn prizes for following through. Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Hack Club YSWS programmes are for teenagers; this page did not state the age rule on the check date.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://resolution.hackclub.com/ref/ysws-catalog",
+      "application_url": "https://resolution.hackclub.com/ref/ysws-catalog",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://resolution.hackclub.com/ref/ysws-catalog",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as a limited-time programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://resolution.hackclub.com/ref/ysws-catalog"
+        ]
+      }
+    },
+    {
+      "title": "Swirl — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "Ship a static website (html + css) that has a Scoop, and get a grant for ice cream to enjoy! Scoops are made up of groups of three html / css features that add something of value to the website. Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "All teenagers 18 and under, anywhere. Free to join.",
+      "minimum_age": null,
+      "maximum_age": 18,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://swirl.hackclub.com",
+      "application_url": "https://swirl.hackclub.com",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "worldwide",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://swirl.hackclub.com",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as a limited-time programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://swirl.hackclub.com"
+        ]
+      }
+    },
+    {
+      "title": "HackCraft — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "Join HackCraft to build and ship your own Minecraft mod. Access exclusive resources and a supportive community. Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Hack Club YSWS programmes are for teenagers; this page did not state the age rule on the check date.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://hackcraft.hackclub.com/",
+      "application_url": "https://hackcraft.hackclub.com/",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://hackcraft.hackclub.com/",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as a limited-time programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://hackcraft.hackclub.com/"
+        ]
+      }
+    },
+    {
+      "title": "Fusering — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "Design a keyring, get your keyring and a carabiner to hang it from! Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Aged 13–18. Free to join.",
+      "minimum_age": 13,
+      "maximum_age": 18,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://fusering.hackclub.com",
+      "application_url": "https://fusering.hackclub.com",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://fusering.hackclub.com",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as a limited-time programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://fusering.hackclub.com"
+        ]
+      }
+    },
+    {
+      "title": "BakeBuild — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "You ship : A CAD model of a cookie cutter, we ship : A 3D printed model of your custom cookie cutter & cookies! Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Hack Club YSWS programmes are for teenagers; this page did not state the age rule on the check date.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://bakebuild.hackclub.com/",
+      "application_url": "https://bakebuild.hackclub.com/",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://bakebuild.hackclub.com/",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as a limited-time programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://bakebuild.hackclub.com/"
+        ]
+      }
+    },
+    {
+      "title": "Pixl — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "Explore the open world, meet characters, make hardware and software sidequests for them! Get niche prizes and stuff according to the sidequests! Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Hack Club YSWS programmes are for teenagers; this page did not state the age rule on the check date.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://pixl.hackclub.com",
+      "application_url": "https://pixl.hackclub.com",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "rolling",
+        "student_eligibility": "unknown",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://pixl.hackclub.com",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as an ongoing (indefinite) programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://pixl.hackclub.com"
+        ]
+      }
+    },
+    {
+      "title": "Jame Gam — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "Join a game jam every month with us, earn an awesome prize! Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "A community of teenage game developers. Free to join.",
+      "minimum_age": null,
+      "maximum_age": 18,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://jamegam.hackclub.com/",
+      "application_url": "https://jamegam.hackclub.com/",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "rolling",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://jamegam.hackclub.com/",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as an ongoing (indefinite) programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://jamegam.hackclub.com/"
+        ]
+      }
+    },
+    {
+      "title": "iplace — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "A collaborative canvas of websites, made by Hack Clubbers! Get hosting and domain credits! Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Hack Club YSWS programmes are for teenagers; this page did not state the age rule on the check date.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://iplace.hackclub.com/",
+      "application_url": "https://iplace.hackclub.com/",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "rolling",
+        "student_eligibility": "unknown",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://iplace.hackclub.com/",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as an ongoing (indefinite) programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://iplace.hackclub.com/"
+        ]
+      }
+    },
+    {
+      "title": "Hacklet v2 — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "Build a bookmarklet, get food for your club! Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Hack Club YSWS programmes are for teenagers; this page did not state the age rule on the check date.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://hacklet.hackclub.com",
+      "application_url": "https://hacklet.hackclub.com",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "rolling",
+        "student_eligibility": "unknown",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://hacklet.hackclub.com",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as an ongoing (indefinite) programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://hacklet.hackclub.com"
+        ]
+      }
+    },
+    {
+      "title": "Waffles — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "You ship a website using HTML CSS and JavaScript, and get Waffles!!! Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Hack Clubbers under the age of 19. Free to join.",
+      "minimum_age": null,
+      "maximum_age": 18,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://waffles.hackclub.com/",
+      "application_url": "https://waffles.hackclub.com/",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "rolling",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://waffles.hackclub.com/",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as an ongoing (indefinite) programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://waffles.hackclub.com/"
+        ]
+      }
+    },
+    {
+      "title": "Terminal Craft v5 — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "Build and publish your own terminal program to earn $4/hr Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Hack Club YSWS programmes are for teenagers; this page did not state the age rule on the check date.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://terminalcraft.hackclub.com",
+      "application_url": "https://terminalcraft.hackclub.com",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "rolling",
+        "student_eligibility": "unknown",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://terminalcraft.hackclub.com",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as an ongoing (indefinite) programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://terminalcraft.hackclub.com"
+        ]
+      }
+    },
+    {
+      "title": "Carnival — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "Build an extension, plugin, or widget get prizes Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Hack Club YSWS programmes are for teenagers; this page did not state the age rule on the check date.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://carnival.hackclub.com/",
+      "application_url": "https://carnival.hackclub.com/",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "rolling",
+        "student_eligibility": "unknown",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://carnival.hackclub.com/",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as an ongoing (indefinite) programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://carnival.hackclub.com/"
+        ]
+      }
+    },
+    {
+      "title": "Sprig — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "Build a JS game and play it on your own console. Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Teenagers (or younger) receive a free Sprig console; others can only submit. Free to join.",
+      "minimum_age": null,
+      "maximum_age": 18,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://sprig.hackclub.com/",
+      "application_url": "https://sprig.hackclub.com/",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "rolling",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://sprig.hackclub.com/",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as an ongoing (indefinite) programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://sprig.hackclub.com/"
+        ]
+      }
+    },
+    {
+      "title": "Boba Drops — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "Build a website and get boba! Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "High schoolers. Free to join.",
+      "minimum_age": null,
+      "maximum_age": 18,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://boba.hackclub.com/",
+      "application_url": "https://boba.hackclub.com/",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "rolling",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://boba.hackclub.com/",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as an ongoing (indefinite) programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://boba.hackclub.com/"
+        ]
+      }
+    },
+    {
+      "title": "Storyboard — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "Make a themed visual novel, earn prizes! Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Teens 18 and under. Free to join.",
+      "minimum_age": null,
+      "maximum_age": 18,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://storyboard.hackclub.com/",
+      "application_url": "https://storyboard.hackclub.com/",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "rolling",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://storyboard.hackclub.com/",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as an ongoing (indefinite) programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://storyboard.hackclub.com/"
+        ]
+      }
+    },
+    {
+      "title": "Toppings — Hack Club You Ship, We Ship",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons",
+        "Workshops"
+      ],
+      "description": "You ship an interactive website using framework-less JavaScript, we ship you a grant to an ice cream parlor. Build and ship a project online; approved submissions earn the listed rewards.",
+      "eligibility": "Hack Club YSWS programmes are for teenagers; this page did not state the age rule on the check date.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://toppings.hackclub.com/",
+      "application_url": "https://toppings.hackclub.com/",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club YSWS Catalog",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "rolling",
+        "student_eligibility": "unknown",
+        "application_access": "available",
+        "discovered_url": "https://ysws.hackclub.com/",
+        "official_url": "https://toppings.hackclub.com/",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed as an ongoing (indefinite) programme in Hack Club's official YSWS catalog. Official programme site loaded on 2026-10-01.",
+        "evidence_urls": [
+          "https://toppings.hackclub.com/"
+        ]
+      }
+    },
+    {
+      "title": "Sentinel Hacks — High School Hackathon",
+      "organisation": "Sentinel Hacks",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "Free hackathon for high school students in Sunnyvale with multiple tracks; register by RSVP on Luma.",
+      "eligibility": "High school students. Free.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": "2027-01-09",
+      "end_date": "2027-01-09",
+      "source_url": "https://www.sentinelhacks.tech/",
+      "application_url": "https://www.sentinelhacks.tech/",
+      "host_country": "US",
+      "location": "Sunnyvale, California, USA",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club Hackathons",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://hackathons.hackclub.com/",
+        "official_url": "https://www.sentinelhacks.tech/",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed on Hack Club’s high school hackathon directory; official event site loaded on 2026-10-01. No separate closing date published.",
+        "evidence_urls": [
+          "https://www.sentinelhacks.tech/"
+        ]
+      }
+    },
+    {
+      "title": "Telos Hacks — High School Hackathon",
+      "organisation": "Telos Hacks",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "24-hour free build sprint for Bay Area high school builders.",
+      "eligibility": "High school students of all skill levels. 100% free.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": "2027-04-17",
+      "end_date": "2027-04-18",
+      "source_url": "https://hack.telost.org",
+      "application_url": "https://hack.telost.org",
+      "host_country": "US",
+      "location": "San Francisco, California, USA",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club Hackathons",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://hackathons.hackclub.com/",
+        "official_url": "https://hack.telost.org",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed on Hack Club’s high school hackathon directory; official event site loaded on 2026-10-01. No separate closing date published.",
+        "evidence_urls": [
+          "https://hack.telost.org"
+        ]
+      }
+    },
+    {
+      "title": "Pixel Forge Mega Jam 2027",
+      "organisation": "Pixel Forge",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "Online game jam with a free career workshop for aspiring game makers; completion recognition for every participant.",
+      "eligibility": "Age eligibility not stated on the homepage.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": "2026-11-28",
+      "end_date": "2026-12-08",
+      "source_url": "https://pixelforgejam.org/",
+      "application_url": "https://pixelforgejam.org/",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club Hackathons",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "available",
+        "discovered_url": "https://hackathons.hackclub.com/",
+        "official_url": "https://pixelforgejam.org/",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official site shows Registration open.",
+        "evidence_urls": [
+          "https://pixelforgejam.org/"
+        ]
+      }
+    },
+    {
+      "title": "MathHacks 2.0 — Toronto High School Hackathon",
+      "organisation": "MathHacks",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "Free, beginner-friendly, learning-focused hackathon at York University’s Lassonde School of Engineering, 8am Saturday to 8pm Sunday.",
+      "eligibility": "High school students; no programming experience required.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": "2026-10-17",
+      "end_date": "2026-10-18",
+      "source_url": "https://mathhacks.ca/",
+      "application_url": "https://docs.google.com/forms/d/e/1FAIpQLSfFniTU-WaIQq7ldDA6q1zqVRHHX82vbjeQ5FOgetaW963qIQ/viewform",
+      "host_country": "CA",
+      "location": "Bergeron Centre, York University, Toronto, Canada",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club Hackathons",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://hackathons.hackclub.com/",
+        "official_url": "https://mathhacks.ca/",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed on Hack Club’s high school hackathon directory; official event site loaded on 2026-10-01. No separate closing date published.",
+        "evidence_urls": [
+          "https://mathhacks.ca/"
+        ]
+      }
+    },
+    {
+      "title": "Capitol — Hack Club Hackathon in Washington, D.C.",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "Free hackathon for 60 US teenagers in Washington, D.C., with food, merch and need-based travel stipends.",
+      "eligibility": "High school students aged 13–18 who live in the United States.",
+      "minimum_age": 13,
+      "maximum_age": 18,
+      "education_levels": [
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": "2026-10-09",
+      "source_url": "https://capitol.hackclub.com/",
+      "application_url": "https://capitol.hackclub.com/",
+      "host_country": "US",
+      "location": "Washington, D.C., USA",
+      "format": "in_person",
+      "eligibility_scope": "countries",
+      "eligible_countries": [
+        "US"
+      ],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club Hackathons",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "unknown",
+        "discovered_url": "https://hackathons.hackclub.com/",
+        "official_url": "https://capitol.hackclub.com/",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "US-resident teenagers 13–18 only.",
+        "notes": "Listed on Hack Club’s high school hackathon directory; official event site loaded on 2026-10-01. No separate closing date published.",
+        "evidence_urls": [
+          "https://capitol.hackclub.com/"
+        ]
+      }
+    },
+    {
+      "title": "PHANTOM — Hack Club Escape Room Hackathon",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "Escape-room themed hackathon for teens in Philadelphia.",
+      "eligibility": "Hack Club events are for high schoolers; age rule not shown on the homepage.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": "2027-02-12",
+      "end_date": "2027-02-14",
+      "source_url": "https://phantom.hackclub.com",
+      "application_url": "https://phantom.hackclub.com",
+      "host_country": "US",
+      "location": "Philadelphia, Pennsylvania, USA",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club Hackathons",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "available",
+        "discovered_url": "https://hackathons.hackclub.com/",
+        "official_url": "https://phantom.hackclub.com",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed on Hack Club’s high school hackathon directory; official event site loaded on 2026-10-01. No separate closing date published.",
+        "evidence_urls": [
+          "https://phantom.hackclub.com"
+        ]
+      }
+    },
+    {
+      "title": "VNU Hack '26 — Connect The Dots",
+      "organisation": "Tudor Vianu National College of Computer Science",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "Free high school hackathon in Bucharest; a 7-page rulebook (in Romanian) and signed participation agreement are required.",
+      "eligibility": "High school students. Under-18s need a parent/guardian-signed agreement.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": "2026-10-04",
+      "end_date": "2026-10-05",
+      "source_url": "https://vnuhack.com/",
+      "application_url": "https://docs.google.com/forms/d/e/1FAIpQLSfp1t2XlcI4tMgKKMb-kbQm5jU8KCFNKUOtS_QG9iipJY6OtA/viewform",
+      "host_country": "RO",
+      "location": "Bucharest, Romania",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club Hackathons",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://hackathons.hackclub.com/",
+        "official_url": "https://vnuhack.com/",
+        "last_checked_at": "2026-10-01",
+        "fees": null,
+        "parental_consent": "Under-18 agreement must be signed by a parent or guardian.",
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed on Hack Club’s high school hackathon directory; official event site loaded on 2026-10-01. No separate closing date published.",
+        "evidence_urls": [
+          "https://vnuhack.com/"
+        ]
+      }
+    },
+    {
+      "title": "Haven — Hack Club Teen Game Jam in 200+ Cities",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "The world’s largest teen game jam: make a video game with friends at a local event, with free food and prizes, across 200+ cities.",
+      "eligibility": "Ages 13–18; no prior experience required.",
+      "minimum_age": 13,
+      "maximum_age": 18,
+      "education_levels": [
+        "Secondary School",
+        "High School"
+      ],
+      "application_deadline": null,
+      "start_date": "2026-11-14",
+      "end_date": "2026-11-15",
+      "source_url": "https://haven.hackclub.com",
+      "application_url": "https://haven.hackclub.com",
+      "host_country": null,
+      "location": "200+ cities worldwide",
+      "format": "in_person",
+      "eligibility_scope": "worldwide",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club Hackathons",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://hackathons.hackclub.com/",
+        "official_url": "https://haven.hackclub.com",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed on Hack Club’s high school hackathon directory; official event site loaded on 2026-10-01. No separate closing date published.",
+        "evidence_urls": [
+          "https://haven.hackclub.com"
+        ]
+      }
+    },
+    {
+      "title": "Snowglobe — All-Girls High School Hackathon",
+      "organisation": "Hack Club",
+      "category": "Hackathons",
+      "categories": [
+        "Hackathons"
+      ],
+      "description": "A gathering of teen girls who are technologists and creatives at Notion HQ, San Francisco; the YSWS track lets you code 40 hours to earn the trip.",
+      "eligibility": "All girls aged 13–18; attendees come from all over the world.",
+      "minimum_age": 13,
+      "maximum_age": 18,
+      "education_levels": [
+        "High School"
+      ],
+      "application_deadline": "2026-11-20",
+      "start_date": "2026-11-20",
+      "end_date": "2026-11-22",
+      "source_url": "https://snowglobe.hackclub.com",
+      "application_url": "https://snowglobe.hackclub.com",
+      "host_country": "US",
+      "location": "Notion HQ, San Francisco, USA",
+      "format": "in_person",
+      "eligibility_scope": "worldwide",
+      "eligible_countries": [],
+      "travel_required": true,
+      "source_type": "ai_fetched",
+      "source_name": "Hack Club Hackathons",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://hackathons.hackclub.com/",
+        "official_url": "https://snowglobe.hackclub.com",
+        "last_checked_at": "2026-10-01",
+        "fees": "Free.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Listed on Hack Club’s high school hackathon directory; official event site loaded on 2026-10-01. No separate closing date published.",
+        "evidence_urls": [
+          "https://snowglobe.hackclub.com"
+        ]
+      }
+    }
+  ]
+}

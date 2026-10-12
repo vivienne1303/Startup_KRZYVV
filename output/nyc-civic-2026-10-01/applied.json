@@ -1,0 +1,22 @@
+{
+  "applied": true,
+  "as_of": "2026-10-01",
+  "duplicate_check": "Live database",
+  "added": [
+    {
+      "id": "32acd95e-aed6-4efb-b91b-065ff5f9635f",
+      "title": "Care Beyond Memory - Potong Pasir (22 Aug 26 to 28 Nov 26)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "228fa18d-d51c-4fed-a644-98ad9c3cb783",
+      "title": "TimeSnaps! — Youth Corps Heritage Befriending",
+      "labels": [
+        "Open now"
+      ]
+    }
+  ],
+  "merged": []
+}

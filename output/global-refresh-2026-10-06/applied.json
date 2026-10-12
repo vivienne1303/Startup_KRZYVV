@@ -1,0 +1,59 @@
+{
+  "applied": true,
+  "as_of": "2026-10-06",
+  "duplicate_check": "Live database",
+  "added": [
+    {
+      "id": "f26d27a4-3a2c-45d7-8803-e042062fa243",
+      "title": "Aldevere Research Question Prize - November 2026",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "046a60d6-63a7-4820-8784-12ca4ebb16b0",
+      "title": "International Public Policy Forum 2026-27",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "83f6d679-5688-4545-b372-1aa714fdac6e",
+      "title": "Immerse Education Essay Competition 2027 - October Entry Round",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "23c11bec-dad7-44ea-89df-78b7982bebdb",
+      "title": "Missing Maps - Remote Humanitarian Mapping",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "efdda6a6-9587-476a-bf9d-e8744e2b39f1",
+      "title": "Translators without Borders - Remote Language Volunteering",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "85a9bc7a-118f-4f37-bf44-ac75aeb72534",
+      "title": "Smithsonian Transcription Center - Digital Volunteering",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "d7206bc3-594c-4689-a999-5abe3e428733",
+      "title": "Distributed Proofreaders - Online E-book Proofreading",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    }
+  ],
+  "merged": []
+}

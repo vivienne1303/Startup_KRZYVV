@@ -1,0 +1,75 @@
+{
+  "applied": true,
+  "as_of": "2026-10-06",
+  "duplicate_check": "Live database",
+  "added": [
+    {
+      "id": "46574026-1429-4601-81a8-c0fcfd7dde7d",
+      "title": "Beyond the Label - LASALLE Booth Facilitators (21 October 2026)",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "87b845a6-78ff-48fb-b3ee-d75fb590eed4",
+      "title": "Deepavali Home Cleaning - Marsiling Home Refreshers 2026",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "c56e7f2d-fb27-447e-bd41-bf7a3e7efb2a",
+      "title": "Beyond the Label - Marina Bay Sands Booth Facilitators 2026",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "11a34487-6987-450a-9474-5a3a4b7125e7",
+      "title": "Woodlands Christmas Carnival 2026 - Operational Volunteers",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "1603282e-f807-4187-aeed-1b2f4555f07e",
+      "title": "Young Hearts - Tutor Aide, Buddy Mentor and Event Befriender",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "2ade6d7f-a794-4dbb-9aff-ff16d8496509",
+      "title": "MINDS - Service and Event Volunteering",
+      "labels": [
+        "Check deadline",
+        "Check eligibility",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "c0dfd149-653e-4005-9147-84ac46b17e35",
+      "title": "UnLitter Red Dot - School and Community Group Clean-ups",
+      "labels": [
+        "Open now",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "5f41d348-8358-4eee-9457-5366f6e93f54",
+      "title": "NLB - Library and Archives Volunteer Registration",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "93c16aef-1b9b-4195-a11d-3f9d9256df69",
+      "title": "SOS CareText - Service-based Volunteer",
+      "labels": [
+        "Open now"
+      ]
+    }
+  ],
+  "merged": []
+}

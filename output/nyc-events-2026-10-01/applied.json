@@ -1,0 +1,568 @@
+{
+  "applied": true,
+  "as_of": "2026-10-01",
+  "duplicate_check": "Live database",
+  "added": [
+    {
+      "id": "c3744aae-d436-469a-b32c-3194286a7904",
+      "title": "Get Ready with Me: First Job Wellbeing Starter Pack Workshop (29 Oct 2026)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e175a9c5-7c18-403e-9ffe-744826819e14",
+      "title": "Football with VOX (4 Dec 2026)",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "b152112d-aaf1-45aa-8138-ca600ed2a0f1",
+      "title": "Career Exploration Journey (Non-profit sector)",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "bfb4333a-6e36-4353-a53a-9b0258450d21",
+      "title": "Football with VOX (2 Oct 2026)",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "b1db7a47-df81-4699-86a1-b0578816f8f4",
+      "title": "Football with VOX (6 Nov 2026)",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "576f6052-8ecd-4deb-9d6a-5fa97bc85a88",
+      "title": "Communi-Play: Slime Making",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "52023b54-dcec-430e-9be3-fe1fc0da7a13",
+      "title": "AICON 2026: The AI for Everyone Festival",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "feb045c5-056c-4769-adf5-1aa01e8aec87",
+      "title": "Communi-Play: Hot Iron-Bead Making",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "b55f0458-c668-442c-b214-9d38b70ddc2c",
+      "title": "Career Panel: Travel & Hospitality",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "c85d5a09-c49e-4c14-8fcc-237c2f8fc83e",
+      "title": "Work Simulation Program -- Oct'26",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "db128eb9-1244-481d-86fb-cffe55025dac",
+      "title": "Get Ready with Me: Personalised support for work freshies",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a4d62021-5c9c-4374-b6cf-fc6ef973351b",
+      "title": "Digital Resilience for Youths in Transition",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "75d73c40-6cc2-4f91-8f59-085c98104da4",
+      "title": "Career Panel: Social Impact & NGOs",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "20e6ed53-ffe4-4449-a07a-506e543017ac",
+      "title": "Get Ready with Me: First Job Wellbeing Starter Pack Workshop (22 Oct 2026)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f06262c1-b997-4cc2-9d84-fc65aa4ee7d9",
+      "title": "Career Panel: Engineering & Robotics",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "051f240d-91bf-44ba-908e-6a0000544f35",
+      "title": "KPMG Flash Mentoring Programme (Session 10)",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "03b5a2f9-afbf-4e17-85ad-96a68b660d0e",
+      "title": "KPMG Flash Mentoring Programme (Session 12)",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "f04c14fd-efa3-4514-bc30-bb237c04c3e0",
+      "title": "An Intergenerational Book Club - November Meet Up",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "6ca39671-8c77-40f3-a845-1b717292a414",
+      "title": "KPMG Flash Mentoring Programme (Session 11)",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "437c2138-8edf-4bad-b803-48cdc3d9aeda",
+      "title": "An Intergenerational Book Club - December Meet Up",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "26d863aa-4f9c-4ceb-a504-6e23a420f01c",
+      "title": "The Co. Explores: The Deep Sea",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "7bc69f62-9132-4a25-b597-5e8870c59ffd",
+      "title": "Curious about Healthcare? Experiential Learning Journey with Ng Teng Fong Centre for Healthcare Innovation",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "d5d5010a-21e5-492a-8ac6-3d9f5bc109e7",
+      "title": "MentorsHub Mentoring Programme",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "8926faab-ea47-4c43-92e2-d0722d40ec02",
+      "title": "RISE & THRIVE Workshop — Fyreflyz",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "3b44291d-a4b3-4656-882f-88c83a213517",
+      "title": "Rummy 0' with seniors! (12 Nov 2026, 2:00PM)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "5b5477ba-fe5e-4c34-a46b-f240350622bb",
+      "title": "Introduction to Equity Analysts with John Rachmat",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "eb0f2a23-e93e-41a2-9213-8e929c5a7dee",
+      "title": "Rummy 0' with seniors! (8 Oct 2026, 2:00PM)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "8537495d-9725-4904-80d8-7c28bfccd906",
+      "title": "Rummy 0' with seniors! (10 Dec 2026)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b2406b86-cac3-4814-a163-d439251624d3",
+      "title": "Rummy 0' with seniors! (8 Oct 2026, 4:00PM)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f73a1b0f-fac7-404b-9684-d76a16a4c9cb",
+      "title": "Rummy 0' with seniors! (12 Nov 2026, 4:00PM)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "74d3b5de-d878-43d6-8488-6fddb3dccaf6",
+      "title": "100% Unfiltered - Trivia League: F1 Edition",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "ba7a4221-648a-4a98-9924-e42be165e363",
+      "title": "side quest club pilot — Our Playces",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "a74269df-19e8-4c6f-98f1-f0f912899c9d",
+      "title": "Industry Connects - Visit to CyberSafe (20 Oct 2026)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "d9700148-7653-441b-8bdc-c9006dc3d894",
+      "title": "Board Games @ RVI (2 Oct 2026)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6140464e-3885-4e69-b2c6-a99dba977dcd",
+      "title": "Industry Connects - Visit to Terra Systems (20 Oct 2026)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a0561052-5e1d-4cd4-be39-a94384f8dd65",
+      "title": "Conversation Circle @ RVI — River Valley Irregulars",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "29f9d21d-7747-4f1f-b1fd-ca7b76e9d17a",
+      "title": "Industry Connects - Visit to CyberSafe (19 Oct 2026)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "023a03bc-d85e-4180-bbfc-73afe05916e3",
+      "title": "Industry Connects - Visit to TrendAI (19 Oct 2026)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b54df2c4-2489-4cb4-9146-538cec8a1b05",
+      "title": "Industry Connects - Visit to TrendAI (20 Oct 2026)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "d904c2ee-6ea3-481b-8917-248a8def5d8f",
+      "title": "Industry Connects - Visit to Terra Systems (19 Oct 2026)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "eccbcb33-1627-43cf-b873-ea42628bffa4",
+      "title": "Pickleball Hangout — TOUCH Community Services",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "ea8b84ed-1f81-4a69-b6e3-4548dea65cd7",
+      "title": "Convos Over Art @Bida.Community",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "6b92750a-0754-4c31-b1fd-035a3ed5e3f0",
+      "title": "Wealth and Joy - your life simulation",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "04bb7d56-a515-4b58-923c-4fef8c1c3228",
+      "title": "Run Club — TOUCH Community Services",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "20f97dd1-de35-4ac0-965d-2d24c35f859e",
+      "title": "Air Plant Terrarium Workshop (17 Oct 2026)",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "03807bd9-a154-428c-bd3d-ae522f041cd0",
+      "title": "Museum Workings - Career Human Library at the National Museum of Singapore",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "0f83e6a8-4155-44ce-a3c3-79a87ba95cbd",
+      "title": "Air Plant Terrarium Workshop (9 Oct 2026)",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "fb3edf96-1234-43ea-97a9-8acc8202e717",
+      "title": "Cybersecurity: The Art of Digital Defence",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "8b65ad4f-c474-41ff-9040-4a14880ca9eb",
+      "title": "Career Compass: Youth Group Mentoring 🚀",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4d6d177c-d226-4b4d-8e6f-f69e2c4a4c42",
+      "title": "SCS TECHCONNECT 2026 (STUDENT EDITION)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "bfccad73-690a-4e23-b70d-513b9ebf07b5",
+      "title": "Career Exploration Journey (Work Attachment) at Campus Legends",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e66d5d6a-0a24-4cd4-87c0-59bbf1f7f121",
+      "title": "M(AI) Future Workplace (Career Compass: Meet-the-Expert Session)",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "ceea38f4-ab9a-439a-bd58-3526ffe821c1",
+      "title": "Inside Social Services with Blended Concept: People, Programmes & Purpose",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "efcd4d87-35a6-4b5e-b278-498b1aba542b",
+      "title": "Financial Analyst IRL: Model the Business. Make the Call.",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "a89ee0c9-3c4d-4bd9-81df-95040a39705f",
+      "title": "etc. Halloween Event: Step into the tavern and become an adventurer for the day!",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "2bd3ca52-7508-4cf5-8c42-61a3c07ee961",
+      "title": "Digital Career Kopi Chat with Government Tech Leaders",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "3a98f217-ef53-44b3-93b5-195addadd194",
+      "title": "Maritime Youth Quest — Maritime and Port Authority of Singapore (MPA)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "40cfcf2a-d187-4f00-bbca-a68c28b222d5",
+      "title": "Lunch Chum: October — Youth Guidance Outreach Services",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9464b811-3aeb-4568-bef9-20332f495ba4",
+      "title": "Voices Of Asia iLEAD Mentoring Series | Session 1: Becoming a Future-Ready Leader",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "397dd280-d24e-4a22-b940-29eee0dc873e",
+      "title": "[X] by Kita - Bring Your Junk!",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "d6d5ddb8-1ee1-4311-b494-1abc6cccb8fe",
+      "title": "Chess Tournament — GUILD Asia",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "c3f41b87-e510-45a8-8066-bd9837e2a790",
+      "title": "Board Games @ RVI (23 Oct 2026)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6eeaf336-32bf-4258-bdd8-1c659c3410db",
+      "title": "Board Games @ RVI (30 Oct 2026)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f62dba14-a6ac-45d6-a29d-6669f349549e",
+      "title": "Speedcubing Competition — GUILD Asia",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "4287309f-1c1c-4b35-ac80-8bed930c29fb",
+      "title": "More Than A Game @ Campus Game Fest",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "c2a70e95-b3e8-457b-bf80-0faa4750a193",
+      "title": "Ironman Helmet Making Workshop",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "6ff5f026-91a5-455b-ac8d-e6ff5f963912",
+      "title": "100% Unfiltered: How to Pitch Yourself (Without Wanting to Hide Under the Table)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "269168e1-e826-4833-bd82-618d70e6129a",
+      "title": "Paws and Reflect — Care Corner Singapore Ltd",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "0398e106-4ba8-4c72-84b1-73ba49e03140",
+      "title": "[X] by Kita - Neon Glow Flow Arts Jam",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "f128641b-4f10-4b00-a146-50f3c57f3af3",
+      "title": "10/10 Community Hangout Party",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "1a08fd4a-56be-4267-972c-b446a1ede656",
+      "title": "100% Unfiltered: Trivia League — 2nd Gen K-pop Edition",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "00200a9d-d8d9-4788-b998-a4ba237619c5",
+      "title": "Wax Sachet — Care Corner Singapore Ltd",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "7febef79-c930-4162-ba36-6c1129eaea84",
+      "title": "Tote Bag Painting: Convos Over Art @Bida.Community",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "f6d5924f-4a74-4741-a1c2-65bcfc0f7a4f",
+      "title": "100% Unfiltered: How to Human — How to Decide (and Say No)",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    }
+  ],
+  "merged": []
+}

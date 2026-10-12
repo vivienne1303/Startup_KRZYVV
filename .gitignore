@@ -1,6 +1,11 @@
 .env
 node_modules
 debug.log
+<<<<<<< HEAD
 
 # Generated browser profiles
 /mobile app/qa/edge*/
+=======
+output/**/preview.log
+output/**/preview-error.log
+>>>>>>> origin/main

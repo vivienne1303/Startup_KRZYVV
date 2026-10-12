@@ -1,0 +1,311 @@
+{
+  "applied": true,
+  "as_of": "2026-10-01",
+  "duplicate_check": "Live database",
+  "added": [
+    {
+      "id": "8fcc967d-5f84-4a53-ad34-2c318bcccf9e",
+      "title": "Rowdy Hacks — Student Hackathon",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "9408440c-2a9a-4107-95dc-dc8598afb8c4",
+      "title": "HackNC — Student Hackathon",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "7af6780d-1f30-4740-bb75-0b88c52d462b",
+      "title": "Hacklanta — Student Hackathon",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "2188c0ea-fc55-4915-930d-29b54c28d3b2",
+      "title": "Palmetto Hacks — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "43e25307-60df-458c-99bd-c359af7b936b",
+      "title": "HackRU — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "bf981897-980e-4904-b49c-0fd151c971b1",
+      "title": "Knight Hacks IX — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "16466190-1102-47e1-8207-7fc6f49c5f24",
+      "title": "Innohacks 4.0 — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "f06dbaab-a5c4-4105-b00d-ac341eb5e71b",
+      "title": "Hack the Valley — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "0463a634-2a06-45a5-b23d-02c8f9f1ccdf",
+      "title": "DubHacks — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "34b53ab8-d458-4cec-be1a-2d6a61c06f8e",
+      "title": "IKU Womxn in STEM Hackathon — Student Hackathon",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "09421827-125a-463d-b00e-12f0b7f52d53",
+      "title": "Technica Hacks — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "d2e68a51-0e74-4e7f-bbf4-459c8820b650",
+      "title": "Cal Hacks 13.0 — Student Hackathon",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "cae941e0-0d90-4692-8d14-46b6bf57324c",
+      "title": "SBUHacks — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "c32d2af5-462a-4c82-ad36-e1cd562905e9",
+      "title": "OxHack '26 — Oxford Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "f504ebc4-65db-4fd5-afe6-b0ef21a2ffd3",
+      "title": "YCP Hacks — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "1db53116-94e1-4214-be9e-f344ee51116d",
+      "title": "HackUTD 2026: Zero Day — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "94c11556-88a2-4147-a487-90813af5c41c",
+      "title": "MakeCU — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "e3fa3944-ab24-4c0d-8193-f5d5984d4eec",
+      "title": "HackRPI 2026 — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "7a1fe044-d58a-4cfe-953d-e31cef613c96",
+      "title": "Sheridan Datathon 2026 — Student Hackathon",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "8c144f1d-c6a0-4a20-99df-5a8a24b4c673",
+      "title": "HackCamp — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "ee0c2017-8baa-46f0-8a6e-bb25bbc6b575",
+      "title": "MakeUC — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "37e712b9-f8a6-4d14-bb93-ca4a4a876761",
+      "title": "TAMU Datathon — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "e71534e0-df11-44de-9b6b-f39ae2356721",
+      "title": "Emory Hacks — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "167142ad-8b1e-4335-b14c-f356fcffd3f7",
+      "title": "UniHack — Student Hackathon",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "ec6eafed-4fe4-480c-bb72-1f624e15d894",
+      "title": "HackUMass XIV — Student Hackathon",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "356690df-cf85-4736-85f3-86cc3589ffb9",
+      "title": "Hoya Hacks 2027 — Student Hackathon",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "819c65a9-7057-4753-bfd2-80797dddeaa2",
+      "title": "Hack_NCState 2027 — Student Hackathon",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "d9c8ef8a-2079-4d67-8f74-3680d19dd2ba",
+      "title": "UGAHacks 12 — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "8602e5e0-83be-4890-a732-340170311f83",
+      "title": "HackHERS 2027 — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "5753a376-0158-4d77-bc3c-256c72d3efd9",
+      "title": "Kent Hack Enough — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "3087e6c4-4936-493e-b56b-a7f17d5a351c",
+      "title": "WEHack — Student Hackathon",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "4fdb00e7-e4dc-415b-bc34-db02ae239533",
+      "title": "LA Hacks 27 — Student Hackathon",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "e516d9f1-575b-4aec-a3c2-96c985323655",
+      "title": "nwHacks 2027 — Student Hackathon",
+      "labels": [
+        "Upcoming",
+        "Check eligibility",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "ff63d0f4-a24c-4c26-b508-9306afe506ca",
+      "title": "Hacklytics 2027 — Student Hackathon",
+      "labels": [
+        "Upcoming",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "cd7fad08-f47d-4e8c-9ef7-4e79ad9c9a6f",
+      "title": "SF Hacks 2027 — Student Hackathon",
+      "labels": [
+        "Upcoming"
+      ]
+    },
+    {
+      "id": "1c310b93-a00a-4b6f-890c-6b72519af336",
+      "title": "HenHacks 2027 — Student Hackathon",
+      "labels": [
+        "Upcoming",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "237d6ffd-4c22-49a2-9093-20fe078970b2",
+      "title": "MakeUofT 2027 — Student Makeathon",
+      "labels": [
+        "Upcoming",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "da07d43b-81f9-4701-9fde-295d776942db",
+      "title": "SpartaHack 12 — Student Hackathon",
+      "labels": [
+        "Upcoming",
+        "Check eligibility",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "af5bfa22-241c-498f-b5e3-798145116ac8",
+      "title": "Hack@Brown 2027 — Student Hackathon",
+      "labels": [
+        "Upcoming",
+        "Check eligibility"
+      ]
+    }
+  ],
+  "merged": []
+}
