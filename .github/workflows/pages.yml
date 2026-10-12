@@ -28,10 +28,29 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: mobile app/package-lock.json
+
+      - name: Install mobile build dependencies
+        working-directory: mobile app
+        run: npm ci
+
+      - name: Test mobile app
+        working-directory: mobile app
+        run: npm run check
+
+      - name: Build and verify website plus mobile preview
+        working-directory: mobile app
+        run: npm run pages:check
+
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: .pages-site
 
       - name: Deploy to GitHub Pages
         id: deployment

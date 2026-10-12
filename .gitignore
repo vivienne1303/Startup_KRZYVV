@@ -6,3 +6,4 @@ output/**/preview-error.log
 
 # Generated browser profiles
 /mobile app/qa/edge*/
+/.pages-site/

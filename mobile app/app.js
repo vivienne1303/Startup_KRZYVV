@@ -14,7 +14,7 @@ if (!window.Capacitor?.isNativePlatform()) {
     installPrompt = null;
     installButton.hidden = true;
   });
-  if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  if (!window.TEENLAUNCH_WEB_PREVIEW && 'serviceWorker' in navigator && location.protocol !== 'file:') {
     navigator.serviceWorker.register('sw.js').catch(() => {});
   }
 }

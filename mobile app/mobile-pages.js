@@ -7,5 +7,5 @@ links.forEach(([icon,label,path])=>{const a=document.createElement('a');a.href=n
 document.body.append(nav);
 const setHome=()=>document.querySelectorAll('.brand').forEach(a=>a.href=new URL('index.html',root).href);
 setHome();new MutationObserver(setHome).observe(document.body,{childList:true,subtree:true});
-if(!window.Capacitor?.isNativePlatform()&&'serviceWorker' in navigator&&location.protocol!=='file:')navigator.serviceWorker.register(new URL('sw.js',root)).catch(()=>{});
+if(!window.TEENLAUNCH_WEB_PREVIEW&&!window.Capacitor?.isNativePlatform()&&'serviceWorker' in navigator&&location.protocol!=='file:')navigator.serviceWorker.register(new URL('sw.js',root)).catch(()=>{});
 })();

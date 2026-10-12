@@ -13,7 +13,7 @@
     window.history.replaceState({}, "", window.location.pathname);
   }
   const initialMode = params.get("mode") === "register" ? "register" : "login";
-  const returnTo = params.get("returnTo") || "../index.html";
+  const returnTo = params.get("returnTo") || "../../index.html";
 
   const tabs = document.querySelectorAll("[data-auth-tab]");
   const forms = document.querySelectorAll("[data-auth-form]");
@@ -111,7 +111,7 @@
     const isCareerTest = /career_dna_test\.html/i.test(returnTo);
     const isExplicitRetake = /career_dna_test\.html\?[^#]*\bretake=true\b/i.test(returnTo);
     if (new URL(returnTo, location.href).origin !== location.origin || !returnTo || /(?:^|\/)auth\.html(?:[?#]|$)/i.test(returnTo) || (isCareerTest && !isExplicitRetake)) {
-      return "../index.html";
+      return "../../index.html";
     }
     return returnTo;
   };

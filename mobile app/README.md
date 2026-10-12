@@ -2,7 +2,17 @@
 
 This folder contains an independent Capacitor Android project. The original website remains at the repository root. The existing mobile home screen, bottom navigation, copied website pages and feature scripts are reused.
 
-Nothing has been published or deployed. The Android project is prepared, but an APK has not been compiled on this machine because Android Studio, the Android SDK and a Java runtime were not found.
+The Android project is prepared, but an APK has not been compiled on this machine because Android Studio, the Android SDK and a Java runtime were not found. The browser preview is built separately for GitHub Pages as described below.
+
+## Public mobile browser preview
+
+Share `https://teenlaunch.app/mobile%20app/` (the existing domain redirects to `https://www.teenlaunch.app/mobile%20app/`). Users can open it on any internet connection without installing an APK.
+
+The Pages workflow installs this folder's locked dependencies, checks the mobile app, then runs `npm run pages:check`. `scripts/build-pages.mjs` creates a `.pages-site/` deployment artifact with the existing website's static files unchanged and the clean mobile bundle at `mobile app/`. It never publishes backend code, environment files, Android projects, QA profiles, node_modules or ZIP archives. No production website source or backend source is changed by this publishing setup. The Capacitor build continues to use `www/` independently.
+
+The browser preview keeps the shared API/session integration, mobile styling and navigation, uses relative paths under the encoded subdirectory, and disables preview service-worker registration to avoid stale builds or controlling the main website. Portfolio sharing points to the public website. Login defaults to the mobile home screen and preserves explicit feature return paths. Website and preview share session storage on the same hostname; native Android app storage remains separate.
+
+Local preview verification: `npm run pages:check`, `npm test`, then `node scripts/preview-browser-check.mjs` on Windows with Microsoft Edge installed (or set `BROWSER_PATH`). The browser check uses a phone-sized viewport and intercepted API fixtures: it does not create users or send production login requests. It verifies home/Explore/resources navigation, protected-page redirects, login return paths, persistence after reload, public portfolio URLs, no JS exceptions or asset 404s, and no service-worker registration. Actual account login and authenticated workflows still require a real account for end-to-end verification.
 
 ## Project layout
 
@@ -28,7 +38,7 @@ The app calls the existing HTTPS API at:
 
 Supabase access remains on the backend. No backend .env files, Supabase keys, service-role credentials or signing keys are copied into the mobile bundle. No production API writes were used for verification.
 
-**Required backend release, not performed:** the existing API has no session-refresh route. Two local backend source files prepare it:
+Two backend source files implement session renewal:
 
 - `../backend/controllers/sessionController.js`: exchanges refresh tokens using a fresh Supabase client per request, without persistent server-side auth state.
 - `../backend/routes/authRoutes.js`: registers `POST /api/auth/refresh`.
@@ -39,7 +49,7 @@ Response: `{ "token": "<access token>", "refreshToken": "<rotated refresh token>
 
 The endpoint uses the backend's existing Supabase configuration; no new environment variables are required. Invalid sessions return 401; temporary upstream failures return 503. Successful responses disable caching.
 
-**Production renewal will not work until those backend source changes are reviewed and deployed separately.** The app preserves its stored session on network/server failures and shows a login-renewal error if the endpoint is missing. Users can sign in again while this release is pending. Existing logins that never saved a refresh token need one fresh login.
+On 2026-10-12, the production refresh endpoint returned HTTP 400 for an empty request with “A valid refresh token is required”, confirming the route is now present. No backend deployment was performed as part of the Pages preview setup. A real user's token rotation has not been tested against production. The app preserves its stored session on network/server failures and shows a login-renewal error if the endpoint is missing in another environment. Existing logins that never saved a refresh token need one fresh login.
 
 The Android origin is `https://localhost`. The inspected backend CORS source already allows it. A read-only production preflight check returned HTTP 204 with Access-Control-Allow-Origin: https://localhost and allowed Authorization headers. No wildcard CORS change or HTTP fallback is introduced.
 
