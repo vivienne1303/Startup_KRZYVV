@@ -69,7 +69,8 @@ async function jsonRequest(url, options = {}) {
       const r = await fetch(url,{...options,signal:AbortSignal.timeout(25000)});
       if (!r.ok) {
         if ((r.status===429 || r.status>=500) && attempt<attempts-1) {await new Promise(resolve=>setTimeout(resolve,1000*(attempt+1)));continue;}
-        throw new Error(`HTTP ${r.status} from ${new URL(url).hostname}`);
+        const hint=r.status===401?' (authentication rejected; check the project URL and configured API key)':r.status===403?' (access denied; check database permissions)':'';
+        throw new Error(`HTTP ${r.status} from ${new URL(url).hostname}${hint}`);
       }
       return r.status===204 ? null : await r.json();
     } catch(e) {if (attempt===attempts-1 || /^HTTP /.test(e.message)) throw e;}
@@ -107,27 +108,42 @@ export function makePlan(rows, additions, {now = new Date(), target = 1000, buff
   }
   return {as_of:singaporeDay(now),target,buffer,published_before:published.length,projected_published:published.length+insert.length,active_before:active.length,projected_active:active.length+insert.length,archive,insert,duplicates};
 }
+export function databaseHeaders(key) {
+  const headers={apikey:key,'Content-Type':'application/json',Prefer:'return=representation'};
+  if (!key.startsWith('sb_secret_')) headers.Authorization='Bearer '+key;
+  return headers;
+}
 function databaseClient() {
   const origin=process.env.SUPABASE_URL;
   const key=process.env.SUPABASE_SECRET_KEY;
   if(!origin||!key) throw new Error('Apply needs SUPABASE_URL and SUPABASE_SECRET_KEY in the environment. Do not put secrets into files or chat.');
   const base=new URL('/rest/v1/opportunities',origin);
-  const headers={apikey:key,Authorization:'Bearer '+key,'Content-Type':'application/json',Prefer:'return=representation'};
+  const headers=databaseHeaders(key);
   return {
     async readAll(){const all=[];for(let offset=0;;offset+=500){const u=new URL(base);u.searchParams.set('select','*');u.searchParams.set('order','id');u.searchParams.set('offset',offset);u.searchParams.set('limit','500');const rows=await jsonRequest(u,{headers});if(!Array.isArray(rows))throw new Error('Invalid database response');all.push(...rows);if(rows.length<500)return all;}},
     async archive(row){const u=new URL(base);u.searchParams.set('id','eq.'+row.id);if(row.updated_at)u.searchParams.set('updated_at','eq.'+row.updated_at);const data=await jsonRequest(u,{method:'PATCH',headers,body:JSON.stringify({status:'expired',is_published:false,verification_status:'expired'})});if(data?.length!==1)throw new Error('Concurrent change while archiving '+row.id);return data[0];},
     async insert(item){const data=await jsonRequest(base,{method:'POST',headers,body:JSON.stringify(item)});if(data?.length!==1 || data[0].is_published!==true || data[0].status!=='published')throw new Error('Insert verification failed');return data[0];}
   };
 }
-export async function run({apply=false,output,now=new Date(),target=1000,buffer=100}={}) {
+export async function run(options={}) {
+  const {now=new Date(),output}=options;
   const dir=output || path.join(path.dirname(fileURLToPath(import.meta.url)),'reports',singaporeDay(now));
   await fs.mkdir(dir,{recursive:true});
-  const db=apply?databaseClient():null;
-  const baseline=db?await db.readAll():(await jsonRequest('https://teenlaunch-production.up.railway.app/api/opportunities')).opportunities;
+  try { return await runRefresh({...options,now,output:dir}); }
+  catch(error) {
+    await fs.writeFile(path.join(dir,'summary.json'),JSON.stringify({as_of:singaporeDay(now),applied:options.apply===true,execution_status:'failed',counts_verified:false,error_count:1,error:error.message},null,2)+'\n');
+    throw error;
+  }
+}
+async function runRefresh({apply=false,output,now=new Date(),target=1000,buffer=100,database,request=jsonRequest,discover=discoverProjects}={}) {
+  const dir=output || path.join(path.dirname(fileURLToPath(import.meta.url)),'reports',singaporeDay(now));
+  await fs.mkdir(dir,{recursive:true});
+  const db=apply?(database || databaseClient()):null;
+  const baseline=db?await db.readAll():(await request('https://teenlaunch-production.up.railway.app/api/opportunities')).opportunities;
   if(!Array.isArray(baseline))throw new Error('Invalid baseline data');
   const providerErrors=[];
   let projects=[];
-  try {projects=await discoverProjects();} catch(e) {providerErrors.push({operation:'discovery',error:e.message});}
+  try {projects=await discover();} catch(e) {providerErrors.push({operation:'discovery',error:e.message});}
   const candidates=projects.filter(usableProject).map(p=>projectListing(p,now.toISOString()));
   const plan=makePlan(baseline,candidates,{now,target,buffer});
   const report={...plan,applied:apply,baseline_scope:apply?'complete database':'public API response (hidden/archived rows unavailable)',provider:'Zooniverse official API',provider_projects:projects.length,provider_candidates:candidates.length,archived:[],added:[],errors:providerErrors};
@@ -149,11 +165,15 @@ export async function run({apply=false,output,now=new Date(),target=1000,buffer=
   }
   report.projected_below_target=report.projected_active<target;
   report.below_target=(report.active_after??report.active_before)<target;
-  await fs.writeFile(path.join(dir,'summary.json'),JSON.stringify({as_of:plan.as_of,applied:apply,published_before:plan.published_before,projected_published:plan.projected_published,active_before:plan.active_before,active_after:report.active_after??null,projected_active:plan.projected_active,planned_additions:plan.insert.length,planned_archives:plan.archive.length,below_target:report.below_target,error_count:report.errors.length},null,2));
+  await fs.writeFile(path.join(dir,'summary.json'),JSON.stringify({as_of:plan.as_of,applied:apply,execution_status:report.errors.length?'failed':'completed',counts_verified:true,added:report.added.length,archived:report.archived.length,published_before:plan.published_before,projected_published:plan.projected_published,active_before:plan.active_before,active_after:report.active_after??null,projected_active:plan.projected_active,planned_additions:plan.insert.length,planned_archives:plan.archive.length,below_target:report.below_target,error_count:report.errors.length},null,2));
   await save();
   console.log(JSON.stringify({applied:apply,published_before:plan.published_before,projected_published:plan.projected_published,active_before:plan.active_before,planned_additions:plan.insert.length,planned_archives:plan.archive.length,added:report.added.length,archived:report.archived.length,active_after:report.active_after??null,projected_active:plan.projected_active,below_target:report.below_target,errors:report.errors.length,report:path.join(dir,apply?'applied.json':'dry-run.json')},null,2));
   return report;
 }
 if(process.argv[1] && path.resolve(process.argv[1])===fileURLToPath(import.meta.url)) {
+  // GitHub supplies environment variables directly; local runs can use the ignored .env.
+  if(typeof process.loadEnvFile==='function') {
+    try { process.loadEnvFile(); } catch(error) { if(error.code!=='ENOENT') throw error; }
+  }
   run({apply:process.argv.includes('--apply')}).then(r=>{if(r.errors.length||r.below_target)process.exitCode=2;}).catch(e=>{console.error(e.message);process.exitCode=1;});
 }

@@ -1,5 +1,15 @@
 # TeenLaunch opportunity refresh
 
+## Verification update — 13 October 2026
+
+The workflow on GitHub runs daily at 09:00 Singapore time and uses `--apply`. The latest observed run (12 October, three attempts) failed. The historical activation notes below describe the earlier preparation session, not current deployment status.
+
+The local refresh now loads the ignored `.env` for CLI runs, supports secret API keys without treating them as JWT bearer tokens, records actual added/archived counts in the summary, and saves a failure summary when database access fails. Private reports and database backups are ignored by Git. These corrections must be deployed before GitHub uses them.
+
+A live read-only run on 13 October completed discovery with no provider errors: the public response contained 1,000 published listings, 584 confirmed-active listings, zero planned archives, and 48 proposed additions. Public API results exclude hidden rows and may be capped; these figures do not establish complete database totals. The projected confirmed-active count was 632, so the monitoring target remains unmet. No production writes were performed. Database reads with the local secret key were rejected with HTTP 401, including API-key-only authentication. A valid key for the configured project is required before production changes can be verified. GitHub secrets must be checked separately; local authentication failure does not prove the GitHub key is identical.
+
+The test suite covers successful archive/insert flows, duplicate-free repeated runs, provider failure with continued expiry archiving, and authentication failure reporting. An inventory shortfall deliberately produces a nonzero process exit status even when execution has no provider/write errors; inspect `execution_status`, `error_count`, `below_target`, `added`, and `archived` separately.
+
 Prepared 12 October 2026. This is a tested implementation and reviewed refresh plan. It has not been pushed to GitHub or applied to the live database.
 
 ## Current result

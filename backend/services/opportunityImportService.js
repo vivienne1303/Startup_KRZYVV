@@ -65,10 +65,19 @@ const extract = (html, sourceUrl) => {
     organisation: decode(organisation) || sourceHost,
     description: decode(description) || "Visit the official opportunity page for complete details and application requirements.",
     category: categoryFrom(title, description, sourceUrl, body.slice(0, 5000)),
-    eligibility: null, minimum_age: ageMatch ? Number(ageMatch[1]) : null, maximum_age: ageMatch ? Number(ageMatch[2]) : null,
+    eligibility: null, minimum_age: null, maximum_age: null,
     education_level: null, location: decode(location), format: schema.eventAttendanceMode?.includes('Online') ? 'online' : null,
-    application_deadline: isoDate(schema.validThrough || deadlineMatch?.[1]), start_date: isoDate(schema.startDate), end_date: isoDate(schema.endDate),
-    source_url: sourceUrl, application_url: applicationUrl ? new URL(applicationUrl, sourceUrl).href : sourceUrl,
+    application_deadline: null, start_date: null, end_date: null,
+    source_url: sourceUrl, application_url: null,
+    discovery: {
+      deadline_status: 'unknown', student_eligibility: 'unknown', application_access: 'unknown',
+      discovered_url: sourceUrl, official_url: null, last_checked_at: new Date().toISOString(),
+      fees: null, parental_consent: null, school_membership: null, restrictions: null,
+      notes: 'Automatically extracted lead. Confirm facts against the organiser before marking them verified.',
+      claims: { minimum_age: ageMatch ? Number(ageMatch[1]) : null, maximum_age: ageMatch ? Number(ageMatch[2]) : null,
+        deadline: schema.validThrough || deadlineMatch?.[1] || null, application_url: applicationUrl ? new URL(applicationUrl, sourceUrl).href : null,
+        start_date: schema.startDate || null, end_date: schema.endDate || null },
+    },
     source_type: 'ai_fetched', status: 'pending_review',
   };
 };
