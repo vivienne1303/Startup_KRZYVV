@@ -1,0 +1,369 @@
+{
+  "applied": false,
+  "as_of": "2026-10-08",
+  "duplicate_check": "Local snapshot only; live check required",
+  "added": [
+    {
+      "id": null,
+      "title": "Social Media Marketing Intern — Think Teach Academy",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Wealth Management Intern — Guotai Junan International Securities (Singapore) Pte Limited",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Compliance Intern — FOMO Pay Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Accounting Intern — FOMO Pay Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Logistics Intern — DHL Supply Chain",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Business Development Intern — Apeiron AgroCommodities Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Chinese Media Student Publications Journalist Intern — SPH Media Limited",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Quantity Surveyor - Intern — QXY Resources Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Project Engineer (Civil & Structural) - Intern — QXY Resources Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Creative Associate (Internship) — Front Row Media",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "IT Intern — Safran Helicopter Engines Asia Pte. Ltd.",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Human Resources Intern — TWG Tea Company Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Digital & eCommerce Intern — TWG Tea Company Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Business Analyst — Grand Banks Yachts Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Public Relations & Social Media Assistant — Craft Communications",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Digital Marketing Intern — Creative For More",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Marketing Intern — FORGED by RF",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Student Experience Intern — TLS Tutorial Centre Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Founder Intern (Principal Educator) — TLS Tutorial Centre Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Events Florist Internship — Elly Sera Florist",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Intern, Project Admin — Plaza Premium Lounge Singapore Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Icon Editorial Intern - Writing Intern — SPH Media Limited",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Intern, Engineering — Mandai X",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Graphic Designer Internship — Mirxes",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Medical Device Engineering Intern — Lenexa Medical",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "EcoKnocks 2026 – Call for Articles - The Rupee Through a Prism — Bhopal School of Social Sciences (BSSS), Bhopal",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "DSA: No Time to Debug — Amity School of Engineering & Technology (AMITY), Noida",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Equity Research Challenge — Indian Institute of Management (IIM), Kashipur",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Business Model Teardown Challenge — Great Lakes Institute of Management (GLIM), Gurgaon",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Kronos 2026: HR Case Competition — Xavier School of Management (XLRI)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Tagline Trivia - Marketing & Brand Quiz — University College of Commerce and Business management, Osmania University, Hyderabad, Telangana",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Can You Spot What Others Might Miss? — T. A. Pai Management Institute (TAPMI), Manipal",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "NEXAURA: Genesis Edition — Motilal Nehru National Institute of Technology",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Roverra — Build Your Own Planetary Rover — Indraprastha Institute of Information Technology (IIIT), Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Robo Soccer — Robot Football Arena — Indraprastha Institute of Information Technology (IIIT), Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Foss Forge 2.0 — University School of Automation & Robotics (USAR) ,Guru Gobind Singh Indraprastha University (GGSIPU), Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Worst UI — Indraprastha Institute of Information Technology (IIIT), Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Tech Got Latent — Indraprastha Institute of Information Technology (IIIT), Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Procon Jr. — Indraprastha Institute of Information Technology (IIIT), Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "All you can do with AI",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "AnnoTate - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Measuring the ANZACs (Original) - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Gravity Spy - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Snapshot Wisconsin - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Zen of Dragons - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Radio Meteor Zoo - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Planetary Response Network & Rescue Global: Ecuador Earthquake 2016 - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Beluga Bits - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "The Plastic Tide - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Manatee Chat  - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    }
+  ],
+  "merged": []
+}

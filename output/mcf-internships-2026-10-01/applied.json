@@ -1,0 +1,674 @@
+{
+  "applied": true,
+  "as_of": "2026-10-01",
+  "duplicate_check": "Live database",
+  "added": [
+    {
+      "id": "df3818e8-9302-424e-a065-cd4bcceba31d",
+      "title": "Graphic Design & Ops Intern — Likka",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "1ee3f21b-57b2-40de-8939-076c990b6b0e",
+      "title": "Fashion Marketing Intern (Full-time, 6 months) — Likka",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ffef76f6-9e94-4672-9b52-a52d8a991567",
+      "title": "Marketing & Ops Intern (Full-time, 6 months) — Likka",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "cf88b107-933a-43d4-884b-1fa4605768b8",
+      "title": "Social Media Marketing Intern — Chowa Cleaning",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6b01b649-83b2-4a95-b114-6839b53a2ec8",
+      "title": "Business Consulting Intern — Adept Business Consultancy",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "35786a61-491f-4777-9c70-7eb0c0615672",
+      "title": "Looking for Marketing Interns! — Tutorjohn",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "813f630a-d32e-486f-9d10-a8401717d5cf",
+      "title": "part time admin/intern poly student welcome — Elonx Ai Holdings",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "068df521-7f0a-47b6-8f21-f991021f3d00",
+      "title": "Marketing Intern — Aezoom",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9442e690-0885-409e-ba90-1134f6ad90ad",
+      "title": "2027 Software Engineer Program - Summer Internship - Singapore — Jpmorgan Chase Bank, N.A",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "0484bb1b-7d9b-41c9-bd62-315201e78459",
+      "title": "Creative Marketing Intern — Cove Living",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "340aa819-f063-490f-bf03-a79966941668",
+      "title": "Accounts / Finance Intern — Lee Yin Apparel International",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ba6bf393-6989-479d-8a78-3b8fccc1bf94",
+      "title": "Operations Intern — Legate Enterprise",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "89c2c4f9-a56a-4bdc-b797-ccb32f14e8cf",
+      "title": "E-Commerce Content Intern — Amorepacific Singapore",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "bae795d9-4243-4281-a199-7f1d23fd35b0",
+      "title": "Product Design Intern — Lumens",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "10be3168-77ea-403f-bb31-64202d7ac3bf",
+      "title": "Business Development  (Internship) — Business Engineers Asia",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "fa5e0d6e-edf0-46e4-bfd0-96b29e21a2b5",
+      "title": "HR Admin Intern — Epos",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "08935128-fb2b-40a4-b04d-a7232f5279e2",
+      "title": "Software Engineering Intern — Ipos International",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "5b6387e7-3213-43ae-afba-eb8e56908261",
+      "title": "Product Management and AI Adoption Intern — Ipos International",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "8c4c697f-698b-4d3c-beeb-c4eb16895f0b",
+      "title": "Part Time Assistant Psychologist Intern — Us Therapy",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "08c0544a-7d78-4ef6-a9e2-736a5970aae7",
+      "title": "Marketing & Sales / Growth Marketing Intern — Kalp",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "603389c5-b7c9-473d-9549-82459cd1f0bb",
+      "title": "Product Management Intern — Discovermarket Asia",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "f37a5f1a-3f73-4e64-baa1-59d4668f08a8",
+      "title": "Social Media & Marketing Executive / Intern — Sy Vending Technology",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e0187893-3609-4750-b1a7-2ba31946c2a2",
+      "title": "DevOps Engineer (Intern) — The Software Practice",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9ab90e7b-501a-4610-88d0-d9b0ea2082fc",
+      "title": "Research Intern (1 year) — Commerzbank Aktiengesellschaft",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "33e15bde-54af-4877-ac18-a289c53ff13b",
+      "title": "Client Management Intern — Superstar Teacher",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4681d505-2ae3-433c-b648-15aa805572d5",
+      "title": "PR Marketing Intern — Revup Proservices",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ae046f67-366a-466b-afdc-4cc40e8291ca",
+      "title": "Marketing Intern — Karooooo Management Company",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "1bc565df-59a9-41af-8564-aa4505d2c256",
+      "title": "Social Media & Marketing Executive / Intern — Sy Foodstuffs & Trading",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f097acc2-c08a-46bb-9bb4-0e41095d124f",
+      "title": "Research Intern — Ifast Financial",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "b43af1a3-31d7-447c-a2e3-dc3a918f32a9",
+      "title": "Finance Intern / Financial Analyst (Entry or Junior | Degree) — Reolink Technology",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "89592272-71de-48ea-946e-088cdf02e20e",
+      "title": "Intern, Software Engineering — Merry Electronics (Singapore)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "be25855b-c597-4e5d-8417-2999ee6f774b",
+      "title": "HR Intern — Quartz Global",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6e8583f1-f858-4183-9eb7-f07e95fb29da",
+      "title": "IT Support Intern — Yy Circle (Sg)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "319dcba9-5682-4d41-a888-4b064e92c0c5",
+      "title": "Robotics Engineer Intern - Embodied AI — Hong Ye Group",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "d9707d8d-3ab0-4766-a2db-c98269b49554",
+      "title": "Talent Acquisition Intern — Abeam Consulting (Singapore)",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "08f31968-026d-4eb4-be57-a64141bed3ad",
+      "title": "IT Support Intern — Hong Ye Group",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "65ca7279-4e37-4329-8a64-e006eb8481d9",
+      "title": "Marketing & Events Coordinator Intern — Hong Ye Group",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "94c6d9ba-ceb8-4747-abe6-e5e92d1d9cd4",
+      "title": "Marketing Assistant (Internship) — Hkl Lim Team Motorsport",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f1faf7f1-3bc1-4b32-b971-35b060c89e7c",
+      "title": "Robotics Engineer Intern - Embodied AI — Yy Circle (Sg)",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "1bb8861c-1e1a-4c6f-9b7b-f09f04c26d41",
+      "title": "HR Intern (Regional Payroll) — Doctor Anywhere Operations",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "15733167-36e0-4e45-a7cd-bdbf285cf5bc",
+      "title": "Content & Digital Marketing Intern — Impossible Marketing Services",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e44a59ce-0468-4c17-84d1-da06a15551e4",
+      "title": "Social Media Intern — Kgi Securities (Singapore)",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "643a8e6c-942a-4224-ab23-635beaed779d",
+      "title": "MarTech Intern — Kgi Securities (Singapore)",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "e902bd5f-cd05-4c79-ac4c-1f95a3bec142",
+      "title": "Human Resource Intern | Office Hour (MON - FRI) — Aber Care",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "c1e0546d-aa37-4b44-b091-3576cb146f51",
+      "title": "Marketing Intern — Esgpedia",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "794d6f79-bbb9-406f-ad3e-022d7b3cb166",
+      "title": "Intern, Graphic Design — Singapore Red Cross Society",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b9d265c5-6a7e-4ee2-9bb1-7207ddefc9e8",
+      "title": "Intern, Marketing — Singapore Red Cross Society",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4d0d3f5a-f5d2-4769-82c2-e2a270e136e4",
+      "title": "Full Stack Data Analyst Intern — Higogame",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "d4672cba-67ce-4922-a640-6edcc2e2ba15",
+      "title": "Public Relations Internship — Ninemer Communications",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "197959b3-e215-4cfc-8945-779714c9f3ef",
+      "title": "3D Artist / Spatial Design Intern — Good To Great",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b2c23825-a728-48ed-bb42-f1c00f429729",
+      "title": "Architecture Intern — Pestimesh",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "0dc757dc-b020-4851-8dc9-c73b4d0a46da",
+      "title": "E-Commerce & Marketing Intern — Sogoodk",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "2a331a50-9c5f-4214-a7ab-1bc0a2f54d71",
+      "title": "Social Media Marketing Intern — Maxius Trading",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "d10deac0-973d-4a52-9b61-564fc3d97cc6",
+      "title": "Sales Development Representative - Intern — Egentic Asia Pacific",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "00aa8e40-5b59-409e-afad-32e2391da859",
+      "title": "Social Creative Intern — Kinsurge",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "018d79b5-0b62-4caa-bff3-420b2d58cdec",
+      "title": "Quantitative Researcher Intern (Trading Systems & Strategy) — Peacebird Management",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "281d845f-02e8-4699-a85b-83c783af2fe1",
+      "title": "Intern, Green Building, Decarbonisation & Safety — City Developments",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "0352394e-6d57-4338-8fdf-14c51e506618",
+      "title": "Production Engineer Intern — Keystone Cable (S)",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "349845c8-5a20-4652-8cf1-02077ef691ad",
+      "title": "IT Support Intern (6 to 9 months) — Henatenn Holdings",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "13fe71c3-5f05-40a6-bd8f-d3a19c3aedaa",
+      "title": "Intern, Communications (6-months) — National Institute Of Early Childhood Development",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e6d28d9a-5762-43a5-9174-f6dd3b073924",
+      "title": "Front Desk & Customer Service Intern — Hebe Lab",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "5264cd07-7d92-4d5e-af03-10d1b9d5f3f0",
+      "title": "Music and Performing Arts Teaching Internship @ Creative Hearts — The Performing Arts Loft",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "773bf035-3a99-4791-8d11-cc399313a4c5",
+      "title": "Business Development Intern Trainee — Noko Global",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b08d0b48-935b-4c53-878d-0d7df08e0d2a",
+      "title": "Finance and Business Operations Analyst, Intern — Cognalearn",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "de7a1dd0-8533-4b62-b62d-30c3e178ed7f",
+      "title": "Arts Management Intern @ Creative Hearts — The Performing Arts Loft",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "86bc2466-69ba-4e11-a25b-cf6113100195",
+      "title": "Marketing Intern (6-month internship) — Cognalearn",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "5d69cabd-753a-4045-9c2f-7fd4e92e695f",
+      "title": "Fund Management Support Intern — Galilee Investment Management",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "8c8db36c-6b70-4e6a-9e67-b55dde66cba0",
+      "title": "Business Operations Intern (Education Business) — Mindflex Education",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "63f142ee-4656-451d-b337-4f34f625ea37",
+      "title": "Social Media & Content Creation Intern — Singapore Council Of Women'S Organisations",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "1f7cd0d6-2c12-4e08-b717-14a20de86a51",
+      "title": "HR Intern — Addvalue Innovation",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4e1742b6-7076-4a56-ae18-fa8f96f6b0f8",
+      "title": "Compliance Intern — Sing Investments & Finance",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "8edbab11-0f00-45fd-82a0-196c0535c1a7",
+      "title": "Community Programmes Intern — Vidacity",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "2d171ffa-75e9-428e-bcc5-870123ce3a5e",
+      "title": "Talent Acquisition Intern (Jan 2027 intake) — Singapore Telecommunications",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "6236629a-2cdd-4b4c-a495-f43cc11f9bb3",
+      "title": "Marketing Intern — Polar Puffs & Cakes",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6393348a-6195-4b77-8f27-011094fb904b",
+      "title": "Systems, IT & AI Automation Intern — Tutorjohn",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "54fe2492-dca1-491f-bc32-23063a29d909",
+      "title": "Part-Time Marketing Assistant/ Marketing Intern — Revamp Hair (S)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "61d465ca-f757-4427-90e1-f5c0a237f588",
+      "title": "AI Content & Digital Marketing Intern — Shopgifts",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "c27e2523-864f-4427-b387-8f3d5ea3d276",
+      "title": "Content Strategist (Intern) — Elevan August Concepts",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b6a17cc9-0ef3-4af2-a16f-5e02b384af4c",
+      "title": "Digital Economy Intern — Ipreciation",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "871e560f-20ce-4370-8994-11663717941b",
+      "title": "Design Verification Intern — Black Sesame Technologies (Singapore)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "d5bf1749-6d49-4f81-a2e9-01bd306c21c5",
+      "title": "Power Electronics Control Intern — Amperesand",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "b4d478c1-6bb2-43b1-b2d4-d3d1500a985f",
+      "title": "Junior Consultant (HR / Management) - Internship — Mavericks Consulting",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "6b5c09be-0096-4274-85a1-84d5f4490964",
+      "title": "Creative Intern — Cove Living",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "63d499d0-021f-43e4-9bce-be5ba082b4b1",
+      "title": "Business Marketing Intern — Ipreciation",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "15122595-8bbe-4add-a8b1-56ed7a737a79",
+      "title": "HR Admin Intern — In.Corp Business Services",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a98c83ba-07c9-40a8-92d8-6862370eb975",
+      "title": "Editorial Intern — Confirm Good",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "fb7e3e29-d319-4e8f-a7a6-8bd8d66b5ad7",
+      "title": "Marketing Intern (Social Media) — Confirm Good",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4e58659d-f774-47d9-8f08-4ee5c37af6b6",
+      "title": "HR & Admin Assistant (Intern) — Penanshin Shipping",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "41498986-4285-4343-a5b6-ad475fc42a3c",
+      "title": "Marketing Intern — White Beehoon Restaurant",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b9f8450c-4d3a-4792-b87c-25f4d65ed5fd",
+      "title": "HR Intern — International French School (Singapore)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "2db769e5-9948-4e5e-9e3a-8dee025f9963",
+      "title": "Public Relations Intern (6 Months) — Zeno Communications Singapore",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "89884b74-18c7-4c54-8584-7eeb0934452e",
+      "title": "Intern - Corporate Support Services — Habib Bank",
+      "labels": [
+        "Open now"
+      ]
+    }
+  ],
+  "merged": []
+}

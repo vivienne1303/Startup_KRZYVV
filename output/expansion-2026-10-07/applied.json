@@ -1,0 +1,969 @@
+{
+  "applied": true,
+  "as_of": "2026-10-07",
+  "duplicate_check": "Live database",
+  "added": [
+    {
+      "id": "3bd1ff8d-8133-4150-a598-3162f2baa286",
+      "title": "Fintech and AI Intern — CFTE",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "39b8532c-5d07-440a-9558-9778c08fa24c",
+      "title": "Legal Intern — Angeline Suparto Law Corporation",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "1fb27b6b-4994-4876-9ea7-6d454d5fc853",
+      "title": "Private Credit Intern — IFS Asset Management Pte. Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "3c02c474-5fe3-4684-a9a4-b6d1a68a79b9",
+      "title": "Digital Marketing Intern — Activa Media Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "89c74e13-ac54-4f3e-859c-4c1966255f71",
+      "title": "Accounting / Finance Internship — Deutz Asia-Pacfic Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "0757a197-88e4-4543-a45b-47e3752e8006",
+      "title": "Influencer Marketing Intern — AnyMind Group",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "9f572acc-eaa0-49c2-ac73-cfec3034776e",
+      "title": "Social Media Marketing — Space Change Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "17e11b19-1120-4524-945a-fa36371bbf39",
+      "title": "Content / Digital Marketing Intern — Gown and Bridal",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "16ae2d5a-7394-4205-8ec1-bc74e4d3d8a7",
+      "title": "Operations & Growth Intern — All Clenz Maintenance Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "d2a94788-e938-4bf5-9795-8c1d3b578f8a",
+      "title": "Investment Intern — Titan Capital Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "0f4ad546-d99c-465c-ba98-9ac17c886121",
+      "title": "Creative Designer Intern — Higogame Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "7fab436a-affe-4de9-9b13-f72988d3e648",
+      "title": "Field Application Engineer — Datakrew Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "9d3db7bb-1ba0-4f28-9ff8-6a89983da6f7",
+      "title": "Accounting Internship — ITA Consultancy & Solutions Pte. Ltd.",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "779c1205-7083-40f7-9331-359a7c770b88",
+      "title": "Florist Internship — Elly Sera Florist",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "0656ad6a-741f-46e6-9ab7-0eb791302109",
+      "title": "Marketing Intern (Content & Growth) — Learning Point",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "fa9111ca-f0b4-441d-bea3-4c6391f51476",
+      "title": "Internship (Legal) — Jay Law Corporation",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "695eecf4-0ec4-48fa-90f8-20a65b48b0d0",
+      "title": "People Intern — Qlub (Singapore) Pte. Ltd.",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "b90d0168-0eee-4c4d-a25c-abd4bf9fd640",
+      "title": "Admin Assistant — Apexlink Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "4376ff80-12e4-4d9c-9897-e1cfafd778f2",
+      "title": "Finance Intern — YTL PowerSeraya Pte. Limited",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "0a21d899-f80a-4ce6-b829-132855ceb248",
+      "title": "Intern, Corporate Development — NTUC First Campus",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "f17288ea-a458-4361-8693-56a02fb2e9dc",
+      "title": "Digital Marketing & Sales Intern — KALP Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "94a62c29-e19a-4136-b42f-09a7096e354c",
+      "title": "Marketing and Compliance Intern — Whyze Solutions",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "3f1af180-0322-4008-85c0-15a3fcdbb733",
+      "title": "Intern: Risk Management & Data Governance — NTUC Health",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "ac02b66b-8a5e-4c6d-b395-f5d0d6a7cce1",
+      "title": "Internship Opportunity: Event Associates — Visual Studio Singapore Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "796362d8-0348-415f-8695-7a48666100b3",
+      "title": "Technology Intern — Libeara",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "d2717bfa-f808-43d1-bd12-60a17076b985",
+      "title": "Founders' Office Intern — NEU Battery Materials",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "5411ae64-f16a-4e10-acb0-8af37382554a",
+      "title": "Creative Content & Education Marketing Intern — Bright Culture Tuition Centre",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "5498daaf-c383-4fdb-b544-574fa322104b",
+      "title": "Intern of Process Assistance — B&H Management Consultancy Pte. Ltd.",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "fcfe6d4e-54a2-463f-9525-db94027bb948",
+      "title": "Cine Intern — Big 3 Media",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "3405056d-06aa-486c-a823-2d2be6c97863",
+      "title": "Front-End Development Intern — Nested Technologies Pte. Ltd.",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "1fec8e3e-416f-498e-9d55-b39c0c8498e8",
+      "title": "SEO Coordinator Intern — Activa Media",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "2c423e89-cc4b-4cc2-ae3c-5c444e48950c",
+      "title": "Quantity Surveyor Intern – Mechanical / Electrical — Unicraft Engineering Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "7ef1e990-f595-4b58-99d7-6628c673cb5e",
+      "title": "Engineering Intern – Mechanical / Electrical — Unircaft Engineering Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "d581a62b-ee12-4434-aac1-b7ae612075fb",
+      "title": "Software Development Intern — Nested Technologies Pte. Ltd.",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "b60594e6-d98e-43f8-9a11-16324a3b106b",
+      "title": "Market Research Intern (3–6 Months) — Nexus Link Pte. Ltd.",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "2fa94e09-fda0-4071-992c-198e5cb7b2db",
+      "title": "[WFH] Videographer — Craft Communications",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "74856d88-fc7d-41d9-a9a2-ded650b3f19e",
+      "title": "Pet Care Intern — AB Dog Boarding, Daycare and Retail LLP",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "bc395f7c-7bcb-4408-ba4a-7db9bd93d0b0",
+      "title": "Clinical Operation Intern — Prestige BioPharma limited",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "9d266ac6-7f22-45be-a3c2-d98767e4b6a2",
+      "title": "Private Wealth Management Intern — UOB Kay Hian",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "3dcdd7c3-727e-4b46-a837-4383e7622562",
+      "title": "Programme Management Intern — Empact",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "de9ae255-1225-4e60-a934-50f040360fc8",
+      "title": "Accounting Intern — Empact",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "02a9c525-774c-4396-852d-2c02869638d1",
+      "title": "Market Research Internship — Global Angle Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "3a9a306d-1413-4f91-acd1-6d08618901ab",
+      "title": "Event Operations Intern — The Fun Empire Pte. Ltd.",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "085e2376-d6c3-4e0a-85e6-d81598effc1e",
+      "title": "IoT Engineer Intern — Univers Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "3c032168-17e8-48b9-b032-a70fd1f4f782",
+      "title": "Creative / Videography Intern — The Fun Empire Pte. Ltd.",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "2ff0335c-ab8b-49a0-8280-4ac8cfc57ff8",
+      "title": "Creative Design Intern — Ransack SG Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "0ab8af6e-a1d6-4e91-9fd1-c3170cefb8ef",
+      "title": "Content Creative Intern — By JING Pte. Ltd.",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "2708db2b-66f2-4a20-acd6-741de1b7d2f9",
+      "title": "eCommerce Warehouse Logistics Internship — Denwa Private Limited",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "93fff7f6-16d6-4ce5-8e12-140e33b75b65",
+      "title": "Service Staff (Internship) — The Organic Winery Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "42e2a16f-5af8-49e0-926c-5f37ce89d551",
+      "title": "Human Resource Intern (Talent Management) — SPH Media Limited",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "f8819e67-43f4-45dd-b723-4a3ca57b4c26",
+      "title": "Corporate Strategy Intern — Igloo",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "a2da4f18-11f6-4fe6-bcc1-1d243003e58c",
+      "title": "Marketing Intern — EPOS Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "1ca4476d-50ec-49cc-a331-be4809694ae4",
+      "title": "Tech Product Management Intern — Allocate Space",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "b7464050-6ab7-42c2-9e24-4f9655b19a83",
+      "title": "Investor Growth Hacking — Financial Media Group",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "0c82e373-3c01-4f82-901d-5a462516d46e",
+      "title": "Brand Ambassador and Marketing Intern — Inspire Food",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "7a9c59f1-0c38-48e2-9808-969726e86905",
+      "title": "Advisory Intern — Empact",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "b16ff92d-a837-4874-9efb-b017faaf1fe7",
+      "title": "Robotic Deployment Intern — AutoveX Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "4039c5bf-b56f-4892-85a7-d22a97336318",
+      "title": "HR and Admin Assistant (Intern) — KLASS Engineering & Solutions Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "c52c9ec6-3ecb-43a1-b42e-badf8759c560",
+      "title": "Content Creator / Live Stream Intern — Charm Crafters Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "f6770f07-9048-4fb5-a7de-3d95999fb0b0",
+      "title": "Digital Design & Marketing Intern — KLASS Engineering & Solutions Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "24d509f4-96a1-42b3-b4e1-59bf5b36702d",
+      "title": "Business Development Intern — Nefertum Fragrances Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "9bf6d9fd-c9ce-4144-85ee-c8f312212922",
+      "title": "Content Strategist (Intern) — Elevan August Media",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "7304f68f-42ea-4f14-8af0-1564803f5724",
+      "title": "Marketing Intern — Nefertum Fragrances Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "67add714-4734-44cd-9633-c6cfbaee5efd",
+      "title": "Digital Marketing Intern — MintGroom",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "94f8d2a2-0e5f-45e4-ab97-b5298e3cd7f8",
+      "title": "Performance Engineering Intern — PV Doctor Pte. Ltd.",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "d2fc88cd-fc73-4519-baa8-233f3182bcf4",
+      "title": "Internship — Investment Structuring & Corporate Finance Intern — The Unique Prime Consultant",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "0bab5aea-8f2a-470a-ae67-0be9bad8df6e",
+      "title": "Marketing Intern — APIX Platform",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "ea6b8ab8-ffc8-4c8a-9eb7-4c29b595959b",
+      "title": "Mechanical Engineer Intern — IPRO Engineering Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "9c8e1c3d-42d5-431c-81e0-10848c6d9685",
+      "title": "Worst Game Wins - Game Jam — Indian Institute of Information technology, Kottayam",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6f120d23-f493-46ae-b95e-c8464c910f90",
+      "title": "Code Kernel '26 — Gokaraju Rangaraju Institute of Engineering and Technology (GRIET), Hyderabad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "8f476db9-0052-48d4-9bd8-6537927db04f",
+      "title": "Render for Change | AI Art Competition — Cluster Innovation Centre (DUCIC), University of Delhi (DU), Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "8db10195-14a3-4610-b0c1-1ab6742f35fb",
+      "title": "The Vault: Pitch to Investors at IIT Bombay — Shailesh J. Mehta School of Management (SJMSOM), IIT Bombay",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4365afa7-4c59-419a-a18b-d40164de64ae",
+      "title": "Code War 8.0 — Assam Engineering College (AEC), Assam",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "529e8c17-e881-4939-8ca5-cf10d79a4a90",
+      "title": "Respawn — M S Ramaiah University of Applied Sciences",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "d735858a-8750-4008-84f1-01133e89a483",
+      "title": "Pitch At Match — M S Ramaiah University of Applied Sciences",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "132620e9-7c35-42b9-b1b5-4238a4b33b16",
+      "title": "Triathlon — M.S. Ramaiah University of Applied Sciences",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "64e1a319-e6e7-4567-96c4-f3593842d42f",
+      "title": "Dent - Innovate — M S Ramaiah University of Applied Sciences",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4c8d363c-ada7-4d21-8526-b86d762e1dc2",
+      "title": "Zero Hour — M S Ramaiah University of Applied Sciences",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f4ecabf9-29e3-47fa-a393-7bc90a4106ae",
+      "title": "Space and beyond: Ideathon 2026 — Netaji Subhash University of technology -Main Campus",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f382872e-2795-4764-9747-70d1bf8a8b5c",
+      "title": "Seek the Civil Geek — Indian Institute of Technology, Indian School of Mines (IIT ISM), Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6202a98f-7a1b-4ecf-98ac-1b95b45b087b",
+      "title": "Bahulya 4.0: A Finance Case Competition – FIFA World Cup 2030 Edition — Jesus and Mary College (JMC), University of Delhi (DU), Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "433eeac0-be80-44fa-bee1-efe697560388",
+      "title": "AlgoSort — Indian Institute of Technology, Indian School of Mines (IIT ISM), Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a47b73b0-91ed-495f-a0f5-785058b2af3f",
+      "title": "Barter Mania- \" The Ultimate Barter Challenge\" — Atma Ram Sanatan Dharma College (ARSD), University of Delhi (DU), New Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "44cd10c2-cbb8-468c-a327-db9b5ab8eb88",
+      "title": "Conviction: The FinTech Challenge — Ashoka University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "c2f19ac3-ea01-4d42-b9e0-ac3564839e2e",
+      "title": "Medha AI ML Hackathon — National Institute of Technology (NIT), Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4709eb58-93b2-4f62-a9e4-25987945779f",
+      "title": "Business Tangent 2026: A Social Impact Case Competition — St. Stephen's College, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ac9bdcc2-2ed5-49c7-addf-e9891710790e",
+      "title": "Root to Shoot VentureFest 2026 | Startup Pitching & Venture Challenge — SRM Institute of Science and Technology - Vadapalani Campus",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "8b9e66d6-7c05-4996-90fe-3ab3910d848f",
+      "title": "Startup Conclave 2026 — Ajay Kumar Garg Engineering College (AKGEC), Ghaziabad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "19c7895d-d4d3-4fa4-838d-06088719374c",
+      "title": "RoboCannonade — Mechanical Engineering Society (MES), National Institute of Technology, Warangal (NITW)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "19cc8a74-9544-4df2-bf3d-7224fd0b5053",
+      "title": "Policy Shastra — Kamala Nehru College (KNC), University of Delhi, Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "3668bdc3-34be-4cd3-a161-a21598041777",
+      "title": "Trade Wars — Kamala Nehru College (KNC), University of Delhi, Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "54074a7b-44bc-4fc1-9810-1678d41d4bfb",
+      "title": "Actonomics — the Economics Charades — Kamala Nehru College (KNC), University of Delhi, Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "3bf10fd5-7c02-42e5-9d03-481fd33bd314",
+      "title": "Paper Presentation — Kamala Nehru College (KNC), University of Delhi, Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "5e05f583-18da-4ee2-b194-ff83e9b7a704",
+      "title": "Pitch-Verse 2.0 — Maharaja Agrasen Institute of Technology (MAIT), New Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "728e8b92-1db9-4e3b-8c08-fe31a5d6d94c",
+      "title": "Break the Code — Shaheed Rajguru College of Applied Sciences for Women, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "1fbd834d-fd7d-405c-a601-f9bea9e446bb",
+      "title": "DSA Showdown — Bharati Vidyapeeth's College of Engineering",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "183b670b-de32-4413-913d-9c29903324ef",
+      "title": "FinWorld 2026: National Finance Case Study Competition — Indian Institute of Management (IIM), Raipur",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "21cc9fd9-bc8f-4578-a57b-4246571207b8",
+      "title": "Query Heist — Bharati Vidyapeeth's College of Engineering",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e47d1f6c-fc25-4407-ac93-adb0b78c11f7",
+      "title": "Game of Code 4.0 — Bharati Vidyapeeth's College of Engineering",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e460c58a-ae88-44df-81fb-55fee03ba0cb",
+      "title": "DataVerse — Bharati Vidyapeeth's College of Engineering",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "8a50aaa1-012d-46f2-94fa-e6d46d513d62",
+      "title": "VisionQuest — Bharati Vidyapeeth's College of Engineering",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4b1977b4-6233-4b57-8d7e-621d9d913288",
+      "title": "Cyber Investigation Unit — Shaheed Rajguru College of Applied Sciences for Women, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "3b53d5f4-21f2-41d3-b50b-3a3325ec2af2",
+      "title": "Case:Zero — Bharati Vidyapeeth's College of Engineering",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "520d1bae-af22-4816-ad17-cd7a54a82c63",
+      "title": "Ideas On Trial — Bharati Vidyapeeth's College of Engineering",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a4ad4b1d-65ee-4a9c-b136-a2e511a36a34",
+      "title": "IG:NITE — Bharati Vidyapeeth's College of Engineering",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "044a09b6-a0db-4181-85fc-3521e7d61988",
+      "title": "Parivartan '26: Case Competition — Tata Institute of Social Sciences (TISS), Mumbai",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e79dab2c-dca0-4736-bdd9-b099068dc485",
+      "title": "Prompt-ae-thon — Bharati Vidyapeeth's College of Engineering",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e48e3d2c-5541-4626-a93a-36bd88b7d05e",
+      "title": "Dead Air — Manipal University (MU), Jaipur",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "de8749b6-c4fc-47a7-813e-a09d4845bf9c",
+      "title": "Syntax Strike — Shaheed Rajguru College of Applied Sciences for Women, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a28f6876-dd2b-4e0f-8eb9-53998bcdb900",
+      "title": "HackShift - Cmd+Shift+Create — Indraprastha Institute of Information Technology (IIIT), Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ed5bf958-f888-4b5d-b9ff-bdc0dae4b8b0",
+      "title": "JAI 2026 Hackathon - Jaypee Agentic AI Hackathon 2026 — Jaypee Institute of Information Technology (JIIT), Noida",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "944e101d-b16a-4db1-b56a-f171067633e4",
+      "title": "L’Affaires — College of Vocational Studies (CVS), Delhi University (DU)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "dd4de452-de1a-48db-a16c-16dbff62eb61",
+      "title": "TerraNova - A Sustainability and Critical Minerals Quiz — Indian Institute of Technology, Indian School of Mines (IIT ISM), Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "dac92956-ac58-4da2-acbd-e5d44b4a4f23",
+      "title": "Prompt War — Shaheed Rajguru College of Applied Sciences for Women, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e54b41a4-0be4-4919-9a67-00b9977ccad9",
+      "title": "Synapse Arena - A Science, Business and Technology Quiz — Indian Institute of Technology, Indian School of Mines (IIT ISM), Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e0ae3043-3937-40af-9d42-adb8f58ba597",
+      "title": "Azinhack 2026 — University School of Automation & Robotics (USAR) ,Guru Gobind Singh Indraprastha University (GGSIPU), Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4e68faf2-54ff-4b3d-82db-0b42bdb35eb5",
+      "title": "Shark Tank: The Ultimate Pitching Challenge — International Management Institute (IMI), Kolkata",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "4309bebd-38b7-4df6-ab78-98020f76266d",
+      "title": "Mock IPL Auction — Motilal Nehru National Institute of Technology",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "89880076-d355-430c-89b3-4db56edd105b",
+      "title": "Aarohan TechMela 2026 — National Institute of Technology (NIT), Durgapur",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "322d51b8-f06f-4bdc-8d7f-8ac4b70f71ef",
+      "title": "War Zone — Shaheed Rajguru College of Applied Sciences for Women, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6fe24877-3f3c-45b5-aaaf-ffc302f3254b",
+      "title": "Treasure Rush — Shaheed Rajguru College of Applied Sciences for Women, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "fc741c4c-de84-40d4-bac0-bd22e7b9a1b1",
+      "title": "CTF Arena — International Institute of Information Technology (IIIT), Bhubaneswar",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "6202b3d9-cec9-4af1-9189-70549600a80a",
+      "title": "Cipher 2026: The Cryptic Financial Event — St. Stephen's College, Delhi University",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "aba3fa9a-a607-4f95-a67f-4b86925f6e27",
+      "title": "Notes from Nature - Digitizing Biological Collections in Canada - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "00baaa4e-f91a-43c8-8d57-bcf75f2737ca",
+      "title": "Plankton Portal - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9a6a3d95-d601-4a43-9628-31ba19a9c79f",
+      "title": "Heritage Quest - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "0f7be6be-7728-426b-8fbc-62fbc4726183",
+      "title": "Dark Energy Explorers - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "d84f92d9-99ce-4e2e-b50e-8b93a0dc4999",
+      "title": "Cosmic Collisions - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "191e032d-fa0b-4bca-b7d6-7f0a0d4cc13c",
+      "title": "Notes From Nature - Southeastern U.S. Biodiversity - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "9505375e-c322-4784-a7d5-ba0f5fd8fa1d",
+      "title": "FloraDiva - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "0c4f84b5-c2a3-4c5d-97c7-d73a30f6ff64",
+      "title": "Backyard Worlds: Cool Neighbors - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "11ec6b1c-bb2c-4b61-a50f-c13cacdc5426",
+      "title": "Dolphin Chat - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e6a9f60f-2194-4aa5-a408-03c88800919d",
+      "title": "Overlap Zoo - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    }
+  ],
+  "merged": []
+}

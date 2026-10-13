@@ -1,0 +1,362 @@
+{
+  "applied": false,
+  "as_of": "2026-10-09",
+  "duplicate_check": "Local snapshot only; live check required",
+  "added": [
+    {
+      "id": null,
+      "title": "Digital Media & AI Intern � Brompton Experiences",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Data Engineer Intern (Backend Engineering) � IFS Capital Limited",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "IoT Hardware and Test Engineering Intern � Datakrew Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Data Acquisition Intern � Datakrew Pte Ltd",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Marketing & Events Intern � Ocean Butterflies Music Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Human Resource Intern � Ma Kuang Healthcare Management Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Retail & Brand Marketing Intern (Dermocosmetics & Beauty-Tech) � Z7 Trading Pte Ltd",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": null,
+      "title": "IPL Auction � Ram Lal Anand College, University of Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Veritas Clash - British Parliamentary Debate � Scaler School of Technology, Bengaluru, Karnataka",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Sparkathon 2.0 � Indian Institute of Technology, Indian School of Mines (IIT ISM), Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Fault Hunt � Society of Electronics Engineers (SEE), Indian Institute of Technology (Indian School of Mines), Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Comqueer 8.0 � College of Vocational Studies (CVS), Delhi University (DU)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Flow Rush � Indian Institute of Technology, Indian School of Mines (IIT ISM), Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Tech Mafia - Trust No One. Debug Everyone. � Netaji Subhas University of Technology (NSUT), Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Vishwayouth 2026 � Narsee Monjee Institute of Management Studies (NMIMS), Navi Mumbai",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Line-O-Mania | A Line Follower Competition � Indian Institute of Information Technology (IIIT), Nagpur",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "AeroCraft � Design & Innovation Challenge � Fr. Conceicao Rodrigues College of Engineering (FRCRCE), Bandra",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Agnirakshak - Autonomous Fire Fighting Bot Challenge. � Fr. Conceicao Rodrigues College of Engineering (FRCRCE), Bandra",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "The Insider � Ram Lal Anand College, University of Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Chem-E-Prix: NITR INNOVISION 2026 � National Institute of Technology (NIT), Rourkela",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "The Fictional CEO � Atma Ram Sanatan Dharma College (ARSD), University of Delhi (DU), New Delhi",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "AI Arena by Udaan | Concetto '26 � Indian Institute of Technology, Indian School of Mines (IIT ISM), Dhanbad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Escape Room � Fr. Conceicao Rodrigues College of Engineering (FRCRCE), Bandra",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Scarlet Deception � College of Vocational Studies (CVS), Delhi University (DU)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Entrexpo 5.0 � ICFAI Business School (IBS), Hyderabad",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Idea got Latent � Bharati Vidyapeeth's College of Engineering",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Pixel Patakha � Bharati Vidyapeeth's College of Engineering",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Snail Scribe Archive - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "SquirrelMapper - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Disk Detective - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Cameras for Conservation - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Rubin: Blobs and Blurs - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Cloudspotting on Mars - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Rubin Comet Catchers - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Solar Radio Burst Tracker - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Monkey Health Explorer - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Gaia Vari - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Kilonova Seekers - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Sunspot Detectives - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "ReData - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Everglades Wildlife Watch - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Savanna Spy: Sound - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Notes from Nature - CAS Plants to Pixels - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Spiral Graph: Cluster Buster - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Snapshot Dubuque Iowa - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Dolphin Spotting - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Exoasteroids - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Back Bay Bird Identification - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "Kelp Quest (Seattle Aquarium) - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": null,
+      "title": "New Particle Search at CERN - Online Citizen Science",
+      "labels": [
+        "Open now"
+      ]
+    }
+  ],
+  "merged": []
+}

@@ -1,0 +1,73 @@
+{
+  "applied": true,
+  "as_of": "2026-09-30",
+  "duplicate_check": "Live database",
+  "added": [
+    {
+      "id": "0e0eb6ac-8412-4eb3-bca4-ab4176bfda75",
+      "title": "Singapore Book Council — Festival and Programme Volunteers",
+      "labels": [
+        "Check deadline",
+        "Check eligibility",
+        "Application link unavailable"
+      ]
+    },
+    {
+      "id": "85bc9988-4ed2-4e0b-8942-959e76e11d52",
+      "title": "RDA Singapore — Therapy Session Volunteers",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "1f90a728-b40a-43ee-9926-725573311599",
+      "title": "Pro Bono SG — Student Internship Interest",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "6e91afa4-4193-45ca-a46b-81f66a7312eb",
+      "title": "SAMH — Mental Wellness Volunteering",
+      "labels": [
+        "Check deadline",
+        "Check eligibility",
+        "Application link unavailable"
+      ]
+    },
+    {
+      "id": "3918ad36-caa0-4afd-bcb4-468686e4b2b9",
+      "title": "Esplanade — Volunteer Interest",
+      "labels": [
+        "Check deadline",
+        "Check eligibility",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "bb3c588f-c061-4c28-b749-1e9c656517e7",
+      "title": "Youths for Autism — December 2026 Internship Intake",
+      "labels": [
+        "Check deadline",
+        "Check application link"
+      ]
+    },
+    {
+      "id": "d16a7e7b-bdc8-47e6-a770-175738ac39db",
+      "title": "Net Zero 101: What, Why and How",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "e0f7abb4-8f6d-4afc-a29c-d71a6027dac7",
+      "title": "Climate Change: From Learning to Action",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    }
+  ],
+  "merged": []
+}
