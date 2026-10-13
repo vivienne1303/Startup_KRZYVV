@@ -1,0 +1,90 @@
+﻿/* Shared mobile chrome; original page content and feature scripts are retained. */
+html{background:#eaf0f9!important}body{max-width:620px!important;margin:0 auto!important;padding-bottom:100px!important;min-height:100dvh;overflow-x:hidden}.site-header{width:min(100%,620px)!important;left:50%!important;transform:translateX(-50%)}.navbar{width:calc(100% - 32px)!important;height:72px!important}.brand{font-size:17px!important}.brand-logo{max-width:36px!important;max-height:36px!important}.brand small{font-size:9px!important}.nav-toggle{display:block!important}.nav-links{position:fixed!important;inset:72px 12px auto!important;display:grid!important;max-height:70dvh;overflow:auto;gap:5px!important;padding:16px!important;border-radius:18px;opacity:0;pointer-events:none;background:var(--bg,#fff)!important;border:1px solid var(--line,#ddd)}.nav-links.open{opacity:1!important;pointer-events:auto!important;transform:none!important}.nav-links a{padding:10px!important}.section,.home-focus-section{width:calc(100% - 32px)!important;padding:24px 0!important}.hero{min-height:auto!important;padding-top:100px!important;gap:20px!important}h1{font-size:clamp(28px,7vw,38px)!important;line-height:1.15!important}h2{font-size:24px!important;line-height:1.2!important}.hero,.split-section,.resource-grid,.skill-grid,.opportunity-grid,.highlight-grid,.calendar-section,.five-grid,.why-grid,.testimonial-grid,.pricing-grid,.journey-strip,.home-opportunity-grid,.footer{grid-template-columns:minmax(0,1fr)!important}.toolbar,.location-fields{display:grid!important;grid-template-columns:minmax(0,1fr)!important}.filters{display:flex!important;flex-wrap:nowrap!important;overflow-x:auto!important;padding-bottom:8px}.filters button{white-space:nowrap;flex-shrink:0}input,select,textarea{max-width:100%;font-size:16px!important}img{max-width:100%}.reveal{opacity:1!important;transform:none!important}.footer{width:calc(100% - 32px)!important;font-size:12px}.mobile-tabs{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,620px);z-index:999;display:flex;justify-content:space-around;background:#fffffff5;backdrop-filter:blur(18px);border-top:1px solid #e9edf4;padding:10px 6px max(12px,env(safe-area-inset-bottom));font-family:system-ui,sans-serif}.mobile-tabs a{display:flex;flex:1;align-items:center;flex-direction:column;gap:4px;color:#7b879b!important;font-size:10px;font-weight:650;text-decoration:none;min-height:44px}.mobile-tabs span{font-size:24px;line-height:28px}.mobile-tabs a[aria-current=page]{color:#2368eb!important}.mobile-tabs a[aria-current=page] span{background:#ebf1ff;width:48px;text-align:center;border-radius:12px}.mobile-tabs a:focus-visible{outline:3px solid #2368eb;outline-offset:2px}@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* Use the app's width, rather than the desktop viewport, for page layouts. */
+*,*::before,*::after{box-sizing:border-box}
+html body .site-header.standard-site-header,html body .site-header{position:fixed!important;top:0!important;right:auto!important;left:50%!important;width:min(100%,620px)!important;transform:translateX(-50%)!important}
+html body .navbar{max-width:100%!important;width:calc(100% - 32px)!important;height:72px!important}
+html body .nav-links{inset:72px 12px auto!important;width:auto!important;max-width:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important;transform:none!important}
+html body .nav-links.open{visibility:visible!important;opacity:1!important;pointer-events:auto!important}
+html body .nav-toggle{display:block!important}
+/* The app remains a compact layout even inside a wide desktop browser. */
+html body .site-header.standard-site-header .nav-toggle{display:block!important}
+html body .site-header.standard-site-header .nav-links,
+html body .site-header.standard-site-header .nav-links:not(.open){position:fixed!important;inset:64px 12px auto!important;display:grid!important;width:auto!important;max-height:70dvh!important;overflow:auto!important;gap:5px!important;padding:16px!important;border:1px solid #e5eaf2!important;border-radius:18px!important;background:#fff!important;box-shadow:0 12px 32px #172a4914!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important;transform:none!important}
+html body .site-header.standard-site-header .nav-links:not(.open) *{visibility:hidden!important;pointer-events:none!important}
+html body .site-header.standard-site-header .nav-links.open{visibility:visible!important;opacity:1!important;pointer-events:auto!important}
+html body .site-header.standard-site-header .nav-links.open a{width:100%!important;padding:10px!important}
+html body main{min-width:0;max-width:100%}
+html body .site-header+main{padding-top:96px!important}
+html body .site-header+main>.hero{padding-top:0!important}
+html body .auth-panel,html body .copilot-layout,html body .inbox-layout,html body .profile-layout,html body .settings-layout,html body .portfolio-layout,html body .planner-layout,html body .prompt-section,html body .feature-grid,html body .competition-grid,html body .resources-grid,html body .card-grid,html body .apply-grid,html body .apply-opportunity dl{grid-template-columns:minmax(0,1fr)!important}
+html body .copilot-heading,html body .portfolio-heading{flex-direction:column;align-items:stretch}
+html body .starter-panel{border-right:0;border-bottom:1px solid var(--line,#c7dcec)}
+html body .starter-list{display:flex;overflow-x:auto;max-width:100%;gap:12px}
+html body .starter-list button{min-width:210px;flex:0 0 210px}
+html body .auth-panel,html body .auth-card,html body .copilot-chat,html body .conversation,html body .profile-main,html body .portfolio-shell,html body .planner-shell{min-width:0;max-width:100%}
+html body .footer{padding:24px 16px!important;display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:12px!important}
+html body .floating-language-toggle{bottom:calc(88px + env(safe-area-inset-bottom))!important;right:max(12px,calc((100vw - 620px)/2 + 12px))!important}
+html body .ask-teenlaunch-fab{bottom:calc(140px + env(safe-area-inset-bottom))!important;right:max(12px,calc((100vw - 620px)/2 + 12px))!important}
+html body .mobile-tabs{gap:0!important;margin:0!important;max-width:620px!important;box-sizing:border-box!important}
+html body .mobile-tabs a{min-width:0;overflow-wrap:normal;white-space:nowrap}
+main :is(h1,h2,h3,p,a,dd){overflow-wrap:anywhere}
+main :is(input,textarea,select){min-width:0;max-width:100%}
+main :is(pre,table){max-width:100%;overflow:auto}
+@media(max-width:420px){html body .chat-form,html body .message-form,html body .copilot-form{grid-template-columns:minmax(0,1fr)!important;display:grid}html body .auth-card{padding:18px}html body .timer-actions{flex-wrap:wrap}}
+/* Page-specific grids also stay inside the app on wide monitors. */
+html body :is(.settings-grid,.account-grid,.admin-grid,.admin-opportunity-form,.applied-grid,.rewards-card,.experience-form,.experience-grid,.portfolio-form-grid,.portfolio-grid,.preview-grid,.agenda-sections,.planner-sidebar,.dna-result-grid,.founder-hero,.founder-aspirations,.founder-team-grid,.about-focus-grid,.about-links,.home-focus-hero,.portfolio-story,.feature-column){grid-template-columns:minmax(0,1fr)!important;min-width:0}
+html body .admin-stats{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+html body .reward-track{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+html body .profile-header{grid-template-columns:80px minmax(0,1fr)!important}
+html body .profile-tabs{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+html body .weekly-calendar{grid-template-columns:repeat(7,minmax(125px,1fr))!important;max-width:100%;overflow-x:auto}
+html body :is(.school-days,.day-checks){max-width:100%;overflow-x:auto}
+html body .feature-column{width:100%!important;max-width:100%!important;left:auto!important;right:auto!important;margin-left:0!important;margin-right:0!important;transform:none!important}
+html body .portfolio-heading{grid-template-columns:minmax(0,1fr)!important}
+
+/* Founder names must not split into individual letters on narrow phones. */
+html body .founder-switcher{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+html body .founder-switcher a{display:flex;align-items:center;justify-content:center;min-width:0;min-height:44px;padding:12px 8px;font-size:14px;line-height:1.3;text-align:center;white-space:nowrap;overflow-wrap:normal!important;word-break:normal!important}
+
+/* App visual system: compact type, soft surfaces, and touch-sized controls. */
+html body{--bg:#f5f7fb;--surface:#fff;--text:#172a49;--muted:#68778e;--line:#e5eaf2;--shadow:0 4px 16px #172a4908;background:#f5f7fb!important;color:#172a49!important;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;font-size:14px!important;line-height:1.55!important;-webkit-font-smoothing:antialiased;padding-bottom:calc(96px + env(safe-area-inset-bottom))!important}
+html body .site-header{background:#ffffffed!important;border:0!important;border-bottom:1px solid #e5eaf2!important;box-shadow:none!important;backdrop-filter:blur(20px)}
+html body .navbar{height:64px!important;gap:12px!important}
+html body .brand{font-size:18px!important;letter-spacing:-.5px!important;gap:9px!important}
+html body .brand small{display:none!important}
+html body .brand-logo{width:32px!important;height:32px!important;object-fit:contain}
+html body .nav-toggle{width:42px!important;height:42px!important;min-height:42px!important;padding:10px!important;border:0!important;border-radius:14px!important;background:#eef3fc!important;box-shadow:none!important;color:#2368eb!important}
+html body .nav-links{top:64px!important;background:#fff!important;border:1px solid #e5eaf2!important;box-shadow:0 12px 32px #172a4914!important}
+html body .site-header+main{padding-top:84px!important}
+html body :is(.section,.home-focus-section){width:calc(100% - 32px)!important;padding:18px 0!important}
+html body h1{font-size:28px!important;line-height:1.18!important;letter-spacing:-1px!important;margin-bottom:12px!important}
+html body h2{font-size:21px!important;line-height:1.25!important;letter-spacing:-.5px!important}
+html body h3{font-size:17px!important;line-height:1.35!important}
+html body main p{font-size:14px!important;line-height:1.65!important}
+html body :is(.eyebrow,.founder-kicker,.section-kicker){font-size:10px!important;letter-spacing:1.4px!important;color:#68778e!important}
+html body :is(.card,.auth-card,.auth-panel,.resource-card,.opportunity-card,.skill-card,.highlight-card,.feature-card,.founder-story,.founder-quote,.founder-email,.founder-aspiration,.settings-card,.profile-card,.portfolio-shell,.planner-shell,.copilot-chat){background:#fff!important;border:1px solid #e5eaf2!important;border-radius:20px!important;box-shadow:0 4px 16px #172a4908!important;padding:18px!important}
+html body :is(.btn,.button,button,input,select,textarea){font-family:inherit!important;box-shadow:none!important}
+html body :is(.btn,.button,button){font-size:14px!important;line-height:1.3!important;min-height:44px;border-radius:13px!important}
+html body :is(input,select,textarea){border:1px solid #dce3ee!important;border-radius:12px!important;background:#fff!important;color:#172a49!important;padding:13px!important}
+html body :is(input,select,textarea):focus-visible{outline:3px solid #2368eb33!important;border-color:#2368eb!important}
+html body .founder-main{width:calc(100% - 32px)!important;margin:0 auto!important}
+html body .founder-hero{gap:18px!important;margin-top:16px!important;padding-bottom:20px!important}
+html body .founder-portrait{width:100%!important;max-width:260px!important;height:260px!important;margin:0 auto!important;border:0!important;border-radius:22px!important;box-shadow:none!important;overflow:hidden}
+html body .founder-portrait img{width:100%;height:100%;object-fit:cover}
+html body .founder-switcher{padding:5px!important;background:#e9eef7!important;border-radius:15px!important;gap:4px!important;margin:20px 0!important}
+html body .founder-switcher a{padding:10px 4px!important;min-height:44px!important;font-size:13px!important;border:0!important;border-radius:11px!important;box-shadow:none!important}
+html body .founder-switcher a[aria-current=page]{background:#fff!important;color:#2368eb!important;box-shadow:0 2px 8px #172a4910!important}
+html body :is(.founder-story,.founder-quote){margin:16px 0!important}
+html body .footer{margin-top:24px!important;background:transparent!important;border-top:1px solid #e5eaf2!important;box-shadow:none!important}
+html body .ask-teenlaunch-fab{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;padding:0!important;border-radius:50%!important;font-size:0!important;box-shadow:0 4px 16px #2368eb25!important;bottom:calc(142px + env(safe-area-inset-bottom))!important}
+html body .ask-teenlaunch-fab{display:grid!important;place-items:center!important;gap:0!important}
+html body .ask-teenlaunch-fab>span{display:none!important}
+html body .ask-teenlaunch-fab::after{content:'\2727';display:block;font-size:24px;line-height:1;color:inherit;text-align:center}
+html body .floating-language-toggle{font-size:12px!important;min-height:36px!important;padding:8px 12px!important;border:1px solid #e5eaf2!important;border-radius:12px!important;background:#fff!important;color:#172a49!important;box-shadow:0 2px 10px #172a4910!important}
+html body .mobile-tabs{background:#fffffff2!important;border-top:1px solid #e5eaf2!important;padding-top:9px!important;box-shadow:0 -4px 20px #172a4905!important}
+html body .mobile-tabs a{font-size:10px!important;gap:3px!important;font-weight:600!important}
+html body .mobile-tabs span{font-size:23px!important;line-height:29px!important}
+html body .mobile-tabs a[aria-current=page] span{width:52px!important;border-radius:12px!important;background:#e8f0ff!important}
+@media(prefers-reduced-motion:no-preference){html body :is(.btn,.button,button,.mobile-tabs a){transition:background .15s,transform .15s!important}html body :is(.btn,.button,button):active{transform:scale(.98)}}

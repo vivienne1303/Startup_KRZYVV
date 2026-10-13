@@ -1,0 +1,369 @@
+{
+  "as_of": "2026-09-30",
+  "discovery_source": "https://ecg.temasekjc.moe.edu.sg/discover/portfolio/",
+  "additions": [
+    {
+      "title": "Singapore Book Council — Festival and Programme Volunteers",
+      "organisation": "Singapore Book Council",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "Help with literary events through registration support, logistics, photography, emceeing or design.",
+      "eligibility": "Age and student eligibility not specified; check organiser requirements.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.bookcouncil.sg/get-involved/join-us",
+      "application_url": "https://volunteerwithsbc.paperform.co/",
+      "host_country": "SG",
+      "location": "Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "ECG@TJC",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "unavailable",
+        "discovered_url": "https://ecg.temasekjc.moe.edu.sg/discover/portfolio/",
+        "official_url": "https://www.bookcouncil.sg/get-involved/join-us",
+        "last_checked_at": "2026-09-30",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official page actively seeks volunteers without specifying an age or student group. Paperform displays an unable-to-load error. Deadline and placement availability are unknown.",
+        "evidence_urls": [
+          "https://www.bookcouncil.sg/get-involved/join-us"
+        ]
+      }
+    },
+    {
+      "title": "RDA Singapore — Therapy Session Volunteers",
+      "organisation": "Riding for the Disabled Association Singapore",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "Start as a side-walker supporting riders during equine-assisted sessions. Training is provided.",
+      "eligibility": "Age 16+. Once weekly on the same session for 10 consecutive weeks; closed-toe shoes and suitable clothing. All start as side-walkers.",
+      "minimum_age": 16,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://rdasingapore.org/support-us/be-a-volunteer/",
+      "application_url": "https://docs.google.com/forms/d/e/1FAIpQLSe-SoXGJ0mXCl24p2jWEMKCyfJNL4yq4wFBA18VJSVv_dI28w/viewform",
+      "host_country": "SG",
+      "location": "Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "ECG@TJC",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "rolling",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://ecg.temasekjc.moe.edu.sg/discover/portfolio/",
+        "official_url": "https://rdasingapore.org/support-us/be-a-volunteer/",
+        "last_checked_at": "2026-09-30",
+        "fees": null,
+        "parental_consent": "Required below age 21.",
+        "school_membership": null,
+        "restrictions": "Age 16+. Once weekly on the same session for 10 consecutive weeks; closed-toe shoes and suitable clothing. All start as side-walkers.",
+        "notes": "Organiser always welcomes volunteers. Registration introduction and Next control loaded; no form completed. Placement depends on availability.",
+        "evidence_urls": [
+          "https://rdasingapore.org/support-us/be-a-volunteer/"
+        ]
+      }
+    },
+    {
+      "title": "Pro Bono SG — Student Internship Interest",
+      "organisation": "Pro Bono SG",
+      "category": "Internships",
+      "categories": [
+        "Internships"
+      ],
+      "description": "Register interest in legal-clinic and community justice internships. Law and non-law students can indicate relevant placements.",
+      "eligibility": "Form states minimum age 18; role-specific assessment applies. Some placements require at least two or four weeks. CV, photo and academic documents requested.",
+      "minimum_age": 18,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.probono.sg/get-involved/volunteer/",
+      "application_url": "https://form.jotform.com/253379406538466",
+      "host_country": "SG",
+      "location": "Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "ECG@TJC",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://ecg.temasekjc.moe.edu.sg/discover/portfolio/",
+        "official_url": "https://www.probono.sg/get-involved/volunteer/",
+        "last_checked_at": "2026-09-30",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Form states minimum age 18; role-specific assessment applies. Some placements require at least two or four weeks. CV, photo and academic documents requested.",
+        "notes": "Official volunteer form directs students to this internship interest form, which loaded. No guaranteed placement or closing date stated.",
+        "evidence_urls": [
+          "https://www.probono.sg/get-involved/volunteer/"
+        ]
+      }
+    },
+    {
+      "title": "SAMH — Mental Wellness Volunteering",
+      "organisation": "Singapore Association for Mental Health",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "Support activity facilitation, administration, advocacy or community programmes matched to your skills.",
+      "eligibility": "Minimum six-month commitment. Interview and matching with organisational needs required. No numeric age requirement confirmed.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.samhealth.org.sg/volunteer/",
+      "application_url": "https://samhealth.my.site.com/VAForm/s/",
+      "host_country": "SG",
+      "location": "Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "ECG@TJC",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "unavailable",
+        "discovered_url": "https://ecg.temasekjc.moe.edu.sg/discover/portfolio/",
+        "official_url": "https://www.samhealth.org.sg/volunteer/",
+        "last_checked_at": "2026-09-30",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Minimum six-month commitment. Interview and matching with organisational needs required. No numeric age requirement confirmed.",
+        "notes": "Programme page loaded, but linked application returned a CSS error. Missing age and student-group information does not exclude this listing.",
+        "evidence_urls": [
+          "https://www.samhealth.org.sg/volunteer/"
+        ]
+      }
+    },
+    {
+      "title": "Esplanade — Volunteer Interest",
+      "organisation": "Esplanade",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "Arts-volunteering lead linked from TJC’s portfolio resources; current roles and intake details require confirmation.",
+      "eligibility": "Age and student eligibility not specified; check organiser requirements.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.esplanade.com/support-the-arts/volunteer-with-us",
+      "application_url": null,
+      "host_country": "SG",
+      "location": "Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "ECG@TJC",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "unknown",
+        "discovered_url": "https://ecg.temasekjc.moe.edu.sg/discover/portfolio/",
+        "official_url": "https://www.esplanade.com/support-the-arts/volunteer-with-us",
+        "last_checked_at": "2026-09-30",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official page redirects then shows a loading component. TJC mentions minimum age 16, but this was not confirmed on the organiser page; age remains unknown.",
+        "evidence_urls": [
+          "https://www.esplanade.com/support-the-arts/volunteer-with-us"
+        ],
+        "claims": {
+          "minimum_age": 16
+        }
+      }
+    },
+    {
+      "title": "Youths for Autism — December 2026 Internship Intake",
+      "organisation": "Autism Resource Centre (Singapore)",
+      "category": "Internships",
+      "categories": [
+        "Internships"
+      ],
+      "description": "Hands-on internship supporting autistic people, for the December 2026 to May/June 2027 intake. Applications opened 1 August; closing date not stated.",
+      "eligibility": "Pre-university students, undergraduates and fresh graduates are welcomed. Full-time weekday commitment of five to six months. Numeric age not stated.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://yfa.autism.org.sg/apply-now",
+      "application_url": "https://yfa.autism.org.sg/apply-now",
+      "host_country": "SG",
+      "location": "Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "ECG@TJC",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "unknown",
+        "discovered_url": "https://ecg.temasekjc.moe.edu.sg/discover/portfolio/",
+        "official_url": "https://yfa.autism.org.sg/apply-now",
+        "last_checked_at": "2026-09-30",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Pre-university students, undergraduates and fresh graduates are welcomed. Full-time weekday commitment of five to six months. Numeric age not stated.",
+        "notes": "Official application instructions loaded; linked recruitment portal and downloadable-form submission not verified. Allowance stated as SGD 1,600 monthly inclusive of employee CPF; fees unknown.",
+        "evidence_urls": [
+          "https://yfa.autism.org.sg/apply-now"
+        ]
+      }
+    },
+    {
+      "title": "Net Zero 101: What, Why and How",
+      "organisation": "UNU-IAS / UN CC:Learn",
+      "category": "Academic Programmes",
+      "categories": [
+        "Academic Programmes"
+      ],
+      "description": "Self-paced English introduction to climate science and net-zero action, approximately 1.5 hours.",
+      "eligibility": "No technical background needed. Complete lessons and score at least 75% on each module quiz for certification. Numeric age not stated.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://unccelearn.org/course/view.php?id=185&page=overview",
+      "application_url": "https://unccelearn.org/course/view.php?id=185&page=overview",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "ECG@TJC",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "login_required",
+        "discovered_url": "https://ecg.temasekjc.moe.edu.sg/discover/portfolio/",
+        "official_url": "https://unccelearn.org/course/view.php?id=185&page=overview",
+        "last_checked_at": "2026-09-30",
+        "fees": "Free course and certificate.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "No technical background needed. Complete lessons and score at least 75% on each module quiz for certification. Numeric age not stated.",
+        "notes": "Course and shared login page loaded. No enrolment cutoff found. Age and country eligibility remain unknown.",
+        "evidence_urls": [
+          "https://unccelearn.org/course/view.php?id=185&page=overview",
+          "https://unccelearn.org/login/index.php"
+        ]
+      }
+    },
+    {
+      "title": "Climate Change: From Learning to Action",
+      "organisation": "UN CC:Learn",
+      "category": "Academic Programmes",
+      "categories": [
+        "Academic Programmes"
+      ],
+      "description": "Self-paced climate-change course covering adaptation, mitigation, finance and practical action.",
+      "eligibility": "Certificate requires at least 70% on quizzes, with up to five attempts per quiz. Numeric age and student-group requirements not stated.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://unccelearn.org/course/view.php?id=48&page=overview",
+      "application_url": "https://unccelearn.org/course/view.php?id=48&page=overview",
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "ECG@TJC",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "login_required",
+        "discovered_url": "https://ecg.temasekjc.moe.edu.sg/discover/portfolio/",
+        "official_url": "https://unccelearn.org/course/view.php?id=48&page=overview",
+        "last_checked_at": "2026-09-30",
+        "fees": "Digital certification costs USD 20; other charges not confirmed.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Certificate requires at least 70% on quizzes, with up to five attempts per quiz. Numeric age and student-group requirements not stated.",
+        "notes": "Course and login page loaded. Duration conflicts within source (8-hour summary versus six two-hour modules), so no exact duration is promised. No application cutoff found.",
+        "evidence_urls": [
+          "https://unccelearn.org/course/view.php?id=48&page=overview",
+          "https://unccelearn.org/login/index.php"
+        ]
+      }
+    }
+  ],
+  "research_notes": [
+    "Missing age or target age group is not an exclusion criterion. Unknown values remain null.",
+    "Existing Science Centre, NParks and Youth Corps listings retained without duplicates.",
+    "A TJC referral is not evidence that participation requires TJC membership.",
+    "ACRES legacy link returned 404; not included in this batch."
+  ]
+}
