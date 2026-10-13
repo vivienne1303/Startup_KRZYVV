@@ -1,11 +1,14 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {discoverCandidates} from './providers.mjs';
 
 export const singaporeDay = (now = new Date()) => new Intl.DateTimeFormat('en-CA', {timeZone:'Asia/Singapore',year:'numeric',month:'2-digit',day:'2-digit'}).format(now);
 export function expiredReason(row, now = new Date()) {
   if (row.status === 'expired') return 'Already archived';
   if (row.discovery?.deadline_status === 'closed') return 'Organiser recruitment recorded as closed';
+  const exactClosing=Date.parse(row.discovery?.application_closes_at);
+  if(Number.isFinite(exactClosing)&&exactClosing<now.getTime())return 'Source application closing timestamp passed';
   for (const field of ['application_deadline','deadline','expiry_date','end_date']) {
     const value = row[field];
     if (!value) continue;
@@ -62,17 +65,18 @@ export function projectListing(p, checkedAt = new Date().toISOString()) {
       evidence_urls:[url,'https://panoptes.zooniverse.org/api/projects/'+p.id,'https://www.zooniverse.org/get-involved/volunteer']}
   };
 }
-async function jsonRequest(url, options = {}) {
+export async function jsonRequest(url, options = {}) {
+  const {responseType,...fetchOptions}=options;
   const attempts = !options.method || options.method === 'GET' ? 3 : 1;
   for (let attempt=0; attempt<attempts; attempt++) {
     try {
-      const r = await fetch(url,{...options,signal:AbortSignal.timeout(25000)});
+      const r = await fetch(url,{...fetchOptions,signal:AbortSignal.timeout(25000)});
       if (!r.ok) {
         if ((r.status===429 || r.status>=500) && attempt<attempts-1) {await new Promise(resolve=>setTimeout(resolve,1000*(attempt+1)));continue;}
         const hint=r.status===401?' (authentication rejected; check the project URL and configured API key)':r.status===403?' (access denied; check database permissions)':'';
         throw new Error(`HTTP ${r.status} from ${new URL(url).hostname}${hint}`);
       }
-      return r.status===204 ? null : await r.json();
+      return r.status===204 ? null : responseType==='text'?await r.text():await r.json();
     } catch(e) {if (attempt===attempts-1 || /^HTTP /.test(e.message)) throw e;}
   }
 }
@@ -94,19 +98,28 @@ export function confirmedActive(row, now = new Date()) {
   if (d) return ['confirmed','rolling'].includes(d.deadline_status) && d.student_eligibility==='confirmed' && ['available','login_required'].includes(d.application_access);
   return Boolean((row.application_deadline || row.deadline) && (row.application_url || row.application_method==='internal'));
 }
-export function makePlan(rows, additions, {now = new Date(), target = 1000, buffer = 100} = {}) {
-  const archive=rows.filter(row=>row.status!=='expired' && expiredReason(row,now)).map(row=>({id:row.id,title:row.title,updated_at:row.updated_at,reason:expiredReason(row,now)}));
+export function dailyAdditions(rows,now=new Date()) {
+  const day=singaporeDay(now);
+  return rows.filter(row=>row.discovery?.automation_added_day===day&&row.created_at&&singaporeDay(new Date(row.created_at))===day&&row.is_published&&row.status==='published'&&!expiredReason(row,now)).length;
+}
+export function eligibleAddition(row,now=new Date()) {
+  const d=row.discovery;
+  return Boolean(row.title&&row.organisation&&canonicalUrl(row.source_url)&&canonicalUrl(row.application_url)&&row.is_published&&row.status==='published'&&!expiredReason(row,now)&&d&&d.student_eligibility!=='ineligible'&&['confirmed','rolling','unknown'].includes(d.deadline_status)&&['available','login_required'].includes(d.application_access)&&d.evidence_urls?.length&&d.last_checked_at&&Number.isFinite(Date.parse(d.last_checked_at))&&singaporeDay(new Date(d.last_checked_at))===singaporeDay(now));
+}
+export function makePlan(rows, additions, {now = new Date(), minimumAdditions=50, reserve=10} = {}) {
+  const archive=rows.filter(row=>row.status!=='expired' && expiredReason(row,now)).map(row=>({id:row.id,title:row.title,updated_at:row.updated_at,discovery:row.discovery,reason:expiredReason(row,now)}));
   const published=rows.filter(row=>row.is_published===true && row.status==='published' && !expiredReason(row,now) && row.discovery?.student_eligibility!=='ineligible');
   const active=rows.filter(row=>confirmedActive(row,now));
   const known=[...rows];const insert=[];const duplicates=[];
+  const daily_before=dailyAdditions(rows,now),remaining=Math.max(0,minimumAdditions-daily_before);
   for(const item of additions){
-    if(!confirmedActive(item,now)) continue;
+    if(!eligibleAddition(item,now)) continue;
     const duplicate=duplicateOf(known,item);
     if(duplicate){duplicates.push({title:item.title,existing_id:duplicate.id});continue;}
-    if(active.length+insert.length>=target+buffer) break;
+    if(!remaining||insert.length>=remaining+reserve) break;
     insert.push(item);known.push(item);
   }
-  return {as_of:singaporeDay(now),target,buffer,published_before:published.length,projected_published:published.length+insert.length,active_before:active.length,projected_active:active.length+insert.length,archive,insert,duplicates};
+  return {as_of:singaporeDay(now),minimum_additions:minimumAdditions,daily_before,remaining,published_before:published.length,projected_published:published.length+Math.min(remaining,insert.length),active_before:active.length,projected_active:active.length+insert.filter(x=>confirmedActive(x,now)).length,archive,insert,duplicates};
 }
 export function databaseHeaders(key) {
   const headers={apikey:key,'Content-Type':'application/json',Prefer:'return=representation'};
@@ -121,7 +134,7 @@ function databaseClient() {
   const headers=databaseHeaders(key);
   return {
     async readAll(){const all=[];for(let offset=0;;offset+=500){const u=new URL(base);u.searchParams.set('select','*');u.searchParams.set('order','id');u.searchParams.set('offset',offset);u.searchParams.set('limit','500');const rows=await jsonRequest(u,{headers});if(!Array.isArray(rows))throw new Error('Invalid database response');all.push(...rows);if(rows.length<500)return all;}},
-    async archive(row){const u=new URL(base);u.searchParams.set('id','eq.'+row.id);if(row.updated_at)u.searchParams.set('updated_at','eq.'+row.updated_at);const data=await jsonRequest(u,{method:'PATCH',headers,body:JSON.stringify({status:'expired',is_published:false,verification_status:'expired'})});if(data?.length!==1)throw new Error('Concurrent change while archiving '+row.id);return data[0];},
+    async archive(row){const u=new URL(base);u.searchParams.set('id','eq.'+row.id);if(row.updated_at)u.searchParams.set('updated_at','eq.'+row.updated_at);const discovery={deadline_status:'closed',student_eligibility:'unknown',application_access:'unknown',last_checked_at:new Date().toISOString(),...row.discovery,automation_archived_day:singaporeDay(),automation_archive_reason:row.reason};const data=await jsonRequest(u,{method:'PATCH',headers,body:JSON.stringify({status:'expired',is_published:false,verification_status:'expired',discovery})});if(data?.length!==1)throw new Error('Concurrent change while archiving '+row.id);return data[0];},
     async insert(item){const data=await jsonRequest(base,{method:'POST',headers,body:JSON.stringify(item)});if(data?.length!==1 || data[0].is_published!==true || data[0].status!=='published')throw new Error('Insert verification failed');return data[0];}
   };
 }
@@ -135,45 +148,79 @@ export async function run(options={}) {
     throw error;
   }
 }
-async function runRefresh({apply=false,output,now=new Date(),target=1000,buffer=100,database,request=jsonRequest,discover=discoverProjects}={}) {
+async function runRefresh({apply=false,output,now=new Date(),minimumAdditions=50,reserve=10,database,request=jsonRequest,discover=discoverCandidates}={}) {
+  if(!Number.isInteger(minimumAdditions)||minimumAdditions<1||minimumAdditions>500)throw Error('Minimum additions must be an integer from 1 to 500');
   const dir=output || path.join(path.dirname(fileURLToPath(import.meta.url)),'reports',singaporeDay(now));
   await fs.mkdir(dir,{recursive:true});
-  const db=apply?(database || databaseClient()):null;
+  const db=database || (apply || process.env.SUPABASE_URL&&process.env.SUPABASE_SECRET_KEY ? databaseClient() : null);
   const baseline=db?await db.readAll():(await request('https://teenlaunch-production.up.railway.app/api/opportunities')).opportunities;
   if(!Array.isArray(baseline))throw new Error('Invalid baseline data');
-  const providerErrors=[];
-  let projects=[];
-  try {projects=await discover();} catch(e) {providerErrors.push({operation:'discovery',error:e.message});}
-  const candidates=projects.filter(usableProject).map(p=>projectListing(p,now.toISOString()));
-  const plan=makePlan(baseline,candidates,{now,target,buffer});
-  const report={...plan,applied:apply,baseline_scope:apply?'complete database':'public API response (hidden/archived rows unavailable)',provider:'Zooniverse official API',provider_projects:projects.length,provider_candidates:candidates.length,archived:[],added:[],errors:providerErrors};
+  const initial=makePlan(baseline,[],{now,minimumAdditions,reserve});
+  const report={...initial,applied:apply,baseline_scope:db?'complete database':'public API response (hidden/archived rows unavailable)',archived:[],added:[],errors:[],warnings:[]};
   const save=()=>fs.writeFile(path.join(dir,apply?'applied.json':'dry-run.json'),JSON.stringify(report,null,2)+'\n');
+  await save();
+  const archivedIds=new Set();
+  const archive=async items=>{
+    for(const row of items) {
+      if(archivedIds.has(row.id))continue;
+      try{await db.archive(row);report.archived.push(row.id);archivedIds.add(row.id);}
+      catch(e){report.errors.push({operation:'archive',id:row.id,error:e.message});}
+      await save();
+    }
+  };
+  if(apply){
+    await fs.writeFile(path.join(dir,'archive-backup.json'),JSON.stringify(baseline.filter(r=>initial.archive.some(a=>a.id===r.id)),null,2)+'\n');
+    // Expiry does not depend on discovery being reachable or returning enough additions.
+    await archive(initial.archive);
+  }
+  let discovery={candidates:[],closed:[],errors:[],stats:{}};
+  try {
+    discovery=await discover({rows:baseline,needed:initial.remaining?initial.remaining+reserve:0,now,request,onProgress:p=>console.log(JSON.stringify(p))});
+    if(Array.isArray(discovery))discovery={candidates:discovery.filter(usableProject).map(p=>projectListing(p,now.toISOString())),closed:[],errors:[],stats:{}};
+  }catch(e){report.errors.push({operation:'discovery',error:e.message});}
+  report.errors.push(...(discovery.errors||[]).filter(e=>e.operation!=='source_check'));
+  report.warnings.push(...(discovery.errors||[]).filter(e=>e.operation==='source_check'));
+  report.providers=discovery.stats||{};
+  const plan=makePlan(baseline,discovery.candidates||[],{now,minimumAdditions,reserve});
+  Object.assign(report,plan);
+  report.archive=[...new Map([...plan.archive,...(discovery.closed||[])].map(r=>[r.id,r])).values()];
   await fs.writeFile(path.join(dir,'new-opportunities.json'),JSON.stringify({as_of:plan.as_of,additions:plan.insert},null,2)+'\n');
   await save();
   if(apply){
-    // Never delete records: preserve references held by applications and portfolios.
-    await fs.writeFile(path.join(dir,'archive-backup.json'),JSON.stringify(baseline.filter(r=>plan.archive.some(a=>a.id===r.id)),null,2)+'\n');
-    for(const row of plan.archive){try{await db.archive(row);report.archived.push(row.id);}catch(e){report.errors.push({operation:'archive',id:row.id,error:e.message});}await save();}
-    for(const item of plan.insert){try{
-      // Recheck against the live DB for idempotency if another run inserted records.
-      const current=await db.readAll();
+    await fs.writeFile(path.join(dir,'archive-backup.json'),JSON.stringify(baseline.filter(r=>report.archive.some(a=>a.id===r.id)),null,2)+'\n');
+    await archive(report.archive.filter(r=>!archivedIds.has(r.id)));
+    const current=await db.readAll();
+    let today=dailyAdditions(current,now);
+    for(const item of plan.insert){
+      if(today>=minimumAdditions)break;
+      try{
       if(duplicateOf(current,item))continue;
-      const saved=await db.insert(item);report.added.push({id:saved.id,title:saved.title});
+      const saved=await db.insert({...item,discovery:{...item.discovery,automation_added_day:singaporeDay(now)}});
+      current.push(saved);report.added.push({id:saved.id,title:saved.title});today++;
     }catch(e){report.errors.push({operation:'insert',title:item.title,error:e.message});}await save();}
     const final=await db.readAll();
     report.active_after=final.filter(row=>confirmedActive(row,now)).length;
+    report.daily_after=dailyAdditions(final,now);
+    report.daily_archived=final.filter(row=>row.discovery?.automation_archived_day===singaporeDay(now)&&row.status==='expired'&&!row.is_published).length;
+    const failedArchives=report.archived.filter(id=>final.some(row=>row.id===id&&(row.status!=='expired'||row.is_published)));
+    const missing=report.added.filter(item=>!final.some(row=>row.id===item.id&&row.is_published&&row.status==='published'&&!expiredReason(row,now)));
+    if(failedArchives.length||missing.length)report.errors.push({operation:'verification',error:'Archive or insertion visibility did not match the final database state'});
   }
-  report.projected_below_target=report.projected_active<target;
-  report.below_target=(report.active_after??report.active_before)<target;
-  await fs.writeFile(path.join(dir,'summary.json'),JSON.stringify({as_of:plan.as_of,applied:apply,execution_status:report.errors.length?'failed':'completed',counts_verified:true,added:report.added.length,archived:report.archived.length,published_before:plan.published_before,projected_published:plan.projected_published,active_before:plan.active_before,active_after:report.active_after??null,projected_active:plan.projected_active,planned_additions:plan.insert.length,planned_archives:plan.archive.length,below_target:report.below_target,error_count:report.errors.length},null,2));
+  report.shortfall=Math.max(0,minimumAdditions-(report.daily_after??(plan.daily_before+Math.min(plan.remaining,plan.insert.length))));
+  const summary={as_of:plan.as_of,applied:apply,execution_status:report.errors.length?'failed':report.shortfall?'shortfall':'completed',counts_verified:apply,minimum_additions:minimumAdditions,daily_before:plan.daily_before,daily_after:report.daily_after??null,daily_archived:report.daily_archived??null,added:report.added.length,archived:report.archived.length,planned_additions:Math.min(plan.remaining,plan.insert.length),planned_archives:report.archive.length,shortfall:report.shortfall,active_before:plan.active_before,active_after:report.active_after??null,error_count:report.errors.length,warning_count:report.warnings.length,providers:report.providers};
+  await fs.writeFile(path.join(dir,'summary.json'),JSON.stringify(summary,null,2)+'\n');
   await save();
-  console.log(JSON.stringify({applied:apply,published_before:plan.published_before,projected_published:plan.projected_published,active_before:plan.active_before,planned_additions:plan.insert.length,planned_archives:plan.archive.length,added:report.added.length,archived:report.archived.length,active_after:report.active_after??null,projected_active:plan.projected_active,below_target:report.below_target,errors:report.errors.length,report:path.join(dir,apply?'applied.json':'dry-run.json')},null,2));
+  console.log(JSON.stringify(summary,null,2));
   return report;
 }
 if(process.argv[1] && path.resolve(process.argv[1])===fileURLToPath(import.meta.url)) {
   // GitHub supplies environment variables directly; local runs can use the ignored .env.
   if(typeof process.loadEnvFile==='function') {
     try { process.loadEnvFile(); } catch(error) { if(error.code!=='ENOENT') throw error; }
+  } else {
+    const {createRequire}=await import('node:module');
+    try{createRequire(import.meta.url)('dotenv').config({quiet:true});}catch(error){if(error.code!=='MODULE_NOT_FOUND')throw error;}
   }
-  run({apply:process.argv.includes('--apply')}).then(r=>{if(r.errors.length||r.below_target)process.exitCode=2;}).catch(e=>{console.error(e.message);process.exitCode=1;});
+  const minimumArg=process.argv.find(arg=>arg.startsWith('--minimum-additions='));
+  run({apply:process.argv.includes('--apply'),minimumAdditions:minimumArg?Number(minimumArg.split('=')[1]):50}).then(r=>{if(r.errors.length||r.shortfall)process.exitCode=2;}).catch(e=>{console.error(e.message);process.exitCode=1;});
 }

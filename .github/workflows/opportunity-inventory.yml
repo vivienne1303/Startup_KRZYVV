@@ -2,8 +2,8 @@ name: Daily opportunity refresh
 
 on:
   schedule:
-    # 01:00 UTC is 09:00 Singapore time.
-    - cron: '0 1 * * *'
+    # 09:00 Singapore primary run; 17:00 recovery run. Both share the same daily quota.
+    - cron: '0 1,9 * * *'
   workflow_dispatch:
 
 permissions:
@@ -25,7 +25,7 @@ jobs:
           node-version: '22'
 
       - name: Test opportunity rules
-        run: node --test opportunity-automation/refresh.test.mjs
+        run: node --test opportunity-automation/*.test.mjs
 
       - name: Check database connection settings
         env:
@@ -37,11 +37,15 @@ jobs:
             exit 1
           fi
 
-      - name: Archive expired listings and add verified opportunities
+      - name: Archive outdated listings and add at least 50 new opportunities today
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
-        run: node opportunity-automation/refresh.mjs --apply
+        run: node opportunity-automation/refresh.mjs --apply --minimum-additions=50
+
+      - name: Show actual daily additions and removals
+        if: always()
+        run: node opportunity-automation/write-summary.mjs
 
       - name: Save inventory summary
         if: always()
