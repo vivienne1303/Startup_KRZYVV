@@ -1,0 +1,5 @@
+﻿runtime/
+source/
+*.zip
+repository-tree.json
+reports/

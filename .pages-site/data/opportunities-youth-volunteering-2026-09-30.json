@@ -1,0 +1,418 @@
+{
+  "as_of": "2026-09-30",
+  "discovery_sources": [
+    "https://discover.nyc.gov.sg/events",
+    "https://www.youthplan.gov.sg/contribute/more-volunteering-opportunities/",
+    "https://www.facebook.com/opportunitiesforyouth/"
+  ],
+  "additions": [
+    {
+      "title": "OBS Instructor Job Taster — Run 2",
+      "organisation": "National Youth Council",
+      "category": "Career Exploration",
+      "categories": [
+        "Career Exploration"
+      ],
+      "description": "Try outdoor education activities and explore instructor careers on 7 October, 9am–12:30pm. Registration closes 1 October at noon.",
+      "eligibility": "Age and education requirements not specified.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-10-01",
+      "start_date": "2026-10-07",
+      "end_date": "2026-10-07",
+      "source_url": "https://discover.nyc.gov.sg/events/character-building-using-the-outdoors-the-obs-instructor-run-2-nyc-2026-0086",
+      "application_url": "https://discover.nyc.gov.sg/events/character-building-using-the-outdoors-the-obs-instructor-run-2-nyc-2026-0086",
+      "host_country": "SG",
+      "location": "Pulau Ubin; report at Punggol Point Jetty, Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Discover NYC",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "confirmed",
+        "student_eligibility": "unknown",
+        "application_access": "unknown",
+        "discovered_url": "https://discover.nyc.gov.sg/events/character-building-using-the-outdoors-the-obs-instructor-run-2-nyc-2026-0086",
+        "official_url": "https://discover.nyc.gov.sg/events/character-building-using-the-outdoors-the-obs-instructor-run-2-nyc-2026-0086",
+        "last_checked_at": "2026-09-30",
+        "fees": "Free",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Age and education requirements not specified.",
+        "notes": "Official listing loaded; registration flow not verified. Unstated deadline, citizenship/residency, fees and consent requirements remain unknown.",
+        "evidence_urls": [
+          "https://discover.nyc.gov.sg/events/character-building-using-the-outdoors-the-obs-instructor-run-2-nyc-2026-0086"
+        ]
+      }
+    },
+    {
+      "title": "iASPIRE — From Campus Crunch to Corporate Clocks",
+      "organisation": "Voices Of Asia",
+      "category": "Mentorship",
+      "categories": [
+        "Mentorship"
+      ],
+      "description": "Meet mentors to discuss moving from education into work, 8 October, 7:30–9:30pm. Light refreshments provided.",
+      "eligibility": "For ages 17–25, including current students. Event photography may be used by the organisers.",
+      "minimum_age": 17,
+      "maximum_age": 25,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": "2026-10-08",
+      "end_date": "2026-10-08",
+      "source_url": "https://discover.nyc.gov.sg/events/voices-of-asia-iaspire-mentoring-series-session-1-from-campus-crunch-to-corporat-mu41b4o4",
+      "application_url": "https://discover.nyc.gov.sg/events/voices-of-asia-iaspire-mentoring-series-session-1-from-campus-crunch-to-corporat-mu41b4o4",
+      "host_country": "SG",
+      "location": "Drama Centre, National Library Building, Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Discover NYC",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "unknown",
+        "discovered_url": "https://discover.nyc.gov.sg/events/voices-of-asia-iaspire-mentoring-series-session-1-from-campus-crunch-to-corporat-mu41b4o4",
+        "official_url": "https://discover.nyc.gov.sg/events/voices-of-asia-iaspire-mentoring-series-session-1-from-campus-crunch-to-corporat-mu41b4o4",
+        "last_checked_at": "2026-09-30",
+        "fees": "Free",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "For ages 17–25, including current students. Event photography may be used by the organisers.",
+        "notes": "Official listing loaded; registration flow not verified. Unstated deadline, citizenship/residency, fees and consent requirements remain unknown.",
+        "evidence_urls": [
+          "https://discover.nyc.gov.sg/events/voices-of-asia-iaspire-mentoring-series-session-1-from-campus-crunch-to-corporat-mu41b4o4"
+        ]
+      }
+    },
+    {
+      "title": "POV: You’re an NYC Officer — Run 2",
+      "organisation": "National Youth Council",
+      "category": "Career Exploration",
+      "categories": [
+        "Career Exploration"
+      ],
+      "description": "Explore public-service careers through two job tasters on 21 November, 9:30am–1pm. Registration opens 1 October and closes 14 November at noon.",
+      "eligibility": "Current secondary, pre-university, ITE, polytechnic or university students interested in public service.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": "2026-11-14",
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-21",
+      "source_url": "https://discover.nyc.gov.sg/events/pov-youre-an-nyc-officer-run-2-mrndeou4",
+      "application_url": "https://discover.nyc.gov.sg/events/pov-youre-an-nyc-officer-run-2-mrndeou4",
+      "host_country": "SG",
+      "location": "National Youth Council, Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Discover NYC",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "upcoming",
+        "student_eligibility": "confirmed",
+        "application_access": "unknown",
+        "discovered_url": "https://discover.nyc.gov.sg/events/pov-youre-an-nyc-officer-run-2-mrndeou4",
+        "official_url": "https://discover.nyc.gov.sg/events/pov-youre-an-nyc-officer-run-2-mrndeou4",
+        "last_checked_at": "2026-09-30",
+        "fees": "Free",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Current secondary, pre-university, ITE, polytechnic or university students interested in public service.",
+        "notes": "Official listing loaded; registration flow not verified. Unstated deadline, citizenship/residency, fees and consent requirements remain unknown.",
+        "evidence_urls": [
+          "https://discover.nyc.gov.sg/events/pov-youre-an-nyc-officer-run-2-mrndeou4"
+        ]
+      }
+    },
+    {
+      "title": "KPMG Flash Mentoring — Session 9",
+      "organisation": "KPMG in Singapore",
+      "category": "Mentorship",
+      "categories": [
+        "Mentorship"
+      ],
+      "description": "Small-group career and mental-wellbeing mentoring on 9 October, 1–1:30pm. Mentor assignment depends on topic and availability.",
+      "eligibility": "Up to three mentees per mentor. Age and student eligibility not specified.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": "2026-10-09",
+      "end_date": "2026-10-09",
+      "source_url": "https://discover.nyc.gov.sg/events/kpmg-flash-mentoring-programme-mrylaaop",
+      "application_url": "https://discover.nyc.gov.sg/events/kpmg-flash-mentoring-programme-mrylaaop",
+      "host_country": "SG",
+      "location": "KPMG Clubhouse, 12 Marina View, Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Discover NYC",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "unknown",
+        "discovered_url": "https://discover.nyc.gov.sg/events/kpmg-flash-mentoring-programme-mrylaaop",
+        "official_url": "https://discover.nyc.gov.sg/events/kpmg-flash-mentoring-programme-mrylaaop",
+        "last_checked_at": "2026-09-30",
+        "fees": "Free",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Up to three mentees per mentor. Age and student eligibility not specified.",
+        "notes": "Official listing loaded; registration flow not verified. Unstated deadline, citizenship/residency, fees and consent requirements remain unknown.",
+        "evidence_urls": [
+          "https://discover.nyc.gov.sg/events/kpmg-flash-mentoring-programme-mrylaaop"
+        ]
+      }
+    },
+    {
+      "title": "Red Cross Youth — Youth @ Community",
+      "organisation": "Singapore Red Cross",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "Join community and humanitarian activities through the community youth pathway. Contact the organiser to confirm intake and joining arrangements.",
+      "eligibility": "Ages 9–35. This pathway also includes adults older than TeenLaunch’s typical student audience.",
+      "minimum_age": 9,
+      "maximum_age": 35,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.redcross.sg/get-involved/red-cross-youth/",
+      "application_url": null,
+      "host_country": "SG",
+      "location": "Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Singapore Red Cross",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "unknown",
+        "discovered_url": "https://www.redcross.sg/get-involved/red-cross-youth/",
+        "official_url": "https://www.redcross.sg/get-involved/red-cross-youth/",
+        "last_checked_at": "2026-09-30",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": "For youths whose school or institution has no Red Cross unit.",
+        "restrictions": "Ages 9–35. This pathway also includes adults older than TeenLaunch’s typical student audience.",
+        "notes": "Official listing loaded; registration flow not verified. Unstated deadline, citizenship/residency, fees and consent requirements remain unknown.",
+        "evidence_urls": [
+          "https://www.redcross.sg/get-involved/red-cross-youth/"
+        ]
+      }
+    },
+    {
+      "title": "Food Bank Singapore — Individual Volunteering",
+      "organisation": "The Food Bank Singapore",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "Warehouse shifts involve sorting donated food, weekdays for three hours. Delivery and bundle roles are also available with different age and commitment requirements.",
+      "eligibility": "Warehouse: age 16+, light/moderate manual work. Delivery and bundle roles: 18+. Bundle volunteers commit twice monthly for six months.",
+      "minimum_age": 16,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://foodbank.sg/volunteer/",
+      "application_url": "https://foodbank.sg/volunteer/",
+      "host_country": "SG",
+      "location": "Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "The Food Bank Singapore",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://foodbank.sg/volunteer/",
+        "official_url": "https://foodbank.sg/volunteer/",
+        "last_checked_at": "2026-09-30",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Warehouse: age 16+, light/moderate manual work. Delivery and bundle roles: 18+. Bundle volunteers commit twice monthly for six months.",
+        "notes": "Individual interest form fields and submit control loaded. Intake deadline not stated; submission and acceptance not tested.",
+        "evidence_urls": [
+          "https://foodbank.sg/volunteer/"
+        ]
+      }
+    },
+    {
+      "title": "Habitat Campus Chapters & Youth Volunteer Leaders",
+      "organisation": "Habitat for Humanity Singapore",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "School-based community service and leadership through home rehabilitation, advocacy and fundraising. Contact the organiser about joining or starting a chapter.",
+      "eligibility": "Age 15+. Chapter availability and individual placement need confirmation.",
+      "minimum_age": 15,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.habitat.org.sg/campus-chapters",
+      "application_url": null,
+      "host_country": "SG",
+      "location": "Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Habitat for Humanity Singapore",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "unknown",
+        "discovered_url": "https://www.habitat.org.sg/campus-chapters",
+        "official_url": "https://www.habitat.org.sg/campus-chapters",
+        "last_checked_at": "2026-09-30",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": "Educational-institution chapter pathway; enquire about starting a chapter at your school.",
+        "restrictions": "Age 15+. Chapter availability and individual placement need confirmation.",
+        "notes": "Programme page loaded. Linked general interest form failed to load; specific chapter enrolment route is unknown.",
+        "evidence_urls": [
+          "https://www.habitat.org.sg/campus-chapters"
+        ]
+      }
+    },
+    {
+      "title": "Project HomeWorks — Individual Volunteers",
+      "organisation": "Habitat for Humanity Singapore",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "Help rehabilitate vulnerable households’ homes through cleaning, decluttering and basic repairs. Sessions last around four to five hours; training and supplies provided.",
+      "eligibility": "Age 15+. Physical tasks may include lifting. No experience required.",
+      "minimum_age": 15,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.habitat.org.sg/project-homeworks",
+      "application_url": null,
+      "host_country": "SG",
+      "location": "Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Habitat for Humanity Singapore",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "unavailable",
+        "discovered_url": "https://www.habitat.org.sg/project-homeworks",
+        "official_url": "https://www.habitat.org.sg/project-homeworks",
+        "last_checked_at": "2026-09-30",
+        "fees": "Individual fee not specified. Corporate sessions separately require SGD 1,800 donation support per home.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Age 15+. Physical tasks may include lifting. No experience required.",
+        "notes": "Official page loaded, but linked individual sign-up form failed to load. Session availability and deadline remain unknown.",
+        "evidence_urls": [
+          "https://www.habitat.org.sg/project-homeworks"
+        ]
+      }
+    },
+    {
+      "title": "Girl Up Global Leadership Summit 2026 — Rise to Lead",
+      "organisation": "Girl Up",
+      "category": "Conferences",
+      "categories": [
+        "Conferences"
+      ],
+      "description": "Lead discovered through Opportunities for Youth for an online youth leadership event. Official event-page access was blocked; participation details require confirmation.",
+      "eligibility": "Student eligibility not fully confirmed. Check organiser requirements.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://girlup.org/2026-girl-up-global-leadership-summit",
+      "application_url": null,
+      "host_country": null,
+      "location": "Online",
+      "format": "online",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "Girl Up",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "unavailable",
+        "discovered_url": "https://opportunitiesforyouth.org/2026/09/24/rise-to-lead-girl-up-2026-global-leadership-summit-join-young-leaders-worldwide-for-a-virtual-gender-justice-summit/",
+        "official_url": "https://girlup.org/2026-girl-up-global-leadership-summit",
+        "last_checked_at": "2026-09-30",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official page returned 403; official community search result mentions 10 October, but the opened news page showed older content. Dates, age and worldwide eligibility are not treated as confirmed.",
+        "evidence_urls": [
+          "https://girlup.org/2026-girl-up-global-leadership-summit"
+        ],
+        "claims": {
+          "event_date": "2026-10-10",
+          "minimum_age": 13,
+          "maximum_age": 24,
+          "eligibility_scope": "worldwide"
+        }
+      }
+    }
+  ],
+  "research_notes": [
+    "Facebook feed was blocked; OFY website used instead.",
+    "Youth Plan links to the existing Youth Corps directory: no duplicate listing added.",
+    "All unknown country eligibility excluded from country/global filters, including physically Singapore-based listings.",
+    "No rolling deadline inferred from an evergreen recruitment page."
+  ]
+}

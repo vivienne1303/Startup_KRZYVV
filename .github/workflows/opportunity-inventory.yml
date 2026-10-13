@@ -1,0 +1,53 @@
+name: Daily opportunity refresh
+
+on:
+  schedule:
+    # 01:00 UTC is 09:00 Singapore time.
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: opportunity-refresh-production
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Test opportunity rules
+        run: node --test opportunity-automation/refresh.test.mjs
+
+      - name: Check database connection settings
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+        run: |
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_SECRET_KEY" ]; then
+            echo '::error::Add SUPABASE_URL and SUPABASE_SECRET_KEY in repository Actions secrets before activation.'
+            exit 1
+          fi
+
+      - name: Archive expired listings and add verified opportunities
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+        run: node opportunity-automation/refresh.mjs --apply
+
+      - name: Save inventory summary
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: opportunity-refresh-${{ github.run_id }}
+          path: opportunity-automation/reports/**/summary.json
+          if-no-files-found: warn
+          retention-days: 30

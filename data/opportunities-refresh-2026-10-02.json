@@ -1,0 +1,229 @@
+{
+  "as_of": "2026-10-02",
+  "additions": [
+    {
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "host_country": "SG",
+      "location": "Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "title": "Willing Hearts - Kitchen Volunteering",
+      "organisation": "Willing Hearts",
+      "source_url": "https://willinghearts.org.sg/volunteer-1",
+      "application_url": "https://portal.willinghearts.org.sg/VolunteerRegister",
+      "minimum_age": 5,
+      "description": "Prepare and pack meals, clean the kitchen and help with supplies. Daily four-hour shifts start at 5am, 9am and 1pm.",
+      "eligibility": "Age 5+. Ages 5-12 must be accompanied by a parent, teacher or other adult; ages 13+ may volunteer independently. Closed-toe shoes required. School groups of six or more should contact the organiser.",
+      "source_name": "Willing Hearts",
+      "discovery": {
+        "deadline_status": "rolling",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://willinghearts.org.sg/volunteer-1",
+        "official_url": "https://willinghearts.org.sg/volunteer-1",
+        "last_checked_at": "2026-10-02",
+        "fees": null,
+        "parental_consent": "Ages 5-12 require adult accompaniment; separate consent requirements not specified.",
+        "school_membership": null,
+        "restrictions": "Age 5+. Ages 5-12 must be accompanied by a parent, teacher or other adult; ages 13+ may volunteer independently. Closed-toe shoes required. School groups of six or more should contact the organiser.",
+        "notes": "Daily walk-in volunteering is offered. Group booking instructions conflict for exactly four participants; confirm with the organiser. This listing covers kitchen volunteering, not driving.",
+        "evidence_urls": [
+          "https://willinghearts.org.sg/volunteer-1",
+          "https://portal.willinghearts.org.sg/VolunteerRegister"
+        ]
+      }
+    },
+    {
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "host_country": "SG",
+      "location": "Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "title": "ACRES - Animal Care Volunteer",
+      "organisation": "ACRES",
+      "source_url": "https://acres.org.sg/get-involved/",
+      "application_url": "https://docs.google.com/forms/d/e/1FAIpQLSdtpq_YIHia1I4rmehoIKZA8S80TFXq_bbKKv2rO99kzv-iWA/viewform",
+      "minimum_age": 18,
+      "description": "Help care for rescued wildlife through enclosure cleaning, food preparation, feeding and maintenance.",
+      "eligibility": "Age 18+. Written and spoken English required. Work can be physically tiring and outdoors. Only vegetarian or vegan food may be consumed on duty.",
+      "source_name": "ACRES",
+      "discovery": {
+        "deadline_status": "rolling",
+        "student_eligibility": "confirmed",
+        "application_access": "available",
+        "discovered_url": "https://acres.org.sg/get-involved/",
+        "official_url": "https://acres.org.sg/get-involved/",
+        "last_checked_at": "2026-10-02",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Age 18+. Written and spoken English required. Work can be physically tiring and outdoors. Only vegetarian or vegan food may be consumed on duty.",
+        "notes": "Interest registration is not acceptance. Monthly slot invitations go out on the 20th; register before the 15th to be included for the following month. Slots are first come, first served. Rabies, tetanus and influenza vaccinations are encouraged.",
+        "evidence_urls": [
+          "https://acres.org.sg/get-involved/",
+          "https://docs.google.com/forms/d/e/1FAIpQLSdtpq_YIHia1I4rmehoIKZA8S80TFXq_bbKKv2rO99kzv-iWA/viewform"
+        ]
+      }
+    },
+    {
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "host_country": "SG",
+      "location": "Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "title": "ReadAble / CountAble - Teaching and Learning Volunteers",
+      "organisation": "ReadAble",
+      "source_url": "https://readablesg.com/volunteer/",
+      "application_url": "https://docs.google.com/forms/d/1XXSHISxUb5VVIBthai7BFTz7DEnfGxRgrRkj6CleR5A/viewform",
+      "minimum_age": null,
+      "description": "Express interest in literacy or mathematics teaching, lesson planning and organisational support; shortlisted applicants attend taster sessions.",
+      "eligibility": "Volunteer age and student eligibility are not specified. Usually at least six months commitment; the form also offers a six-session option for confident mathematics teachers. Relevant experience or interest is requested for some classes.",
+      "source_name": "ReadAble",
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "available",
+        "discovered_url": "https://readablesg.com/volunteer/",
+        "official_url": "https://readablesg.com/volunteer/",
+        "last_checked_at": "2026-10-02",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Volunteer age and student eligibility are not specified. Usually at least six months commitment; the form also offers a six-session option for confident mathematics teachers. Relevant experience or interest is requested for some classes.",
+        "notes": "Only shortlisted applicants are contacted. Some classes are waitlisted. No application closing date is stated. Children's class ages are not volunteer age limits.",
+        "evidence_urls": [
+          "https://readablesg.com/volunteer/",
+          "https://docs.google.com/forms/d/1XXSHISxUb5VVIBthai7BFTz7DEnfGxRgrRkj6CleR5A/viewform"
+        ]
+      }
+    },
+    {
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "host_country": "SG",
+      "location": "Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "title": "Engineering Good - Makers and Laptop Maintenance Volunteers",
+      "organisation": "Engineering Good",
+      "source_url": "https://www.engineeringgood.org/volunteeringopportunities",
+      "application_url": null,
+      "minimum_age": 18,
+      "description": "Support assistive technology projects or prepare donated laptops for refurbishment. Choose a role suited to your technical skills.",
+      "eligibility": "The organiser states volunteers must be at least 18 unless a programme specifies otherwise. Maker roles need fabrication skills; laptop work needs confidence handling and reassembling devices. Laptop sessions are on weekdays, 10am-5pm, by arrangement.",
+      "source_name": "Engineering Good",
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "unknown",
+        "discovered_url": "https://www.engineeringgood.org/volunteeringopportunities",
+        "official_url": "https://www.engineeringgood.org/volunteeringopportunities",
+        "last_checked_at": "2026-10-02",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "The organiser states volunteers must be at least 18 unless a programme specifies otherwise. Maker roles need fabrication skills; laptop work needs confidence handling and reassembling devices. Laptop sessions are on weekdays, 10am-5pm, by arrangement.",
+        "notes": "Current roles are listed, but a working application form could not be confirmed. Contact contactus@engineeringgood.org for the next step. No application deadline is stated.",
+        "evidence_urls": [
+          "https://www.engineeringgood.org/volunteeringopportunities"
+        ]
+      }
+    },
+    {
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "host_country": "SG",
+      "location": "Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "title": "Food from the Heart - Food Packing and Distribution Volunteering",
+      "organisation": "Food from the Heart",
+      "source_url": "https://www.foodfromtheheart.sg/opportunities-to-help",
+      "application_url": null,
+      "minimum_age": null,
+      "description": "Explore food sorting, packing, surplus bread collection and distribution roles supporting households in Singapore.",
+      "eligibility": "The official FAQ welcomes all ages and backgrounds. Individual roles may have additional requirements; confirm supervision and availability with the organiser.",
+      "source_name": "Food from the Heart",
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "unknown",
+        "discovered_url": "https://www.foodfromtheheart.sg/opportunities-to-help",
+        "official_url": "https://www.foodfromtheheart.sg/opportunities-to-help",
+        "last_checked_at": "2026-10-02",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "The official FAQ welcomes all ages and backgrounds. Individual roles may have additional requirements; confirm supervision and availability with the organiser.",
+        "notes": "The current sign-up link returns to the opportunities page; the registration form could not be confirmed. Contact volunteer@foodheart.org for delivery volunteering. No closing date is stated.",
+        "evidence_urls": [
+          "https://www.foodfromtheheart.sg/opportunities-to-help",
+          "https://www.foodfromtheheart.sg/about/faq"
+        ]
+      }
+    }
+  ]
+}

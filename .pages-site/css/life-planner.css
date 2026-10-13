@@ -1,0 +1,90 @@
+:root{--planner-blue:#287cf0;--planner-navy:#071b53;--planner-line:#bdd8ef;--planner-card:rgba(255,255,255,.86)}
+*{box-sizing:border-box}.planner-main{min-height:100vh;padding:clamp(132px,10vw,164px) clamp(16px,5vw,80px) 80px;background:linear-gradient(120deg,#eefaff 0%,#bce5ff 58%,#4f83cf 100%);color:var(--planner-navy)}.planner-hero{max-width:1500px;margin:auto;display:flex;justify-content:space-between;align-items:end;gap:24px}.planner-hero h1{max-width:900px;margin:.15em 0;font-size:clamp(3rem,7vw,7rem);line-height:.9;letter-spacing:-.065em}.planner-hero p:not(.eyebrow){max-width:780px;font-size:clamp(1rem,1.7vw,1.35rem);line-height:1.6}.eyebrow{color:#199af0;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.planner-notice,.planner-settings,.planner-sidebar>*,.calendar-panel{max-width:1500px;margin:28px auto 0;border:1px solid var(--planner-line);border-radius:28px;background:var(--planner-card);box-shadow:0 24px 60px rgba(22,81,145,.13)}.planner-notice{padding:20px 24px}.planner-notice.success{color:#08754c}.planner-notice.error{color:#a32525}.planner-toolbar{max-width:1500px;margin:32px auto 0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}.planner-toolbar>button{justify-self:end}.planner-toolbar h2{margin:0;text-align:center}.week-controls{display:flex;gap:8px}.icon-button,.text-button{border:0;background:transparent;color:inherit;font:inherit;font-weight:900;cursor:pointer}.icon-button{width:44px;height:44px;border:1px solid var(--planner-line);border-radius:14px;background:rgba(255,255,255,.7)}.planner-settings{padding:clamp(20px,4vw,40px)}.section-heading{display:flex;justify-content:space-between;align-items:start;gap:16px}.section-heading h2{margin:.15rem 0}.settings-grid,.two-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.settings-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.planner-settings label,.task-form label{display:grid;gap:7px;font-weight:800}.planner-settings input,.planner-settings select,.planner-settings textarea,.task-form input,.task-form select,.task-form textarea{width:100%;padding:13px 14px;border:1px solid var(--planner-line);border-radius:14px;background:#fff;color:#10295c;font:inherit}.planner-settings fieldset{margin:22px 0;padding:18px;border:1px solid var(--planner-line);border-radius:18px}.planner-settings legend{padding:0 8px;font-weight:900}.school-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}.school-day{padding:10px;border-radius:14px;background:#eff8ff}.school-day label{display:flex;align-items:center}.school-day input[type=time]{padding:7px;margin-top:6px}.day-checks{display:flex;flex-wrap:wrap;gap:12px}.day-checks label{display:flex;align-items:center;gap:6px}.planner-layout{max-width:1500px;margin:auto;display:grid;grid-template-columns:minmax(280px,360px) minmax(0,1fr);gap:24px;align-items:start}.planner-sidebar>*,.calendar-panel{padding:clamp(18px,2.5vw,30px)}.task-form{display:grid;gap:15px}.deadline-item{display:block;margin-top:10px;padding:13px;border-radius:14px;background:#eef8ff;color:inherit;text-decoration:none}.deadline-item strong,.deadline-item span{display:block}.deadline-item span{margin-top:5px;color:#49648b;font-size:.88rem}.helper-text,.empty-inline{color:#506987}.weekly-calendar{display:grid;grid-template-columns:repeat(7,minmax(125px,1fr));gap:10px;overflow-x:auto;padding-bottom:8px}.calendar-day{min-height:340px;padding:12px;border:1px solid var(--planner-line);border-radius:17px;background:rgba(247,252,255,.82)}.calendar-day.today{border-color:var(--planner-blue);box-shadow:inset 0 0 0 1px var(--planner-blue)}.calendar-day h3{margin:0 0 12px;font-size:.95rem}.calendar-day h3 span{display:block;margin-top:3px;color:#577093;font-weight:600}.calendar-event{margin:8px 0;padding:9px;border-left:4px solid var(--planner-blue);border-radius:9px;background:#e7f2ff;font-size:.78rem;overflow-wrap:anywhere}.calendar-event.suggested{border-color:#8b5cf6;background:#f0eaff}.calendar-event.completed{border-color:#12a66a;background:#e4f8ef}.calendar-event strong,.calendar-event time{display:block}.calendar-event time{margin-top:4px;color:#4d6686}.event-actions,.task-actions{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}.mini-button{padding:5px 7px;border:1px solid rgba(20,73,140,.22);border-radius:8px;background:white;color:#173461;font:inherit;font-size:.72rem;font-weight:800;cursor:pointer}.calendar-legend{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:18px}.calendar-legend span{display:flex;align-items:center;gap:6px}.legend-dot{width:10px;height:10px;border-radius:50%;background:var(--planner-blue)}.legend-dot.suggested{background:#8b5cf6}.legend-dot.completed{background:#12a66a}.agenda-sections{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:25px}.agenda-sections>section{padding:16px;border-radius:18px;background:rgba(242,249,255,.85)}.agenda-sections h2{margin-top:0}.task-card{padding:12px 0;border-bottom:1px solid var(--planner-line)}.task-card:last-child{border:0}.task-card p{margin:5px 0;color:#536b8c;font-size:.88rem}.priority{display:inline-block;padding:3px 7px;border-radius:999px;background:#dceeff;font-size:.72rem;font-weight:900}.priority.high{background:#ffe0df;color:#9d2828}.priority.low{background:#e5f7ed;color:#176d49}
+@media(max-width:1050px){.planner-layout{grid-template-columns:1fr}.planner-sidebar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.planner-sidebar>*{margin-top:0}.weekly-calendar{grid-template-columns:repeat(7,minmax(150px,1fr))}.settings-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.school-days{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:900px){.planner-sidebar{grid-template-columns:1fr}}
+@media(max-width:700px){.planner-main{padding-inline:14px}.planner-hero{align-items:stretch;flex-direction:column}.planner-hero h1{font-size:clamp(3.15rem,17vw,5.2rem)}.planner-toolbar{grid-template-columns:1fr auto}.planner-toolbar h2{grid-column:1/-1;grid-row:1;text-align:left}.planner-toolbar .week-controls{grid-column:1}.planner-toolbar>button{grid-column:2}.planner-sidebar,.settings-grid,.two-fields,.agenda-sections{grid-template-columns:1fr}.school-days{grid-template-columns:repeat(2,minmax(0,1fr))}.weekly-calendar{display:block;overflow:visible}.calendar-day{min-height:0;margin-bottom:12px}.calendar-day:has(.calendar-events:empty){display:none}.calendar-day h3 span{display:inline;margin-left:5px}.planner-settings,.planner-sidebar>*,.calendar-panel{border-radius:20px}}
+@media(max-width:360px){.planner-toolbar{display:flex;align-items:stretch;flex-direction:column}.planner-toolbar>button{align-self:stretch}.school-days{grid-template-columns:1fr}.planner-hero .btn{width:100%}}
+
+.planner-main *,
+.planner-main *::before,
+.planner-main *::after{min-width:0}
+.planner-main{max-width:100%;overflow-x:clip}
+.planner-main>[data-planner-content],.planner-layout,.calendar-panel,.weekly-calendar,.agenda-sections{width:100%;max-width:100%;min-width:0}
+.deadline-panel h2{font-size:1.65rem;line-height:1.08;white-space:nowrap}
+.agenda-sections h2{font-size:clamp(1.65rem,2.2vw,2.35rem);line-height:1.08;white-space:nowrap}
+.calendar-panel{overflow:hidden}
+.weekly-calendar{contain:inline-size;overscroll-behavior-inline:contain}
+.icon-button{min-width:44px;min-height:44px;flex:0 0 44px;padding:0}
+.week-controls{min-width:0;flex-wrap:nowrap;align-items:center}.planner-toolbar-actions{display:flex;justify-self:end;gap:8px}.planner-toolbar-actions .btn{width:auto;min-width:max-content}
+
+@media(max-width:700px){.planner-toolbar{grid-template-columns:1fr}.planner-toolbar h2{grid-column:1;grid-row:1}.planner-toolbar .week-controls{grid-column:1;grid-row:2}.planner-toolbar-actions{grid-column:1;grid-row:3;width:100%;justify-self:stretch}.planner-toolbar-actions .btn{width:100%;min-width:0}}
+
+/* Balanced spacing between the week controls and planner content. */
+.planner-layout{margin:24px auto 0}
+@media(max-width:700px){.planner-toolbar{gap:14px;margin-top:24px}.planner-toolbar h2{margin-bottom:2px}.planner-toolbar .week-controls{gap:10px}.planner-toolbar-actions{gap:10px;margin-top:4px}.planner-layout{margin-top:28px}}
+.planner-main .eyebrow{margin-bottom:0;font-size:.82rem;line-height:1.4}
+.planner-settings input,.planner-settings select,.planner-settings textarea,.task-form input,.task-form select,.task-form textarea{max-width:100%}
+.settings-grid>*,.two-fields>*,.task-form label,.planner-settings label{min-width:0}
+.task-form input[type=date],.task-form input[type=datetime-local],.planner-settings input[type=time]{display:block;min-width:0;max-width:100%;box-sizing:border-box}
+@media(max-width:900px){.planner-hero h1{font-size:clamp(3rem,10vw,5rem)}}
+@media(min-width:701px) and (max-width:1050px){.weekly-calendar{grid-template-columns:repeat(7,150px)}}
+@media(max-width:480px){.planner-main{padding-inline:10px}.planner-hero h1{font-size:clamp(2.75rem,15vw,4.25rem)}.planner-notice,.planner-settings,.planner-sidebar>*,.calendar-panel{padding:16px}.two-fields,.settings-grid,.school-days{grid-template-columns:minmax(0,1fr)}.planner-toolbar{gap:10px}.task-form input[type=date],.task-form input[type=datetime-local]{padding-inline:10px;font-size:16px}}
+html[data-theme=dark] .planner-main{--planner-navy:var(--text);--planner-line:var(--line);--planner-card:rgba(15,9,31,.86);background:var(--bg)}html[data-theme=dark] .planner-settings input,html[data-theme=dark] .planner-settings select,html[data-theme=dark] .planner-settings textarea,html[data-theme=dark] .task-form input,html[data-theme=dark] .task-form select,html[data-theme=dark] .task-form textarea,html[data-theme=dark] .mini-button{background:#120b23;color:var(--text);border-color:var(--line)}html[data-theme=dark] .calendar-day,html[data-theme=dark] .agenda-sections>section,html[data-theme=dark] .school-day,html[data-theme=dark] .deadline-item{background:rgba(255,255,255,.06)}html[data-theme=dark] .calendar-event{background:rgba(40,124,240,.18)}
+
+.footer.planner-footer{display:flex;align-items:center;justify-content:space-between;gap:18px;width:100%;margin:0;padding:32px max(32px,calc((100vw - 1500px)/2));}
+@media(max-width:700px){.planner-main{padding-top:178px}.footer.planner-footer{display:grid;grid-template-columns:1fr;gap:8px;padding:26px 24px 34px;text-align:left}.footer.planner-footer p,.footer.planner-footer a{width:100%;min-height:0;margin:0;padding:8px 0;justify-content:flex-start;white-space:normal}}
+
+.task-confirmation{margin:0;padding:13px 15px;border:1px solid #efb7b7;border-radius:13px;color:#8f2424;background:#fff2f2;font-weight:800;line-height:1.45}.task-confirmation.success{border-color:#9bd8be;color:#08754c;background:#eaf9f2}
+
+/* Keep weekday controls aligned; generic form input sizing must not stretch checkboxes. */
+.planner-settings input[type="checkbox"]{width:18px;min-width:18px;height:18px;min-height:18px;padding:0;flex:0 0 18px;border-radius:4px}
+.school-days{grid-template-columns:repeat(7,minmax(130px,1fr));overflow-x:auto;padding-bottom:6px}
+.school-day{min-width:0}
+.school-day label,.day-checks label{display:flex;align-items:center;justify-content:flex-start;gap:7px;white-space:nowrap}
+.day-checks{display:grid;grid-template-columns:repeat(7,minmax(72px,1fr));gap:12px;overflow-x:auto;padding-bottom:6px}
+@media(max-width:1050px){.school-days{grid-template-columns:repeat(7,minmax(130px,1fr))}}
+@media(max-width:700px){.school-days{grid-template-columns:repeat(7,minmax(130px,1fr))}.day-checks{grid-template-columns:repeat(7,minmax(72px,1fr))}}
+@media(max-width:360px){.school-days{grid-template-columns:repeat(7,minmax(130px,1fr))}}
+
+/* Mobile Safari keeps large intrinsic widths for its native date/time widgets. */
+.planner-settings,.planner-sidebar>*,.calendar-panel,.task-form,.settings-grid,.two-fields{inline-size:100%;min-inline-size:0;max-inline-size:100%}
+.planner-settings input:not([type="checkbox"]),.planner-settings select,.planner-settings textarea,.task-form input:not([type="checkbox"]),.task-form select,.task-form textarea{inline-size:100%;min-inline-size:0;max-inline-size:100%;box-sizing:border-box}
+.school-days,.day-checks{inline-size:100%;max-inline-size:100%;overscroll-behavior-inline:contain;scrollbar-gutter:stable}
+@media(max-width:480px){
+  .planner-main{padding-inline:12px}
+  .planner-settings,.planner-sidebar>*,.calendar-panel{padding:14px;border-radius:18px}
+  .planner-settings fieldset{min-inline-size:0;margin-block:18px;padding:12px;border-radius:16px;overflow:hidden}
+  .planner-settings legend{max-inline-size:calc(100% - 16px);padding-inline:6px;white-space:normal;line-height:1.25}
+  .planner-settings input:not([type="checkbox"]),.planner-settings select,.planner-settings textarea,.task-form input:not([type="checkbox"]),.task-form select,.task-form textarea{min-height:48px;padding:11px 12px;border-radius:12px;font-size:16px}
+  .task-form{gap:13px}
+  .task-form label,.planner-settings label{gap:6px}
+  .school-days{grid-template-columns:repeat(7,118px);gap:8px;scroll-snap-type:x proximity}
+  .school-day{padding:9px;scroll-snap-align:start}
+  .school-day input[type="time"]{padding:7px 5px;text-align:center}
+  .day-checks{grid-template-columns:repeat(7,64px);gap:8px;scroll-snap-type:x proximity}
+  .day-checks label{scroll-snap-align:start;font-size:.9rem}
+  .section-heading{align-items:flex-start;flex-direction:column}
+  .task-form input[type="date"],.task-form input[type="time"],.task-form input[type="datetime-local"],.planner-settings input[type="date"],.planner-settings input[type="time"],.planner-settings input[type="datetime-local"]{-webkit-appearance:none;appearance:none;display:block;width:-webkit-fill-available!important;inline-size:-webkit-fill-available!important;min-width:0!important;max-width:100%!important;margin-inline:0;align-self:stretch;overflow:hidden}
+}
+
+/* Keep the medium-priority label readable when dark mode changes inherited text. */
+.priority:not(.high):not(.low){color:#173461}
+
+/* Separate the preferences action from the personal-goals textarea. */
+.planner-settings [data-preferences-form] > .btn[type="submit"]{margin-top:24px}
+
+.day-dropdown>summary{display:flex;align-items:center;justify-content:space-between;min-height:48px;padding:11px 14px;border:1px solid var(--planner-line);border-radius:12px;background:#fff;color:#10295c;cursor:pointer;font-weight:800;list-style:none}
+.day-dropdown>summary::-webkit-details-marker{display:none}
+.day-dropdown>summary::after{content:"⌄";font-size:1.25rem;transition:transform .2s ease}
+.day-dropdown[open]>summary::after{transform:rotate(180deg)}
+.day-dropdown>.school-days,.day-dropdown>.day-checks{margin-top:12px}
+html[data-theme=dark] .day-dropdown>summary{background:#120b23;color:var(--text);border-color:var(--line)}
+
+@media(max-width:700px){
+  .day-dropdown>.school-days,.day-dropdown>.day-checks{display:none}
+  .day-dropdown[open]>.school-days,.day-dropdown[open]>.day-checks{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px;overflow:visible;padding:0}
+  .day-dropdown .school-day{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px}
+  .day-dropdown .school-day label{grid-column:1/-1}
+  .day-dropdown .day-checks label{min-height:44px;padding:10px 12px;border-radius:10px;background:#eff8ff}
+  html[data-theme=dark] .day-dropdown .day-checks label{background:rgba(255,255,255,.06)}
+}

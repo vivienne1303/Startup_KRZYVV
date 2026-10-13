@@ -1,0 +1,10 @@
+/* Additional native insets without changing the web design. */
+.native-app { --app-top: max(env(safe-area-inset-top, 0px), var(--safe-area-inset-top, 0px)); --app-bottom: max(env(safe-area-inset-bottom, 0px), var(--safe-area-inset-bottom, 0px)); }
+.native-app .app > header { height: calc(64px + var(--app-top)); padding-top: calc(12px + var(--app-top)); }
+html.native-app body .site-header { top: var(--app-top)!important; }
+html.native-app body .site-header + main { padding-top: calc(96px + var(--app-top))!important; }
+.native-app .tabs, .native-app .mobile-tabs { padding-bottom: max(12px, var(--app-bottom)); }
+.native-app input, .native-app textarea, .native-app select { scroll-margin-block: 110px; }
+.native-app.keyboard-open .tabs, .native-app.keyboard-open .mobile-tabs { display:none!important; }
+.native-app.keyboard-open body { padding-bottom:24px!important; }
+.native-app #install, .native-app #install-note { display:none!important; }

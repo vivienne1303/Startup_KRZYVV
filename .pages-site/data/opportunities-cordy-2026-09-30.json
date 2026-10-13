@@ -1,0 +1,245 @@
+{
+  "as_of": "2026-09-30",
+  "discovery_source": "https://app.cordy.sg/opportunities",
+  "additions": [
+    {
+      "title": "Art Outreach — Volunteer Applications",
+      "organisation": "Art Outreach Singapore",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "Support exhibitions, events and public engagement. Volunteer applications can be made through the organiser’s form; current placement availability needs confirmation.",
+      "eligibility": "Age, education and citizenship/residency eligibility not fully specified.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.artoutreachsingapore.org/careers",
+      "application_url": "https://www.artoutreachsingapore.org/careers",
+      "host_country": "SG",
+      "location": "Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "CORDY",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "available",
+        "discovered_url": "https://app.cordy.sg/opportunities/join-art-outreach-singapore",
+        "official_url": "https://www.artoutreachsingapore.org/careers",
+        "last_checked_at": "2026-09-30",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official form loaded with a Volunteer option. Singapore Art Week 2027 internships are explicitly closed and excluded. Volunteer cutoff and student eligibility are not stated.",
+        "evidence_urls": [
+          "https://www.artoutreachsingapore.org/careers"
+        ]
+      }
+    },
+    {
+      "title": "WWF-Singapore — Panda Volunteer Community",
+      "organisation": "WWF-Singapore",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "description": "Explore conservation, wildlife monitoring, nature-guiding and event-support volunteering. Programme-specific openings and requirements need confirmation.",
+      "eligibility": "Age, education and citizenship/residency eligibility not fully specified.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.wwf.sg/volunteering/",
+      "application_url": "https://ujdqi6q2l7r.typeform.com/to/Nz4XbPgp",
+      "host_country": "SG",
+      "location": "Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "CORDY",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "unknown",
+        "discovered_url": "https://app.cordy.sg/opportunities/wwf-singapore-volunteer-fy25-signup-form",
+        "official_url": "https://www.wwf.sg/volunteering/",
+        "last_checked_at": "2026-09-30",
+        "fees": null,
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official programme page loaded; linked Typeform returned no readable form fields. Cordy’s age, residency and consent claims are retained as unverified claims, not confirmed eligibility.",
+        "evidence_urls": [
+          "https://www.wwf.sg/volunteering/"
+        ],
+        "claims": {
+          "minimum_age": 15,
+          "parental_consent": "Parent/guardian signature for ages 15–17",
+          "residency": "Valid Singapore residential status; no tourist visas"
+        }
+      }
+    },
+    {
+      "title": "Greatest Build Together — October 2026",
+      "organisation": "*SCAPE",
+      "category": "Workshops",
+      "categories": [
+        "Workshops"
+      ],
+      "description": "Community model-kit building session on 25 October at 1pm. Bring a current project or start a new one; share tools and meet other hobbyists.",
+      "eligibility": "Age, education and citizenship/residency eligibility not fully specified.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": "2026-10-25",
+      "end_date": "2026-10-25",
+      "source_url": "https://www.scape.sg/whats-on/greatest-build-together-oct/",
+      "application_url": "https://bit.ly/greatest-buildtgt",
+      "host_country": "SG",
+      "location": "*SCAPE Commune, L1, Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "CORDY",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "unavailable",
+        "discovered_url": "https://app.cordy.sg/opportunities/greatest-build-together-2026-10-25",
+        "official_url": "https://www.scape.sg/whats-on/greatest-build-together-oct/",
+        "last_checked_at": "2026-09-30",
+        "fees": "From SGD 15; kit/material inclusion not specified.",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official event date and price loaded. Linked booking route failed to load. Booking cutoff and age requirements remain unknown.",
+        "evidence_urls": [
+          "https://www.scape.sg/whats-on/greatest-build-together-oct/"
+        ]
+      }
+    },
+    {
+      "title": "SHG Joint Youth Dialogue 2026",
+      "organisation": "MCCY, NYC and self-help groups",
+      "category": "Workshops",
+      "categories": [
+        "Workshops"
+      ],
+      "description": "Youth dialogue on inclusion and Singapore’s future, scheduled for 10 October at 9am.",
+      "eligibility": "Ages 18–25. Citizenship/residency and consent requirements not confirmed.",
+      "minimum_age": 18,
+      "maximum_age": 25,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": "2026-10-10",
+      "end_date": "2026-10-10",
+      "source_url": "https://www.scape.sg/whats-on/shg-joint-youth-dialogue-2026/",
+      "application_url": null,
+      "host_country": "SG",
+      "location": "*SCAPE Ground Theatre, L2, Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "CORDY",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "confirmed",
+        "application_access": "unavailable",
+        "discovered_url": "https://app.cordy.sg/opportunities",
+        "official_url": "https://www.scape.sg/whats-on/shg-joint-youth-dialogue-2026/",
+        "last_checked_at": "2026-09-30",
+        "fees": "Free",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": "Ages 18–25. Citizenship/residency and consent requirements not confirmed.",
+        "notes": "Official organiser search result confirms date, venue, age and free admission. Direct page repeatedly timed out; ticket route and registration cutoff not verified.",
+        "evidence_urls": [
+          "https://www.scape.sg/whats-on/shg-joint-youth-dialogue-2026/"
+        ]
+      }
+    },
+    {
+      "title": "Singapore Youth Photography Awards 2026 — Exhibition Visit",
+      "organisation": "*SCAPE",
+      "category": "Exhibitions",
+      "categories": [
+        "Exhibitions"
+      ],
+      "description": "Visit the selected youth photography works from 8 October to 22 November. This listing is for exhibition attendance, not competition entry.",
+      "eligibility": "Age, education and citizenship/residency eligibility not fully specified.",
+      "minimum_age": null,
+      "maximum_age": null,
+      "education_levels": [],
+      "application_deadline": null,
+      "start_date": "2026-10-08",
+      "end_date": "2026-11-22",
+      "source_url": "https://www.scape.sg/whats-on/singapore-youth-photography-awards-2026-exhibition/",
+      "application_url": null,
+      "host_country": "SG",
+      "location": "*SCAPE Whitespace, L3, Singapore",
+      "format": "in_person",
+      "eligibility_scope": "unknown",
+      "eligible_countries": [],
+      "travel_required": null,
+      "source_type": "ai_fetched",
+      "source_name": "CORDY",
+      "application_method": "external",
+      "internal_application_enabled": false,
+      "discovery": {
+        "deadline_status": "unknown",
+        "student_eligibility": "unknown",
+        "application_access": "unknown",
+        "discovered_url": "https://app.cordy.sg/opportunities",
+        "official_url": "https://www.scape.sg/whats-on/singapore-youth-photography-awards-2026-exhibition/",
+        "last_checked_at": "2026-09-30",
+        "fees": "Free",
+        "parental_consent": null,
+        "school_membership": null,
+        "restrictions": null,
+        "notes": "Official indexed event page advertises walk-in attendance. Direct page could not load; full visiting hours and age restrictions remain unconfirmed. Exhibition end date is not an application deadline.",
+        "evidence_urls": [
+          "https://www.scape.sg/whats-on/singapore-youth-photography-awards-2026-exhibition/"
+        ]
+      }
+    }
+  ],
+  "excluded": [
+    {
+      "title": "Zooniverse — Data Research Volunteer",
+      "reason": "Already in original inventory."
+    },
+    {
+      "title": "Buddy on Deck; Impact IRL; Click & Connect; Health in Check",
+      "reason": "Existing Youth Corps/NYC listings; cross-posts excluded."
+    },
+    {
+      "title": "Art Outreach Singapore Art Week 2027 internship",
+      "reason": "Official careers page confirms applications closed."
+    }
+  ]
+}

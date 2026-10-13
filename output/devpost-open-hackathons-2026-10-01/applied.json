@@ -1,0 +1,184 @@
+{
+  "applied": true,
+  "as_of": "2026-10-01",
+  "duplicate_check": "Live database",
+  "added": [
+    {
+      "id": "fef32446-5322-45c7-a831-ce9a9541f647",
+      "title": "OpenCV AI Competition 2026, powered by AWS",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "a1eddf64-58ef-4c67-93b8-1399a2312dc5",
+      "title": "Meta VR Start Developer Competition 2026",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "e2c94552-361b-461c-a632-a0629bcd24f2",
+      "title": "Build, Ship, Shape: Amazon Developer Hackathon",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "8e557aed-dbda-4303-8fec-486a9c2d0de9",
+      "title": "Nebius x NVIDIA Global AI Hackathon",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "8a00dbb4-5f18-469f-9cb3-de68067a095d",
+      "title": "Build With AI: Basics",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "152787c6-bfe1-435a-8493-e6366b32e7fc",
+      "title": "YouCam API Skin AI & eCommerce VTO Hackathon",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "44a22155-c201-4c9b-beff-cbbd97caa01c",
+      "title": "Qloo Agentic Hackathon",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "2095fc80-cdb7-4b58-ba86-8d9dd5577508",
+      "title": "Next Gen Hackathon 2026 -Bengaluru",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "56c1ec0a-6888-4bae-a1da-0bbc0041382f",
+      "title": "Hack Apertus",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "896bb905-3327-41a0-8c65-4b271bfe0c36",
+      "title": "Life After Code",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "723fd2cb-c2b6-4710-b242-9bdee8238af5",
+      "title": "DeveloperWeek 2027 Hackathon",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "279b3949-420c-431c-a3c4-7b4a16b34d6e",
+      "title": "LarpHacks",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "c15ad6ed-e009-40b3-8c36-8dc06bc56b48",
+      "title": "Since AI 2026",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "6c9a54b8-d3ee-4849-9a3a-2d8f06c76f12",
+      "title": "Hacks for Humanity",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "2cb3c0b5-9a09-46f3-a51c-0e04909994dd",
+      "title": "Arm + ExecuTorch: Edge AI Challenge",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "fd3f00b4-38b2-472a-8aae-10ea7eabf437",
+      "title": "Build with Gemma - Innovate in Windsor",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "e0bf414a-5270-4873-9248-32761458d396",
+      "title": "DevFest Münster 2026: Agentic AI Hackathon",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "88c0e8f8-534c-48e6-9429-118a4c6b0065",
+      "title": "RenderJuice Blender Animation & Programmatic Rendering Contest",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "848fb827-7903-419a-8b6e-2ef83b22db36",
+      "title": "HackOHI/O 2026",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "a20a9ebc-6a2d-4dfa-afe3-9c00358150d1",
+      "title": "Vortexa 3.0",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "2bd47864-bc7b-4e61-aae5-acc90365607a",
+      "title": "Hook Em Hacks 2027",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "c7e650d3-d112-4bf2-a558-e219c55eea68",
+      "title": "Desert Dev Lab 2027",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    }
+  ],
+  "merged": []
+}

@@ -1,0 +1,73 @@
+[
+  {
+    "id": "180a56b2-c646-40cb-bf26-ec20525b8791",
+    "title": "VNU Hack '26 — Connect The Dots",
+    "description": "Free high school hackathon in Bucharest; a 7-page rulebook (in Romanian) and signed participation agreement are required.",
+    "category": "Hackathons",
+    "organizer": "Tudor Vianu National College of Computer Science",
+    "location": "Bucharest, Romania",
+    "mode": "in_person",
+    "age_min": null,
+    "age_max": null,
+    "deadline": null,
+    "start_date": "2026-10-04",
+    "end_date": "2026-10-05",
+    "application_url": "https://docs.google.com/forms/d/e/1FAIpQLSfp1t2XlcI4tMgKKMb-kbQm5jU8KCFNKUOtS_QG9iipJY6OtA/viewform",
+    "image_url": null,
+    "is_published": true,
+    "created_by": null,
+    "created_at": "2026-10-01T02:43:15.500203+00:00",
+    "updated_at": "2026-10-01T03:21:02.0126+00:00",
+    "categories": [
+      "Hackathons"
+    ],
+    "skills": [],
+    "education_levels": [
+      "High School"
+    ],
+    "status": "published",
+    "source_type": "ai_fetched",
+    "source_name": "Hack Club Hackathons",
+    "source_url": "https://vnuhack.com/",
+    "partner_id": null,
+    "external_id": null,
+    "last_synced_at": "2026-10-01T00:00:00+00:00",
+    "verification_status": "pending_review",
+    "verified_by": null,
+    "verified_at": null,
+    "expiry_date": null,
+    "application_method": "external",
+    "internal_application_enabled": false,
+    "organisation": "Tudor Vianu National College of Computer Science",
+    "eligibility": "High school students.",
+    "minimum_age": null,
+    "maximum_age": null,
+    "education_level": null,
+    "format": "in_person",
+    "application_deadline": null,
+    "last_verified_at": null,
+    "host_country": "RO",
+    "eligibility_scope": "unknown",
+    "eligible_countries": [],
+    "travel_required": null,
+    "discovery": {
+      "fees": null,
+      "notes": "Listed on Hack Club’s high school hackathon directory; official event site loaded on 2026-10-01.",
+      "official_url": "https://vnuhack.com/",
+      "restrictions": null,
+      "evidence_urls": [
+        "https://vnuhack.com/"
+      ],
+      "discovered_url": "https://hackathons.hackclub.com/",
+      "deadline_status": "unknown",
+      "last_checked_at": "2026-10-01",
+      "parental_consent": "Under-18 agreement must be signed by a parent or guardian.",
+      "school_membership": null,
+      "application_access": "available",
+      "student_eligibility": "confirmed"
+    },
+    "discovery_sources": [
+      "https://hackathons.hackclub.com/"
+    ]
+  }
+]

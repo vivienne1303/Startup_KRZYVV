@@ -1,0 +1,90 @@
+// Prepare global opportunities from official sources reviewed on 6 October 2026.
+const fs = require('node:fs');
+const path = require('node:path');
+const asOf = '2026-10-06';
+const entries = [
+  {
+    title: 'Aldevere Research Question Prize - November 2026', organisation: 'Aldevere', category: 'Competitions',
+    source_url: 'https://aldevere.com/scholarships/essay-prize/', application_url: 'https://tally.so/r/RGQZ0J',
+    minimum_age: 14, maximum_age: 18, application_deadline: '2026-11-15',
+    description: 'Explain a difficult academic question to a younger reader in an English essay of up to 1,000 words. Free entry, cash prizes and optional partial programme scholarships. Entries by 15 October receive written feedback; final deadline is 15 November.',
+    eligibility: 'Students aged 14-18 on the closing date, from any country. One individual entry; original work with cited sources. AI is limited to declared spelling and grammar assistance.',
+    parental_consent: 'Under-18 entrants supply parent or guardian contact details; consent is confirmed before publication and cash is paid to the adult.',
+    fees: 'Free entry. Optional programme scholarships cover only part of programme fees.',
+    skills: ['Academic writing', 'Research', 'Science communication'],
+  },
+  {
+    title: 'International Public Policy Forum 2026-27', organisation: 'Brewer Foundation and New York University', category: 'Competitions',
+    source_url: 'https://www.ippfdebate.com/', application_url: 'https://www.ippfdebate.com/register',
+    application_deadline: '2026-10-13', format: 'hybrid', host_country: 'US', travel_required: true,
+    location: 'Global online rounds; finals in New York, United States', education_levels: ['Secondary School', 'High School'],
+    description: 'Enter a team public-policy debate competition with a 3,000-word qualifying essay due 13 October 2026. Written rounds lead to an in-person finals weekend in New York on 16-17 April 2027.',
+    eligibility: 'Full-time high-school students worldwide, equivalent to US grades 9-12. Teams of 3-6; homeschool teams welcome. Each student joins one team and each team submits one essay.',
+    notes: 'Register and submit the qualifying essay by 13 October; registration alone is not an entry. Finalist teams travel to New York; organiser provides specified airfare, hotel and stipend support, with extra participants at their own expense. Consult rules for coaching and AI restrictions.',
+    evidence_urls: ['https://www.ippfdebate.com/', 'https://www.ippfdebate.com/register', 'https://www.ippfdebate.com/schedule', 'https://www.ippfdebate.com/rules'],
+    skills: ['Debate', 'Public policy', 'Research', 'Teamwork'],
+  },
+  {
+    title: 'Immerse Education Essay Competition 2027 - October Entry Round', organisation: 'Immerse Education', category: 'Competitions',
+    source_url: 'https://www.immerse.education/about/programmes/immerse-essay-competition',
+    minimum_age: 13, maximum_age: 18, application_deadline: '2026-10-25',
+    description: 'Submit a 500-word academic essay for full or partial scholarships to Immerse online or residential courses. The current round closes 25 October 2026; results are scheduled for 9 November.',
+    eligibility: 'Students worldwide aged 13-18 when the relevant scholarship programme begins. One entry per person, submitted through the online entry form. Follow competition guide on originality, AI and references.',
+    fees: 'Free competition entry. Partial scholarships leave course fees payable; confirm programme and travel costs before redeeming.',
+    notes: 'Register interest for the guide, then use Submit Entry on the official page. Travel is optional because scholarships can also be used for online courses. Page contains a word-count typo in its FAQ; main specification says 500 words with 10% allowance.',
+    skills: ['Essay writing', 'Critical thinking', 'Research'],
+  },
+  {
+    title: 'Missing Maps - Remote Humanitarian Mapping', organisation: 'Missing Maps and Humanitarian OpenStreetMap Team', category: 'Volunteering',
+    source_url: 'https://missingmaps.org/hot-tasking-manager/', application_url: 'https://tasks.hotosm.org/',
+    description: 'Help map buildings and roads from satellite imagery for disaster response and community resilience. Follow beginner tutorials and select current projects in the HOT Tasking Manager.',
+    eligibility: 'Remote volunteers worldwide can contribute. Beginners are welcome; OpenStreetMap and Tasking Manager accounts are required. Age and parental-consent conditions are not specified on this programme page; check account terms.',
+    student_status: 'unknown', deadline_status: 'rolling', access: 'login_required',
+    notes: 'Ongoing project platform, not a guaranteed placement. Choose tasks matching your experience; advanced validation requires mapping experience.',
+    skills: ['Mapping', 'Data quality', 'Humanitarian service'],
+  },
+  {
+    title: 'Translators without Borders - Remote Language Volunteering', organisation: 'Translators without Borders / CLEAR Global', category: 'Volunteering',
+    source_url: 'https://translatorswithoutborders.org/join-the-twb-community/',
+    application_url: 'https://twbplatform.org/register_track/E7EA70C335220FD0D1254856083D00CB/', minimum_age: 18,
+    description: 'Volunteer remotely on translation, revision, subtitling, voice-over and other language tasks for humanitarian organisations. Select tasks based on your languages, skills and availability.',
+    eligibility: 'Age 18+, fluent in at least one language beyond your native language, basic computer skills and internet access. Prior formal translation education or experience is not required. Observe task deadlines.',
+    deadline_status: 'rolling', access: 'login_required',
+    notes: 'Open to community members working remotely worldwide. Task availability depends on language and experience. Registration form asks applicants to confirm they are over 18; confirm with organiser if exactly 18.',
+    skills: ['Translation', 'Languages', 'Communication'],
+  },
+  {
+    title: 'Smithsonian Transcription Center - Digital Volunteering', organisation: 'Smithsonian Institution', category: 'Volunteering',
+    source_url: 'https://transcription.si.edu/instructions/begin', application_url: 'https://transcription.si.edu/',
+    description: 'Transcribe historical documents and collection records from anywhere with internet access. Choose projects and contribute on your own schedule; registered volunteers can also review completed transcripts.',
+    eligibility: 'Anyone with internet access may transcribe anonymously. Account creation and transcript review are available from age 14. Read general and project-specific instructions before contributing.',
+    deadline_status: 'rolling',
+    notes: 'No application or assignment wait is required. Account minimum age is not a minimum age for anonymous transcription. This is unpaid volunteering.',
+    evidence_urls: ['https://transcription.si.edu/instructions/begin', 'https://transcription.si.edu/faqs'],
+    skills: ['Transcription', 'History', 'Attention to detail'],
+  },
+  {
+    title: 'Distributed Proofreaders - Online E-book Proofreading', organisation: 'Distributed Proofreaders Foundation', category: 'Volunteering',
+    source_url: 'https://www.pgdp.net/c/', application_url: 'https://www.pgdp.net/c/accounts/addproofer.php',
+    description: 'Compare scanned book pages with OCR text to help create free e-books for Project Gutenberg. Register, confirm your email and use the walkthrough to start proofreading at your own pace.',
+    eligibility: 'Online volunteers can contribute through proofreading, smooth reading and related tasks. No fixed time commitment. Student age and parental-consent requirements are not specified on the welcome page; check registration terms.',
+    deadline_status: 'rolling', student_status: 'unknown', access: 'login_required',
+    notes: 'Remote online participation. The organiser does not certify volunteer hours or identity for service programmes; students should confirm school recognition before relying on it for service credit.',
+    skills: ['Proofreading', 'Literacy', 'Attention to detail'],
+  },
+];
+const additions = entries.map(({student_status, deadline_status, access, notes, fees, parental_consent, evidence_urls, ...item}) => ({
+  categories: [item.category], minimum_age: null, maximum_age: null, education_levels: [],
+  application_deadline: null, start_date: null, end_date: null, host_country: null,
+  location: 'Global (online)', format: 'online', eligibility_scope: 'worldwide', eligible_countries: [],
+  travel_required: false, source_type: 'ai_fetched', application_method: 'external', internal_application_enabled: false,
+  ...item, source_name: item.organisation, application_url: item.application_url || item.source_url,
+  discovery: {deadline_status: deadline_status || (item.application_deadline ? 'confirmed' : 'unknown'),
+    student_eligibility: student_status || 'confirmed', application_access: access || 'available',
+    discovered_url: item.source_url, official_url: item.source_url, last_checked_at: asOf,
+    fees: fees || null, parental_consent: parental_consent || null, school_membership: null,
+    restrictions: item.eligibility, notes: notes || 'Official source reviewed. Check organiser rules and deadline time zone before submitting.',
+    evidence_urls: evidence_urls || [...new Set([item.source_url, item.application_url].filter(Boolean))]},
+}));
+fs.writeFileSync(path.join(__dirname, '../data/opportunities-global-refresh-2026-10-06.json'), JSON.stringify({as_of: asOf, additions}, null, 2) + '\n');
+console.log(`Prepared ${additions.length} global opportunities.`);

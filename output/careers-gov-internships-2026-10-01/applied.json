@@ -1,0 +1,634 @@
+{
+  "applied": true,
+  "as_of": "2026-10-01",
+  "duplicate_check": "Live database",
+  "added": [
+    {
+      "id": "47ae5a28-4691-4695-a03a-03d8faeb1fa7",
+      "title": "Intern - Liveability Framework and Indices, CLC — Ministry of National Development",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "79f1bdd2-6949-4ea5-b4c8-19ebf834e228",
+      "title": "Intern, Policy and Research, WPSD — Ministry of Manpower",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "3190223b-554f-4843-8151-f7bf4c0e8860",
+      "title": "#PPPintern (Regulatory Transformation), Jan to Jun 2027 — Public Service Division",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "04ae0e45-c1c6-49c4-bc21-1284ef366180",
+      "title": "Intern, Strategy & Innovation — Singapore Land Authority",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "89837075-0214-42d8-ac8e-2505ef264f7a",
+      "title": "[Intern] Infrastructure Operations — Ministry of National Development",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "8cf2a08c-b75e-4b49-8eb0-463693154e0c",
+      "title": "Business Statistics Intern — Department of Statistics",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "0745ecad-d31c-4f97-b339-668dcd9c9c49",
+      "title": "Intern - Cool Ideas Enterprise & Pro-Enterprise (Business) — Housing and Development Board",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "cf9388ae-63d3-4305-8183-383fd4da5842",
+      "title": "Intern, DAT — Singapore Land Authority",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "300f51db-3efa-4c46-a0c2-899eeca95656",
+      "title": "Intern, Policy and Research, WPSD — Ministry of Manpower (2026-10-17)",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "53a837e9-5945-459e-be0a-e9f2423f20e3",
+      "title": "[Intern] EVOLVE Finance II (Enhancing Value & Optimisation) — Ministry of National Development",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "4a8d4bcf-af1e-411f-98cb-583b650241e2",
+      "title": "Intern - Mass Communication, Design and Community Engagement — Housing and Development Board",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "5ddc82d6-c22c-4a8b-aa10-b83dc4b52a73",
+      "title": "Critical Information Infrastructure Division Intern, CSA — Cyber Security Agency of Singapore",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "eecacdf0-6abe-4945-bc33-f3a0b2bc8092",
+      "title": "[Intern] Agentic AI for Conversational Data Analytics — Ministry of National Development",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "3706af71-809c-4252-884d-afcb70c079a3",
+      "title": "Intern - Corporate Video Development using Al — Ministry of National Development",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "4bebe43e-41e6-4384-aaf1-33664f0245fe",
+      "title": "Data Products and Innovation Intern — Department of Statistics",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "3cd6bfb6-5ea0-4eef-b481-b19d24d2a6b7",
+      "title": "#PPPintern (Process Transformation), Jan to Jun 2027 — Public Service Division",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "21bc9d65-28d7-4c74-80ed-d8aea28d8237",
+      "title": "Intern - Ageing Infrastructure Research — Housing and Development Board",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "c8de0a38-a663-4084-a381-c4ddea122818",
+      "title": "Intern - Initiatives & Programmes for Friendly Neighbourhood Award — Housing and Development Board",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "5d564b5c-b6d8-4a93-a074-ceb0284ec6c8",
+      "title": "Intern, Service Partnership — VITAL",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a6b7eace-3227-44d9-aebe-e7b899da7996",
+      "title": "Intern - Legitimate concerns or NIMBYism? — Ministry of National Development",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "84a13a80-69e8-42e2-a900-880ae4b450fa",
+      "title": "Intern, Geodesy & National Mapping — Singapore Land Authority",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "450b3efe-bf77-4137-91a7-014571be25ae",
+      "title": "Intern, Individual Insolvency & Debt Repayment Scheme Division — Ministry of Law",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "6550c332-90f2-4cc4-85db-42fe602d76a2",
+      "title": "Marketing Analytics Intern, Marketing & Corporate Solutions — National Library Board",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b0de01a9-5023-4fcc-8b42-2f607bbea298",
+      "title": "NYC Internship Programme — National Youth Council",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "7981cf73-3706-4b82-8a51-b14976e4d12a",
+      "title": "#PPPintern (Talent Attraction & People Experience), Jan to Jun 2027 — Public Service Division",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "562987ed-5ace-4b36-80a8-ee3ac620f906",
+      "title": "Intern, Communications and Engagement — Singapore Land Authority",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "e5e5efb2-90ae-4ff2-84db-34ba54cf2fdc",
+      "title": "[Intern] Future of Urban Liveability Study — Ministry of National Development",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "ab1fc8fe-88e3-402c-92e2-9ac12a3ede60",
+      "title": "Trusted Centre Intern — Department of Statistics",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "84bf4c62-77bc-4369-bf83-abb7596ec647",
+      "title": "[Intern] 16th Leaders in Urban Governance Programme (LUGP) Programme Delivery — Ministry of National Development",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ad358d95-3127-4cd6-87ce-ef2734a092c1",
+      "title": "Intern, Digital Media, CED — Ministry of Manpower",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "b2850a20-90d8-4587-bee1-39a5ba991930",
+      "title": "Intern - Organisational Taxonomy Review and Development — Ministry of National Development",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "6ab9d8ff-fed1-4b07-8645-4810838a5489",
+      "title": "GenAI Solutions Developer Intern — MINDEF",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "63993a6f-8e79-4ba6-b705-eb1b71c2318e",
+      "title": "Intern - Architectural Design Policy & Design Initiatives — Housing and Development Board",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "ce41d133-a971-4bda-a6cf-ac66c128adc5",
+      "title": "#PPPintern (Service Transformation Analytics), Jan to Jun 2027 — Public Service Division",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "1dc5533b-aa5e-47d3-8115-c3bf608b790f",
+      "title": "Intern - Landscape Design & Planning for Housing Development — Housing and Development Board",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e11f0c01-a069-451e-a896-d5ea547dc169",
+      "title": "Intern - MND Digital & Social Media team — Ministry of National Development",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "1da6d952-588c-4767-afe3-482e001230b2",
+      "title": "[NCCS] Internship 1H2027 for Strategy Team, National Climate Change Secretariat — PMO - Strategy Group",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "5a438d72-b3e2-4e1a-8c45-9113108f00e0",
+      "title": "Intern - AI Routing Systems — Ministry of National Development",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "b486ac45-8d69-41e5-b9de-88c7b934611b",
+      "title": "Internship: Community Outreach — Ministry of Digital Development and Information",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "edaa2c1b-4a29-4380-b5ed-c84b1a5c8f1e",
+      "title": "HR Branding Intern (6 months) — Auditor-General's Office",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b9c0b31a-adf5-4f25-bb58-f70282f897ef",
+      "title": "Intern - Architectural Planning and Design of Build-to-order (BTO) Developments — Housing and Development Board",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "37a106ae-58d7-4b5f-8df8-aa0e8948e65f",
+      "title": "Communications & Engagement (Public Outreach) Intern, CSA — Cyber Security Agency of Singapore",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "e28018a4-aeee-48da-9303-4a680781ae60",
+      "title": "Intern (Fair Trading Practices) — Competition and Consumer Commission of Singapore",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "10aef683-ef8f-469a-b6a0-e13eccde101d",
+      "title": "Intern - Architectural Design of BTO Projects — Housing and Development Board",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "b79d9048-674c-4152-9189-ffc59f8dbc65",
+      "title": "Intern (Legal & Enforcement) — Competition and Consumer Commission of Singapore",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "90d2e2fa-1ab8-4f66-b4c7-f4137e4bd55d",
+      "title": "Intern (Data & Digital) — Competition and Consumer Commission of Singapore",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a01675a1-200d-43e3-a398-5c72f8a9e320",
+      "title": "Intern (Business & Economics, Government Advocacy & Markets) — Competition and Consumer Commission of Singapore",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "ea5dd574-0530-4b9b-ba7a-d1a35076aeec",
+      "title": "Intern, HR — Singapore Land Authority",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "c8148771-56e8-410b-8338-54ae15514524",
+      "title": "Intern, Operations Technology and Data, Plans Dept, ACE Group — Ministry of Manpower",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "1e815739-a75d-4705-8f54-2d43af7b746d",
+      "title": "#PPPintern (Growth & Organizational Development), Jan to Jun 2027 — Public Service Division",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "ab976109-dcb6-481b-b249-c99702202fd3",
+      "title": "Intern - Architectural Design & Construction Supervision of BTO Developments — Housing and Development Board",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "192fbadf-8017-45e5-9c77-095dfd7fd877",
+      "title": "Intern - Volunteer Engagement: Communications, Training and Support — Housing and Development Board",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "750b5867-d641-46d7-926f-89258e346577",
+      "title": "NParks Intern — National Parks Board",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "a8e151c5-c15c-4a7d-90aa-24fd1e9ac411",
+      "title": "[Intern] Enterprise Digital Products and Platforms Enhancement (on ServiceNow) — Ministry of National Development",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "8b54ac84-3b32-4769-b2b6-0fb38a06cfb9",
+      "title": "Intern - BIM Implementation in Multi-Disciplinary Design Practice — Housing and Development Board",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "5357c667-3c58-48b9-baaa-603fe84c610a",
+      "title": "#PPPIntern (Product Designer), Jan - Jun 2027 — Public Service Division",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "93e910a6-0c6a-43df-9ca2-a9af19e0aa77",
+      "title": "#PPPintern (Employee Experience), Jan to Jun 2027 — Public Service Division",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "02c43dca-66a8-4754-ac93-3cfa3f27f206",
+      "title": "#PPPintern (Policy and Strategy), Jan to Jun 2027 — Public Service Division",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "5db0f28c-6256-401f-ac46-78745b19fb24",
+      "title": "#PPPintern (Compensation and Organisational Design), Jan to Jun 2027 — Public Service Division",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "e6e9e208-2032-4c4f-8186-969e4c0d7ce6",
+      "title": "#PPPintern (Workforce Capability Development), Jan to Jun 2027 — Public Service Division",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "58c3a7b2-1799-4106-9259-f9e9865a024a",
+      "title": "#PPPintern (Career Development & Competency Management), Jan to Jun 2027 — Public Service Division",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "71544e7c-9c30-461e-a077-99e48a3f4357",
+      "title": "Intern, Finance Process Automation — Singapore Land Authority",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "c50e54df-b23c-4593-ae05-9f2dbb10e9dd",
+      "title": "Intern - Automated Repairs for Interlocking Pavers — Housing and Development Board",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "8a953efa-7d9e-4dca-aad7-c5fb74cea50e",
+      "title": "Intern - Modelling & Analysis of Urbanwater Harvesting System — Housing and Development Board",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "fea91a03-f3df-403c-998a-79ef3dcc4cad",
+      "title": "Intern - Research on Road Surfacing Systems & New Concrete Materials — Housing and Development Board",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "a3e35032-fb5f-4e6c-a502-93ad1a8b1c69",
+      "title": "Intern - Architectural Design of Build-To-Order (BTO) Developments — Housing and Development Board",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "64b390a5-4bbb-4beb-96cb-c761c4b86a66",
+      "title": "Branding & Communications Intern — MINDEF",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "95af2a77-5ef2-4f74-a798-d04a61f7baa2",
+      "title": "Communications & Engagement (National Cybersecurity Campaign) Intern, CSA — Cyber Security Agency of Singapore",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "aed4b180-8eec-400d-962e-4360d2d93fd1",
+      "title": "Communications and Engagement Intern — Department of Statistics",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "66dbdca2-42c5-41d0-80bd-3a2430323c20",
+      "title": "#PPPintern (Chief HR Officer’s Office), Jan to Jun 2027 — Public Service Division",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "d885c4d4-d98b-446f-be59-e4fceb68f8ab",
+      "title": "Intern - Built Environment Digital Twin — Ministry of National Development",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "5621d457-f37f-412d-bf27-1826be5e6dd5",
+      "title": "#PPPintern (Communications & Engagement), Jan to Jun 2027 — Public Service Division",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "dadc6e7c-5e1d-40e2-b537-0b356f456e09",
+      "title": "Intern, Residential Leasing — Singapore Land Authority",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "f1beacee-8a97-4279-930c-b76a624d338c",
+      "title": "#PPPintern (Learning Design & Leadership Development), Jan to Jun 2027 — Public Service Division",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "94b26605-aad3-4557-acf5-43143140c09e",
+      "title": "Intern, Strategy & Innovation — Singapore Land Authority (2026-10-15)",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "15e0092a-7940-4b16-bcd6-36746d559e47",
+      "title": "Intern, GeoSpatial Systems & Solutions — Singapore Land Authority",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "16348d2c-0e36-431a-abaa-efca740f6953",
+      "title": "HR Employer Branding Intern, CSA — Cyber Security Agency of Singapore",
+      "labels": [
+        "Check deadline"
+      ]
+    },
+    {
+      "id": "ffd322b0-d981-4ce5-8cc5-d528502f4a55",
+      "title": "Creative Media Design and Photography Intern, Marketing & Corporate Solutions — National Library Board",
+      "labels": [
+        "Open now",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "5dc995d2-6d74-48e7-bf17-21087eb7be79",
+      "title": "Intern - HDB Social Media/ Content Creator Internship Programme (Jan 27) — Housing and Development Board",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "446b60b8-9ad4-4e71-a8fa-61e12188b5ca",
+      "title": "Intern, Data and Engagement Analytics, Government Data Division, SNDG — Ministry of Digital Development and Information",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "6504a9dc-76a2-402b-89ba-259a62d2787e",
+      "title": "Programme & Engagement Intern — MINDEF",
+      "labels": [
+        "Open now"
+      ]
+    },
+    {
+      "id": "2b8c7b49-071b-46e0-8bce-bbaa1e0cf2ae",
+      "title": "Intern, Strategic Planning, CED — Ministry of Manpower",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "ac36595c-7a2a-4587-8cad-0a0764ea48aa",
+      "title": "Intern, Robot Operations and Management Discovery, Physical AI Division, SNDG — Ministry of Digital Development and Information",
+      "labels": [
+        "Check deadline",
+        "Check eligibility"
+      ]
+    },
+    {
+      "id": "2e09f767-244d-4263-8fad-de7ae90f14d1",
+      "title": "Intern, DAT — Singapore Land Authority (2026-10-15)",
+      "labels": [
+        "Open now"
+      ]
+    }
+  ],
+  "merged": []
+}
