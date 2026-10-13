@@ -1,0 +1,86 @@
+[
+  {
+    "url": "https://bowseat.org/programs/blue-planet-awareness-contest/faqs/",
+    "status": 200,
+    "final_url": "https://bowseat.org/programs/blue-planet-awareness-contest/faqs/",
+    "browser_verified": null
+  },
+  {
+    "url": "https://bowseat.secure-platform.com/a/page/home/submit-blue-planet-awareness",
+    "status": 200,
+    "final_url": "https://bowseat.secure-platform.com/a/page/home/submit-blue-planet-awareness",
+    "browser_verified": null
+  },
+  {
+    "url": "https://trustforsustainableliving.org/take-part/international-schools-essay-competition-and-debate",
+    "status": 200,
+    "final_url": "https://trustforsustainableliving.org/take-part/international-schools-essay-competition-and-debate",
+    "browser_verified": null
+  },
+  {
+    "url": "https://trustforsustainableliving.submittable.com/submit",
+    "status": 200,
+    "final_url": "https://trustforsustainableliving.submittable.com/submit",
+    "browser_verified": null
+  },
+  {
+    "url": "https://trustforsustainableliving.org/take-part/international-schools-essay-competition-and-debate/faqs-essay-competition",
+    "status": 200,
+    "final_url": "https://trustforsustainableliving.org/take-part/international-schools-essay-competition-and-debate/faqs-essay-competition",
+    "browser_verified": null
+  },
+  {
+    "url": "https://www.worldphoto.org/sony-world-photography-awards/youth",
+    "status": 200,
+    "final_url": "https://www.worldphoto.org/sony-world-photography-awards/youth",
+    "browser_verified": null
+  },
+  {
+    "url": "https://users.worldphoto.org/competition/169/categories",
+    "status": 200,
+    "final_url": "https://users.worldphoto.org/user/login",
+    "browser_verified": null
+  },
+  {
+    "url": "https://www.worldphoto.org/sony-world-photography-awards/student",
+    "status": 200,
+    "final_url": "https://www.worldphoto.org/sony-world-photography-awards/student",
+    "browser_verified": null
+  },
+  {
+    "url": "https://users.worldphoto.org/competition/171/categories",
+    "status": 200,
+    "final_url": "https://users.worldphoto.org/user/login",
+    "browser_verified": null
+  },
+  {
+    "url": "https://sistercities.org/what-we-do/programs/yaas/",
+    "status": 403,
+    "final_url": "https://sistercities.org/what-we-do/programs/yaas/",
+    "browser_verified": "Verified official 2027 source page in the browser on 2026-09-29; automated fetch receives 403."
+  },
+  {
+    "url": "https://sistercities.fillout.com/2027yaas",
+    "status": 404,
+    "final_url": "https://sistercities.fillout.com/2027yaas",
+    "browser_verified": "Verified browser Start button opens the 2027 eligibility and application form, deadline 1 April 2027 11:59PM ET; automated fetch receives 404. No declarations or application submitted."
+  },
+  {
+    "url": "https://ichallenge.intellectaa.com/",
+    "status": 200,
+    "final_url": "https://ichallenge.intellectaa.com/",
+    "browser_verified": null
+  },
+  {
+    "url": "https://oxfordglobaleducation.com/oxford-agora",
+    "status": 200,
+    "final_url": "https://oxfordglobaleducation.com/oxford-agora",
+    "browser_verified": null
+  },
+  {
+    "url": "https://oxfordglobaleducation.com/oxford-agora#registration",
+    "status": 200,
+    "final_url": "https://oxfordglobaleducation.com/oxford-agora",
+    "browser_verified": null
+  }
+]

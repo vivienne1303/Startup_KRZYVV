@@ -1,0 +1,19 @@
+{
+  "appId": "app.teenlaunch.mobile",
+  "appName": "TeenLaunch",
+  "webDir": "www",
+  "loggingBehavior": "debug",
+  "server": {
+    "hostname": "localhost",
+    "androidScheme": "https",
+    "cleartext": false
+  },
+  "android": {
+    "allowMixedContent": false
+  },
+  "plugins": {
+    "Keyboard": {
+      "resizeOnFullScreen": true
+    }
+  }
+}

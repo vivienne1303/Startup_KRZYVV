@@ -3,3 +3,7 @@ node_modules
 debug.log
 output/**/preview.log
 output/**/preview-error.log
+
+# Generated browser profiles
+/mobile app/qa/edge*/
+/.pages-site/

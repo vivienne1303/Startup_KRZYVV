@@ -1,0 +1,438 @@
+{
+  "as_of": "2026-09-29",
+  "updates": [
+    {
+      "id": "c4157ec1-4ead-4976-9d28-deea6c47cda8",
+      "title": "Play For All - APSN (9 Oct 2026)",
+      "reason": "Official role deadline extended to 30 September; restore listing.",
+      "payload": {
+        "application_deadline": "2026-09-30",
+        "deadline": "2026-09-30",
+        "expiry_date": "2026-09-30",
+        "status": "published",
+        "is_published": true,
+        "verification_status": "verified"
+      }
+    }
+  ],
+  "additions": [
+    {
+      "title": "KidsLearn Plus - Ang Mo Kio (Term 1 2027)",
+      "organisation": "Youth Corps Singapore",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "application_deadline": "2026-11-02",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/KidsLearn-Plus--Ang-Mo-Kio-Term-1-2027",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/KidsLearn-Plus--Ang-Mo-Kio-Term-1-2027",
+      "description": "Help preschool children practise reading and phonics through games and befriending at the Ang Mo Kio placement. The programme schedule runs from 5 December 2026 to 6 March 2027, including preparation; check the required training and session commitment before registering.",
+      "eligibility": "Volunteers aged 18-35. Check the organiser's training, attendance and role requirements.",
+      "location": "Ang Mo Kio, Singapore",
+      "format": "in_person",
+      "skills": [
+        "Education",
+        "Communication",
+        "Community service"
+      ],
+      "education_levels": [],
+      "minimum_age": 18,
+      "maximum_age": 35,
+      "start_date": "2026-12-05",
+      "end_date": "2027-03-06",
+      "external_id": "37978358-4c2a-4047-aebb-40bf64b53fcd"
+    },
+    {
+      "title": "KidsLearn - Kampong Chai Chee (Term 1 2027)",
+      "organisation": "Youth Corps Singapore",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "application_deadline": "2026-11-02",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/KidsLearn--Kampong-Chai-Chee-Term-1-2027",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/KidsLearn--Kampong-Chai-Chee-Term-1-2027",
+      "description": "Help preschool children practise reading and phonics through games and befriending at the Bedok placement. The programme schedule runs from 5 December 2026 to 6 March 2027, including preparation; check the required training and session commitment before registering.",
+      "eligibility": "Volunteers aged 17-35. Check the organiser's training, attendance and role requirements.",
+      "location": "Bedok, Singapore",
+      "format": "in_person",
+      "skills": [
+        "Education",
+        "Communication",
+        "Community service"
+      ],
+      "education_levels": [],
+      "minimum_age": 17,
+      "maximum_age": 35,
+      "start_date": "2026-12-05",
+      "end_date": "2027-03-06",
+      "external_id": "88f4f3fe-55c2-49af-9f7f-dfd3fcc7ad1e"
+    },
+    {
+      "title": "KidsLearn - Boon Lay (Term 1 2027)",
+      "organisation": "Youth Corps Singapore",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "application_deadline": "2026-11-02",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/KidsLearn--Boon-Lay-Term-1-2027",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/KidsLearn--Boon-Lay-Term-1-2027",
+      "description": "Help preschool children practise reading and phonics through games and befriending at the Boon Lay placement. The programme schedule runs from 5 December 2026 to 6 March 2027, including preparation; check the required training and session commitment before registering.",
+      "eligibility": "Volunteers aged 15-35. Check the organiser's training, attendance and role requirements.",
+      "location": "Boon Lay, Singapore",
+      "format": "in_person",
+      "skills": [
+        "Education",
+        "Communication",
+        "Community service"
+      ],
+      "education_levels": [],
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "start_date": "2026-12-05",
+      "end_date": "2027-03-06",
+      "external_id": "4ab5649f-163d-4136-8e47-0e9d0f841871"
+    },
+    {
+      "title": "KidsLearn - Jurong East (Term 1 2027)",
+      "organisation": "Youth Corps Singapore",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "application_deadline": "2026-11-02",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/KidsLearn--Jurong-East-Term-1-2027",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/KidsLearn--Jurong-East-Term-1-2027",
+      "description": "Help preschool children practise reading and phonics through games and befriending at the Jurong East placement. The programme schedule runs from 5 December 2026 to 6 March 2027, including preparation; check the required training and session commitment before registering.",
+      "eligibility": "Volunteers aged 18-35. Check the organiser's training, attendance and role requirements.",
+      "location": "Jurong East, Singapore",
+      "format": "in_person",
+      "skills": [
+        "Education",
+        "Communication",
+        "Community service"
+      ],
+      "education_levels": [],
+      "minimum_age": 18,
+      "maximum_age": 35,
+      "start_date": "2026-12-05",
+      "end_date": "2027-03-06",
+      "external_id": "8a59fe97-71d6-43cc-a0bd-bd9df3519382"
+    },
+    {
+      "title": "KidsLearn - Queenstown (Term 1 2027)",
+      "organisation": "Youth Corps Singapore",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "application_deadline": "2026-11-02",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/KidsLearn--Queenstown-Term-1-2027",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/KidsLearn--Queenstown-Term-1-2027",
+      "description": "Help preschool children practise reading and phonics through games and befriending at the Queenstown placement. The programme schedule runs from 5 December 2026 to 6 March 2027, including preparation; check the required training and session commitment before registering.",
+      "eligibility": "Volunteers aged 17-35. Check the organiser's training, attendance and role requirements.",
+      "location": "Queenstown, Singapore",
+      "format": "in_person",
+      "skills": [
+        "Education",
+        "Communication",
+        "Community service"
+      ],
+      "education_levels": [],
+      "minimum_age": 17,
+      "maximum_age": 35,
+      "start_date": "2026-12-05",
+      "end_date": "2027-03-06",
+      "external_id": "ffa943c3-c243-4966-bd42-259f2daebafe"
+    },
+    {
+      "title": "KidsLearn - Woodlands (Term 1 2027)",
+      "organisation": "Youth Corps Singapore",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "application_deadline": "2026-11-02",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/KidsLearn--Woodlands-Term-1-2027",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/12/KidsLearn--Woodlands-Term-1-2027",
+      "description": "Help preschool children practise reading and phonics through games and befriending at the Woodlands placement. The programme schedule runs from 5 December 2026 to 6 March 2027, including preparation; check the required training and session commitment before registering.",
+      "eligibility": "Volunteers aged 17-35. Check the organiser's training, attendance and role requirements.",
+      "location": "Woodlands, Singapore",
+      "format": "in_person",
+      "skills": [
+        "Education",
+        "Communication",
+        "Community service"
+      ],
+      "education_levels": [],
+      "minimum_age": 17,
+      "maximum_age": 35,
+      "start_date": "2026-12-05",
+      "end_date": "2027-03-06",
+      "external_id": "135dd557-9650-47d5-af48-d21fbda9e401"
+    },
+    {
+      "title": "Garden Keepers - Gardens by the Bay (17 Oct 2026)",
+      "organisation": "Youth Corps Singapore",
+      "category": "Volunteering",
+      "categories": [
+        "Volunteering"
+      ],
+      "application_deadline": "2026-10-10",
+      "source_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Garden-Keepers--Gardens-by-the-Bay-17-Oct-2026",
+      "application_url": "https://discover.nyc.gov.sg/civicaction/Join-Opportunities/Individual/2026/10/Garden-Keepers--Gardens-by-the-Bay-17-Oct-2026",
+      "description": "Maintain outdoor gardens through hands-on gardening on 17 October. This is a fully outdoor, physical activity involving plants, thorns and sap; review the organiser's suitability guidance before signing up.",
+      "eligibility": "Volunteers aged 15-35 who can participate in outdoor gardening.",
+      "location": "Gardens by the Bay, Singapore",
+      "format": "in_person",
+      "skills": [
+        "Sustainability",
+        "Teamwork"
+      ],
+      "education_levels": [],
+      "minimum_age": 15,
+      "maximum_age": 35,
+      "start_date": "2026-10-17",
+      "end_date": "2026-10-17"
+    },
+    {
+      "title": "Sentinel Programme - 2027 Secondary 3 Intake",
+      "organisation": "Digital and Intelligence Service",
+      "category": "Career Exploration",
+      "categories": [
+        "Career Exploration"
+      ],
+      "application_deadline": "2026-10-18",
+      "source_url": "https://www.dis.gov.sg/sentinel-programme/apply/",
+      "application_url": "https://form.gov.sg/69225e62df34994b9f3e73f4",
+      "description": "Apply for the digital and cybersecurity development programme starting 9 January 2027. This open intake is for students in Secondary 2 in 2026; selection testing is scheduled for October. Other 2027 intakes do not open until 19 October.",
+      "eligibility": "Singapore citizens and permanent residents in Secondary 2 in 2026. Selection applies.",
+      "location": "Singapore",
+      "format": "hybrid",
+      "skills": [
+        "Cybersecurity",
+        "Technology"
+      ],
+      "education_levels": [],
+      "start_date": "2027-01-09"
+    },
+    {
+      "title": "Sentinel Online Taster Workshops - October and November 2026",
+      "organisation": "Digital and Intelligence Service",
+      "category": "Workshops",
+      "categories": [
+        "Workshops"
+      ],
+      "application_deadline": "2026-11-07",
+      "source_url": "https://go.gov.sg/sentinel-online-taster",
+      "application_url": "https://form.gov.sg/6a71987459d81b051e4c706d",
+      "description": "Preview the Sentinel Programme online. Secondary 4-5 students: 31 October, 2-4pm, register by 17 October. Primary 6 students: 21 November, 2-4pm, register by 7 November. After 17 October, only the Primary 6 workshop remains open. Workshop registration is separate from programme admission.",
+      "eligibility": "Eligible Singapore citizen or permanent resident students in the stated school cohorts.",
+      "location": "Online, Singapore",
+      "format": "online",
+      "skills": [
+        "Cybersecurity",
+        "Technology"
+      ],
+      "education_levels": [],
+      "start_date": "2026-10-31",
+      "end_date": "2026-11-21"
+    },
+    {
+      "title": "Lumiere Junior Scholars Essay Contest 2026",
+      "organisation": "Lumiere Education",
+      "category": "Competitions",
+      "categories": [
+        "Competitions"
+      ],
+      "application_deadline": "2026-12-20",
+      "source_url": "https://www.lumiere-education.com/junior-scholars-essay-contest",
+      "application_url": "https://jsec.lumiere-education.com/registration",
+      "description": "Write an original English argumentative essay of up to 1,000 words. Free registration closes 30 November; late registration costs US$5. Final essays are due 20 December at 11:59pm Eastern Time. Prizes are tuition reductions for Lumiere programmes, subject to admission, rather than cash awards.",
+      "eligibility": "Students worldwide in grades 6-8 as of 31 May 2026. An academic referee is required.",
+      "location": "Global",
+      "format": "online",
+      "skills": [
+        "Writing",
+        "Research",
+        "Critical thinking"
+      ],
+      "education_levels": []
+    },
+    {
+      "title": "Duke-UNC CLS Essay Competition 2026",
+      "organisation": "Duke-UNC China Leadership Summit",
+      "category": "Competitions",
+      "categories": [
+        "Competitions"
+      ],
+      "application_deadline": "2026-11-09",
+      "source_url": "https://www.dukechinaessay.com/",
+      "application_url": "https://www.dukechinaessay.com/",
+      "description": "Submit an English essay of up to 1,500 words on US-China relations by email using the official instructions. Standard deadline: 15 October, US$15 fee. Late deadline: 9 November, US$30 total fee. Fee waivers are available. Recognition at the 2027 summit does not include travel or accommodation.",
+      "eligibility": "High school and undergraduate students worldwide; category-specific prompts apply.",
+      "location": "Global",
+      "format": "online",
+      "skills": [
+        "Writing",
+        "Policy",
+        "Research"
+      ],
+      "education_levels": []
+    },
+    {
+      "title": "Planet+ Climate Solutions Challenge 2026-27",
+      "organisation": "Planet+",
+      "category": "Competitions",
+      "categories": [
+        "Competitions"
+      ],
+      "application_deadline": "2026-10-31",
+      "source_url": "https://www.planetpluschallenge.com/how-it-works",
+      "application_url": "https://42qlxj.share-na2.hsforms.com/2wPQzgMCpSr-O0pyLjAtzcQ",
+      "description": "Teams develop climate solutions through online deliverables, with a Singapore final in March 2027. Registration closes 31 October. Phase 1 costs US$1,500 per team; advancing teams pay an additional US$3,000 for Phase 2. Review travel and other costs before applying.",
+      "eligibility": "High school and undergraduate students worldwide in teams of 6-10; high school teams need an advisor.",
+      "location": "Online and Singapore",
+      "format": "hybrid",
+      "skills": [
+        "Sustainability",
+        "Research",
+        "Teamwork"
+      ],
+      "education_levels": []
+    },
+    {
+      "title": "COBIS Poetry Competition 2026-27",
+      "organisation": "COBIS",
+      "category": "Competitions",
+      "categories": [
+        "Competitions"
+      ],
+      "application_deadline": "2026-10-09",
+      "source_url": "https://www.cobis.org.uk/student-engagement/student-engagement-calendar/poetry-competition",
+      "application_url": "https://zealous.co/cobis/opportunity/cobis-poetry-competition-2026-27/",
+      "description": "Write a poem exploring the theme If Walls Could Speak. School staff submit selected student entries by midday BST on 9 October. Free for eligible COBIS schools; each school may submit one entry per category.",
+      "eligibility": "Students at COBIS member and applicant schools worldwide; Key Stage 1-5 categories. School submission required.",
+      "location": "Global",
+      "format": "online",
+      "skills": [
+        "Writing",
+        "Creativity"
+      ],
+      "education_levels": []
+    },
+    {
+      "title": "COBIS Generation:Enterprise 2026-27",
+      "organisation": "COBIS and Global:Edge",
+      "category": "Youth Entrepreneurship",
+      "categories": [
+        "Youth Entrepreneurship"
+      ],
+      "application_deadline": "2026-10-16",
+      "source_url": "https://www.cobis.org.uk/student-engagement/student-engagement-calendar/generationenterprise",
+      "application_url": "https://www.cobis.org.uk/fs/form-manager/view/3adb727a-9741-4dde-917d-46ee48afb49f",
+      "description": "Develop and pitch a solution to a school, community or global challenge in teams of 2-6. School staff register by midday UK time on 16 October. Paid school entry: standard category fees are GBP180-300, with small-school discounts; review the fee schedule.",
+      "eligibility": "Students aged 9-18 in participating schools. Registration must be made by school staff, not students or parents.",
+      "location": "Global",
+      "format": "online",
+      "skills": [
+        "Entrepreneurship",
+        "Pitching",
+        "Teamwork"
+      ],
+      "education_levels": [],
+      "minimum_age": 9,
+      "maximum_age": 18
+    },
+    {
+      "title": "COBIS x DAIGON Esports Competition 2026-27",
+      "organisation": "COBIS and DAIGON Esports",
+      "category": "Competitions",
+      "categories": [
+        "Competitions"
+      ],
+      "application_deadline": "2026-10-30",
+      "source_url": "https://www.cobis.org.uk/student-engagement/student-engagement-calendar/cobis-x-daigon-esports-competition",
+      "application_url": "https://www.cobis.org.uk/fs/form-manager/view/ae85104b-4c99-4c48-b9ac-dc977667d131",
+      "description": "Represent your school in Minecraft Capture the Flag or Rocket League. School registration closes at midday GMT on 30 October. Entry costs US$35 per student. Group matches run November-January; qualified teams reach the February final.",
+      "eligibility": "COBIS school squads; game-specific year-group brackets apply. Suggested minimum age is 8. School-led registration.",
+      "location": "Global",
+      "format": "online",
+      "skills": [
+        "Teamwork",
+        "Strategy",
+        "Communication"
+      ],
+      "education_levels": [],
+      "start_date": "2026-11-24",
+      "end_date": "2027-02-06"
+    },
+    {
+      "title": "COBIS Research Skills Competition 2026-27",
+      "organisation": "COBIS and GEC Academy",
+      "category": "Competitions",
+      "categories": [
+        "Competitions"
+      ],
+      "application_deadline": "2026-11-19",
+      "source_url": "https://www.cobis.org.uk/student-engagement/student-engagement-calendar/research-competition",
+      "application_url": "https://www.cobis.org.uk/fs/form-manager/view/ac611a66-33bf-4676-b398-b3bf8aabaccf",
+      "description": "Develop research skills and submit an independent report on an appropriate topic of your choice. Registration closes at midday GMT on 19 November; reports are submitted from 11 January to 22 February 2027. Entry costs GBP70 per student.",
+      "eligibility": "Students in Years 10-13 at participating schools; school registration and programme requirements apply.",
+      "location": "Global",
+      "format": "online",
+      "skills": [
+        "Research",
+        "Writing",
+        "Analysis"
+      ],
+      "education_levels": []
+    },
+    {
+      "title": "Debate Mate x COBIS Virtual Debating Competition 2027",
+      "organisation": "COBIS and Debate Mate",
+      "category": "Competitions",
+      "categories": [
+        "Competitions"
+      ],
+      "application_deadline": "2026-09-30",
+      "source_url": "https://www.cobis.org.uk/student-engagement/student-engagement-calendar/virtual-debate-competition",
+      "application_url": "https://www.cobis.org.uk/fs/form-manager/view/645c5111-4d67-4213-afe6-a44970c405ed",
+      "description": "Compete in online school-team debates from 29-31 January 2027. Register by midday GMT on 30 September; places are limited. Entry costs GBP325 per team including VAT, invoiced to schools. Beginners are welcome.",
+      "eligibility": "COBIS member and applicant school students aged 14+, Years 9-12 or equivalent. Schools enter their teams.",
+      "location": "Global",
+      "format": "online",
+      "skills": [
+        "Public speaking",
+        "Critical thinking",
+        "Teamwork"
+      ],
+      "education_levels": [],
+      "minimum_age": 14,
+      "start_date": "2027-01-29",
+      "end_date": "2027-01-31"
+    },
+    {
+      "title": "COBIS Changemakers Competition 2026-27",
+      "organisation": "COBIS",
+      "category": "Competitions",
+      "categories": [
+        "Competitions"
+      ],
+      "application_deadline": "2026-12-14",
+      "source_url": "https://www.cobis.org.uk/student-engagement/student-engagement-calendar/changemakers-competition",
+      "application_url": "https://www.cobis.org.uk/student-engagement/student-engagement-calendar/changemakers-competition",
+      "description": "Plan and deliver a community or environmental project, then share its impact in a five-minute video. School registration is open until midday GMT on 14 December; video submissions run 26 February-12 March 2027. Free for eligible COBIS schools.",
+      "eligibility": "Years 1-13 at COBIS member and applicant schools. Teams of up to 10; one selected entry per school.",
+      "location": "Global",
+      "format": "online",
+      "skills": [
+        "Leadership",
+        "Community service",
+        "Sustainability"
+      ],
+      "education_levels": []
+    }
+  ]
+}

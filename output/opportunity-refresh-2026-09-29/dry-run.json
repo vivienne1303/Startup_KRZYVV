@@ -1,0 +1,88 @@
+{
+  "as_of": "2026-09-29",
+  "applied": false,
+  "updated": [
+    {
+      "id": "c4157ec1-4ead-4976-9d28-deea6c47cda8",
+      "title": "Play For All - APSN (9 Oct 2026)",
+      "status": "published",
+      "reason": "Official role deadline extended to 30 September; restore listing."
+    }
+  ],
+  "inserted": [
+    {
+      "title": "KidsLearn Plus - Ang Mo Kio (Term 1 2027)",
+      "status": "published"
+    },
+    {
+      "title": "KidsLearn - Kampong Chai Chee (Term 1 2027)",
+      "status": "published"
+    },
+    {
+      "title": "KidsLearn - Boon Lay (Term 1 2027)",
+      "status": "published"
+    },
+    {
+      "title": "KidsLearn - Jurong East (Term 1 2027)",
+      "status": "published"
+    },
+    {
+      "title": "KidsLearn - Queenstown (Term 1 2027)",
+      "status": "published"
+    },
+    {
+      "title": "KidsLearn - Woodlands (Term 1 2027)",
+      "status": "published"
+    },
+    {
+      "title": "Garden Keepers - Gardens by the Bay (17 Oct 2026)",
+      "status": "published"
+    },
+    {
+      "title": "Sentinel Programme - 2027 Secondary 3 Intake",
+      "status": "published"
+    },
+    {
+      "title": "Sentinel Online Taster Workshops - October and November 2026",
+      "status": "published"
+    },
+    {
+      "title": "Lumiere Junior Scholars Essay Contest 2026",
+      "status": "published"
+    },
+    {
+      "title": "Duke-UNC CLS Essay Competition 2026",
+      "status": "published"
+    },
+    {
+      "title": "Planet+ Climate Solutions Challenge 2026-27",
+      "status": "published"
+    },
+    {
+      "title": "COBIS Poetry Competition 2026-27",
+      "status": "published"
+    },
+    {
+      "title": "COBIS Generation:Enterprise 2026-27",
+      "status": "published"
+    },
+    {
+      "title": "COBIS x DAIGON Esports Competition 2026-27",
+      "status": "published"
+    },
+    {
+      "title": "COBIS Research Skills Competition 2026-27",
+      "status": "published"
+    },
+    {
+      "title": "Debate Mate x COBIS Virtual Debating Competition 2027",
+      "status": "published"
+    },
+    {
+      "title": "COBIS Changemakers Competition 2026-27",
+      "status": "published"
+    }
+  ],
+  "duplicates": [],
+  "errors": []
+}

@@ -1,0 +1,1 @@
+(async function(){const token=localStorage.getItem("teenlaunch_token");if(!token)return;try{const response=await fetch(`${window.TEENLAUNCH_API_BASE}/auth/me`,{headers:{Authorization:`Bearer ${token}`}});if(response.ok&&(await response.json()).role==="admin")document.querySelector("[data-journey-admin]").hidden=false}catch(_){}})();

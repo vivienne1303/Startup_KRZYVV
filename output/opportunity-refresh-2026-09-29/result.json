@@ -1,0 +1,124 @@
+{
+  "as_of": "2026-09-29",
+  "applied": true,
+  "updated": [
+    {
+      "id": "c4157ec1-4ead-4976-9d28-deea6c47cda8",
+      "title": "Play For All - APSN (9 Oct 2026)",
+      "status": "published",
+      "reason": "Official role deadline extended to 30 September; restore listing."
+    }
+  ],
+  "inserted": [
+    {
+      "id": "6fe87545-3a37-4bba-9557-67ddb9dcb689",
+      "title": "KidsLearn Plus - Ang Mo Kio (Term 1 2027)",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "2dee2f05-5535-4eb9-9446-78e596d95ed9",
+      "title": "KidsLearn - Kampong Chai Chee (Term 1 2027)",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "91308316-abf1-4ecd-8399-70b6366abc5b",
+      "title": "KidsLearn - Boon Lay (Term 1 2027)",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "0b51011f-2622-4eda-844c-c484677545b3",
+      "title": "KidsLearn - Jurong East (Term 1 2027)",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "928010cf-1beb-4401-b085-771e483a3eb7",
+      "title": "KidsLearn - Queenstown (Term 1 2027)",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "42716665-20f7-4720-8fe9-475172191dac",
+      "title": "KidsLearn - Woodlands (Term 1 2027)",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "a2d629ce-b06d-4c00-9cc7-7122b910c884",
+      "title": "Garden Keepers - Gardens by the Bay (17 Oct 2026)",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "a329b4d5-7065-4b41-931e-aa4af9bf896d",
+      "title": "Sentinel Programme - 2027 Secondary 3 Intake",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "542c3320-2941-45ba-ac68-d8ec589f1259",
+      "title": "Sentinel Online Taster Workshops - October and November 2026",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "b4310725-07e1-4e0b-9fd4-d034ce623d5a",
+      "title": "Lumiere Junior Scholars Essay Contest 2026",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "e82640b8-d349-4277-aa87-915b4875747c",
+      "title": "Duke-UNC CLS Essay Competition 2026",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "762bd823-bde8-4830-bbd2-59a29f69d2ca",
+      "title": "Planet+ Climate Solutions Challenge 2026-27",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "f9a36372-5017-491c-b080-8416d7d3d459",
+      "title": "COBIS Poetry Competition 2026-27",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "acdad51d-50b6-41eb-a03d-e59136070a83",
+      "title": "COBIS Generation:Enterprise 2026-27",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "2a4890f3-cdcd-4a29-b18d-6185e88a5264",
+      "title": "COBIS x DAIGON Esports Competition 2026-27",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "f5e8752d-2346-4f48-b92f-c2d564fce8e5",
+      "title": "COBIS Research Skills Competition 2026-27",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "e18a8981-a577-475e-a969-50fb26e7c3bb",
+      "title": "Debate Mate x COBIS Virtual Debating Competition 2027",
+      "status": "published",
+      "is_published": true
+    },
+    {
+      "id": "36922139-3085-48c2-b512-74931dd35784",
+      "title": "COBIS Changemakers Competition 2026-27",
+      "status": "published",
+      "is_published": true
+    }
+  ],
+  "duplicates": [],
+  "errors": []
+}

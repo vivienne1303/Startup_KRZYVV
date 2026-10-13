@@ -1,0 +1,30 @@
+{
+  "name": "teenlaunch-mobile",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "pages:build": "node scripts/build-pages.mjs",
+    "pages:check": "npm run pages:build && node --test scripts/pages.test.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm run build && npm test",
+    "android:sync": "npm run build && cap sync android",
+    "android:open": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.0.0",
+    "@capacitor/app": "^8.0.0",
+    "@capacitor/browser": "^8.0.0",
+    "@capacitor/clipboard": "^8.0.0",
+    "@capacitor/core": "^8.0.0",
+    "@capacitor/keyboard": "^8.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.4.3",
+    "esbuild": "^0.25.0",
+    "supports-color": "8.1.1"
+  }
+}
