@@ -1,5 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
+import {run,databaseHeaders} from './refresh.mjs';
 import {singaporeDay,expiredReason,canonicalUrl,duplicateOf,usableProject,projectListing,makePlan,discoverProjects,confirmedActive} from './refresh.mjs';
 const now=new Date('2026-10-12T04:00:00Z');
 const row={id:'one',title:'Example',organisation:'Host',is_published:true,status:'published',verification_status:'verified',application_deadline:'2027-01-01',application_url:'https://example.org/item',source_url:'https://example.org/item'};
@@ -14,3 +18,36 @@ test('pagination follows official next-page metadata and deduplicates IDs',async
 test('invalid provider responses fail instead of implying projects are closed',async()=>{await assert.rejects(()=>discoverProjects(async()=>({projects:'bad'})),/Invalid discovery/);});
 
 test('unknown, upcoming, unpublished and unverified listings never pad active target',()=>{for(const status of ['unknown','upcoming','closed'])assert.equal(confirmedActive({...row,discovery:{deadline_status:status,student_eligibility:'confirmed',application_access:'available'}},now),false);assert.equal(confirmedActive({...row,verification_status:'pending_review'},now),false);assert.equal(confirmedActive(row,now),true);});
+
+test('database authentication supports secret API keys and legacy JWTs',()=>{
+  assert.equal(databaseHeaders('sb_secret_example').Authorization,undefined);
+  assert.equal(databaseHeaders('legacy-jwt').Authorization,'Bearer legacy-jwt');
+});
+async function temporaryReport(t) {
+  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'opportunity-refresh-test-'));
+  t.after(()=>fs.rm(dir,{recursive:true,force:true}));
+  return dir;
+}
+test('apply archives, inserts, verifies, and reruns without duplicates',async t=>{
+  const output=await temporaryReport(t);
+  const rows=[{...row,application_deadline:'2026-10-11'}];
+  const database={readAll:async()=>rows.map(r=>({...r})),archive:async r=>{Object.assign(rows.find(x=>x.id===r.id),{status:'expired',is_published:false});},insert:async item=>{const saved={...item,id:'new'};rows.push(saved);return saved;}};
+  const options={apply:true,output,now,target:1,buffer:0,database,discover:async()=>[p]};
+  const first=await run(options);
+  assert.equal(first.archived.length,1);assert.equal(first.added.length,1);assert.equal(first.active_after,1);
+  const summary=JSON.parse(await fs.readFile(path.join(output,'summary.json'),'utf8'));
+  assert.equal(summary.archived,1);assert.equal(summary.added,1);assert.equal(summary.execution_status,'completed');
+  const second=await run(options);assert.equal(second.archived.length,0);assert.equal(second.added.length,0);
+});
+test('provider outage still archives expired rows and reports failure',async t=>{
+  const output=await temporaryReport(t);let archived=false;
+  const database={readAll:async()=>archived?[]:[{...row,application_deadline:'2026-10-11'}],archive:async()=>{archived=true;},insert:async()=>assert.fail('No discovery inserts during outage')};
+  const result=await run({apply:true,output,now,database,discover:async()=>{throw new Error('Provider unavailable');}});
+  assert.equal(archived,true);assert.equal(result.errors.length,1);
+  const summary=JSON.parse(await fs.readFile(path.join(output,'summary.json'),'utf8'));assert.equal(summary.execution_status,'failed');assert.equal(summary.archived,1);
+});
+test('authentication failure saves an explicit failure summary rather than zero counts',async t=>{
+  const output=await temporaryReport(t);
+  await assert.rejects(run({apply:true,output,now,database:{readAll:async()=>{throw new Error('HTTP 401');}}}),/401/);
+  const summary=JSON.parse(await fs.readFile(path.join(output,'summary.json'),'utf8'));assert.equal(summary.execution_status,'failed');assert.equal(summary.counts_verified,false);assert.equal(summary.added,undefined);
+});

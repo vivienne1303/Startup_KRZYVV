@@ -7,3 +7,7 @@ output/**/preview-error.log
 # Generated browser profiles
 /mobile app/qa/edge*/
 /.pages-site/
+
+# Refresh reports include private database backups.
+/opportunity-automation/reports/
+/output/expansion-2026-10-13/baseline.json
