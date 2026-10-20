@@ -11,3 +11,4 @@ output/**/preview-error.log
 # Refresh reports include private database backups.
 /opportunity-automation/reports/
 /output/expansion-2026-10-13/baseline.json
+/output/expansion-2026-10-20/

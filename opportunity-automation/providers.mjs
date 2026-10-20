@@ -64,7 +64,7 @@ export async function discoverCandidates({rows,needed,now,request,onProgress=()=
     }
   } catch(e){errors.push({operation:'discovery',provider:'Zooniverse',error:e.message});}
   if(needed>0)try {
-    for(let page=1;page<=10&&candidates.length<Math.min(needed,15);page++) {
+    for(let page=1;page<=10&&candidates.length<needed;page++) {
       const feed=await request('https://devpost.com/api/hackathons?status[]=open&page='+page);
       if(!Array.isArray(feed.hackathons))throw Error('Invalid Devpost response');
       await pooled(feed.hackathons.filter(x=>x.open_state==='open'&&!x.invite_only&&!duplicateOf([...rows,...candidates],{source_url:x.url})),async listing=>{

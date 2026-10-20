@@ -76,3 +76,22 @@ test('missing Zooniverse feed entries and source errors never imply closure',asy
   const result=await discoverCandidates({rows,needed:0,now,request:async url=>url.includes('panoptes')?{projects:[],meta:{projects:{next_page:null}}}:assert.fail('No addition discovery needed')});
   assert.equal(result.closed.length,0);assert.equal(result.candidates.length,0);
 });
+
+test('Devpost continues beyond 15 candidates to fill the daily discovery quota',async()=>{
+  const pages=[];
+  const result=await discoverCandidates({rows:[],needed:50,now,request:async url=>{
+    if(url.includes('panoptes'))return {projects:[],meta:{projects:{next_page:null}}};
+    if(url.includes('/api/hackathons')){
+      const page=Number(new URL(url).searchParams.get('page'));pages.push(page);
+      return {hackathons:Array.from({length:9},(_,i)=>{
+        const id=(page-1)*9+i;
+        return {id,title:'Event '+id,url:'https://event-'+id+'.devpost.com/',open_state:'open',organization_name:'Host',displayed_location:{location:'Online'}};
+      })};
+    }
+    if(url.includes('.devpost.com'))return '<script type="application/ld+json">'+JSON.stringify({'@type':'Event',endDate:'2026-11-01'})+'</script>Who can participate Students ages 18 and above View full rules';
+    assert.fail('Quota should be filled before requesting another source: '+url);
+  }});
+  assert.deepEqual(pages,[1,2,3,4,5,6]);
+  assert.equal(result.candidates.length,54);
+  assert.equal(result.errors.length,0);
+});

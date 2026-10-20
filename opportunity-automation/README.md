@@ -37,3 +37,9 @@ The workflow publishes an Actions job summary and only `summary.json` artifacts,
 ## Verification on 13 October 2026
 
 The corrected production refresh added 50 new records with zero duplicates, errors or source warnings. No expired records required archival. Tests cover quota behaviour above 1,000 inventory, retries, partial-day recovery, Singapore midnight, insufficient supply, write failures, expiry during discovery outages, invalid dates, remote labels and restricted hackathons. Expiry tests do not create artificial production listings.
+
+## Audit on 20 October 2026
+
+The hosted workflow remains active, but recent scheduled runs have failed the daily quota. Database records show 50 automation additions on 16 October, 42 on 17 October, 24 on 18 October, 5 on 19 October and 13 so far on 20 October (Singapore dates). Updates are still inserting records; a failed run does not mean nothing was added.
+
+Removed the discovery ceiling of 15 Devpost candidates so that this source can continue toward the full remaining daily quota when other sources cannot fill it. A regression test verifies discovery across six feed pages. All 24 automation tests and the application test suite pass locally. This correction does not guarantee sufficient genuinely new source listings, and must be deployed before hosted runs use it. The live read-only discovery check was stopped before completing all internship pages; a successful production refresh has not been verified by this audit.
