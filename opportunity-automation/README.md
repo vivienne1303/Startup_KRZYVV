@@ -1,6 +1,6 @@
 # Daily opportunity refresh
 
-The production workflow archives outdated opportunities and targets at least **50 genuinely new published opportunities per Singapore calendar day**. The primary schedule is 09:00 Asia/Singapore; a recovery run at 17:00 fills any remaining shortfall. Manual runs use the same daily quota. Repeated runs do not add another 50 after the target has been met.
+The production workflow archives outdated opportunities and targets at least **50 genuinely new published opportunities per Singapore calendar day**. The primary schedule is 09:00 Asia/Singapore; recovery runs at 12:00, 15:00, 18:00, 21:00 and 23:00 fill any remaining shortfall. Manual runs use the same daily quota. Repeated runs do not add another 50 after the target has been met.
 
 ## Sources and checks
 
@@ -46,8 +46,19 @@ Removed the discovery ceiling of 15 Devpost candidates so that this source can c
 
 ## Audit and repair on 26 October 2026
 
-The hosted workflow was running the current repository version, but all eight most recent runs failed. Database additions declined to 17, 15 and 10 on 23–25 October. The existing sources did not supply enough new candidates.
+The hosted workflow was running the current repository version, but all eight most recent runs failed. Database additions declined to 17, 15 and 10 on 23-25 October. The existing sources did not supply enough new candidates.
 
 Added Unstop as a fallback before INTERNSG discovery. It checks individual competition records for open registration, free entry, student suitability, online participation and the earliest required round deadline. Paid, institution-restricted, physical-round and expired entries are excluded. Country eligibility remains unknown unless established by the organiser, and these records remain pending review. Pagination, deduplication and rejection rules have regression coverage. The scheduled workflow uses this provider automatically after these changes are deployed.
 
 The live corrected refresh completed with 50 new online Unstop opportunities, zero insertion errors and 16 expired listings archived. All 50 were independently verified through the public API, checked against the complete prior database and against each other, with zero duplicates. Records retain pending-review status and organiser eligibility restrictions. The run received 248 HTTP 429 warnings while checking existing INTERNSG listings; no closure was inferred from these failures. Added a rate-limit circuit breaker that stops scheduling remaining INTERNSG checks after HTTP 429 and reports skipped checks, plus progress reporting every 25 checks. All 28 automation tests and the application suite pass. The new provider was exercised live; the final circuit breaker is covered by regression tests and awaits deployment with the source changes.
+
+
+## Cascading source recovery
+
+When actual published database additions remain below 50 after the primary pool is written, additional sources are paginated and inserted one page at a time. The database count is refreshed between pages; discovery stops only when the daily target is met or configured supply is exhausted. Read-only mode also previews fallback candidates.
+
+The fallback chain checks Himalayas remote internships, Himalayas volunteering, Arbeitnow European student roles, and Unstop hackathons and quizzes. Only internships and working-student roles are accepted from general job feeds. Paid, closed, stale, senior and duplicate entries are excluded. Himalayas application URLs remain unchanged; source attribution links point to Himalayas. Country and timezone restrictions remain visible. Feed expiry is separate from an unknown employer application deadline.
+
+Empty or repeating feeds, rate limits and source errors advance to the next source. Duplicate-only pages continue when they contain previously unseen source entries. Each feed has a 100-page safety ceiling. Once all feeds are exhausted, a remaining shortfall fails visibly and subsequent recovery runs retry it; unavailable supply is never replaced with invented or duplicate listings. Recovered discovery outages become warnings once the daily count is verified. Write and verification errors remain failures. Summaries include the fallback pages inspected.
+
+Live read-only validation on 26 October found 77 new eligible candidates across four Himalayas pages against the complete 2,112-row database. The European Arbeitnow feed returned 20 student roles among 300 listings. The UK feed returned HTTP 403 and is excluded from the enabled registry until access is available. No additional production listings were inserted during these checks because today's quota was already fulfilled.

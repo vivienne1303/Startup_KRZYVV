@@ -2,8 +2,9 @@ name: Daily opportunity refresh
 
 on:
   schedule:
-    # 09:00 Singapore primary run; 17:00 recovery run. Both share the same daily quota.
-    - cron: '0 1,9 * * *'
+    # 09:00 Singapore primary; 12:00, 15:00, 18:00, 21:00, 23:00 recovery.
+    # Every run shares the same daily quota and resumes only the shortfall.
+    - cron: '0 1,4,7,10,13,15 * * *'
   workflow_dispatch:
 
 permissions:
@@ -16,7 +17,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
 

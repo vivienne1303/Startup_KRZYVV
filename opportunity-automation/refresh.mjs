@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {discoverCandidates} from './providers.mjs';
+import {fallbackBatches} from './fallbacks.mjs';
 
 export const singaporeDay = (now = new Date()) => new Intl.DateTimeFormat('en-CA', {timeZone:'Asia/Singapore',year:'numeric',month:'2-digit',day:'2-digit'}).format(now);
 export function expiredReason(row, now = new Date()) {
@@ -148,7 +149,7 @@ export async function run(options={}) {
     throw error;
   }
 }
-async function runRefresh({apply=false,output,now=new Date(),minimumAdditions=50,reserve=10,database,request=jsonRequest,discover=discoverCandidates}={}) {
+async function runRefresh({apply=false,output,now=new Date(),minimumAdditions=50,reserve=10,database,request=jsonRequest,discover=discoverCandidates,fallback=discover===discoverCandidates?fallbackBatches:null}={}) {
   if(!Number.isInteger(minimumAdditions)||minimumAdditions<1||minimumAdditions>500)throw Error('Minimum additions must be an integer from 1 to 500');
   const dir=output || path.join(path.dirname(fileURLToPath(import.meta.url)),'reports',singaporeDay(now));
   await fs.mkdir(dir,{recursive:true});
@@ -181,7 +182,18 @@ async function runRefresh({apply=false,output,now=new Date(),minimumAdditions=50
   report.errors.push(...(discovery.errors||[]).filter(e=>e.operation!=='source_check'));
   report.warnings.push(...(discovery.errors||[]).filter(e=>e.operation==='source_check'));
   report.providers=discovery.stats||{};
-  const plan=makePlan(baseline,discovery.candidates||[],{now,minimumAdditions,reserve});
+  let plan=makePlan(baseline,discovery.candidates||[],{now,minimumAdditions,reserve});
+  if(!apply&&plan.insert.length<plan.remaining&&fallback){
+    const candidates=[...(discovery.candidates||[])];
+    report.fallback_pages=[];
+    for await(const batch of fallback({rows:[...baseline,...candidates],now,request,onProgress:p=>console.log(JSON.stringify(p))})){
+      candidates.push(...(batch.candidates||[]));
+      report.warnings.push(...(batch.errors||[]));
+      report.fallback_pages.push(batch.stats||{});
+      plan=makePlan(baseline,candidates,{now,minimumAdditions,reserve});
+      if(plan.insert.length>=plan.remaining+reserve)break;
+    }
+  }
   Object.assign(report,plan);
   report.archive=[...new Map([...plan.archive,...(discovery.closed||[])].map(r=>[r.id,r])).values()];
   await fs.writeFile(path.join(dir,'new-opportunities.json'),JSON.stringify({as_of:plan.as_of,additions:plan.insert},null,2)+'\n');
@@ -198,6 +210,32 @@ async function runRefresh({apply=false,output,now=new Date(),minimumAdditions=50
       const saved=await db.insert({...item,discovery:{...item.discovery,automation_added_day:singaporeDay(now)}});
       current.push(saved);report.added.push({id:saved.id,title:saved.title});today++;
     }catch(e){report.errors.push({operation:'insert',title:item.title,error:e.message});}await save();}
+    // Reserves can fail too. Pull additional sources until actual published daily
+    // additions meet quota, or all configured feeds have been exhausted.
+    report.fallback_pages=[];
+    if(today<minimumAdditions&&fallback){
+      const attempted=[...plan.insert];
+      for await(const batch of fallback({rows:[...current,...attempted],now,request,onProgress:p=>console.log(JSON.stringify(p))})){
+        report.fallback_pages.push(batch.stats||{});
+        report.warnings.push(...(batch.errors||[]));
+        const fresh=await db.readAll();
+        current.splice(0,current.length,...fresh);
+        today=dailyAdditions(current,now);
+        for(const item of batch.candidates||[]){
+          if(today>=minimumAdditions)break;
+          if(!eligibleAddition(item,now)||duplicateOf([...current,...attempted],item))continue;
+          attempted.push(item);
+          try{
+            const saved=await db.insert({...item,discovery:{...item.discovery,automation_added_day:singaporeDay(now)}});
+            current.push(saved);report.added.push({id:saved.id,title:saved.title});
+            today=dailyAdditions(current,now);
+          }catch(e){report.errors.push({operation:'insert',title:item.title,error:e.message});}
+          await save();
+        }
+        await save();
+        if(today>=minimumAdditions)break;
+      }
+    }
     const final=await db.readAll();
     report.active_after=final.filter(row=>confirmedActive(row,now)).length;
     report.daily_after=dailyAdditions(final,now);
@@ -207,7 +245,12 @@ async function runRefresh({apply=false,output,now=new Date(),minimumAdditions=50
     if(failedArchives.length||missing.length)report.errors.push({operation:'verification',error:'Archive or insertion visibility did not match the final database state'});
   }
   report.shortfall=Math.max(0,minimumAdditions-(report.daily_after??(plan.daily_before+Math.min(plan.remaining,plan.insert.length))));
-  const summary={as_of:plan.as_of,applied:apply,execution_status:report.errors.length?'failed':report.shortfall?'shortfall':'completed',counts_verified:apply,minimum_additions:minimumAdditions,daily_before:plan.daily_before,daily_after:report.daily_after??null,daily_archived:report.daily_archived??null,added:report.added.length,archived:report.archived.length,planned_additions:Math.min(plan.remaining,plan.insert.length),planned_archives:report.archive.length,shortfall:report.shortfall,active_before:plan.active_before,active_after:report.active_after??null,error_count:report.errors.length,warning_count:report.warnings.length,providers:report.providers};
+  // A source outage recovered by another source is a warning, not a failed quota.
+  if(apply&&!report.shortfall){
+    report.warnings.push(...report.errors.filter(e=>e.operation==='discovery'));
+    report.errors=report.errors.filter(e=>e.operation!=='discovery');
+  }
+  const summary={as_of:plan.as_of,applied:apply,execution_status:report.errors.length?'failed':report.shortfall?'shortfall':'completed',counts_verified:apply,minimum_additions:minimumAdditions,daily_before:plan.daily_before,daily_after:report.daily_after??null,daily_archived:report.daily_archived??null,added:report.added.length,archived:report.archived.length,planned_additions:Math.min(plan.remaining,plan.insert.length),planned_archives:report.archive.length,shortfall:report.shortfall,active_before:plan.active_before,active_after:report.active_after??null,error_count:report.errors.length,warning_count:report.warnings.length,providers:report.providers,fallback_pages:report.fallback_pages||[]};
   await fs.writeFile(path.join(dir,'summary.json'),JSON.stringify(summary,null,2)+'\n');
   await save();
   console.log(JSON.stringify(summary,null,2));
