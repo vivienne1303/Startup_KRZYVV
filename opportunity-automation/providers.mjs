@@ -44,6 +44,21 @@ export function hackathon(html,listing,now=new Date()) {
     source_url:listing.url,application_url:listing.url,source_type:'ai_fetched',source_name:'Devpost',external_id:'devpost:'+listing.id,location:online?'Online':clean(listing.displayed_location?.location),format:online?'online':'in_person',mode:online?'online':'in_person',host_country:null,eligibility_scope:'unknown',eligible_countries:[],travel_required:!online,application_method:'external',internal_application_enabled:false,eligibility:clean(eligibility).slice(0,1000),status:'published',is_published:true,verification_status:'pending_review',verified_at:null,last_verified_at:null,last_synced_at:checked,
     discovery:{deadline_status:'confirmed',application_closes_at:exactClose(event.endDate),student_eligibility:'unknown',application_access:'login_required',discovered_url:listing.url,official_url:listing.url,last_checked_at:checked,fees:null,parental_consent:null,school_membership:null,restrictions:clean(eligibility).slice(0,1000),notes:'Official Devpost discovery reports open submissions; event end date is the submission closing date. Check organiser rules for age, country, student eligibility and in-person rounds.',evidence_urls:[listing.url,listing.url.replace(/\/$/,'')+'/rules']}};
 }
+export function competition(c,now=new Date()) {
+  const r=c?.regnRequirements,text=clean(c?.details);
+  if(!r||c.visibility!=='public'||c.regn_open!==1||r.reg_status!=='STARTED'||c.region!=='online'||!c.public_url||!c.organisation?.name)return null;
+  if(c.paid||r.enable_payment||r.reg_restricted||r.same_organisation||r.only_official_domains)return null;
+  if(/offline|on.campus|in.person|physically present|intra.college|intra.university|exclusive(?:ly)? (?:for|to)|open only to students of|registration fee|participation fee|entry fee/i.test(text))return null;
+  const groups=(c.filters||[]).filter(f=>f.type==='eligible').map(f=>f.name);
+  if(!groups.some(s=>/student|undergraduate|postgraduate|school|everyone|all/i.test(s)))return null;
+  const rounds=(c.rounds||[]).flatMap(r=>r.details||[]);
+  const times=[r.end_regn_dt,...rounds.map(r=>r.end_date)].filter(Boolean).map(Date.parse);
+  if(!times.length||times.some(t=>!Number.isFinite(t))||Math.min(...times)<=+now)return null;
+  const exact=new Date(Math.min(...times)),url='https://unstop.com/'+c.public_url.replace(/^\//,''),checked=now.toISOString();
+  const eligibility=groups.join(', ')+'. Team size '+r.min_team_size+'?'+r.max_team_size+'. '+text;
+  return {title:clean(c.title)+' ? '+clean(c.organisation.name),organisation:clean(c.organisation.name),category:'Competitions',categories:['Competitions'],description:text.slice(0,1500),eligibility:eligibility.slice(0,4000),minimum_age:null,maximum_age:null,education_levels:[],application_deadline:singaporeDay(exact),source_url:url,application_url:url,source_name:'Unstop',source_type:'ai_fetched',external_id:'unstop:'+c.id,host_country:null,location:'Online; organised by '+clean(c.organisation.name),format:'online',mode:'online',eligibility_scope:'unknown',eligible_countries:[],travel_required:false,skills:[],status:'published',is_published:true,verification_status:'pending_review',application_method:'external',internal_application_enabled:false,
+    discovery:{deadline_status:'confirmed',application_closes_at:exact.toISOString(),student_eligibility:'confirmed',application_access:'login_required',last_checked_at:checked,discovered_url:url,official_url:url,evidence_urls:[url,'https://unstop.com/api/public/competition/'+c.id],restrictions:eligibility.slice(0,4000),notes:'Platform confirms open free registration. Country, age and institution requirements must be checked with the organiser; online does not imply worldwide eligibility. Earliest required round or registration closing time is used.'}};
+}
 async function pooled(items,fn) {
   let next=0;const result=[];
   await Promise.all(Array.from({length:4},async()=>{while(next<items.length){const item=items[next++];result.push(await fn(item));}}));
@@ -74,14 +89,31 @@ export async function discoverCandidates({rows,needed,now,request,onProgress=()=
     }
     stats.devpost_candidates=candidates.filter(x=>x.source_name==='Devpost').length;
   }catch(e){errors.push({operation:'discovery',provider:'Devpost',error:e.message});}
+  if(candidates.length<needed)try {
+    for(let page=1;page<=30&&candidates.length<needed;page++) {
+      const feed=await request('https://unstop.com/api/public/opportunity/search?opportunity=competitions&page='+page);
+      const listings=feed.data?.data;
+      if(!Array.isArray(listings))throw Error('Invalid Unstop response');
+      if(!listings.length)break;
+      await pooled(listings.filter(c=>c.visibility==='public'&&c.regn_open===1&&!c.paid&&c.region==='online'&&!duplicateOf([...rows,...candidates],{source_url:'https://unstop.com/'+c.public_url,external_id:'unstop:'+c.id})),async listing=>{
+        try {const detail=await request('https://unstop.com/api/public/competition/'+listing.id);add(competition(detail.data?.competition,now));}
+        catch(e){errors.push({operation:'source_check',provider:'Unstop',error:e.message});}
+      });
+      onProgress({provider:'Unstop',page,candidates:candidates.length});
+    }
+    stats.unstop_candidates=candidates.filter(x=>x.source_name==='Unstop').length;
+  }catch(e){errors.push({operation:'discovery',provider:'Unstop',error:e.message});}
   // Recheck existing undated internships, including days when no new additions are needed.
   const localRows=rows.filter(r=>r.is_published&&r.status==='published'&&/^(?:www\.)?internsg\.com$/.test(new URL(r.source_url||'https://invalid.example').hostname)&&!expiredReason(r,now));
+  let checkedInternships=0,internsgRateLimited=false;
   await pooled(localRows,async row=>{
+    if(internsgRateLimited)return;
     try{const html=await request(row.source_url,{responseType:'text'});if(sourceClosed(html))closed.push({id:row.id,title:row.title,updated_at:row.updated_at,discovery:row.discovery,reason:'Source explicitly reports recruitment closed'});}
-    catch(e){errors.push({operation:'source_check',provider:'INTERNSG',error:e.message});}
+    catch(e){if(/HTTP 429/.test(e.message))internsgRateLimited=true;errors.push({operation:'source_check',provider:'INTERNSG',error:e.message});}
+    if(++checkedInternships%25===0)onProgress({provider:'INTERNSG',checked:checkedInternships,total:localRows.length});
   });
   try {
-    for(let page=1;page<=45&&candidates.length<needed;page++) {
+    for(let page=1;page<=45&&!internsgRateLimited&&candidates.length<needed;page++) {
       const directory='https://www.internsg.com/jobs/'+(page===1?'':page+'/');
       const html=await request(directory,{responseType:'text'});
       const links=[...html.matchAll(/<a\b[^>]*href=["'](https:\/\/www\.internsg\.com\/job\/[^"'#?]+)(?:\?[^"']*)?["'][^>]*>([\s\S]*?)<\/a>/g)];
@@ -92,5 +124,8 @@ export async function discoverCandidates({rows,needed,now,request,onProgress=()=
     }
     stats.internsg_candidates=candidates.filter(x=>x.source_name==='INTERNSG').length;
   }catch(e){errors.push({operation:'discovery',provider:'INTERNSG',error:e.message});}
+  stats.internsg_checked=checkedInternships;
+  stats.internsg_rate_limited=internsgRateLimited;
+  stats.internsg_checks_skipped=localRows.length-checkedInternships;
   return {candidates,closed,errors,stats};
 }
