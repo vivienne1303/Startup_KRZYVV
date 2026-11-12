@@ -11,7 +11,7 @@ if (built.status !== 0) process.exit(built.status || 1);
 // A dedicated Pages artifact prevents publishing the backend, archives or credentials.
 await fs.rm(out, { recursive: true, force: true });
 await fs.mkdir(out, { recursive: true });
-const allowed = new Set(['.html','.css','.js','.json','.png','.jpg','.jpeg','.svg','.webp','.ico','.pdf','.woff','.woff2','.ttf','.gif','.avif','.mp4','.webm','.txt']);
+const allowed = new Set(['.webmanifest','.xml','.html','.css','.js','.json','.png','.jpg','.jpeg','.svg','.webp','.ico','.pdf','.woff','.woff2','.ttf','.gif','.avif','.mp4','.webm','.txt']);
 async function copy(from, to) {
   const stat = await fs.lstat(from);
   if (stat.isSymbolicLink()) throw new Error('No symlinks allowed: ' + from);
@@ -26,7 +26,7 @@ async function copy(from, to) {
     await fs.copyFile(from, to);
   }
 }
-for (const name of ['index.html','mobile-showcase.html','style.css','script.js','favicon.ico','CNAME','assets','components','css','js','data','pages','output']) {
+for (const name of ['index.html','mobile-showcase.html','style.css','script.js','favicon.ico','manifest.webmanifest','robots.txt','sitemap.xml','CNAME','assets','components','css','js','data','pages','output']) {
   try { await fs.access(path.join(repo, name)); }
   catch (error) { if (error.code === 'ENOENT' && ['components','data','output'].includes(name)) continue; throw error; }
   await copy(path.join(repo, name), path.join(out, name));

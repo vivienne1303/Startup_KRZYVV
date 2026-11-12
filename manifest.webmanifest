@@ -1,0 +1,25 @@
+{
+  "name": "TeenLaunch",
+  "short_name": "TeenLaunch",
+  "description": "TeenLaunch is an English-Chinese platform for young people aged 10-24 to discover internships, competitions, volunteering and entrepreneurship opportunities, build soft skills, and explore careers with AI guidance.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2368eb",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
